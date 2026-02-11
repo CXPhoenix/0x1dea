@@ -88,6 +88,7 @@ const options = computed(() => ({
     <vue-particles
       id="tsparticles"
       :options="options"
+      :key="isDark ? 'dark' : 'light'"
       class="fixed inset-0 z-0 pointer-events-none opacity-60"
     />
   </ClientOnly>

@@ -1,18 +1,41 @@
 {
-  "name": "0x1DEA",
+  "name": "0x1dea",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "0x1DEA: 想像力的溢位 —— 結合資通安全教學、軟體工程與 AI 探索的個人知識平台。",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "test:unit": "vitest run"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "0x1DEA",
+    "CXPh03n1x",
+    "cybersecurity",
+    "infosec",
+    "software-engineering",
+    "web-development",
+    "artificial-intelligence",
+    "ai-exploration",
+    "vitepress",
+    "vue",
+    "blog",
+    "knowledge-base",
+    "資安",
+    "資通安全",
+    "軟體工程",
+    "技術部落格"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CXPhoenix/0x1dea.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CXPhoenix/0x1dea/issues"
+  },
+  "homepage": "https://github.com/CXPhoenix/0x1dea#readme",
+  "author": "CXPh03n1x",
+  "license": "LicenseRef-LICENSE",
   "packageManager": "pnpm@10.28.0",
   "dependencies": {
     "@tsparticles/slim": "^3.9.1",
@@ -27,7 +50,7 @@
     "@vue/test-utils": "^2.4.6",
     "happy-dom": "^20.6.1",
     "js-yaml": "^4.1.1",
-    "vite": "^7.3.1",
+    "vite": "^5.4.11",
     "vitest": "^4.0.18"
   }
 }

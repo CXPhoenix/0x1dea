@@ -2,11 +2,8 @@
 import DefaultTheme from 'vitepress/theme'
 import { useData } from 'vitepress'
 import Particles from './components/Particles.vue'
-import Wave from './components/Wave.vue'
-import Electricity from './components/Electricity.vue'
 
 const { Layout } = DefaultTheme
-const { isDark } = useData()
 </script>
 
 <template>
@@ -14,8 +11,6 @@ const { isDark } = useData()
     <template #layout-top>
       <div class="visual-effects-container fixed inset-0 z-0 pointer-events-none">
         <Particles />
-        <Wave />
-        <!-- <Electricity /> -->
       </div>
     </template>
   </Layout>
