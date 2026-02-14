@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 關於我
-      link: /markdown-examples
+      link: /about
     - theme: alt
       text: 文章列表
-      link: /api-examples
+      link: /posts
 
 features:
   - title: 資安教學
