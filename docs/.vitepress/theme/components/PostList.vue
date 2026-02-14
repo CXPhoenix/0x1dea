@@ -85,6 +85,10 @@ const groupedData = computed(() => {
   return Array.from(groups.entries()).map(([name, posts]) => ({ name, posts }))
 })
 
+const transitionKey = computed(() => {
+  return `${sortBy.value}-${sortOrder.value}-${viewMode.value}`
+})
+
 const toggleSortMode = () => {
   sortBy.value = sortBy.value === 'time' ? 'category' : 'time'
 }
@@ -159,42 +163,43 @@ const toggleViewMode = () => {
     </div>
 
     <!-- Content Section -->
-    <TransitionGroup 
-      :name="sortBy === 'time' ? 'list' : 'group'" 
-      tag="div" 
-      class="content-view"
-      :class="viewMode"
-    >
-      <!-- Grouped View -->
-      <template v-if="sortBy === 'category'">
-        <div v-for="group in groupedData" :key="group.name" class="category-block">
-          <h2 class="category-header">
-            <span class="category-indicator"></span>
-            {{ group.name }}
-          </h2>
+    <Transition mode="out-in" name="fade">
+      <div 
+        :key="transitionKey" 
+        class="content-view"
+        :class="viewMode"
+      >
+        <!-- Grouped View -->
+        <template v-if="sortBy === 'category'">
+          <div v-for="group in groupedData" :key="group.name" class="category-block">
+            <h2 class="category-header">
+              <span class="category-indicator"></span>
+              {{ group.name }}
+            </h2>
+            <div class="post-grid" :class="viewMode">
+              <component 
+                :is="viewMode === 'card' ? PostCard : PostBlock" 
+                v-for="post in group.posts" 
+                :key="post.url" 
+                :post="post" 
+              />
+            </div>
+          </div>
+        </template>
+
+        <!-- Flat View -->
+        <template v-else>
           <div class="post-grid" :class="viewMode">
             <component 
               :is="viewMode === 'card' ? PostCard : PostBlock" 
-              v-for="post in group.posts" 
+              v-for="post in processedPosts" 
               :key="post.url" 
               :post="post" 
             />
           </div>
-        </div>
-      </template>
-
-      <!-- Flat View -->
-      <template v-else>
-        <div class="post-grid" :class="viewMode">
-          <component 
-            :is="viewMode === 'card' ? PostCard : PostBlock" 
-            v-for="post in processedPosts" 
-            :key="post.url" 
-            :post="post" 
-          />
-        </div>
-      </template>
-    </TransitionGroup>
+        </template>
+      </div>
+    </Transition>
 
     <!-- Empty State -->
     <div v-if="processedPosts.length === 0" class="empty-state">
@@ -310,7 +315,7 @@ const toggleViewMode = () => {
 .post-grid {
   display: grid;
   gap: 2rem;
-  transition: all 0.5s ease;
+  /* Remove internal transition to avoid conflict with parent transition */
 }
 
 .post-grid.card {
@@ -357,21 +362,15 @@ const toggleViewMode = () => {
   opacity: 0.5;
 }
 
-/* Animations */
-.list-move,
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+/* Animations - Fade Out-In */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s ease;
 }
 
-.list-enter-from,
-.list-leave-to {
+.fade-enter-from,
+.fade-leave-to {
   opacity: 0;
-  transform: translateY(20px);
-}
-
-.list-leave-active {
-  position: absolute;
 }
 
 @media (max-width: 640px) {
