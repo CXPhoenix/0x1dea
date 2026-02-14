@@ -22,10 +22,10 @@ export default defineConfig({
   title: "0x1DEA",
   description: "Overflow of Imagination - 魔法是想像力的領域・資安也是",
   head: [
-    ['link', { rel: 'icon', type: "image/svg+xml", href: '/circle-favicon.svg' }]
+    ['link', { rel: 'icon', type: "image/svg+xml", href: '/phoenixWithText.svg' }]
   ],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    logo: "/circleImage.svg",
     nav: loadYaml('nav.yml') as any,
     sidebar: loadYaml('sidebar.yml') as any,
     
@@ -35,7 +35,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' } // TODO: Update to user's github
+      { icon: 'github', link: 'https://github.com/cxphoenix/0x1dea' } // TODO: Update to user's github
     ]
   },
   vite: {
