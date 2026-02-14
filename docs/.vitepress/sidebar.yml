@@ -1,6 +1,9 @@
-- text: Examples
-  items:
-    - text: Markdown Examples
-      link: /markdown-examples
-    - text: Runtime API Examples
-      link: /api-examples
+"/post/":
+  - text: README
+    link: /post/index
+
+"/":
+  - text: 關於我
+    link: /about
+  - text: 文章列表
+    link: /posts
