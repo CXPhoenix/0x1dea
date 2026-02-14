@@ -2,6 +2,7 @@
 sidebar: false
 aside: false
 footer: true
+showParticle: true
 ---
 
 <script setup lang="ts">

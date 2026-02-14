@@ -70,7 +70,7 @@ const options = computed(() => ({
       value: 80
     },
     opacity: {
-      value: 0.2
+      value: 0.08
     },
     shape: {
       type: 'circle'
