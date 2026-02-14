@@ -10,11 +10,15 @@ interface Post {
   } | string | Date
   abstract?: string
   thumbnil?: string
+  category?: string
 }
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   post: Post
-}>()
+  showCategory?: boolean
+}>(), {
+  showCategory: true
+})
 
 const formattedDate = computed(() => {
   let date: Date
@@ -43,6 +47,7 @@ const formattedDate = computed(() => {
       <div class="info">
         <h2 class="title">{{ post.title }}</h2>
         <div class="meta">
+          <span v-if="showCategory && post.category" class="category-tag">{{ post.category }}</span>
           <span class="date">{{ formattedDate }}</span>
         </div>
         <p v-if="post.abstract" class="abstract">{{ post.abstract }}</p>
@@ -119,8 +124,20 @@ const formattedDate = computed(() => {
 }
 
 .meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 0.875rem;
   color: var(--vp-c-text-2, #666);
+}
+
+.category-tag {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 99px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
 }
 
 .abstract {

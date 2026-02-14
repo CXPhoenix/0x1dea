@@ -13,9 +13,12 @@ interface Post {
   category?: string
 }
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   post: Post
-}>()
+  showCategory?: boolean
+}>(), {
+  showCategory: true
+})
 
 const formattedDate = computed(() => {
   let date: Date
@@ -43,7 +46,7 @@ const formattedDate = computed(() => {
         <p v-if="post.abstract" class="abstract">{{ post.abstract }}</p>
       </div>
       <div class="meta">
-        <span v-if="post.category" class="category-tag">{{ post.category }}</span>
+        <span v-if="showCategory && post.category" class="category-tag">{{ post.category }}</span>
         <span class="date">{{ formattedDate }}</span>
       </div>
     </div>

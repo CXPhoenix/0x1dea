@@ -182,6 +182,7 @@ const toggleViewMode = () => {
                 v-for="post in group.posts" 
                 :key="post.url" 
                 :post="post" 
+                :showCategory="false"
               />
             </div>
           </div>
@@ -195,6 +196,7 @@ const toggleViewMode = () => {
               v-for="post in processedPosts" 
               :key="post.url" 
               :post="post" 
+              :showCategory="true"
             />
           </div>
         </template>
