@@ -15,13 +15,13 @@ export default createContentLoader('post/**/*.md', {
                 category: (() => {
                     // post.url usually comes as /post/path/to/file or /post/path/to/file.html
                     
-                    // Simple logic:
-                    // Remove leading '/post/'
-                    const relativePath = post.url.replace(/^\/post\//, '')
+                    // Remove leading '/post/' and optional trailing extensions/slashes
+                    const relativePath = post.url.replace(/^\/post\//, '').replace(/\.(md|html)$/, '').replace(/\/$/, '')
                     const segments = relativePath.split('/')
                     
                     if (segments.length > 1) {
-                         return segments[0]
+                         // Join all but the last segment (which is the post slug/filename)
+                         return segments.slice(0, -1).join('-')
                     }
                     return '綜合'
                 })()
