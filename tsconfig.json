@@ -8,9 +8,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "types": [
-      "vite/client",
-      "vitepress/client",
-      "node"
+      "vitepress/client"
     ],
     "strict": true,
     "strictNullChecks": true,
