@@ -8,6 +8,7 @@
     "docs:preview": "vitepress preview docs",
     "test:unit": "vitest run"
   },
+  "type": "module",
   "keywords": [
     "0x1DEA",
     "CXPh03n1x",
@@ -41,7 +42,7 @@
     "@tsparticles/slim": "^3.9.1",
     "@tsparticles/vue3": "^3.0.1",
     "unocss": "^66.6.0",
-    "vitepress": "^1.6.4",
+    "vitepress": "2.0.0-alpha.16",
     "vue": "^3.5.28"
   },
   "devDependencies": {
