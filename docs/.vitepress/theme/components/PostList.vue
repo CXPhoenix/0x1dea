@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import PostCard from './PostCard.vue'
+import PostBlock from './PostBlock.vue'
 
 interface Post {
   title: string
@@ -22,6 +23,7 @@ const props = defineProps<{
 const searchQuery = ref('')
 const sortBy = ref<'time' | 'category'>('time')
 const sortOrder = ref<'asc' | 'desc'>('desc')
+const viewMode = ref<'card' | 'block'>('card')
 
 // Helper: Normalize date for comparison
 const getTime = (post: Post) => {
@@ -56,14 +58,10 @@ const processedPosts = computed(() => {
     } else {
       const catA = a.category || '綜合'
       const catB = b.category || '綜合'
-      // '綜合' always at the end in category sort? 
-      // User said "ascending or descending based on category name"
-      // Let's treat '綜合' as just another string for pure alphabetical sort
       result = catA.localeCompare(catB)
-      // If categories are same, sub-sort by time (usually desc)
       if (result === 0) {
         result = getTime(b) - getTime(a)
-        return result // Keep sub-sort fixed or based on order? Let's just return.
+        return result
       }
     }
     return sortOrder.value === 'asc' ? result : -result
@@ -94,6 +92,10 @@ const toggleSortMode = () => {
 const toggleSortOrder = () => {
   sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc'
 }
+
+const toggleViewMode = () => {
+  viewMode.value = viewMode.value === 'card' ? 'block' : 'card'
+}
 </script>
 
 <template>
@@ -114,6 +116,23 @@ const toggleSortOrder = () => {
       </div>
       
       <div class="actions">
+        <button class="control-btn" @click="toggleViewMode" :title="viewMode === 'card' ? '切換至列表模式' : '切換至卡片模式'">
+          <svg v-if="viewMode === 'card'" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="8" y1="6" x2="21" y2="6"></line>
+            <line x1="8" y1="12" x2="21" y2="12"></line>
+            <line x1="8" y1="18" x2="21" y2="18"></line>
+            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+          </svg>
+          <svg v-else class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+          </svg>
+        </button>
+
         <button class="control-btn" @click="toggleSortMode" title="切換排序方式">
           <span class="btn-text">{{ sortBy === 'time' ? '時間排序' : '類型排序' }}</span>
           <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -140,7 +159,12 @@ const toggleSortOrder = () => {
     </div>
 
     <!-- Content Section -->
-    <TransitionGroup :name="sortBy === 'time' ? 'list' : 'group'" tag="div" class="content-view">
+    <TransitionGroup 
+      :name="sortBy === 'time' ? 'list' : 'group'" 
+      tag="div" 
+      class="content-view"
+      :class="viewMode"
+    >
       <!-- Grouped View -->
       <template v-if="sortBy === 'category'">
         <div v-for="group in groupedData" :key="group.name" class="category-block">
@@ -148,16 +172,26 @@ const toggleSortOrder = () => {
             <span class="category-indicator"></span>
             {{ group.name }}
           </h2>
-          <div class="post-grid">
-            <PostCard v-for="post in group.posts" :key="post.url" :post="post" />
+          <div class="post-grid" :class="viewMode">
+            <component 
+              :is="viewMode === 'card' ? PostCard : PostBlock" 
+              v-for="post in group.posts" 
+              :key="post.url" 
+              :post="post" 
+            />
           </div>
         </div>
       </template>
 
       <!-- Flat View -->
       <template v-else>
-        <div class="post-grid">
-          <PostCard v-for="post in processedPosts" :key="post.url" :post="post" />
+        <div class="post-grid" :class="viewMode">
+          <component 
+            :is="viewMode === 'card' ? PostCard : PostBlock" 
+            v-for="post in processedPosts" 
+            :key="post.url" 
+            :post="post" 
+          />
         </div>
       </template>
     </TransitionGroup>
@@ -238,6 +272,7 @@ const toggleSortOrder = () => {
 .control-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0 1.25rem;
   height: 48px;
@@ -266,16 +301,25 @@ const toggleSortOrder = () => {
 }
 
 .btn-icon {
-  width: 16px;
-  height: 16px;
-  opacity: 0.7;
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
 }
 
 /* Content Layout */
 .post-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
+  transition: all 0.5s ease;
+}
+
+.post-grid.card {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.post-grid.block {
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .category-block {
@@ -317,13 +361,13 @@ const toggleSortOrder = () => {
 .list-move,
 .list-enter-active,
 .list-leave-active {
-  transition: all 0.5s ease;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .list-enter-from,
 .list-leave-to {
   opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(20px);
 }
 
 .list-leave-active {
@@ -342,7 +386,7 @@ const toggleSortOrder = () => {
   
   .control-btn {
     flex: 1;
-    justify-content: center;
+    padding: 0 1rem;
   }
   
   .btn-text {
