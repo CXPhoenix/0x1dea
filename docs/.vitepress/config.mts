@@ -35,7 +35,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' } // TODO: Update to user's github
+      { icon: 'github', link: 'https://github.com/cxphoenix/0x1dea' } // TODO: Update to user's github
     ]
   },
   vite: {

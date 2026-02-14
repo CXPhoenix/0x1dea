@@ -105,7 +105,7 @@ const toggleViewMode = () => {
 <template>
   <div class="post-list-container">
     <!-- Controls Section -->
-    <div class="controls-wrapper">
+    <div class="controls-wrapper" v-if="processedPosts.length > 0">
       <div class="search-bar">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"></circle>
@@ -206,7 +206,7 @@ const toggleViewMode = () => {
     <!-- Empty State -->
     <div v-if="processedPosts.length === 0" class="empty-state">
       <div class="empty-visual">📭</div>
-      <p>沒有找到匹配的文章</p>
+      <p class="pt-4">沒有任何文章，努力產生中！<br />((└(:3」┌)┘))</p>
     </div>
   </div>
 </template>
