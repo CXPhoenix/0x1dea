@@ -1,6 +1,6 @@
 "/post/":
   - text: README
-    link: /post/index
+    link: /post/
 
 "/":
   - text: 關於我
