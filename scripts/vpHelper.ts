@@ -2,15 +2,16 @@
 
 /**
  * VitePress Helper Tool (TypeScript Version)
- * 使用方法: npx tsx scripts/vphelper.ts new post <post_name> [-d <directory>]
+ * 使用方法: npx tsx scripts/vphelper.ts new post <post_name> [-d <path> | -c <category>]
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
+import { fileURLToPath } from 'node:url';
 
 // 定義參數設定的介面
-interface HelperConfig {
+export interface HelperConfig {
     command: string[];
     options: {
         dir: string;
@@ -18,14 +19,11 @@ interface HelperConfig {
     postName: string;
 }
 
-// 取得命令列參數 (排除 node 和 script 路徑)
-const args: string[] = process.argv.slice(2);
-
 // 預設資料夾路徑
-const DEFAULT_DIR = 'docs/post';
+export const DEFAULT_DIR = 'docs/post';
 
 // 參數解析器
-function parseArgs(args: string[]): HelperConfig {
+export function parseArgs(args: string[]): HelperConfig {
     const config: HelperConfig = {
         command: [],
         options: {
@@ -34,13 +32,39 @@ function parseArgs(args: string[]): HelperConfig {
         postName: ''
     };
 
+    // 用來標記是否已經設定過路徑，用於檢測衝突
+    let isCustomDirSet = false; // 是否使用了 -d
+    let isCategorySet = false;  // 是否使用了 -c
+
     for (let i = 0; i < args.length; i++) {
         const arg = args[i];
 
         if (arg === '-d') {
-            if (args[i + 1]) {
+            // 檢查衝突
+            if (isCategorySet) {
+                throw new Error('參數 -c 與 -d 不能同時使用。');
+            }
+
+            if (args[i + 1] && !args[i + 1].startsWith('-')) {
                 config.options.dir = args[i + 1];
+                isCustomDirSet = true;
                 i++; // 跳過下一個參數因為它是值
+            } else {
+                throw new Error('參數 -d 後面需要接路徑。');
+            }
+        } else if (arg === '-c') {
+            // 檢查衝突
+            if (isCustomDirSet) {
+                throw new Error('參數 -c 與 -d 不能同時使用。');
+            }
+
+            if (args[i + 1] && !args[i + 1].startsWith('-')) {
+                // 將分類名稱接在預設路徑後面
+                config.options.dir = path.join(DEFAULT_DIR, args[i + 1]);
+                isCategorySet = true;
+                i++; // 跳過下一個參數因為它是值
+            } else {
+                throw new Error('參數 -c 後面需要接分類名稱。');
             }
         } else if (!arg.startsWith('-')) {
             // 如果不是選項，則視為命令或名稱的一部分
@@ -56,7 +80,7 @@ function parseArgs(args: string[]): HelperConfig {
 }
 
 // 格式化時間：YYYY-mm-ddTHH:MM:SS+08:00 (UTC+8)
-function getFormattedDate(): string {
+export function getFormattedDate(): string {
     const now = new Date();
     // 1. 取得 UTC 時間並加上 8 小時 (UTC+8) 的毫秒數
     const offset = 8 * 60 * 60 * 1000;
@@ -69,39 +93,42 @@ function getFormattedDate(): string {
 }
 
 // 主要執行邏輯
-function main(): void {
-    const { command, options, postName } = parseArgs(args);
+export function main(): void {
+    // 取得命令列參數 (排除 node 和 script 路徑)
+    const args: string[] = process.argv.slice(2);
 
-    // 檢查指令是否為 new post
-    if (command[0] !== 'new' || command[1] !== 'post') {
-        console.error('\x1b[31m%s\x1b[0m', '錯誤: 未知的指令。');
-        console.log('用法: npx tsx scripts/vphelper.ts new post <post_name> [-d <directory>]');
-        process.exit(1);
-    }
+    try {
+        const { command, options, postName } = parseArgs(args);
 
-    if (!postName) {
-        console.error('\x1b[31m%s\x1b[0m', '錯誤: 請輸入文章名稱 (post_name)。');
-        process.exit(1);
-    }
+        // 檢查指令是否為 new post
+        if (command[0] !== 'new' || command[1] !== 'post') {
+            console.error('\x1b[31m%s\x1b[0m', '錯誤: 未知的指令。');
+            console.log('用法: npx tsx scripts/vphelper.ts new post <post_name> [-d <path> | -c <category>]');
+            process.exit(1);
+        }
 
-    // 處理檔案名稱：將空格轉為底線 (例如: "my new post" -> "my_new_post")
-    const safeFileName = postName.trim().replace(/\s+/g, '_');
+        if (!postName) {
+            console.error('\x1b[31m%s\x1b[0m', '錯誤: 請輸入文章名稱 (post_name)。');
+            process.exit(1);
+        }
 
-    // 處理標題：每個單字首字母大寫 (例如: "my new post" -> "My New Post")
-    const titleName = postName.replace(/\b\w/g, (char) => char.toUpperCase());
+        // 處理檔案名稱：將空格轉為底線 (例如: "my new post" -> "my_new_post")
+        const safeFileName = postName.trim().replace(/\s+/g, '_');
 
-    // 建構目標路徑
-    // process.cwd() 確保路徑是相對於執行指令的專案根目錄
-    const targetDir = path.resolve(process.cwd(), options.dir);
-    // 使用處理過的檔案名稱，加上 .md
-    const fileName = `${safeFileName}.md`; 
-    const filePath = path.join(targetDir, fileName);
+        // 處理標題：每個單字首字母大寫 (例如: "my new post" -> "My New Post")
+        const titleName = postName.replace(/\b\w/g, (char) => char.toUpperCase());
 
-    // 準備檔案內容模板
-    const createdTime = getFormattedDate();
-    // 文章內容模板，拼字已修正為 'thumbnail'
-    // 使用 titleName 來讓 Frontmatter 和 H1 標題都具備大寫格式
-    const fileContent = `---
+        // 建構目標路徑
+        // process.cwd() 確保路徑是相對於執行指令的專案根目錄
+        const targetDir = path.resolve(process.cwd(), options.dir);
+        // 使用處理過的檔案名稱，加上 .md
+        const fileName = `${safeFileName}.md`; 
+        const filePath = path.join(targetDir, fileName);
+
+        // 準備檔案內容模板
+        const createdTime = getFormattedDate();
+        // 文章內容模板
+        const fileContent = `---
 title: ${titleName}
 description:
 createdTime: ${createdTime}
@@ -111,14 +138,13 @@ thumbnail:
 # ${titleName}
 `;
 
-    try {
-        // 1. 確保資料夾存在 (recursive: true 會自動建立不存在的子資料夾)
+        // 1. 確保資料夾存在
         if (!fs.existsSync(targetDir)) {
             console.log(`正在建立資料夾: ${options.dir}...`);
             fs.mkdirSync(targetDir, { recursive: true });
         }
 
-        // 2. 檢查檔案是否已存在，避免覆蓋
+        // 2. 檢查檔案是否已存在
         if (fs.existsSync(filePath)) {
             console.error('\x1b[33m%s\x1b[0m', `警告: 檔案 "${fileName}" 已經存在於 "${options.dir}"，操作已取消。`);
             process.exit(1);
@@ -138,4 +164,9 @@ thumbnail:
     }
 }
 
-main();
+// 只有當直接執行此檔案時才執行 main
+// 使用 ESM 方式判斷 entry point
+const isMainModule = process.argv[1] === fileURLToPath(import.meta.url);
+if (isMainModule) {
+    main();
+}
