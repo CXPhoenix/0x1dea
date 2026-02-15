@@ -8,7 +8,7 @@ interface Post {
     seconds: number
     nanoseconds: number
   } | string | Date
-  abstract?: string
+  description?: string
   thumbnail?: string
   category?: string
 }
@@ -50,7 +50,7 @@ const formattedDate = computed(() => {
           <span v-if="showCategory && post.category" class="category-tag">{{ post.category }}</span>
           <span class="date">{{ formattedDate }}</span>
         </div>
-        <p v-if="post.abstract" class="abstract">{{ post.abstract }}</p>
+        <p v-if="post.description" class="description">{{ post.description }}</p>
       </div>
     </div>
   </a>
@@ -140,13 +140,13 @@ const formattedDate = computed(() => {
   font-weight: 500;
 }
 
-.abstract {
+.description {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--vp-c-text-2, #666);
   
-  /* Line clamping for abstract */
+  /* Line clamping for description */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;

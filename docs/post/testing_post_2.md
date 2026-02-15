@@ -1,6 +1,6 @@
 ---
 title: Testing Post 2
-abstract:
+description:
 createdTime: 2026-02-15T13:55:11+08:00
 thumbnail:
 ---

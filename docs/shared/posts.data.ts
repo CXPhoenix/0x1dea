@@ -7,7 +7,7 @@ import { createContentLoader, type ContentData } from 'vitepress'
 export interface Post {
   title: string
   url: string
-  abstract: string
+  description: string
   createdTime: Date
   thumbnail: string
   category: string
@@ -57,7 +57,7 @@ export default createContentLoader('post/**/*.md', {
         return {
           title: post.frontmatter.title || '無標題',
           url: post.url,
-          abstract: post.frontmatter.abstract ?? '閱讀更多...',
+          description: post.frontmatter.description ?? '閱讀更多...',
           createdTime: post.frontmatter.createdTime 
             ? new Date(post.frontmatter.createdTime) 
             : fallbackDate,

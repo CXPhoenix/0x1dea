@@ -103,7 +103,7 @@ function main(): void {
     // 使用 titleName 來讓 Frontmatter 和 H1 標題都具備大寫格式
     const fileContent = `---
 title: ${titleName}
-abstract:
+description:
 createdTime: ${createdTime}
 thumbnail:
 ---
