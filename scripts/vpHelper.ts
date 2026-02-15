@@ -99,13 +99,13 @@ function main(): void {
 
     // 準備檔案內容模板
     const createdTime = getFormattedDate();
-    // 注意: 這裡保留了你要求的 'thumbnil' 拼寫
+    // 文章內容模板，拼字已修正為 'thumbnail'
     // 使用 titleName 來讓 Frontmatter 和 H1 標題都具備大寫格式
     const fileContent = `---
 title: ${titleName}
 abstract:
 createdTime: ${createdTime}
-thumbnil:
+thumbnail:
 ---
 
 # ${titleName}

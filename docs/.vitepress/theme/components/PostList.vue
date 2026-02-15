@@ -11,7 +11,7 @@ interface Post {
     nanoseconds: number
   } | string | Date
   abstract?: string
-  thumbnil?: string
+  thumbnail?: string
   category?: string
 }
 

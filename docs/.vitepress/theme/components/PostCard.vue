@@ -9,7 +9,7 @@ interface Post {
     nanoseconds: number
   } | string | Date
   abstract?: string
-  thumbnil?: string
+  thumbnail?: string
   category?: string
 }
 
@@ -41,8 +41,8 @@ const formattedDate = computed(() => {
 <template>
   <a :href="post.url" class="post-card">
     <div class="card-content">
-      <div v-if="post.thumbnil" class="thumbnail-wrapper">
-        <img :src="post.thumbnil" :alt="post.title" class="thumbnail" />
+      <div v-if="post.thumbnail" class="thumbnail-wrapper">
+        <img :src="post.thumbnail" :alt="post.title" class="thumbnail" />
       </div>
       <div class="info">
         <h2 class="title">{{ post.title }}</h2>
