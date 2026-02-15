@@ -8,8 +8,8 @@ interface Post {
     seconds: number
     nanoseconds: number
   } | string | Date
-  abstract?: string
-  thumbnil?: string
+  description?: string
+  thumbnail?: string
   category?: string
 }
 
@@ -43,7 +43,7 @@ const formattedDate = computed(() => {
     <div class="block-content">
       <div class="info-main">
         <h3 class="title">{{ post.title }}</h3>
-        <p v-if="post.abstract" class="abstract">{{ post.abstract }}</p>
+        <p v-if="post.description" class="description">{{ post.description }}</p>
       </div>
       <div class="meta">
         <span v-if="showCategory && post.category" class="category-tag">{{ post.category }}</span>
@@ -112,7 +112,7 @@ const formattedDate = computed(() => {
   text-overflow: ellipsis;
 }
 
-.abstract {
+.description {
   margin: 0.25rem 0 0;
   font-size: 0.9rem;
   color: var(--vp-c-text-2, #666);
@@ -157,7 +157,7 @@ const formattedDate = computed(() => {
     justify-content: space-between;
   }
   
-  .title, .abstract {
+  .title, .description {
     white-space: normal;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -165,7 +165,7 @@ const formattedDate = computed(() => {
     -webkit-box-orient: vertical;
   }
   
-  .abstract {
+  .description {
     -webkit-line-clamp: 1;
     line-clamp: 1;
   }
