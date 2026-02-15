@@ -31,11 +31,11 @@ function getCategoryFromUrl(url: string): string {
 
   // 如果路徑包含子目錄 (e.g., tech/js/intro)，取檔案名稱前的部分作為分類
   if (segments.length > 1) {
-    return segments.slice(0, -1).join('-')
+    return segments.slice(0, -1).join('/')
   }
   
   // 如果只有一層或無法判斷，回傳第一個片段或預設值
-  return segments[0] || '綜合'
+  return '綜合'
 }
 
 export default createContentLoader('post/**/*.md', {

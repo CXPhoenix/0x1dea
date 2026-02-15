@@ -1,9 +1,6 @@
 "/post/":
-  - text: README
-    link: /post/
+  - text: 快速選單
+    items:
+      - text: 文章列表
+        link: /posts
 
-"/":
-  - text: 關於我
-    link: /about
-  - text: 文章列表
-    link: /posts
