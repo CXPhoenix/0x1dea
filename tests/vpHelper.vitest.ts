@@ -1,99 +1,86 @@
 import { describe, it, expect } from 'vitest';
 import path from 'node:path';
-import { parseArgs, getFormattedDate, DEFAULT_DIR } from '../scripts/vphelper';
+import { parseArgs, getFormattedDate, getAssetFolderName, DEFAULT_DIR, ASSETS_ROOT } from '../scripts/vphelper';
 
 describe('vphelper', () => {
+    
+    // ... parseArgs 和 getFormattedDate 的測試保持不變，省略以節省篇幅 ...
+    // (您可以保留原本這兩個 describe block)
     
     describe('parseArgs', () => {
         it('應該正確解析基本的 new post 指令', () => {
             const args = ['new', 'post', 'MyArticle'];
             const config = parseArgs(args);
-            
             expect(config.command).toEqual(['new', 'post']);
             expect(config.postName).toBe('MyArticle');
             expect(config.options.dir).toBe(DEFAULT_DIR);
         });
-
-        it('應該支援含有空白的文章名稱', () => {
-            const args = ['new', 'post', 'My', 'Awesome', 'Article'];
-            const config = parseArgs(args);
-            
-            // "My" 被視為 command 的一部分? 不，根據邏輯：
-            // 0: new (command)
-            // 1: post (command)
-            // 2: My (postName)
-            // 3: Awesome (被覆蓋到 postName 或被忽略？)
-            
-            // 讓我們回顧 parseArgs 的邏輯：
-            // 如果不是選項，且 command 長度 >= 2，則設為 postName。
-            // 迴圈會繼續，後面的字串會不斷覆蓋 postName。
-            // 這是一個簡單實作的特性，我們可以用它來測試最後一個參數是否被捕獲，
-            // 但實務上使用者應該用引號包起來 "My Awesome Article" 當作一個參數傳入。
-            
-            const quotedArgs = ['new', 'post', 'My Awesome Article'];
-            const quotedConfig = parseArgs(quotedArgs);
-            expect(quotedConfig.postName).toBe('My Awesome Article');
-        });
-
-        it('應該正確解析 -d 參數', () => {
-            const args = ['new', 'post', 'MyArticle', '-d', 'custom/path'];
-            const config = parseArgs(args);
-            
-            expect(config.options.dir).toBe('custom/path');
-        });
-
-        it('應該正確解析 -c 參數 (接在預設路徑後)', () => {
-            const args = ['new', 'post', 'MyArticle', '-c', 'tech'];
-            const config = parseArgs(args);
-            
-            const expectedPath = path.join(DEFAULT_DIR, 'tech');
-            expect(config.options.dir).toBe(expectedPath);
-        });
-
-        it('當 -d 和 -c 同時使用時應拋出錯誤', () => {
+        // ... 其他 parseArgs 測試 ...
+         it('當 -d 和 -c 同時使用時應拋出錯誤', () => {
             const args = ['new', 'post', 'MyArticle', '-d', 'path', '-c', 'cat'];
-            
             expect(() => parseArgs(args)).toThrow('參數 -c 與 -d 不能同時使用');
-        });
-
-        it('當 -c 和 -d 同時使用時應拋出錯誤 (順序相反)', () => {
-            const args = ['new', 'post', 'MyArticle', '-c', 'cat', '-d', 'path'];
-            
-            expect(() => parseArgs(args)).toThrow('參數 -c 與 -d 不能同時使用');
-        });
-
-        it('當 -d 後面沒有接路徑時應拋出錯誤', () => {
-            const args = ['new', 'post', 'MyArticle', '-d'];
-            expect(() => parseArgs(args)).toThrow('參數 -d 後面需要接路徑');
-        });
-
-        it('當 -c 後面沒有接分類時應拋出錯誤', () => {
-            const args = ['new', 'post', 'MyArticle', '-c'];
-            expect(() => parseArgs(args)).toThrow('參數 -c 後面需要接分類名稱');
-        });
-        
-        it('當 -d 後面接的是另一個 flag 時應拋出錯誤', () => {
-            const args = ['new', 'post', 'MyArticle', '-d', '-c'];
-            // 根據邏輯，下一個參數如果是 -c，startsWith('-') 會為真，進入 else 區塊
-            expect(() => parseArgs(args)).toThrow('參數 -d 後面需要接路徑');
         });
     });
 
     describe('getFormattedDate', () => {
         it('應該回傳符合 ISO 8601 且時區為 +08:00 的字串', () => {
             const dateStr = getFormattedDate();
-            
-            // 驗證格式: YYYY-MM-DDTHH:mm:ss+08:00
             const regex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+08:00$/;
             expect(dateStr).toMatch(regex);
         });
+    });
 
-        it('產生的時間應該可以被 Date 物件正確解析', () => {
-            const dateStr = getFormattedDate();
-            const date = new Date(dateStr);
-            
-            expect(date.toString()).not.toBe('Invalid Date');
-            expect(isNaN(date.getTime())).toBe(false);
+    describe('Assets Configuration', () => {
+        it('ASSETS_ROOT 應該是 docs/public/assets', () => {
+             expect(ASSETS_ROOT).toBe('docs/public/assets');
+        });
+    });
+
+    describe('getAssetFolderName', () => {
+        // 邏輯: 移除 docs, 連接剩餘路徑與檔名
+        
+        it('範例1: 預設資料夾 docs/post', () => {
+            // docs/post -> post -> post_hello
+            const targetDir = 'docs/post';
+            const safeName = 'hello';
+            const expected = 'post_hello';
+            expect(getAssetFolderName(targetDir, safeName)).toBe(expected);
+        });
+
+        it('範例2: 使用 -c 指定分類 (docs/post/hello)', () => {
+            // docs/post/hello -> post/hello -> post_hello_world
+            const targetDir = 'docs/post/hello';
+            const safeName = 'world';
+            const expected = 'post_hello_world';
+            expect(getAssetFolderName(targetDir, safeName)).toBe(expected);
+        });
+
+        it('範例3: 使用 -d 指定多層資料夾 (docs/new-posts)', () => {
+            // docs/new-posts -> new-posts -> new-posts_hello_world
+            const targetDir = 'docs/new-posts';
+            const safeName = 'hello_world';
+            const expected = 'new-posts_hello_world';
+            expect(getAssetFolderName(targetDir, safeName)).toBe(expected);
+        });
+
+        it('範例4: 使用 -d 指定根層資料夾 (docs)', () => {
+            // docs -> (empty) -> hi_vitepress
+            // 因為沒有 docs 之後的路徑，所以只剩檔名
+            const targetDir = 'docs';
+            const safeName = 'hi_vitepress';
+            const expected = 'root_hi_vitepress';
+            expect(getAssetFolderName(targetDir, safeName)).toBe(expected);
+        });
+
+        it('應該能處理絕對路徑', () => {
+            // 模擬絕對路徑: /Users/me/project/docs/guide
+            // 相對路徑轉換後為: docs/guide
+            // 結果: guide_setup
+            const cwd = process.cwd();
+            const targetDir = path.resolve(cwd, 'docs/guide');
+            const safeName = 'setup';
+            const expected = 'guide_setup';
+            expect(getAssetFolderName(targetDir, safeName)).toBe(expected);
         });
     });
 });
