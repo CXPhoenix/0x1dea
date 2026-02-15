@@ -3,6 +3,16 @@
 本專案的所有重大變更都將記錄在此文件中。
 格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.0.0/)，並遵守 [Semantic Versioning](https://semver.org/lang/zh-TW/)。
 
+## [1.3.0] - 2026-02-15
+
+### 🚀 新增功能 (Features)
+- **CLI 工具**: `new:post` 指令現在會自動在 `docs/public/assets/` 下建立與文章對應的靜態資源資料夾。
+- **自動化測試**: 新增 `vpHelper` 單元測試，並修復 `Particles` 元件測試環境。
+
+### ♻️ 重構與優化 (Refactor)
+- **核心架構**: 重構 `posts.data.ts`，引入 `Post` 型別定義並優化分類解析邏輯。
+- **指令更新**: 將 `pnpm new-post` 更名為 `pnpm new:post` 以符合專案命名慣例。
+
 ## [1.0.0] - 2026-02-14
 
 ### 🚀 新增功能 (Features)
