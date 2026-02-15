@@ -21,7 +21,7 @@ interface HelperConfig {
 // 取得命令列參數 (排除 node 和 script 路徑)
 const args: string[] = process.argv.slice(2);
 
-// 預設資料夾
+// 預設資料夾路徑
 const DEFAULT_DIR = 'docs/post';
 
 // 參數解析器
@@ -55,12 +55,17 @@ function parseArgs(args: string[]): HelperConfig {
     return config;
 }
 
-// 格式化時間：YYYY-mm-ddTHH:MM:SSZ
+// 格式化時間：YYYY-mm-ddTHH:MM:SS+08:00 (UTC+8)
 function getFormattedDate(): string {
     const now = new Date();
-    // toISOString() 預設格式為 2023-10-05T14:48:00.000Z
-    // 我們利用正則表達式移除毫秒 (.000) 部分
-    return now.toISOString().replace(/\.\d{3}Z$/, 'Z');
+    // 1. 取得 UTC 時間並加上 8 小時 (UTC+8) 的毫秒數
+    const offset = 8 * 60 * 60 * 1000;
+    const utc8Date = new Date(now.getTime() + offset);
+
+    // 2. toISOString() 會回傳該時間物件的 UTC 字串表示法
+    // 因為我們手動加了 8 小時，所以數值部分已經變成了 UTC+8 的時間
+    // 3. 最後將結尾的 'Z' (代表 UTC) 替換為 '+08:00' 來正確標示時區
+    return utc8Date.toISOString().replace(/\.\d{3}Z$/, '+08:00');
 }
 
 // 主要執行邏輯
@@ -79,24 +84,31 @@ function main(): void {
         process.exit(1);
     }
 
+    // 處理檔案名稱：將空格轉為底線 (例如: "my new post" -> "my_new_post")
+    const safeFileName = postName.trim().replace(/\s+/g, '_');
+
+    // 處理標題：每個單字首字母大寫 (例如: "my new post" -> "My New Post")
+    const titleName = postName.replace(/\b\w/g, (char) => char.toUpperCase());
+
     // 建構目標路徑
     // process.cwd() 確保路徑是相對於執行指令的專案根目錄
     const targetDir = path.resolve(process.cwd(), options.dir);
-    // 假設 postName 為檔案名稱，加上 .md
-    const fileName = `${postName}.md`; 
+    // 使用處理過的檔案名稱，加上 .md
+    const fileName = `${safeFileName}.md`; 
     const filePath = path.join(targetDir, fileName);
 
     // 準備檔案內容模板
     const createdTime = getFormattedDate();
     // 注意: 這裡保留了你要求的 'thumbnil' 拼寫
+    // 使用 titleName 來讓 Frontmatter 和 H1 標題都具備大寫格式
     const fileContent = `---
-title: ${postName}
+title: ${titleName}
 abstract:
 createdTime: ${createdTime}
 thumbnil:
 ---
 
-# ${postName}
+# ${titleName}
 `;
 
     try {
