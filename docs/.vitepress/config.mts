@@ -22,7 +22,11 @@ export default defineConfig({
   title: "0x1DEA",
   description: "Overflow of Imagination - 魔法是想像力的領域・資安也是",
   head: [
-    ['link', { rel: 'icon', type: "image/svg+xml", href: '/phoenixWithText.svg' }]
+    ['link', { rel: 'icon', type: "image/svg+xml", href: '/phoenixWithText.svg' }],
+    ['link', { rel: 'stylesheet', href: '/assets/fontawesome/fontawesome.min.css' }],
+    ['link', { rel: 'stylesheet', href: '/assets/fontawesome/solid.min.css' }],
+    ['link', { rel: 'stylesheet', href: '/assets/fontawesome/regular.min.css' }],
+    ['link', { rel: 'stylesheet', href: '/assets/fontawesome/brands.min.css' }],
   ],
   themeConfig: {
     logo: "/circleImage.svg",
