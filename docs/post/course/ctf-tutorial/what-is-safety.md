@@ -7,7 +7,7 @@ thumbnail: /assets/post_course_ctf-tutorial_what-is-safety/20260227005508.png
 
 ![post banner](/assets/post_course_ctf-tutorial_what-is-safety/20260227005508.png)
 
-# 安全？能吃嗎？
+# 什麼是安全？能吃嗎？
 
 <div class="vp-post">
     <Badge type="tip">Cybersecurity 課程</Badge>
@@ -107,7 +107,7 @@ a state in which or a place where you are safe and not in danger or at risk
 
 至少你從解釋中知道，所謂「安全」就是要避免受到或是對他人造成從小到大的狀態傷害。
 
-![圖 2：死掉就是最佳安全？](/assets/post_course_ctf-tutorial_what-is-safety/20260228013411.png)
+![圖 2：死掉就是最佳安全？（AI 製作）](/assets/post_course_ctf-tutorial_what-is-safety/20260228013411.png)
 
 不過，劍橋辭典的解釋我覺得也非常讚！
 
@@ -136,7 +136,7 @@ _also_ : the degree of probability of such loss
 
 所以從上面兩個詞彙你可以發現：「Safety」一詞不只是「不要危險」，還包含概念：「減少發生危險的可能性」。
 
-![圖 3：安全是不要發生危險，但危險千千萬萬種](/assets/post_course_ctf-tutorial_what-is-safety/20260228022122.png)
+![圖 3：安全是不要發生危險，但危險千千萬萬種很難預測（AI 製作）](/assets/post_course_ctf-tutorial_what-is-safety/20260228022122.png)
 
 ### 誤會了！國語辭典的「安全」其實已經告訴你了
 
@@ -157,7 +157,79 @@ _also_ : the degree of probability of such loss
 
 其實我們換句話說：如果把發生危險的可能性降到最低，是不是就是「安全」了呢？
 
-但就會有下一個問題：什麼是「危險」？
+![圖 4：教育部的解釋可不是廢話（AI 製作）](/assets/post_course_ctf-tutorial_what-is-safety/20260228114351.png)
 
-### 危險還有分？當然有！
+在了解什麼是「安全」後，就可以開始了解「資訊安全」了嗎？
 
+No No No！我們剛剛說到了：「把發生危險的可能性降到最低」，但是「危險」又是什麼呢？我們怎麼定義「危險」的？
+
+## 我們如何判斷「危險」
+
+我知道又來講「定義」很煩，但先別著急！具體定義我們前面已經講完了，接下來我們來整理一下概念，這樣就能了解什麼是「危險」。
+
+### 從「Danger」的定義出發
+
+回顧剛剛，你會不會覺得在 Merriam-Webster Dictionary 解釋的「Danger」是不是很「不具體」？
+
+也許你會覺得：「很具體啦！就受傷害啊、被破壞啊、損失什麼的，別雞蛋裡挑骨頭。」那麼就大錯特錯了！
+
+我所說的具體是指：所以怎麼樣「受傷害」？什麼東西「被破壞」？「損失」了什麼？
+
+在 Merriam-Webster Dictionary 中都沒有定義，只告訴你：恩，不要發生這三件壞壞的事情喔！
+
+這時候你可能會反駁：對啊！他只是解釋這個「詞」，但用在什麼情境是由我們決定的。
+
+你說到重點了！{.text-center style="font-size:1.5em; color: var(--vp-c-red-2); padding: 2rem 0;"}
+
+因為我們所謂的「危險」的確是「人訂的」！
+
+### 危險＝發生壞事
+
+在日常生活中，父母在你外出時，可能不免擔心你就說：「注意安全／Stay safe」；當你在過馬路時，會看到「通過人行穿越道注意安全」的標誌；當你在家逛網站時，你也會發現越來越多宣導「網路交友要小心，注意安全」。
+
+如果我們把剛剛的「安全」定義拆解放到這個脈絡中，這些「注意安全」其實就是要你「遠離危險」對吧？
+
+![圖 5：注意安全，遠離危險，所以危險是啥？](/assets/post_course_ctf-tutorial_what-is-safety/20260228130720.png)
+
+那為什麼要遠離危險呢？那當然是因為我們不希望「壞事」發生！
+
+壞事發生會怎樣？其實就是你無法「達成目標」對吧？
+
+### 保持安全＝達成我們的目標
+
+所以其實我們「保持安全」的本質，是不希望「壞事」發生；而所謂「壞事」則是會阻礙我們達成目標的事情。
+
+所以我們想要的「注意安全」，在某種程度上也代表我們「達成目標」的驅力。
+
+::: tip 舉個例子
+
+父母要我們出門「注意安全」，目標是什麼？
+
+不要被車撞？不要去不好的場所？
+
+其實就是希望你能夠「完整的、沒有損傷的、出去回來是同一個人的回到家」而已。
+
+所以只要所有會阻礙這個目標的事情，對於父母來說都屬於「危險」的事情。
+
+:::
+
+
+
+我們瞭解了這點，終於可以回頭來看「資訊安全」這件事情了！
+
+## 達成某種需要「資訊」力量的目標
+
+所以：資訊安全（Information Security／Cybersecurity）在做什麼呢？
+
+::: tip [Security](https://www.merriam-webster.com/dictionary/security)
+
+the quality or state of being secure: such as
+1. freedom from danger : safety
+2. freedom from fear or anxiety
+3. freedom from the prospect of being laid off
+
+> 一種安全的品質或狀態，例如遠離危險（保持安全）、遠離恐懼或焦慮、遠離被解僱的未來。
+
+:::
+
+簡單來說：我們在「資訊」這個領域有一些目標、或是有些目標包含了「資訊」這個領域，而在這個領域中的所有事情都可以持續保持<span style="font-size: 1.1em; color: var(--vp-c-red-2)">「不會阻礙我們達成目標」</span>的狀態或品質。
