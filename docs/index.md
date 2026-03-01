@@ -1,5 +1,4 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
@@ -22,3 +21,5 @@ features:
   - title: 🤖 AI 探索
     details: 現代的趨勢，然後...真的滿方便的！<br /><span class="block text-center pt-3 text-5">(≖＿≖)✧</span>
 ---
+
+<NewPost class="mt-8" />
