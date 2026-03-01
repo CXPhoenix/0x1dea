@@ -46,5 +46,8 @@ export default defineConfig({
     plugins: [
       UnoCSS()
     ]
+  },
+  markdown: {
+    math: true,
   }
 })

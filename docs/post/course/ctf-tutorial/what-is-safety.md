@@ -1,6 +1,6 @@
 ---
 title: 安全？能吃嗎？
-description:
+description: 我們好像都懂「資訊安全」，但真的深入了解過嗎？
 createdTime: 2026-02-27T00:47:45+08:00
 thumbnail: /assets/post_course_ctf-tutorial_what-is-safety/20260227005508.png
 ---
@@ -204,16 +204,14 @@ No No No！我們剛剛說到了：「把發生危險的可能性降到最低」
 ::: tip 舉個例子
 
 父母要我們出門「注意安全」，目標是什麼？
-
 不要被車撞？不要去不好的場所？
-
 其實就是希望你能夠「完整的、沒有損傷的、出去回來是同一個人的回到家」而已。
 
 所以只要所有會阻礙這個目標的事情，對於父母來說都屬於「危險」的事情。
 
 :::
 
-
+![圖 6：搞錯重點的注意安全](/assets/post_course_ctf-tutorial_what-is-safety/20260301114806.png)
 
 我們瞭解了這點，終於可以回頭來看「資訊安全」這件事情了！
 
@@ -232,4 +230,153 @@ the quality or state of being secure: such as
 
 :::
 
-簡單來說：我們在「資訊」這個領域有一些目標、或是有些目標包含了「資訊」這個領域，而在這個領域中的所有事情都可以持續保持<span style="font-size: 1.1em; color: var(--vp-c-red-2)">「不會阻礙我們達成目標」</span>的狀態或品質。
+簡單來說：我們在「資訊」這個領域有一些目標、或是有些目標包含了「資訊」這個領域，而在這個領域中的所有事情都可以持續保持「<span style="font-size: 1.1em; color: var(--vp-c-red-2)">不會阻礙我們達成目標</span>」的狀態或品質。
+
+但是「所有事情」這個範圍太大了，包山包海實在可怕...
+
+所以就開始設定「資訊的安全」要「被管理」的範圍。
+
+這邊就不得不提到鼎鼎大名的 ISO 27000 系列「資訊安全管理系統（Information Security Management System，ISMS）」。
+
+### 資安的範圍？
+
+認真說，資安管理中，要管的說大不大，說小完全不小。
+
+但根據 ISO 27000 系列的定義，[資安](https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en:term:3.28)要注意的就三件事：機密性（Credentialaity）、完整性（Integriry）、可用性（Availabiltiy）。
+
+![圖 7：Cybersecurity CIA](/assets/post_course_ctf-tutorial_what-is-safety/20260301122300.png)
+
+但關於這三個，我就先放一旁，下次再說...總之，在這之後所有關於 CTF 的相關內容，其實我們就是在跟這三個目標鬥智鬥力（但最主要還是前兩個，可用性的挑戰在 CTF 沒有看過）。
+
+## 不夠清楚？舉個例子
+
+這邊我用一個 CTF 的題目來舉例：[https://buckeye-bazaar.osucyber.club/](https://buckeye-bazaar.osucyber.club/)
+
+> [!NOTE]
+>
+> 這已經是我在教資安第一堂課程必用的題目了 ╮(￣▽￣"")╭
+
+![圖 8：Buckeye Bazaar](/assets/post_course_ctf-tutorial_what-is-safety/20260301120037.png)
+
+> 你如果用電腦板打開這個網站，會發現他的滿版讓人非常不舒服...的確，因為這是手機版的 Challenge 哈 ¯\\\_(ツ)_/¯
+
+### 確認目標與目的
+
+看到這個網站，你應該就知道這是一個電商的網頁。
+
+主要就是線上購物，讓賣家可以不用以實體的方式進行與顧客進行交易。
+
+你會說：「廢話，不然是做慈善嗎？」但這就是我們要釐清的「<span style="font-size: 2em; color: var(--vp-c-red-2); font-weight: 900">目標</span>」
+
+::: tip 電商網站的「目標」
+
+1. 與顧客互動
+2. 增加更多的知名度
+3. 賺錢
+
+電商網站的目的是以上哪一個呢？
+
+:::
+
+如果你不清楚以上問題的答案，那...恩...加油 (;^_^A
+
+當然是 <span style="font-size: 2em; font-weight: 900;">賺錢</span> 啊！～ ↖($ω$)↗
+
+那作為我輩駭客、攻擊手、漏洞研究員...我們關注的會是什麼呢？
+
+不讓他賺錢！！{style="font-size: 2.5em; font-weight: 900; color: var(--vp-c-red-2); text-align: center; padding: 1em 0;"}
+
+因此，在針對這個網站進行滲透、找漏洞時，著重點就會放在如何不讓他賺錢，也就是「賠錢」上。
+
+::: info 現實上...
+
+當然啦，現實中我們攻擊的理由不會只是這樣..
+
+這邊只是提供一個可以考量的角度。
+
+現實中別真的這樣做啊！
+
+:::
+
+### 規劃破壞「安全目標」的方法
+
+那在這個購物網站上，我們要讓他賠錢有哪些方法呢？
+
+以這個挑戰來說：我們要在資源不足的情況下，購買高價的 flag 才行。
+
+那麼要怎麼達成這個目標呢？除了「儲值餘額」外，我們怎麼樣協助這個購物網站找到破壞其「賺錢」目標的方法？
+
+這時候就來分析：網站會如何賠錢？
+
+::: tip 賠錢的可能
+
+基於這個挑戰的脈絡，會賠錢的可能有這些：
+
+1. 原本網站標價 1000，但使用者用 100 買到 --> 賠 900。
+2. 使用者的餘額是 100，但是再不儲值的情況下，使用者的餘額變成 1000 --> 賠 900。
+3. 使用者免費拿到物品 --> 賠標價的價格。
+
+:::
+
+我們了解網站如何賠錢後，當然就可以開始嘗試相對應的「方法」。
+
+例如以第一個賠錢的可能「使用者以低於網站標價的金額買到商品」來說，我們就會開始思考：怎麼樣會讓購買商品時低於網站標價呢？
+
+我們就會來針對網站的購物流程進行分析。（萬字分析，在此不寫，手酸了（；＿；））
+
+分析完流程後，我們確認：在購物時，購物金額是以以下公式判斷：
+
+$$\text{Unit Price}\times\text{Quantity}=\text{Total Amount}$$
+
+所以我們要以「低價」買到商品的話，要怎麼辦？
+
+用<span style="text-decoration: underline; text-underline-offset: 0.2em;">小數點</span>作為數量！{style="font-size: 2em; color: var(--vp-c-red-2); font-weight: 900; text-align: center;"}
+
+### 嘗試執行攻擊方法
+
+所以我們在把 flag 加入購物車後，數量變成： $0.0001$ 。
+
+![圖 9：flag](/assets/post_course_ctf-tutorial_what-is-safety/20260301125241.png)
+
+![圖 10：購物車](/assets/post_course_ctf-tutorial_what-is-safety/20260301125313.png)
+
+![圖 11：改變數量為 0.0001](/assets/post_course_ctf-tutorial_what-is-safety/20260301125401.png)
+
+![圖 12：購買成功](/assets/post_course_ctf-tutorial_what-is-safety/20260301125743.png)
+
+購買成功！這樣就成功地抓到這個購物網站的漏洞。
+
+## 結論？
+
+所以：「資訊安全」是什麼？
+
+就跟一般的「安全」一樣：保護我們能夠順利、無受傷、無破壞、無損失的達成我們的目標。
+
+所以生活中的資訊安全包含但不限於：
+
+1. 我在逛一個網站，但是我不希望我的身分資訊在網路上一起裸奔；
+2. 我在社交媒體上貼文，但是我不希望奇怪的網友循線而來；
+3. 我當酸民，但不想被抓到（這個道德問題我們到後台好好說說
+4. ...
+
+因此，學習資安的目標，不是破壞網站、不是盜取資訊，只是想「安全的活著」罷了。
+
+![圖 13：像個瘋子一樣活著](/assets/post_course_ctf-tutorial_what-is-safety/1772342178110.gif)
+
+---
+
+好啦，太悲傷了 ╮(￣▽￣"")╭
+
+總之，學習資安，保護別人，也保護自己才是王道啦！
+
+> [!IMPORTANT] 總而言之
+> 
+> 當我們有能力突破系統限制時，真正關鍵的，是我們的選擇。
+> 
+> 所謂素養、道德，就是我們可以，但我們選擇不做！
+>
+> > 我們是做好駭客！{style="font-size: 1.75em; text-align: center;"}
+> >
+> > &lt;&lt;From Vicent55&gt;&gt;{style="text-align: right; padding-right: 4em;"}
+> >
+> > ![圖 13：感謝 Vincent55 支援圖片哈](/assets/post_course_ctf-tutorial_what-is-safety/20260301132349.png)

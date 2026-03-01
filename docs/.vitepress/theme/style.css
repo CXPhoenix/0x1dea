@@ -214,10 +214,10 @@ body {
 }
 
 .vp-doc .custom-block p {
-  padding-left: 1.5em;
+  padding-left: 1.2em;
 }
 
-.vp-doc .custom-block > p:first-child {
+.vp-doc .custom-block>p:first-child {
   font-size: var(--block-title);
   line-height: var(--block-line-height);
   padding-left: 0;
@@ -225,24 +225,30 @@ body {
   margin-bottom: 1rem;
 }
 
-.vp-doc .custom-block > blockquote {
+.vp-doc .custom-block ul,
+.vp-doc .custom-block ol {
+  font-size: var(--p);
+  line-height: calc(var(--p) * var(--vp-custom-root-line-height-ratio));
+  margin-left: 2em;
+}
+
+.vp-doc .custom-block>ul:nth-child(2),
+.vp-doc .custom-block>ol:nth-child(2) {
+  margin-left: 1.2em;
+}
+
+.vp-doc .custom-block>blockquote {
   margin-left: 3em;
   border-color: var(--vp-c-text-3);
 }
 
-.vp-doc .custom-block > blockquote p {
+.vp-doc .custom-block>blockquote p {
   font-size: var(--subquote-p);
   line-height: var(--subquote-line-height);
   color: var(--vp-c-text-1);
   padding-left: 0;
 }
 
-.vp-doc .custom-block > ul,
-.vp-doc .custom-block > ol {
-  font-size: var(--p);
-  line-height: calc(var(--p) * var(--vp-custom-root-line-height-ratio));
-  padding-left: 2em;
-}
 
 /**
  * Component: Algolia
@@ -264,7 +270,7 @@ body {
   padding: 1rem 0;
 }
 
-.vp-post > .VPBadge {
+.vp-post>.VPBadge {
   font-size: calc(var(--vp-custom-root-font-size) * 0.85)
 }
 
@@ -272,7 +278,7 @@ body {
  * External link symbol
  * -------------------------------------------------------------------------- */
 
-.vp-doc p > a[href*='://']::after {
+.vp-doc p>a[href*='://']::after {
   content: "\f08e";
   font-family: 'Font Awesome 7 Free';
   font-weight: 900;
