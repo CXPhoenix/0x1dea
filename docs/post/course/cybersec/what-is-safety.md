@@ -2,11 +2,10 @@
 title: 安全？能吃嗎？
 description: 我好像都懂「資訊安全」，深入後有一些新發現...
 createdTime: 2026-02-27T00:47:45+08:00
-thumbnail: /assets/post_course_ctf-tutorial_what-is-safety/20260227005508.png
-category: 資安教學
+thumbnail: /assets/post_course_cybersec_what-is-safety/20260227005508.png
 ---
 
-![post banner](/assets/post_course_ctf-tutorial_what-is-safety/20260227005508.png)
+![post banner](/assets/post_course_cybersec_what-is-safety/20260227005508.png)
 
 # 什麼是安全？能吃嗎？
 
@@ -59,7 +58,7 @@ category: 資安教學
 
 :::
 
-![圖 1：吐槽（AI 製作）](/assets/post_course_ctf-tutorial_what-is-safety/20260227014249.png)
+![圖 1：吐槽（AI 製作）](/assets/post_course_cybersec_what-is-safety/20260227014249.png)
 
 好吧，我們對於「危險」的定義也是來源於「安全」...
 
@@ -108,7 +107,7 @@ a state in which or a place where you are safe and not in danger or at risk
 
 至少你從解釋中知道，所謂「安全」就是要避免受到或是對他人造成從小到大的狀態傷害。
 
-![圖 2：死掉就是最佳安全？（AI 製作）](/assets/post_course_ctf-tutorial_what-is-safety/20260228013411.png)
+![圖 2：死掉就是最佳安全？（AI 製作）](/assets/post_course_cybersec_what-is-safety/20260228013411.png)
 
 不過，劍橋辭典的解釋我覺得也非常讚！
 
@@ -137,7 +136,7 @@ _also_ : the degree of probability of such loss
 
 所以從上面兩個詞彙你可以發現：「Safety」一詞不只是「不要危險」，還包含概念：「減少發生危險的可能性」。
 
-![圖 3：安全是不要發生危險，但危險千千萬萬種很難預測（AI 製作）](/assets/post_course_ctf-tutorial_what-is-safety/20260228022122.png)
+![圖 3：安全是不要發生危險，但危險千千萬萬種很難預測（AI 製作）](/assets/post_course_cybersec_what-is-safety/20260228022122.png)
 
 ### 誤會了！國語辭典的「安全」其實已經告訴你了
 
@@ -158,7 +157,7 @@ _also_ : the degree of probability of such loss
 
 其實我們換句話說：如果把發生危險的可能性降到最低，是不是就是「安全」了呢？
 
-![圖 4：教育部的解釋可不是廢話（AI 製作）](/assets/post_course_ctf-tutorial_what-is-safety/20260228114351.png)
+![圖 4：教育部的解釋可不是廢話（AI 製作）](/assets/post_course_cybersec_what-is-safety/20260228114351.png)
 
 在了解什麼是「安全」後，就可以開始了解「資訊安全」了嗎？
 
@@ -190,7 +189,7 @@ No No No！我們剛剛說到了：「把發生危險的可能性降到最低」
 
 如果我們把剛剛的「安全」定義拆解放到這個脈絡中，這些「注意安全」其實就是要你「遠離危險」對吧？
 
-![圖 5：注意安全，遠離危險，所以危險是啥？](/assets/post_course_ctf-tutorial_what-is-safety/20260228130720.png)
+![圖 5：注意安全，遠離危險，所以危險是啥？](/assets/post_course_cybersec_what-is-safety/20260228130720.png)
 
 那為什麼要遠離危險呢？那當然是因為我們不希望「壞事」發生！
 
@@ -212,7 +211,7 @@ No No No！我們剛剛說到了：「把發生危險的可能性降到最低」
 
 :::
 
-![圖 6：搞錯重點的注意安全](/assets/post_course_ctf-tutorial_what-is-safety/20260301114806.png)
+![圖 6：搞錯重點的注意安全](/assets/post_course_cybersec_what-is-safety/20260301114806.png)
 
 我們瞭解了這點，終於可以回頭來看「資訊安全」這件事情了！
 
@@ -245,7 +244,7 @@ the quality or state of being secure: such as
 
 但根據 ISO 27000 系列的定義，[資安](https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en:term:3.28)要注意的就三件事：機密性（Credentialaity）、完整性（Integriry）、可用性（Availabiltiy）。
 
-![圖 7：Cybersecurity CIA](/assets/post_course_ctf-tutorial_what-is-safety/20260301122300.png)
+![圖 7：Cybersecurity CIA](/assets/post_course_cybersec_what-is-safety/20260301122300.png)
 
 但關於這三個，我就先放一旁，下次再說...總之，在這之後所有關於 CTF 的相關內容，其實我們就是在跟這三個目標鬥智鬥力（但最主要還是前兩個，可用性的挑戰在 CTF 沒有看過）。
 
@@ -257,7 +256,7 @@ the quality or state of being secure: such as
 >
 > 這已經是我在教資安第一堂課程必用的題目了 ╮(￣▽￣"")╭
 
-![圖 8：Buckeye Bazaar](/assets/post_course_ctf-tutorial_what-is-safety/20260301120037.png)
+![圖 8：Buckeye Bazaar](/assets/post_course_cybersec_what-is-safety/20260301120037.png)
 
 > 你如果用電腦板打開這個網站，會發現他的滿版讓人非常不舒服...的確，因為這是手機版的 Challenge 哈 ¯\\\_(ツ)_/¯
 
@@ -337,13 +336,13 @@ $$\text{Unit Price}\times\text{Quantity}=\text{Total Amount}$$
 
 所以我們在把 flag 加入購物車後，數量變成： $0.0001$ 。
 
-![圖 9：flag](/assets/post_course_ctf-tutorial_what-is-safety/20260301125241.png)
+![圖 9：flag](/assets/post_course_cybersec_what-is-safety/20260301125241.png)
 
-![圖 10：購物車](/assets/post_course_ctf-tutorial_what-is-safety/20260301125313.png)
+![圖 10：購物車](/assets/post_course_cybersec_what-is-safety/20260301125313.png)
 
-![圖 11：改變數量為 0.0001](/assets/post_course_ctf-tutorial_what-is-safety/20260301125401.png)
+![圖 11：改變數量為 0.0001](/assets/post_course_cybersec_what-is-safety/20260301125401.png)
 
-![圖 12：購買成功](/assets/post_course_ctf-tutorial_what-is-safety/20260301125743.png)
+![圖 12：購買成功](/assets/post_course_cybersec_what-is-safety/20260301125743.png)
 
 購買成功！這樣就成功地抓到這個購物網站的漏洞。
 
@@ -362,7 +361,7 @@ $$\text{Unit Price}\times\text{Quantity}=\text{Total Amount}$$
 
 因此，學習資安的目標，不是破壞網站、不是盜取資訊，只是想「安全的活著」罷了。
 
-![圖 13：像個瘋子一樣活著](/assets/post_course_ctf-tutorial_what-is-safety/1772342178110.gif)
+![圖 13：像個瘋子一樣活著](/assets/post_course_cybersec_what-is-safety/1772342178110.gif)
 
 ---
 
@@ -380,4 +379,4 @@ $$\text{Unit Price}\times\text{Quantity}=\text{Total Amount}$$
 > >
 > > &lt;&lt;From Vicent55&gt;&gt;{style="text-align: right; padding-right: 4em;"}
 > >
-> > ![圖 13：感謝 Vincent55 支援圖片哈](/assets/post_course_ctf-tutorial_what-is-safety/20260301132349.png)
+> > ![圖 13：感謝 Vincent55 支援圖片哈](/assets/post_course_cybersec_what-is-safety/20260301132349.png)

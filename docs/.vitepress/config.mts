@@ -49,5 +49,17 @@ export default defineConfig({
   },
   markdown: {
     math: true,
-  }
+  },
+  transformPageData(pageData) {
+    if (pageData.relativePath.endsWith('index.md') && pageData.relativePath !== 'index.md') {
+      // 使用 ??= (邏輯空值賦值) 的好處是：
+      // 如果您在某個特定的 index.md 裡手動寫了 sidebar: true，它會以您手寫的為主；
+      // 如果沒寫，就會自動補上這裡的預設值 false。
+      pageData.frontmatter.sidebar ??= false
+      pageData.frontmatter.aside ??= false
+      pageData.frontmatter.footer ??= true
+      pageData.frontmatter.showParticle ??= true
+      pageData.frontmatter.next ??= false
+    }
+  },
 })

@@ -114,7 +114,7 @@ const formattedDate = computed(() => {
 
 .description {
   margin: 0.25rem 0 0;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: var(--vp-c-text-2, #666);
   white-space: nowrap;
   overflow: hidden;

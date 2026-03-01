@@ -6,9 +6,11 @@ import { usePostSort } from '../composables/usePostSort'
 import { usePostFilter } from '../composables/usePostFilter'
 
 const props = withDefaults(defineProps<{
-  count?: number
+  count?: number,
+  showCategory?: boolean
 }>(), {
-  count: 5
+  count: -1,
+  showCategory: false
 })
 
 const filterFn = usePostFilter()
@@ -28,6 +30,7 @@ const newestPosts = computed(() => {
       v-for="post in newestPosts"
       :key="post.url"
       :post="post"
+      :show-category="props.showCategory"
     />
   </div>
 </template>
