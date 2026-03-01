@@ -1,8 +1,9 @@
 ---
 title: 安全？能吃嗎？
-description: 我們好像都懂「資訊安全」，但真的深入了解過嗎？
+description: 我好像都懂「資訊安全」，深入後有一些新發現...
 createdTime: 2026-02-27T00:47:45+08:00
 thumbnail: /assets/post_course_ctf-tutorial_what-is-safety/20260227005508.png
+category: 資安教學
 ---
 
 ![post banner](/assets/post_course_ctf-tutorial_what-is-safety/20260227005508.png)

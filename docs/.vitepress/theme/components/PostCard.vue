@@ -133,7 +133,7 @@ const formattedDate = computed(() => {
 
 .category-tag {
   font-size: 0.5rem;
-  padding: 0.15rem 0.6rem;
+  padding: 0.05rem 0.8rem;
   border-radius: 99px;
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);

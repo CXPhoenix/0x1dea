@@ -49,6 +49,7 @@ export default createContentLoader('post/**/*.md', {
    */
   transform(rawData: ContentData[]): Post[] {
     const posts = rawData
+      .filter((post) => post.frontmatter.isShowInPostsList ?? true)
       .map((post, idx) => {
         // 使用 Date.now() 確保每次 build 的預設時間基準一致，或固定一個種子
         // 這裡為了演示保留您的邏輯，但建議在 frontmatter 必填 date
@@ -63,7 +64,7 @@ export default createContentLoader('post/**/*.md', {
             : fallbackDate,
           // 已修正拼字: thumbnail
           thumbnail: post.frontmatter.thumbnail ?? `https://picsum.photos/seed/${idx + 1}/400/300`,
-          category: getCategoryFromUrl(post.url)
+          category: post.frontmatter.category ?? getCategoryFromUrl(post.url)
         }
       })
 
