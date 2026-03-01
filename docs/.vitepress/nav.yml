@@ -2,3 +2,7 @@
   link: /about
 - text: 文章列表
   link: /posts
+- text: 最近文章
+  items: 
+    - text: 安全？能吃嗎？
+      link: /post/course/ctf-tutorial/what-is-safety
