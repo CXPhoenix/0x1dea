@@ -3,6 +3,18 @@
 本專案的所有重大變更都將記錄在此文件中。
 格式遵循 [Keep a Changelog](https://keepachangelog.com/zh-TW/1.0.0/)，並遵守 [Semantic Versioning](https://semver.org/lang/zh-TW/)。
 
+## [1.4.0] - 2026-03-01
+
+### 🚀 新增功能 (Features)
+- **NewPost 元件**：新增 `NewPost.vue`，可在任意頁面顯示最新 N 篇文章（透過 `count` prop 指定數量，預設 5）。使用 `PostBlock` 呈現每一列，內部 pipeline 為 `filter → sort → slice`。
+- **首頁最新文章**：於 `index.md` frontmatter 區塊後直接放置 `<NewPost class="mt-8" />`，在首頁 features 區塊下方展示最新文章。
+- **usePostSort composable**：新增 `composables/usePostSort.ts`，封裝 `sortPostsKey`（`InjectionKey`）與 `usePostSort()` composable。預設依 `createdTime` 由新至舊排序；修正 VitePress ContentLoader JSON 序列化後 `Date` 以 `string` 型別傳遞至 client 的問題，改以 `new Date(value)` 統一處理。
+- **usePostFilter composable**：新增 `composables/usePostFilter.ts`，封裝 `filterPostsKey`（`InjectionKey`）與 `usePostFilter()` composable。預設接受全部文章，可透過 `provide` 注入自訂篩選條件（如依 category 過濾）。
+
+### ♻️ 重構與最佳化 (Refactor)
+- **全局元件擴充**：於 `index.ts` 補充全局註冊 `PostBlock` 與 `NewPost`，統一 markdown 頁面的元件存取方式。
+- **composables 目錄**：建立 `theme/composables/` 目錄，確立 theme 層 composable 的組織慣例；透過 `InjectionKey<T>` 提供型別安全的 provide/inject 介面，讓使用端可覆寫排序與過濾行為而無需修改元件。
+
 ## [1.3.0] - 2026-02-15
 
 ### 🚀 新增功能 (Features)
