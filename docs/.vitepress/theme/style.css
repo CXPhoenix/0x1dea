@@ -71,6 +71,79 @@
 }
 
 /**
+ * Font Size
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-root-font-size: 20px;
+  --vp-custom-root-line-height-ratio: 1.8;
+  --vp-custom-root-scale-ratio: 1.25;
+}
+
+html,
+body {
+  font-size: var(--vp-custom-root-font-size);
+  line-height: calc(var(--vp-custom-root-font-size) * var(--vp-custom-root-line-height-ratio));
+}
+
+.vp-doc {
+  --p: var(--vp-custom-root-font-size);
+  --h6: var(--p);
+  --h5: var(--p);
+  --h4: calc(var(--h5) * var(--vp-custom-root-scale-ratio));
+  --h3: calc(var(--h4) * var(--vp-custom-root-scale-ratio));
+  --h2: calc(var(--h3) * var(--vp-custom-root-scale-ratio));
+  --h1: calc(var(--h2) * var(--vp-custom-root-scale-ratio));
+}
+
+.vp-doc h1 {
+  font-size: var(--h1);
+  line-height: calc(var(--h1) * var(--vp-custom-root-line-height-ratio));
+}
+
+.vp-doc h2 {
+  font-size: var(--h2);
+  line-height: calc(var(--h2) * var(--vp-custom-root-line-height-ratio));
+}
+
+.vp-doc h3 {
+  font-size: var(--h3);
+  line-height: calc(var(--h3) * var(--vp-custom-root-line-height-ratio));
+}
+
+.vp-doc h4 {
+  font-size: var(--h4);
+  line-height: calc(var(--h4) * var(--vp-custom-root-line-height-ratio));
+}
+
+.vp-doc h5 {
+  font-size: var(--h5);
+  line-height: calc(var(--h5) * var(--vp-custom-root-line-height-ratio));
+}
+
+.vp-doc h6 {
+  font-size: var(--h6);
+  line-height: calc(var(--h6) * var(--vp-custom-root-line-height-ratio));
+}
+
+.vp-doc p,
+.vp-doc ul,
+.vp-doc ol {
+  font-size: var(--p);
+  line-height: calc(var(--p) * var(--vp-custom-root-line-height-ratio));
+}
+
+/**
+ * Heading: Custom styles in every post
+ * -------------------------------------------------------------------------- */
+
+.vp-doc h1 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/**
  * Component: Button
  * -------------------------------------------------------------------------- */
 
@@ -92,17 +165,13 @@
 
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
-  );
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg,
+      #bd34fe 30%,
+      #41d1ff);
 
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #bd34fe 50%,
-    #47caff 50%
-  );
+  --vp-home-hero-image-background-image: linear-gradient(-45deg,
+      #bd34fe 50%,
+      #47caff 50%);
   --vp-home-hero-image-filter: blur(44px);
 }
 
@@ -129,6 +198,58 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
+.vp-doc .custom-block {
+  --block-p: var(--p);
+  --block-title: var(--h3);
+  --block-line-height: calc(var(--block-p) * 1.5);
+  --subquote-p: calc(var(--block-p) * 0.9);
+  --subquote-line-height: calc(var(--subquote-p) * 1.2)
+}
+
+.vp-doc .custom-block p,
+.vp-doc .custom-block ul,
+.vp-doc .custom-block ol {
+  font-size: var(--p);
+  line-height: var(--block-line-height);
+}
+
+.vp-doc .custom-block p {
+  padding-left: 1.2em;
+}
+
+.vp-doc .custom-block>p:first-child {
+  font-size: var(--block-title);
+  line-height: var(--block-line-height);
+  padding-left: 0;
+  text-indent: 0;
+  margin-bottom: 1rem;
+}
+
+.vp-doc .custom-block ul,
+.vp-doc .custom-block ol {
+  font-size: var(--p);
+  line-height: calc(var(--p) * var(--vp-custom-root-line-height-ratio));
+  margin-left: 2em;
+}
+
+.vp-doc .custom-block>ul:nth-child(2),
+.vp-doc .custom-block>ol:nth-child(2) {
+  margin-left: 1.2em;
+}
+
+.vp-doc .custom-block>blockquote {
+  margin-left: 3em;
+  border-color: var(--vp-c-text-3);
+}
+
+.vp-doc .custom-block>blockquote p {
+  font-size: var(--subquote-p);
+  line-height: var(--subquote-line-height);
+  color: var(--vp-c-text-1);
+  padding-left: 0;
+}
+
+
 /**
  * Component: Algolia
  * -------------------------------------------------------------------------- */
@@ -137,3 +258,29 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * Component: Post badge
+ * -------------------------------------------------------------------------- */
+
+.vp-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem 0;
+}
+
+.vp-post>.VPBadge {
+  font-size: calc(var(--vp-custom-root-font-size) * 0.85)
+}
+
+/**
+ * External link symbol
+ * -------------------------------------------------------------------------- */
+
+.vp-doc p>a[href*='://']::after {
+  content: "\f08e";
+  font-family: 'Font Awesome 7 Free';
+  font-weight: 900;
+  font-size: 0.75em;
+}
