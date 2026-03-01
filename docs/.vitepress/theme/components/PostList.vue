@@ -10,9 +10,16 @@ interface Post {
     seconds: number
     nanoseconds: number
   } | string | Date
+  categoryRootPath: string
   description?: string
   thumbnail?: string
   category?: string
+}
+
+interface Group {
+  name: string
+  categoryRootPath: string
+  posts: Post[]
 }
 
 const props = defineProps<{
@@ -23,7 +30,7 @@ const props = defineProps<{
 const searchQuery = ref('')
 const sortBy = ref<'time' | 'category'>('time')
 const sortOrder = ref<'asc' | 'desc'>('desc')
-const viewMode = ref<'card' | 'block'>('card')
+const viewMode = ref<'card' | 'block'>('block')
 
 // Helper: Normalize date for comparison
 const getTime = (post: Post) => {
@@ -40,7 +47,7 @@ const processedPosts = computed(() => {
   let filtered = props.posts.filter(post => {
     const q = searchQuery.value.toLowerCase().trim()
     if (!q) return true
-    
+
     const titleMatch = post.title?.toLowerCase().includes(q)
     if (sortBy.value === 'time') {
       return titleMatch
@@ -71,18 +78,22 @@ const processedPosts = computed(() => {
 // Grouped data if in category mode
 const groupedData = computed(() => {
   if (sortBy.value !== 'category') return null
-  
-  const groups: Map<string, Post[]> = new Map()
-  
+
+  const groups: Map<string, Group> = new Map()
+
   processedPosts.value.forEach(post => {
     const category = post.category || '綜合'
     if (!groups.has(category)) {
-      groups.set(category, [])
+      groups.set(category, {
+        name: category,
+        categoryRootPath: post.categoryRootPath,
+        posts: []
+      })
     }
-    groups.get(category)!.push(post)
+    groups.get(category)!.posts.push(post)
   })
-  
-  return Array.from(groups.entries()).map(([name, posts]) => ({ name, posts }))
+
+  return Array.from(groups.entries()).map(([name, group]) => ({ name: group.name, categoryRootPath: group.categoryRootPath, posts: group.posts }))
 })
 
 const transitionKey = computed(() => {
@@ -111,17 +122,14 @@ const toggleViewMode = () => {
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input 
-          v-model="searchQuery" 
-          type="text" 
-          :placeholder="sortBy === 'time' ? '搜尋文章標題...' : '搜尋標題或類型...'"
-          class="search-input"
-        />
+        <input v-model="searchQuery" type="text" :placeholder="sortBy === 'time' ? '搜尋文章標題...' : '搜尋標題或類型...'"
+          class="search-input" />
       </div>
-      
+
       <div class="actions">
         <button class="control-btn" @click="toggleViewMode" :title="viewMode === 'card' ? '切換至列表模式' : '切換至卡片模式'">
-          <svg v-if="viewMode === 'card'" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg v-if="viewMode === 'card'" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
             <line x1="8" y1="6" x2="21" y2="6"></line>
             <line x1="8" y1="12" x2="21" y2="12"></line>
             <line x1="8" y1="18" x2="21" y2="18"></line>
@@ -147,10 +155,11 @@ const toggleViewMode = () => {
             <line x1="4" y1="4" x2="9" y2="9"></line>
           </svg>
         </button>
-        
+
         <button class="control-btn" @click="toggleSortOrder" title="切換升降冪">
           <span class="btn-text">{{ sortOrder === 'asc' ? '升冪' : '降冪' }}</span>
-          <svg v-if="sortOrder === 'asc'" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg v-if="sortOrder === 'asc'" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2">
             <line x1="12" y1="19" x2="12" y2="5"></line>
             <polyline points="5 12 12 5 19 12"></polyline>
           </svg>
@@ -164,26 +173,17 @@ const toggleViewMode = () => {
 
     <!-- Content Section -->
     <Transition mode="out-in" name="fade">
-      <div 
-        :key="transitionKey" 
-        class="content-view"
-        :class="viewMode"
-      >
+      <div :key="transitionKey" class="content-view" :class="viewMode">
         <!-- Grouped View -->
         <template v-if="sortBy === 'category'">
           <div v-for="group in groupedData" :key="group.name" class="category-block">
             <h2 class="category-header">
               <span class="category-indicator"></span>
-              {{ group.name }}
+              <a :href="group.categoryRootPath" target="_top" style="text-underline-offset: 0.3rem;">{{ group.name }}</a>
             </h2>
             <div class="post-grid" :class="viewMode">
-              <component 
-                :is="viewMode === 'card' ? PostCard : PostBlock" 
-                v-for="post in group.posts" 
-                :key="post.url" 
-                :post="post" 
-                :showCategory="false"
-              />
+              <component :is="viewMode === 'card' ? PostCard : PostBlock" v-for="post in group.posts" :key="post.url"
+                :post="post" :showCategory="false" />
             </div>
           </div>
         </template>
@@ -191,13 +191,8 @@ const toggleViewMode = () => {
         <!-- Flat View -->
         <template v-else>
           <div class="post-grid" :class="viewMode">
-            <component 
-              :is="viewMode === 'card' ? PostCard : PostBlock" 
-              v-for="post in processedPosts" 
-              :key="post.url" 
-              :post="post" 
-              :showCategory="true"
-            />
+            <component :is="viewMode === 'card' ? PostCard : PostBlock" v-for="post in processedPosts" :key="post.url"
+              :post="post" :showCategory="true" />
           </div>
         </template>
       </div>
@@ -380,20 +375,20 @@ const toggleViewMode = () => {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .actions {
     justify-content: center;
   }
-  
+
   .control-btn {
     flex: 1;
     padding: 0 1rem;
   }
-  
+
   .btn-text {
     display: none;
   }
-  
+
   .category-header {
     font-size: 1.5rem;
   }

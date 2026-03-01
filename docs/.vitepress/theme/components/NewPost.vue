@@ -6,30 +6,36 @@ import { usePostSort } from '../composables/usePostSort'
 import { usePostFilter } from '../composables/usePostFilter'
 
 const props = withDefaults(defineProps<{
-  count?: number
+  count?: number,
+  showCategory?: boolean
 }>(), {
-  count: 5
+  count: -1,
+  showCategory: false
 })
 
 const filterFn = usePostFilter()
 const sortFn = usePostSort()
 
-const newestPosts = computed(() =>
-  [...posts].filter(filterFn).sort(sortFn).slice(0, props.count)
-)
+const newestPosts = computed(() => {
+  if (props.count === -1) {
+    return [...posts].filter(filterFn).sort(sortFn)
+  }
+  return [...posts].filter(filterFn).sort(sortFn).slice(0, props.count)
+})
 </script>
 
 <template>
-  <div class="new-post-list">
+  <div :class="$style['new-post-list']">
     <PostBlock
       v-for="post in newestPosts"
       :key="post.url"
       :post="post"
+      :show-category="props.showCategory"
     />
   </div>
 </template>
 
-<style scoped>
+<style module>
 .new-post-list {
   display: flex;
   flex-direction: column;

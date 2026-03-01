@@ -11,6 +11,8 @@ export interface Post {
   createdTime: Date
   thumbnail: string
   category: string
+  categoryFromPath: string
+  categoryRootPath: string
 }
 
 declare const data: Post[]
@@ -38,6 +40,10 @@ function getCategoryFromUrl(url: string): string {
   return '綜合'
 }
 
+function getCategoryRootPath(url: string): string {
+  return url.split('/').slice(0, -1).join('/')
+}
+
 export default createContentLoader('post/**/*.md', {
   includeSrc: true, // 如果不需要全文搜尋，建議設為 false 以減少 bundle size
   render: false,
@@ -48,7 +54,15 @@ export default createContentLoader('post/**/*.md', {
    * @param rawData VitePress 載入的原始資料
    */
   transform(rawData: ContentData[]): Post[] {
+    const categories: Map<string, string> = new Map()
+    rawData.filter((post) => post.frontmatter.isIndex).forEach((post) => {
+      const categoryRootPath = getCategoryRootPath(post.url)
+      if (!categories.has(categoryRootPath)) {
+        categories.set(categoryRootPath, post.frontmatter.category)
+      }
+    })
     const posts = rawData
+      .filter((post) => !post.frontmatter.isIndex)
       .map((post, idx) => {
         // 使用 Date.now() 確保每次 build 的預設時間基準一致，或固定一個種子
         // 這裡為了演示保留您的邏輯，但建議在 frontmatter 必填 date
@@ -61,9 +75,10 @@ export default createContentLoader('post/**/*.md', {
           createdTime: post.frontmatter.createdTime 
             ? new Date(post.frontmatter.createdTime) 
             : fallbackDate,
-          // 已修正拼字: thumbnail
-          thumbnail: post.frontmatter.thumbnail ?? `https://picsum.photos/seed/${idx + 1}/400/300`,
-          category: getCategoryFromUrl(post.url)
+          thumbnail: post.frontmatter.thumbnail || `https://picsum.photos/seed/${idx + 1}/400/300`,
+          category: post.frontmatter.category || (categories.get(getCategoryRootPath(post.url)) ?? getCategoryFromUrl(post.url)),
+          categoryFromPath: getCategoryFromUrl(post.url),
+          categoryRootPath: getCategoryRootPath(post.url),
         }
       })
 
