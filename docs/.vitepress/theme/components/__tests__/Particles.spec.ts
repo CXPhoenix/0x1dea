@@ -1,6 +1,14 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import Particles from '../Particles.vue'
+
+// Mock vitepress useData
+vi.mock('vitepress', () => ({
+  useData: () => ({
+    isDark: { value: false }
+  })
+}))
+
 
 describe('Particles.vue', () => {
   const VueParticlesMock = {

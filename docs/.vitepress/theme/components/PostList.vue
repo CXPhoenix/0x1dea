@@ -10,8 +10,8 @@ interface Post {
     seconds: number
     nanoseconds: number
   } | string | Date
-  abstract?: string
-  thumbnil?: string
+  description?: string
+  thumbnail?: string
   category?: string
 }
 

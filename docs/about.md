@@ -25,8 +25,18 @@ Hi，我是 Phoenix，或是你稱呼我為 CXPhoenix、CXPh03n1x、「那個誰
 
 所以開始寫多寫一下 Blog 來練習。
 
->[!WARNING]文字表達力缺失警告
+> [!WARNING] 👁️‍🗨️ 文字表達力缺失警告
 > 因為算是練習，所以如果寫得很爛，請忽略謝謝 ʅ（´◔౪◔）ʃ
+
+> [!danger] 🚨 錯誤通報
+> 若在內文中有出現錯誤，你覺得造成你身心不舒服；
+> 或是你覺得怎麼寫可以更為精確、精準。
+> 
+> 歡迎來信說明建議；
+> 或是你可以到我的 [Github](https://github.com/CXPhoenix/0x1dea/issues) 去發 issues 喔！
+> 
+> * E-mail：[0826@fhsh.tp.edu.tw](mailto:0826@fhsh.tp.edu.tw)
+> * Github Repo：https://github.com/CXPhoenix/0x1dea
 
 
 ## 專長
@@ -41,7 +51,7 @@ Hi，我是 Phoenix，或是你稱呼我為 CXPhoenix、CXPh03n1x、「那個誰
 - ITS Cybersecurity
 - Cisco CCST Cybersecurity
 
->[!NOTE]
+>[!TIP] 🤡 In my head...
 > 啊老師就不用這麼多證照吼... ლ(´•д• ̀ლ
 
 ## 座右銘

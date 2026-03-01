@@ -1,9 +1,18 @@
-"/post/":
-  - text: README
-    link: /post/
+"/post/course/ctf-tutorial":
+  - text: CTF 教學備課系列
+    items:
+      - text: 安全？能吃嗎？
+        link: /post/course/ctf-tutorial/what-is-safety
 
-"/":
-  - text: 關於我
-    link: /about
-  - text: 文章列表
-    link: /posts
+"/post/course/":
+  - text: CTF 教學備課系列
+    items:
+      - text: 安全？能吃嗎？
+        link: /post/course/ctf-tutorial/what-is-safety
+
+"/post/":
+  - text: CTF 教學備課系列
+    items:
+      - text: 安全？能吃嗎？
+        link: /post/course/ctf-tutorial/what-is-safety
+

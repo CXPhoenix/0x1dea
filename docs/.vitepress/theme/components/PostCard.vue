@@ -8,8 +8,8 @@ interface Post {
     seconds: number
     nanoseconds: number
   } | string | Date
-  abstract?: string
-  thumbnil?: string
+  description?: string
+  thumbnail?: string
   category?: string
 }
 
@@ -41,8 +41,8 @@ const formattedDate = computed(() => {
 <template>
   <a :href="post.url" class="post-card">
     <div class="card-content">
-      <div v-if="post.thumbnil" class="thumbnail-wrapper">
-        <img :src="post.thumbnil" :alt="post.title" class="thumbnail" />
+      <div v-if="post.thumbnail" class="thumbnail-wrapper">
+        <img :src="post.thumbnail" :alt="post.title" class="thumbnail" />
       </div>
       <div class="info">
         <h2 class="title">{{ post.title }}</h2>
@@ -50,7 +50,7 @@ const formattedDate = computed(() => {
           <span v-if="showCategory && post.category" class="category-tag">{{ post.category }}</span>
           <span class="date">{{ formattedDate }}</span>
         </div>
-        <p v-if="post.abstract" class="abstract">{{ post.abstract }}</p>
+        <p v-if="post.description" class="description">{{ post.description }}</p>
       </div>
     </div>
   </a>
@@ -132,7 +132,7 @@ const formattedDate = computed(() => {
 }
 
 .category-tag {
-  font-size: 0.75rem;
+  font-size: 0.5rem;
   padding: 0.15rem 0.6rem;
   border-radius: 99px;
   background: var(--vp-c-brand-soft);
@@ -140,13 +140,13 @@ const formattedDate = computed(() => {
   font-weight: 500;
 }
 
-.abstract {
+.description {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--vp-c-text-2, #666);
   
-  /* Line clamping for abstract */
+  /* Line clamping for description */
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
