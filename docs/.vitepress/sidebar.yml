@@ -1,18 +1,30 @@
-"/post/course/ctf-tutorial":
-  - text: CTF 教學備課系列
+"/post/course/rm":
+  - text: 研究方法教學備課
+    items: 
+      - text: 為什麼你需要學研究方法？
+        link: /post/course/rm/why-we-need-rm
+
+"/post/course/cybersec":
+  - text: 資安教學備課
     items:
       - text: 安全？能吃嗎？
-        link: /post/course/ctf-tutorial/what-is-safety
+        link: /post/course/cybersec/what-is-safety
 
 "/post/course/":
-  - text: CTF 教學備課系列
+  - text: 資安教學備課系列
     items:
       - text: 安全？能吃嗎？
-        link: /post/course/ctf-tutorial/what-is-safety
+        link: /post/course/cybersec/what-is-safety
+  - text: 研究方法教學備課系列
+    items:
+      - text: 為什麼你需要學研究方法？
+        link: /post/course/rm/why-we-need-rm
 
 "/post/":
-  - text: CTF 教學備課系列
+  - text: 備課系列
     items:
-      - text: 安全？能吃嗎？
-        link: /post/course/ctf-tutorial/what-is-safety
+      - text: 資安教學備課系列
+        link: /post/course/cybersec/
+      - text: 研究方法備課系列
+        link: /post/course/rm/
 

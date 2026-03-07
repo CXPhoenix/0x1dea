@@ -15,6 +15,7 @@
     <a href="https://github.com/CXPhoenix/0x1dea/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/CXPhoenix/0x1dea"/></a>
     <img alt="Vue Version" src="https://img.shields.io/badge/vue-3.5+-green.svg"/>
     <img alt="VitePress" src="https://img.shields.io/badge/VitePress-1.6+-8a2be2.svg"/>
+    <img alt="Version" src="https://img.shields.io/badge/version-1.4.0-blue.svg"/>
   </div>
 
   <p>
@@ -28,11 +29,11 @@
 
 ## *最新消息* 🔥
 
+- **[2026/03]** ✨ **v1.4.0 發布**！新增 `NewPost` 元件與 `composables/` 層，首頁現可自動展示最新文章。
 - **[2026/02]** 🚀 **v1.3.0 發布**！新增 CLI 自動化資源管理與單元測試。
 - **[2026/02]** 🚀 **v1.0.0 正式發布**！查看 [完整更新日誌](./CHANGELOG.md)。
 - **[2026/02]** 🎉 專案正式啟動，整合 VitePress 技術文件架構。
 - **[2026/02]** 🛡️ 強化資安專題內容，新增紅隊與滲透測試知識模組。
-- **[2026/02]** 🤖 整合 AI 探索單元，記錄 LLM 在程式開發中的應用。
 
 ## 為什麼選擇 0x1DEA？ 🌟
 
@@ -43,6 +44,7 @@
 - **🤖 AI 驅動** - 探索人工智慧在日常開發與安全防禦中的實際裝載與應用。
 - **🎨 極致視覺** - 使用 VitePress 展示主題，搭配 `tsparticles` 打造沈浸式的閱讀體驗。
 - **📚 結構化知識** - 透過系統化的導覽與內容分類，讓學習路徑一目瞭然。
+- **🆕 最新文章 Widget** - `NewPost` 元件可嵌入任意頁面，以 `count` prop 控制顯示篇數（預設 5），支援透過 `provide/inject` 注入自訂排序與過濾邏輯。
 
 ## 快速開始 🚀
 
@@ -149,6 +151,15 @@ pnpm new:post "系統架構" -d docs/design
 │  • UnoCSS: 引擎式 CSS 框架                                │
 │  • @tsparticles: 高性能粒子效果                             │
 │  • Vitest: 極速測試框架                                   │
+└──────────────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+┌─────────────────────────────────────────────────────────┐
+│  Theme 元件層 🧩                                         │
+│  • PostCard / PostBlock / PostList: 文章呈現元件           │
+│  • NewPost: 可嵌入任意頁面的最新文章 widget               │
+│  • composables/usePostSort: 可注入排序邏輯                 │
+│  • composables/usePostFilter: 可注入過濾邏輯               │
 └──────────────────────┬───────────────┬──────────────────┘
                        │               │
                        ▼               ▼
@@ -162,6 +173,93 @@ pnpm new:post "系統架構" -d docs/design
 - **VitePress**: 選擇 VitePress 是因為其卓越的開發體驗與靜態生成效能。
 - **UnoCSS**: 採用按需生成的樣式引擎，極端縮減打包後的 CSS 體積。
 - **Theme Customization**: 透過 Vue Components 自定義 Hero Section 與佈局，強化視覺個人化。
+- **Composable DI 架構**: `NewPost` 元件透過 `provide/inject` 注入排序與過濾策略，行為可依頁面需求彈性覆寫，無需修改元件本身。
+
+### NewPost 元件使用指南 📦
+
+#### 基本用法
+
+直接在任意 markdown 頁面中使用，預設顯示最新 5 篇：
+
+```markdown
+<NewPost />
+```
+
+指定顯示篇數：
+
+```markdown
+<NewPost :count="3" />
+```
+
+---
+
+#### 自訂排序（provide）
+
+在頁面的 `<script setup>` 中 `provide` 自訂排序函式，`NewPost` 會自動注入並使用。
+
+**最舊優先**：
+
+```vue
+<script setup>
+import { provide } from 'vue'
+import { sortPostsKey } from './.vitepress/theme/composables/usePostSort'
+
+provide(sortPostsKey, (a, b) =>
+  new Date(a.createdTime).getTime() - new Date(b.createdTime).getTime()
+)
+</script>
+
+<NewPost :count="5" />
+```
+
+> `sortPostsKey` 的型別為 `InjectionKey<(a: Post, b: Post) => number>`，
+> 回傳負值表示 `a` 排在前面，正值表示 `b` 排在前面。
+
+---
+
+#### 自訂過濾（provide）
+
+**只顯示特定 category 的文章**：
+
+```vue
+<script setup>
+import { provide } from 'vue'
+import { filterPostsKey } from './.vitepress/theme/composables/usePostFilter'
+
+provide(filterPostsKey, (post) => post.category.startsWith('course'))
+</script>
+
+<NewPost :count="5" />
+```
+
+**同時自訂排序與過濾**：
+
+```vue
+<script setup>
+import { provide } from 'vue'
+import { sortPostsKey } from './.vitepress/theme/composables/usePostSort'
+import { filterPostsKey } from './.vitepress/theme/composables/usePostFilter'
+
+provide(filterPostsKey, (post) => post.category === 'ctf')
+provide(sortPostsKey, (a, b) =>
+  new Date(a.createdTime).getTime() - new Date(b.createdTime).getTime()
+)
+</script>
+
+<NewPost :count="3" />
+```
+
+> **Note**：內部 pipeline 順序為 `filter → sort → slice(0, count)`，
+> 即先過濾、再排序、最後取前 N 篇。
+
+---
+
+#### Provider API 一覽
+
+| Key | 位置 | 型別 | 預設行為 |
+|-----|------|------|----------|
+| `sortPostsKey` | `composables/usePostSort.ts` | `(a: Post, b: Post) => number` | 依 `createdTime` 由新至舊 |
+| `filterPostsKey` | `composables/usePostFilter.ts` | `(post: Post) => boolean` | 接受全部文章 |
 
 ## 貢獻 🤝
 

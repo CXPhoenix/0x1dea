@@ -1,6 +1,6 @@
 {
   "name": "0x1dea",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "0x1DEA: 想像力的溢位 —— 結合資通安全教學、軟體工程與 AI 探索的個人知識平台。",
   "scripts": {
     "docs:dev": "vitepress dev docs",

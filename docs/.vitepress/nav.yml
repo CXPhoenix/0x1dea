@@ -1,8 +1,11 @@
 - text: About Me
   link: /about
-- text: 文章列表
+- text: 文章總覽
   link: /posts
-- text: 最近文章
-  items: 
-    - text: 安全？能吃嗎？
-      link: /post/course/ctf-tutorial/what-is-safety
+- text: 分類文章
+  items:
+    - text: 資安教學備課系列
+      link: /post/course/cybersec/
+    - text: 研究方法備課系列
+      link: /post/course/rm/
+        
