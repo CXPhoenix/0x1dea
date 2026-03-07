@@ -2,10 +2,20 @@
 title: 為什麼你需要學研究方法？
 description: 讓我們從「了解」走向「深究」的一條無止盡道路。
 createdTime: 2026-03-01T18:33:16+08:00
-thumbnail:
+thumbnail: /assets/post_course_rm_why-we-need-rm/20260302012511.png
 ---
 
+![Banner](/assets/post_course_rm_why-we-need-rm/20260302012511.png)
+
 # 為什麼你需要學研究方法？
+
+<div class="vp-post">
+  <Badge type="tip">研究方法</Badge>
+  |
+  <Badge type="warning">教學備課</Badge>
+  |
+  <Badge type="info">補充教材</Badge>
+</div>
 
 大多數人會在大學時期學到「研究方法」這門課程，尤其是理工科可以說是必學課程。
 
@@ -120,9 +130,11 @@ $$
 
 :::info 📌 研究的本質
 
-研究 = 用**系統化**的方法，對一個問題尋找**有根據**{style="color: var(--vp-c-red-2)"}的答案{style="text-align: center; margin: 1.5em 0;"}
+研究 = 用**系統化**的方法，對一個問題尋找**有根據**{style="color: var(--vp-c-red-2)"}的答案{style="text-align: center; text-decoration: underline; text-underline-offset: 0.25em;}
 
 「有根據」意味著：你的結論不只是你的猜測，而是有資料、有邏輯支持的推論。
+
+![](/assets/post_course_rm_why-we-need-rm/20260307155631.png)
 
 :::
 
@@ -368,13 +380,11 @@ IEEE（電機電子工程師學會）對軟體工程的官方定義（IEEE Std 6
 
 由 Barry Boehm 在 1979 年的論文中提出，以強調驗證（Verification）和確效（Validation）為核心。
 
-```
-需求分析 ────────────────────── 驗收測試
+![需求分析 ────────────────────── 驗收測試
   ↓系統設計 ────────────── 系統測試↑
      ↓架構設計 ────── 整合測試↑
        ↓模組設計 ── 單元測試↑
-               實作
-```
+               實作](/assets/post_course_rm_why-we-need-rm/20260307160403.png)
 
 * **V 模型的核心思想：** \
   開發的每一個「左邊」階段，都對應一個「右邊」的測試階段。\

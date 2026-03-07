@@ -10,9 +10,11 @@ thumbnail: /assets/post_course_cybersec_what-is-safety/20260227005508.png
 # 什麼是安全？能吃嗎？
 
 <div class="vp-post">
-    <Badge type="tip">Cybersecurity 課程</Badge>
+    <Badge type="tip">資安課程</Badge>
     ｜
-    <Badge type="tip">高中課程備課</Badge>
+    <Badge type="warning">教學備課</Badge>
+    |
+    <Badge type="info">補充教材</Badge>
 </div>
 
 每次開始新學期課程時，我都會煩惱：我到底要怎麼介紹「資訊安全」這個概念？
