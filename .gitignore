@@ -50,3 +50,5 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+.spectra/
+openspec/.vector-search.db*
