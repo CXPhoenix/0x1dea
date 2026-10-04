@@ -2,11 +2,13 @@
 language: zh-TW
 authority: spec.en.md
 synced_from: spec.en.md
-synced_from_sha: 8114acb27db2c27b159667e97a398dd2e49f5b68
+synced_from_sha: ca84490c17cc1d4869057972a29b1370952f9b21
 source_path: .proj.specs/0001-harness-adoption/spec.en.md
 historical_harness_review: not-recreated
 ---
 # Harness 採用規格稽核翻譯
+
+> 中繼資料隱私投影：原始訊息／截圖識別碼已替換為穩定證據代號；原值對照僅留私人證據。批准原文、時間及規格語意維持；本投影不重做或追認歷史審查。參見[投影紀錄](../../maintenance/harness-adoption/metadata-projection.md)。
 
 > 英文 spec.en.md 是權威；本頁依完成零 P0 審查後的英文版本全文翻譯，不重建歷史 Harness review（`historical review not recreated`）。英文來源的第二輪候選說明如下：G1／G4 於 2026-10-04T07:24:41Z 獲批准；擁有者於 2026-10-04T10:30:04Z 批准網站根目錄整體搬移及列明的兩個 alias 輸入例外。實作仍以本輪零 P0 結果為 gate，稽核翻譯在其後進行。不推導 landing 或外部寫入授權。
 
@@ -31,7 +33,7 @@ historical_harness_review: not-recreated
 
 舊 task checkout 的 Git metadata 及最新草稿成為 macOS dataless；一般讀取與精準升權讀取都停滯，保留原樣不動。新的獨立、無 hardlink clone `implementation-resumed` 固定於相同基準。修訂規格由可讀的凍結第一輪輸入、全部已記錄第一輪 findings，以及新批准例外重建；不聲稱它是無法存取的中間草稿之逐位元組復原。凍結 `review/prompt.md`、113 列 baseline 與矩陣由可讀原始 artifact 複製；prompt 保持原文。
 
-初始 G1／G4 回執：使用者 `Sentinel_07d4ae9a14e4819181b0aed2f6c183a9`，`2026-10-04T07:24:41Z`，對 Charter／範圍、單一 adoption ticket／順序及完整測試矩陣回覆「同意」。範圍回執：使用者 `Sentinel_eb826c38100881919fd654dee5b7d247` 回覆助理 `Sentinel_bbd52dfc79f0819191e9787b1704d80c`，`2026-10-04T10:30:04Z`：「cf pages 我改好了 / 其他都同意」。被引用的問題明確列出整體 docs→blog 網站搬移，以及正好兩個相容 canonical 連結來源例外。此批准裁定先前的產品位元組範圍與 alias 輸入衝突；投票不能取代擁有者決策。
+初始 G1／G4 回執：使用者 `approval-harness-scope-01`，`2026-10-04T07:24:41Z`，對 Charter／範圍、單一 adoption ticket／順序及完整測試矩陣回覆「同意」。範圍回執：使用者 `approval-site-move-01` 回覆助理 `approval-site-move-question-01`，`2026-10-04T10:30:04Z`：「cf pages 我改好了 / 其他都同意」。被引用的問題明確列出整體 docs→blog 網站搬移，以及正好兩個相容 canonical 連結來源例外。此批准裁定先前的產品位元組範圍與 alias 輸入衝突；投票不能取代擁有者決策。
 
 ## 驗收條件
 
@@ -103,7 +105,7 @@ Writer 只收到自己 input、需要的候選實體技能及已批准 docs→bl
 
 ## Cloudflare 快照與範圍邊界
 
-擁有者自行修改 CF。父任務對 Library `libfile_d33cc20e295c81918b60e1d41867b001` 的原生像素見證：命令 npx vitepress build blog、output blog/.vitepress/dist、include blog/*、root 空白、production main、自動 deploy Enabled；build-system Version3 不是 Node 版本。Node／pnpm／excludes／preview 與實際成功 deployment 仍未驗證。根依賴監看建議 package.json／pnpm-lock.yaml／tsconfig.json 是交接資訊，不是修改 CF 授權。production main 尚未有 blog 前，未來自動 build 可能失敗；未授權為此過渡而 push／merge／deploy。
+擁有者自行修改 CF。父任務對 Library `evidence-cf-build-settings-01` 的原生像素見證：命令 npx vitepress build blog、output blog/.vitepress/dist、include blog/*、root 空白、production main、自動 deploy Enabled；build-system Version3 不是 Node 版本。Node／pnpm／excludes／preview 與實際成功 deployment 仍未驗證。根依賴監看建議 package.json／pnpm-lock.yaml／tsconfig.json 是交接資訊，不是修改 CF 授權。production main 尚未有 blog 前，未來自動 build 可能失敗；未授權為此過渡而 push／merge／deploy。
 
 ## 不在範圍內
 

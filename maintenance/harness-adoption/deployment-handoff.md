@@ -1,6 +1,8 @@
 # Cloudflare Pages owner handoff
 
-The owner independently changed Cloudflare. The parent inspected the actual pixels of Library `libfile_d33cc20e295c81918b60e1d41867b001`; this worker uses that attributed attestation rather than claiming its own live CF inspection. The older screenshot described docs; the newer screenshot states:
+> Metadata privacy projection: original message/screenshot identifiers are replaced by stable evidence labels; the original-to-label map stays private. Approval text, times and substantive requirements are retained. This projection does not rerun or backdate historical reviews. See [projection record](metadata-projection.md).
+
+The owner independently changed Cloudflare. The parent inspected the actual pixels of Library `evidence-cf-build-settings-01`; this worker uses that attributed attestation rather than claiming its own live CF inspection. The older screenshot described docs; the newer screenshot states:
 
 | Field | Latest supplied screenshot |
 | --- | --- |

@@ -1,5 +1,7 @@
 # Harness adoption specification
 
+> Metadata privacy projection: original message/screenshot identifiers are replaced by stable evidence labels; the original-to-label map stays private. Approval text, times and substantive requirements are retained. This projection does not rerun or backdate historical reviews. See [projection record](../../maintenance/harness-adoption/metadata-projection.md).
+
 > Round 2 candidate. G1/G4 were approved at 2026-10-04T07:24:41Z. The owner approved the entire website root move and the two enumerated alias-input exceptions at 2026-10-04T10:30:04Z. Implementation remains gated on this round's zero P0 result; audit translation follows it. No landing or external-write approval is implied.
 
 ## Problem Statement
@@ -23,7 +25,7 @@ Product: ee7fecfff72f47abc735d26ac7e9a943de04ebbf (staging/origin-staging baseli
 
 The old task-owned checkout's Git metadata and latest draft became macOS dataless; normal and precise escalated reads stalled. It remains untouched. A new independent no-hardlinks clone, implementation-resumed, is pinned to the same baseline. This revised spec reconstructs the readable frozen round-1 input, all recorded round-1 findings and the new approved exceptions; it is not presented as a byte-restored copy of the inaccessible intermediate draft. Frozen review/prompt.md, 113 baseline rows and the matrix were copied from readable original artifacts; the prompt remains verbatim.
 
-Initial G1/G4 receipt: user Sentinel_07d4ae9a14e4819181b0aed2f6c183a9, 2026-10-04T07:24:41Z, reply "同意" to Charter/scope, one adoption ticket/order and full test matrix. Scope receipt: user Sentinel_eb826c38100881919fd654dee5b7d247 replying to assistant Sentinel_bbd52dfc79f0819191e9787b1704d80c, 2026-10-04T10:30:04Z: "cf pages 我改好了 / 其他都同意". The referenced question explicitly named entire docs-to-blog site migration and exactly two compatible canonical link source exceptions. These adjudicate the previous product-byte scope and alias-input conflicts; no vote replaces this owner decision.
+Initial G1/G4 receipt: user approval-harness-scope-01, 2026-10-04T07:24:41Z, reply "同意" to Charter/scope, one adoption ticket/order and full test matrix. Scope receipt: user approval-site-move-01 replying to assistant approval-site-move-question-01, 2026-10-04T10:30:04Z: "cf pages 我改好了 / 其他都同意". The referenced question explicitly named entire docs-to-blog site migration and exactly two compatible canonical link source exceptions. These adjudicate the previous product-byte scope and alias-input conflicts; no vote replaces this owner decision.
 
 ## Acceptance Criteria
 
@@ -95,7 +97,7 @@ All 113 historical rows retain original source text/hash. Codex/Claude link-entr
 
 ## Cloudflare snapshot and scope boundary
 
-The owner independently changed CF. Parent native pixel attestation of Library libfile_d33cc20e295c81918b60e1d41867b001: command npx vitepress build blog, output blog/.vitepress/dist, include blog/*, root blank, production main, automatic deploy Enabled; build-system Version3 is not Node version. Node/pnpm/excludes/preview and actual successful deployment remain unverified. Root dependency watch recommendations package.json/pnpm-lock.yaml/tsconfig.json are a handoff, not permission to edit CF. Until production main has blog, a future automatic build may fail; no push/merge/deploy is authorized to remedy that transition.
+The owner independently changed CF. Parent native pixel attestation of Library evidence-cf-build-settings-01: command npx vitepress build blog, output blog/.vitepress/dist, include blog/*, root blank, production main, automatic deploy Enabled; build-system Version3 is not Node version. Node/pnpm/excludes/preview and actual successful deployment remain unverified. Root dependency watch recommendations package.json/pnpm-lock.yaml/tsconfig.json are a handoff, not permission to edit CF. Until production main has blog, a future automatic build may fail; no push/merge/deploy is authorized to remedy that transition.
 
 ## Out of Scope
 

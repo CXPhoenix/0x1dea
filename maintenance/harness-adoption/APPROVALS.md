@@ -1,8 +1,10 @@
 # Actual approvals
 
-G1/G4: user Sentinel_07d4ae9a14e4819181b0aed2f6c183a9, 2026-10-04T07:24:41Z: 同意. Charter/scope, one adoption ticket/order and full test matrix approved.
+> Metadata privacy projection: original message/screenshot identifiers are replaced by stable evidence labels; the original-to-label map stays private. Approval text, times and substantive requirements are retained. This projection does not rerun or backdate historical reviews. See [projection record](metadata-projection.md).
 
-Scope extension: user Sentinel_eb826c38100881919fd654dee5b7d247, 2026-10-04T10:30:04Z replied to assistant Sentinel_bbd52dfc79f0819191e9787b1704d80c:
+G1/G4: user approval-harness-scope-01, 2026-10-04T07:24:41Z: 同意. Charter/scope, one adoption ticket/order and full test matrix approved.
+
+Scope extension: user approval-site-move-01, 2026-10-04T10:30:04Z replied to assistant approval-site-move-question-01:
 
 > cf pages 我改好了
 > 其他都同意
@@ -15,7 +17,7 @@ The earlier receipt did not approve second-round review outcomes. Actual indepen
 
 ## Publication authorization
 
-User message Sentinel_0a20872d7df4819187f15e436afede2b at 2026-10-04T11:53:10Z:
+User message approval-staging-publication-01 at 2026-10-04T11:53:10Z:
 
 > 先 commit 並推到 staging，我會去檢查
 
@@ -27,3 +29,7 @@ The owner still intends to inspect staging. Actual landing must be recorded only
 after the remote SHA is verified; local Harness done means landed, not owner
 inspection acceptance or Notion done. Full private evidence/bundle stays on Mac;
 public projections preserve original hashes and disclose omissions.
+
+## Metadata privacy follow-up
+
+On 2026-10-04 the owner explicitly approved replacing the two reviewed classes of raw identifiers, including spec copies, then committing and non-force pushing the fix to staging. This authorization is recorded as `approval-metadata-privacy-01`; its original message identifier stays private. It does not authorize history rewriting, main merge, Cloudflare security changes or publication of the private security report.
