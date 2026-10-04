@@ -1,0 +1,45 @@
+{
+  "status": "pass",
+  "surface": "actual CUA browser UI; baseline and candidate equivalent built loopback",
+  "UI_record_count": 29,
+  "article_images_equal_and_loaded": 16,
+  "mobile_width": 390,
+  "horizontal_overflow": false,
+  "mobile_article_screenshots_byte_identical": true,
+  "mobile_list_visual_comparison": "same layout/text/controls; random animated particle background differs",
+  "console_collected_errors": 0,
+  "known_baseline_network_404": {
+    "candidate": [
+      "/assets/fontawesome/brands.min.css",
+      "/assets/fontawesome/fontawesome.min.css",
+      "/assets/fontawesome/regular.min.css",
+      "/assets/fontawesome/solid.min.css"
+    ],
+    "baseline": [
+      "/assets/fontawesome/brands.min.css",
+      "/assets/fontawesome/fontawesome.min.css",
+      "/assets/fontawesome/regular.min.css",
+      "/assets/fontawesome/solid.min.css"
+    ]
+  },
+  "known_baseline_UI": "empty results removes search/view/sort controls in both versions",
+  "particles": "real canvas dimensions/pointer-events, light/dark and page navigation smoke in both; global canvas persists on posts as baseline",
+  "limits": [
+    "browser smoke of existing two published articles, not every historical hypothetical boundary",
+    "no particle per-frame physics/performance/reduced-motion benchmark",
+    "no production deployment/native Claude host execution"
+  ],
+  "screenshots_sha256": {
+    "candidate-article.png": "013abc79148816bb93bc36e715fb50ccac1d4018cac13bfa5d0bfaecf382f85c",
+    "baseline-mobile.png": "00de45590b7ddf7cac618ceef6d12b43ebed29173434d1794a58cf7e9b6f4702",
+    "candidate-mobile.png": "00de45590b7ddf7cac618ceef6d12b43ebed29173434d1794a58cf7e9b6f4702",
+    "candidate-particles-light.png": "da708f0435362a556fc4415460e8256e851d1fdc11bde899165bc362ecbcacca",
+    "baseline-particles-light.png": "b0979635677595b5213353fac9eeda3537ce0af5fd5ab4ca74fd2be07cec51ea",
+    "baseline-search-empty.png": "66e7d2f554ec3692f34233fb3142287865db7a18b19bd823f0ccba78d8c09d8d",
+    "baseline-home.png": "3978d9be874d334ee21cf3fe5b76df7b2ebd30f446847fca8e3a4de2f0873db1",
+    "candidate-home.png": "8012881e614506d7ead993e1b2ae3b64d8bcd05f4f3bf16c271e7efdaac7f95f",
+    "baseline-mobile-list.png": "7f62bb58fefbd6d6a84a416fcb97bedf632a64e6829ac6d18bd917c1e7b1375f",
+    "candidate-mobile-list.png": "0802b7273707f7f1be4b24c5cd8b7fa9398250983cd750875e72b58dd54e2ee0",
+    "candidate-dark.png": "2282b20b42d85a7edc568bf765175eecdb2ed1467ff3b35b8309e828692ccf29"
+  }
+}

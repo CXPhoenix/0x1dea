@@ -18,8 +18,8 @@
     "skipLibCheck": true
   },
   "include": [
-    "docs/**/*",
-    "docs/.vitepress/**/*",
+    "blog/**/*",
+    "blog/.vitepress/**/*",
     "tests/**/*",
     "*.ts",
     "*.mts"

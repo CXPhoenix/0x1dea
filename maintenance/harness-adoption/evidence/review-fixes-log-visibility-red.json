@@ -1,0 +1,23 @@
+{
+  "name": "review-fixes-log-visibility-red",
+  "argv": [
+    "python3",
+    "-c",
+    "from pathlib import Path\nimport subprocess\nlogs=sorted(p.as_posix() for p in Path('maintenance/harness-adoption/evidence').rglob('*.log'))\nignored=[]\nfor name in logs:\n    result=subprocess.run(['git','check-ignore','--quiet','--',name])\n    if result.returncode==0: ignored.append(name)\n    elif result.returncode!=1: raise RuntimeError('git check-ignore failed: '+name)\nvisible=set(subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z']).decode().split('\\0'))\nmissing=sorted(set(logs)-visible)\nprint({'existing_logs':len(logs),'ignored_logs':len(ignored),'missing_inventory_logs':len(missing),'first_ignored':ignored[:3]},flush=True)\nassert logs and not ignored and not missing, 'acceptance logs must be visible to Git inventory'\n"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:33:23.602620+00:00",
+  "ended_utc": "2026-10-04T11:33:24.885971+00:00",
+  "elapsed_seconds": 1.28313408291433,
+  "exit_code": 1,
+  "status": "expected-red",
+  "log_sha256": "4834c8975f31cce796867791c9220507706bb63856796e7ed32bdb53a7b19ff4",
+  "log": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-red.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "2c9b95e6ef56ca3fea294322bac81173cdf54f7e0e9a3953a6adcbe940761ffb",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

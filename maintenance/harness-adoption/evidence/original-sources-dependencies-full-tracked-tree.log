@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "{WORKSPACE}/check-originals-resumed.py", line 35, in <module>
+    assert versions=={'node':'v24.13.0','pnpm':'10.28.0'}
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

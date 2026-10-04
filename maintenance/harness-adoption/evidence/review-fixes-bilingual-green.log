@@ -1,0 +1,84 @@
+{
+  "status": "pass",
+  "translated_specs": 7,
+  "baseline_requirements": 32,
+  "baseline_scenarios": 81,
+  "preserved_conditions": 230,
+  "trace_blocks": 9,
+  "baseline_pairs": [
+    {
+      "capability": "newest-posts-widget",
+      "requirements": 5,
+      "scenarios": 14,
+      "condition_clauses": 46,
+      "trace_blocks": 0,
+      "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+      "english_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+      "zh_TW_sha256": "6d598a31587641ec08c30c0e32bf138bbf060252361b919833121634c3893f38",
+      "source_byte_identical": true,
+      "scope": "full structural/clause/inline-code/trace audit; translation semantics were supplied by the full authoring pass, not independently human-certified"
+    },
+    {
+      "capability": "phoenix-style-and-maintenance",
+      "requirements": 4,
+      "scenarios": 7,
+      "condition_clauses": 20,
+      "trace_blocks": 4,
+      "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+      "english_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+      "zh_TW_sha256": "b190d1d9125ceb3db7c9041b7d000c10a843c6cee30f3b559ca00ce5c100a372",
+      "source_byte_identical": true,
+      "scope": "full structural/clause/inline-code/trace audit; translation semantics were supplied by the full authoring pass, not independently human-certified"
+    },
+    {
+      "capability": "post-content-model",
+      "requirements": 7,
+      "scenarios": 16,
+      "condition_clauses": 49,
+      "trace_blocks": 0,
+      "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+      "english_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+      "zh_TW_sha256": "fbe59db966e75f9572c25b84afd243a51f06a4b53f311d5bfa0ac2a1ba1dc689",
+      "source_byte_identical": true,
+      "scope": "full structural/clause/inline-code/trace audit; translation semantics were supplied by the full authoring pass, not independently human-certified"
+    },
+    {
+      "capability": "post-display-views",
+      "requirements": 7,
+      "scenarios": 18,
+      "condition_clauses": 45,
+      "trace_blocks": 0,
+      "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+      "english_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+      "zh_TW_sha256": "2171fbbc9353a8b746fa19c281b95f0cb0336e18bc53eff09be60ef9489d6607",
+      "source_byte_identical": true,
+      "scope": "full structural/clause/inline-code/trace audit; translation semantics were supplied by the full authoring pass, not independently human-certified"
+    },
+    {
+      "capability": "theme-layout-particles",
+      "requirements": 4,
+      "scenarios": 16,
+      "condition_clauses": 44,
+      "trace_blocks": 0,
+      "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+      "english_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+      "zh_TW_sha256": "75aad77c028ac31c481075f14a762c3c8d7148f56076ba18fd2f8f332d703d03",
+      "source_byte_identical": true,
+      "scope": "full structural/clause/inline-code/trace audit; translation semantics were supplied by the full authoring pass, not independently human-certified"
+    },
+    {
+      "capability": "vitepress-post-scaffolding",
+      "requirements": 5,
+      "scenarios": 10,
+      "condition_clauses": 26,
+      "trace_blocks": 5,
+      "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+      "english_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+      "zh_TW_sha256": "b329f43c01acb398403a0b9649e2934655890c9984caa8daf25a648f7addef00",
+      "source_byte_identical": true,
+      "scope": "full structural/clause/inline-code/trace audit; translation semantics were supplied by the full authoring pass, not independently human-certified"
+    }
+  ],
+  "adoption_english_git_blob": "8114acb27db2c27b159667e97a398dd2e49f5b68",
+  "adoption_zh_SHA256": "e1e25c47c993a95f9bc98b432c45ec5eaf280898d6e8c0ac7cb04b26f7409903"
+}

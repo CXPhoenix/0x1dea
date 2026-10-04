@@ -1,0 +1,16 @@
+test_builds_physical_complete_packages_and_projects_links (test_materializer.MaterializerTests.test_builds_physical_complete_packages_and_projects_links) ... ok
+test_check_detects_output_manifest_and_policy_drift (test_materializer.MaterializerTests.test_check_detects_output_manifest_and_policy_drift) ... ok
+test_rejects_alias_target_escape_and_nested_backing_symlink (test_materializer.MaterializerTests.test_rejects_alias_target_escape_and_nested_backing_symlink) ... ok
+test_rejects_extra_and_missing_backing_files (test_materializer.MaterializerTests.test_rejects_extra_and_missing_backing_files) ... ok
+test_rejects_forged_policy_alias_mapping_and_duplicate_input (test_materializer.MaterializerTests.test_rejects_forged_policy_alias_mapping_and_duplicate_input) ... ok
+test_rejects_runtime_parent_and_foreign_framework_symlinks (test_materializer.MaterializerTests.test_rejects_runtime_parent_and_foreign_framework_symlinks) ... ok
+test_rejects_source_parent_symlink_even_with_matching_hash (test_materializer.MaterializerTests.test_rejects_source_parent_symlink_even_with_matching_hash) ... ok
+test_rejects_unknown_active_markdown_link_syntax_and_missing_link (test_materializer.MaterializerTests.test_rejects_unknown_active_markdown_link_syntax_and_missing_link) ... ok
+test_rejects_unknown_missing_extra_and_changed_inputs_before_write (test_materializer.MaterializerTests.test_rejects_unknown_missing_extra_and_changed_inputs_before_write) ... ok
+test_rolls_back_partial_install_and_preserves_foreign_framework (test_materializer.MaterializerTests.test_rolls_back_partial_install_and_preserves_foreign_framework) ... ok
+test_second_generation_and_check_are_deterministic_and_read_only (test_materializer.MaterializerTests.test_second_generation_and_check_are_deterministic_and_read_only) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.501s
+
+OK

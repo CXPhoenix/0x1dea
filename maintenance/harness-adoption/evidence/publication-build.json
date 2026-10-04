@@ -1,0 +1,21 @@
+{
+  "name": "publication-build",
+  "argv": [
+    "pnpm",
+    "docs:build"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T12:04:35.572691+00:00",
+  "ended_utc": "2026-10-04T12:04:43.525622+00:00",
+  "elapsed_seconds": 7.95241491694469,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "e73cbad9d80895ab8a1415b4f334f1f28a5fd0aabcc19ccfe6e7a30e07c2c14e",
+  "log": "maintenance/harness-adoption/evidence/publication-build.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "private_raw_log_sha256": "7d83cdf667144c935fc92746bc3f78af2b9066fd0e2f4b55bbc69075976a9e57",
+  "raw_receipt_sha256": "fafac9340b0b697f79462ebb89507fe8c6ac0ab0095100594e66a22ab2ae8370",
+  "publication_projection": "Machine-path aliases only; actual exit/status/times retained, raw receipt/log hashes retained."
+}

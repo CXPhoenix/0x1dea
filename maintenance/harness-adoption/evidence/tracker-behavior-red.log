@@ -1,0 +1,126 @@
+test_blocking_is_derived (test_tracker.TrackerTests.test_blocking_is_derived) ... ERROR
+test_done_requires_real_landing_record (test_tracker.TrackerTests.test_done_requires_real_landing_record) ... ERROR
+test_duplicate_id_across_epics_rejected (test_tracker.TrackerTests.test_duplicate_id_across_epics_rejected) ... ERROR
+test_frontier_and_global_next_id (test_tracker.TrackerTests.test_frontier_and_global_next_id) ... ERROR
+test_missing_self_and_cycles_rejected (test_tracker.TrackerTests.test_missing_self_and_cycles_rejected) ... 
+  test_missing_self_and_cycles_rejected (test_tracker.TrackerTests.test_missing_self_and_cycles_rejected) (blockers='[T-9999]') ... ERROR
+  test_missing_self_and_cycles_rejected (test_tracker.TrackerTests.test_missing_self_and_cycles_rejected) (blockers='[T-0001]') ... ERROR
+test_missing_self_and_cycles_rejected (test_tracker.TrackerTests.test_missing_self_and_cycles_rejected) ... ERROR
+test_pending_requires_reason_evidence_date_and_revisit (test_tracker.TrackerTests.test_pending_requires_reason_evidence_date_and_revisit) ... ERROR
+test_stale_translation_and_missing_source_rejected (test_tracker.TrackerTests.test_stale_translation_and_missing_source_rejected) ... ERROR
+test_stored_blocked_and_unknown_status_rejected (test_tracker.TrackerTests.test_stored_blocked_and_unknown_status_rejected) ... ERROR
+
+======================================================================
+ERROR: test_blocking_is_derived (test_tracker.TrackerTests.test_blocking_is_derived)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 32, in test_blocking_is_derived
+    self.assertEqual(verifier.check_tickets(self.root)['blocked'], {'T-0002': ['T-0001']})
+                     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 11, in check_tickets
+    raise NotImplementedError('tracker validation is not implemented')
+NotImplementedError: tracker validation is not implemented
+
+======================================================================
+ERROR: test_done_requires_real_landing_record (test_tracker.TrackerTests.test_done_requires_real_landing_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 65, in test_done_requires_real_landing_record
+    with self.assertRaisesRegex(ValueError, 'landing'): verifier.check_tickets(self.root)
+                                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 11, in check_tickets
+    raise NotImplementedError('tracker validation is not implemented')
+NotImplementedError: tracker validation is not implemented
+
+======================================================================
+ERROR: test_duplicate_id_across_epics_rejected (test_tracker.TrackerTests.test_duplicate_id_across_epics_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 40, in test_duplicate_id_across_epics_rejected
+    verifier.check_tickets(self.root)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 11, in check_tickets
+    raise NotImplementedError('tracker validation is not implemented')
+NotImplementedError: tracker validation is not implemented
+
+======================================================================
+ERROR: test_frontier_and_global_next_id (test_tracker.TrackerTests.test_frontier_and_global_next_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 26, in test_frontier_and_global_next_id
+    self.assertEqual(verifier.check_tickets(self.root)['next_id'], 'T-0008')
+                     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 11, in check_tickets
+    raise NotImplementedError('tracker validation is not implemented')
+NotImplementedError: tracker validation is not implemented
+
+======================================================================
+ERROR: test_missing_self_and_cycles_rejected (test_tracker.TrackerTests.test_missing_self_and_cycles_rejected) (blockers='[T-9999]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 46, in test_missing_self_and_cycles_rejected
+    with self.assertRaises(ValueError): verifier.check_tickets(self.root)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 11, in check_tickets
+    raise NotImplementedError('tracker validation is not implemented')
+NotImplementedError: tracker validation is not implemented
+
+======================================================================
+ERROR: test_missing_self_and_cycles_rejected (test_tracker.TrackerTests.test_missing_self_and_cycles_rejected) (blockers='[T-0001]')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 46, in test_missing_self_and_cycles_rejected
+    with self.assertRaises(ValueError): verifier.check_tickets(self.root)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 11, in check_tickets
+    raise NotImplementedError('tracker validation is not implemented')
+NotImplementedError: tracker validation is not implemented
+
+======================================================================
+ERROR: test_missing_self_and_cycles_rejected (test_tracker.TrackerTests.test_missing_self_and_cycles_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 49, in test_missing_self_and_cycles_rejected
+    with self.assertRaisesRegex(ValueError, 'cycle'): verifier.check_tickets(self.root)
+                                                      ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 11, in check_tickets
+    raise NotImplementedError('tracker validation is not implemented')
+NotImplementedError: tracker validation is not implemented
+
+======================================================================
+ERROR: test_pending_requires_reason_evidence_date_and_revisit (test_tracker.TrackerTests.test_pending_requires_reason_evidence_date_and_revisit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 58, in test_pending_requires_reason_evidence_date_and_revisit
+    with self.assertRaisesRegex(ValueError, 'pending'): verifier.check_tickets(self.root)
+                                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 11, in check_tickets
+    raise NotImplementedError('tracker validation is not implemented')
+NotImplementedError: tracker validation is not implemented
+
+======================================================================
+ERROR: test_stale_translation_and_missing_source_rejected (test_tracker.TrackerTests.test_stale_translation_and_missing_source_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 73, in test_stale_translation_and_missing_source_rejected
+    verifier.check_translation(zh, self.root)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 15, in check_translation
+    raise NotImplementedError('translation validation is not implemented')
+NotImplementedError: translation validation is not implemented
+
+======================================================================
+ERROR: test_stored_blocked_and_unknown_status_rejected (test_tracker.TrackerTests.test_stored_blocked_and_unknown_status_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 54, in test_stored_blocked_and_unknown_status_rejected
+    with self.assertRaises(ValueError): verifier.check_tickets(self.root)
+                                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 11, in check_tickets
+    raise NotImplementedError('tracker validation is not implemented')
+NotImplementedError: tracker validation is not implemented
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.014s
+
+FAILED (errors=10)

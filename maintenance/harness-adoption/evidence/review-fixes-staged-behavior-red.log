@@ -1,0 +1,17 @@
+test_staged_approved_moves_baseline_and_management_are_accepted (__main__.AddedPathTests.test_staged_approved_moves_baseline_and_management_are_accepted) ... ok
+test_staged_unknown_product_is_rejected (__main__.AddedPathTests.test_staged_unknown_product_is_rejected) ... FAIL
+test_untracked_unknown_product_is_rejected (__main__.AddedPathTests.test_untracked_unknown_product_is_rejected) ... ok
+
+======================================================================
+FAIL: test_staged_unknown_product_is_rejected (__main__.AddedPathTests.test_staged_unknown_product_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 168, in test_staged_unknown_product_is_rejected
+    with self.assertRaisesRegex(ValueError, 'unknown added product file: blog/extra.md'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.731s
+
+FAILED (failures=1)

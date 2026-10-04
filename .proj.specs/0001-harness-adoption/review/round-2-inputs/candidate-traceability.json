@@ -1,0 +1,2940 @@
+[
+  {
+    "row_id": "newest-posts-widget-001",
+    "type": "requirement",
+    "field": "NewPost SHALL accept count and showCategory props with documented defaults",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      9,
+      17
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "### Requirement: NewPost SHALL accept count and showCategory props with documented defaults",
+    "expected_behavior": "The `NewPost` component at `docs/.vitepress/theme/components/NewPost.vue` SHALL declare two props:\n\n- `count?: number` — default `-1`. The sentinel `-1` SHALL mean \"render every post that survives the filter and sort pipeline.\" Any non-negative integer `N` SHALL clamp the rendered output to at most `N` posts via `slice(0, N)`. Authors SHALL NOT pass any other negative integer (e.g., `-2`, `-100`); negative-but-not-`-1` values fall through to the source's `slice(0, props.count)` call, which then applies JavaScript's negative-index `slice` semantics (drops the last `|count|` posts) — this is undocumented, surprising, and SHALL be treated as out of contract. Tooling SHALL NOT pass non-integer numbers (e.g., `1.5`, `NaN`); behavior with non-integer numbers is undefined.\n- `showCategory?: boolean` — default `false`. When `true`, every rendered child `PostBlock` SHALL display its category tag.\n\nThe component SHALL render each surviving post as a `PostBlock` exclusively (no `PostCard`, no view-mode toggle). The component SHALL NOT expose any other public props, slots, or events.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "newest-posts-widget-002",
+    "type": "scenario",
+    "field": "Default count renders all posts",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      18,
+      23
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Default count renders all posts",
+    "expected_behavior": "- **WHEN** `<NewPost />` is rendered\n- **THEN** every post that survives the filter is rendered (no slice clamp applied)\n- **AND** no category tags are rendered (showCategory defaults to `false`)",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-003",
+    "type": "scenario",
+    "field": "Explicit count clamps the rendered output",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      24,
+      28
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Explicit count clamps the rendered output",
+    "expected_behavior": "- **WHEN** `<NewPost :count=\"3\" />` is rendered against a post pool of size 10\n- **THEN** at most three `PostBlock` instances are rendered",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-004",
+    "type": "scenario",
+    "field": "showCategory flag propagates to children",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      29,
+      45
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: showCategory flag propagates to children",
+    "expected_behavior": "- **WHEN** `<NewPost :count=\"5\" :showCategory=\"true\" />` is rendered\n- **THEN** every child `PostBlock` displays its `post.category` tag\n\n##### Example: count semantics\n\n| `count` prop   | Source pool size | Rendered post count | Notes                                                                              |\n| -------------- | ---------------- | -------------------- | ---------------------------------------------------------------------------------- |\n| `-1` (default) | 10               | 10                   | Sentinel — slice skipped entirely.                                                 |\n| `0`            | 10               | 0                    | Empty slice.                                                                       |\n| `3`            | 10               | 3                    | Normal clamp.                                                                      |\n| `100`          | 10               | 10                   | Clamp larger than pool — JS `slice` returns whole pool.                            |\n| `5`            | 0                | 0                    | Empty pool — clamp is moot.                                                        |\n| `-2`           | 10               | **8** (out of contract) | JS `slice(0, -2)` drops the last 2; surprising — authors SHALL NOT use this.       |\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-005",
+    "type": "requirement",
+    "field": "NewPost SHALL apply the pipeline filter then sort then slice in that exact order",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      46,
+      56
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "### Requirement: NewPost SHALL apply the pipeline filter then sort then slice in that exact order",
+    "expected_behavior": "The `newestPosts` computed property inside `NewPost` SHALL transform the imported `posts` array using exactly this pipeline, in this order:\n\n1. Take a shallow clone via `[...posts]` so the imported array is never mutated.\n2. Apply the predicate returned by `usePostFilter()` — this SHALL run before sorting so the sort comparator never sees filtered-out posts.\n3. Apply the comparator returned by `usePostSort()`.\n4. If `count !== -1`, apply `slice(0, count)`. Otherwise, return the sorted array unchanged.\n\nThe component SHALL NOT reorder these phases. The component SHALL NOT mutate the source `posts` array.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-006",
+    "type": "scenario",
+    "field": "Filter runs before sort",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      57,
+      62
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Filter runs before sort",
+    "expected_behavior": "- **WHEN** the filter excludes posts whose category is `\"draft\"`\n- **AND** the sort orders by `createdTime` descending\n- **THEN** the rendered list contains only non-draft posts in newest-first order",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-007",
+    "type": "scenario",
+    "field": "Slice is skipped when count is -1",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      63,
+      67
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Slice is skipped when count is -1",
+    "expected_behavior": "- **WHEN** `count === -1` and the filtered+sorted array has length 7\n- **THEN** the rendered array has length 7 (no slice applied)",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-008",
+    "type": "scenario",
+    "field": "Source posts array is not mutated",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      68,
+      74
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Source posts array is not mutated",
+    "expected_behavior": "- **WHEN** `<NewPost :count=\"3\" />` renders against a 10-post source array\n- **THEN** the imported `posts` array still has length 10 after rendering\n- **AND** the imported array's element order is unchanged\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-009",
+    "type": "requirement",
+    "field": "usePostSort SHALL export sortPostsKey and default to descending createdTime",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      75,
+      90
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "### Requirement: usePostSort SHALL export sortPostsKey and default to descending createdTime",
+    "expected_behavior": "The composable at `docs/.vitepress/theme/composables/usePostSort.ts` SHALL export:\n\n- A type alias `PostSortFn = (a: Post, b: Post) => number`.\n- A `Symbol`-backed `InjectionKey<PostSortFn>` named `sortPostsKey`.\n- A function `usePostSort(): PostSortFn` that returns `inject(sortPostsKey, defaultSort)`.\n\nThe default comparator (`defaultSort`) SHALL implement descending order by `createdTime`:\n\n```ts\n(a, b) => new Date(b.createdTime).getTime() - new Date(a.createdTime).getTime()\n```\n\nThe default comparator MUST tolerate `createdTime` values that arrive as either `Date` instances or ISO-8601 strings (because JSON serialization can flatten Date to string).",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "newest-posts-widget-010",
+    "type": "scenario",
+    "field": "No provider yields the default newest-first order",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      91,
+      96
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: No provider yields the default newest-first order",
+    "expected_behavior": "- **WHEN** no parent component provides `sortPostsKey`\n- **AND** posts have `createdTime` values 2026-03-01, 2026-02-15, 2026-01-20\n- **THEN** `usePostSort()` returns a comparator that, when used to sort the array, yields the order 2026-03-01, 2026-02-15, 2026-01-20",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-011",
+    "type": "scenario",
+    "field": "Custom provider replaces the default",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      97,
+      103
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Custom provider replaces the default",
+    "expected_behavior": "- **WHEN** a parent calls `provide(sortPostsKey, (a, b) => a.title.localeCompare(b.title))`\n- **THEN** `usePostSort()` returns the provided comparator\n- **AND** posts are sorted alphabetically by title\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-012",
+    "type": "requirement",
+    "field": "usePostFilter SHALL export filterPostsKey and default to accept-all",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      104,
+      113
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "### Requirement: usePostFilter SHALL export filterPostsKey and default to accept-all",
+    "expected_behavior": "The composable at `docs/.vitepress/theme/composables/usePostFilter.ts` SHALL export:\n\n- A type alias `PostFilterFn = (post: Post) => boolean`.\n- A `Symbol`-backed `InjectionKey<PostFilterFn>` named `filterPostsKey`.\n- A function `usePostFilter(): PostFilterFn` that returns `inject(filterPostsKey, defaultFilter)`.\n\nThe default predicate (`defaultFilter`) SHALL be `() => true`, accepting every post.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "newest-posts-widget-013",
+    "type": "scenario",
+    "field": "No provider yields the accept-all predicate",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      114,
+      118
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: No provider yields the accept-all predicate",
+    "expected_behavior": "- **WHEN** no parent component provides `filterPostsKey`\n- **THEN** `usePostFilter()` returns a predicate that returns `true` for every input post",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-014",
+    "type": "scenario",
+    "field": "Custom provider replaces the default",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      119,
+      125
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Custom provider replaces the default",
+    "expected_behavior": "- **WHEN** a parent calls `provide(filterPostsKey, post => post.category === \"ctf\")`\n- **THEN** `usePostFilter()` returns the provided predicate\n- **AND** only posts whose `category` equals `\"ctf\"` survive the filter phase inside `NewPost`\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-015",
+    "type": "requirement",
+    "field": "Consuming pages SHALL be able to override sort and filter independently via provide",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      126,
+      129
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "### Requirement: Consuming pages SHALL be able to override sort and filter independently via provide",
+    "expected_behavior": "Pages and parent components SHALL be able to override sort, filter, neither, or both by calling `provide(...)` on the respective `InjectionKey` symbols imported from `usePostSort` and `usePostFilter`. When only one key is provided, the other SHALL retain its default behavior. The injection contract MUST hold for any descendant that uses `<NewPost />`, regardless of nesting depth, as long as the provider is on the same component subtree.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-016",
+    "type": "scenario",
+    "field": "Page provides only sort",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      130,
+      137
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Page provides only sort",
+    "expected_behavior": "- **GIVEN** a markdown page with a `<script setup>` block that calls `provide(sortPostsKey, ascendingByCreatedTime)`\n- **AND** the page does not provide `filterPostsKey`\n- **WHEN** `<NewPost :count=\"5\" />` renders inside that page\n- **THEN** posts are sorted oldest-first\n- **AND** every post survives the filter (default accept-all is used)",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-017",
+    "type": "scenario",
+    "field": "Page provides only filter",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      138,
+      145
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Page provides only filter",
+    "expected_behavior": "- **GIVEN** a markdown page that calls `provide(filterPostsKey, post => post.category.startsWith(\"course\"))`\n- **AND** the page does not provide `sortPostsKey`\n- **WHEN** `<NewPost :count=\"5\" />` renders inside that page\n- **THEN** only posts whose category starts with `\"course\"` survive\n- **AND** the surviving posts are sorted newest-first (default sort is used)",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-018",
+    "type": "scenario",
+    "field": "Page provides both sort and filter",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      146,
+      153
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Page provides both sort and filter",
+    "expected_behavior": "- **GIVEN** a markdown page that calls both `provide(filterPostsKey, ...)` and `provide(sortPostsKey, ...)`\n- **WHEN** `<NewPost :count=\"3\" />` renders inside that page\n- **THEN** filtering uses the provided predicate\n- **AND** sorting uses the provided comparator\n- **AND** the slice clamps the final result to at most three posts",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "newest-posts-widget-019",
+    "type": "scenario",
+    "field": "Page provides neither sort nor filter",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/newest-posts-widget/spec.md",
+    "source_lines": [
+      154,
+      169
+    ],
+    "source_sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    "source_git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+    "heading": "#### Scenario: Page provides neither sort nor filter",
+    "expected_behavior": "- **GIVEN** a markdown page with no `provide()` calls for either key\n- **WHEN** `<NewPost :count=\"5\" />` renders inside that page\n- **THEN** every post survives the default filter\n- **AND** posts are sorted newest-first by `createdTime`\n- **AND** the rendered list contains at most five posts\n\n##### Example: provider combinations\n\n| Provider on page                                   | Filter behavior                                | Sort behavior                       |\n| -------------------------------------------------- | ---------------------------------------------- | ----------------------------------- |\n| (none)                                             | accept all                                     | descending `createdTime`            |\n| `sortPostsKey` only                                | accept all                                     | provided comparator                 |\n| `filterPostsKey` only                              | provided predicate                             | descending `createdTime`            |\n| both                                               | provided predicate                             | provided comparator                 |",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-001",
+    "type": "requirement",
+    "field": "Phoenix style boundaries",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      9,
+      12
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "### Requirement: Phoenix style boundaries",
+    "expected_behavior": "The Phoenix skill SHALL activate for an explicit Phoenix voice request or continuation of an established Phoenix-styled artifact. It SHALL separate voice from artifact workflow, preserve evidence and author position, and follow explicit language, length, humor and format requests over defaults.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-002",
+    "type": "scenario",
+    "field": "Appropriate style request",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      13,
+      17
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "#### Scenario: Appropriate style request",
+    "expected_behavior": "- **WHEN** the user requests a Phoenix-style explanation of caching for beginners\n- **THEN** the agent explains mechanism through concrete reader concerns and a bounded analogy without mandatory chapter or image quotas",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-003",
+    "type": "scenario",
+    "field": "Inappropriate and conflicting requests",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      18,
+      103
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "#### Scenario: Inappropriate and conflicting requests",
+    "expected_behavior": "- **WHEN** the user requests code-only repair or formal minutes without asking for Phoenix voice\n- **THEN** the skill does not impose that voice\n- **AND** an explicit English, no-humor, 80-word Phoenix request retains those constraints",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-004",
+    "type": "requirement",
+    "field": "Canonical source and recoverable migration",
+    "boundary": "Codex/Claude project physical runtime supersession only; canonical/global compatibility/backups preserved",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      104,
+      107
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "### Requirement: Canonical source and recoverable migration",
+    "expected_behavior": "The active skill SHALL reside in repo skills with resolving agent entry symlinks. The Mac original SHALL have a recoverable backup before replacement by a compatibility symlink. Legacy reference and validator callers SHALL retain resolving paths with documented historical semantics.",
+    "AC": [
+      "HA-02",
+      "HA-04",
+      "HA-05"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-005",
+    "type": "scenario",
+    "field": "Mac and repo entrypoints",
+    "boundary": "Codex/Claude project physical runtime supersession only; canonical/global compatibility/backups preserved",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      108,
+      193
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "#### Scenario: Mac and repo entrypoints",
+    "expected_behavior": "- **WHEN** an agent opens the repo or existing global Phoenix entrypoint after migration\n- **THEN** all active SKILL.md paths resolve to the canonical repo file\n- **AND** original files are recoverable from a hash-verified backup",
+    "AC": [
+      "HA-02",
+      "HA-04",
+      "HA-05"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-006",
+    "type": "requirement",
+    "field": "Source-backed Codex maintenance",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      194,
+      197
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "### Requirement: Source-backed Codex maintenance",
+    "expected_behavior": "Writing maintenance instructions SHALL use available host tools and actual CLI contracts, maintain source provenance, distinguish OpenAI principles from repo choices, and record executed validation separately from unexecuted model evaluations.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-007",
+    "type": "scenario",
+    "field": "Reviewing migration evidence",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      198,
+      282
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "#### Scenario: Reviewing migration evidence",
+    "expected_behavior": "- **WHEN** a maintainer reviews this migration\n- **THEN** evidence identifies the Astra article, quill-n-grill and writing-for-agents with necessary references and preserves their limitations\n- **AND** GPT-6.1-sol high plus fast is described as a task choice rather than an Astra recommendation",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-008",
+    "type": "requirement",
+    "field": "Figure prose and guided-reading boundary",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      283,
+      286
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "### Requirement: Figure prose and guided-reading boundary",
+    "expected_behavior": "Phoenix prose SHALL explain a figure or table's mechanism, evidence and limits within the argument. It SHALL NOT replace that argument with commands to move the reader's gaze. Explicit requests for procedural figure-reading instruction SHALL permit accurate stepwise guidance. Neither mode SHALL require a question opener or prohibit reader dialogue.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-009",
+    "type": "scenario",
+    "field": "Figure integrated into prose",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      287,
+      292
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "#### Scenario: Figure integrated into prose",
+    "expected_behavior": "- **WHEN** a user asks for prose explaining a single-cache timeline with data updated at 10:00 and invalidation at 10:05\n- **THEN** the prose explains the interval of potential stale reads and the single-cache scope without directing gaze movement\n- **AND** it preserves uncertainty and does not claim multi-service coordination",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-010",
+    "type": "scenario",
+    "field": "Explicit guided-reading lesson",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      293,
+      298
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "#### Scenario: Explicit guided-reading lesson",
+    "expected_behavior": "- **WHEN** a user explicitly asks for two steps teaching how to read that timeline\n- **THEN** the output provides two accurate reading steps and the requested caption\n- **AND** guidance serves the requested lesson without inventing figure data",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "phoenix-style-and-maintenance-011",
+    "type": "scenario",
+    "field": "Preserving failed evaluation history",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+    "source_lines": [
+      299,
+      444
+    ],
+    "source_sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    "source_git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+    "heading": "#### Scenario: Preserving failed evaluation history",
+    "expected_behavior": "- **WHEN** parent QA rejects an earlier output for gaze-direction prose and a mismatched opener rubric\n- **THEN** original inputs, outputs and judgments remain unchanged, with a separate parent-QA correction\n- **AND** a frozen revised skill is evaluated only on the affected positive and boundary cases by fresh writers and an independent judge",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-content-model-001",
+    "type": "requirement",
+    "field": "Post interface SHALL define eight required fields",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      9,
+      25
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "### Requirement: Post interface SHALL define eight required fields",
+    "expected_behavior": "The `Post` interface exported from `docs/shared/posts.data.ts` SHALL declare exactly the following eight fields, all required:\n\n- `title: string`\n- `url: string`\n- `description: string`\n- `createdTime: Date`\n- `thumbnail: string`\n- `category: string`\n- `categoryFromPath: string`\n- `categoryRootPath: string`\n\nConsumers of the loader SHALL be able to import the `Post` type and rely on every listed field being present (non-optional) on every post returned by the loader.\n\nThe loader's `Post` is the canonical, narrowed shape produced by the VitePress data pipeline. Display components under `docs/.vitepress/theme/components/` (`PostCard`, `PostBlock`, `PostList`) redeclare a structurally **wider** `Post` interface locally — they mark `description`, `thumbnail`, and `category` as optional and accept `createdTime` as a union of `Date | string | { seconds: number; nanoseconds: number }`. That wider shape is the contract for the components and is captured in the `post-display-views` capability. Posts flowing from this loader satisfy both shapes; the wider local shape exists so the components remain usable for posts originating from other sources.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-002",
+    "type": "scenario",
+    "field": "Type import covers every documented field",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      26,
+      31
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Type import covers every documented field",
+    "expected_behavior": "- **WHEN** a Vue component imports `import type { Post } from '../../shared/posts.data'`\n- **THEN** the imported type exposes `title`, `url`, `description`, `createdTime`, `thumbnail`, `category`, `categoryFromPath`, and `categoryRootPath`\n- **AND** none of those eight fields is marked optional",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-content-model-003",
+    "type": "scenario",
+    "field": "A loaded post has every field populated",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      32,
+      38
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: A loaded post has every field populated",
+    "expected_behavior": "- **WHEN** the loader emits an array element representing any post under `docs/post/**/*.md`\n- **THEN** every one of the eight fields holds a value of the declared type\n- **AND** no field is `undefined` or `null`\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-004",
+    "type": "requirement",
+    "field": "Loader SHALL discover posts via createContentLoader and exclude index pages",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      39,
+      42
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "### Requirement: Loader SHALL discover posts via createContentLoader and exclude index pages",
+    "expected_behavior": "The loader at `docs/shared/posts.data.ts` SHALL discover posts by calling `createContentLoader('post/**/*.md', { includeSrc: true, render: false, excerpt: false })`. Files whose frontmatter contains a truthy `isIndex` field SHALL be excluded from the returned array. Files whose frontmatter omits `isIndex` (or sets it to a falsy value) SHALL be included.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-005",
+    "type": "scenario",
+    "field": "Regular post under docs/post/ is included",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      43,
+      47
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Regular post under docs/post/ is included",
+    "expected_behavior": "- **WHEN** the loader processes a file at `docs/post/<...>.md` whose frontmatter does not set `isIndex` (or sets it to `false`)\n- **THEN** the file appears as a `Post` element in the returned array",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-006",
+    "type": "scenario",
+    "field": "Category index page is excluded",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      48,
+      62
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Category index page is excluded",
+    "expected_behavior": "- **WHEN** the loader processes a file at `docs/post/<segments>/index.md` whose frontmatter sets `isIndex: true`\n- **THEN** the file does not appear in the returned array\n\n##### Example: representative inclusion / exclusion\n\n| File path                                          | Frontmatter `isIndex` | Included in loader output |\n| -------------------------------------------------- | --------------------- | ------------------------- |\n| `docs/post/course/cybersec/what-is-safety.md`      | (omitted)             | yes                       |\n| `docs/post/course/cybersec/index.md`               | `true`                | no                        |\n| `docs/post/course/rm/why-we-need-rm.md`            | (omitted)             | yes                       |\n| `docs/post/course/rm/index.md`                     | `true`                | no                        |\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-007",
+    "type": "requirement",
+    "field": "Loader SHALL resolve category through a three-tier priority chain",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      63,
+      70
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "### Requirement: Loader SHALL resolve category through a three-tier priority chain",
+    "expected_behavior": "For every included post, the loader SHALL set the `category` field by walking this priority chain in order, stopping at the first tier that yields a value:\n\n1. `frontmatter.category` declared on the post itself, if it is truthy. (The source uses `||`, so an empty-string `category` falls through to tier 2.)\n2. Otherwise, the category recorded in the **same-directory** `index.md` page's frontmatter. The match is an **exact-key lookup** in a map keyed by `categoryRootPath` — the loader does NOT walk up parent directories. A post at `docs/post/a/b/c/foo.md` (whose `categoryRootPath` is `/post/a/b/c`) inherits only from `docs/post/a/b/c/index.md`; it does NOT inherit from `docs/post/a/b/index.md`. The recorded value is returned even if it is an empty string, because the lookup is composed via `??` (coalescing only on `undefined`).\n3. Otherwise, the output of `getCategoryFromUrl(url)`, which strips the `/post/` prefix and the file extension, then joins all path segments except the last with `/`. When the URL has fewer than two segments after stripping (top-level posts), this function returns the literal fallback `'綜合'`.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-008",
+    "type": "scenario",
+    "field": "Explicit frontmatter category wins",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      71,
+      76
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Explicit frontmatter category wins",
+    "expected_behavior": "- **WHEN** a post under `docs/post/course/cybersec/foo.md` declares `category: \"Custom\"` in its frontmatter\n- **AND** `docs/post/course/cybersec/index.md` declares `category: \"資安教學\"`\n- **THEN** the loaded post's `category` is `\"Custom\"`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-009",
+    "type": "scenario",
+    "field": "Category inherited from same-directory index page",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      77,
+      82
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Category inherited from same-directory index page",
+    "expected_behavior": "- **WHEN** a post under `docs/post/course/cybersec/foo.md` does not declare `category`\n- **AND** `docs/post/course/cybersec/index.md` declares `isIndex: true` and `category: \"資安教學\"`\n- **THEN** the loaded post's `category` is `\"資安教學\"`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-010",
+    "type": "scenario",
+    "field": "Deeper post does NOT inherit from a parent-directory index page",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      83,
+      89
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Deeper post does NOT inherit from a parent-directory index page",
+    "expected_behavior": "- **WHEN** a post lives at `docs/post/course/cybersec/sub/foo.md` and does not declare `category`\n- **AND** `docs/post/course/cybersec/index.md` declares `isIndex: true` and `category: \"資安教學\"`\n- **AND** there is no `docs/post/course/cybersec/sub/index.md`\n- **THEN** the loaded post's `category` is the URL-derived string `\"course/cybersec/sub\"` (tier 3), NOT `\"資安教學\"`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-011",
+    "type": "scenario",
+    "field": "Category derived from URL when no same-directory index exists",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      90,
+      96
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Category derived from URL when no same-directory index exists",
+    "expected_behavior": "- **WHEN** a post lives at `docs/post/tech/js/intro.md`\n- **AND** there is no `docs/post/tech/js/index.md` declaring a category\n- **AND** the post itself does not declare a category\n- **THEN** the loaded post's `category` is `\"tech/js\"`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-012",
+    "type": "scenario",
+    "field": "Fallback to 綜合 for top-level posts",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      97,
+      104
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Fallback to 綜合 for top-level posts",
+    "expected_behavior": "- **WHEN** a post lives directly at `docs/post/single.md`\n- **AND** the post does not declare a category\n- **AND** no same-directory `index.md` provides one\n- **THEN** the loaded post's `category` is `\"綜合\"`\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-013",
+    "type": "requirement",
+    "field": "Loader SHALL always populate categoryFromPath and categoryRootPath from the URL",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      105,
+      108
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "### Requirement: Loader SHALL always populate categoryFromPath and categoryRootPath from the URL",
+    "expected_behavior": "Independently of the `category` resolution chain, the loader SHALL set `categoryFromPath` to the result of `getCategoryFromUrl(post.url)` and `categoryRootPath` to the result of `getCategoryRootPath(post.url)` for every included post. These two fields MUST reflect the URL structure regardless of any frontmatter override applied to `category`.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-content-model-014",
+    "type": "scenario",
+    "field": "categoryFromPath ignores frontmatter override",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      109,
+      126
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: categoryFromPath ignores frontmatter override",
+    "expected_behavior": "- **WHEN** a post at `docs/post/course/cybersec/foo.md` declares `category: \"Custom\"` in its frontmatter\n- **THEN** `category === \"Custom\"`\n- **AND** `categoryFromPath === \"course/cybersec\"`\n- **AND** `categoryRootPath === \"/post/course/cybersec\"` (the post URL with its filename segment removed; for index pages whose URL ends with `/`, the trailing-empty segment is dropped, producing the same key as sibling posts — this is what makes the same-directory inheritance lookup work)\n\n##### Example: URL-derived fields for representative posts\n\n| Post URL                                       | `categoryFromPath` | `categoryRootPath`        |\n| ---------------------------------------------- | ------------------ | ------------------------- |\n| `/post/course/cybersec/what-is-safety`         | `course/cybersec`  | `/post/course/cybersec`   |\n| `/post/course/rm/why-we-need-rm`               | `course/rm`        | `/post/course/rm`         |\n| `/post/single`                                 | `綜合`             | `/post`                   |\n\n> **Note**: `categoryFromPath === '綜合'` for top-level posts is a *literal-string collision* with the tier-3 fallback, not a sentinel meaning \"no path-derived category\". Both fields produce `'綜合'` for top-level posts because `getCategoryFromUrl` returns that exact string when no path hierarchy exists.\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-015",
+    "type": "requirement",
+    "field": "Loader SHALL apply field fallbacks for missing frontmatter",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      127,
+      141
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "### Requirement: Loader SHALL apply field fallbacks for missing frontmatter",
+    "expected_behavior": "For every included post, the loader SHALL apply the following fallbacks when the corresponding frontmatter field is missing or empty:\n\n| Field         | JS Operator | Behavior on empty string `\"\"`           | Behavior on YAML `null` / `~`           | Fallback                                                                                    |\n| ------------- | ----------- | --------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------- |\n| `title`       | **`\\|\\|`**   | falls through to fallback (`\"\"` falsy)  | falls through (null is falsy)           | `'無標題'`                                                                                   |\n| `description` | **`??`**    | **preserved** (`\"\"` is non-nullish)     | falls through (null IS nullish)         | `'閱讀更多...'`                                                                              |\n| `createdTime` | ternary `frontmatter.createdTime ? ... : ...` | falls through (`\"\"` falsy)              | falls through (null falsy)              | Synthetic `Date.now() - idx * 86_400_000` ms (1 day per post-array-position, captured at loader-execution time) |\n| `thumbnail`   | **`\\|\\|`**   | falls through to fallback               | falls through                           | `https://picsum.photos/seed/${idx + 1}/400/300`                                              |\n\nThe asymmetry between `||` (title, thumbnail, category-tier-1) and `??` (description, category-tier-2) is deliberate: only `description` preserves an explicit empty-string declaration. The asymmetry does NOT extend to `null`: every column above falls through on null, because both `||` and `??` short-circuit on null/undefined. Authors and tooling SHALL NOT rely on empty `title` or empty `thumbnail` propagating to the output — both are silently replaced by the fallback. Authors writing `description: null` or `description: ~` in YAML SHALL expect the `'閱讀更多...'` fallback, NOT the literal string `null`.\n\nThe synthetic `createdTime` fallback MUST decrement by exactly one calendar day per array position so that posts without explicit timestamps remain orderable. The synthetic value for array index `idx` is `Date.now() - idx * 86_400_000` ms, captured at the moment the loader runs.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-content-model-016",
+    "type": "scenario",
+    "field": "Post missing description, thumbnail, and createdTime",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      142,
+      148
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Post missing description, thumbnail, and createdTime",
+    "expected_behavior": "- **WHEN** a post declares only `title` in its frontmatter and ends up at array index `idx` in the transform pass\n- **THEN** `description === '閱讀更多...'`\n- **AND** `thumbnail` matches the regex `^https://picsum\\.photos/seed/\\d+/400/300$`\n- **AND** `createdTime` is a `Date` instance whose value equals `Date.now() - idx * 86_400_000` ms captured at loader-execution time (so a post at `idx === 0` has a timestamp equal to the loader-execution moment, and a post at `idx === N` is `N` days older)",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-content-model-017",
+    "type": "scenario",
+    "field": "Post explicitly sets description to an empty string",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      149,
+      154
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Post explicitly sets description to an empty string",
+    "expected_behavior": "- **WHEN** a post declares `description: \"\"` in its frontmatter\n- **THEN** the loaded post's `description` is the empty string `\"\"`\n- **AND** the fallback `'閱讀更多...'` is NOT applied",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-content-model-018",
+    "type": "scenario",
+    "field": "Post explicitly sets description to YAML null",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      155,
+      160
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Post explicitly sets description to YAML null",
+    "expected_behavior": "- **WHEN** a post declares `description: ~` (or equivalently `description: null`) in its frontmatter\n- **THEN** the loaded post's `description` is `'閱讀更多...'` (the fallback IS applied, because `?? ` short-circuits on `null` exactly like on `undefined`)\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-content-model-019",
+    "type": "requirement",
+    "field": "Post frontmatter SHALL use ISO-8601 with +08:00 offset for createdTime",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      161,
+      164
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "### Requirement: Post frontmatter SHALL use ISO-8601 with +08:00 offset for createdTime",
+    "expected_behavior": "When a post declares `createdTime` in its frontmatter, the value SHALL be an ISO-8601 datetime string with the `+08:00` UTC offset. The loader SHALL pass that string directly to `new Date(...)`. Authors and tooling SHALL NOT use any other timezone offset, naive datetimes, or `Z`-suffixed UTC strings for new posts.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-content-model-020",
+    "type": "scenario",
+    "field": "Author writes a new post with a +08:00 timestamp",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      165,
+      180
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Author writes a new post with a +08:00 timestamp",
+    "expected_behavior": "- **WHEN** the post frontmatter declares `createdTime: 2026-02-27T00:47:45+08:00`\n- **THEN** the loader sets `createdTime` to a `Date` representing `2026-02-26T16:47:45Z` (the same instant in UTC)\n\n##### Example: accepted vs. rejected frontmatter timestamps\n\n| Frontmatter value                          | Status   | Reason                                       |\n| ------------------------------------------ | -------- | -------------------------------------------- |\n| `2026-02-27T00:47:45+08:00`                | accepted | ISO-8601 with explicit +08:00 offset         |\n| `2026-03-01T18:33:16+08:00`                | accepted | ISO-8601 with explicit +08:00 offset         |\n| `2026-02-27T00:47:45Z`                     | rejected | Wrong timezone (UTC); breaks Taiwan-local convention |\n| `2026-02-27T00:47:45`                      | rejected | Naive datetime; ambiguous offset             |\n| `2026/02/27 00:47:45`                      | rejected | Not ISO-8601                                 |\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-content-model-021",
+    "type": "requirement",
+    "field": "Index pages SHALL declare isIndex and provide an inheritable category",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      181,
+      184
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "### Requirement: Index pages SHALL declare isIndex and provide an inheritable category",
+    "expected_behavior": "Every category landing page at `docs/post/<segments>/index.md` SHALL declare `isIndex: true` in its frontmatter, and SHALL declare a `category` string used as the inheritable category name for sibling posts. Index pages MUST NOT appear in the loader output. Posts under `docs/post/<segments>/` whose own frontmatter omits `category` SHALL inherit the index page's `category`.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-022",
+    "type": "scenario",
+    "field": "Index page provides category to siblings",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      185,
+      191
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Index page provides category to siblings",
+    "expected_behavior": "- **WHEN** `docs/post/course/cybersec/index.md` declares `isIndex: true` and `category: \"資安教學\"`\n- **AND** `docs/post/course/cybersec/what-is-safety.md` does not declare a `category`\n- **THEN** the loaded `what-is-safety` post has `category: \"資安教學\"`\n- **AND** the index page itself is absent from the loader output",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-content-model-023",
+    "type": "scenario",
+    "field": "Index page without isIndex would be treated as a regular post",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-content-model/spec.md",
+    "source_lines": [
+      192,
+      195
+    ],
+    "source_sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    "source_git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+    "heading": "#### Scenario: Index page without isIndex would be treated as a regular post",
+    "expected_behavior": "- **WHEN** an `index.md` file declares `category` but omits `isIndex`\n- **THEN** the loader treats it as a regular post (it appears in the output and its category is NOT inherited by siblings)",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-001",
+    "type": "requirement",
+    "field": "PostCard and PostBlock SHALL accept a Post and an optional showCategory prop",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      9,
+      16
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "### Requirement: PostCard and PostBlock SHALL accept a Post and an optional showCategory prop",
+    "expected_behavior": "`PostCard` and `PostBlock` SHALL each declare two props: `post: Post` (required) and `showCategory?: boolean` (default `true`). The `Post` interface used by these props is the **component-local** `Post` declared inside each `.vue` file — structurally wider than the loader's narrower `Post` from `docs/shared/posts.data.ts` (which is captured in the `post-content-model` capability). For `PostCard` and `PostBlock` the local interface declares the following fields: `title: string` (required), `url: string` (required), `description?: string` (optional), `thumbnail?: string` (optional), `category?: string` (optional), and `createdTime: { seconds: number; nanoseconds: number } | string | Date` (required, three-shape union). Note: `PostCard` and `PostBlock` do NOT declare `categoryRootPath` or `categoryFromPath` — they have no use for them. `PostList` declares its own local `Post` (specified separately below) which DOES require `categoryRootPath: string` because its category-grouping renderer reads it. Posts emitted by the loader satisfy every local shape. The wider declaration exists so the components remain usable for posts originating from sources other than this loader.\n\nThe two components SHALL render the same post fields (title, description, category, formatted date, thumbnail) but in different layouts: `PostCard` as a vertical card with a thumbnail and 16:9 aspect ratio, and `PostBlock` as a horizontal block without a thumbnail. Both components SHALL render the post as an anchor (`<a href=\"post.url\">`) so the entire surface is a navigation link.\n\nWhen `showCategory` is `false`, neither component SHALL render the category tag, even if `post.category` is non-empty. When `post.thumbnail` is empty / falsy, `PostCard` SHALL omit the thumbnail wrapper entirely (no broken-image placeholder). When `post.description` is empty / falsy, both components SHALL omit the description paragraph.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-display-views-002",
+    "type": "scenario",
+    "field": "Default showCategory renders the category tag",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      17,
+      21
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Default showCategory renders the category tag",
+    "expected_behavior": "- **WHEN** `<PostCard :post=\"post\" />` is rendered with `post.category = \"資安教學\"`\n- **THEN** the rendered output contains an element with the category tag class displaying `\"資安教學\"`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-003",
+    "type": "scenario",
+    "field": "showCategory=false hides the category tag",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      22,
+      26
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: showCategory=false hides the category tag",
+    "expected_behavior": "- **WHEN** `<PostBlock :post=\"post\" :show-category=\"false\" />` is rendered with `post.category = \"資安教學\"`\n- **THEN** the rendered output does NOT contain the category tag element",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-004",
+    "type": "scenario",
+    "field": "Missing thumbnail omits the thumbnail wrapper in PostCard",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      27,
+      33
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Missing thumbnail omits the thumbnail wrapper in PostCard",
+    "expected_behavior": "- **WHEN** `<PostCard :post=\"post\" />` is rendered with `post.thumbnail = \"\"`\n- **THEN** the rendered DOM does NOT contain a `.thumbnail-wrapper` element\n- **AND** the rendered DOM does NOT contain a broken `<img>` tag\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-005",
+    "type": "requirement",
+    "field": "PostCard and PostBlock SHALL format createdTime in zh-TW for three input shapes",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      34,
+      43
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "### Requirement: PostCard and PostBlock SHALL format createdTime in zh-TW for three input shapes",
+    "expected_behavior": "Both components SHALL accept `createdTime` as one of three shapes and format it with `Date#toLocaleDateString('zh-TW', { year: 'numeric', month: 'long', day: 'numeric' })`:\n\n1. A native `Date` instance.\n2. A string parseable by `new Date(...)`.\n3. An object of shape `{ seconds: number; nanoseconds: number }` (Firebase Timestamp shape), where the millisecond value is computed as `seconds * 1000`.\n\nThe components SHALL NOT throw or render `Invalid Date` for any of those three shapes when the underlying timestamp is valid.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-006",
+    "type": "scenario",
+    "field": "ISO-8601 string is accepted",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      44,
+      48
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: ISO-8601 string is accepted",
+    "expected_behavior": "- **WHEN** `<PostCard :post=\"{ ...post, createdTime: '2026-02-27T00:47:45+08:00' }\" />` is rendered\n- **THEN** the rendered date element contains a string formatted by `toLocaleDateString('zh-TW', ...)` for the corresponding date",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-007",
+    "type": "scenario",
+    "field": "Firebase-style timestamp object is accepted",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      49,
+      62
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Firebase-style timestamp object is accepted",
+    "expected_behavior": "- **WHEN** `<PostBlock :post=\"{ ...post, createdTime: { seconds: 1772124465, nanoseconds: 0 } }\" />` is rendered (`1772124465` seconds = `2026-02-26T16:47:45Z`, the same instant as the ISO scenario above)\n- **THEN** the rendered date element contains a string formatted by `toLocaleDateString('zh-TW', ...)` for that date\n\n##### Example: input shape coverage\n\n| Input shape                                           | Resolved instant (UTC)                | Formatted as                          |\n| ----------------------------------------------------- | ------------------------------------- | ------------------------------------- |\n| `new Date('2026-02-27T00:47:45+08:00')`               | `2026-02-26T16:47:45Z`                | zh-TW long-form date string           |\n| `'2026-02-27T00:47:45+08:00'`                         | `2026-02-26T16:47:45Z`                | zh-TW long-form date string           |\n| `{ seconds: 1772124465, nanoseconds: 0 }`             | `2026-02-26T16:47:45Z`                | zh-TW long-form date string           |\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-008",
+    "type": "requirement",
+    "field": "PostList SHALL accept a posts array and provide search, sort, and view-mode controls",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      63,
+      82
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "### Requirement: PostList SHALL accept a posts array and provide search, sort, and view-mode controls",
+    "expected_behavior": "`PostList` SHALL declare a single required prop `posts: Post[]`. The local `Post` interface declared inside `PostList.vue` is structurally similar to the one in `PostCard` / `PostBlock` but adds **`categoryRootPath: string` as a required field**, because the category-grouping renderer reads it to build heading anchors. The local interface declares: `title: string` (required), `url: string` (required), `categoryRootPath: string` (required), `description?: string` (optional), `thumbnail?: string` (optional), `category?: string` (optional), and `createdTime: { seconds; nanoseconds } | string | Date` (required, three-shape union).\n\nWhen the array is non-empty, the component SHALL render four controls:\n\n1. A search input bound to internal state `searchQuery` (string, default empty).\n2. A view-mode toggle that flips internal state `viewMode` between `'card'` and `'block'`. Default `'block'`.\n3. A sort-axis toggle that flips internal state `sortBy` between `'time'` and `'category'`. Default `'time'`.\n4. A sort-order toggle that flips internal state `sortOrder` between `'asc'` and `'desc'`. Default `'desc'`.\n\n`PostList` SHALL NOT emit any events for state changes; all four controls operate on internal reactive state.\n\nThe empty-state and the controls bar SHALL both gate on `processedPosts.length` (the filtered, post-search array), not on the input `posts` prop. When `processedPosts.length === 0`:\n\n- `PostList` SHALL render an empty-state placeholder whose visible text begins with `沒有任何文章，努力產生中！` (followed by a `<br />` and the kaomoji `((└(:3」┌)┘))`).\n- `PostList` SHALL NOT render the controls bar.\n\nThis means a non-empty `posts` prop combined with a search query that filters to zero matches will *also* hide the controls bar — the user loses access to the search input until they remount or refresh. This is the source's actual behavior; downstream code MUST NOT assume the controls bar persists while a search query is active.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-009",
+    "type": "scenario",
+    "field": "Default state on first render",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      83,
+      89
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Default state on first render",
+    "expected_behavior": "- **WHEN** `<PostList :posts=\"[postA, postB]\" />` is mounted\n- **THEN** the search input is empty\n- **AND** posts render in `block` view mode\n- **AND** posts render sorted by descending `createdTime` (newest first)",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-010",
+    "type": "scenario",
+    "field": "Toggling view-mode swaps the renderer",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      90,
+      94
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Toggling view-mode swaps the renderer",
+    "expected_behavior": "- **WHEN** the view-mode button is clicked once from the default state\n- **THEN** posts re-render using the `PostCard` component instead of `PostBlock`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-011",
+    "type": "scenario",
+    "field": "Empty posts array renders empty state and hides controls",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      95,
+      100
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Empty posts array renders empty state and hides controls",
+    "expected_behavior": "- **WHEN** `<PostList :posts=\"[]\" />` is mounted\n- **THEN** the controls bar is NOT rendered\n- **AND** the rendered output's text content begins with `沒有任何文章，努力產生中！`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-012",
+    "type": "scenario",
+    "field": "Search query that filters to zero matches also hides the controls bar",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      101,
+      110
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Search query that filters to zero matches also hides the controls bar",
+    "expected_behavior": "- **GIVEN** `<PostList :posts=\"[postA, postB]\" />` with both posts having titles that do not contain the substring `\"無此關鍵字\"`, and `sortBy` at its default `'time'`\n- **WHEN** the user types `\"無此關鍵字\"` into the search input\n- **THEN** `processedPosts.length` becomes `0` (no title matches the query)\n- **AND** the controls bar disappears (the user can no longer see or clear the search input via the rendered UI)\n- **AND** the empty-state placeholder appears\n- **AND** the only way to recover the controls bar is to remount the component (e.g., page reload or route change) — the source provides no in-component recovery path\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-013",
+    "type": "requirement",
+    "field": "PostList search SHALL filter by title in time mode and by title or category in category mode",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      111,
+      114
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "### Requirement: PostList search SHALL filter by title in time mode and by title or category in category mode",
+    "expected_behavior": "When `sortBy === 'time'`, the search filter SHALL match against `post.title` only (case-insensitive substring match on the trimmed query). When `sortBy === 'category'`, the search filter SHALL match against `post.title` OR `post.category || '綜合'` (case-insensitive substring match on either field). An empty or whitespace-only search query SHALL match every post.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-014",
+    "type": "scenario",
+    "field": "Title-only search in time mode",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      115,
+      120
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Title-only search in time mode",
+    "expected_behavior": "- **WHEN** the user types `\"safety\"` while `sortBy === 'time'`\n- **THEN** only posts whose `title` contains `\"safety\"` (case-insensitive) remain visible\n- **AND** posts whose only match is in `category` are filtered out",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-015",
+    "type": "scenario",
+    "field": "Title-or-category search in category mode",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      121,
+      135
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Title-or-category search in category mode",
+    "expected_behavior": "- **WHEN** the user types `\"資安\"` while `sortBy === 'category'`\n- **THEN** posts with `category: \"資安教學\"` remain visible even if their title does not contain `\"資安\"`\n\n##### Example: filter behavior across modes\n\n| `sortBy`     | Query    | Post title       | Post category | Visible? |\n| ------------ | -------- | ---------------- | ------------- | -------- |\n| `'time'`     | `\"safe\"` | `\"What is Safe\"` | `\"資安教學\"`  | yes      |\n| `'time'`     | `\"資安\"` | `\"What is Safe\"` | `\"資安教學\"`  | no       |\n| `'category'` | `\"資安\"` | `\"What is Safe\"` | `\"資安教學\"`  | yes      |\n| `'time'`     | `\"\"`     | any              | any           | yes      |\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-016",
+    "type": "requirement",
+    "field": "PostList SHALL sort by time numerically and by category lexicographically with a newest-first tiebreaker",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      136,
+      141
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "### Requirement: PostList SHALL sort by time numerically and by category lexicographically with a newest-first tiebreaker",
+    "expected_behavior": "When `sortBy === 'time'`, posts SHALL be ordered by the numeric difference of their `createdTime` (using the same three input shapes as PostCard / PostBlock); the `sortOrder` toggle inverts the result.\n\nWhen `sortBy === 'category'`, posts SHALL be ordered by `post.category || '綜合'` using `String#localeCompare`. When two posts share the same category, the tiebreaker SHALL place the newer post first (descending `createdTime`) regardless of the current `sortOrder`. Posts with different categories SHALL respect the `sortOrder` toggle.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-017",
+    "type": "scenario",
+    "field": "Time-descending order matches createdTime newest-first",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      142,
+      146
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Time-descending order matches createdTime newest-first",
+    "expected_behavior": "- **WHEN** `sortBy === 'time'`, `sortOrder === 'desc'`, and posts have `createdTime` values 2026-03-01, 2026-02-15, 2026-01-20\n- **THEN** posts render in order: 2026-03-01, 2026-02-15, 2026-01-20",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-018",
+    "type": "scenario",
+    "field": "Category mode breaks ties by newest createdTime",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      147,
+      159
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Category mode breaks ties by newest createdTime",
+    "expected_behavior": "- **WHEN** `sortBy === 'category'` and posts share `category: \"資安教學\"` with `createdTime` values 2026-03-01 and 2026-01-15\n- **THEN** the 2026-03-01 post renders before the 2026-01-15 post within that category, regardless of `sortOrder`\n\n##### Example: category-mode ordering\n\n| Input posts (category, createdTime)                                                  | `sortOrder` | Output order (by createdTime within each category) |\n| ------------------------------------------------------------------------------------ | ----------- | --------------------------------------------------- |\n| `(\"研究方法教學\", 2026-03-01)`, `(\"資安教學\", 2026-02-27)`, `(\"資安教學\", 2026-01-15)` | `'asc'`     | 研究方法教學 → 資安教學(2026-02-27) → 資安教學(2026-01-15) |\n| same                                                                                 | `'desc'`    | 資安教學(2026-02-27) → 資安教學(2026-01-15) → 研究方法教學 |\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-019",
+    "type": "requirement",
+    "field": "PostList in category mode SHALL render posts grouped under category headers linking to categoryRootPath",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      160,
+      165
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "### Requirement: PostList in category mode SHALL render posts grouped under category headers linking to categoryRootPath",
+    "expected_behavior": "When `sortBy === 'category'`, `PostList` SHALL render a heading per category. Each heading SHALL display the category name and SHALL link via an anchor to `group.categoryRootPath` (the `categoryRootPath` of the **first post** that established that group during the sort pass). Posts grouped under a heading SHALL be rendered with `showCategory=\"false\"` (the heading already names the category). When `sortBy === 'time'`, posts SHALL be rendered in a flat list with `showCategory=\"true\"`.\n\nGroups SHALL be rendered in **first-encounter order** from the sorted `processedPosts` array — the source builds the groups via `Map<string, Group>` with `processedPosts.forEach`, and `Map` preserves insertion order. Implementations MUST NOT independently sort the group entries (e.g., via `Array.from(groups.entries()).sort(...)`); the cross-category ordering is determined entirely by the comparator's effect on `processedPosts` plus the `sortOrder` toggle.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-020",
+    "type": "scenario",
+    "field": "Category headings link to the category root",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      166,
+      170
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Category headings link to the category root",
+    "expected_behavior": "- **WHEN** `sortBy === 'category'` and a group's posts share `categoryRootPath: \"/post/course/cybersec\"`\n- **THEN** the category heading renders an `<a href=\"/post/course/cybersec\">` anchor wrapping the category name",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-021",
+    "type": "scenario",
+    "field": "Grouped posts hide their inline category tag",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      171,
+      175
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Grouped posts hide their inline category tag",
+    "expected_behavior": "- **WHEN** posts render under a category heading\n- **THEN** the rendered `PostCard` / `PostBlock` instances do NOT display a category tag",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-022",
+    "type": "scenario",
+    "field": "Flat view shows category tags inline",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      176,
+      181
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Flat view shows category tags inline",
+    "expected_behavior": "- **WHEN** `sortBy === 'time'`\n- **THEN** every rendered `PostCard` / `PostBlock` displays its `post.category` as a tag (subject to the post having a non-empty category)\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "post-display-views-023",
+    "type": "requirement",
+    "field": "PostCard, PostBlock, PostList, and NewPost SHALL be globally registered by the theme",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      182,
+      185
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "### Requirement: PostCard, PostBlock, PostList, and NewPost SHALL be globally registered by the theme",
+    "expected_behavior": "The custom theme entry at `docs/.vitepress/theme/index.ts` SHALL register `PostCard`, `PostBlock`, `PostList`, and `NewPost` as global Vue components inside the theme's `enhanceApp` hook so that markdown pages can use them as `<PostCard />`, `<PostBlock />`, `<PostList />`, and `<NewPost />` without per-page imports.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-display-views-024",
+    "type": "scenario",
+    "field": "Markdown page uses PostList without an explicit import",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      186,
+      190
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Markdown page uses PostList without an explicit import",
+    "expected_behavior": "- **WHEN** a markdown file (e.g., `docs/posts.md`) renders `<PostList :posts=\"posts\" />`\n- **THEN** the component renders successfully without the page declaring an `import PostList from ...`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "post-display-views-025",
+    "type": "scenario",
+    "field": "Markdown page uses NewPost without an explicit import",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/post-display-views/spec.md",
+    "source_lines": [
+      191,
+      194
+    ],
+    "source_sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    "source_git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+    "heading": "#### Scenario: Markdown page uses NewPost without an explicit import",
+    "expected_behavior": "- **WHEN** `docs/index.md` renders `<NewPost class=\"mt-8\" :count=\"5\" :showCategory=\"true\" />`\n- **THEN** the widget renders successfully without the page declaring an `import NewPost from ...`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-001",
+    "type": "requirement",
+    "field": "Custom theme SHALL register Layout.vue and globally register four post components",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      9,
+      17
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "### Requirement: Custom theme SHALL register Layout.vue and globally register four post components",
+    "expected_behavior": "The theme entry at `docs/.vitepress/theme/index.ts` SHALL export a `Theme` object that:\n\n1. Extends `DefaultTheme` from `vitepress/theme`.\n2. Sets `Layout` to the custom `Layout.vue` so every page renders inside the custom layout instead of the default VitePress layout.\n3. In `enhanceApp`, calls `app.component(...)` exactly once for each of `PostCard`, `PostBlock`, `PostList`, and `NewPost`, registering each under its component name.\n4. Loads `@tsparticles/vue3` and the `loadSlim` engine asynchronously and only when `import.meta.env.SSR` is `false`, so the tsparticles bundle is not pulled into the SSR build.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-002",
+    "type": "scenario",
+    "field": "Markdown pages can use any of the four post components without imports",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      18,
+      23
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Markdown pages can use any of the four post components without imports",
+    "expected_behavior": "- **WHEN** a markdown page references `<PostCard />`, `<PostBlock />`, `<PostList />`, or `<NewPost />`\n- **THEN** the component renders without the page declaring any explicit `import` statement\n- **AND** no \"failed to resolve component\" warning is emitted",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-003",
+    "type": "scenario",
+    "field": "SSR pass does not execute tsparticles imports",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      24,
+      30
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: SSR pass does not execute tsparticles imports",
+    "expected_behavior": "- **WHEN** the site is rendered server-side during `vitepress build`\n- **THEN** the `await import('@tsparticles/vue3')` and `await import('@tsparticles/slim')` calls inside `enhanceApp` do NOT execute, because the surrounding `if (!import.meta.env.SSR)` guard short-circuits during SSR\n- **AND** the client-side bundle invokes both dynamic imports only after `import.meta.env.SSR` evaluates to `false`\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-004",
+    "type": "requirement",
+    "field": "Layout.vue SHALL inject the particles canvas via the layout-top slot when showParticleBg is truthy",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      31,
+      42
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "### Requirement: Layout.vue SHALL inject the particles canvas via the layout-top slot when showParticleBg is truthy",
+    "expected_behavior": "`Layout.vue` SHALL extend `DefaultTheme.Layout` (imported as `const { Layout } = DefaultTheme`) and SHALL render content inside the `#layout-top` slot. The slot content SHALL be a wrapper `<div>` with classes `visual-effects-container fixed inset-0 z-0 pointer-events-none`. Inside that wrapper, `<Particles />` SHALL be rendered conditionally with `v-if=\"showParticleBg\"`.\n\nThe `showParticleBg` value SHALL be a `computed` derived from `useData().frontmatter` such that:\n\n```\nshowParticleBg = frontmatter.value.layout === 'home' || frontmatter.value.showParticle\n```\n\nThe expression is **not** wrapped in `Boolean(...)`. The computed therefore returns whatever `frontmatter.value.showParticle` happens to be when `layout !== 'home'` — which can be a boolean, a string, a number, or `undefined`. The truthy / falsy decision is performed by Vue's `v-if` at render time. Authors and tooling SHALL declare `showParticle` as a YAML boolean (`true` / `false`); using a quoted string like `showParticle: \"false\"` is **truthy** and would unintentionally enable particles. When `showParticleBg` is falsy, `<Particles />` SHALL NOT be rendered, but the wrapper `<div>` SHALL still exist as an empty pointer-event-none overlay.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-005",
+    "type": "scenario",
+    "field": "Home page renders particles via layout=home",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      43,
+      48
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Home page renders particles via layout=home",
+    "expected_behavior": "- **WHEN** a page declares `layout: home` in its frontmatter\n- **THEN** `<Particles />` is rendered inside the `#layout-top` slot\n- **AND** the surrounding wrapper `<div>` has classes `visual-effects-container`, `fixed`, `inset-0`, `z-0`, and `pointer-events-none`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-006",
+    "type": "scenario",
+    "field": "Page opts in via showParticle frontmatter",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      49,
+      53
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Page opts in via showParticle frontmatter",
+    "expected_behavior": "- **WHEN** a non-home page declares `showParticle: true` in its frontmatter\n- **THEN** `<Particles />` is rendered",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-007",
+    "type": "scenario",
+    "field": "Regular post does not render particles by default",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      54,
+      58
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Regular post does not render particles by default",
+    "expected_behavior": "- **WHEN** a post under `docs/post/**/*.md` does not declare `layout: home` and does not declare `showParticle`\n- **THEN** `<Particles />` is NOT rendered",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-008",
+    "type": "scenario",
+    "field": "Page can suppress particles by overriding showParticle",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      59,
+      74
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Page can suppress particles by overriding showParticle",
+    "expected_behavior": "- **WHEN** a subdirectory `index.md` declares `showParticle: false` (overriding the default applied by `transformPageData`)\n- **THEN** `<Particles />` is NOT rendered\n\n##### Example: showParticleBg outcomes for representative pages\n\n| Page                                          | `frontmatter.layout` | `frontmatter.showParticle` | `showParticleBg` |\n| --------------------------------------------- | -------------------- | --------------------------- | ----------------- |\n| `docs/index.md`                               | `home`               | (omitted)                   | `true`            |\n| `docs/posts.md`                               | (omitted)            | `true`                      | `true`            |\n| `docs/post/course/cybersec/index.md`          | (omitted)            | `true` (defaulted)          | `true`            |\n| `docs/post/course/cybersec/what-is-safety.md` | (omitted)            | (omitted)                   | `false`           |\n| arbitrary page                                | (omitted)            | `false`                     | `false`           |\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-009",
+    "type": "requirement",
+    "field": "Particles.vue SHALL adapt color to isDark and remount when the theme toggles",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      75,
+      85
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "### Requirement: Particles.vue SHALL adapt color to isDark and remount when the theme toggles",
+    "expected_behavior": "The `Particles.vue` component SHALL:\n\n1. Read `isDark` via VitePress's `useData()` hook.\n2. Compute `color` and `linksColor` as `'#ffffff'` when `isDark.value` is `true` and `'#000000'` when `isDark.value` is `false`.\n3. Render the underlying `<vue-particles>` element with a Vue `:key` bound to `isDark ? 'dark' : 'light'` (template syntax — Vue auto-unwraps the `isDark` ref inside the template) so the particles engine remounts (rather than mutating in place) when the user toggles the site theme.\n4. Wrap the `<vue-particles>` element inside `<ClientOnly>` so the SSR pass renders no `<canvas>` element and the engine initializes only on the client.\n\nThe component SHALL apply the classes `fixed inset-0 z-0 pointer-events-none opacity-60` so the particle layer is full-screen, behind interactive content, and visually subtle.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-010",
+    "type": "scenario",
+    "field": "Light mode uses black particles",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      86,
+      91
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Light mode uses black particles",
+    "expected_behavior": "- **WHEN** `isDark` is `false`\n- **THEN** the rendered `options.particles.color.value` is `'#000000'`\n- **AND** the rendered `options.particles.links.color` is `'#000000'`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-011",
+    "type": "scenario",
+    "field": "Dark mode uses white particles",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      92,
+      97
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Dark mode uses white particles",
+    "expected_behavior": "- **WHEN** `isDark` is `true`\n- **THEN** the rendered `options.particles.color.value` is `'#ffffff'`\n- **AND** the rendered `options.particles.links.color` is `'#ffffff'`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-012",
+    "type": "scenario",
+    "field": "Theme toggle remounts the particles engine",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      98,
+      103
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Theme toggle remounts the particles engine",
+    "expected_behavior": "- **WHEN** the user toggles the VitePress theme from light to dark\n- **THEN** the `<vue-particles>` element's Vue `key` changes from `'light'` to `'dark'`\n- **AND** the underlying particles engine reinitializes (rather than re-rendering the same instance)",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-013",
+    "type": "scenario",
+    "field": "SSR pass renders no canvas",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      104,
+      110
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: SSR pass renders no canvas",
+    "expected_behavior": "- **WHEN** the page is rendered server-side\n- **THEN** the rendered HTML does NOT contain a `<canvas id=\"tsparticles\">` element\n- **AND** the rendered HTML contains no markup produced by `vue-particles` at all (the `<ClientOnly>` boundary suppresses the slot content during SSR; Vue does not emit a literal `<ClientOnly>` tag — it renders nothing for that subtree)\n\n---",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "theme-layout-particles-014",
+    "type": "requirement",
+    "field": "config.mts transformPageData SHALL set five frontmatter defaults for subdirectory index.md pages",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      111,
+      126
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "### Requirement: config.mts transformPageData SHALL set five frontmatter defaults for subdirectory index.md pages",
+    "expected_behavior": "The `transformPageData` hook in `docs/.vitepress/config.mts` SHALL apply defaults to every page where `pageData.relativePath.endsWith('index.md')` AND `pageData.relativePath !== 'index.md'`. The intent is \"every `index.md` under a subdirectory of `docs/`, excluding the root homepage\" — but the literal `endsWith('index.md')` check would also match a hypothetical filename like `myindex.md` (no leading slash) **anywhere under `docs/`** (the hook is not scoped to `docs/post/`). Authors SHALL NOT create files anywhere under `docs/` whose `relativePath` ends in the substring `index.md` but whose basename is not exactly `index.md` (e.g., `docs/notes/myindex.md`, `docs/post/foo-index.md`); such files would silently inherit the five defaults below despite not being category landing pages.\n\nThe defaults MUST be applied via the nullish-coalescing assignment operator `??=`. `??=` triggers (i.e., assigns the default) when the left-hand side is `undefined` **or `null`**. Therefore an explicit frontmatter declaration of `null` (e.g., `sidebar: ~` or `sidebar: null` in YAML) does NOT override the default — the default is still applied. Only non-null, non-undefined frontmatter values override the defaults. The five defaults SHALL be:\n\n| Frontmatter key | Default value | Rationale                                     |\n| --------------- | ------------- | --------------------------------------------- |\n| `sidebar`       | `false`       | Category index pages render without sidebar  |\n| `aside`         | `false`       | Category index pages render without aside    |\n| `footer`        | `true`        | Category index pages keep the site footer    |\n| `showParticle`  | `true`        | Category index pages opt in to particles     |\n| `next`          | `false`       | Category index pages hide the \"next\" link    |\n\nThe hook MUST NOT touch `docs/index.md` (the root homepage) or any non-index page.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-015",
+    "type": "scenario",
+    "field": "Subdirectory index.md inherits all five defaults",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      127,
+      131
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Subdirectory index.md inherits all five defaults",
+    "expected_behavior": "- **WHEN** `docs/post/course/cybersec/index.md` declares only `title`, `isIndex`, and `category` in its frontmatter\n- **THEN** after `transformPageData` runs, the page's resolved frontmatter has `sidebar: false`, `aside: false`, `footer: true`, `showParticle: true`, and `next: false`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-016",
+    "type": "scenario",
+    "field": "Explicit non-null frontmatter overrides each default",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      132,
+      137
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Explicit non-null frontmatter overrides each default",
+    "expected_behavior": "- **WHEN** `docs/post/course/cybersec/index.md` declares `sidebar: true` in its frontmatter\n- **THEN** after `transformPageData` runs, `sidebar` is `true` (the explicit value wins)\n- **AND** the other four defaults are still applied because their keys were not declared",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-017",
+    "type": "scenario",
+    "field": "Explicit YAML null does NOT override the default",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      138,
+      143
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Explicit YAML null does NOT override the default",
+    "expected_behavior": "- **WHEN** `docs/post/course/cybersec/index.md` declares `showParticle: null` (or equivalently `showParticle: ~`) in its frontmatter\n- **THEN** after `transformPageData` runs, `showParticle` is `true` (the default is applied because `??=` triggers on `null` exactly like on `undefined`)\n- **AND** any author who wants to suppress particles SHALL declare `showParticle: false` (a non-null falsy value), not `null`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-018",
+    "type": "scenario",
+    "field": "Non-index basename ending in \"index.md\" is silently caught by the hook",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      144,
+      149
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Non-index basename ending in \"index.md\" is silently caught by the hook",
+    "expected_behavior": "- **WHEN** a hypothetical file at `docs/notes/myindex.md` is processed\n- **THEN** because `'notes/myindex.md'.endsWith('index.md')` is `true` and `'notes/myindex.md' !== 'index.md'`, the hook applies all five defaults\n- **AND** authors SHALL NOT create such filenames; only the exact basename `index.md` is supported as a category landing page",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-019",
+    "type": "scenario",
+    "field": "Root index.md is not touched",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      150,
+      155
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Root index.md is not touched",
+    "expected_behavior": "- **WHEN** `docs/index.md` is processed\n- **THEN** `transformPageData` does NOT inject any of the five defaults\n- **AND** the homepage's frontmatter is observed exactly as authored",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "theme-layout-particles-020",
+    "type": "scenario",
+    "field": "Regular post is not touched",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/theme-layout-particles/spec.md",
+    "source_lines": [
+      156,
+      170
+    ],
+    "source_sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    "source_git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+    "heading": "#### Scenario: Regular post is not touched",
+    "expected_behavior": "- **WHEN** `docs/post/course/cybersec/what-is-safety.md` is processed\n- **THEN** `transformPageData` does NOT inject any defaults\n- **AND** the post's frontmatter is observed exactly as authored\n\n##### Example: hook outcomes for representative pages\n\n| `relativePath`                                 | Defaults applied? |\n| ---------------------------------------------- | ----------------- |\n| `index.md`                                     | no (root homepage) |\n| `post/course/cybersec/index.md`                | yes                |\n| `post/course/rm/index.md`                      | yes                |\n| `post/course/cybersec/what-is-safety.md`       | no (not index.md)  |\n| `posts.md`                                     | no (not index.md)  |",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-001",
+    "type": "requirement",
+    "field": "Agents SHALL invoke the helper script for new posts",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      9,
+      12
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "### Requirement: Agents SHALL invoke the helper script for new posts",
+    "expected_behavior": "When a user requests creation of a new article file on the 0x1DEA VitePress site, the agent SHALL invoke `pnpm new:post \"<title>\" [-c <category> | -d <path>]`. Existing article edits and conversation-only drafts SHALL NOT trigger scaffolding. The agent SHALL preserve existing createdTime when editing a post. A helper failure SHALL be surfaced instead of bypassed by hand-writing a new article file.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-002",
+    "type": "scenario",
+    "field": "User asks to add a post under a category",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      13,
+      18
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: User asks to add a post under a category",
+    "expected_behavior": "- **WHEN** the user says \"新增一篇 course/intro 的文章 'Hello World'\"\n- **THEN** the agent runs `pnpm new:post \"Hello World\" -c course/intro`\n- **AND** uses the emitted article and assets paths",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-003",
+    "type": "scenario",
+    "field": "User specifies an arbitrary directory",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      19,
+      23
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: User specifies an arbitrary directory",
+    "expected_behavior": "- **WHEN** the user says \"Create a post in docs/post/special/\"\n- **THEN** the agent runs `pnpm new:post \"<title>\" -d docs/post/special`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-004",
+    "type": "scenario",
+    "field": "User requests a post in the default directory",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      24,
+      29
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: User requests a post in the default directory",
+    "expected_behavior": "- **WHEN** the user says \"Add a blog post titled 'Quick Note'\" to this site\n- **THEN** the agent runs `pnpm new:post \"Quick Note\"` with no flags\n- **AND** the resulting markdown lands in `docs/post/Quick_Note.md`",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-005",
+    "type": "scenario",
+    "field": "Conversation draft and existing post",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      30,
+      114
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: Conversation draft and existing post",
+    "expected_behavior": "- **WHEN** the user requests a draft in conversation or revision of an existing post\n- **THEN** the agent does not call the scaffolding CLI",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-006",
+    "type": "requirement",
+    "field": "The skill SHALL document the -c / -d exclusivity",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      115,
+      118
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "### Requirement: The skill SHALL document the -c / -d exclusivity",
+    "expected_behavior": "The skill content SHALL state that the `-c` and `-d` flags MUST NOT be combined. The skill SHALL surface the exact runtime error string `參數 -c 與 -d 不能同時使用。` so agents recognize the failure mode.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-007",
+    "type": "scenario",
+    "field": "Reader looks up flag rules",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      119,
+      124
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: Reader looks up flag rules",
+    "expected_behavior": "- **WHEN** an agent reads the SKILL.md Quick Reference table\n- **THEN** the agent sees `-c` and `-d` listed as mutually exclusive\n- **AND** the agent sees the verbatim error string the script emits when both are passed",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-008",
+    "type": "scenario",
+    "field": "Agent rejects a malformed request",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      125,
+      140
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: Agent rejects a malformed request",
+    "expected_behavior": "- **WHEN** the user asks for `pnpm new:post \"X\" -c course -d docs/post/other`\n- **THEN** the agent declines and explains the flags conflict\n- **AND** the agent proposes either `-c course` or `-d docs/post/other`, not both",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-009",
+    "type": "requirement",
+    "field": "The skill SHALL describe the assets folder naming rule",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      141,
+      144
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "### Requirement: The skill SHALL describe the assets folder naming rule",
+    "expected_behavior": "The skill SHALL describe that for a post saved at `docs/post/<segments>/<file>.md`, the matching assets folder is `docs/public/assets/<segments_joined_with_underscore>_<safe_filename>/`, with `root_<safe_filename>` as the special case for posts directly under `docs/`. The skill SHALL also document that `safe_filename` is the post name with whitespace replaced by underscores.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-010",
+    "type": "scenario",
+    "field": "Agent needs to add an image to a freshly scaffolded post",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      145,
+      168
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: Agent needs to add an image to a freshly scaffolded post",
+    "expected_behavior": "- **WHEN** an agent must place an image into a post created by the script\n- **THEN** the skill tells it the exact assets folder name to use\n- **AND** the markdown reference path begins with `/assets/`\n\n##### Example: assets folder naming for representative inputs\n\n| Post path | Resulting assets folder |\n| --------- | ----------------------- |\n| `docs/post/hello_world.md` | `docs/public/assets/post_hello_world/` |\n| `docs/post/course/intro/hello_world.md` | `docs/public/assets/post_course_intro_hello_world/` |\n| `docs/intro.md` (directly under `docs/`) | `docs/public/assets/root_intro/` |",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-011",
+    "type": "requirement",
+    "field": "The skill frontmatter SHALL satisfy the Anthropic Agent Skill specification",
+    "boundary": "baseline inheritance; approved physical site location projection docs/ -> blog/",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      169,
+      172
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "### Requirement: The skill frontmatter SHALL satisfy the Anthropic Agent Skill specification",
+    "expected_behavior": "The skill frontmatter SHALL retain portable Agent Skills name and description fields usable by Codex and existing compatible hosts. The name SHALL be `creating-vitepress-post`, and the concise description SHALL identify new website article creation rather than generic writing or all docs/post mentions. Existing license, compatibility and metadata SHALL be retained where accurate. The historical requirement title SHALL remain for delta compatibility and SHALL NOT make Claude-specific tools an execution dependency.",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": [],
+    "physical_location_projection": {
+      "source_prefix": "docs/",
+      "candidate_prefix": "blog/",
+      "public_url_change": false,
+      "original_source_bytes_immutable": true
+    }
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-012",
+    "type": "scenario",
+    "field": "Tooling validates frontmatter",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      173,
+      177
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: Tooling validates frontmatter",
+    "expected_behavior": "- **WHEN** the skill validator parses the frontmatter\n- **THEN** it finds a valid name and a concise description within 1024 characters",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-013",
+    "type": "scenario",
+    "field": "Description focuses on invocation boundary",
+    "boundary": "baseline inheritance",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      178,
+      262
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: Description focuses on invocation boundary",
+    "expected_behavior": "- **WHEN** an agent chooses the skill\n- **THEN** website file creation matches while prose-only drafting and existing post editing are excluded",
+    "AC": [
+      "HA-02",
+      "HA-09"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-014",
+    "type": "requirement",
+    "field": "The skill SHALL be reachable from Claude Code, Codex, and Gemini CLI",
+    "boundary": "Codex/Claude physical runtime supersession; Gemini retained",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      263,
+      266
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "### Requirement: The skill SHALL be reachable from Claude Code, Codex, and Gemini CLI",
+    "expected_behavior": "The skill content SHALL live at a single canonical path `skills/creating-vitepress-post/SKILL.md` at the project root. The agent-specific scan paths `.claude/skills/creating-vitepress-post`, `.gemini/skills/creating-vitepress-post`, and `.agents/skills/creating-vitepress-post` SHALL each resolve to that canonical path via a relative symlink, so all three agents read identical content.",
+    "AC": [
+      "HA-02",
+      "HA-04",
+      "HA-05"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  },
+  {
+    "row_id": "vitepress-post-scaffolding-015",
+    "type": "scenario",
+    "field": "Each agent path resolves to the canonical SKILL.md",
+    "boundary": "Codex/Claude physical runtime supersession; Gemini retained",
+    "source_path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+    "source_lines": [
+      267,
+      279
+    ],
+    "source_sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+    "source_git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+    "heading": "#### Scenario: Each agent path resolves to the canonical SKILL.md",
+    "expected_behavior": "- **WHEN** an operator runs `ls -laL .claude/skills/creating-vitepress-post/SKILL.md .gemini/skills/creating-vitepress-post/SKILL.md .agents/skills/creating-vitepress-post/SKILL.md`\n- **THEN** all three rows reference the same underlying file\n- **AND** `diff` between any two pairs returns no differences",
+    "AC": [
+      "HA-02",
+      "HA-04",
+      "HA-05"
+    ],
+    "ticket": "T-0001",
+    "evidence": "not-run: candidate source/history verifier and applicable product/CLI/UI or fresh-writing checks",
+    "status": "unverified",
+    "evidence_status": "not-run",
+    "actual_evidence": []
+  }
+]

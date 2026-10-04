@@ -1,0 +1,22 @@
+{
+  "name": "historical-figure30",
+  "argv": [
+    "python3",
+    "historical-checks-resumed/behavior-eval-20261004/figure-followup/check_figures.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:05:53.320061+00:00",
+  "ended_utc": "2026-10-04T11:05:53.439015+00:00",
+  "elapsed_seconds": 0.1186434580013156,
+  "exit_code": 1,
+  "status": "failure",
+  "log_sha256": "e4b2179ae78ebb48dc888c91621f2c268750a766ec2efd85f5f6679f7d2ba09f",
+  "log": "maintenance/harness-adoption/evidence/historical-figure30.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "b06d20f38013977f39276886049f9680d7830c6b245ff64f786dc68f382e59c7",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

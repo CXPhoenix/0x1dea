@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "site_moves": 55,
+  "baseline_entries": 370,
+  "translations": 7,
+  "trace_rows": 113,
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "processing",
+        "blocked_by": []
+      }
+    },
+    "next_id": "T-0002",
+    "frontier": [],
+    "blocked": {},
+    "paused": []
+  }
+}

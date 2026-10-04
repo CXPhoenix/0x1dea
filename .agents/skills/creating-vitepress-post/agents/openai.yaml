@@ -1,0 +1,4 @@
+interface:
+  display_name: "creating-vitepress-post"
+policy:
+  allow_implicit_invocation: true

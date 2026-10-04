@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "framework": {
+    "pinned_files": 641,
+    "source_commit": "917e6025da0901a79dda016e1ce5bd89b6e6e19f",
+    "source_digest": "b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5",
+    "runtime_skill_counts": {
+      ".agents": 35,
+      ".claude": 35
+    }
+  },
+  "site_moves": 55,
+  "baseline_entries": 370,
+  "translations": 7,
+  "trace_rows": 113,
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      }
+    },
+    "next_id": "T-0002",
+    "frontier": [],
+    "blocked": {},
+    "paused": []
+  }
+}

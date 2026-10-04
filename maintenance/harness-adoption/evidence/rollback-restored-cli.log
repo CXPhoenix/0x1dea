@@ -1,0 +1,181 @@
+{
+  "status": "pass",
+  "site_root": "docs",
+  "repo": "{WORKSPACE}/rollback-resumed",
+  "actual_cli_cases": 8,
+  "records": [
+    {
+      "case": "default",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{WORKSPACE}/rollback-resumed/node_modules/tsx/dist/cli.mjs",
+        "{WORKSPACE}/rollback-resumed/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Hello World"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-8mswtr1w",
+      "exit": 0,
+      "stdout": "正在建立資料夾: docs/post...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-8mswtr1w/docs/post/Hello_World.md\n🖼️  資源: {HOST_TMP}/harness-cli-8mswtr1w/docs/public/assets/post_Hello_World\n📅 時間: 2026-10-04T19:14:50+08:00\n",
+      "stderr": "",
+      "article": "docs/post/Hello_World.md",
+      "assets": "docs/public/assets/post_Hello_World",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "docs/post/Hello_World.md": "c5c6f466978b6720f2e5347513f20b7030178ffba98ce764171e209e65a7b42b"
+      }
+    },
+    {
+      "case": "category",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{WORKSPACE}/rollback-resumed/node_modules/tsx/dist/cli.mjs",
+        "{WORKSPACE}/rollback-resumed/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Course Intro",
+        "-c",
+        "course/intro"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-dv5dx04d",
+      "exit": 0,
+      "stdout": "正在建立資料夾: docs/post/course/intro...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-dv5dx04d/docs/post/course/intro/Course_Intro.md\n🖼️  資源: {HOST_TMP}/harness-cli-dv5dx04d/docs/public/assets/post_course_intro_Course_Intro\n📅 時間: 2026-10-04T19:14:51+08:00\n",
+      "stderr": "",
+      "article": "docs/post/course/intro/Course_Intro.md",
+      "assets": "docs/public/assets/post_course_intro_Course_Intro",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "docs/post/course/intro/Course_Intro.md": "537abe9bdfbc41d081711ba14b12786b42e99e110aaa053351d5b85b72a8b95e"
+      }
+    },
+    {
+      "case": "custom",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{WORKSPACE}/rollback-resumed/node_modules/tsx/dist/cli.mjs",
+        "{WORKSPACE}/rollback-resumed/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Custom Note",
+        "-d",
+        "docs/post/special"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-0440tmur",
+      "exit": 0,
+      "stdout": "正在建立資料夾: docs/post/special...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-0440tmur/docs/post/special/Custom_Note.md\n🖼️  資源: {HOST_TMP}/harness-cli-0440tmur/docs/public/assets/post_special_Custom_Note\n📅 時間: 2026-10-04T19:14:51+08:00\n",
+      "stderr": "",
+      "article": "docs/post/special/Custom_Note.md",
+      "assets": "docs/public/assets/post_special_Custom_Note",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "docs/post/special/Custom_Note.md": "e4b5a0891a7abdb215644c84a65bfa4ccfe3b1098c0eaa1294e085d739abf13c"
+      }
+    },
+    {
+      "case": "root",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{WORKSPACE}/rollback-resumed/node_modules/tsx/dist/cli.mjs",
+        "{WORKSPACE}/rollback-resumed/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Root Note",
+        "-d",
+        "docs"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-w1yifwfi",
+      "exit": 0,
+      "stdout": "正在建立資料夾: docs...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-w1yifwfi/docs/Root_Note.md\n🖼️  資源: {HOST_TMP}/harness-cli-w1yifwfi/docs/public/assets/root_Root_Note\n📅 時間: 2026-10-04T19:14:52+08:00\n",
+      "stderr": "",
+      "article": "docs/Root_Note.md",
+      "assets": "docs/public/assets/root_Root_Note",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "docs/Root_Note.md": "237de0bdb7938e376df9b08f6c473d8e9ab5d5d6d3adfc28e5ac9fc928f4f2a1"
+      }
+    },
+    {
+      "case": "unicode-space",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{WORKSPACE}/rollback-resumed/node_modules/tsx/dist/cli.mjs",
+        "{WORKSPACE}/rollback-resumed/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "繁中 Hello 測試"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-mponphmf",
+      "exit": 0,
+      "stdout": "正在建立資料夾: docs/post...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-mponphmf/docs/post/繁中_Hello_測試.md\n🖼️  資源: {HOST_TMP}/harness-cli-mponphmf/docs/public/assets/post_繁中_Hello_測試\n📅 時間: 2026-10-04T19:14:52+08:00\n",
+      "stderr": "",
+      "article": "docs/post/繁中_Hello_測試.md",
+      "assets": "docs/public/assets/post_繁中_Hello_測試",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "docs/post/繁中_Hello_測試.md": "faf9eb127f2eb78b7e0968f669d314453dd5dc8614c810b7753e4f64b36f11e5"
+      }
+    },
+    {
+      "case": "explicit-legacy-d",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{WORKSPACE}/rollback-resumed/node_modules/tsx/dist/cli.mjs",
+        "{WORKSPACE}/rollback-resumed/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Legacy Note",
+        "-d",
+        "docs/post/special"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-esr9q_si",
+      "exit": 0,
+      "stdout": "正在建立資料夾: docs/post/special...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-esr9q_si/docs/post/special/Legacy_Note.md\n🖼️  資源: {HOST_TMP}/harness-cli-esr9q_si/docs/public/assets/post_special_Legacy_Note\n📅 時間: 2026-10-04T19:14:53+08:00\n",
+      "stderr": "",
+      "article": "docs/post/special/Legacy_Note.md",
+      "assets": "docs/public/assets/post_special_Legacy_Note",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "docs/post/special/Legacy_Note.md": "5828f560536e1779484155b3c0a4e0446353b9425d7641c9d021dd5619487774"
+      }
+    },
+    {
+      "case": "conflict",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{WORKSPACE}/rollback-resumed/node_modules/tsx/dist/cli.mjs",
+        "{WORKSPACE}/rollback-resumed/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "X",
+        "-c",
+        "course",
+        "-d",
+        "docs/post/other"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-negative-3y4snnir",
+      "exit": 1,
+      "stderr": "\u001b[31m❌ 發生錯誤:\u001b[0m\n參數 -c 與 -d 不能同時使用。\n",
+      "no_writes": true
+    },
+    {
+      "case": "missing-title",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{WORKSPACE}/rollback-resumed/node_modules/tsx/dist/cli.mjs",
+        "{WORKSPACE}/rollback-resumed/scripts/vpHelper.ts",
+        "new",
+        "post"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-negative-bpdfg6hs",
+      "exit": 1,
+      "stderr": "\u001b[31m錯誤: 請輸入文章名稱 (post_name)。\u001b[0m\n",
+      "no_writes": true
+    }
+  ]
+}

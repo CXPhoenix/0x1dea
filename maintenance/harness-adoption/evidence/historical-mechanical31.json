@@ -1,0 +1,22 @@
+{
+  "name": "historical-mechanical31",
+  "argv": [
+    "python3",
+    "historical-checks-resumed/behavior-eval-20261004/check_mechanical.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:05:52.851535+00:00",
+  "ended_utc": "2026-10-04T11:05:52.931248+00:00",
+  "elapsed_seconds": 0.07958474999759346,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "0929a477b199a1bf8ddd39f5822465329c987ed065372245d705fbea56ef82fc",
+  "log": "maintenance/harness-adoption/evidence/historical-mechanical31.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "e8b5890b4978c1c2f6423394851371d7ded8e201fd418d4a66c3705c2e99b819",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

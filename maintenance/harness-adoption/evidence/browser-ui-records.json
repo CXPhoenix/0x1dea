@@ -1,0 +1,337 @@
+{
+  "recorded_at": "2026-10-04T11:12:47.486Z",
+  "surface": "actual browser built static loopback; candidate4175/baseline4176; viewport390x844 restored",
+  "records": [
+    {
+      "name": "candidate-home",
+      "snapshot": "Browser tab: 3, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4175/\".\n0 AXWebArea 0x1DEA, URL: 127.0.0.1:4175/\n\t1 container app\n\t\t2 link Description: Skip to content, Value: 127.0.0.1:4175/#VPContent\n\t\t3 container\n\t\t\t4 link Description: 0x1DEA, Value: 127.0.0.1:4175/\n\t\t\t5 container Main Navigation\n\t\t\t\t6 text Main Navigation\n\t\t\t\t7 link Description: About Me, Value: 127.0.0.1:4175/about.html\n\t\t\t\t8 link Description: 文章總覽, Value: 127.0.0.1:4175/posts.html\n\t\t\t\t9 pop up button (collapsed) 分類文章, Secondary Actions: Expand\n\t\t\t10 switch Description: Switch to dark theme, Value: 0\n\t\t\t11 link Description: github, Value: github.com/cxphoenix/0x1dea\n\t\t12 container VPContent\n\t\t\t13 container\n\t\t\t\t14 heading 0x1DEA 想像力的溢位, Value: 1\n\t\t\t\t\t15 text 0x1DEA 想像力的溢位\n\t\t\t\t16 text 魔法是想像的領域\t ~芙莉蓮 <葬送のフリーレン>\n資安的世界也是\t\t ~CXPh03n1x\n\t\t\t\t17 link Description: 文章列表, Value: 127.0.0.1:4175/posts.html\n\t\t\t18 container\n\t\t\t\t19 image 0x1DEA Overflow of Imaginations\n\t\t\t20 container\n\t\t\t\t21 heading 🔑 資安教學, Value: 2\n\t\t\t\t\t22 text 🔑 資安教學\n\t\t\t\t23 text 各種資安教學內容（太難的我也不會哈\n\t\t\t\t24 text ╮(╯_╰)╭\n\t\t\t\t25 heading 📝 技術文章, Value: 2\n\t\t\t\t\t26 text 📝 技術文章\n\t\t\t\t27 text 各種技術研究，還有我 可愛 的學術探索。\n\t\t\t\t28 text ლ(´•д• ̀ლ\n\t\t\t\t29 heading 🤖 AI 探索, Value: 2\n\t\t\t\t\t30 text 🤖 AI 探索\n\t\t\t\t31 text 現代的趨勢，然後...真的滿方便的！\n\t\t\t\t32 text (≖＿≖)✧\n\t\t\t33 container\n\t\t\t\t34 link Description: 為什麼你需要學研究方法？ 讓我們從「了解」走向「深究」的一條無止盡道路。 研究方法教學 2026年3月1日, Value: 127.0.0.1:4175/post/course/rm/why-we-need-rm.html\n\t\t\t\t35 link Description: 安全？能吃嗎？ 我好像都懂「資訊安全」，深入後有一些新發現... 資安教學 2026年2月27日, Value: 127.0.0.1:4175/post/course/cybersec/what-is-safety.html\n\t\t36 container\n\t\t\t37 text 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\n\nThe focused UI element is 0 AXWebArea 0x1DEA, URL: 127.0.0.1:4175/"
+    },
+    {
+      "name": "candidate-post-list",
+      "snapshot": "- link \"Skip to content\":\n  - /url: \"#VPContent\"\n- banner:\n  - link \"0x1DEA\":\n    - /url: /\n    - generic: \"0x1DEA\"\n  - navigation \"Main Navigation\":\n    - generic: Main Navigation\n    - link \"About Me\":\n      - /url: /about.html\n      - generic: About Me\n    - link \"文章總覽\":\n      - /url: /posts.html\n      - generic: 文章總覽\n    - button \"分類文章\":\n      - generic: 分類文章\n  - switch \"Switch to dark theme\"\n  - link \"github\":\n    - /url: https://github.com/cxphoenix/0x1dea\n- main:\n  - textbox \"搜尋文章標題...\"\n  - button \"切換至卡片模式\":\n  - button \"時間排序\":\n    - generic: 時間排序\n  - button \"降冪\":\n    - generic: 降冪\n  - link \"為什麼你需要學研究方法？ 讓我們從「了解」走向「深究」的一條無止盡道路。 研究方法教學 2026年3月1日\":\n    - /url: /post/course/rm/why-we-need-rm.html\n    - heading \"為什麼你需要學研究方法？\" [level=3]\n    - paragraph: 讓我們從「了解」走向「深究」的一條無止盡道路。\n    - generic: 研究方法教學\n    - generic: 2026年3月1日\n  - link \"安全？能吃嗎？ 我好像都懂「資訊安全」，深入後有一些新發現... 資安教學 2026年2月27日\":\n    - /url: /post/course/cybersec/what-is-safety.html\n    - heading \"安全？能吃嗎？\" [level=3]\n    - paragraph: 我好像都懂「資訊安全」，深入後有一些新發現...\n    - generic: 資安教學\n    - generic: 2026年2月27日\n- contentinfo\n- contentinfo:\n  - paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x\n  - paragraph: Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!"
+    },
+    {
+      "name": "candidate-card",
+      "snapshot": "- link \"Skip to content\":\n  - /url: \"#VPContent\"\n- banner:\n  - link \"0x1DEA\":\n    - /url: /\n    - generic: \"0x1DEA\"\n  - navigation \"Main Navigation\":\n    - generic: Main Navigation\n    - link \"About Me\":\n      - /url: /about.html\n      - generic: About Me\n    - link \"文章總覽\":\n      - /url: /posts.html\n      - generic: 文章總覽\n    - button \"分類文章\":\n      - generic: 分類文章\n  - switch \"Switch to dark theme\"\n  - link \"github\":\n    - /url: https://github.com/cxphoenix/0x1dea\n- main:\n  - textbox \"搜尋文章標題...\"\n  - button \"切換至列表模式\" [active]:\n  - button \"時間排序\":\n    - generic: 時間排序\n  - button \"降冪\":\n    - generic: 降冪\n  - link \"為什麼你需要學研究方法？ 為什麼你需要學研究方法？ 研究方法教學 2026年3月1日 讓我們從「了解」走向「深究」的一條無止盡道路。\":\n    - /url: /post/course/rm/why-we-need-rm.html\n    - img \"為什麼你需要學研究方法？\"\n    - heading \"為什麼你需要學研究方法？\" [level=2]\n    - generic: 研究方法教學\n    - generic: 2026年3月1日\n    - paragraph: 讓我們從「了解」走向「深究」的一條無止盡道路。\n  - link \"安全？能吃嗎？ 安全？能吃嗎？ 資安教學 2026年2月27日 我好像都懂「資訊安全」，深入後有一些新發現...\":\n    - /url: /post/course/cybersec/what-is-safety.html\n    - img \"安全？能吃嗎？\"\n    - heading \"安全？能吃嗎？\" [level=2]\n    - generic: 資安教學\n    - generic: 2026年2月27日\n    - paragraph: 我好像都懂「資訊安全」，深入後有一些新發現...\n- contentinfo\n- contentinfo:\n  - paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x\n  - paragraph: Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!"
+    },
+    {
+      "name": "candidate-category-sort",
+      "snapshot": "- link \"Skip to content\":\n  - /url: \"#VPContent\"\n- banner:\n  - link \"0x1DEA\":\n    - /url: /\n    - generic: \"0x1DEA\"\n  - navigation \"Main Navigation\":\n    - generic: Main Navigation\n    - link \"About Me\":\n      - /url: /about.html\n      - generic: About Me\n    - link \"文章總覽\":\n      - /url: /posts.html\n      - generic: 文章總覽\n    - button \"分類文章\":\n      - generic: 分類文章\n  - switch \"Switch to dark theme\"\n  - link \"github\":\n    - /url: https://github.com/cxphoenix/0x1dea\n- main:\n  - textbox \"搜尋標題或類型...\"\n  - button \"切換至列表模式\":\n  - button \"類型排序\" [active]:\n    - generic: 類型排序\n  - button \"降冪\":\n    - generic: 降冪\n  - heading \"資安教學\" [level=2]:\n    - link \"資安教學\":\n      - /url: /post/course/cybersec\n  - link \"安全？能吃嗎？ 安全？能吃嗎？ 2026年2月27日 我好像都懂「資訊安全」，深入後有一些新發現...\":\n    - /url: /post/course/cybersec/what-is-safety.html\n    - img \"安全？能吃嗎？\"\n    - heading \"安全？能吃嗎？\" [level=2]\n    - generic: 2026年2月27日\n    - paragraph: 我好像都懂「資訊安全」，深入後有一些新發現...\n  - heading \"研究方法教學\" [level=2]:\n    - link \"研究方法教學\":\n      - /url: /post/course/rm\n  - link \"為什麼你需要學研究方法？ 為什麼你需要學研究方法？ 2026年3月1日 讓我們從「了解」走向「深究」的一條無止盡道路。\":\n    - /url: /post/course/rm/why-we-need-rm.html\n    - img \"為什麼你需要學研究方法？\"\n    - heading \"為什麼你需要學研究方法？\" [level=2]\n    - generic: 2026年3月1日\n    - paragraph: 讓我們從「了解」走向「深究」的一條無止盡道路。\n- contentinfo\n- contentinfo:\n  - paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x\n  - paragraph: Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!"
+    },
+    {
+      "name": "candidate-filter-one",
+      "snapshot": "Browser tab: 3, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4175/posts.html\".\n0 AXWebArea 0x1DEA, URL: 127.0.0.1:4175/posts.html\n\t1 container app\n\t\t2 link Description: Skip to content, Value: 127.0.0.1:4175/posts.html#VPContent\n\t\t3 container\n\t\t\t4 link Description: 0x1DEA, Value: 127.0.0.1:4175/\n\t\t\t5 container Main Navigation\n\t\t\t\t6 text Main Navigation\n\t\t\t\t7 link Description: About Me, Value: 127.0.0.1:4175/about.html\n\t\t\t\t8 link Description: 文章總覽, Value: 127.0.0.1:4175/posts.html\n\t\t\t\t9 pop up button (collapsed) 分類文章, Secondary Actions: Expand\n\t\t\t10 switch Description: Switch to dark theme, Value: 0\n\t\t\t11 link Description: github, Value: github.com/cxphoenix/0x1dea\n\t\t12 container\n\t\t\t13 container\n\t\t\t\t14 image\n\t\t\t\t15 text field (settable) 安全\n\t\t\t\t16 button 切換至列表模式\n\t\t\t\t\t17 image\n\t\t\t\t18 button 類型排序, Help: 切換排序方式\n\t\t\t\t\t28 text 類型排序\n\t\t\t\t\t20 image\n\t\t\t\t21 button 降冪, Help: 切換升降冪\n\t\t\t\t\t22 text 降冪\n\t\t\t\t\t23 image\n\t\t\t\t29 heading 資安教學, Value: 2\n\t\t\t\t\t30 link Description: 資安教學, Value: 127.0.0.1:4175/post/course/cybersec\n\t\t\t\t31 link Description: 安全？能吃嗎？ 安全？能吃嗎？ 2026年2月27日 我好像都懂「資訊安全」，深入後有一些新發現..., Value: 127.0.0.1:4175/post/course/cybersec/what-is-safety.html\n\t\t26 container\n\t\t\t27 text 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\n\nThe focused UI element is 15 text field (settable) 安全"
+    },
+    {
+      "name": "candidate-empty-result-existing-behavior",
+      "snapshot": "Browser tab: 3, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4175/posts.html\".\n0 AXWebArea 0x1DEA, URL: 127.0.0.1:4175/posts.html\n\t1 container app\n\t\t2 link Description: Skip to content, Value: 127.0.0.1:4175/posts.html#VPContent\n\t\t3 container\n\t\t\t4 link Description: 0x1DEA, Value: 127.0.0.1:4175/\n\t\t\t5 container Main Navigation\n\t\t\t\t6 text Main Navigation\n\t\t\t\t7 link Description: About Me, Value: 127.0.0.1:4175/about.html\n\t\t\t\t8 link Description: 文章總覽, Value: 127.0.0.1:4175/posts.html\n\t\t\t\t9 pop up button (collapsed) 分類文章, Secondary Actions: Expand\n\t\t\t10 switch Description: Switch to dark theme, Value: 0\n\t\t\t11 link Description: github, Value: github.com/cxphoenix/0x1dea\n\t\t12 container\n\t\t\t13 container\n\t\t\t\t28 text 📭 沒有任何文章，努力產生中！\n\t\t\t\t29 text ((└(:3」┌)┘))\n\t\t26 container\n\t\t\t27 text 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\n\nThe focused UI element is 0 AXWebArea 0x1DEA, URL: 127.0.0.1:4175/posts.html",
+      "classification": "matches baseline: search and view controls disappear"
+    },
+    {
+      "name": "candidate-keyboard-tab",
+      "snapshot": "Browser tab: 3, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4175/posts.html\".\n1 AXWebArea 0x1DEA, URL: 127.0.0.1:4175/posts.html\n\t2 container app\n\t\t3 link Description: Skip to content, Value: 127.0.0.1:4175/posts.html#VPContent\n\t\t4 container\n\t\t\t5 link Description: 0x1DEA, Value: 127.0.0.1:4175/\n\t\t\t6 container Main Navigation\n\t\t\t\t7 text Main Navigation\n\t\t\t\t8 link Description: About Me, Value: 127.0.0.1:4175/about.html\n\t\t\t\t9 link Description: 文章總覽, Value: 127.0.0.1:4175/posts.html\n\t\t\t\t10 pop up button (collapsed) 分類文章, Secondary Actions: Expand\n\t\t\t11 switch Description: Switch to dark theme, Value: 0\n\t\t\t12 link Description: github, Value: github.com/cxphoenix/0x1dea\n\t\t13 container\n\t\t\t14 container\n\t\t\t\t15 image\n\t\t\t\t16 text field (settable)\n\t\t\t\t17 button 切換至卡片模式\n\t\t\t\t\t18 image\n\t\t\t\t19 button 時間排序, Help: 切換排序方式\n\t\t\t\t\t20 text 時間排序\n\t\t\t\t\t21 image\n\t\t\t\t22 button 降冪, Help: 切換升降冪\n\t\t\t\t\t23 text 降冪\n\t\t\t\t\t24 image\n\t\t\t\t25 link Description: 為什麼你需要學研究方法？ 讓我們從「了解」走向「深究」的一條無止盡道路。 研究方法教學 2026年3月1日, Value: 127.0.0.1:4175/post/course/rm/why-we-need-rm.html\n\t\t\t\t26 link Description: 安全？能吃嗎？ 我好像都懂「資訊安全」，深入後有一些新發現... 資安教學 2026年2月27日, Value: 127.0.0.1:4175/post/course/cybersec/what-is-safety.html\n\t\t27 container\n\t\t\t28 text 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\n\nThe focused UI element is 17 button 切換至卡片模式",
+      "focused": "card toggle via Tab"
+    },
+    {
+      "name": "candidate-keyboard-enter",
+      "snapshot": "Browser tab: 3, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4175/posts.html\".\n1 AXWebArea 0x1DEA, URL: 127.0.0.1:4175/posts.html\n\t2 container app\n\t\t3 link Description: Skip to content, Value: 127.0.0.1:4175/posts.html#VPContent\n\t\t4 container\n\t\t\t5 link Description: 0x1DEA, Value: 127.0.0.1:4175/\n\t\t\t6 container Main Navigation\n\t\t\t\t7 text Main Navigation\n\t\t\t\t8 link Description: About Me, Value: 127.0.0.1:4175/about.html\n\t\t\t\t9 link Description: 文章總覽, Value: 127.0.0.1:4175/posts.html\n\t\t\t\t10 pop up button (collapsed) 分類文章, Secondary Actions: Expand\n\t\t\t11 switch Description: Switch to dark theme, Value: 0\n\t\t\t12 link Description: github, Value: github.com/cxphoenix/0x1dea\n\t\t13 container\n\t\t\t14 container\n\t\t\t\t15 image\n\t\t\t\t16 text field (settable)\n\t\t\t\t17 button 切換至列表模式\n\t\t\t\t\t29 image\n\t\t\t\t19 button 時間排序, Help: 切換排序方式\n\t\t\t\t\t20 text 時間排序\n\t\t\t\t\t21 image\n\t\t\t\t22 button 降冪, Help: 切換升降冪\n\t\t\t\t\t23 text 降冪\n\t\t\t\t\t24 image\n\t\t\t\t30 link Description: 為什麼你需要學研究方法？ 為什麼你需要學研究方法？ 研究方法教學 2026年3月1日 讓我們從「了解」走向「深究」的一條無止盡道路。, Value: 127.0.0.1:4175/post/course/rm/why-we-need-rm.html\n\t\t\t\t31 link Description: 安全？能吃嗎？ 安全？能吃嗎？ 資安教學 2026年2月27日 我好像都懂「資訊安全」，深入後有一些新發現..., Value: 127.0.0.1:4175/post/course/cybersec/what-is-safety.html\n\t\t27 container\n\t\t\t28 text 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\n\nThe focused UI element is 17 button 切換至列表模式"
+    },
+    {
+      "name": "candidate-ascending",
+      "snapshot": "- link \"Skip to content\":\n  - /url: \"#VPContent\"\n- banner:\n  - link \"0x1DEA\":\n    - /url: /\n    - generic: \"0x1DEA\"\n  - navigation \"Main Navigation\":\n    - generic: Main Navigation\n    - link \"About Me\":\n      - /url: /about.html\n      - generic: About Me\n    - link \"文章總覽\":\n      - /url: /posts.html\n      - generic: 文章總覽\n    - button \"分類文章\":\n      - generic: 分類文章\n  - switch \"Switch to dark theme\"\n  - link \"github\":\n    - /url: https://github.com/cxphoenix/0x1dea\n- main:\n  - textbox \"搜尋文章標題...\"\n  - button \"切換至列表模式\":\n  - button \"時間排序\":\n    - generic: 時間排序\n  - button \"升冪\" [active]:\n    - generic: 升冪\n  - link \"安全？能吃嗎？ 安全？能吃嗎？ 資安教學 2026年2月27日 我好像都懂「資訊安全」，深入後有一些新發現...\":\n    - /url: /post/course/cybersec/what-is-safety.html\n    - img \"安全？能吃嗎？\"\n    - heading \"安全？能吃嗎？\" [level=2]\n    - generic: 資安教學\n    - generic: 2026年2月27日\n    - paragraph: 我好像都懂「資訊安全」，深入後有一些新發現...\n  - link \"為什麼你需要學研究方法？ 為什麼你需要學研究方法？ 研究方法教學 2026年3月1日 讓我們從「了解」走向「深究」的一條無止盡道路。\":\n    - /url: /post/course/rm/why-we-need-rm.html\n    - img \"為什麼你需要學研究方法？\"\n    - heading \"為什麼你需要學研究方法？\" [level=2]\n    - generic: 研究方法教學\n    - generic: 2026年3月1日\n    - paragraph: 讓我們從「了解」走向「深究」的一條無止盡道路。\n- contentinfo\n- contentinfo:\n  - paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x\n  - paragraph: Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!"
+    },
+    {
+      "check": "candidate-article-images",
+      "images": [
+        {
+          "complete": true,
+          "height": 512,
+          "src": "/circleImage.svg",
+          "width": 512
+        },
+        {
+          "complete": true,
+          "height": 1536,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260227005508.png",
+          "width": 2752
+        },
+        {
+          "complete": true,
+          "height": 1536,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260227014249.png",
+          "width": 2752
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260228013411.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 1792,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260228022122.png",
+          "width": 2400
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260228114351.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260228130720.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301114806.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301122300.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 1512,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301120037.png",
+          "width": 2862
+        },
+        {
+          "complete": true,
+          "height": 1394,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301125241.png",
+          "width": 2712
+        },
+        {
+          "complete": true,
+          "height": 1234,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301125313.png",
+          "width": 2734
+        },
+        {
+          "complete": true,
+          "height": 1212,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301125401.png",
+          "width": 2692
+        },
+        {
+          "complete": true,
+          "height": 1006,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301125743.png",
+          "width": 2760
+        },
+        {
+          "complete": true,
+          "height": 147,
+          "src": "/assets/post_course_cybersec_what-is-safety/1772342178110.gif",
+          "width": 216
+        },
+        {
+          "complete": true,
+          "height": 486,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301132349.png",
+          "width": 857
+        }
+      ]
+    },
+    {
+      "check": "candidate-dark",
+      "state": "Browser tab: 3, Title: \"安全？能吃嗎？ | 0x1DEA\", URL: \"http://127.0.0.1:4175/post/course/cybersec/what-is-safety.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 6-13\n+\t\t\t241 container\n+\t\t\t\t242 container Main Navigation\n+\t\t\t\t\t243 text Main Navigation\n+\t\t\t\t\t244 link Description: About Me, Value: 127.0.0.1:4175/about.html\n+\t\t\t\t\t245 link Description: 文章總覽, Value: 127.0.0.1:4175/posts.html\n+\t\t\t\t\t246 pop up button (collapsed) 分類文章, Secondary Actions: Expand\n+\t\t\t\t247 switch Description: Switch to light theme, Value: 1\n+\t\t\t\t248 link Description: github, Value: github.com/cxphoenix/0x1dea\nThe focused UI element is 247 switch Description: Switch to light theme, Value: 1"
+    },
+    {
+      "check": "candidate-mobile-article",
+      "state": "Browser tab: 3, Title: \"安全？能吃嗎？ | 0x1DEA\", URL: \"http://127.0.0.1:4175/post/course/cybersec/what-is-safety.html\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea 安全？能吃嗎？ | 0x1DEA, URL: 127.0.0.1:4175/post/course/cybersec/what-is-safety.html",
+      "layout": {
+        "headings": [
+          "什麼是安全？能吃嗎？ ​"
+        ],
+        "scrollWidth": 375,
+        "viewport": 390
+      }
+    },
+    {
+      "check": "candidate-mobile-category-menu",
+      "state": "Browser tab: 3, Title: \"安全？能吃嗎？ | 0x1DEA\", URL: \"http://127.0.0.1:4175/post/course/cybersec/what-is-safety.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t\t\t\t232 button (expanded) 分類文章, Secondary Actions: Collapse\n+\t\t\t\t\t236 container NavScreenGroup-分類文章\n+\t\t\t\t\t\t237 link Description: 資安教學備課系列, Value: 127.0.0.1:4175/post/course/cybersec/\n+\t\t\t\t\t\t238 link Description: 研究方法備課系列, Value: 127.0.0.1:4175/post/course/rm/\nThe focused UI element is 232 button (expanded) 分類文章, Secondary Actions: Collapse"
+    },
+    {
+      "check": "candidate-mobile-list",
+      "state": "Browser tab: 3, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4175/posts.html\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 20 container",
+      "layout": {
+        "scrollWidth": 375,
+        "viewport": 390
+      }
+    },
+    {
+      "check": "candidate-console",
+      "logs": []
+    },
+    {
+      "check": "baseline-home",
+      "state": "Browser tab: 4, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4176/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 0 AXWebArea 0x1DEA, URL: 127.0.0.1:4176/"
+    },
+    {
+      "check": "baseline-list",
+      "state": "Browser tab: 4, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4176/posts.html\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 38 container"
+    },
+    {
+      "check": "baseline-keyboard-focus",
+      "state": "Browser tab: 4, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4176/posts.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\nRemoved element IDs: 38\nThe focused UI element is 43 button 切換至卡片模式"
+    },
+    {
+      "check": "baseline-keyboard-enter-card",
+      "state": "Browser tab: 4, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4176/posts.html\".\n0 AXWebArea 0x1DEA, URL: 127.0.0.1:4176/posts.html\n\t1 container app\n\t\t2 link Description: Skip to content, Value: 127.0.0.1:4176/posts.html#VPContent\n\t\t3 container\n\t\t\t4 link Description: 0x1DEA, Value: 127.0.0.1:4176/\n\t\t\t5 container Main Navigation\n\t\t\t\t6 text Main Navigation\n\t\t\t\t7 link Description: About Me, Value: 127.0.0.1:4176/about.html\n\t\t\t\t8 link Description: 文章總覽, Value: 127.0.0.1:4176/posts.html\n\t\t\t\t9 pop up button (collapsed) 分類文章, Secondary Actions: Expand\n\t\t\t10 switch Description: Switch to dark theme, Value: 0\n\t\t\t11 link Description: github, Value: github.com/cxphoenix/0x1dea\n\t\t39 container\n\t\t\t40 container\n\t\t\t\t41 image\n\t\t\t\t42 text field (settable)\n\t\t\t\t43 button 切換至列表模式\n\t\t\t\t\t53 image\n\t\t\t\t45 button 時間排序, Help: 切換排序方式\n\t\t\t\t\t46 text 時間排序\n\t\t\t\t\t47 image\n\t\t\t\t48 button 降冪, Help: 切換升降冪\n\t\t\t\t\t49 text 降冪\n\t\t\t\t\t50 image\n\t\t\t\t54 link Description: 為什麼你需要學研究方法？ 為什麼你需要學研究方法？ 研究方法教學 2026年3月1日 讓我們從「了解」走向「深究」的一條無止盡道路。, Value: 127.0.0.1:4176/post/course/rm/why-we-need-rm.html\n\t\t\t\t55 link Description: 安全？能吃嗎？ 安全？能吃嗎？ 資安教學 2026年2月27日 我好像都懂「資訊安全」，深入後有一些新發現..., Value: 127.0.0.1:4176/post/course/cybersec/what-is-safety.html\n\t\t36 container\n\t\t\t37 text 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\n\nThe focused UI element is 43 button 切換至列表模式"
+    },
+    {
+      "check": "baseline-category",
+      "dom": "- link \"Skip to content\":\n  - /url: \"#VPContent\"\n- banner:\n  - link \"0x1DEA\":\n    - /url: /\n    - generic: \"0x1DEA\"\n  - navigation \"Main Navigation\":\n    - generic: Main Navigation\n    - link \"About Me\":\n      - /url: /about.html\n      - generic: About Me\n    - link \"文章總覽\":\n      - /url: /posts.html\n      - generic: 文章總覽\n    - button \"分類文章\":\n      - generic: 分類文章\n  - switch \"Switch to dark theme\"\n  - link \"github\":\n    - /url: https://github.com/cxphoenix/0x1dea\n- main:\n  - textbox \"搜尋標題或類型...\"\n  - button \"切換至列表模式\":\n  - button \"類型排序\" [active]:\n    - generic: 類型排序\n  - button \"降冪\":\n    - generic: 降冪\n  - heading \"資安教學\" [level=2]:\n    - link \"資安教學\":\n      - /url: /post/course/cybersec\n  - link \"安全？能吃嗎？ 安全？能吃嗎？ 2026年2月27日 我好像都懂「資訊安全」，深入後有一些新發現...\":\n    - /url: /post/course/cybersec/what-is-safety.html\n    - img \"安全？能吃嗎？\"\n    - heading \"安全？能吃嗎？\" [level=2]\n    - generic: 2026年2月27日\n    - paragraph: 我好像都懂「資訊安全」，深入後有一些新發現...\n  - heading \"研究方法教學\" [level=2]:\n    - link \"研究方法教學\":\n      - /url: /post/course/rm\n  - link \"為什麼你需要學研究方法？ 為什麼你需要學研究方法？ 2026年3月1日 讓我們從「了解」走向「深究」的一條無止盡道路。\":\n    - /url: /post/course/rm/why-we-need-rm.html\n    - img \"為什麼你需要學研究方法？\"\n    - heading \"為什麼你需要學研究方法？\" [level=2]\n    - generic: 2026年3月1日\n    - paragraph: 讓我們從「了解」走向「深究」的一條無止盡道路。\n- contentinfo\n- contentinfo:\n  - paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x\n  - paragraph: Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!"
+    },
+    {
+      "check": "baseline-search-hit",
+      "state": "Browser tab: 4, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4176/posts.html\".\n0 AXWebArea 0x1DEA, URL: 127.0.0.1:4176/posts.html\n\t1 container app\n\t\t2 link Description: Skip to content, Value: 127.0.0.1:4176/posts.html#VPContent\n\t\t3 container\n\t\t\t4 link Description: 0x1DEA, Value: 127.0.0.1:4176/\n\t\t\t5 container Main Navigation\n\t\t\t\t6 text Main Navigation\n\t\t\t\t7 link Description: About Me, Value: 127.0.0.1:4176/about.html\n\t\t\t\t8 link Description: 文章總覽, Value: 127.0.0.1:4176/posts.html\n\t\t\t\t9 pop up button (collapsed) 分類文章, Secondary Actions: Expand\n\t\t\t10 switch Description: Switch to dark theme, Value: 0\n\t\t\t11 link Description: github, Value: github.com/cxphoenix/0x1dea\n\t\t39 container\n\t\t\t40 container\n\t\t\t\t41 image\n\t\t\t\t42 text field (settable) 安全\n\t\t\t\t43 button 切換至列表模式\n\t\t\t\t\t53 image\n\t\t\t\t45 button 類型排序, Help: 切換排序方式\n\t\t\t\t\t56 text 類型排序\n\t\t\t\t\t47 image\n\t\t\t\t48 button 降冪, Help: 切換升降冪\n\t\t\t\t\t49 text 降冪\n\t\t\t\t\t50 image\n\t\t\t\t57 heading 資安教學, Value: 2\n\t\t\t\t\t58 link Description: 資安教學, Value: 127.0.0.1:4176/post/course/cybersec\n\t\t\t\t59 link Description: 安全？能吃嗎？ 安全？能吃嗎？ 2026年2月27日 我好像都懂「資訊安全」，深入後有一些新發現..., Value: 127.0.0.1:4176/post/course/cybersec/what-is-safety.html\n\t\t36 container\n\t\t\t37 text 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\n\nThe focused UI element is 42 text field (settable) 安全"
+    },
+    {
+      "check": "baseline-search-empty",
+      "state": "Browser tab: 4, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4176/posts.html\".\n0 AXWebArea 0x1DEA, URL: 127.0.0.1:4176/posts.html\n\t1 container app\n\t\t2 link Description: Skip to content, Value: 127.0.0.1:4176/posts.html#VPContent\n\t\t3 container\n\t\t\t4 link Description: 0x1DEA, Value: 127.0.0.1:4176/\n\t\t\t5 container Main Navigation\n\t\t\t\t6 text Main Navigation\n\t\t\t\t7 link Description: About Me, Value: 127.0.0.1:4176/about.html\n\t\t\t\t8 link Description: 文章總覽, Value: 127.0.0.1:4176/posts.html\n\t\t\t\t9 pop up button (collapsed) 分類文章, Secondary Actions: Expand\n\t\t\t10 switch Description: Switch to dark theme, Value: 0\n\t\t\t11 link Description: github, Value: github.com/cxphoenix/0x1dea\n\t\t39 container\n\t\t\t40 container\n\t\t\t\t41 text 📭 沒有任何文章，努力產生中！\n\t\t\t\t42 text ((└(:3」┌)┘))\n\t\t36 container\n\t\t\t37 text 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\n\nThe focused UI element is 0 AXWebArea 0x1DEA, URL: 127.0.0.1:4176/posts.html"
+    },
+    {
+      "check": "baseline-ascending",
+      "dom": "- link \"Skip to content\":\n  - /url: \"#VPContent\"\n- banner:\n  - link \"0x1DEA\":\n    - /url: /\n    - generic: \"0x1DEA\"\n  - navigation \"Main Navigation\":\n    - generic: Main Navigation\n    - link \"About Me\":\n      - /url: /about.html\n      - generic: About Me\n    - link \"文章總覽\":\n      - /url: /posts.html\n      - generic: 文章總覽\n    - button \"分類文章\":\n      - generic: 分類文章\n  - switch \"Switch to dark theme\"\n  - link \"github\":\n    - /url: https://github.com/cxphoenix/0x1dea\n- main:\n  - textbox \"搜尋文章標題...\"\n  - button \"切換至卡片模式\":\n  - button \"時間排序\":\n    - generic: 時間排序\n  - button \"升冪\" [active]:\n    - generic: 升冪\n  - link \"為什麼你需要學研究方法？ 讓我們從「了解」走向「深究」的一條無止盡道路。 研究方法教學 2026年3月1日\":\n    - /url: /post/course/rm/why-we-need-rm.html\n    - heading \"為什麼你需要學研究方法？\" [level=3]\n    - paragraph: 讓我們從「了解」走向「深究」的一條無止盡道路。\n    - generic: 研究方法教學\n    - generic: 2026年3月1日\n  - link \"安全？能吃嗎？ 我好像都懂「資訊安全」，深入後有一些新發現... 資安教學 2026年2月27日\":\n    - /url: /post/course/cybersec/what-is-safety.html\n    - heading \"安全？能吃嗎？\" [level=3]\n    - paragraph: 我好像都懂「資訊安全」，深入後有一些新發現...\n    - generic: 資安教學\n    - generic: 2026年2月27日\n- contentinfo\n- contentinfo:\n  - paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x\n  - paragraph: Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!"
+    },
+    {
+      "check": "baseline-article-images",
+      "images": [
+        {
+          "complete": true,
+          "height": 512,
+          "src": "/circleImage.svg",
+          "width": 512
+        },
+        {
+          "complete": true,
+          "height": 1536,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260227005508.png",
+          "width": 2752
+        },
+        {
+          "complete": true,
+          "height": 1536,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260227014249.png",
+          "width": 2752
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260228013411.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 1792,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260228022122.png",
+          "width": 2400
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260228114351.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260228130720.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301114806.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 768,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301122300.png",
+          "width": 1376
+        },
+        {
+          "complete": true,
+          "height": 1512,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301120037.png",
+          "width": 2862
+        },
+        {
+          "complete": true,
+          "height": 1394,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301125241.png",
+          "width": 2712
+        },
+        {
+          "complete": true,
+          "height": 1234,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301125313.png",
+          "width": 2734
+        },
+        {
+          "complete": true,
+          "height": 1212,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301125401.png",
+          "width": 2692
+        },
+        {
+          "complete": true,
+          "height": 1006,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301125743.png",
+          "width": 2760
+        },
+        {
+          "complete": true,
+          "height": 147,
+          "src": "/assets/post_course_cybersec_what-is-safety/1772342178110.gif",
+          "width": 216
+        },
+        {
+          "complete": true,
+          "height": 486,
+          "src": "/assets/post_course_cybersec_what-is-safety/20260301132349.png",
+          "width": 857
+        }
+      ]
+    },
+    {
+      "check": "baseline-dark",
+      "dom": "- link \"Skip to content\":\n  - /url: \"#VPContent\"\n- banner:\n  - link \"0x1DEA\":\n    - /url: /\n    - generic: \"0x1DEA\"\n  - navigation \"Main Navigation\":\n    - generic: Main Navigation\n    - link \"About Me\":\n      - /url: /about.html\n      - generic: About Me\n    - link \"文章總覽\":\n      - /url: /posts.html\n      - generic: 文章總覽\n    - button \"分類文章\":\n      - generic: 分類文章\n  - switch \"Switch to light theme\" [checked] [active]\n  - link \"github\":\n    - /url: https://github.com/cxphoenix/0x1dea\n- complementary:\n  - navigation \"Sidebar Navigation\":\n    - generic: Sidebar Navigation\n    - button \"資安教學備課\":\n      - heading \"資安教學備課\" [level=2]\n    - link \"安全？能吃嗎？\":\n      - /url: /post/course/cybersec/what-is-safety.html\n      - paragraph: 安全？能吃嗎？\n- navigation \"On this page\":\n  - heading \"On this page\" [level=2]\n  - list:\n    - link \"安全的定義\":\n      - /url: \"#安全的定義\"\n    - link \"我們如何判斷「危險」\":\n      - /url: \"#我們如何判斷「危險」\"\n    - link \"達成某種需要「資訊」力量的目標\":\n      - /url: \"#達成某種需要「資訊」力量的目標\"\n    - link \"不夠清楚？舉個例子\":\n      - /url: \"#不夠清楚-舉個例子\"\n    - link \"結論？\":\n      - /url: \"#結論\"\n- main:\n  - paragraph:\n    - img \"post banner\"\n  - heading \"什麼是安全？能吃嗎？ Permalink to “什麼是安全？能吃嗎？”\" [level=1]:\n    - text: 什麼是安全？能吃嗎？\n    - link \"Permalink to “什麼是安全？能吃嗎？”\":\n      - /url: \"#什麼是安全-能吃嗎\"\n      - text: \"#\"\n  - generic: 資安課程\n  - text: ｜\n  - generic: 教學備課\n  - text: \"|\"\n  - generic: 補充教材\n  - paragraph: 每次開始新學期課程時，我都會煩惱：我到底要怎麼介紹「資訊安全」這個概念？\n  - paragraph: 應該說，資安的「概念」大家都知道，但是要怎麼應用到「CTF」的培訓，那就開始犯難...\n  - paragraph: 不過我開始在想：說不定從「安全」的原始定義來開始講會比較好🤔？\n  - heading \"安全的定義 Permalink to “安全的定義”\" [level=2]:\n    - text: 安全的定義\n    - link \"Permalink to “安全的定義”\":\n      - /url: \"#安全的定義\"\n      - text: \"#\"\n  - heading \"國語辭典中的「安全」 Permalink to “國語辭典中的「安全」”\" [level=3]:\n    - text: 國語辭典中的「安全」\n    - link \"Permalink to “國語辭典中的「安全」”\":\n      - /url: \"#國語辭典中的「安全」\"\n      - text: \"#\"\n  - paragraph:\n    - text: 根據\n    - link \"教育部的國語辭典簡編本的說明 \":\n      - /url: https://dict.concised.moe.edu.tw/dictView.jsp?ID=39720&q=1\n    - text: ，針對安全的定義如下：\n  - paragraph:\n    - text: 安全\n    - code: ㄢ ㄑㄩㄢˊ\n  - paragraph: 平安而沒有危險。 例 時時注意居家安全，才能保障生命財產不受損失。\n  - paragraph: 真的是廢話...我們當然知道「安全」就是不要危險、沒有危險嘛！\n  - paragraph: 但會不會是我搞錯了？畢竟國語辭典簡編本只是「簡編」，會不會有更具體的解釋？\n  - paragraph:\n    - text: 所以我去查了\n    - link \"教育部重編國語辭典修訂本 \":\n      - /url: https://dict.revised.moe.edu.tw/search.jsp?md=1\n    - text: 對於「安全」的定義：\n  - paragraph:\n    - text: 重編國語辭典修訂本的「\n    - link \"安全 \":\n      - /url: https://dict.revised.moe.edu.tw/dictView.jsp?ID=147841&q=1&word=%E5%AE%89%E5%85%A8\n    - text: 」\n  - list:\n    - listitem: 平安，沒有危險。如：「安全可靠」。《舊唐書．卷六九．列傳．薛萬徹》：「賊兵多少，極於此矣。宜善自固，以圖安全。」《三遂平妖傳》第二一回：「若顧了他時，我須有分吃官司。寧可把他來壞了，我夫妻兩口兒，倒得安全。」\n    - listitem: 保全。《南史．卷一〇．陳本紀．後主》：「隋文帝以陳氏子弟既多，恐京下為過，皆分置諸州縣，每歲賜以衣服以安全之。」\n  - paragraph: ...好吧，沒有好多少...\n  - paragraph: 但我就想，會不會「安全」這個詞彙的定義其實是衍伸自「危險」呢？畢竟我們有許多詞彙的解釋都有可能參考其他詞語的解釋。\n  - paragraph:\n    - text: 既然這樣，我們來了解一下「\n    - link \"危險 \":\n      - /url: https://dict.revised.moe.edu.tw/dictView.jsp?ID=160729&q=1&word=%E5%8D%B1%E9%9A%AA\n    - text: 」的定義好了：\n  - paragraph:\n    - text: 危險\n    - code: ㄨㄟˊ ㄒㄧㄢˇ\n  - paragraph: 不安全。 例 三更半夜一個人在外面遊蕩是很危險的事。\n  - paragraph:\n    - img \"圖 1：吐槽（AI 製作）\"\n  - paragraph: 好吧，我們對於「危險」的定義也是來源於「安全」...\n  - blockquote:\n    - paragraph: 順帶一提，這種「互相引用」的方法，在程式設計時會造成 error...\n  - paragraph: 「平安」的定義？\n  - paragraph:\n    - text: 我猜你會問：那\n    - link \"平安 \":\n      - /url: https://dict.concised.moe.edu.tw/dictView.jsp?ID=3357\n    - text: 的定義呢？我這邊列給你：\n  - blockquote:\n    - paragraph: 平穩而沒有危險。 例 這艘貨輪已經平安抵達高雄港。\n  - paragraph: ...依舊是一句廢話呢...\n  - heading \"英文語系中對「安全」的解釋 Permalink to “英文語系中對「安全」的解釋”\" [level=3]:\n    - text: 英文語系中對「安全」的解釋\n    - link \"Permalink to “英文語系中對「安全」的解釋”\":\n      - /url: \"#英文語系中對「安全」的解釋\"\n      - text: \"#\"\n  - paragraph: 好吧，看起來在中文的語系中，對於「安全」的相關定義比較像是一個概念，而沒有更為精確的定義。\n  - paragraph: 於是我就想：「既然『資訊安全』這個概念是從西方國家來的，那不如查查英文的定義？」說到就行動，我們來參考一下英文「Safety」的定義：\n  - paragraph: Safety\n  - paragraph: the condition of being safe from undergoing or causing hurt, injury, or loss\n  - blockquote:\n    - paragraph: 一種免於遭受或造成任何人痛苦、傷害與損失的安全無虞的境地。\n  - paragraph:\n    - text: <from\n    - link \"Merriam-Webster Dictionary \":\n      - /url: https://www.merriam-webster.com/dictionary/safety\n    - text: \">\"\n  - separator\n  - paragraph: a state in which or a place where you are safe and not in danger or at risk\n  - blockquote:\n    - paragraph: 一個不會遭受危害，且沒有任何風險隱憂的安全狀態或場所。\n  - paragraph:\n    - text: <from\n    - link \"Cambridge Dictionary \":\n      - /url: https://dictionary.cambridge.org/dictionary/english/safety\n    - text: \">\"\n  - paragraph: 我使用了兩個不同來源的解釋：一個是美國最權威的「韋氏辭典」、一個是劍橋辭典。\n  - paragraph: 雖然解釋起來看起來還是有一種「又是一句廢話」的感覺，但是這兩個辭典把我們平常所講的那種「安全的概念」有做比較具體的說明。\n  - paragraph: 例如韋氏辭典中有提到「...causing hurt, injury, or loss」，他指的就是針對面對危險時的三種不同「狀態」：主觀性的傷害、客觀性的破壞，以及存在的消失（失去）。\n  - paragraph: 若是以人生安全來說，一個人的安全就是他不會遭受、也不會造成他人的「主觀感受到傷害」、「客觀、物理性、可被測量的破壞」，或是不會讓所持有的「存在（小至持有的物體，大至生命）」消失。\n  - paragraph: 我知道可能有點難懂，但比起國語辭典的「平安，沒有危險」來的好多了吧...\n  - paragraph: 至少你從解釋中知道，所謂「安全」就是要避免受到或是對他人造成從小到大的狀態傷害。\n  - paragraph:\n    - img \"圖 2：死掉就是最佳安全？（AI 製作）\"\n  - paragraph: 不過，劍橋辭典的解釋我覺得也非常讚！\n  - paragraph: 尤其是他使用到兩個詞彙：Danger 與 Risk。\n  - paragraph: 我們來看看這兩個詞彙的意思：\n  - paragraph:\n    - link \"Danger \":\n      - /url: https://www.merriam-webster.com/dictionary/danger\n  - paragraph: exposure or liability to injury, pain, harm, or loss\n  - blockquote:\n    - paragraph: 曝露在傷害、痛苦、危害或損失的威脅之中，或處於極易受其波及的處境。\n  - paragraph:\n    - link \"Risk \":\n      - /url: https://www.merriam-webster.com/dictionary/risk\n  - paragraph:\n    - text: the chance of loss or the perils to the subject matter of an insurance contract\n    - emphasis: also\n    - text: \": the degree of probability of such loss\"\n  - blockquote:\n    - paragraph: 損失發生的機會，或特定對象所面臨的危害；同時也指該損失發生的機率程度。\n  - paragraph: 所以安全不只「不要危險」，還有盡可能避免「發生危險的可能性」。\n  - paragraph: 所以從上面兩個詞彙你可以發現：「Safety」一詞不只是「不要危險」，還包含概念：「減少發生危險的可能性」。\n  - paragraph:\n    - img \"圖 3：安全是不要發生危險，但危險千千萬萬種很難預測（AI 製作）\"\n  - heading \"誤會了！國語辭典的「安全」其實已經告訴你了 Permalink to “誤會了！國語辭典的「安全」其實已經告訴你了”\" [level=3]:\n    - text: 誤會了！國語辭典的「安全」其實已經告訴你了\n    - link \"Permalink to “誤會了！國語辭典的「安全」其實已經告訴你了”\":\n      - /url: \"#誤會了-國語辭典的「安全」其實已經告訴你了\"\n      - text: \"#\"\n  - paragraph: 看完英文的「具體」解釋後，先別急著吐槽教育部的修編本。\n  - paragraph: 因為他其實已經把這幾個定義告訴你了！\n  - paragraph: 還記得辭典中的定義嗎？\n  - paragraph:\n    - text: 「\n    - strong: 平穩\n    - text: ，沒有危險」\n  - paragraph: 沒錯，就在「平穩」這個詞上。\n  - paragraph: 正如我前面說的，在中文裡面提供的是一個「大方向」的概念，你仔細拆解這個概念後就會發險：誒？好像就跟英文解釋的一樣了噎？\n  - list:\n    - listitem: 平穩 --> 不太會發生預期外的事\n    - listitem: 危險 --> 傷害、破壞、讓我們會失去什麼的原因\n  - paragraph: 其實我們換句話說：如果把發生危險的可能性降到最低，是不是就是「安全」了呢？\n  - paragraph:\n    - img \"圖 4：教育部的解釋可不是廢話（AI 製作）\"\n  - paragraph: 在了解什麼是「安全」後，就可以開始了解「資訊安全」了嗎？\n  - paragraph: No No No！我們剛剛說到了：「把發生危險的可能性降到最低」，但是「危險」又是什麼呢？我們怎麼定義「危險」的？\n  - heading \"我們如何判斷「危險」 Permalink to “我們如何判斷「危險」”\" [level=2]:\n    - text: 我們如何判斷「危險」\n    - link \"Permalink to “我們如何判斷「危險」”\":\n      - /url: \"#我們如何判斷「危險」\"\n      - text: \"#\"\n  - paragraph: 我知道又來講「定義」很煩，但先別著急！具體定義我們前面已經講完了，接下來我們來整理一下概念，這樣就能了解什麼是「危險」。\n  - heading \"從「Danger」的定義出發 Permalink to “從「Danger」的定義出發”\" [level=3]:\n    - text: 從「Danger」的定義出發\n    - link \"Permalink to “從「Danger」的定義出發”\":\n      - /url: \"#從「danger」的定義出發\"\n      - text: \"#\"\n  - paragraph: 回顧剛剛，你會不會覺得在 Merriam-Webster Dictionary 解釋的「Danger」是不是很「不具體」？\n  - paragraph: 也許你會覺得：「很具體啦！就受傷害啊、被破壞啊、損失什麼的，別雞蛋裡挑骨頭。」那麼就大錯特錯了！\n  - paragraph: 我所說的具體是指：所以怎麼樣「受傷害」？什麼東西「被破壞」？「損失」了什麼？\n  - paragraph: 在 Merriam-Webster Dictionary 中都沒有定義，只告訴你：恩，不要發生這三件壞壞的事情喔！\n  - paragraph: 這時候你可能會反駁：對啊！他只是解釋這個「詞」，但用在什麼情境是由我們決定的。\n  - paragraph: 你說到重點了！\n  - paragraph: 因為我們所謂的「危險」的確是「人訂的」！\n  - heading \"危險＝發生壞事 Permalink to “危險＝發生壞事”\" [level=3]:\n    - text: 危險＝發生壞事\n    - link \"Permalink to “危險＝發生壞事”\":\n      - /url: \"#危險-發生壞事\"\n      - text: \"#\"\n  - paragraph: 在日常生活中，父母在你外出時，可能不免擔心你就說：「注意安全／Stay safe」；當你在過馬路時，會看到「通過人行穿越道注意安全」的標誌；當你在家逛網站時，你也會發現越來越多宣導「網路交友要小心，注意安全」。\n  - paragraph: 如果我們把剛剛的「安全」定義拆解放到這個脈絡中，這些「注意安全」其實就是要你「遠離危險」對吧？\n  - paragraph:\n    - img \"圖 5：注意安全，遠離危險，所以危險是啥？\"\n  - paragraph: 那為什麼要遠離危險呢？那當然是因為我們不希望「壞事」發生！\n  - paragraph: 壞事發生會怎樣？其實就是你無法「達成目標」對吧？\n  - heading \"保持安全＝達成我們的目標 Permalink to “保持安全＝達成我們的目標”\" [level=3]:\n    - text: 保持安全＝達成我們的目標\n    - link \"Permalink to “保持安全＝達成我們的目標”\":\n      - /url: \"#保持安全-達成我們的目標\"\n      - text: \"#\"\n  - paragraph: 所以其實我們「保持安全」的本質，是不希望「壞事」發生；而所謂「壞事」則是會阻礙我們達成目標的事情。\n  - paragraph: 所以我們想要的「注意安全」，在某種程度上也代表我們「達成目標」的驅力。\n  - paragraph: 舉個例子\n  - paragraph: 父母要我們出門「注意安全」，目標是什麼？ 不要被車撞？不要去不好的場所？ 其實就是希望你能夠「完整的、沒有損傷的、出去回來是同一個人的回到家」而已。\n  - paragraph: 所以只要所有會阻礙這個目標的事情，對於父母來說都屬於「危險」的事情。\n  - paragraph:\n    - img \"圖 6：搞錯重點的注意安全\"\n  - paragraph: 我們瞭解了這點，終於可以回頭來看「資訊安全」這件事情了！\n  - heading \"達成某種需要「資訊」力量的目標 Permalink to “達成某種需要「資訊」力量的目標”\" [level=2]:\n    - text: 達成某種需要「資訊」力量的目標\n    - link \"Permalink to “達成某種需要「資訊」力量的目標”\":\n      - /url: \"#達成某種需要「資訊」力量的目標\"\n      - text: \"#\"\n  - paragraph: 所以：資訊安全（Information Security／Cybersecurity）在做什麼呢？\n  - paragraph:\n    - link \"Security \":\n      - /url: https://www.merriam-webster.com/dictionary/security\n  - paragraph: \"the quality or state of being secure: such as\"\n  - list:\n    - listitem: \"freedom from danger : safety\"\n    - listitem: freedom from fear or anxiety\n    - listitem: freedom from the prospect of being laid off\n  - blockquote:\n    - paragraph: 一種安全的品質或狀態，例如遠離危險（保持安全）、遠離恐懼或焦慮、遠離被解僱的未來。\n  - paragraph: 簡單來說：我們在「資訊」這個領域有一些目標、或是有些目標包含了「資訊」這個領域，而在這個領域中的所有事情都可以持續保持「不會阻礙我們達成目標」的狀態或品質。\n  - paragraph: 但是「所有事情」這個範圍太大了，包山包海實在可怕...\n  - paragraph: 所以就開始設定「資訊的安全」要「被管理」的範圍。\n  - paragraph: 這邊就不得不提到鼎鼎大名的 ISO 27000 系列「資訊安全管理系統（Information Security Management System，ISMS）」。\n  - heading \"資安的範圍？ Permalink to “資安的範圍？”\" [level=3]:\n    - text: 資安的範圍？\n    - link \"Permalink to “資安的範圍？”\":\n      - /url: \"#資安的範圍\"\n      - text: \"#\"\n  - paragraph: 認真說，資安管理中，要管的說大不大，說小完全不小。\n  - paragraph:\n    - text: 但根據 ISO 27000 系列的定義，\n    - link \"資安 \":\n      - /url: https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en:term:3.28\n    - text: 要注意的就三件事：機密性（Credentialaity）、完整性（Integriry）、可用性（Availabiltiy）。\n  - paragraph:\n    - img \"圖 7：Cybersecurity CIA\"\n  - paragraph: 但關於這三個，我就先放一旁，下次再說...總之，在這之後所有關於 CTF 的相關內容，其實我們就是在跟這三個目標鬥智鬥力（但最主要還是前兩個，可用性的挑戰在 CTF 沒有看過）。\n  - heading \"不夠清楚？舉個例子 Permalink to “不夠清楚？舉個例子”\" [level=2]:\n    - text: 不夠清楚？舉個例子\n    - link \"Permalink to “不夠清楚？舉個例子”\":\n      - /url: \"#不夠清楚-舉個例子\"\n      - text: \"#\"\n  - paragraph:\n    - text: 這邊我用一個 CTF 的題目來舉例：\n    - link \"https://buckeye-bazaar.osucyber.club/ \":\n      - /url: https://buckeye-bazaar.osucyber.club/\n  - paragraph: NOTE\n  - paragraph\n  - paragraph: 這已經是我在教資安第一堂課程必用的題目了 ╮(￣▽￣\"\")╭\n  - paragraph:\n    - img \"圖 8：Buckeye Bazaar\"\n  - blockquote:\n    - paragraph: 你如果用電腦板打開這個網站，會發現他的滿版讓人非常不舒服...的確，因為這是手機版的 Challenge 哈 ¯\\_(ツ)_/¯\n  - heading \"確認目標與目的 Permalink to “確認目標與目的”\" [level=3]:\n    - text: 確認目標與目的\n    - link \"Permalink to “確認目標與目的”\":\n      - /url: \"#確認目標與目的\"\n      - text: \"#\"\n  - paragraph: 看到這個網站，你應該就知道這是一個電商的網頁。\n  - paragraph: 主要就是線上購物，讓賣家可以不用以實體的方式進行與顧客進行交易。\n  - paragraph: 你會說：「廢話，不然是做慈善嗎？」但這就是我們要釐清的「目標」\n  - paragraph: 電商網站的「目標」\n  - list:\n    - listitem: 與顧客互動\n    - listitem: 增加更多的知名度\n    - listitem: 賺錢\n  - paragraph: 電商網站的目的是以上哪一個呢？\n  - paragraph: 如果你不清楚以上問題的答案，那...恩...加油 (;^_^A\n  - paragraph:\n    - text: 當然是 賺錢 啊！～ ↖(\n    - math:\n      - generic: ω\n    - text: )↗\n  - paragraph: 那作為我輩駭客、攻擊手、漏洞研究員...我們關注的會是什麼呢？\n  - paragraph: 不讓他賺錢！！\n  - paragraph: 因此，在針對這個網站進行滲透、找漏洞時，著重點就會放在如何不讓他賺錢，也就是「賠錢」上。\n  - paragraph: 現實上...\n  - paragraph: 當然啦，現實中我們攻擊的理由不會只是這樣..\n  - paragraph: 這邊只是提供一個可以考量的角度。\n  - paragraph: 現實中別真的這樣做啊！\n  - heading \"規劃破壞「安全目標」的方法 Permalink to “規劃破壞「安全目標」的方法”\" [level=3]:\n    - text: 規劃破壞「安全目標」的方法\n    - link \"Permalink to “規劃破壞「安全目標」的方法”\":\n      - /url: \"#規劃破壞「安全目標」的方法\"\n      - text: \"#\"\n  - paragraph: 那在這個購物網站上，我們要讓他賠錢有哪些方法呢？\n  - paragraph: 以這個挑戰來說：我們要在資源不足的情況下，購買高價的 flag 才行。\n  - paragraph: 那麼要怎麼達成這個目標呢？除了「儲值餘額」外，我們怎麼樣協助這個購物網站找到破壞其「賺錢」目標的方法？\n  - paragraph: 這時候就來分析：網站會如何賠錢？\n  - paragraph: 賠錢的可能\n  - paragraph: 基於這個挑戰的脈絡，會賠錢的可能有這些：\n  - list:\n    - listitem: 原本網站標價 1000，但使用者用 100 買到 --> 賠 900。\n    - listitem: 使用者的餘額是 100，但是再不儲值的情況下，使用者的餘額變成 1000 --> 賠 900。\n    - listitem: 使用者免費拿到物品 --> 賠標價的價格。\n  - paragraph: 我們了解網站如何賠錢後，當然就可以開始嘗試相對應的「方法」。\n  - paragraph: 例如以第一個賠錢的可能「使用者以低於網站標價的金額買到商品」來說，我們就會開始思考：怎麼樣會讓購買商品時低於網站標價呢？\n  - paragraph: 我們就會來針對網站的購物流程進行分析。（萬字分析，在此不寫，手酸了（；＿；））\n  - paragraph: 分析完流程後，我們確認：在購物時，購物金額是以以下公式判斷：\n  - math:\n    - generic: Unit Price\n    - generic: ×\n    - generic: Quantity\n    - generic: =\n    - generic: Total Amount\n  - paragraph: 所以我們要以「低價」買到商品的話，要怎麼辦？\n  - paragraph: 用小數點作為數量！\n  - heading \"嘗試執行攻擊方法 Permalink to “嘗試執行攻擊方法”\" [level=3]:\n    - text: 嘗試執行攻擊方法\n    - link \"Permalink to “嘗試執行攻擊方法”\":\n      - /url: \"#嘗試執行攻擊方法\"\n      - text: \"#\"\n  - paragraph:\n    - text: 所以我們在把 flag 加入購物車後，數量變成：\n    - math:\n      - generic: \"0.0001\"\n    - text: 。\n  - paragraph:\n    - img \"圖 9：flag\"\n  - paragraph:\n    - img \"圖 10：購物車\"\n  - paragraph:\n    - img \"圖 11：改變數量為 0.0001\"\n  - paragraph:\n    - img \"圖 12：購買成功\"\n  - paragraph: 購買成功！這樣就成功地抓到這個購物網站的漏洞。\n  - heading \"結論？ Permalink to “結論？”\" [level=2]:\n    - text: 結論？\n    - link \"Permalink to “結論？”\":\n      - /url: \"#結論\"\n      - text: \"#\"\n  - paragraph: 所以：「資訊安全」是什麼？\n  - paragraph: 就跟一般的「安全」一樣：保護我們能夠順利、無受傷、無破壞、無損失的達成我們的目標。\n  - paragraph: 所以生活中的資訊安全包含但不限於：\n  - list:\n    - listitem: 我在逛一個網站，但是我不希望我的身分資訊在網路上一起裸奔；\n    - listitem: 我在社交媒體上貼文，但是我不希望奇怪的網友循線而來；\n    - listitem: 我當酸民，但不想被抓到（這個道德問題我們到後台好好說說\n    - listitem: ...\n  - paragraph: 因此，學習資安的目標，不是破壞網站、不是盜取資訊，只是想「安全的活著」罷了。\n  - paragraph:\n    - img \"圖 13：像個瘋子一樣活著\"\n  - separator\n  - paragraph: 好啦，太悲傷了 ╮(￣▽￣\"\")╭\n  - paragraph: 總之，學習資安，保護別人，也保護自己才是王道啦！\n  - paragraph: 總而言之\n  - paragraph\n  - paragraph: 當我們有能力突破系統限制時，真正關鍵的，是我們的選擇。\n  - paragraph: 所謂素養、道德，就是我們可以，但我們選擇不做！\n  - blockquote:\n    - paragraph: 我們是做好駭客！\n    - paragraph: <<From Vicent55>>\n    - paragraph:\n      - img \"圖 13：感謝 Vincent55 支援圖片哈\"\n- contentinfo"
+    },
+    {
+      "check": "baseline-mobile-article",
+      "state": "Browser tab: 4, Title: \"安全？能吃嗎？ | 0x1DEA\", URL: \"http://127.0.0.1:4176/post/course/cybersec/what-is-safety.html\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 1 AXWebArea 安全？能吃嗎？ | 0x1DEA, URL: 127.0.0.1:4176/post/course/cybersec/what-is-safety.html",
+      "layout": {
+        "scrollWidth": 375,
+        "viewport": 390
+      }
+    },
+    {
+      "check": "baseline-mobile-category-menu",
+      "state": "Browser tab: 4, Title: \"安全？能吃嗎？ | 0x1DEA\", URL: \"http://127.0.0.1:4176/post/course/cybersec/what-is-safety.html\".\nThe following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.\n~\t\t\t\t\t232 button (expanded) 分類文章, Secondary Actions: Collapse\n+\t\t\t\t\t236 container NavScreenGroup-分類文章\n+\t\t\t\t\t\t237 link Description: 資安教學備課系列, Value: 127.0.0.1:4176/post/course/cybersec/\n+\t\t\t\t\t\t238 link Description: 研究方法備課系列, Value: 127.0.0.1:4176/post/course/rm/\nThe focused UI element is 232 button (expanded) 分類文章, Secondary Actions: Collapse"
+    },
+    {
+      "check": "baseline-mobile-list",
+      "state": "Browser tab: 4, Title: \"0x1DEA\", URL: \"http://127.0.0.1:4176/posts.html\".\n1 AXWebArea 0x1DEA, URL: 127.0.0.1:4176/posts.html\n\t2 container app\n\t\t20 container\n\t\t3 link Description: Skip to content, Value: 127.0.0.1:4176/posts.html#VPContent\n\t\t21 container\n\t\t\t22 link Description: 0x1DEA, Value: 127.0.0.1:4176/\n\t\t\t23 button (collapsed) Description: mobile navigation, Secondary Actions: Expand\n\t\t18 container\n\t\t\t19 container\n\t\t\t\t24 image\n\t\t\t\t25 text field (settable)\n\t\t\t\t26 button 切換至卡片模式\n\t\t\t\t\t27 image\n\t\t\t\t28 button 切換排序方式\n\t\t\t\t\t29 image\n\t\t\t\t30 button 切換升降冪\n\t\t\t\t\t31 image\n\t\t\t\t32 link Description: 為什麼你需要學研究方法？ 讓我們從「了解」走向「深究」的一條無止盡道路。 研究方法教學 2026年3月1日, Value: 127.0.0.1:4176/post/course/rm/why-we-need-rm.html\n\t\t\t\t33 link Description: 安全？能吃嗎？ 我好像都懂「資訊安全」，深入後有一些新發現... 資安教學 2026年2月27日, Value: 127.0.0.1:4176/post/course/cybersec/what-is-safety.html\n\t\t34 container\n\t\t\t35 text 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\n\nThe focused UI element is 20 container",
+      "layout": {
+        "scrollWidth": 375,
+        "viewport": 390
+      }
+    },
+    {
+      "check": "baseline-console",
+      "logs": []
+    }
+  ]
+}

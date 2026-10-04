@@ -1,0 +1,22 @@
+{
+  "name": "closeout-reviewed-drift",
+  "argv": [
+    "python3",
+    "verify-final-review-drift-resumed.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:42:16.005440+00:00",
+  "ended_utc": "2026-10-04T11:42:16.811751+00:00",
+  "elapsed_seconds": 0.8054971670499071,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "29ce205c7eab08b5304d03d4d7770cc747c556b57991882592d437fb79a6cc41",
+  "log": "maintenance/harness-adoption/evidence/closeout-reviewed-drift.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "c4b7ccc43586e15581a002aa6c0bc2de4b3471afd9a6fb2ffc7124425ddaf114",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

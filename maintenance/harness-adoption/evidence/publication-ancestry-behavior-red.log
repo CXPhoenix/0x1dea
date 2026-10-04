@@ -1,0 +1,21 @@
+test_baseline_and_authorized_descendant_history_are_accepted (__main__.PublicationAncestryTests.test_baseline_and_authorized_descendant_history_are_accepted) ... ERROR
+test_missing_baseline_object_is_rejected (__main__.PublicationAncestryTests.test_missing_baseline_object_is_rejected) ... ok
+test_unrelated_history_is_rejected (__main__.PublicationAncestryTests.test_unrelated_history_is_rejected) ... ok
+
+======================================================================
+ERROR: test_baseline_and_authorized_descendant_history_are_accepted (__main__.PublicationAncestryTests.test_baseline_and_authorized_descendant_history_are_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_publication.py", line 45, in test_baseline_and_authorized_descendant_history_are_accepted
+    self.assertEqual(self.guard(), grandchild)
+                     ~~~~~~~~~~^^
+  File "{CANDIDATE}/tests/harness_adoption/test_publication.py", line 38, in guard
+    return fn(self.root, self.baseline)
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 309, in check_adoption_ancestry
+    raise ValueError('baseline is not accepted as ancestor: draft requires exact HEAD')
+ValueError: baseline is not accepted as ancestor: draft requires exact HEAD
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.320s
+
+FAILED (errors=1)

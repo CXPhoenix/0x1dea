@@ -1,0 +1,274 @@
+{
+  "status": "pass",
+  "changes": {
+    "scripts/verify-harness-adoption.py": "083be762825536713d0501c219083070c39180c9023b5d07406cd08e4559e5ba",
+    "tests/harness_adoption/test_tracker.py": "26242a1a85bc01d68f5b5731b4e6e17af104948409cd86bbebac292e25955725",
+    "README.md": "529bad3c142c2ebcad48e2d206358ed565ebf26b377afcf15c9081f4892c8f68",
+    "docs/guide.md": "31884e97cf655381ac15c4d85ae202028e272545c1a3cc55c60988c6588a5a53",
+    ".gitignore": "a84b112093821e9a83f9a3fc25cb281e4d14dcdc44451f06adf15e269e5cec2e",
+    "maintenance/harness-adoption/candidate-delta.json": "34a695459d754cebc009a381a753b16dbbaee630845dc6fb9a30b04e212b2693"
+  },
+  "translation_identifier_repairs": {
+    ".proj.specs/_baseline/ee7fecf/newest-posts-widget/spec.zh-TW.md": "6d598a31587641ec08c30c0e32bf138bbf060252361b919833121634c3893f38",
+    ".proj.specs/_baseline/ee7fecf/post-content-model/spec.zh-TW.md": "fbe59db966e75f9572c25b84afd243a51f06a4b53f311d5bfa0ac2a1ba1dc689",
+    ".proj.specs/_baseline/ee7fecf/post-display-views/spec.zh-TW.md": "2171fbbc9353a8b746fa19c281b95f0cb0336e18bc53eff09be60ef9489d6607",
+    ".proj.specs/_baseline/ee7fecf/theme-layout-particles/spec.zh-TW.md": "bb9921c98c31a300c3f056f9fef59bcbcca1ff4ede34e6c976b8f36d71dbe73e"
+  },
+  "tests": {
+    "tracker_count": 26,
+    "framework_pins": 641,
+    "runtime_skills_each": 35,
+    "preserved_site_moves": 55,
+    "baseline_entries": 370,
+    "historical_trace_rows": 113,
+    "translation_specs": 7,
+    "historical_requirements": 32,
+    "historical_scenarios": 81,
+    "preserved_condition_clauses": 230,
+    "original_trace_blocks": 9,
+    "existing_logs_inventory_visible": 72
+  },
+  "receipts": [
+    {
+      "name": "review-fixes-bilingual-final",
+      "argv": [
+        "python3",
+        "{WORKSPACE}/check-bilingual-resumed.py"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-bilingual-final.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-bilingual-final.log",
+      "log_sha256": "c70fcf8ad92b2ae8101b00426910083a2ceac833a02ab897b08689bd80ecabeb"
+    },
+    {
+      "name": "review-fixes-bilingual-green",
+      "argv": [
+        "python3",
+        "{WORKSPACE}/check-bilingual-resumed.py"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-bilingual-green.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-bilingual-green.log",
+      "log_sha256": "6612430d9bc60b5b1bab37ab398c3f6c152cac299d9a7d5f218be7bf6d88ca8b"
+    },
+    {
+      "name": "review-fixes-bilingual-red",
+      "argv": [
+        "python3",
+        "{WORKSPACE}/check-bilingual-resumed.py"
+      ],
+      "status": "expected-red",
+      "exit_code": 1,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-bilingual-red.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-bilingual-red.log",
+      "log_sha256": "e15f21a583d6d24a72fccb21f68045f434bc736b7fe18a77209024c5ab7a5975"
+    },
+    {
+      "name": "review-fixes-final-main",
+      "argv": [
+        "python3",
+        "scripts/verify-harness-adoption.py"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-final-main.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-final-main.log",
+      "log_sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9"
+    },
+    {
+      "name": "review-fixes-final-materializer",
+      "argv": [
+        "python3",
+        "scripts/materialize-writing-skills.py",
+        "--check"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-final-materializer.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-final-materializer.log",
+      "log_sha256": "cda251d30da65cd9b63191a5a63267c05e0ca23202602a02ac9d4f3e300c5008"
+    },
+    {
+      "name": "review-fixes-final-project",
+      "argv": [
+        "python3",
+        "scripts/verify-project.py"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-final-project.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-final-project.log",
+      "log_sha256": "5c68bb18165bbf0453415e87778f44c1aea842d5e161e2c7ab963038d1760f55"
+    },
+    {
+      "name": "review-fixes-final-tracker",
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/harness_adoption",
+        "-p",
+        "test_tracker.py",
+        "-v"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-final-tracker.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-final-tracker.log",
+      "log_sha256": "62b29b86f7c1f50184b69d0a33d727e03e8cd5e9feac460f9648a6d7610a97a9"
+    },
+    {
+      "name": "review-fixes-log-visibility-green",
+      "argv": [
+        "python3",
+        "-c",
+        "from pathlib import Path\nimport subprocess\nlogs=sorted(p.as_posix() for p in Path('maintenance/harness-adoption/evidence').rglob('*.log'))\nignored=[]\nfor name in logs:\n    result=subprocess.run(['git','check-ignore','--quiet','--',name])\n    if result.returncode==0: ignored.append(name)\n    elif result.returncode!=1: raise RuntimeError('git check-ignore failed: '+name)\nvisible=set(subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z']).decode().split('\\0'))\nmissing=sorted(set(logs)-visible)\nprint({'existing_logs':len(logs),'ignored_logs':len(ignored),'missing_inventory_logs':len(missing),'first_ignored':ignored[:3]},flush=True)\nassert logs and not ignored and not missing, 'acceptance logs must be visible to Git inventory'\n"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-log-visibility-green.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-log-visibility-green.log",
+      "log_sha256": "abf86b989ae8abf0533305b1fb423a4cc42c6e70abb03caac136c76a3dd495d0"
+    },
+    {
+      "name": "review-fixes-log-visibility-red",
+      "argv": [
+        "python3",
+        "-c",
+        "from pathlib import Path\nimport subprocess\nlogs=sorted(p.as_posix() for p in Path('maintenance/harness-adoption/evidence').rglob('*.log'))\nignored=[]\nfor name in logs:\n    result=subprocess.run(['git','check-ignore','--quiet','--',name])\n    if result.returncode==0: ignored.append(name)\n    elif result.returncode!=1: raise RuntimeError('git check-ignore failed: '+name)\nvisible=set(subprocess.check_output(['git','ls-files','--cached','--others','--exclude-standard','-z']).decode().split('\\0'))\nmissing=sorted(set(logs)-visible)\nprint({'existing_logs':len(logs),'ignored_logs':len(ignored),'missing_inventory_logs':len(missing),'first_ignored':ignored[:3]},flush=True)\nassert logs and not ignored and not missing, 'acceptance logs must be visible to Git inventory'\n"
+      ],
+      "status": "expected-red",
+      "exit_code": 1,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-log-visibility-red.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-log-visibility-red.log",
+      "log_sha256": "4834c8975f31cce796867791c9220507706bb63856796e7ed32bdb53a7b19ff4"
+    },
+    {
+      "name": "review-fixes-post-translation-main",
+      "argv": [
+        "python3",
+        "scripts/verify-harness-adoption.py"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-post-translation-main.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-post-translation-main.log",
+      "log_sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9"
+    },
+    {
+      "name": "review-fixes-readme-green",
+      "argv": [
+        "python3",
+        "tests/harness_adoption/test_tracker.py",
+        "TrackerTests.test_readme_pnpm_commands_must_exist_in_package_scripts",
+        "-v"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-readme-green.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-readme-green.log",
+      "log_sha256": "f53e21c373daded5ee51211c60a449ce48b91a85ec00080a74f4212bea1b0562"
+    },
+    {
+      "name": "review-fixes-readme-red",
+      "argv": [
+        "python3",
+        "tests/harness_adoption/test_tracker.py",
+        "TrackerTests.test_readme_pnpm_commands_must_exist_in_package_scripts",
+        "-v"
+      ],
+      "status": "expected-red",
+      "exit_code": 1,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-readme-red.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-readme-red.log",
+      "log_sha256": "6c449c77aa706b1f5bf4acbfd22786d7163fdea2bd6ce777400e3ffb3f129f78"
+    },
+    {
+      "name": "review-fixes-staged-behavior-red",
+      "argv": [
+        "python3",
+        "tests/harness_adoption/test_tracker.py",
+        "AddedPathTests",
+        "-v"
+      ],
+      "status": "expected-red",
+      "exit_code": 1,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-staged-behavior-red.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-staged-behavior-red.log",
+      "log_sha256": "fbde86501858d6d7f3fa1a88457b854ffefc9be79b7b6f27c4416e13e5861d9c"
+    },
+    {
+      "name": "review-fixes-staged-green",
+      "argv": [
+        "python3",
+        "tests/harness_adoption/test_tracker.py",
+        "AddedPathTests",
+        "-v"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-staged-green.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-staged-green.log",
+      "log_sha256": "fb811226606bf38266308d25fed248ed7a391375cccd376db0de3281c78423ee"
+    },
+    {
+      "name": "review-fixes-staged-red",
+      "argv": [
+        "python3",
+        "tests/harness_adoption/test_tracker.py",
+        "AddedPathTests",
+        "-v"
+      ],
+      "status": "expected-red",
+      "exit_code": 1,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-staged-red.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-staged-red.log",
+      "log_sha256": "4382739bb6be86ff0b88b080fadb85ac2af742b6554efd606ce2aa5880926b77"
+    },
+    {
+      "name": "review-fixes-trace-green",
+      "argv": [
+        "python3",
+        "tests/harness_adoption/test_tracker.py",
+        "TraceEvidenceTests",
+        "-v"
+      ],
+      "status": "pass",
+      "exit_code": 0,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-trace-green.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-trace-green.log",
+      "log_sha256": "4340a4008d83bc82cd9fc472531594ab98e7572ddb742bdd6a8393f0bad29dcc"
+    },
+    {
+      "name": "review-fixes-trace-red",
+      "argv": [
+        "python3",
+        "tests/harness_adoption/test_tracker.py",
+        "TraceEvidenceTests",
+        "-v"
+      ],
+      "status": "expected-red",
+      "exit_code": 1,
+      "receipt": "{WORKSPACE}/evidence/resumed/review-fixes-trace-red.json",
+      "log": "{WORKSPACE}/evidence/resumed/review-fixes-trace-red.log",
+      "log_sha256": "6b5b2fdd28170d8fe5e42f0199af3f734f1687c31006e354a0ab27685336e07a"
+    }
+  ],
+  "scope_limits": [
+    "No product articles, framework skill bytes, canonical writing inputs, generated writing packages or source policy were modified by this follow-up.",
+    "Bilingual check covers structure, inline identifier multiplicity, conditions, source bytes and trace blocks; translation semantics are not independently human-certified.",
+    "No commit, push, install, deploy, index staging or original repository changes."
+  ],
+  "self_review": [
+    "README keeps existing package script names while website paths remain blog/.",
+    "Trace pass requires every receipt to be pass and have a validated successful execution/log hash.",
+    "Git inventory combines cached index and nonignored untracked names; baseline, exact approved moves and management allowlist remain accepted.",
+    "Independent framework guard and materializer tests were preserved.",
+    "Guide distinguishes independently owned framework copies from the three canonical generated product packages.",
+    "Narrow log unignore exposes all 72 current evidence logs; unrelated *.log remains ignored."
+  ]
+}

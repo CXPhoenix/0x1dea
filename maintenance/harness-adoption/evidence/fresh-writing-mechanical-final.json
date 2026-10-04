@@ -1,0 +1,23 @@
+{
+  "name": "fresh-writing-mechanical-final",
+  "argv": [
+    "python3",
+    "check-writing-resumed.py",
+    "--freeze"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:15:34.501001+00:00",
+  "ended_utc": "2026-10-04T11:15:36.925764+00:00",
+  "elapsed_seconds": 2.4246445829048753,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "0613edf5f8165da3d84586fbb2a3ccefb3c9742ef8103e72ee3ad4ebc6573336",
+  "log": "maintenance/harness-adoption/evidence/fresh-writing-mechanical-final.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "2593830aafb1218deb56c31e40c55f1627ad4fad7d223844cf634deb08ecd220",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

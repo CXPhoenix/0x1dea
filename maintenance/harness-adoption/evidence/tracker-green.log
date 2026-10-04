@@ -1,0 +1,13 @@
+test_blocking_is_derived (test_tracker.TrackerTests.test_blocking_is_derived) ... ok
+test_done_requires_real_landing_record (test_tracker.TrackerTests.test_done_requires_real_landing_record) ... ok
+test_duplicate_id_across_epics_rejected (test_tracker.TrackerTests.test_duplicate_id_across_epics_rejected) ... ok
+test_frontier_and_global_next_id (test_tracker.TrackerTests.test_frontier_and_global_next_id) ... ok
+test_missing_self_and_cycles_rejected (test_tracker.TrackerTests.test_missing_self_and_cycles_rejected) ... ok
+test_pending_requires_reason_evidence_date_and_revisit (test_tracker.TrackerTests.test_pending_requires_reason_evidence_date_and_revisit) ... ok
+test_stale_translation_and_missing_source_rejected (test_tracker.TrackerTests.test_stale_translation_and_missing_source_rejected) ... ok
+test_stored_blocked_and_unknown_status_rejected (test_tracker.TrackerTests.test_stored_blocked_and_unknown_status_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.025s
+
+OK

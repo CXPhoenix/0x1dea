@@ -1,0 +1,21 @@
+test_staged_approved_moves_baseline_and_management_are_accepted (__main__.AddedPathTests.test_staged_approved_moves_baseline_and_management_are_accepted) ... ERROR
+test_staged_unknown_product_is_rejected (__main__.AddedPathTests.test_staged_unknown_product_is_rejected) ... ok
+test_untracked_unknown_product_is_rejected (__main__.AddedPathTests.test_untracked_unknown_product_is_rejected) ... ok
+
+======================================================================
+ERROR: test_staged_approved_moves_baseline_and_management_are_accepted (__main__.AddedPathTests.test_staged_approved_moves_baseline_and_management_are_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 180, in test_staged_approved_moves_baseline_and_management_are_accepted
+    self.guard()
+    ~~~~~~~~~~^^
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 164, in guard
+    return guard(self.root, self.baseline, self.moved)
+  File "{CANDIDATE}/scripts/verify-harness-adoption.py", line 155, in check_added_paths
+    raise ValueError(f'unknown added product file: {name}')
+ValueError: unknown added product file: tests/harness_adoption/test_publication.py
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.692s
+
+FAILED (errors=1)

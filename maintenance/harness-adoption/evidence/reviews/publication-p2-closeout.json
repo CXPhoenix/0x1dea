@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-10-04T12:18:16.231898+00:00",
+  "path": "{CANDIDATE}/maintenance/harness-adoption/LOCAL-REVIEW.md",
+  "before_sha256": "4816c466188e02efc9730105f18c340c6159f5d60e1bcc7293c0d9b33004c658",
+  "after_sha256": "755e802b72ffe1303af9c5206d065d769392798e6d9cf7bd078043784078fc07",
+  "change": "Replace obsolete request for future authorization with existing approval plus actual landing/remote SHA requirement."
+}

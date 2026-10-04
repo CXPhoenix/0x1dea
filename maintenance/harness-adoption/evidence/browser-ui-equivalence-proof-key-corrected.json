@@ -1,0 +1,23 @@
+{
+  "name": "browser-ui-equivalence-proof-key-corrected",
+  "argv": [
+    "python3",
+    "check-browser-evidence-resumed.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:17:03.244164+00:00",
+  "ended_utc": "2026-10-04T11:17:03.304932+00:00",
+  "elapsed_seconds": 0.06068724999204278,
+  "exit_code": 1,
+  "status": "failure",
+  "log_sha256": "069401dd76adbf57047e983bf4df9867bf211c37abf6ed070da3a7e2dcee4d0c",
+  "log": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-key-corrected.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "d5d2947d058204aef3b1483b402274ae7e7ccbfa47a524cd8826f8a61631f860",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "7b5b285808d56590b9382b5c3c78f7add7f244a53428bb56242d7e4dfbb8ad19",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

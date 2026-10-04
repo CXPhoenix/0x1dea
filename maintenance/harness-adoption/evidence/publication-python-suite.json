@@ -1,0 +1,26 @@
+{
+  "name": "publication-python-suite",
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/harness_adoption",
+    "-v"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T12:04:35.573664+00:00",
+  "ended_utc": "2026-10-04T12:04:45.705180+00:00",
+  "elapsed_seconds": 10.131237625028007,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "7a4b6775225bd05a0cef394bf0496a0054f198c1f86f885dfc8b0fc8f6ecc8d4",
+  "log": "maintenance/harness-adoption/evidence/publication-python-suite.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "private_raw_log_sha256": "7a4b6775225bd05a0cef394bf0496a0054f198c1f86f885dfc8b0fc8f6ecc8d4",
+  "raw_receipt_sha256": "0c60048f62700f4ac7c5377683cbae4ae2ca8a6c7c9a8309b23c72695e9a9bda",
+  "publication_projection": "Machine-path aliases only; actual exit/status/times retained, raw receipt/log hashes retained."
+}

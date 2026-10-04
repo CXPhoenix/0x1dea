@@ -1,0 +1,23 @@
+{
+  "name": "materializer-project-final-write",
+  "argv": [
+    "python3",
+    "scripts/materialize-writing-skills.py",
+    "--write"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T10:53:09.457720+00:00",
+  "ended_utc": "2026-10-04T10:53:10.186747+00:00",
+  "elapsed_seconds": 0.728785082930699,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "41f7cddb06f8dbf10412385b9c1251ccabd532b62346a4647325d8464a1d8e8a",
+  "log": "maintenance/harness-adoption/evidence/materializer-project-final-write.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "28d19ca4a69cc39f7a0dafca4bdf199d455dee763c9427c37b86191e87579d90",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

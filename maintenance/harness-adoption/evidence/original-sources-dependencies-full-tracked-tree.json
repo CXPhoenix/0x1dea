@@ -1,0 +1,23 @@
+{
+  "name": "original-sources-dependencies-full-tracked-tree",
+  "argv": [
+    "python3",
+    "check-originals-resumed.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:19:56.537711+00:00",
+  "ended_utc": "2026-10-04T11:19:58.065675+00:00",
+  "elapsed_seconds": 1.5277496670605615,
+  "exit_code": 1,
+  "status": "failure",
+  "log_sha256": "5bbfd410d9cd7578fae1aa9c6a48adb2c45b58fbb74e01e7a316f41ad82c5314",
+  "log": "maintenance/harness-adoption/evidence/original-sources-dependencies-full-tracked-tree.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "cb23b9eb6c98a13ea26a14ff2de21e63450bdcfe090f832642180e94c5a8437d",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "4746e7711e15b9b69bed9b10d3684c7f761ed2cfac75811756760f28c0bfc6ab",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

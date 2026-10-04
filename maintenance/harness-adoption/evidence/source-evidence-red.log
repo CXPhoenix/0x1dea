@@ -1,0 +1,43 @@
+test_blocking_is_derived (test_tracker.TrackerTests.test_blocking_is_derived) ... ok
+test_done_requires_real_landing_record (test_tracker.TrackerTests.test_done_requires_real_landing_record) ... ok
+test_duplicate_id_across_epics_rejected (test_tracker.TrackerTests.test_duplicate_id_across_epics_rejected) ... ok
+test_frontier_and_global_next_id (test_tracker.TrackerTests.test_frontier_and_global_next_id) ... ok
+test_missing_self_and_cycles_rejected (test_tracker.TrackerTests.test_missing_self_and_cycles_rejected) ... ok
+test_pass_evidence_requires_real_log_hash_and_exit (test_tracker.TrackerTests.test_pass_evidence_requires_real_log_hash_and_exit) ... ERROR
+test_pending_requires_reason_evidence_date_and_revisit (test_tracker.TrackerTests.test_pending_requires_reason_evidence_date_and_revisit) ... ok
+test_site_projection_rejects_tamper_missing_and_extra_product (test_tracker.TrackerTests.test_site_projection_rejects_tamper_missing_and_extra_product) ... ERROR
+test_stale_translation_and_missing_source_rejected (test_tracker.TrackerTests.test_stale_translation_and_missing_source_rejected) ... ok
+test_stored_blocked_and_unknown_status_rejected (test_tracker.TrackerTests.test_stored_blocked_and_unknown_status_rejected) ... ok
+test_unknown_product_addition_is_rejected (test_tracker.TrackerTests.test_unknown_product_addition_is_rejected) ... ERROR
+
+======================================================================
+ERROR: test_pass_evidence_requires_real_log_hash_and_exit (test_tracker.TrackerTests.test_pass_evidence_requires_real_log_hash_and_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 101, in test_pass_evidence_requires_real_log_hash_and_exit
+    verifier.check_evidence(self.root, record)
+    ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'adoption_verifier' has no attribute 'check_evidence'
+
+======================================================================
+ERROR: test_site_projection_rejects_tamper_missing_and_extra_product (test_tracker.TrackerTests.test_site_projection_rejects_tamper_missing_and_extra_product)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 85, in test_site_projection_rejects_tamper_missing_and_extra_product
+    verifier.check_preserved(self.root, baseline, {})
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'adoption_verifier' has no attribute 'check_preserved'
+
+======================================================================
+ERROR: test_unknown_product_addition_is_rejected (test_tracker.TrackerTests.test_unknown_product_addition_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 92, in test_unknown_product_addition_is_rejected
+    self.assertFalse(verifier.allowed_new('blog/extra.md'))
+                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'adoption_verifier' has no attribute 'allowed_new'
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.020s
+
+FAILED (errors=3)

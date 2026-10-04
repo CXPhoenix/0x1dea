@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "{WORKSPACE}/check-cli-resumed.py", line 23, in <module>
+    assert p.returncode == 0, (name, p.stdout, p.stderr)
+           ^^^^^^^^^^^^^^^^^
+AssertionError: ('default', '', "node:net:1918\n      const error = new UVExceptionWithHostPort(rval, 'listen', address, port);\n                    ^\n\nError: listen EPERM: operation not permitted {HOST_TMP}/tsx-501/58750.pipe\n    at Server.setupListenHandle [as _listen2] (node:net:1918:21)\n    at listenInCluster (node:net:1997:12)\n    at Server.listen (node:net:2119:5)\n    at file://{CANDIDATE}/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:31537\n    at new Promise (<anonymous>)\n    at createIpcServer (file://{CANDIDATE}/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:53:31515)\n    at async file://{CANDIDATE}/node_modules/.pnpm/tsx@4.21.0/node_modules/tsx/dist/cli.mjs:55:459 {\n  code: 'EPERM',\n  errno: -1,\n  syscall: 'listen',\n  address: '{HOST_TMP}/tsx-501/58750.pipe',\n  port: -1\n}\n\nNode.js v24.13.0\n")

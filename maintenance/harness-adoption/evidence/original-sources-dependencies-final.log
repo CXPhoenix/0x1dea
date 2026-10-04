@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "{WORKSPACE}/check-originals-resumed.py", line 26, in <module>
+    assert result['template']['tracked_regular']==718
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,23 @@
+{
+  "name": "site-default-green",
+  "argv": [
+    "pnpm",
+    "test:unit"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T10:45:47.927492+00:00",
+  "ended_utc": "2026-10-04T10:45:52.127535+00:00",
+  "elapsed_seconds": 4.19987745792605,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "1a1da7e57df9e9a144e0a4efd01c4ef36646713530aaa400eb23dea18861ff47",
+  "log": "maintenance/harness-adoption/evidence/site-default-green.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "c1cfe468a2aa3f4268e67ba25f2b756ab1835e0b028cb5b448ea110f185cf994",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "32a8b249a71e426e50d2f890508ede2ac15b898f9c8a9e81655df1f9b80b0626",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

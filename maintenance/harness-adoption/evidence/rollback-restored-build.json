@@ -1,0 +1,23 @@
+{
+  "name": "rollback-restored-build",
+  "argv": [
+    "pnpm",
+    "docs:build"
+  ],
+  "cwd": "{WORKSPACE}/rollback-resumed",
+  "started_utc": "2026-10-04T11:14:42.134480+00:00",
+  "ended_utc": "2026-10-04T11:14:50.204322+00:00",
+  "elapsed_seconds": 8.06923404103145,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "65f8419de502b325d3fae3baea8c7b471305280d54fd57401b6eb3fd5a28a62f",
+  "log": "maintenance/harness-adoption/evidence/rollback-restored-build.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "85a6b17a6c0bbf47df68f701ddd69163f9f099ac10a197c18e47287d6e737644",
+  "portable_cwd": "{WORKSPACE}/rollback-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "9ba8224b7ad572c491b1217dbdf773a3ec703bbf8cacd51ff74fd65591a4b0d2",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

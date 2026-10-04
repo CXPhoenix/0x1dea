@@ -1,0 +1,22 @@
+{
+  "name": "publication-runtime-check",
+  "argv": [
+    "python3",
+    "scripts/materialize-writing-skills.py",
+    "--check"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T12:04:35.573981+00:00",
+  "ended_utc": "2026-10-04T12:04:36.082648+00:00",
+  "elapsed_seconds": 0.5085941660217941,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "cda251d30da65cd9b63191a5a63267c05e0ca23202602a02ac9d4f3e300c5008",
+  "log": "maintenance/harness-adoption/evidence/publication-runtime-check.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "private_raw_log_sha256": "cda251d30da65cd9b63191a5a63267c05e0ca23202602a02ac9d4f3e300c5008",
+  "raw_receipt_sha256": "c2e761ff8ea42d61483d913ac89ac4eb53e7c943738ff28079571999046afd43",
+  "publication_projection": "Machine-path aliases only; actual exit/status/times retained, raw receipt/log hashes retained."
+}

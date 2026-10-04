@@ -1,0 +1,22 @@
+{
+  "name": "closeout-main",
+  "argv": [
+    "python3",
+    "scripts/verify-harness-adoption.py"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:41:34.035282+00:00",
+  "ended_utc": "2026-10-04T11:41:40.166135+00:00",
+  "elapsed_seconds": 6.1293669160222635,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "f067b36a9828a631e85f40e9f26042b2f49bd13055ebe6dfd2a9c1f951777610",
+  "log": "maintenance/harness-adoption/evidence/closeout-main.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "210f1e9eb22fb7246f745ac996b3b7e6f5c9eef59982d2963ea5fc047f7a6f85",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

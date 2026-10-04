@@ -1,0 +1,693 @@
+{
+  "case": "E7",
+  "root": "{WORKSPACE}/writing-resumed/E7",
+  "files": [
+    {
+      "path": ".agents/skills/creating-vitepress-post/SKILL.md",
+      "sha256": "2ca5007eef53a1d0f6294d39e4be2a5ec72daa15eafc72a5ea814924adfbeb9d"
+    },
+    {
+      "path": ".agents/skills/creating-vitepress-post/agents/openai.yaml",
+      "sha256": "50994e77d06f3c7498cdcd60503a3bf51a102638fdd023abbc4ab2aead038fd5"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/SKILL.md",
+      "sha256": "6f559defd4f497c5a27141ffd2ea28a9c78fbceb2d42592a4688fdbd1ed5d302"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/agents/openai.yaml",
+      "sha256": "905e05c1c30ad1abebf7b5f2dcdcf47972b15b251f703b6a6f57b378b5976fed"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/config.json",
+      "sha256": "7d0a2bc380380076ce22181b4f0144681263d3f995e2eb0e9a6910de554f4433"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/rules/__init__.py",
+      "sha256": "9a5e2ad9f3c911faf5425d27885b8ac3ac2732701c09aa58ee7392fb2307a9f2"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/rules/_common.py",
+      "sha256": "de2f368946215d23884388e4b23e3ca27eb81705a7a3293998860d1ebda9d8d5"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/rules/tier1_format.py",
+      "sha256": "a08dd582c542e1cfd08efd656b9448049cbe4ae5cd4cd442fb623c53af56015f"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/rules/tier2_heuristic.py",
+      "sha256": "6d71fde5f86510c91417c36683c23e7b21185b8f6f79b41d6297a00fd0062753"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/rules/tier3_llm_hints.py",
+      "sha256": "6c8011b55fbd75ada01b469495ecdf47f1972f7431f89a30d1078c842c354c38"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/c1_violation.md",
+      "sha256": "93bc5fa1cdb9c3902bb18315f26ad0481941afc19f7cee4cadae1eccb9892d1c"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_no_warning.md",
+      "sha256": "5861529858a1a8633039e41e32ce251583935783a2e8c6fb5bfe0e9f2b952971"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_with_warning.md",
+      "sha256": "dd3326f3c3f65907572843b5dea1497644fc9dd9098ed56d6a9e0892ab2bd4f3"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e2e_full.md",
+      "sha256": "05acf23f5d603acce6a9d2843c2fc49b220e14e498b2b8d9642578f891afcb40"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_clean.md",
+      "sha256": "f89e61496952bf388e9839338d0163eb8fea6175e29c200f056e07c174232464"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_violation.md",
+      "sha256": "662209fc7c868dbbc04b0ebfa0d07754241d74a7baca3922779a11e0d488192a"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/k1_sparse.md",
+      "sha256": "a4a381c481bf945727e45faee9a049a1a56c6fb84d248bc76d5166b1ac8bff3d"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/m1_hint.md",
+      "sha256": "1194a9e083a26cfbfe6fc4809525d7667ed227ca53eb9443a6025daddc327661"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/o1_hint.md",
+      "sha256": "1849b6e8a4441908eb3ce58c5b07280372754c5a0b59ad50d1b9ef99c7d99c4d"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_clean.md",
+      "sha256": "cde764b67391aa22e3d8cca2496b4d00ebb859705e45083b925a51a94b7cccfc"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_violation.md",
+      "sha256": "2540949712da8baae6e7b4772d275999c4b97425b686d4b59eb90cc8502c3909"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s1_hint.md",
+      "sha256": "4713d252d7c3cce029aecaa68d354c91ab81c183ecc5e9a1f566c554541f7557"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s2_hint.md",
+      "sha256": "ea42cad5c5ba344c2c0a48edc0f3b8416c773a8ba75624dcc91a67fb4313e0b6"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s3_violation.md",
+      "sha256": "f005ae9ba9ea5dad1c80943068e5c83e49c7a6d0cbfc0d93f8cf3320d87987a8"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t1_hint.md",
+      "sha256": "5563ef1fbd42c8ccd5d0ade5afda423c8d431addfadc49a11b65cd4794dd3317"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_clean.md",
+      "sha256": "faa496e2c785ff2fb82f41e69c93d0cdff6980924f59acbdaa308b11dc76ce25"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_violation.md",
+      "sha256": "9bac8527e8a1399c5cc325ec9ea5f69d59bddbed0fa3bcf1b7c7bf426744de14"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_clean.md",
+      "sha256": "b873714ec708ef534453477e980168dac582de117249c75800b1f4099ae38b59"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_violation.md",
+      "sha256": "8866d834f2e78b99cbc1513b5fc2fafb6711b10f960420edd5373333ab941e00"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_clean.md",
+      "sha256": "e8b2ab05682c22dbbafbcd36dd8a877ed177fa2244e9d631cca0d01d7b2a08df"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_violation.md",
+      "sha256": "9284043823b17ff4170ae91ec359754d88fbe264d605349c3db5cc87ffae4c95"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/w1_violation.md",
+      "sha256": "fd7fd5a9580219ff2bb339cc628c4b46e6fff54501cdfbfd41fe6846a4414992"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/test_tier1.py",
+      "sha256": "d2cc44aab938025b92e22696f0e3ed32c61ebb6fdfac601514bd5dcacd9d83bc"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/tests/test_tier2_tier3.py",
+      "sha256": "f16b4932c945f7b92578c9ab45313ac13d2a559dc325cc79581ef9836407c2ee"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/legacy-validator/validate_article.py",
+      "sha256": "bcbf73c6144fb372b633bfed06a65c9e3318180d987622b273d4a8c8410f1c19"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/references/article-maintenance.md",
+      "sha256": "3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/references/legacy-validator.md",
+      "sha256": "617fb3a0a4a832862d549c034b4ce38c37d3f4e020949e8d1459b22ae58c8fc1"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/references/skill-maintenance.md",
+      "sha256": "78dde171ee3bff1dba86deb8b62a1c7d811296c2e7ba64523cdd81dacc24b755"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/references/spectra-codex.md",
+      "sha256": "7548e69417f5174f770ac8e4e6cbbdb48f07feaa31c1b950be3caa027edf3b8b"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/references/writing-process.md",
+      "sha256": "9cd978103159d42217f6b835e3732d53d6bd3c2242ed9ec0b70838fbbb1615e7"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/AGENTS.md",
+      "sha256": "e6c8d53cafb64bc6d6f8e210a8b5f1257763337a674820513c2e0308acd7f3cf"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/CLAUDE.md",
+      "sha256": "dcba1327a5a569c7992b66d4109b5c7fe2b49affd98c7900c7e411d5936b7f28"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/SKILL.md",
+      "sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/agents/openai.yaml",
+      "sha256": "43d530a23b8f82c115705d767138dbf64a72b0fc46f3dc98c6ffb24272d8b703"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/reference/concept-escalation-example.md",
+      "sha256": "48199b1336ec75764f255f7a498331b443bf8f4a82cfa7f702d7d5e8ab786fe8"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/reference/dialogue-voices.md",
+      "sha256": "5613cad893a2fe8f1fea58eabad9c93fc35e7f215a1355f7d47184657f3cc414"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/reference/domain-infosec.md",
+      "sha256": "da8157063087dc83c526950355d1dbfdb9f4f4a0c2e8a30ca3473005bc8a8e4b"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/reference/editorial-rules.md",
+      "sha256": "b8e3b033f826aae8afe990dec4785f845ffb01d2dae91d7736e03dec822ccce4"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/reference/humor-patterns.md",
+      "sha256": "75d319fce1d26014f8c7b170cf22721a8efd46bb70d41616c9d592b04f12c1c2"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/reference/kaomoji-catalog.md",
+      "sha256": "1eb7793ca7c55c5948fe89bec227f0214c2841fc798853bc4d1ba65affc7022c"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/reference/templates.md",
+      "sha256": "b0adb2dad18d7f92d1b5213579f8f105b1baca36fd2777de47a73ff44891978a"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/reference/tw-vocabulary.md",
+      "sha256": "dd41de2cde6d538656aff06ecf415482b3f081af9bad878cb0eddc9097b2b293"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/reference/visual-guide.md",
+      "sha256": "094e6b89e257c5406d99cb8d2f50544b3eb851eacb06881bfb2ba8f29ce41a36"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/references/style-examples.md",
+      "sha256": "d8137ae80a65c491220bfb71ce4787e4a5d7ac9a68006c114ecc9226ab47eeda"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/references/tw-vocabulary.md",
+      "sha256": "aaef044438b1d3a4952cb21d2ba65da1bb601386c23f82d91f9db8e927060315"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/config.json",
+      "sha256": "7d0a2bc380380076ce22181b4f0144681263d3f995e2eb0e9a6910de554f4433"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/rules/__init__.py",
+      "sha256": "9a5e2ad9f3c911faf5425d27885b8ac3ac2732701c09aa58ee7392fb2307a9f2"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/rules/_common.py",
+      "sha256": "de2f368946215d23884388e4b23e3ca27eb81705a7a3293998860d1ebda9d8d5"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/rules/tier1_format.py",
+      "sha256": "a08dd582c542e1cfd08efd656b9448049cbe4ae5cd4cd442fb623c53af56015f"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/rules/tier2_heuristic.py",
+      "sha256": "6d71fde5f86510c91417c36683c23e7b21185b8f6f79b41d6297a00fd0062753"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/rules/tier3_llm_hints.py",
+      "sha256": "6c8011b55fbd75ada01b469495ecdf47f1972f7431f89a30d1078c842c354c38"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/c1_violation.md",
+      "sha256": "93bc5fa1cdb9c3902bb18315f26ad0481941afc19f7cee4cadae1eccb9892d1c"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/e1_no_warning.md",
+      "sha256": "5861529858a1a8633039e41e32ce251583935783a2e8c6fb5bfe0e9f2b952971"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/e1_with_warning.md",
+      "sha256": "dd3326f3c3f65907572843b5dea1497644fc9dd9098ed56d6a9e0892ab2bd4f3"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/e2e_full.md",
+      "sha256": "05acf23f5d603acce6a9d2843c2fc49b220e14e498b2b8d9642578f891afcb40"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/f1_clean.md",
+      "sha256": "f89e61496952bf388e9839338d0163eb8fea6175e29c200f056e07c174232464"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/f1_violation.md",
+      "sha256": "662209fc7c868dbbc04b0ebfa0d07754241d74a7baca3922779a11e0d488192a"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/k1_sparse.md",
+      "sha256": "a4a381c481bf945727e45faee9a049a1a56c6fb84d248bc76d5166b1ac8bff3d"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/m1_hint.md",
+      "sha256": "1194a9e083a26cfbfe6fc4809525d7667ed227ca53eb9443a6025daddc327661"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/o1_hint.md",
+      "sha256": "1849b6e8a4441908eb3ce58c5b07280372754c5a0b59ad50d1b9ef99c7d99c4d"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/p1_clean.md",
+      "sha256": "cde764b67391aa22e3d8cca2496b4d00ebb859705e45083b925a51a94b7cccfc"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/p1_violation.md",
+      "sha256": "2540949712da8baae6e7b4772d275999c4b97425b686d4b59eb90cc8502c3909"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/s1_hint.md",
+      "sha256": "4713d252d7c3cce029aecaa68d354c91ab81c183ecc5e9a1f566c554541f7557"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/s2_hint.md",
+      "sha256": "ea42cad5c5ba344c2c0a48edc0f3b8416c773a8ba75624dcc91a67fb4313e0b6"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/s3_violation.md",
+      "sha256": "f005ae9ba9ea5dad1c80943068e5c83e49c7a6d0cbfc0d93f8cf3320d87987a8"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/t1_hint.md",
+      "sha256": "5563ef1fbd42c8ccd5d0ade5afda423c8d431addfadc49a11b65cd4794dd3317"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/t2_clean.md",
+      "sha256": "faa496e2c785ff2fb82f41e69c93d0cdff6980924f59acbdaa308b11dc76ce25"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/t2_violation.md",
+      "sha256": "9bac8527e8a1399c5cc325ec9ea5f69d59bddbed0fa3bcf1b7c7bf426744de14"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/t3_clean.md",
+      "sha256": "b873714ec708ef534453477e980168dac582de117249c75800b1f4099ae38b59"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/t3_violation.md",
+      "sha256": "8866d834f2e78b99cbc1513b5fc2fafb6711b10f960420edd5373333ab941e00"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/v1_clean.md",
+      "sha256": "e8b2ab05682c22dbbafbcd36dd8a877ed177fa2244e9d631cca0d01d7b2a08df"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/v1_violation.md",
+      "sha256": "9284043823b17ff4170ae91ec359754d88fbe264d605349c3db5cc87ffae4c95"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/fixtures/w1_violation.md",
+      "sha256": "fd7fd5a9580219ff2bb339cc628c4b46e6fff54501cdfbfd41fe6846a4414992"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/test_tier1.py",
+      "sha256": "d2cc44aab938025b92e22696f0e3ed32c61ebb6fdfac601514bd5dcacd9d83bc"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/tests/test_tier2_tier3.py",
+      "sha256": "f16b4932c945f7b92578c9ab45313ac13d2a559dc325cc79581ef9836407c2ee"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/scripts/validate_article.py",
+      "sha256": "bcbf73c6144fb372b633bfed06a65c9e3318180d987622b273d4a8c8410f1c19"
+    },
+    {
+      "path": ".claude/skills/creating-vitepress-post/SKILL.md",
+      "sha256": "2ca5007eef53a1d0f6294d39e4be2a5ec72daa15eafc72a5ea814924adfbeb9d"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/SKILL.md",
+      "sha256": "6f559defd4f497c5a27141ffd2ea28a9c78fbceb2d42592a4688fdbd1ed5d302"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/config.json",
+      "sha256": "7d0a2bc380380076ce22181b4f0144681263d3f995e2eb0e9a6910de554f4433"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/rules/__init__.py",
+      "sha256": "9a5e2ad9f3c911faf5425d27885b8ac3ac2732701c09aa58ee7392fb2307a9f2"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/rules/_common.py",
+      "sha256": "de2f368946215d23884388e4b23e3ca27eb81705a7a3293998860d1ebda9d8d5"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/rules/tier1_format.py",
+      "sha256": "a08dd582c542e1cfd08efd656b9448049cbe4ae5cd4cd442fb623c53af56015f"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/rules/tier2_heuristic.py",
+      "sha256": "6d71fde5f86510c91417c36683c23e7b21185b8f6f79b41d6297a00fd0062753"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/rules/tier3_llm_hints.py",
+      "sha256": "6c8011b55fbd75ada01b469495ecdf47f1972f7431f89a30d1078c842c354c38"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/c1_violation.md",
+      "sha256": "93bc5fa1cdb9c3902bb18315f26ad0481941afc19f7cee4cadae1eccb9892d1c"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_no_warning.md",
+      "sha256": "5861529858a1a8633039e41e32ce251583935783a2e8c6fb5bfe0e9f2b952971"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_with_warning.md",
+      "sha256": "dd3326f3c3f65907572843b5dea1497644fc9dd9098ed56d6a9e0892ab2bd4f3"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e2e_full.md",
+      "sha256": "05acf23f5d603acce6a9d2843c2fc49b220e14e498b2b8d9642578f891afcb40"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_clean.md",
+      "sha256": "f89e61496952bf388e9839338d0163eb8fea6175e29c200f056e07c174232464"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_violation.md",
+      "sha256": "662209fc7c868dbbc04b0ebfa0d07754241d74a7baca3922779a11e0d488192a"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/k1_sparse.md",
+      "sha256": "a4a381c481bf945727e45faee9a049a1a56c6fb84d248bc76d5166b1ac8bff3d"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/m1_hint.md",
+      "sha256": "1194a9e083a26cfbfe6fc4809525d7667ed227ca53eb9443a6025daddc327661"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/o1_hint.md",
+      "sha256": "1849b6e8a4441908eb3ce58c5b07280372754c5a0b59ad50d1b9ef99c7d99c4d"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_clean.md",
+      "sha256": "cde764b67391aa22e3d8cca2496b4d00ebb859705e45083b925a51a94b7cccfc"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_violation.md",
+      "sha256": "2540949712da8baae6e7b4772d275999c4b97425b686d4b59eb90cc8502c3909"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s1_hint.md",
+      "sha256": "4713d252d7c3cce029aecaa68d354c91ab81c183ecc5e9a1f566c554541f7557"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s2_hint.md",
+      "sha256": "ea42cad5c5ba344c2c0a48edc0f3b8416c773a8ba75624dcc91a67fb4313e0b6"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s3_violation.md",
+      "sha256": "f005ae9ba9ea5dad1c80943068e5c83e49c7a6d0cbfc0d93f8cf3320d87987a8"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t1_hint.md",
+      "sha256": "5563ef1fbd42c8ccd5d0ade5afda423c8d431addfadc49a11b65cd4794dd3317"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_clean.md",
+      "sha256": "faa496e2c785ff2fb82f41e69c93d0cdff6980924f59acbdaa308b11dc76ce25"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_violation.md",
+      "sha256": "9bac8527e8a1399c5cc325ec9ea5f69d59bddbed0fa3bcf1b7c7bf426744de14"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_clean.md",
+      "sha256": "b873714ec708ef534453477e980168dac582de117249c75800b1f4099ae38b59"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_violation.md",
+      "sha256": "8866d834f2e78b99cbc1513b5fc2fafb6711b10f960420edd5373333ab941e00"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_clean.md",
+      "sha256": "e8b2ab05682c22dbbafbcd36dd8a877ed177fa2244e9d631cca0d01d7b2a08df"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_violation.md",
+      "sha256": "9284043823b17ff4170ae91ec359754d88fbe264d605349c3db5cc87ffae4c95"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/w1_violation.md",
+      "sha256": "fd7fd5a9580219ff2bb339cc628c4b46e6fff54501cdfbfd41fe6846a4414992"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/test_tier1.py",
+      "sha256": "d2cc44aab938025b92e22696f0e3ed32c61ebb6fdfac601514bd5dcacd9d83bc"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/tests/test_tier2_tier3.py",
+      "sha256": "f16b4932c945f7b92578c9ab45313ac13d2a559dc325cc79581ef9836407c2ee"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/legacy-validator/validate_article.py",
+      "sha256": "bcbf73c6144fb372b633bfed06a65c9e3318180d987622b273d4a8c8410f1c19"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/references/article-maintenance.md",
+      "sha256": "3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/references/legacy-validator.md",
+      "sha256": "617fb3a0a4a832862d549c034b4ce38c37d3f4e020949e8d1459b22ae58c8fc1"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/references/skill-maintenance.md",
+      "sha256": "78dde171ee3bff1dba86deb8b62a1c7d811296c2e7ba64523cdd81dacc24b755"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/references/spectra-codex.md",
+      "sha256": "7548e69417f5174f770ac8e4e6cbbdb48f07feaa31c1b950be3caa027edf3b8b"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills/references/writing-process.md",
+      "sha256": "9cd978103159d42217f6b835e3732d53d6bd3c2242ed9ec0b70838fbbb1615e7"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/AGENTS.md",
+      "sha256": "e6c8d53cafb64bc6d6f8e210a8b5f1257763337a674820513c2e0308acd7f3cf"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/CLAUDE.md",
+      "sha256": "dcba1327a5a569c7992b66d4109b5c7fe2b49affd98c7900c7e411d5936b7f28"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/SKILL.md",
+      "sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/reference/concept-escalation-example.md",
+      "sha256": "48199b1336ec75764f255f7a498331b443bf8f4a82cfa7f702d7d5e8ab786fe8"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/reference/dialogue-voices.md",
+      "sha256": "5613cad893a2fe8f1fea58eabad9c93fc35e7f215a1355f7d47184657f3cc414"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/reference/domain-infosec.md",
+      "sha256": "da8157063087dc83c526950355d1dbfdb9f4f4a0c2e8a30ca3473005bc8a8e4b"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/reference/editorial-rules.md",
+      "sha256": "b8e3b033f826aae8afe990dec4785f845ffb01d2dae91d7736e03dec822ccce4"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/reference/humor-patterns.md",
+      "sha256": "75d319fce1d26014f8c7b170cf22721a8efd46bb70d41616c9d592b04f12c1c2"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/reference/kaomoji-catalog.md",
+      "sha256": "1eb7793ca7c55c5948fe89bec227f0214c2841fc798853bc4d1ba65affc7022c"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/reference/templates.md",
+      "sha256": "b0adb2dad18d7f92d1b5213579f8f105b1baca36fd2777de47a73ff44891978a"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/reference/tw-vocabulary.md",
+      "sha256": "dd41de2cde6d538656aff06ecf415482b3f081af9bad878cb0eddc9097b2b293"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/reference/visual-guide.md",
+      "sha256": "094e6b89e257c5406d99cb8d2f50544b3eb851eacb06881bfb2ba8f29ce41a36"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/references/style-examples.md",
+      "sha256": "d8137ae80a65c491220bfb71ce4787e4a5d7ac9a68006c114ecc9226ab47eeda"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/references/tw-vocabulary.md",
+      "sha256": "aaef044438b1d3a4952cb21d2ba65da1bb601386c23f82d91f9db8e927060315"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/config.json",
+      "sha256": "7d0a2bc380380076ce22181b4f0144681263d3f995e2eb0e9a6910de554f4433"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/rules/__init__.py",
+      "sha256": "9a5e2ad9f3c911faf5425d27885b8ac3ac2732701c09aa58ee7392fb2307a9f2"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/rules/_common.py",
+      "sha256": "de2f368946215d23884388e4b23e3ca27eb81705a7a3293998860d1ebda9d8d5"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/rules/tier1_format.py",
+      "sha256": "a08dd582c542e1cfd08efd656b9448049cbe4ae5cd4cd442fb623c53af56015f"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/rules/tier2_heuristic.py",
+      "sha256": "6d71fde5f86510c91417c36683c23e7b21185b8f6f79b41d6297a00fd0062753"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/rules/tier3_llm_hints.py",
+      "sha256": "6c8011b55fbd75ada01b469495ecdf47f1972f7431f89a30d1078c842c354c38"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/c1_violation.md",
+      "sha256": "93bc5fa1cdb9c3902bb18315f26ad0481941afc19f7cee4cadae1eccb9892d1c"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/e1_no_warning.md",
+      "sha256": "5861529858a1a8633039e41e32ce251583935783a2e8c6fb5bfe0e9f2b952971"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/e1_with_warning.md",
+      "sha256": "dd3326f3c3f65907572843b5dea1497644fc9dd9098ed56d6a9e0892ab2bd4f3"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/e2e_full.md",
+      "sha256": "05acf23f5d603acce6a9d2843c2fc49b220e14e498b2b8d9642578f891afcb40"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/f1_clean.md",
+      "sha256": "f89e61496952bf388e9839338d0163eb8fea6175e29c200f056e07c174232464"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/f1_violation.md",
+      "sha256": "662209fc7c868dbbc04b0ebfa0d07754241d74a7baca3922779a11e0d488192a"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/k1_sparse.md",
+      "sha256": "a4a381c481bf945727e45faee9a049a1a56c6fb84d248bc76d5166b1ac8bff3d"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/m1_hint.md",
+      "sha256": "1194a9e083a26cfbfe6fc4809525d7667ed227ca53eb9443a6025daddc327661"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/o1_hint.md",
+      "sha256": "1849b6e8a4441908eb3ce58c5b07280372754c5a0b59ad50d1b9ef99c7d99c4d"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/p1_clean.md",
+      "sha256": "cde764b67391aa22e3d8cca2496b4d00ebb859705e45083b925a51a94b7cccfc"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/p1_violation.md",
+      "sha256": "2540949712da8baae6e7b4772d275999c4b97425b686d4b59eb90cc8502c3909"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/s1_hint.md",
+      "sha256": "4713d252d7c3cce029aecaa68d354c91ab81c183ecc5e9a1f566c554541f7557"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/s2_hint.md",
+      "sha256": "ea42cad5c5ba344c2c0a48edc0f3b8416c773a8ba75624dcc91a67fb4313e0b6"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/s3_violation.md",
+      "sha256": "f005ae9ba9ea5dad1c80943068e5c83e49c7a6d0cbfc0d93f8cf3320d87987a8"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/t1_hint.md",
+      "sha256": "5563ef1fbd42c8ccd5d0ade5afda423c8d431addfadc49a11b65cd4794dd3317"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/t2_clean.md",
+      "sha256": "faa496e2c785ff2fb82f41e69c93d0cdff6980924f59acbdaa308b11dc76ce25"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/t2_violation.md",
+      "sha256": "9bac8527e8a1399c5cc325ec9ea5f69d59bddbed0fa3bcf1b7c7bf426744de14"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/t3_clean.md",
+      "sha256": "b873714ec708ef534453477e980168dac582de117249c75800b1f4099ae38b59"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/t3_violation.md",
+      "sha256": "8866d834f2e78b99cbc1513b5fc2fafb6711b10f960420edd5373333ab941e00"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/v1_clean.md",
+      "sha256": "e8b2ab05682c22dbbafbcd36dd8a877ed177fa2244e9d631cca0d01d7b2a08df"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/v1_violation.md",
+      "sha256": "9284043823b17ff4170ae91ec359754d88fbe264d605349c3db5cc87ffae4c95"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/fixtures/w1_violation.md",
+      "sha256": "fd7fd5a9580219ff2bb339cc628c4b46e6fff54501cdfbfd41fe6846a4414992"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/test_tier1.py",
+      "sha256": "d2cc44aab938025b92e22696f0e3ed32c61ebb6fdfac601514bd5dcacd9d83bc"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/tests/test_tier2_tier3.py",
+      "sha256": "f16b4932c945f7b92578c9ab45313ac13d2a559dc325cc79581ef9836407c2ee"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing/scripts/validate_article.py",
+      "sha256": "bcbf73c6144fb372b633bfed06a65c9e3318180d987622b273d4a8c8410f1c19"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235"
+    },
+    {
+      "path": "input.json",
+      "sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9"
+    }
+  ],
+  "rubric_provided": false,
+  "old_answers_provided": false,
+  "source": "final candidate physical package copies"
+}

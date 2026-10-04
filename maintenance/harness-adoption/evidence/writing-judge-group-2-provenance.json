@@ -1,0 +1,43 @@
+{
+  "canonical_task_name": "/root/writing_judge_2",
+  "recorded_at_utc": "2026-10-04T11:11:03.802245+00:00",
+  "record_type": "保存此前已完成的獨立判定；本時間為本次記錄時間，非驗收時間。",
+  "files": [
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-2/E4/input.json",
+      "sha256": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-2/E4/rubric.json",
+      "sha256": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-2/E4/output.md",
+      "sha256": "9005a1d3296c699d048db8cdf2f2c17c15968fb6a80ed2eaa96d7a38489c0ff8"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-2/E5/input.json",
+      "sha256": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-2/E5/rubric.json",
+      "sha256": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-2/E5/output.md",
+      "sha256": "795981ccadeccece6240f7725738208eb1371761b1980433c432cbf70aeb2956"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-2/E6/input.json",
+      "sha256": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-2/E6/rubric.json",
+      "sha256": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-2/E6/output.md",
+      "sha256": "fd4d8f5c531cb1e669e170477b083862fb3d69900116d82941f28ecbb6524d57"
+    }
+  ]
+}

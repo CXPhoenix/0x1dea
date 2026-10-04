@@ -13,7 +13,7 @@ describe('vphelper', () => {
             const config = parseArgs(args);
             expect(config.command).toEqual(['new', 'post']);
             expect(config.postName).toBe('MyArticle');
-            expect(config.options.dir).toBe(DEFAULT_DIR);
+            expect(config.options.dir).toBe('blog/post');
         });
         // ... 其他 parseArgs 測試 ...
          it('當 -d 和 -c 同時使用時應拋出錯誤', () => {
@@ -31,53 +31,53 @@ describe('vphelper', () => {
     });
 
     describe('Assets Configuration', () => {
-        it('ASSETS_ROOT 應該是 docs/public/assets', () => {
-             expect(ASSETS_ROOT).toBe('docs/public/assets');
+        it('ASSETS_ROOT 應該是 blog/public/assets', () => {
+             expect(ASSETS_ROOT).toBe('blog/public/assets');
         });
     });
 
     describe('getAssetFolderName', () => {
-        // 邏輯: 移除 docs, 連接剩餘路徑與檔名
+        // 邏輯: 移除 blog, 連接剩餘路徑與檔名
         
-        it('範例1: 預設資料夾 docs/post', () => {
-            // docs/post -> post -> post_hello
-            const targetDir = 'docs/post';
+        it('範例1: 預設資料夾 blog/post', () => {
+            // blog/post -> post -> post_hello
+            const targetDir = 'blog/post';
             const safeName = 'hello';
             const expected = 'post_hello';
             expect(getAssetFolderName(targetDir, safeName)).toBe(expected);
         });
 
-        it('範例2: 使用 -c 指定分類 (docs/post/hello)', () => {
-            // docs/post/hello -> post/hello -> post_hello_world
-            const targetDir = 'docs/post/hello';
+        it('範例2: 使用 -c 指定分類 (blog/post/hello)', () => {
+            // blog/post/hello -> post/hello -> post_hello_world
+            const targetDir = 'blog/post/hello';
             const safeName = 'world';
             const expected = 'post_hello_world';
             expect(getAssetFolderName(targetDir, safeName)).toBe(expected);
         });
 
-        it('範例3: 使用 -d 指定多層資料夾 (docs/new-posts)', () => {
-            // docs/new-posts -> new-posts -> new-posts_hello_world
-            const targetDir = 'docs/new-posts';
+        it('範例3: 使用 -d 指定多層資料夾 (blog/new-posts)', () => {
+            // blog/new-posts -> new-posts -> new-posts_hello_world
+            const targetDir = 'blog/new-posts';
             const safeName = 'hello_world';
             const expected = 'new-posts_hello_world';
             expect(getAssetFolderName(targetDir, safeName)).toBe(expected);
         });
 
-        it('範例4: 使用 -d 指定根層資料夾 (docs)', () => {
-            // docs -> (empty) -> hi_vitepress
-            // 因為沒有 docs 之後的路徑，所以只剩檔名
-            const targetDir = 'docs';
+        it('範例4: 使用 -d 指定根層資料夾 (blog)', () => {
+            // blog -> (empty) -> hi_vitepress
+            // 因為沒有 blog 之後的路徑，所以只剩檔名
+            const targetDir = 'blog';
             const safeName = 'hi_vitepress';
             const expected = 'root_hi_vitepress';
             expect(getAssetFolderName(targetDir, safeName)).toBe(expected);
         });
 
         it('應該能處理絕對路徑', () => {
-            // 模擬絕對路徑: /Users/me/project/docs/guide
-            // 相對路徑轉換後為: docs/guide
+            // 模擬絕對路徑: /Users/me/project/blog/guide
+            // 相對路徑轉換後為: blog/guide
             // 結果: guide_setup
             const cwd = process.cwd();
-            const targetDir = path.resolve(cwd, 'docs/guide');
+            const targetDir = path.resolve(cwd, 'blog/guide');
             const safeName = 'setup';
             const expected = 'guide_setup';
             expect(getAssetFolderName(targetDir, safeName)).toBe(expected);

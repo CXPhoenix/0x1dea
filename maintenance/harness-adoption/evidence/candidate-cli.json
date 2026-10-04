@@ -1,0 +1,25 @@
+{
+  "name": "candidate-cli",
+  "argv": [
+    "python3",
+    "check-cli-resumed.py",
+    "implementation-resumed",
+    "blog"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T10:53:50.793256+00:00",
+  "ended_utc": "2026-10-04T10:53:51.338670+00:00",
+  "elapsed_seconds": 0.5440530829364434,
+  "exit_code": 1,
+  "status": "failure",
+  "log_sha256": "58779fb5f86e3ca0050b5888eb9e2c790a90de60ef3e8b47f8faedbac905949f",
+  "log": "maintenance/harness-adoption/evidence/candidate-cli.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "ba33d3add8921d7c866d1a17ce58eeb248d7c431882cefb410200ca97841c0aa",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "8840221cab70a01766dc72be58532be920d0fc250a68e3e84d2f06e54c418a50",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

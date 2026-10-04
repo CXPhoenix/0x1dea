@@ -1,0 +1,22 @@
+{
+  "name": "publication-ancestry-red",
+  "argv": [
+    "python3",
+    "tests/harness_adoption/test_publication.py",
+    "-v"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:58:14.790169+00:00",
+  "ended_utc": "2026-10-04T11:58:15.068001+00:00",
+  "elapsed_seconds": 0.27756633306853473,
+  "exit_code": 1,
+  "status": "expected-red",
+  "log_sha256": "8f468f5d3433b2a60956a107fc6aa2a93c9fc736b7ad4aca8fd1ab0246a55bc1",
+  "log": "maintenance/harness-adoption/evidence/publication-ancestry-red.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "private_raw_log_sha256": "a4ecaf056bf38794d002da8e1e37eff4d4b8399f632962a8629aa0d1be1463da",
+  "raw_receipt_sha256": "4db43f49dd5ad7b2bb81f8f8b74d9456f042217d4cf46d08acfc823a73010ae3",
+  "publication_projection": "Machine-path aliases only; actual exit/status/times retained, raw receipt/log hashes retained."
+}

@@ -1,0 +1,28 @@
+{
+  "round": 2,
+  "utc": "2026-10-04T10:38:06.804271+00:00",
+  "files": {
+    "spec.en.md": {
+      "sha256": "67264f76d375d64a820d5076b6e01a2574a33700ac75a2152640ede4a46f3b8a",
+      "git_blob": "e0254cadf2af4dc95d03b14b6051effcc4ce8577"
+    },
+    "traceability.md": {
+      "sha256": "68a1330487d26a44dc8bfb04e3407afa9b7fcd0e8294931f65f125bd13a58510",
+      "git_blob": "f0a076c726556aa8238b6fdac85f4102f5df53f2"
+    },
+    "baseline-traceability.json": {
+      "sha256": "77c7cd89efb19bdda0b8490d6fe8b59b60bb235339c9ea4987d95cec929bc10a",
+      "git_blob": "88af679f203755ac31e76ceab17615b921b4ce9c"
+    },
+    "candidate-traceability.json": {
+      "sha256": "d4e111ae70b83af9ce747e4c9fa2a525e9c31ff5696a6a54464f0b410c5c6f05",
+      "git_blob": "642f2c23f4bdf32884231ea895cf561efaf9aae7"
+    },
+    "review/prompt.md": {
+      "sha256": "7e3da2e7c1f67898efc5719bc2bdf969fc000f4d861c77a7db0b99d5daa6006d",
+      "git_blob": "b5e58a8c2f4f6a0cba85ff830e04982656f5c16a"
+    }
+  },
+  "approval": "../../../../maintenance/harness-adoption/APPROVALS.md",
+  "candidate_check_execution": "not-run"
+}

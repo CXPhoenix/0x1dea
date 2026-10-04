@@ -1,0 +1,61 @@
+test_builds_physical_complete_packages_and_projects_links (test_materializer.MaterializerTests.test_builds_physical_complete_packages_and_projects_links) ... ok
+test_check_detects_output_manifest_and_policy_drift (test_materializer.MaterializerTests.test_check_detects_output_manifest_and_policy_drift) ... ok
+test_preserves_encoded_spaces_in_projected_markdown_links (test_materializer.MaterializerTests.test_preserves_encoded_spaces_in_projected_markdown_links) ... FAIL
+test_rejects_alias_target_escape_and_nested_backing_symlink (test_materializer.MaterializerTests.test_rejects_alias_target_escape_and_nested_backing_symlink) ... ok
+test_rejects_extra_and_missing_backing_files (test_materializer.MaterializerTests.test_rejects_extra_and_missing_backing_files) ... ok
+test_rejects_forged_policy_alias_mapping_and_duplicate_input (test_materializer.MaterializerTests.test_rejects_forged_policy_alias_mapping_and_duplicate_input) ... ok
+test_rejects_manifest_directory_without_removing_its_data (test_materializer.MaterializerTests.test_rejects_manifest_directory_without_removing_its_data) ... FAIL
+test_rejects_pinned_backing_hash_drift_and_regular_alias_replacement (test_materializer.MaterializerTests.test_rejects_pinned_backing_hash_drift_and_regular_alias_replacement) ... ok
+test_rejects_policy_parent_symlink_before_read (test_materializer.MaterializerTests.test_rejects_policy_parent_symlink_before_read) ... ok
+test_rejects_quoted_top_level_runtime_keys_and_duplicate_names (test_materializer.MaterializerTests.test_rejects_quoted_top_level_runtime_keys_and_duplicate_names) ... ok
+test_rejects_runtime_extra_and_claude_codex_metadata_on_check (test_materializer.MaterializerTests.test_rejects_runtime_extra_and_claude_codex_metadata_on_check) ... ok
+test_rejects_runtime_parent_and_foreign_framework_symlinks (test_materializer.MaterializerTests.test_rejects_runtime_parent_and_foreign_framework_symlinks) ... ok
+test_rejects_source_claude_frontmatter_before_generation (test_materializer.MaterializerTests.test_rejects_source_claude_frontmatter_before_generation) ... ok
+test_rejects_source_parent_symlink_even_with_matching_hash (test_materializer.MaterializerTests.test_rejects_source_parent_symlink_even_with_matching_hash) ... ok
+test_rejects_unknown_active_markdown_link_syntax_and_missing_link (test_materializer.MaterializerTests.test_rejects_unknown_active_markdown_link_syntax_and_missing_link) ... ok
+test_rejects_unknown_missing_extra_and_changed_inputs_before_write (test_materializer.MaterializerTests.test_rejects_unknown_missing_extra_and_changed_inputs_before_write) ... ok
+test_rejects_unknown_or_duplicate_canonical_frontmatter_keys (test_materializer.MaterializerTests.test_rejects_unknown_or_duplicate_canonical_frontmatter_keys) ... ok
+test_rejects_wrong_top_level_name_even_when_nested_name_matches (test_materializer.MaterializerTests.test_rejects_wrong_top_level_name_even_when_nested_name_matches) ... FAIL
+test_rollback_restores_original_entry_symlinks_after_first_install_failure (test_materializer.MaterializerTests.test_rollback_restores_original_entry_symlinks_after_first_install_failure) ... ok
+test_rolls_back_partial_install_and_preserves_foreign_framework (test_materializer.MaterializerTests.test_rolls_back_partial_install_and_preserves_foreign_framework) ... ok
+test_second_generation_and_check_are_deterministic_and_read_only (test_materializer.MaterializerTests.test_second_generation_and_check_are_deterministic_and_read_only) ... ok
+
+======================================================================
+FAIL: test_preserves_encoded_spaces_in_projected_markdown_links (test_materializer.MaterializerTests.test_preserves_encoded_spaces_in_projected_markdown_links)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_materializer.py", line 230, in test_preserves_encoded_spaces_in_projected_markdown_links
+    self.assertIn("(../../../scripts/helper%20one.ts)",text)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '(../../../scripts/helper%20one.ts)' not found in '---\nname: phoenix-writing\ndescription: local fixture\nmetadata:\n  scope: project\n---\n\n# Test\n[space](../../../scripts/helper one.ts)\n'
+
+======================================================================
+FAIL: test_rejects_manifest_directory_without_removing_its_data (test_materializer.MaterializerTests.test_rejects_manifest_directory_without_removing_its_data)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_materializer.py", line 221, in test_rejects_manifest_directory_without_removing_its_data
+    result=self.run_cli();self.assert_rejected(result);self.assertIn("manifest must be a regular file",result.stderr)
+                          ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "{CANDIDATE}/tests/harness_adoption/test_materializer.py", line 63, in assert_rejected
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"generated_files": 17, "mode": "write", "source_files": 6, "source_policy_sha256": "f61a9373261f1968b94830df5bf134f8a6d7fd00b52403a66dddd3803992e848", "status": "pass"}
+
+
+======================================================================
+FAIL: test_rejects_wrong_top_level_name_even_when_nested_name_matches (test_materializer.MaterializerTests.test_rejects_wrong_top_level_name_even_when_nested_name_matches)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_materializer.py", line 237, in test_rejects_wrong_top_level_name_even_when_nested_name_matches
+    result=self.run_cli();self.assert_rejected(result);self.assertIn("frontmatter/name",result.stderr)
+                          ~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "{CANDIDATE}/tests/harness_adoption/test_materializer.py", line 63, in assert_rejected
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"generated_files": 17, "mode": "write", "source_files": 6, "source_policy_sha256": "f63149614ddc516db3f4a1f654a58bd45d81d78211ceead80250238507ff6ac0", "status": "pass"}
+
+
+----------------------------------------------------------------------
+Ran 21 tests in 13.592s
+
+FAILED (failures=3)

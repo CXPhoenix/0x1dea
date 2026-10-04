@@ -1,0 +1,594 @@
+{
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "exceptions": {
+    ".agents/skills/creating-vitepress-post": {
+      "generated": true,
+      "original_literal_sha256": "89922a6d1bc901d6ac49ddd046e0e8027f44d9ea46474a236e6220261153a633"
+    },
+    ".agents/skills/maintaining-writing-skills": {
+      "generated": true,
+      "original_literal_sha256": "73bdaf38dd608d0ba16d1ea42742bcf554e1fe09dab5b4fc123e5dc6c3bb509e"
+    },
+    ".agents/skills/phoenix-writing": {
+      "generated": true,
+      "original_literal_sha256": "907c1e2d1e3c929cb63c081ba2c8add502dfedcff9c66ff04f55f0beaa8b48ed"
+    },
+    ".claude/skills/creating-vitepress-post": {
+      "generated": true,
+      "original_literal_sha256": "89922a6d1bc901d6ac49ddd046e0e8027f44d9ea46474a236e6220261153a633"
+    },
+    ".claude/skills/maintaining-writing-skills": {
+      "generated": true,
+      "original_literal_sha256": "73bdaf38dd608d0ba16d1ea42742bcf554e1fe09dab5b4fc123e5dc6c3bb509e"
+    },
+    ".claude/skills/phoenix-writing": {
+      "generated": true,
+      "original_literal_sha256": "907c1e2d1e3c929cb63c081ba2c8add502dfedcff9c66ff04f55f0beaa8b48ed"
+    },
+    ".claude/skills/spectra-apply/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-apply/SKILL.md.txt",
+      "sha256": "c44410aa314e818f992e1f6f69b8cbc432f0a7f9e04d044c3e3e5242ef474f70"
+    },
+    ".claude/skills/spectra-archive/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-archive/SKILL.md.txt",
+      "sha256": "6e018f08cd963c9b74682a32ea23ca4194368990e410b818108492a64c204a4e"
+    },
+    ".claude/skills/spectra-ask/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-ask/SKILL.md.txt",
+      "sha256": "db0202ea4892fdf271bd2e615525c2c934552509a143e556433b4026e38b8057"
+    },
+    ".claude/skills/spectra-audit/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-audit/SKILL.md.txt",
+      "sha256": "91b0539dd9f3474c14438d32343eacf70ce6b7f3f0b03f4108a3c6afaa1e0095"
+    },
+    ".claude/skills/spectra-commit/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-commit/SKILL.md.txt",
+      "sha256": "9d19be3eba67874816889dd1f6c4db4c0bd1f1da0d906003b7301cb682fac25d"
+    },
+    ".claude/skills/spectra-debug/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-debug/SKILL.md.txt",
+      "sha256": "3feab58e515a90ceb1d5a9a9487df139e4c0f0097c74799af4f78cfc7e9024cb"
+    },
+    ".claude/skills/spectra-discuss/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-discuss/SKILL.md.txt",
+      "sha256": "39c45831c90bb44790d9431770e9663d8731d62fb6d1584fe52930ccfccbcc7b"
+    },
+    ".claude/skills/spectra-ingest/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-ingest/SKILL.md.txt",
+      "sha256": "ca330709558b7b3132a579cc18c98e1ca67bfd6733c40442a6975cb0707abc96"
+    },
+    ".claude/skills/spectra-propose/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-propose/SKILL.md.txt",
+      "sha256": "55c7445158420b04b3cf380e591a10cd87bc941fbb98251d8f8a298b329da6a8"
+    },
+    ".gemini/commands/spectra/apply.toml": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/apply.toml.txt",
+      "sha256": "7a984188489285ab0df405e238a65ee69da7b21840cd58908ffa462308064ccb"
+    },
+    ".gemini/commands/spectra/archive.toml": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/archive.toml.txt",
+      "sha256": "b0bb40db82eafd0e1d95ca38455762b0e0d418390b4170aa50cb67a0e8226982"
+    },
+    ".gemini/commands/spectra/ask.toml": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/ask.toml.txt",
+      "sha256": "4e538245ee3661112f5e15b1911f893cfd02cd4ca4270976de9953e65a5a03c4"
+    },
+    ".gemini/commands/spectra/audit.toml": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/audit.toml.txt",
+      "sha256": "46bfe686fde3f58154fa7bd1deacb16292c9177c299ffa7d53f1749b145414b8"
+    },
+    ".gemini/commands/spectra/commit.toml": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/commit.toml.txt",
+      "sha256": "8693611462f53bcc311d57972ed47f8f6fb873e9106f2d63dde18c7c85289ff1"
+    },
+    ".gemini/commands/spectra/debug.toml": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/debug.toml.txt",
+      "sha256": "30c69380d78011f28c4edb4544a350629c40ee1d4ca7a0b29855e47fd6f9bf94"
+    },
+    ".gemini/commands/spectra/discuss.toml": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/discuss.toml.txt",
+      "sha256": "0ed33870fe8ad2c5f064dd8919541770377ad887f19371a4365c75ccd789bb36"
+    },
+    ".gemini/commands/spectra/ingest.toml": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/ingest.toml.txt",
+      "sha256": "d837d67a18f51e1e195173d9af4300cb42379898fb17a0f9d7a7bbfd100eaa7d"
+    },
+    ".gemini/commands/spectra/propose.toml": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/propose.toml.txt",
+      "sha256": "5f8152d96a677a7b184d59e6080b4cb230fbf64f8c4c12c32dfca3accec40e16"
+    },
+    ".gemini/skills/spectra-apply/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-apply/SKILL.md.txt",
+      "sha256": "b8ef118964db40e49df026c1d705dfe0f1afce0ff7da87eedbc493429b54bce1"
+    },
+    ".gemini/skills/spectra-archive/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-archive/SKILL.md.txt",
+      "sha256": "b8f5ba6c2b923afb6b9d7e59212442e27e0ab8795df0641a79c2c4007d8c1437"
+    },
+    ".gemini/skills/spectra-ask/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-ask/SKILL.md.txt",
+      "sha256": "313dad6e1021066ac7078220c98ade64b4cd71b27b2ac7529ff68e8f73d7a5c0"
+    },
+    ".gemini/skills/spectra-audit/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-audit/SKILL.md.txt",
+      "sha256": "e9e639322f6f23cfb9e64d53d63309e3949bb1c369aea135af3f03c1051cda2b"
+    },
+    ".gemini/skills/spectra-commit/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-commit/SKILL.md.txt",
+      "sha256": "a535a423fff22d60e8509a2fa0039ef9542bcb90030f374ebe8169e191f12e20"
+    },
+    ".gemini/skills/spectra-debug/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-debug/SKILL.md.txt",
+      "sha256": "356b046161d3283a8f179a2913b1e7da5f274df60571a285ed789e544b9feb62"
+    },
+    ".gemini/skills/spectra-discuss/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-discuss/SKILL.md.txt",
+      "sha256": "1d3a4572eda3045ed691fc7bfdb3a94706bb7f70a2bd5e5820d77030931837bb"
+    },
+    ".gemini/skills/spectra-ingest/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-ingest/SKILL.md.txt",
+      "sha256": "091346ee849d34593824665e8473fdf4b65bf8df72c3505cd5e99796ce32f5db"
+    },
+    ".gemini/skills/spectra-propose/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-propose/SKILL.md.txt",
+      "sha256": "860154be0e3c2163eec0f7591cbf3990dc66b6192cfb5a0bfe482fa1e3384645"
+    },
+    ".github/prompts/spectra-apply.prompt.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-apply.prompt.md.txt",
+      "sha256": "c40d4dbd1026fb816acae2b0682b99d4ab68c23b8d9bf4cecb6d9e8f635ac87a"
+    },
+    ".github/prompts/spectra-archive.prompt.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-archive.prompt.md.txt",
+      "sha256": "4eb93a70b0da1a496a6609c51975b9807f16c753db875eea8c60e91bacaa1c93"
+    },
+    ".github/prompts/spectra-ask.prompt.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-ask.prompt.md.txt",
+      "sha256": "f46b9a180c145e6ac591ae85b87693d1b91b95622ffc510061c4d1d9cc028fe8"
+    },
+    ".github/prompts/spectra-audit.prompt.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-audit.prompt.md.txt",
+      "sha256": "fa96c200934171fc8aadcac5d69626f6839f17b9a7b439c7678587e0120d1933"
+    },
+    ".github/prompts/spectra-commit.prompt.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-commit.prompt.md.txt",
+      "sha256": "9377d5f84fcfde09e1f0961e3e7bf45b9bb896ec8d8857e3340e2154eb755a59"
+    },
+    ".github/prompts/spectra-debug.prompt.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-debug.prompt.md.txt",
+      "sha256": "6372883450a361035ee11065fcafd5353425fbd7a81c012c701a2a9a6b1631eb"
+    },
+    ".github/prompts/spectra-discuss.prompt.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-discuss.prompt.md.txt",
+      "sha256": "d1ae0dd365c5b6608b36f652fdcc719f2d6325965e3607f7261bff37a9da46dd"
+    },
+    ".github/prompts/spectra-ingest.prompt.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-ingest.prompt.md.txt",
+      "sha256": "3b2f4d758a58832d06b41ecda3254a4e7f3a607f6161f4c87403fc9cdfff274f"
+    },
+    ".github/prompts/spectra-propose.prompt.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-propose.prompt.md.txt",
+      "sha256": "2841c0aa25d08efae1b1ddceb1f29941ae2600eb51c05f40ec265b5f7330ce1c"
+    },
+    ".github/skills/spectra-apply/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-apply/SKILL.md.txt",
+      "sha256": "b8ef118964db40e49df026c1d705dfe0f1afce0ff7da87eedbc493429b54bce1"
+    },
+    ".github/skills/spectra-archive/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-archive/SKILL.md.txt",
+      "sha256": "b8f5ba6c2b923afb6b9d7e59212442e27e0ab8795df0641a79c2c4007d8c1437"
+    },
+    ".github/skills/spectra-ask/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-ask/SKILL.md.txt",
+      "sha256": "313dad6e1021066ac7078220c98ade64b4cd71b27b2ac7529ff68e8f73d7a5c0"
+    },
+    ".github/skills/spectra-audit/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-audit/SKILL.md.txt",
+      "sha256": "e9e639322f6f23cfb9e64d53d63309e3949bb1c369aea135af3f03c1051cda2b"
+    },
+    ".github/skills/spectra-commit/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-commit/SKILL.md.txt",
+      "sha256": "a535a423fff22d60e8509a2fa0039ef9542bcb90030f374ebe8169e191f12e20"
+    },
+    ".github/skills/spectra-debug/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-debug/SKILL.md.txt",
+      "sha256": "356b046161d3283a8f179a2913b1e7da5f274df60571a285ed789e544b9feb62"
+    },
+    ".github/skills/spectra-discuss/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-discuss/SKILL.md.txt",
+      "sha256": "1d3a4572eda3045ed691fc7bfdb3a94706bb7f70a2bd5e5820d77030931837bb"
+    },
+    ".github/skills/spectra-ingest/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-ingest/SKILL.md.txt",
+      "sha256": "091346ee849d34593824665e8473fdf4b65bf8df72c3505cd5e99796ce32f5db"
+    },
+    ".github/skills/spectra-propose/SKILL.md": {
+      "retired": true,
+      "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-propose/SKILL.md.txt",
+      "sha256": "ba2afc256b18411cea2686c462f5146d9019c920fd5e290ffd119854ab75f076"
+    },
+    ".gitignore": {
+      "sha256": "a84b112093821e9a83f9a3fc25cb281e4d14dcdc44451f06adf15e269e5cec2e",
+      "scope": "approved management adapter"
+    },
+    "AGENTS.md": {
+      "sha256": "4945ca47d488b6ca47fba930a1f7a7b22c8ed86f6a936f8d17b7cf3bd211fdc2",
+      "scope": "approved management adapter"
+    },
+    "CLAUDE.md": {
+      "sha256": "5b1487e0b660d0bb692073f558d73a7dfba1475a0bdd80c4d4f3350144b44d87",
+      "scope": "approved management adapter"
+    },
+    "GEMINI.md": {
+      "sha256": "810c41b69820840e1ca693fbbfd05acbc11af7f69898d75dc2246314e3ffd370",
+      "scope": "approved management adapter"
+    },
+    "README.md": {
+      "sha256": "529bad3c142c2ebcad48e2d206358ed565ebf26b377afcf15c9081f4892c8f68",
+      "scope": "approved management adapter"
+    },
+    "package.json": {
+      "sha256": "8065e26f21c718e66df7f525a3367ed92131167c4105dfbcb668a88a521271bb",
+      "scope": "approved literal adapter"
+    },
+    "scripts/vpHelper.ts": {
+      "sha256": "7b372e4aa153c6362fbb093ef1396966818b20dd2071eb8df77f693f4ac2047e",
+      "scope": "approved literal adapter"
+    },
+    "skills/creating-vitepress-post/SKILL.md": {
+      "sha256": "5942e8bf371c5ea5b9dac91580d4c91ef88be0749c7c9784d82ba86bf5dca365",
+      "scope": "approved literal adapter"
+    },
+    "skills/maintaining-writing-skills/SKILL.md": {
+      "sha256": "04835b103d9d57b6fd9a70659d598c9b9d13debe26f0c87fdb3b1406305b52ec",
+      "scope": "approved management adapter"
+    },
+    "skills/maintaining-writing-skills/references/skill-maintenance.md": {
+      "sha256": "78dde171ee3bff1dba86deb8b62a1c7d811296c2e7ba64523cdd81dacc24b755",
+      "scope": "approved management adapter"
+    },
+    "skills/maintaining-writing-skills/references/spectra-codex.md": {
+      "sha256": "92f62ec851e68c7ca66e35acc0ec33e035dbd58f22d4b234f9a3a9bb787d91eb",
+      "scope": "approved management adapter"
+    },
+    "skills/phoenix-writing/AGENTS.md": {
+      "sha256": "7f3f611826b9deabcf7616018af6f358517c075380632502dab3366c93c4926d",
+      "scope": "approved management adapter"
+    },
+    "tests/vpHelper.vitest.ts": {
+      "sha256": "8fff78c782570c742d44497f03357b184f4b7b15fd3433a071c9e37a3567da40",
+      "scope": "approved literal adapter"
+    },
+    "tsconfig.json": {
+      "sha256": "982358597106bb8655c097a7f39ff4c1ef99e33adbed440d95aa86766a2d138c",
+      "scope": "approved literal adapter"
+    }
+  },
+  "literal_adapters": {
+    "package.json": true,
+    "scripts/vpHelper.ts": true,
+    "tests/vpHelper.vitest.ts": true,
+    "tsconfig.json": true,
+    "skills/creating-vitepress-post/SKILL.md": true
+  },
+  "site_moves": [
+    {
+      "source": "docs/.vitepress/config.mts",
+      "candidate": "blog/.vitepress/config.mts",
+      "sha256": "9b2bdfee14b84f2e48b96d67f55ce0435f5e9ce317a8b7d5377c6d772efd5a2e"
+    },
+    {
+      "source": "docs/.vitepress/nav.yml",
+      "candidate": "blog/.vitepress/nav.yml",
+      "sha256": "ab72fc098307fc93d7b5d5995c5004334d7773a4b8234d39b4a7cf2d9d434194"
+    },
+    {
+      "source": "docs/.vitepress/sidebar.yml",
+      "candidate": "blog/.vitepress/sidebar.yml",
+      "sha256": "5b236681eacbd7f2a705a99add47de3f99934ed32713f7e6f5e5eb801066b24c"
+    },
+    {
+      "source": "docs/.vitepress/theme/Layout.vue",
+      "candidate": "blog/.vitepress/theme/Layout.vue",
+      "sha256": "c1060a7a7723fb31c8e89ad2f25b0582fabc7557488c9be64dcc4f231bf71e25"
+    },
+    {
+      "source": "docs/.vitepress/theme/components/NewPost.vue",
+      "candidate": "blog/.vitepress/theme/components/NewPost.vue",
+      "sha256": "0d1ff9d225eb8e587d1fb82edc1009b11d4418fe231848821b2ef962e7b494a1"
+    },
+    {
+      "source": "docs/.vitepress/theme/components/Particles.vue",
+      "candidate": "blog/.vitepress/theme/components/Particles.vue",
+      "sha256": "00315e78403ef2e5592f7715a9bf11fe90640b0458fe862a2414308d94b88bf2"
+    },
+    {
+      "source": "docs/.vitepress/theme/components/PostBlock.vue",
+      "candidate": "blog/.vitepress/theme/components/PostBlock.vue",
+      "sha256": "a807747c0255b5191c567b0ad3f3641681655e91a4f186544715148b9ea0d067"
+    },
+    {
+      "source": "docs/.vitepress/theme/components/PostCard.vue",
+      "candidate": "blog/.vitepress/theme/components/PostCard.vue",
+      "sha256": "3863982cccb2cdbaca00795381a1bbcd02614141eb25159b80999304b83412e5"
+    },
+    {
+      "source": "docs/.vitepress/theme/components/PostList.vue",
+      "candidate": "blog/.vitepress/theme/components/PostList.vue",
+      "sha256": "f5aa65bf5e82ddfc30c7bc0b77ff481c2f7e1a71ca9239874bf4ead606c4a11a"
+    },
+    {
+      "source": "docs/.vitepress/theme/components/__tests__/Particles.spec.ts",
+      "candidate": "blog/.vitepress/theme/components/__tests__/Particles.spec.ts",
+      "sha256": "7037f1c3e5b67e546a6e58a3ffed28aef9ebd1d1963c3524969665fe8689e05b"
+    },
+    {
+      "source": "docs/.vitepress/theme/composables/usePostFilter.ts",
+      "candidate": "blog/.vitepress/theme/composables/usePostFilter.ts",
+      "sha256": "3519a66d691803045d6ea195971c97d43f1eebc1641c941465e616ce6ff46094"
+    },
+    {
+      "source": "docs/.vitepress/theme/composables/usePostSort.ts",
+      "candidate": "blog/.vitepress/theme/composables/usePostSort.ts",
+      "sha256": "b7b68bcb3c04b7feda028195507a26ba0c3e3bf2268dfd8b6ab0818f5910f9aa"
+    },
+    {
+      "source": "docs/.vitepress/theme/index.ts",
+      "candidate": "blog/.vitepress/theme/index.ts",
+      "sha256": "384e6be118b3d77c2b3bdb0d36aa245c3051e070ea79ccbc6280cb550e5ce931"
+    },
+    {
+      "source": "docs/.vitepress/theme/style.css",
+      "candidate": "blog/.vitepress/theme/style.css",
+      "sha256": "69b7789356647cf8c351869126e5157696b36f2ffe406683ff4887d997ca03a3"
+    },
+    {
+      "source": "docs/about.md",
+      "candidate": "blog/about.md",
+      "sha256": "59b83078d813a6a8cd9df3e13f964ff38d78cb6134a5f0187f6ea85c3e64af60"
+    },
+    {
+      "source": "docs/index.md",
+      "candidate": "blog/index.md",
+      "sha256": "9aef5c68033e63165730cf8538476ef3520e1e185bc65fad1b556307f51e17cb"
+    },
+    {
+      "source": "docs/post/.gitkeep",
+      "candidate": "blog/post/.gitkeep",
+      "sha256": "a38cb199f645ee3fb12f6c2d11c7be2d19ab134d44264e19b4666c83319d1b3e"
+    },
+    {
+      "source": "docs/post/course/cybersec/index.md",
+      "candidate": "blog/post/course/cybersec/index.md",
+      "sha256": "5c0f5a0ee566725173f71d1e4c38068a39997c43439b49d3350c23dad6ada646"
+    },
+    {
+      "source": "docs/post/course/cybersec/what-is-safety.md",
+      "candidate": "blog/post/course/cybersec/what-is-safety.md",
+      "sha256": "e9764dff227339d09a4cd96fcf7fcd14c1e607672f25dc8937ede62c2c13a800"
+    },
+    {
+      "source": "docs/post/course/rm/index.md",
+      "candidate": "blog/post/course/rm/index.md",
+      "sha256": "de58994a451013bf09060b52c708c6c448cb819c383eca02e674081e0336c888"
+    },
+    {
+      "source": "docs/post/course/rm/why-we-need-rm.md",
+      "candidate": "blog/post/course/rm/why-we-need-rm.md",
+      "sha256": "d609c056d66b471586462f2fc3ce9d8ca7da5d8cf303863aeb1ef6629dfcef93"
+    },
+    {
+      "source": "docs/posts.md",
+      "candidate": "blog/posts.md",
+      "sha256": "c948c4f804ca59d6154c992cb9de76a907b75d48a985d5f2775b132d58bbae16"
+    },
+    {
+      "source": "docs/public/assets/.gitkeep",
+      "candidate": "blog/public/assets/.gitkeep",
+      "sha256": "a38cb199f645ee3fb12f6c2d11c7be2d19ab134d44264e19b4666c83319d1b3e"
+    },
+    {
+      "source": "docs/public/assets/fontawesome/css/brands.min.css",
+      "candidate": "blog/public/assets/fontawesome/css/brands.min.css",
+      "sha256": "9e2091a3026c87116c2ee1948fbad3bffbf1b1f733c2f89d351d3dc7aab082f9"
+    },
+    {
+      "source": "docs/public/assets/fontawesome/css/fontawesome.min.css",
+      "candidate": "blog/public/assets/fontawesome/css/fontawesome.min.css",
+      "sha256": "b164a2d2905748e1d48512f1e985606b4282c9438bbc0ee2958e56f658695d2b"
+    },
+    {
+      "source": "docs/public/assets/fontawesome/css/regular.min.css",
+      "candidate": "blog/public/assets/fontawesome/css/regular.min.css",
+      "sha256": "d452ca86262c736cab4d172137e27176c2e4c7c141c8150c9154312f2aac3dae"
+    },
+    {
+      "source": "docs/public/assets/fontawesome/css/solid.min.css",
+      "candidate": "blog/public/assets/fontawesome/css/solid.min.css",
+      "sha256": "abb7189386e7601b342822b2a72812cf972daeb3442b796d7a785ea6f860f7e6"
+    },
+    {
+      "source": "docs/public/assets/fontawesome/webfonts/fa-brands-400.woff2",
+      "candidate": "blog/public/assets/fontawesome/webfonts/fa-brands-400.woff2",
+      "sha256": "70c632ba73c7ad942141bb2f56994b8eddf0a284c01aab9f21e0cd10021530c4"
+    },
+    {
+      "source": "docs/public/assets/fontawesome/webfonts/fa-regular-400.woff2",
+      "candidate": "blog/public/assets/fontawesome/webfonts/fa-regular-400.woff2",
+      "sha256": "81aaa8342d90df0a3c0b87655e2c31a71941f0dd351fb9fb1ca5d692e744f6d0"
+    },
+    {
+      "source": "docs/public/assets/fontawesome/webfonts/fa-solid-900.woff2",
+      "candidate": "blog/public/assets/fontawesome/webfonts/fa-solid-900.woff2",
+      "sha256": "ff58a6b0a01dbce082458f6e5a58719df4e80e0c2b50f744bb5871e21eca6878"
+    },
+    {
+      "source": "docs/public/assets/fontawesome/webfonts/fa-v4compatibility.woff2",
+      "candidate": "blog/public/assets/fontawesome/webfonts/fa-v4compatibility.woff2",
+      "sha256": "4bad0278281153ad5354855ccfbc0674279ec47eff29b3d262c213478311cc52"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/1772342178110.gif",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/1772342178110.gif",
+      "sha256": "72b6d5565bd8fe64acdaa8095e28f5020fb53359889cdbb8e0c13ba6d983efa5"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260227005508.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260227005508.png",
+      "sha256": "5a3094e2ba747556333e1f34c1773784c20a24af8dd029e8d8035558d592baff"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260227014249.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260227014249.png",
+      "sha256": "aa52bbba7acf5b4302c16507814045f4e8d1e0621b52c205a27d1fe90932d1e8"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260228013411.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260228013411.png",
+      "sha256": "0e9c53cf7cd8c42a7141bf7d916155d7ea6f6da67a4a70779186f9a307d6f92f"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260228022122.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260228022122.png",
+      "sha256": "a219da123e747a5d0a18652b85698d3b812a1a29d32314493b41e8f08322d8e2"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260228114351.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260228114351.png",
+      "sha256": "051e7ccf7c2d3a43220c94bf53336acf3d475c914499bf70acf52007f72dbb31"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260228130720.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260228130720.png",
+      "sha256": "75ebfb75472dc51071f6da4366023583aab412ddfa46c0d14dd373d2b8373ebe"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260301114806.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260301114806.png",
+      "sha256": "097f9b35af2ce28ac061ae2305d5802619aa342cf7eb4b5158b213010043b74c"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260301120037.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260301120037.png",
+      "sha256": "6d43abc8662f574dd4b3f09839a914d2135e5574938874f8b12723f1d53f285d"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260301122300.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260301122300.png",
+      "sha256": "0b9be3df40d223d35d502e90d17d90f6956a5137cae43c6729ec75ae01cd3d1b"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260301125241.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260301125241.png",
+      "sha256": "a58a448b69ef4f7ffdd2a19f25e031d1a46e1cf890d248bb4abfc0166fd12c5c"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260301125313.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260301125313.png",
+      "sha256": "1ed6afeef7d65a1ed614fe6e55c7180d5ef6facea8913c72b2a85fa44d0a21bf"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260301125401.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260301125401.png",
+      "sha256": "db48f430928196d5945709e28fbb28269839b9df1cb0316ce3dbb15108efbf92"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260301125743.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260301125743.png",
+      "sha256": "4137ea91db759d18a1e25224fe4d17d9102a6c6c2b216aad82768b0935f0d2ed"
+    },
+    {
+      "source": "docs/public/assets/post_course_cybersec_what-is-safety/20260301132349.png",
+      "candidate": "blog/public/assets/post_course_cybersec_what-is-safety/20260301132349.png",
+      "sha256": "72aec17ca978801f12beeb6cf12b070e9e6a490045333dfc8becbbec5573e8c3"
+    },
+    {
+      "source": "docs/public/assets/post_course_rm_why-we-need-rm/20260302005553.png",
+      "candidate": "blog/public/assets/post_course_rm_why-we-need-rm/20260302005553.png",
+      "sha256": "3b84d129e2b7fe73f42901e60ce6dd21662346fade6fa2e548a1f3bca8bc847d"
+    },
+    {
+      "source": "docs/public/assets/post_course_rm_why-we-need-rm/20260302010537.png",
+      "candidate": "blog/public/assets/post_course_rm_why-we-need-rm/20260302010537.png",
+      "sha256": "4505260ab07b1cee2bcf9b0bc82966abfa7684a8b8ba3197549408540a26544e"
+    },
+    {
+      "source": "docs/public/assets/post_course_rm_why-we-need-rm/20260302012511.png",
+      "candidate": "blog/public/assets/post_course_rm_why-we-need-rm/20260302012511.png",
+      "sha256": "44143e87b3895b2ba1f54008976637a6551734ed773e6902d6d062aa47c06baa"
+    },
+    {
+      "source": "docs/public/assets/post_course_rm_why-we-need-rm/20260307155631.png",
+      "candidate": "blog/public/assets/post_course_rm_why-we-need-rm/20260307155631.png",
+      "sha256": "0b71220f06823328675e12fec3000927466de017f943a4c1ccba5d3cac990524"
+    },
+    {
+      "source": "docs/public/assets/post_course_rm_why-we-need-rm/20260307160403.png",
+      "candidate": "blog/public/assets/post_course_rm_why-we-need-rm/20260307160403.png",
+      "sha256": "29e9a12b93218489a6f02032373b8b9d68f5b645202b02098c5d17f4b5831b94"
+    },
+    {
+      "source": "docs/public/circleImage.svg",
+      "candidate": "blog/public/circleImage.svg",
+      "sha256": "0a165ae3fcfec248007e24f112c569387102ddc9b73ac88528c679011efce4e7"
+    },
+    {
+      "source": "docs/public/heroImageWithoutText.svg",
+      "candidate": "blog/public/heroImageWithoutText.svg",
+      "sha256": "309d453f1463e7fc581055a758429062538943580280bd89cb0306f075612291"
+    },
+    {
+      "source": "docs/public/phoenixWithText.svg",
+      "candidate": "blog/public/phoenixWithText.svg",
+      "sha256": "ba3bf36a716cd2b31ff1b245da9be0d22864b69dc88c50eee0fc40a788a537a8"
+    },
+    {
+      "source": "docs/shared/posts.data.ts",
+      "candidate": "blog/shared/posts.data.ts",
+      "sha256": "ddd0aefda75056c72a9cc556fdcc613549b632f926d6c3af611e196e596be77e"
+    }
+  ]
+}

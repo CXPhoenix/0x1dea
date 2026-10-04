@@ -1,0 +1,8 @@
+test_baseline_and_authorized_descendant_history_are_accepted (__main__.PublicationAncestryTests.test_baseline_and_authorized_descendant_history_are_accepted) ... ok
+test_missing_baseline_object_is_rejected (__main__.PublicationAncestryTests.test_missing_baseline_object_is_rejected) ... ok
+test_unrelated_history_is_rejected (__main__.PublicationAncestryTests.test_unrelated_history_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.313s
+
+OK

@@ -1,0 +1,29 @@
+{
+  "status": "blocked",
+  "recorded_at": "2026-10-04T11:21:31.911944+00:00",
+  "attempts": [
+    {
+      "source": "native-discovery-events.jsonl",
+      "raw_source_sha256": "0165f92b78875b8b580c360b2c624c93c3c7392cd72718fd2d29282334feae72",
+      "events": []
+    },
+    {
+      "source": "native-discovery-escalated-events.jsonl",
+      "raw_source_sha256": "f22c3e6b88711dd57d5a4be5e9781e054714608a57a68ad61be8f40c85143d89",
+      "events": [
+        {
+          "type": "error",
+          "message": "{\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account.\"}}"
+        },
+        {
+          "type": "turn.failed",
+          "error": {
+            "message": "{\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account.\"}}"
+          }
+        }
+      ]
+    }
+  ],
+  "outcome": "Original Codex exec unsupported model HTTP400 retained; no model override or global change. Authorized fresh collaboration writers plus separate fresh app-server skills/list supplied actual validation. Account-bearing diagnostics deliberately excluded from portable copy.",
+  "normal_appserver_attempt": "initialization blocked by host state DB permission; precise escalation later allowed; first normal stderr was overwritten by script retry and is not claimed preserved"
+}

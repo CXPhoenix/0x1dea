@@ -1,0 +1,3 @@
+# Writing evaluation context
+
+Read only this isolated directory and supplied case input. Use the local physical product skills when their documented triggers apply. Explicit Phoenix voice or continued Phoenix work uses `.agents/skills/phoenix-writing/SKILL.md`; syntax-only repair must not impose article voice. This context has no old answers, rubrics or scores. Do not browse, install, scaffold, modify files, read sibling directories or global sessions. Reply only with the artifact requested by input.json.

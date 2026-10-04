@@ -1,0 +1,25 @@
+{
+  "name": "candidate-cli-ipc-allowed",
+  "argv": [
+    "python3",
+    "check-cli-resumed.py",
+    "implementation-resumed",
+    "blog"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T10:54:11.592526+00:00",
+  "ended_utc": "2026-10-04T10:54:26.032908+00:00",
+  "elapsed_seconds": 14.412446666974574,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "819ef4c42d62b536ff7b3b4485693d814491b5b351b2d01004261391b8c1f2cb",
+  "log": "maintenance/harness-adoption/evidence/candidate-cli-ipc-allowed.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "bde372471d87c6c26fb6bf90924bd5f7a2aed4f966b9c88474340c5ef2b87d96",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "bf265f34a36d9c1c9aab35510c4f78b59d26e3b08c9a4f57a0eb7a0fcb920f13",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

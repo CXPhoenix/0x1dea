@@ -1,0 +1,44 @@
+
+> 0x1dea@1.4.0 test:unit {CANDIDATE}
+> vitest run
+
+
+ RUN  v4.0.18 {CANDIDATE}
+
+ ❯ tests/vpHelper.vitest.ts (9 tests | 1 failed) 10ms
+       × 應該正確解析基本的 new post 指令 6ms
+       ✓ 當 -d 和 -c 同時使用時應拋出錯誤 1ms
+       ✓ 應該回傳符合 ISO 8601 且時區為 +08:00 的字串 2ms
+       ✓ ASSETS_ROOT 應該是 docs/public/assets 0ms
+       ✓ 範例1: 預設資料夾 docs/post 0ms
+       ✓ 範例2: 使用 -c 指定分類 (docs/post/hello) 0ms
+       ✓ 範例3: 使用 -d 指定多層資料夾 (docs/new-posts) 0ms
+       ✓ 範例4: 使用 -d 指定根層資料夾 (docs) 0ms
+       ✓ 應該能處理絕對路徑 0ms
+ ✓ docs/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 30ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/vpHelper.vitest.ts > vphelper > parseArgs > 應該正確解析基本的 new post 指令
+AssertionError: expected 'docs/post' to be 'blog/post' // Object.is equality
+
+Expected: "blog/post"
+Received: "docs/post"
+
+ ❯ tests/vpHelper.vitest.ts:16:40
+     14|             expect(config.command).toEqual(['new', 'post']);
+     15|             expect(config.postName).toBe('MyArticle');
+     16|             expect(config.options.dir).toBe('blog/post');
+       |                                        ^
+     17|         });
+     18|         // ... 其他 parseArgs 測試 ...
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 10 passed (11)
+   Start at  18:42:31
+   Duration  950ms (transform 210ms, setup 0ms, import 378ms, tests 39ms, environment 997ms)
+
+ ELIFECYCLE  Command failed with exit code 1.

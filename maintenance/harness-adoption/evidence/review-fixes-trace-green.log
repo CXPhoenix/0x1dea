@@ -1,0 +1,8 @@
+test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) ... ok
+test_pass_trace_rejects_invalid_execution_receipt (__main__.TraceEvidenceTests.test_pass_trace_rejects_invalid_execution_receipt) ... ok
+test_trace_rejects_unknown_row_status (__main__.TraceEvidenceTests.test_trace_rejects_unknown_row_status) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.105s
+
+OK

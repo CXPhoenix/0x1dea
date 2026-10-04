@@ -1,0 +1,128 @@
+{
+  "canonical_task": "/root/writing_judge_1_recorded",
+  "recorded_at_utc": "2026-10-04T11:10:52.317246+00:00",
+  "read_files": [
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E1/input.json",
+      "sha256": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918",
+      "bytes": 745,
+      "read_at_utc": "2026-10-04T11:10:52.313055+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E1/rubric.json",
+      "sha256": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3",
+      "bytes": 830,
+      "read_at_utc": "2026-10-04T11:10:52.313815+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E1/output.md",
+      "sha256": "ef6fd9bf5601e0eb4e717def3a25a7552193ad1d09a86822f441b13fc9a75092",
+      "bytes": 729,
+      "read_at_utc": "2026-10-04T11:10:52.314252+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E2/input.json",
+      "sha256": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6",
+      "bytes": 931,
+      "read_at_utc": "2026-10-04T11:10:52.314715+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E2/rubric.json",
+      "sha256": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c",
+      "bytes": 800,
+      "read_at_utc": "2026-10-04T11:10:52.315311+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E2/output.md",
+      "sha256": "02fe8ea7967b55d470f3ab22980ade948a661100a9071d74d74572da9f52d337",
+      "bytes": 641,
+      "read_at_utc": "2026-10-04T11:10:52.315721+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E3/input.json",
+      "sha256": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e",
+      "bytes": 599,
+      "read_at_utc": "2026-10-04T11:10:52.316073+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E3/rubric.json",
+      "sha256": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607",
+      "bytes": 805,
+      "read_at_utc": "2026-10-04T11:10:52.316503+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E3/output.md",
+      "sha256": "3d859960941fb27d83ddcdf25b09803275e30c1fa4b43da5d9d6a83705459696",
+      "bytes": 352,
+      "read_at_utc": "2026-10-04T11:10:52.317149+00:00"
+    }
+  ],
+  "scope": "Source reads were exclusively the nine E1–E3 input/rubric/output files in judges-resumed/group-1. The only additional file read was this judge’s own newly generated provenance record to append evidence. No prior scores, other answers, writing skills, tests, other preexisting workspace files, or web sources were read.",
+  "timestamp_policy": "Timestamps record this fresh judge run only; no earlier timestamp was inferred or backfilled.",
+  "verification_read_events": [
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E1/output.md",
+      "sha256": "ef6fd9bf5601e0eb4e717def3a25a7552193ad1d09a86822f441b13fc9a75092",
+      "bytes": 729,
+      "read_at_utc": "2026-10-04T11:11:08.640728+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E2/input.json",
+      "sha256": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6",
+      "bytes": 931,
+      "read_at_utc": "2026-10-04T11:11:08.641585+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E2/output.md",
+      "sha256": "02fe8ea7967b55d470f3ab22980ade948a661100a9071d74d74572da9f52d337",
+      "bytes": 641,
+      "read_at_utc": "2026-10-04T11:11:08.642067+00:00"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-1/E3/output.md",
+      "sha256": "3d859960941fb27d83ddcdf25b09803275e30c1fa4b43da5d9d6a83705459696",
+      "bytes": 352,
+      "read_at_utc": "2026-10-04T11:11:08.642659+00:00"
+    }
+  ],
+  "verification_recorded_at_utc": "2026-10-04T11:11:08.652142+00:00",
+  "mechanical_checks": {
+    "E1": {
+      "han_character_count": 214,
+      "non_whitespace_character_count": 244,
+      "paragraph_count": 1
+    },
+    "E2": {
+      "exactly_authorized_two_sentence_replacement": true,
+      "original_paragraph_count": 6,
+      "output_paragraph_count": 6
+    },
+    "E3": {
+      "whitespace_word_count": 61,
+      "paragraph_count": 1
+    }
+  },
+  "own_record_read_for_append": {
+    "path": "{WORKSPACE}/evidence/resumed/writing-judge-group-1-provenance.json",
+    "reason": "Append the fresh mechanical-verification read events to this judge’s newly created provenance record."
+  },
+  "own_generated_record_read_events": [
+    {
+      "path": "{WORKSPACE}/evidence/resumed/writing-judge-group-1-provenance.json",
+      "sha256": "d497a765db08a0fdb9c6dff1aa137fec906b927a892144b09aaf78fc8485675c",
+      "bytes": 2942,
+      "read_at_utc": null,
+      "timestamp_note": "The prior append command did not capture the self-record read time; no timestamp is backfilled. Hash reconstructed from preserved initial fields using the original serializer.",
+      "purpose": "Append verification events to this judge’s newly generated record."
+    },
+    {
+      "path": "{WORKSPACE}/evidence/resumed/writing-judge-group-1-provenance.json",
+      "sha256": "3069b126c3efea4c4d072f0e33fe9e7761380b11a71eb0fe26ea289b6afe4866",
+      "bytes": 4811,
+      "read_at_utc": "2026-10-04T11:12:01.238897+00:00",
+      "purpose": "Record all self-record reads and finalize provenance."
+    }
+  ],
+  "finalized_at_utc": "2026-10-04T11:12:01.238914+00:00",
+  "judgment_file": "{WORKSPACE}/evidence/resumed/writing-judge-group-1.json"
+}
