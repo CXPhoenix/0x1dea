@@ -1,0 +1,13 @@
+{
+  "case_id": "E3",
+  "invoked_skill": "phoenix-writing",
+  "files_read": [
+    "cases/E3/input.json",
+    "frozen-v22/skills/phoenix-writing/SKILL.md",
+    "frozen-v22/skills/maintaining-writing-skills/SKILL.md",
+    "frozen-v22/skills/creating-vitepress-post/SKILL.md",
+    "frozen-v22/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "A cache keeps a result so you can reuse it later. The detail to watch is what happens when the underlying data changes. If the cached copy has not been removed or refreshed, it may be stale. An invalidation rule decides when to remove or refresh that copy. Here, we are following one cache, so the explanation does not cover coordination among multiple services.",
+  "execution_note": "先讀 E3 輸入與三個候選 SKILL.md 的 YAML name/description；只讀適用的 phoenix-writing 正文與風格對照 reference。以 supplied facts 撰寫單一英文段落，工具以空白分詞計數為 64 words。未讀其他技能正文、rubric、baselines、design、其他案例、live repo 或評審結論；未瀏覽、製圖、執行外部動作，僅寫入指定案例 JSON。"
+}

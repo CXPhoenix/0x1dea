@@ -1,0 +1,394 @@
+{
+  "time_utc": "2026-10-04T05:57:12.590161+00:00",
+  "method": "mechanical format/length/protected-byte checks; not a style or semantic judge",
+  "count": 62,
+  "failures": 1,
+  "checks": [
+    {
+      "case": "freeze",
+      "check": "skills/phoenix-writing/SKILL.md",
+      "passed": true,
+      "actual": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/phoenix-writing/references/style-examples.md",
+      "passed": true,
+      "actual": "1ff689c5e10c2fb5d221f76f64f3bcdff9d79ae21fd48a7764b8571bc3d05a70"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/phoenix-writing/references/tw-vocabulary.md",
+      "passed": true,
+      "actual": "4219431491b4dd4357fc2a78da6f7720f48ad357cf8ea6d869dad8e4ab6d231a"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/maintaining-writing-skills/SKILL.md",
+      "passed": true,
+      "actual": "12b6a29fa02c124b709c6b1de0c04715c1671046897ba17de5ecde73fea2d5cf"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/maintaining-writing-skills/references/writing-process.md",
+      "passed": true,
+      "actual": "90cabbc770cf0220ccb18e2dc567e9aeadc75487f1f052a664e0d8ce8939dda4"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/maintaining-writing-skills/references/article-maintenance.md",
+      "passed": true,
+      "actual": "3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/creating-vitepress-post/SKILL.md",
+      "passed": true,
+      "actual": "737e8650091a90ba1f0f00aa778ce2b7bdd3d5acf7bdb276b017ce8be8c9d8d0"
+    },
+    {
+      "case": "E1",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E1"
+    },
+    {
+      "case": "E1",
+      "check": "180–320 Han characters",
+      "passed": true,
+      "actual": 219
+    },
+    {
+      "case": "E1",
+      "check": "no heading",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "case": "E2",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E2"
+    },
+    {
+      "case": "E2",
+      "check": "protected prefix/suffix exact",
+      "passed": true,
+      "actual": {
+        "prefix": true,
+        "suffix": true
+      }
+    },
+    {
+      "case": "E2",
+      "check": "paragraph separators unchanged",
+      "passed": true,
+      "actual": 5
+    },
+    {
+      "case": "E3",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E3"
+    },
+    {
+      "case": "E3",
+      "check": "<=80 English whitespace words",
+      "passed": true,
+      "actual": 64
+    },
+    {
+      "case": "E3",
+      "check": "one paragraph/no heading/question",
+      "passed": true,
+      "actual": "A cache keeps a result so you can reuse it later. The detail to watch is what happens when the underlying data changes. If the cached copy has not been removed or refreshed, it may be stale. An invalidation rule decides when to remove or refresh that copy. Here, we are following one cache, so the explanation does not cover coordination among multiple services."
+    },
+    {
+      "case": "E4",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E4"
+    },
+    {
+      "case": "E4",
+      "check": "three required labeled lines",
+      "passed": true,
+      "actual": [
+        "主旨：請主管核示是否延後上線。",
+        "說明：2026-10-03 檢查共20項，已完成18項，尚有2項未完成；測試負責人為小林，目前尚未核准延後上線或新上線日期。",
+        "擬辦：擬請小林補完剩餘2項並回報，再由主管核示上線日期。"
+      ]
+    },
+    {
+      "case": "E4",
+      "check": "required facts literal",
+      "passed": true,
+      "actual": "主旨：請主管核示是否延後上線。\n說明：2026-10-03 檢查共20項，已完成18項，尚有2項未完成；測試負責人為小林，目前尚未核准延後上線或新上線日期。\n擬辦：擬請小林補完剩餘2項並回報，再由主管核示上線日期。"
+    },
+    {
+      "case": "E5",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E5"
+    },
+    {
+      "case": "E5",
+      "check": "only syntax repair/code block",
+      "passed": true,
+      "actual": "```python\ndef add(a, b):\n    return a + b\n```"
+    },
+    {
+      "case": "E5",
+      "check": "writer reports no style invocation",
+      "passed": false,
+      "actual": []
+    },
+    {
+      "case": "E6",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E6"
+    },
+    {
+      "case": "E6",
+      "check": "body120–220 Han characters",
+      "passed": true,
+      "actual": 128
+    },
+    {
+      "case": "E6",
+      "check": "evidence/stance tokens",
+      "passed": true,
+      "actual": "我先不採用這個快取方案。你可能覺得我太保守，但目前的證據只有十次單機測試：平均回應時間從200毫秒降到120毫秒，確實看到了速度改善。多服務之間的資料一致性，以及尖峰流量下的表現，我都還沒測。這些結果能說明這次測試變快了，卻不足以判斷整套系統能否上線。我寧可先把缺口查清楚，再決定要不要採用。"
+    },
+    {
+      "case": "E7",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E7"
+    },
+    {
+      "case": "E7",
+      "check": "body150–260 Han characters",
+      "passed": true,
+      "actual": 191
+    },
+    {
+      "case": "E7",
+      "check": "one caption line",
+      "passed": true,
+      "actual": "圖說：單一快取示意：10:00原資料更新，至10:05快取失效前，讀取仍可能取得舊值。"
+    },
+    {
+      "case": "E8",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E8"
+    },
+    {
+      "case": "E8",
+      "check": "only A/B labels",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "case": "E8",
+      "check": "A50–90/B180–300 Han characters",
+      "passed": true,
+      "actual": {
+        "A": 62,
+        "B": 214
+      }
+    },
+    {
+      "case": "E9",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E9"
+    },
+    {
+      "case": "E9",
+      "check": "80–160 Han characters",
+      "passed": true,
+      "actual": 113
+    },
+    {
+      "case": "E9",
+      "check": "two numbered steps plus caption",
+      "passed": true,
+      "actual": [
+        "1. 先找出「10:00 原資料更新」，再對照「10:05 快取失效」。你會看到，原資料更新與快取失效之間隔了五分鐘。",
+        "2. 再對照中間的「可能讀取舊快取值」：這表示失效前仍可能拿到舊值，不能當成每次都會讀到舊值，也不能推論失效後一定讀到新值。",
+        "圖說：單一快取時間線；未提供多服務同步或網路延遲資訊。"
+      ]
+    },
+    {
+      "case": "E9",
+      "check": "requested guide tokens",
+      "passed": true,
+      "actual": "1. 先找出「10:00 原資料更新」，再對照「10:05 快取失效」。你會看到，原資料更新與快取失效之間隔了五分鐘。\n2. 再對照中間的「可能讀取舊快取值」：這表示失效前仍可能拿到舊值，不能當成每次都會讀到舊值，也不能推論失效後一定讀到新值。\n圖說：單一快取時間線；未提供多服務同步或網路延遲資訊。"
+    },
+    {
+      "case": "E1",
+      "check": "input.json unchanged",
+      "passed": true,
+      "actual": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918"
+    },
+    {
+      "case": "E1",
+      "check": "rubric.json unchanged",
+      "passed": true,
+      "actual": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3"
+    },
+    {
+      "case": "E2",
+      "check": "input.json unchanged",
+      "passed": true,
+      "actual": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6"
+    },
+    {
+      "case": "E2",
+      "check": "rubric.json unchanged",
+      "passed": true,
+      "actual": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c"
+    },
+    {
+      "case": "E3",
+      "check": "input.json unchanged",
+      "passed": true,
+      "actual": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e"
+    },
+    {
+      "case": "E3",
+      "check": "rubric.json unchanged",
+      "passed": true,
+      "actual": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607"
+    },
+    {
+      "case": "E4",
+      "check": "input.json unchanged",
+      "passed": true,
+      "actual": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425"
+    },
+    {
+      "case": "E4",
+      "check": "rubric.json unchanged",
+      "passed": true,
+      "actual": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791"
+    },
+    {
+      "case": "E5",
+      "check": "input.json unchanged",
+      "passed": true,
+      "actual": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca"
+    },
+    {
+      "case": "E5",
+      "check": "rubric.json unchanged",
+      "passed": true,
+      "actual": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc"
+    },
+    {
+      "case": "E6",
+      "check": "input.json unchanged",
+      "passed": true,
+      "actual": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01"
+    },
+    {
+      "case": "E6",
+      "check": "rubric.json unchanged",
+      "passed": true,
+      "actual": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947"
+    },
+    {
+      "case": "E7",
+      "check": "input.json unchanged",
+      "passed": true,
+      "actual": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9"
+    },
+    {
+      "case": "E7",
+      "check": "rubric.json unchanged",
+      "passed": true,
+      "actual": "9403f0de073b1246a81fd353bf288f34f2434b9704061a0a744ad64f481103b3"
+    },
+    {
+      "case": "E8",
+      "check": "input.json unchanged",
+      "passed": true,
+      "actual": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2"
+    },
+    {
+      "case": "E8",
+      "check": "rubric.json unchanged",
+      "passed": true,
+      "actual": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a"
+    },
+    {
+      "case": "E9",
+      "check": "input.json unchanged",
+      "passed": true,
+      "actual": "3b74f474e294725b7ce45bbd01ea5ac5de45db42c53de56781e577018aeab00c"
+    },
+    {
+      "case": "E9",
+      "check": "rubric.json unchanged",
+      "passed": true,
+      "actual": "aa8747d2c643500b27b61c6248f3c8cef246783f7332e57fbaf9a976b94ca19b"
+    },
+    {
+      "case": "E1",
+      "check": "judgment schema/score integrity",
+      "passed": true,
+      "actual": "pass"
+    },
+    {
+      "case": "E2",
+      "check": "judgment schema/score integrity",
+      "passed": true,
+      "actual": "pass"
+    },
+    {
+      "case": "E3",
+      "check": "judgment schema/score integrity",
+      "passed": true,
+      "actual": "pass"
+    },
+    {
+      "case": "E4",
+      "check": "judgment schema/score integrity",
+      "passed": true,
+      "actual": "pass"
+    },
+    {
+      "case": "E5",
+      "check": "judgment schema/score integrity",
+      "passed": true,
+      "actual": "pass"
+    },
+    {
+      "case": "E6",
+      "check": "judgment schema/score integrity",
+      "passed": true,
+      "actual": "pass"
+    },
+    {
+      "case": "E7",
+      "check": "judgment schema/score integrity",
+      "passed": true,
+      "actual": "pass"
+    },
+    {
+      "case": "E8",
+      "check": "judgment schema/score integrity",
+      "passed": true,
+      "actual": "pass"
+    },
+    {
+      "case": "E9",
+      "check": "judgment schema/score integrity",
+      "passed": true,
+      "actual": "pass"
+    }
+  ]
+}

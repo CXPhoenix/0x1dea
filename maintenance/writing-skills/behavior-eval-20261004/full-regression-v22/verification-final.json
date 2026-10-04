@@ -1,0 +1,26 @@
+{
+  "verified_utc": "2026-10-04T06:01:55.223821+00:00",
+  "version": "2.2",
+  "same_version_cases": 9,
+  "scores": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "mechanical_checks": 62,
+  "failures": 0,
+  "live_hashes_unchanged": 7,
+  "samefile_entries": 5,
+  "local_report_links": 38,
+  "git_diff_check": "pass",
+  "active_spectra_changes": 0,
+  "harness_source_still_clean": true,
+  "article_code_changes": 0,
+  "skill_changes_during_full_regression": 0
+}

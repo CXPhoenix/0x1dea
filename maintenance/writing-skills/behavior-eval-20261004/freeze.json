@@ -1,0 +1,48 @@
+{
+  "skill_version": "2.0",
+  "time_utc": "2026-10-04T05:02:51Z",
+  "root": "frozen-v2",
+  "files": [
+    {
+      "path": "skills/phoenix-writing/SKILL.md",
+      "sha256": "86cffc593f0184985a2595032edc26b4a8e86eb05a642f76f61841c7f7860d11",
+      "bytes": 2850
+    },
+    {
+      "path": "skills/phoenix-writing/references/style-examples.md",
+      "sha256": "afd9240875e15b12fccfd44d59fbbafff7e0d16aded3c9a8c234ecf75aa92b2d",
+      "bytes": 2432
+    },
+    {
+      "path": "skills/phoenix-writing/references/tw-vocabulary.md",
+      "sha256": "4219431491b4dd4357fc2a78da6f7720f48ad357cf8ea6d869dad8e4ab6d231a",
+      "bytes": 1099
+    },
+    {
+      "path": "skills/maintaining-writing-skills/SKILL.md",
+      "sha256": "12b6a29fa02c124b709c6b1de0c04715c1671046897ba17de5ecde73fea2d5cf",
+      "bytes": 1428
+    },
+    {
+      "path": "skills/maintaining-writing-skills/references/writing-process.md",
+      "sha256": "ac5b73ce8b9e4d595c7f00585503df21cca6232a9f6e2b2b1860a91ed8b536d3",
+      "bytes": 3741
+    },
+    {
+      "path": "skills/maintaining-writing-skills/references/article-maintenance.md",
+      "sha256": "3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4",
+      "bytes": 1058
+    },
+    {
+      "path": "skills/creating-vitepress-post/SKILL.md",
+      "sha256": "737e8650091a90ba1f0f00aa778ce2b7bdd3d5acf7bdb276b017ce8be8c9d8d0",
+      "bytes": 2935
+    }
+  ],
+  "execution_requested": {
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fast": "requested, tool has no exposed control"
+  },
+  "design": "8 fresh native writer agents + separate fresh judge agents; same model family; no cross-model/statistical claim"
+}

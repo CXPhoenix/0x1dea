@@ -1,0 +1,13 @@
+{
+  "case_id": "E4",
+  "invoked_skill": "phoenix-writing",
+  "files_read": [
+    "cases/E4/input.json",
+    "frozen-v22/skills/phoenix-writing/SKILL.md",
+    "frozen-v22/skills/maintaining-writing-skills/SKILL.md (YAML only)",
+    "frozen-v22/skills/creating-vitepress-post/SKILL.md (YAML only)",
+    "frozen-v22/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "主旨：請主管核示是否延後上線。\n說明：2026-10-03 檢查共20項，已完成18項，尚有2項未完成；測試負責人為小林，目前尚未核准延後上線或新上線日期。\n擬辦：擬請小林補完剩餘2項並回報，再由主管核示上線日期。",
+  "execution_note": "先讀 E4 輸入及三個候選技能的 YAML name/description；因明示 Phoenix 風格，讀 phoenix-writing 正文與正式無幽默的風格校準參考。依封閉資料交付三行簽呈全文，未讀其他案例、rubric、baseline、design、live repo 或外部來源，未瀏覽、製圖或執行外部動作。以 Python 寫入本案例輸出並確認 artifact 共3行。"
+}

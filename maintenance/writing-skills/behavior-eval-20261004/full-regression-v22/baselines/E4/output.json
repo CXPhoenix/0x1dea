@@ -1,0 +1,10 @@
+{
+  "case_id": "E4",
+  "invoked_skill": "phoenix-writing",
+  "files_read": [
+    "cases/E4/input.json",
+    "frozen-v2/skills/phoenix-writing/SKILL.md"
+  ],
+  "artifact": "主旨：請主管核示是否延後上線。\n說明：2026-10-03 的檢查共20項，已完成18項，尚有2項未完成；測試負責人為小林，目前尚未核准延後或新上線日期。\n擬辦：擬請小林補完剩餘2項並回報，再由主管核示上線日期。",
+  "execution_note": "Native writer；requested GPT-6.1-sol/high；fast not controllable。"
+}

@@ -1,0 +1,24 @@
+{
+  "Claude-specific tool name": [
+    ".claude/skills/spectra-apply/SKILL.md",
+    ".claude/skills/spectra-propose/SKILL.md",
+    ".claude/skills/spectra-archive/SKILL.md",
+    ".claude/skills/spectra-ingest/SKILL.md",
+    ".claude/skills/spectra-commit/SKILL.md"
+  ],
+  "Claude-specific path/mode": [
+    ".claude/skills/spectra-ingest/SKILL.md",
+    ".claude/skills/spectra-propose/SKILL.md"
+  ],
+  "Generated slash syntax": [
+    ".claude/skills/spectra-commit/SKILL.md",
+    ".claude/skills/spectra-apply/SKILL.md",
+    ".claude/skills/spectra-ingest/SKILL.md",
+    ".claude/skills/spectra-ask/SKILL.md",
+    ".claude/skills/spectra-propose/SKILL.md",
+    ".claude/skills/spectra-archive/SKILL.md",
+    ".claude/skills/spectra-audit/SKILL.md",
+    ".claude/skills/spectra-discuss/SKILL.md",
+    ".claude/skills/spectra-debug/SKILL.md"
+  ]
+}

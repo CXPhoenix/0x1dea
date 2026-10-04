@@ -1,0 +1,131 @@
+{
+  "source": "Accepted native collaboration.spawn_agent tool arguments and completion notifications in this task; no provider-internal telemetry",
+  "writers": [
+    {
+      "task_name": "/root/write_e1",
+      "cases": [
+        "E1"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/write_e2",
+      "cases": [
+        "E2"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/write_e3",
+      "cases": [
+        "E3"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/write_e4",
+      "cases": [
+        "E4"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/write_e5",
+      "cases": [
+        "E5"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/write_e6",
+      "cases": [
+        "E6"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/write_e7",
+      "cases": [
+        "E7"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/write_e8",
+      "cases": [
+        "E8"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    }
+  ],
+  "judges": [
+    {
+      "task_name": "/root/judge_e1_e4",
+      "cases": [
+        "E1",
+        "E2",
+        "E3",
+        "E4"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/judge_e5_e8",
+      "cases": [
+        "E5",
+        "E6",
+        "E7",
+        "E8"
+      ],
+      "fork_turns": "none",
+      "model_argument": "gpt-6.1-sol",
+      "reasoning_effort_argument": "high",
+      "spawn_accepted": true
+    }
+  ],
+  "fast": {
+    "user_requested": true,
+    "exposed_tool_control": false,
+    "verified": false,
+    "scope": "writer/judge spawn_agent API only"
+  },
+  "limits": [
+    "Writer and judge contexts are separated, but both use the same requested model family.",
+    "One completion per case; these are local behavioral observations, not performance estimates.",
+    "Invocation and files_read are writer reports; the harness does not externally instrument skill-tool routing.",
+    "No archived v1 behavioral baseline was run; v1/v2 differences are not experimentally measured."
+  ],
+  "main_work": {
+    "service_tier": "fast",
+    "create_submitted": true,
+    "started": true,
+    "evidence": "parent direct report in follow-up instruction; not this child provider telemetry"
+  }
+}

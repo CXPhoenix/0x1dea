@@ -1,0 +1,48 @@
+{
+  "case_id": "E2",
+  "criteria": [
+    {
+      "criterion": "只改明示兩句，其他內容與段落布局完全保存",
+      "score": 2,
+      "evidence": "原兩句「同一份資料也可能已經改變。失效策略要讓它失效，所以我們必須設計失效策略。」被替換為「等到下次要用時，同一份資料可能已經改變，先前存下來的答案也就可能過期。為了避免繼續使用過期答案，我們必須設計失效策略，讓不再適用的快取失效。」",
+      "reason": "以指定兩句作精確替換後，原文與 artifact 完全相等；六個由空行分隔的區塊及尾端換行均保留，未新增段落。"
+    },
+    {
+      "criterion": "兩句建立原資料更新→舊快取過期→失效策略的因果",
+      "score": 2,
+      "evidence": "「同一份資料可能已經改變，先前存下來的答案也就可能過期」；「為了避免繼續使用過期答案……讓不再適用的快取失效。」",
+      "reason": "建立原資料更新、快取答案可能過期及失效策略用途的因果，消除原句循環說明；保留可能性而非聲稱必然過期。"
+    },
+    {
+      "criterion": "createdTime與圖片路徑不變、不加CLI工作成果聲稱",
+      "score": 2,
+      "evidence": "「createdTime: 2026-04-01T09:00:00+08:00」；「thumbnail: /assets/cache/cover.png」",
+      "reason": "兩個欄位逐字保留，完整 Markdown 內未新增 CLI 執行、檔案建立或建置通過聲稱。"
+    },
+    {
+      "criterion": "保留單機測試的證據範圍與作者取捨",
+      "score": 2,
+      "evidence": "「原始測試紀錄只顯示「這個單機案例省下重複運算」，沒有測分散式部署。」；「我寧可先承擔較慢的回應，也不希望讀者拿到過期答案。」",
+      "reason": "對原文精確比對確認測試證據與作者取捨均逐字保留，未擴大到分散式成效或改變優先順序。"
+    },
+    {
+      "criterion": "修訂口吻接得上既有 Phoenix 聲音",
+      "score": 2,
+      "evidence": "保留「你可能會想，查過一次的答案，留著下次直接拿來用，不就好了？」並接「等到下次要用時……先前存下來的答案也就可能過期。」",
+      "reason": "沿用已有「答案」詞彙及讀者的下次使用情境，以白話因果接續原聲音；沒有插入不必要對話、笑話或全篇重寫。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": {
+    "assessment": "既有 Phoenix 文章的局部潤稿適用 phoenix-writing；writing-process 的修訂分支相關，當次明示逐字保護範圍優先。",
+    "boundary": "回傳完整 Markdown 屬對話修訂；creating-vitepress-post 不適用，無需重跑新文 CLI，也不需驗證未要求維護的圖片實體。",
+    "instrumentation": "自述技能與參考讀取僅作待驗證路由描述；以 artifact 精確比對支持修改範圍判斷。"
+  },
+  "limitations": [
+    "僅依本案 input.json、預先凍結 rubric.json、output-v2.json 的 artifact 及 frozen-v2 適用技能／參考評分；未讀其他評審或 root 的評判。",
+    "invoked_skill 與 files_read 是 writer 自述，未當成實際 instrumentation；缺少工具執行軌跡，不能確認實際技能載入、外部查詢或文章／工具副作用。未觀察到硬性失敗不等於已證明所有執行行為。",
+    "正文格式以 artifact 評估，JSON 封裝與 execution_note 未視為正文。此次四個固定案例不支持跨模型、統計效力或未驗證 fast 結論。"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "case_id": "E9",
+  "criteria": [
+    {
+      "criterion": "依明示要求提供兩個編號操作步驟，使用先找出／再對照等準確導引；不因一般圖文偏好拒絕本任務",
+      "score": 2,
+      "evidence": [
+        "「1. 先找出10:00的原資料更新點，再沿時間線看到10:05。」",
+        "「2. 再對照中間五分鐘」"
+      ],
+      "reason": "兩個編號步驟使用先找出、再對照的操作導引，直接完成初學者讀圖任務。使用者明示操作教學，適用技能的一般圖文邊界例外。"
+    },
+    {
+      "criterion": "10:00原資料更新、10:05失效與兩點之間的區間準確",
+      "score": 2,
+      "evidence": [
+        "「10:00的原資料更新點」",
+        "「原資料更新與快取失效，是不同事件。」",
+        "「再對照中間五分鐘」",
+        "「10:05只標示快取失效」"
+      ],
+      "reason": "原資料更新與快取失效的事件、時刻及五分鐘區間準確，沒有改動圖提供的時序。"
+    },
+    {
+      "criterion": "讀取舊值保留可能性，不說全部請求必然讀到舊值或失效後一定新值",
+      "score": 2,
+      "evidence": [
+        "「這段可能讀到舊快取值。」",
+        "「10:05只標示快取失效，不能據此保證下一次讀取就拿到新值。」"
+      ],
+      "reason": "明確保留讀舊值的可能性，並拒絕從失效推導下一次讀取一定新值；沒有新增讀取結果。"
+    },
+    {
+      "criterion": "保留單快取範圍、不捏造多服務同步或網路延遲資訊",
+      "score": 2,
+      "evidence": [
+        "「圖說：單快取的更新與失效時間線；未呈現多服務同步或網路延遲。」"
+      ],
+      "reason": "圖說明確界定單快取及缺少的兩項資料，正文沒有補寫跨服務行為或延遲資訊。"
+    },
+    {
+      "criterion": "共80–160個中文字，兩步驟加一行圖說，無額外一般文章、製圖prompt或生成聲稱",
+      "score": 2,
+      "evidence": [
+        "artifact 共111個中文字，依 Unicode U+4E00–U+9FFF 計數。",
+        "artifact 由「1.」「2.」兩行步驟及「圖說：」一行組成。"
+      ],
+      "reason": "總篇幅符合，僅交付指定三行內容；沒有額外一般文章、製圖 prompt 或生成聲稱。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": {
+    "assessment": "所述路由符合明示操作讀圖任務，但未有 instrumentation 可驗證實際路由。",
+    "evidence": [
+      "input 明示「Phoenix 風格做操作式讀圖教學」「先找出」「再對照」。",
+      "frozen-v21 phoenix-writing 明定「明示操作式讀圖教學時才逐步導引」；style-examples.md 的操作教學邊界允許先找出更新點、再對照失效點。",
+      "output 自述 invoked_skill 為 phoenix-writing。"
+    ],
+    "reason": "作者風格技能適用，操作式導引由使用者明示要求，不能以一般圖文偏好扣分。沒有建立本站文章或技能維護要求。files_read/invoked_skill 只作自述評估。"
+  },
+  "limitations": [
+    "本判定只讀指定案例的 input.json、rubric.json、output-v21.json，以及 frozen-v21 三份技能正文與 phoenix-writing 的 style-examples.md；未讀其他案例、舊結果、parent-qa-correction、design 或其他評審意見。",
+    "writer 的 files_read、invoked_skill 與 execution_note 是自述，不是讀檔、技能調用或副作用的 instrumentation；只能確認 artifact 的可見內容。",
+    "這是同一指定模型 GPT-6.1-sol/high 的單次案例判讀，未進行跨模型比較、重複抽樣或統計效果評估。spawn API 不能控制 fast，未據此猜測主 work 的配置或狀態。"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "case_id": "E8",
+  "criteria": [
+    {
+      "criterion": "A與B分別滿足字數範圍與讀者先備",
+      "score": 2,
+      "evidence": "A：「重試前，先問你這次呼叫會不會改變狀態。」B：「你可能會想，請求再送一次，有什麼好想的？」獨立計數A71個漢字、B215個。",
+      "reason": "A落在50–90字，直接給程式讀者判斷重點；B落在180–300字，以問題、案例與重做的後果逐步說明，適合初學者。"
+    },
+    {
+      "criterion": "核心區分讀狀態／建訂單副作用，保留例子的適用範圍",
+      "score": 2,
+      "evidence": "A：「本案例讀取狀態不會；建立訂單會，重送可能多建一筆。」B：「這裡的讀取沒有副作用，是情境設定，不能保證所有讀取 API 都如此。」",
+      "reason": "兩版都區分讀狀態與建訂單的副作用，保留重試可能重建的機制及虛構設定的適用邊界。"
+    },
+    {
+      "criterion": "兩版結構與深度隨讀者而變，非同一固定配方膨脹",
+      "score": 2,
+      "evidence": "A用一段直接提出判斷及例外；B加入「你原本要一筆訂單，重送後卻可能多出一筆」以及「重做一次，會不會多做一次？」。",
+      "reason": "B增加對具體結果的解釋與反問，A集中在辨別副作用；兩版深度與行文隨先備調整，沒有將固定章節模板機械擴寫。"
+    },
+    {
+      "criterion": "Phoenix作者聲音仍可辨，不依對話／幽默／圖表配額",
+      "score": 2,
+      "evidence": "A：「別急著套重試，先辨別副作用。」B：「系統可不會因為你心裡想的是『再試一次』，就把建立訂單當成單純查看。」",
+      "reason": "作者對讀者直接說話並給出有理由的判斷；B的輕微旁白仍解釋操作機制，未依賴角色對話、幽默或圖表配額。"
+    },
+    {
+      "criterion": "只標A/B，不添指定排除的章節模板",
+      "score": 2,
+      "evidence": "artifact 只有「A」和「B」兩個標籤及其正文。",
+      "reason": "沒有固定學習目標、字典定義、歷史故事、章末預告、角色對話配額或其他輸出標題。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": "輸入明示 Phoenix 風格或延續已採 Phoenix 聲音，適用 frozen-v2 phoenix-writing。交付停在對話文字，無建立本站文章或維護技能之要求，故不需啟動 creating-vitepress-post 或 maintaining-writing-skills 的正文流程。 invoked_skill 與 files_read 是 writer 自述，不能當成技能實際載入或讀檔的獨立 instrumentation。",
+  "limitations": [
+    "獨立評分只讀本案 input.json、凍結 rubric.json、output-v2.json，以及 frozen-v2 Phoenix SKILL.md、style-examples.md 和 tw-vocabulary.md；未讀其他評審或 root 的評判。",
+    "評分以 artifact 為使用者可見交付；JSON 外層為評測封裝。未檢視 writer 的實際工具軌跡，無法獨立證明其讀檔、模型配置或外部副作用。",
+    "字數使用 Unicode U+4E00–U+9FFF 漢字計數（E5為純程式故不適用）；不宣稱跨模型、統計效果或 fast 已驗證。"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "case_id": "E9",
+  "invoked_skill": [
+    "phoenix-writing"
+  ],
+  "files_read": [
+    "cases/E9/input.json",
+    "frozen-v21/skills/phoenix-writing/SKILL.md",
+    "frozen-v21/skills/maintaining-writing-skills/SKILL.md（僅 YAML 適用性資訊）",
+    "frozen-v21/skills/creating-vitepress-post/SKILL.md（僅 YAML 適用性資訊）"
+  ],
+  "artifact": "1. 先找出10:00的原資料更新點，再沿時間線看到10:05。你可以先把兩件事分開看：原資料更新與快取失效，是不同事件。\n2. 再對照中間五分鐘：這段可能讀到舊快取值。10:05只標示快取失效，不能據此保證下一次讀取就拿到新值。\n圖說：單快取的更新與失效時間線；未呈現多服務同步或網路延遲。",
+  "execution_note": "先讀封閉輸入及三個候選技能的 YAML 名稱與描述，判定僅 phoenix-writing 適用，再讀其正文。未讀其他案例、評審資料、live repo 或非必要 references。交付為兩個編號步驟及一行圖說，共 111 個中文字（以 Unicode CJK 字元計數，不含標點、數字）。未瀏覽、製圖、附製圖 prompt 或執行外部動作；僅寫指定案例輸出。worker 的工具指定為 GPT-6.1-sol/high；API 無 fast 欄位，未推斷主 work 配置或跨模型效果。"
+}

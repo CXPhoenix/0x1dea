@@ -1,0 +1,73 @@
+{
+  "method": "mechanical checks only, semantic/style verdict delegated independently",
+  "checks": [
+    {
+      "check": "frozen skills/phoenix-writing/SKILL.md",
+      "pass": true
+    },
+    {
+      "check": "frozen skills/phoenix-writing/references/style-examples.md",
+      "pass": true
+    },
+    {
+      "check": "frozen skills/phoenix-writing/references/tw-vocabulary.md",
+      "pass": true
+    },
+    {
+      "check": "frozen skills/maintaining-writing-skills/SKILL.md",
+      "pass": true
+    },
+    {
+      "check": "frozen skills/maintaining-writing-skills/references/writing-process.md",
+      "pass": true
+    },
+    {
+      "check": "frozen skills/maintaining-writing-skills/references/article-maintenance.md",
+      "pass": true
+    },
+    {
+      "check": "frozen skills/creating-vitepress-post/SKILL.md",
+      "pass": true
+    },
+    {
+      "check": "E7 identity",
+      "pass": true
+    },
+    {
+      "check": "E7 body150–260 Han",
+      "pass": true,
+      "actual": 162
+    },
+    {
+      "check": "E7 one caption",
+      "pass": true
+    },
+    {
+      "check": "E7 old gaze command literals absent",
+      "pass": true
+    },
+    {
+      "check": "E9 identity",
+      "pass": true
+    },
+    {
+      "check": "E9 80–160 Han",
+      "pass": true,
+      "actual": 111
+    },
+    {
+      "check": "E9 two numbered steps+caption",
+      "pass": true
+    },
+    {
+      "check": "E9 explicitly requested guide tokens",
+      "pass": true
+    },
+    {
+      "check": "all32 original case JSON hashes preserved",
+      "pass": true
+    }
+  ],
+  "total": 16,
+  "failures": 0
+}

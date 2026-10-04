@@ -1,0 +1,6 @@
+{
+  "reason": "Harness output schema did not require a boolean. E5 writer reported invoked_skill=[] meaning no skill. Initial checker incorrectly demanded literal False; corrected to accept empty representations. Artifact was exact syntax-only code and independent judge passed.",
+  "skill_changed": false,
+  "input_or_rubric_changed": false,
+  "initial_mechanical_report": "mechanical-checks-initial.json"
+}

@@ -1,0 +1,10 @@
+{
+  "case_id": "E5",
+  "invoked_skill": false,
+  "files_read": [
+    "cases/E5/input.json",
+    "frozen-v2/skills/phoenix-writing/SKILL.md (YAML name/description only)"
+  ],
+  "artifact": "```python\ndef add(a, b):\n    return a + b\n```",
+  "execution_note": "native writer; requested GPT-6.1-sol/high; fast not exposed"
+}

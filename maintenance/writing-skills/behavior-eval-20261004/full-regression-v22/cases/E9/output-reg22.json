@@ -1,0 +1,15 @@
+{
+  "case_id": "E9",
+  "invoked_skill": [
+    "phoenix-writing"
+  ],
+  "files_read": [
+    "cases/E9/input.json",
+    "frozen-v22/skills/phoenix-writing/SKILL.md",
+    "frozen-v22/skills/maintaining-writing-skills/SKILL.md（僅 YAML name/description）",
+    "frozen-v22/skills/creating-vitepress-post/SKILL.md（僅 YAML name/description）",
+    "frozen-v22/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "1. 先找出「10:00 原資料更新」，再對照「10:05 快取失效」。你會看到，原資料更新與快取失效之間隔了五分鐘。\n2. 再對照中間的「可能讀取舊快取值」：這表示失效前仍可能拿到舊值，不能當成每次都會讀到舊值，也不能推論失效後一定讀到新值。\n圖說：單一快取時間線；未提供多服務同步或網路延遲資訊。",
+  "execution_note": "先讀 E9 input 與三個候選技能的 YAML 描述，再讀適用的 phoenix-writing 正文與讀圖風格對照。以提供的單快取時間線撰寫兩個編號步驟和一行圖說，使用 Python 計數為 113 個中文字。僅寫本案例 output-reg22.json；未瀏覽、製圖、附製圖 prompt 或採取外部動作，未讀其他案例、評分資料或 live repo。子 API 未提供 fast 欄位，未推斷主設定或跨模型效果。"
+}

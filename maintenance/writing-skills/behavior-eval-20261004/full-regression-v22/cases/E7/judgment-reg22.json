@@ -1,0 +1,49 @@
+{
+  "case_id": "E7",
+  "criteria": [
+    {
+      "criterion": "正文直接解釋更新與失效的落差，圖的證據融入論述；不以移動視線操作導語替代正文，不要求提問開場",
+      "score": 2,
+      "evidence": "「原資料在10:00更新，快取卻要到10:05才失效」「這條時間線讓我們看見，原資料更新與快取失效是兩件事」",
+      "reason": "正文以兩個時間點解釋更新與失效的落差，圖的時間關係直接支持論述；沒有移動視線命令。開場疑問有內容功能，但評分不以問句為必要條件。"
+    },
+    {
+      "criterion": "10:00、10:05及空窗精確，讀取結果保留可能性",
+      "score": 2,
+      "evidence": "「假設你在這五分鐘內讀取，仍可能拿到快取裡的舊值」「不能說這段時間人人都讀到舊資料」",
+      "reason": "10:00更新、10:05失效及兩者間五分鐘均符合資料。讀者遭遇明示為假設，讀取結果保持可能性，未補成實際遭遇或必然結果。"
+    },
+    {
+      "criterion": "保留單快取範圍與圖的資料限制，不推導跨服務保證",
+      "score": 2,
+      "evidence": "「它也只描述單一快取，沒有多服務同步或網路延遲的資料，因此不能拿它保證整個系統何時一致」「並未交代下一次讀取如何取得新值」",
+      "reason": "清楚限定單快取和缺少的資訊；不把失效等同下一次讀取必然取得新值，也不產生跨服務一致性保證。"
+    },
+    {
+      "criterion": "Phoenix語氣自然且因果承接；可對讀者說話、可提問但無固定配方",
+      "score": 2,
+      "evidence": "「你可能會想，原資料都更新了，怎麼還會拿到舊答案？」「『可能』很重要」",
+      "reason": "接住讀者對更新後仍可能讀舊值的疑問，再以時間落差、讀取條件與資料範圍逐步解釋。語氣接近日常共同推理，無僵硬對話、幽默或章節配額。"
+    },
+    {
+      "criterion": "150–260個中文字，只交付正文與一行圖說，無製圖prompt或生成聲稱",
+      "score": 2,
+      "evidence": "artifact 為兩段正文及一行「圖說：單一快取示意：10:00原資料更新，至10:05快取失效前，讀取仍可能取得舊值。」；獨立計數正文191個中文字，含圖說219個。",
+      "reason": "以U+4E00–U+9FFF計數，正文或正文加圖說均在範圍內。artifact沒有額外說明、製圖prompt或生成聲稱；JSON執行紀錄不視為交付正文。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": {
+    "assessment": "適用 phoenix-writing；對話圖文草稿無需建立網站骨架或維護技能。",
+    "evidence": "request明示「用 Phoenix 風格」及「只交付正文與一行圖說」。凍結 phoenix-writing 的交付檢查要求一般圖文融入正文，style-examples明示不要求問句開場。兩個其他候選技能front matter分別限於文章／技能維護及網站新文章檔案。",
+    "reported_execution": "output.invoked_skill列phoenix-writing，files_read列該技能及style-examples；這些是writer自述，不能當作讀檔或路由instrumentation。"
+  },
+  "limitations": [
+    "評估範圍限本案例input.json、rubric.json、output-reg22.json及凍結適用技能與必要參考；沒有baseline或其他judge對照。",
+    "只評artifact內容；writer的invoked_skill、files_read及execution_note是自述，不能驗證實際載入、讀檔或外部副作用。",
+    "中文字數使用U+4E00–U+9FFF，不含數字、拉丁字母及標點。",
+    "本判讀不支持跨模型、統計效果或judge一致率結論；子API沒有fast欄位，不推論主設定。"
+  ]
+}

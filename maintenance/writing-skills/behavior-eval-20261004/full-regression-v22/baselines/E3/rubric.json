@@ -1,0 +1,17 @@
+{
+  "id": "E3",
+  "criteria": [
+    "English, <=80 words, one paragraph, no headings/questions/emoticons/jokes",
+    "Clear reuse→staleness→invalidation mechanism",
+    "Accessible author voice without forced dialogue or stock humor",
+    "Preserves single-cache scope and uncertainty",
+    "No invented lived experience or external unsupported claims"
+  ],
+  "scale": {
+    "0": "violated or missing",
+    "1": "partial/borderline",
+    "2": "satisfied with evidence"
+  },
+  "hard_failures": "Violation of explicit output/format constraints, altered protected facts/stance, invented evidence/experience, unauthorized article/tool side effect, incorrect mechanism",
+  "pass": "No hard failure and every criterion >=1; total >=8/10. Report full/partial scores and quoted evidence, not binary alone."
+}

@@ -1,28 +1,5 @@
-<!-- SPECTRA:START v1.0.2 -->
+# Claude 相容入口
 
-# Spectra Instructions
+此 repo 的共通寫作與維護規則以 [AGENTS.md](AGENTS.md) 為準；依其中條件讀取有效技能，不重複載入另一套風格定義。.claude/skills 的文章與 Phoenix 技能入口指向 repo skills。
 
-This project uses Spectra for Spec-Driven Development(SDD). Specs live in `openspec/specs/`, change proposals in `openspec/changes/`.
-
-## Use `/spectra-*` skills when:
-
-- A discussion needs structure before coding → `/spectra-discuss`
-- User wants to plan, propose, or design a change → `/spectra-propose`
-- Tasks are ready to implement → `/spectra-apply`
-- There's an in-progress change to continue → `/spectra-ingest`
-- User asks about specs or how something works → `/spectra-ask`
-- Implementation is done → `/spectra-archive`
-- Commit only files related to a specific change → `/spectra-commit`
-
-## Workflow
-
-discuss? → propose → apply ⇄ ingest → archive
-
-- `discuss` is optional — skip if requirements are clear
-- Requirements change mid-work? Plan mode → `ingest` → resume `apply`
-
-## Parked Changes
-
-Changes can be parked（暫存）— temporarily moved out of `openspec/changes/`. Parked changes won't appear in `spectra list` but can be found with `spectra list --parked`. To restore: `spectra unpark <name>`. The `/spectra-apply` and `/spectra-ingest` skills handle parked changes automatically.
-
-<!-- SPECTRA:END -->
+原 Spectra v1.0.2 區塊及其生成技能仍可在 Git 歷史與 .claude/skills 追溯。Spectra 的任務與 schema 以 CLI instructions 為準，Claude 的宿主工具用於相應讀檔、編輯或提問行為；Codex 操作見 AGENTS 的條件路由。

@@ -1,0 +1,106 @@
+[
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "SKILL.md",
+    "sha256": "10dec31adb532f814808e1bbf7ccdd20cb55a5793686d03c3ab90808323fef32",
+    "bytes": 3703,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/context-handling.md",
+    "sha256": "7266fb7f540abfb0b8030c775fc669ebea52e3bc0343e2a8acce41097ab72db7",
+    "bytes": 5051,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/draft.md",
+    "sha256": "20d13ca175f45e1257f20bfbc975303de0b26c5f34ed00ac755b3557281608f0",
+    "bytes": 845,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/genres/administrative.md",
+    "sha256": "60d4a48f8caee5a70e0a49bb803bae90fa95fdd023bbd8db5ac7d225aeb12a4e",
+    "bytes": 619,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/genres/teaching.md",
+    "sha256": "f1b2583fa5c23f0d46d6518e12170c90cb7957033598b6a18a8ffede26337e16",
+    "bytes": 528,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/genres/technical.md",
+    "sha256": "87d612fb92a8b9de830c01f5e86be63004d48b314e860e05fa0b8847e4b6619a",
+    "bytes": 251,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/glossary.md",
+    "sha256": "1767304088b715be4797b4d49675df438e37afa751b6d5abc84bee2f18eb866e",
+    "bytes": 1779,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/plan.md",
+    "sha256": "9788caebef06e0e89fe98001468d9805f86fccd5154260dfcb7413799263aaf2",
+    "bytes": 1124,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/project-context.md",
+    "sha256": "89ef85caad996db999b3ec6080377afb571cb31dedb57252baecc2e3916e9a9f",
+    "bytes": 2056,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/revise.md",
+    "sha256": "ff5dbd771fbb2e1f089439c52262815c45431da0aa9b251dcdcd20d8c59224b5",
+    "bytes": 1490,
+    "eof": true
+  },
+  {
+    "skill_id": "writing-for-agents",
+    "version": "be3d06401968682923a83ccfd6040797e6d37473e1f7a33e7d1ba5add7ac09ad",
+    "path": "SKILL.md",
+    "sha256": "40b496927f5bc3500468dbe8fbb24be675555c9b86f80d4b8c22bc4eea3c9759",
+    "bytes": 11182,
+    "eof": true
+  },
+  {
+    "skill_id": "writing-for-agents",
+    "version": "be3d06401968682923a83ccfd6040797e6d37473e1f7a33e7d1ba5add7ac09ad",
+    "path": "SKILL-MECHANICS.md",
+    "sha256": "271ace0339559105f3802c76218a990fd5e9ca427c868626b7985f173bffe119",
+    "bytes": 2750,
+    "eof": true
+  },
+  {
+    "skill_id": "quill-n-grill",
+    "version": "f977506ca51914552cec6bc715a3d027700a97c2091cb8cd58dc07574b675f45",
+    "path": "references/explain.md",
+    "sha256": "c7c380a692f3d16314e0b8c2ff04da832629ca42ccda16cedc8068eb26a0c94c",
+    "bytes": 1243,
+    "eof": true
+  }
+]

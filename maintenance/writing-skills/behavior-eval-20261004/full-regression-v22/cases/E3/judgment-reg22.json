@@ -1,0 +1,48 @@
+{
+  "case_id": "E3",
+  "criteria": [
+    {
+      "criterion": "English, <=80 words, one paragraph, no headings/questions/emoticons/jokes",
+      "score": 2,
+      "evidence": "artifact 獨立依空白分詞為 64 words，沒有換行、標題、問號、顏文字或笑話；開頭：「A cache keeps a result so you can reuse it later.」",
+      "reason": "完整 artifact 為單一英文段落且低於 80 words；無禁止的格式或語氣元素。"
+    },
+    {
+      "criterion": "Clear reuse→staleness→invalidation mechanism",
+      "score": 2,
+      "evidence": "artifact：「A cache keeps a result so you can reuse it later.」「If the cached copy has not been removed or refreshed, it may be stale.」「An invalidation rule decides when to remove or refresh that copy.」",
+      "reason": "先說明可重用結果，再將底層資料變更與未移除／更新副本相連，最後說明失效規則決定移除或更新時機，機制完整且正確。"
+    },
+    {
+      "criterion": "Accessible author voice without forced dialogue or stock humor",
+      "score": 2,
+      "evidence": "artifact：「so you can reuse it later」「The detail to watch is what happens when the underlying data changes.」；frozen-v22 phoenix-writing 允許按內容選擇讀者對話，並在明示無幽默時省略。",
+      "reason": "用直接、易懂的第二人稱說明用途，再點出需要關注的細節；無需問句或角色對話即可引導讀者理解，遵守無幽默要求。"
+    },
+    {
+      "criterion": "Preserves single-cache scope and uncertainty",
+      "score": 2,
+      "evidence": "artifact：「it may be stale」「Here, we are following one cache, so the explanation does not cover coordination among multiple services.」",
+      "reason": "保留 may 的可能性，沒有斷言讀者實際拿到舊值；明確只討論一個快取並排除多服務協調的延伸結論。"
+    },
+    {
+      "criterion": "No invented lived experience or external unsupported claims",
+      "score": 2,
+      "evidence": "artifact 全部內容對應四項 supplied facts：儲存可重用結果、底層資料改變且副本未移除／更新可能過期、規則決定處理時機、單快取範圍；無本人經驗、測試數字或新外部事實。",
+      "reason": "「The detail to watch」僅是說明結構，未新增事實主張；所有機制與範圍均有輸入材料支持，無虛構經歷。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": {
+    "applicable_skill": "phoenix-writing",
+    "assessment": "明示 Phoenix voice，適用作者聲音技能；使用者指定 English、無幽默和格式約束優先於新文預設。風格對照 reference 與不強迫提問及範圍校準相關。沒有建立網站文章或維護檔案的任務，因此其他兩候選技能正文不必要。",
+    "observability": "files_read 對三個 SKILL.md 的條目沒有註明 YAML-only，但 execution_note 聲稱只讀三候選 YAML 並只讀適用技能正文；這屬於自述粒度差異，不能認定或證明讀取非適用正文，也不影響 artifact 的明確約束驗證。"
+  },
+  "limitations": [
+    "評估對象為 output-reg22.json 的 artifact 正文；JSON 包裝欄位屬回歸交付資料，不當作使用者正文。",
+    "files_read、invoked_skill 與 execution_note 是 writer 自述，不能據此證明實際技能載入、工具執行或完全不存在未揭露副作用；可見 artifact 未呈現未授權文章或工具成果。",
+    "本判讀僅涵蓋指定案例與 frozen-v22 適用技能及必要 references；不推論跨模型效果、統計效果或 judge 一致率。API 無 fast 欄位，不推測主設定。"
+  ]
+}

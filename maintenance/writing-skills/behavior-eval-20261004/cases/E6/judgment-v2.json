@@ -1,0 +1,44 @@
+{
+  "case_id": "E6",
+  "criteria": [
+    {
+      "criterion": "作者先不採用立場完整保留",
+      "score": 2,
+      "evidence": "「我先不採用這個快取方案。」及「我寧可先查清楚這些缺口，再決定是否採用。」",
+      "reason": "開頭與結尾都保留暫不採用及先補證據的立場，沒有替作者改成推薦採用。"
+    },
+    {
+      "criterion": "十次／單機／200到120ms精確，未升格分散式或尖峰結論",
+      "score": 2,
+      "evidence": "「平均回應時間明明從200毫秒降到120毫秒」；「這份結果只來自單機、十次測試」；「我還沒測多服務之間的資料一致性，也沒測尖峰流量」。",
+      "reason": "三項測試事實精確保留，並明列未測範圍；未把速度改善升格成多服務一致性或尖峰承載結論。"
+    },
+    {
+      "criterion": "自然聲音與因果承接，保留有效說法",
+      "score": 2,
+      "evidence": "「你可能覺得我太保守……還在等什麼？但這份結果只來自單機、十次測試。」",
+      "reason": "接住讀者疑問後，以證據範圍承接作者判斷；原稿有效的立場、速度改善與缺口關係均保留。"
+    },
+    {
+      "criterion": "缺口若另列與正文分開，不添加無據數字或本人紀錄",
+      "score": 2,
+      "evidence": "正文後另以一行「結論缺口：尚無多服務資料一致性與尖峰流量的測試結果，無法判斷上線後的表現。」交付。",
+      "reason": "缺口說明與正文由空行分開，尾段只有一行；內容直接來自既有未測項目，沒有追加測試數字或本人紀錄。"
+    },
+    {
+      "criterion": "120–220中文字且使用台灣繁中",
+      "score": 2,
+      "evidence": "「快取方案」「平均回應時間」「資料一致性」「尖峰流量」。獨立計數：正文120個漢字，缺口行34個，合計154個。",
+      "reason": "正文及包含缺口行的整體都落在120–220個中文字內，用詞及字形符合台灣繁中。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": "輸入明示 Phoenix 風格或延續已採 Phoenix 聲音，適用 frozen-v2 phoenix-writing。交付停在對話文字，無建立本站文章或維護技能之要求，故不需啟動 creating-vitepress-post 或 maintaining-writing-skills 的正文流程。 invoked_skill 與 files_read 是 writer 自述，不能當成技能實際載入或讀檔的獨立 instrumentation。",
+  "limitations": [
+    "獨立評分只讀本案 input.json、凍結 rubric.json、output-v2.json，以及 frozen-v2 Phoenix SKILL.md、style-examples.md 和 tw-vocabulary.md；未讀其他評審或 root 的評判。",
+    "評分以 artifact 為使用者可見交付；JSON 外層為評測封裝。未檢視 writer 的實際工具軌跡，無法獨立證明其讀檔、模型配置或外部副作用。",
+    "字數使用 Unicode U+4E00–U+9FFF 漢字計數（E5為純程式故不適用）；不宣稱跨模型、統計效果或 fast 已驗證。"
+  ]
+}

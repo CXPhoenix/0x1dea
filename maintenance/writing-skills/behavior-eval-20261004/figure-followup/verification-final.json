@@ -1,0 +1,17 @@
+{
+  "verified_utc": "2026-10-04T05:27:08.849702+00:00",
+  "mechanical_checks": 30,
+  "mechanical_failures": 0,
+  "final_live_hashes_match": 7,
+  "samefile_entries": 5,
+  "local_links_checked_before_archive_record_append": 59,
+  "git_diff_check": "pass",
+  "article_code_changes": 0,
+  "spectra": {
+    "validate": "pass",
+    "analyze": "0 Critical,0 Warning,2 example Suggestions; Consistency skipped because optional design not created",
+    "tasks_complete": "4/4",
+    "archive": "2026-10-04-integrate-figures-in-prose",
+    "spec_applied": "phoenix-style-and-maintenance added1"
+  }
+}

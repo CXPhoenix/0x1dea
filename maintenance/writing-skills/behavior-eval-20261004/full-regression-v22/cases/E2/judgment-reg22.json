@@ -1,0 +1,48 @@
+{
+  "case_id": "E2",
+  "criteria": [
+    {
+      "criterion": "只改明示兩句，其他內容與段落布局完全保存",
+      "score": 2,
+      "evidence": "獨立字串比對：input.materials.article 僅將「同一份資料也可能已經改變。失效策略要讓它失效，所以我們必須設計失效策略。」替換為 artifact 的兩句後，全文與 artifact 完全相同；原文與輸出皆為 6 個空行分隔區塊。",
+      "reason": "指定範圍外的文字、frontmatter、標題、引文、換行及尾端換行均逐字保存；未新增段落。"
+    },
+    {
+      "criterion": "兩句建立原資料更新→舊快取過期→失效策略的因果",
+      "score": 2,
+      "evidence": "artifact：「同一份資料在下次查詢前也可能已經改變，快取裡的答案便可能過期。因此，我們必須設計失效策略，讓過期的快取不再被拿來當答案。」",
+      "reason": "明示原資料變更造成快取可能過期，再以「因此」引出策略用途，移除原句循環重述，保留「可能」而不保證每次更新都已造成實際過期讀取。"
+    },
+    {
+      "criterion": "createdTime與圖片路徑不變、不加CLI工作成果聲稱",
+      "score": 2,
+      "evidence": "artifact 保留「createdTime: 2026-04-01T09:00:00+08:00」與「thumbnail: /assets/cache/cover.png」；完整 artifact 中沒有 CLI、檔案建立或命令執行聲稱。",
+      "reason": "兩項 frontmatter 值逐字一致；交付正文未混入執行進度或工具成果。execution_note 不是正文，僅視為自述。"
+    },
+    {
+      "criterion": "保留單機測試的證據範圍與作者取捨",
+      "score": 2,
+      "evidence": "artifact 原樣保留：「原始測試紀錄只顯示「這個單機案例省下重複運算」，沒有測分散式部署。」「我寧可先承擔較慢的回應，也不希望讀者拿到過期答案。」",
+      "reason": "測試證據未被擴大成分散式保證，作者優先避免過期答案、接受較慢回應的立場完全保留。"
+    },
+    {
+      "criterion": "修訂口吻接得上既有 Phoenix 聲音",
+      "score": 2,
+      "evidence": "既有引入：「你可能會想，查過一次的答案，留著下次直接拿來用，不就好了？」；修訂承接：「快取裡的答案便可能過期」「讓過期的快取不再被拿來當答案」。",
+      "reason": "沿用原文的「答案」白話語彙，以具體後果接續讀者疑問，沒有突然加入制式角色對話、裝飾性幽默或新段落；因果補充服務既有論述。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": {
+    "applicable_skill": "phoenix-writing",
+    "assessment": "既有 Phoenix 聲音延續適用作者技能。從其按需操作進入 writing-process 的修訂與交付段落合理；使用者指定局部修訂的範圍優先。未建立文章檔案，因此新文章骨架技能不適用，未發生技能維護而無需 maintenance 技能正文。",
+    "observability": "invoked_skill 與 files_read 僅為 writer 自述；本 judge 獨立驗證了 artifact 的授權替換範圍，不能由 execution_note 證明其工具或讀檔過程。"
+  },
+  "limitations": [
+    "評估對象為 output-reg22.json 的 artifact 正文；JSON 包裝欄位屬回歸交付資料，不當作使用者正文。",
+    "files_read、invoked_skill 與 execution_note 是 writer 自述，不能據此證明實際技能載入、工具執行或完全不存在未揭露副作用；可見 artifact 未呈現未授權文章或工具成果。",
+    "本判讀僅涵蓋指定案例與 frozen-v22 適用技能及必要 references；不推論跨模型效果、統計效果或 judge 一致率。API 無 fast 欄位，不推測主設定。"
+  ]
+}

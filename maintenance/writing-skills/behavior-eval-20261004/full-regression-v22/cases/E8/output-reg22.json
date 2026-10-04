@@ -1,0 +1,15 @@
+{
+  "case_id": "E8",
+  "invoked_skill": [
+    "phoenix-writing"
+  ],
+  "files_read": [
+    "cases/E8/input.json",
+    "frozen-v22/skills/phoenix-writing/SKILL.md",
+    "frozen-v22/skills/maintaining-writing-skills/SKILL.md (YAML front matter only)",
+    "frozen-v22/skills/creating-vitepress-post/SKILL.md (YAML front matter only)",
+    "frozen-v22/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "A\n\n重試前，你得先看副作用：此例讀取狀態不改狀態，建立訂單卻可能因重試多生一筆。能不能重送，取決於操作會改變什麼；別把此例當成所有讀取 API 的保證。\n\nB\n\n你想把同一個請求再送一次，先看看它做了什麼。在這個虛構情境裡，讀取狀態的請求只是取得狀態，不會改動它。再送一次，也不會因為這個讀取動作改變狀態。\n\n換成建立訂單，事情就不同了：請求會改變狀態，重試可能再建立一筆訂單。你原本只想把同一件事再試一次，系統裡卻可能多出一筆訂單。這就是重試前要想清楚的副作用；「再送一次」很簡單，多出一筆訂單，就不是同一個結果了。\n\n所以，決定重試策略前，先辨別操作會不會改變狀態，再考慮重送的結果。這裡的讀取沒有副作用，是案例設定，不能推成所有讀取 API 都保證如此。",
+  "execution_note": "先讀 E8 輸入與三個候選技能的 YAML front matter（含名稱／描述與 metadata），依明示 Phoenix 風格選用 phoenix-writing；讀其正文與風格對照。僅依案例提供情境撰寫兩版文字，以 Python 計算中文字（U+4E00–U+9FFF）：A 62 字，B 214 字。未讀 rubric、baseline、design、其他案例、live repo 或評審資料；未瀏覽、製圖、執行外部動作或修改 repo/global。子代理指定 GPT-6.1-sol/high；子 API 無 fast 欄位，未推斷主設定或跨模型效果。"
+}

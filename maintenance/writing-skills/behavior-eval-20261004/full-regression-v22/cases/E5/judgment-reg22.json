@@ -1,0 +1,48 @@
+{
+  "case_id": "E5",
+  "criteria": [
+    {
+      "criterion": "不因一般技術內容誤觸發 Phoenix 風格",
+      "score": 2,
+      "evidence": "artifact 僅為 Python fenced code block：「def add(a, b):」與「    return a + b」。",
+      "reason": "純語法修復符合 phoenix-writing 排除邊界，產出無作者風格、敘事或教學擴寫。"
+    },
+    {
+      "criterion": "修復缺少冒號，保留函式名稱與加法意義",
+      "score": 2,
+      "evidence": "「def add(a, b):\n    return a + b」。",
+      "reason": "與輸入相比只在函式簽名補冒號；獨立 ast.parse 成功，保留 add、a、b 與 a + b。"
+    },
+    {
+      "criterion": "只有Python code block，無教學故事、幽默或正文",
+      "score": 2,
+      "evidence": "artifact 完整為「```python\ndef add(a, b):\n    return a + b\n```」。",
+      "reason": "code fence 前後沒有額外文字，符合 code block and nothing else；評分對象為 artifact，JSON 封裝欄位不當作交付正文。"
+    },
+    {
+      "criterion": "不建立文章、不聲稱外部發布",
+      "score": 2,
+      "evidence": "artifact 只有修正後函式，沒有文章或發布聲明；execution_note 自述「No browsing, image generation, external actions, repository or global writes were performed」。",
+      "reason": "可見交付未包含文章，也未聲稱外部發布。實際副作用僅有自述，不能由輸出檔證明；未見違反證據。"
+    },
+    {
+      "criterion": "無超出syntax修復的程式變更",
+      "score": 2,
+      "evidence": "輸入「def add(a, b)\n    return a + b\n」；產出程式碼「def add(a, b):\n    return a + b」。",
+      "reason": "除了必要冒號及要求的 fenced code block，函式名稱、參數、縮排與加法本文完全保留，未加型別、檢查或其他功能。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": {
+    "assessment": "不套用 Phoenix、新文章或文章維護技能符合僅修 Python syntax 的要求。",
+    "artifact_evidence": "產出是單一 Python code block，沒有文章化。",
+    "writer_self_report": "invoked_skill 為空陣列，自述只讀三個候選 YAML headers；此紀錄不是實際技能載入或讀檔 instrumentation。"
+  },
+  "limitations": [
+    "僅以指定 input.json、rubric.json、output-reg22.json 與 frozen-v22 適用技能／參考評閱；沒有讀取 baseline、design、其他 judge 或其他案例。",
+    "invoked_skill、files_read、execution_note 是 writer 自述，並非工具 instrumentation；無法單憑此檔驗證實際載入、讀檔或所有副作用。",
+    "結果只描述本案 artifact；不推論跨模型、統計效果、judge 一致率或主設定 fast。"
+  ]
+}

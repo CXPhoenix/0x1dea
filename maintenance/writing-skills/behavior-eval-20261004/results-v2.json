@@ -1,0 +1,90 @@
+{
+  "completed_utc": "2026-10-04T05:10:44.655058+00:00",
+  "version": "2.0",
+  "cases": [
+    {
+      "case_id": "E1",
+      "score": 10,
+      "verdict": "pass",
+      "hard_failures": []
+    },
+    {
+      "case_id": "E2",
+      "score": 10,
+      "verdict": "pass",
+      "hard_failures": []
+    },
+    {
+      "case_id": "E3",
+      "score": 10,
+      "verdict": "pass",
+      "hard_failures": []
+    },
+    {
+      "case_id": "E4",
+      "score": 10,
+      "verdict": "pass",
+      "hard_failures": []
+    },
+    {
+      "case_id": "E5",
+      "score": 10,
+      "verdict": "pass",
+      "hard_failures": []
+    },
+    {
+      "case_id": "E6",
+      "score": 10,
+      "verdict": "pass",
+      "hard_failures": []
+    },
+    {
+      "case_id": "E7",
+      "score": 9,
+      "verdict": "pass",
+      "hard_failures": []
+    },
+    {
+      "case_id": "E8",
+      "score": 10,
+      "verdict": "pass",
+      "hard_failures": []
+    }
+  ],
+  "mechanical": {
+    "checks": 31,
+    "failures": 0
+  },
+  "live_instruction_hashes": [
+    {
+      "path": "skills/phoenix-writing/SKILL.md",
+      "same_as_frozen": true
+    },
+    {
+      "path": "skills/phoenix-writing/references/style-examples.md",
+      "same_as_frozen": true
+    },
+    {
+      "path": "skills/phoenix-writing/references/tw-vocabulary.md",
+      "same_as_frozen": true
+    },
+    {
+      "path": "skills/maintaining-writing-skills/SKILL.md",
+      "same_as_frozen": true
+    },
+    {
+      "path": "skills/maintaining-writing-skills/references/writing-process.md",
+      "same_as_frozen": true
+    },
+    {
+      "path": "skills/maintaining-writing-skills/references/article-maintenance.md",
+      "same_as_frozen": true
+    },
+    {
+      "path": "skills/creating-vitepress-post/SKILL.md",
+      "same_as_frozen": true
+    }
+  ],
+  "skill_changed_after_freeze": false,
+  "rerun": "No skill change or hard failure; no rerun performed. E7 partial rubric criterion recorded without adding a mandatory question opener."
+}

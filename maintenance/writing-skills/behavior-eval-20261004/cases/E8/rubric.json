@@ -1,0 +1,17 @@
+{
+  "id": "E8",
+  "criteria": [
+    "A與B分別滿足字數範圍與讀者先備",
+    "核心區分讀狀態／建訂單副作用，保留例子的適用範圍",
+    "兩版結構與深度隨讀者而變，非同一固定配方膨脹",
+    "Phoenix作者聲音仍可辨，不依對話／幽默／圖表配額",
+    "只標A/B，不添指定排除的章節模板"
+  ],
+  "scale": {
+    "0": "violated or missing",
+    "1": "partial/borderline",
+    "2": "satisfied with evidence"
+  },
+  "hard_failures": "Violation of explicit output/format constraints, altered protected facts/stance, invented evidence/experience, unauthorized article/tool side effect, incorrect mechanism",
+  "pass": "No hard failure and every criterion >=1; total >=8/10. Report full/partial scores and quoted evidence, not binary alone."
+}

@@ -8,13 +8,13 @@ TBD - created by archiving change 'add-skills-for-scripts-dir'. Update Purpose a
 
 ### Requirement: Agents SHALL invoke the helper script for new posts
 
-When a user requests a new article on the 0x1DEA VitePress site, the agent SHALL invoke `pnpm new:post "<title>" [-c <category> | -d <path>]` rather than hand-authoring the markdown file with a generic write tool. The agent SHALL NOT bypass the helper script even when the desired output appears trivial, because the script enforces frontmatter fields, the UTC+8 ISO-8601 `createdTime` timestamp, the title-case rule, and the matching assets folder.
+When a user requests creation of a new article file on the 0x1DEA VitePress site, the agent SHALL invoke `pnpm new:post "<title>" [-c <category> | -d <path>]`. Existing article edits and conversation-only drafts SHALL NOT trigger scaffolding. The agent SHALL preserve existing createdTime when editing a post. A helper failure SHALL be surfaced instead of bypassed by hand-writing a new article file.
 
 #### Scenario: User asks to add a post under a category
 
 - **WHEN** the user says "新增一篇 course/intro 的文章 'Hello World'"
 - **THEN** the agent runs `pnpm new:post "Hello World" -c course/intro`
-- **AND** the agent does not call any direct file-write tool to create the markdown file
+- **AND** uses the emitted article and assets paths
 
 #### Scenario: User specifies an arbitrary directory
 
@@ -23,17 +23,92 @@ When a user requests a new article on the 0x1DEA VitePress site, the agent SHALL
 
 #### Scenario: User requests a post in the default directory
 
-- **WHEN** the user says "Add a blog post titled 'Quick Note'"
+- **WHEN** the user says "Add a blog post titled 'Quick Note'" to this site
 - **THEN** the agent runs `pnpm new:post "Quick Note"` with no flags
-- **AND** the resulting markdown lands in `docs/post/quick_note.md`
+- **AND** the resulting markdown lands in `docs/post/Quick_Note.md`
+
+#### Scenario: Conversation draft and existing post
+
+- **WHEN** the user requests a draft in conversation or revision of an existing post
+- **THEN** the agent does not call the scaffolding CLI
 
 
 <!-- @trace
-source: add-skills-for-scripts-dir
-updated: 2026-04-27
+source: migrate-writing-skills-to-codex
+updated: 2026-10-04
 code:
-  - .agents/skills/creating-vitepress-post
+  - maintenance/writing-skills/skills-mcp-manifest.json
+  - maintenance/writing-skills/SOURCES.md
+  - skills/phoenix-writing/reference
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/templates.md
+  - maintenance/writing-skills/VALIDATION.md
+  - skills/maintaining-writing-skills/legacy-validator/validate_article.py
+  - skills/phoenix-writing/references/tw-vocabulary.md
+  - skills/maintaining-writing-skills/references/skill-maintenance.md
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/concept-escalation-example.md
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/tw-vocabulary.md
+  - skills/phoenix-writing/AGENTS.md
+  - skills/phoenix-writing/references/style-examples.md
+  - maintenance/writing-skills/legacy/phoenix-writing/AGENTS.md.txt
+  - maintenance/writing-skills/MIGRATION.md
+  - skills/maintaining-writing-skills/legacy-validator/rules/__init__.py
+  - maintenance/writing-skills/residual-inventory.json
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/kaomoji-catalog.md
+  - skills/maintaining-writing-skills/legacy-validator/rules/tier1_format.py
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/humor-patterns.md
+  - skills/phoenix-writing/scripts
+  - skills/maintaining-writing-skills/legacy-validator/rules/tier3_llm_hints.py
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/visual-guide.md
+  - skills/maintaining-writing-skills/references/article-maintenance.md
+  - skills/maintaining-writing-skills/legacy-validator/config.json
+  - skills/maintaining-writing-skills/legacy-validator/rules/tier2_heuristic.py
+  - maintenance/writing-skills/legacy/phoenix-writing/CLAUDE.md.txt
+  - AGENTS.md
   - skills/creating-vitepress-post/SKILL.md
+  - skills/maintaining-writing-skills/SKILL.md
+  - maintenance/writing-skills/original-manifest.json
+  - .agents/skills/phoenix-writing
+  - maintenance/writing-skills/legacy/phoenix-writing/SKILL.md
+  - CLAUDE.md
+  - skills/maintaining-writing-skills/references/writing-process.md
+  - skills/phoenix-writing/SKILL.md
+  - skills/maintaining-writing-skills/references/spectra-codex.md
+  - .agents/skills/maintaining-writing-skills
+  - skills/maintaining-writing-skills/legacy-validator/rules/_common.py
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/dialogue-voices.md
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/domain-infosec.md
+  - README.md
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/editorial-rules.md
+  - skills/maintaining-writing-skills/references/legacy-validator.md
+  - maintenance/writing-skills/INVENTORY.md
+  - skills/phoenix-writing/CLAUDE.md
+tests:
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s1_hint.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_clean.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/k1_sparse.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/test_tier2_tier3.py
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_clean.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_with_warning.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_no_warning.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s3_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_clean.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e2e_full.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/w1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/o1_hint.md
+  - maintenance/writing-skills/tests/samples.json
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s2_hint.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/m1_hint.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/test_tier1.py
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/c1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_clean.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t1_hint.md
+  - maintenance/writing-skills/tests/cases.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_clean.md
 -->
 
 ---
@@ -93,26 +168,95 @@ code:
 ---
 ### Requirement: The skill frontmatter SHALL satisfy the Anthropic Agent Skill specification
 
-The `SKILL.md` frontmatter SHALL declare `name` (letters, numbers, hyphens only), and a third-person `description` that begins with "Use when" and lists triggering conditions without summarizing internal workflow. The total frontmatter character count MUST NOT exceed 1024 characters. The skill name SHALL be `creating-vitepress-post`.
+The skill frontmatter SHALL retain portable Agent Skills name and description fields usable by Codex and existing compatible hosts. The name SHALL be `creating-vitepress-post`, and the concise description SHALL identify new website article creation rather than generic writing or all docs/post mentions. Existing license, compatibility and metadata SHALL be retained where accurate. The historical requirement title SHALL remain for delta compatibility and SHALL NOT make Claude-specific tools an execution dependency.
 
-#### Scenario: Tooling validates frontmatter length
+#### Scenario: Tooling validates frontmatter
 
-- **WHEN** a verification step runs `head -n 20 skills/creating-vitepress-post/SKILL.md | wc -c`
-- **THEN** the byte count is at most 1024
+- **WHEN** the skill validator parses the frontmatter
+- **THEN** it finds a valid name and a concise description within 1024 characters
 
-#### Scenario: Description focuses on triggers, not workflow
+#### Scenario: Description focuses on invocation boundary
 
-- **WHEN** a reviewer reads the description field
-- **THEN** the description names trigger phrases in Traditional Chinese and English
-- **AND** the description does not enumerate the steps the agent must perform after triggering
+- **WHEN** an agent chooses the skill
+- **THEN** website file creation matches while prose-only drafting and existing post editing are excluded
 
 
 <!-- @trace
-source: add-skills-for-scripts-dir
-updated: 2026-04-27
+source: migrate-writing-skills-to-codex
+updated: 2026-10-04
 code:
-  - .agents/skills/creating-vitepress-post
+  - maintenance/writing-skills/skills-mcp-manifest.json
+  - maintenance/writing-skills/SOURCES.md
+  - skills/phoenix-writing/reference
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/templates.md
+  - maintenance/writing-skills/VALIDATION.md
+  - skills/maintaining-writing-skills/legacy-validator/validate_article.py
+  - skills/phoenix-writing/references/tw-vocabulary.md
+  - skills/maintaining-writing-skills/references/skill-maintenance.md
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/concept-escalation-example.md
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/tw-vocabulary.md
+  - skills/phoenix-writing/AGENTS.md
+  - skills/phoenix-writing/references/style-examples.md
+  - maintenance/writing-skills/legacy/phoenix-writing/AGENTS.md.txt
+  - maintenance/writing-skills/MIGRATION.md
+  - skills/maintaining-writing-skills/legacy-validator/rules/__init__.py
+  - maintenance/writing-skills/residual-inventory.json
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/kaomoji-catalog.md
+  - skills/maintaining-writing-skills/legacy-validator/rules/tier1_format.py
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/humor-patterns.md
+  - skills/phoenix-writing/scripts
+  - skills/maintaining-writing-skills/legacy-validator/rules/tier3_llm_hints.py
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/visual-guide.md
+  - skills/maintaining-writing-skills/references/article-maintenance.md
+  - skills/maintaining-writing-skills/legacy-validator/config.json
+  - skills/maintaining-writing-skills/legacy-validator/rules/tier2_heuristic.py
+  - maintenance/writing-skills/legacy/phoenix-writing/CLAUDE.md.txt
+  - AGENTS.md
   - skills/creating-vitepress-post/SKILL.md
+  - skills/maintaining-writing-skills/SKILL.md
+  - maintenance/writing-skills/original-manifest.json
+  - .agents/skills/phoenix-writing
+  - maintenance/writing-skills/legacy/phoenix-writing/SKILL.md
+  - CLAUDE.md
+  - skills/maintaining-writing-skills/references/writing-process.md
+  - skills/phoenix-writing/SKILL.md
+  - skills/maintaining-writing-skills/references/spectra-codex.md
+  - .agents/skills/maintaining-writing-skills
+  - skills/maintaining-writing-skills/legacy-validator/rules/_common.py
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/dialogue-voices.md
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/domain-infosec.md
+  - README.md
+  - maintenance/writing-skills/legacy/phoenix-writing/reference/editorial-rules.md
+  - skills/maintaining-writing-skills/references/legacy-validator.md
+  - maintenance/writing-skills/INVENTORY.md
+  - skills/phoenix-writing/CLAUDE.md
+tests:
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s1_hint.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_clean.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/k1_sparse.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/test_tier2_tier3.py
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_clean.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_with_warning.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_no_warning.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s3_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_clean.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e2e_full.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/w1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/o1_hint.md
+  - maintenance/writing-skills/tests/samples.json
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s2_hint.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/m1_hint.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/test_tier1.py
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/c1_violation.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_clean.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t1_hint.md
+  - maintenance/writing-skills/tests/cases.md
+  - skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_clean.md
 -->
 
 ---

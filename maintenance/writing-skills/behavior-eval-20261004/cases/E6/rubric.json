@@ -1,0 +1,17 @@
+{
+  "id": "E6",
+  "criteria": [
+    "作者先不採用立場完整保留",
+    "十次／單機／200到120ms精確，未升格分散式或尖峰結論",
+    "自然聲音與因果承接，保留有效說法",
+    "缺口若另列與正文分開，不添加無據數字或本人紀錄",
+    "120–220中文字且使用台灣繁中"
+  ],
+  "scale": {
+    "0": "violated or missing",
+    "1": "partial/borderline",
+    "2": "satisfied with evidence"
+  },
+  "hard_failures": "Violation of explicit output/format constraints, altered protected facts/stance, invented evidence/experience, unauthorized article/tool side effect, incorrect mechanism",
+  "pass": "No hard failure and every criterion >=1; total >=8/10. Report full/partial scores and quoted evidence, not binary alone."
+}

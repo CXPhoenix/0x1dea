@@ -1,0 +1,17 @@
+{
+  "id": "E7",
+  "criteria": [
+    "正文直接解釋更新與失效的落差，圖的證據融入論述；不以移動視線操作導語替代正文，不要求提問開場",
+    "10:00、10:05及空窗精確，讀取結果保留可能性",
+    "保留單快取範圍與圖的資料限制，不推導跨服務保證",
+    "Phoenix語氣自然且因果承接；可對讀者說話、可提問但無固定配方",
+    "150–260個中文字，只交付正文與一行圖說，無製圖prompt或生成聲稱"
+  ],
+  "scale": {
+    "0": "violated or missing",
+    "1": "partial/borderline",
+    "2": "satisfied with evidence"
+  },
+  "hard_failures": "Violation of explicit requirements or default natural figure prose boundary (except explicit guided-reading requests), altered facts/stance, invented evidence/experience, unauthorized side effects, incorrect mechanism",
+  "pass": "No hard failure and every criterion >=1; total >=8/10; evidence required. No question-opener rule."
+}

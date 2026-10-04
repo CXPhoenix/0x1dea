@@ -1,0 +1,17 @@
+{
+  "id": "E1",
+  "criteria": [
+    "建立讀者關心的問題並說清重送與重複扣款差別",
+    "說明同鍵同參數／有效期間與不同操作不同鍵的條件",
+    "呈現自然 Phoenix 讀者語氣、幽默可有可無且服務機制",
+    "無虛構本人經驗或跨所有系統 exactly-once 主張",
+    "遵守180–320中文字符、無標題、僅正文"
+  ],
+  "scale": {
+    "0": "violated or missing",
+    "1": "partial/borderline",
+    "2": "satisfied with evidence"
+  },
+  "hard_failures": "Violation of explicit output/format constraints, altered protected facts/stance, invented evidence/experience, unauthorized article/tool side effect, incorrect mechanism",
+  "pass": "No hard failure and every criterion >=1; total >=8/10. Report full/partial scores and quoted evidence, not binary alone."
+}

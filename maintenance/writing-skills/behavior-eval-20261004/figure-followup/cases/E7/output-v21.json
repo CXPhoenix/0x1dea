@@ -1,0 +1,12 @@
+{
+  "case_id": "E7",
+  "invoked_skill": "phoenix-writing",
+  "files_read": [
+    "cases/E7/input.json",
+    "frozen-v21/skills/phoenix-writing/SKILL.md",
+    "frozen-v21/skills/maintaining-writing-skills/SKILL.md",
+    "frozen-v21/skills/creating-vitepress-post/SKILL.md"
+  ],
+  "artifact": "你在10:01讀到舊資料，先別急著懷疑更新失敗。這條時間線裡，原資料在10:00已經更新，但快取要到10:05才失效；中間五分鐘，讀取仍可能拿到先前存下的值。就像底稿改好了，手上的影本卻還沒換，兩邊暫時不同步。\n\n關鍵是「可能」：圖沒有說每次讀取都會得到舊值，10:05也只標示快取失效，不能直接當成新值已經送到你面前。它能說明這個單一快取的舊值窗口；至於多個服務何時同步、網路延遲多久，這張圖沒有提供答案。\n\n圖說：原資料更新後，單一快取在失效前仍可能回傳舊值。",
+  "execution_note": "先讀封閉輸入與三份候選技能的 YAML 名稱、描述，判定明示 Phoenix 風格適用 phoenix-writing，再讀該技能正文；另外兩份技能未讀正文。依提供的單快取時間線撰寫正文及一行圖說；正文共 162 個中文字，含圖說共 185 個中文字，以 Python 計數。未讀其他案例、rubric、parent-qa-correction、design、舊輸出、live repo 或評審意見；未瀏覽、製圖、附製圖 prompt、修改 repo/global 或執行外部動作。worker 工具指定為 GPT-6.1-sol/high；API 沒有 fast 欄位，未推斷主 work 配置或跨模型效果。"
+}

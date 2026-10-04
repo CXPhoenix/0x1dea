@@ -1,0 +1,15 @@
+{
+  "case_id": "E7",
+  "invoked_skill": [
+    "phoenix-writing"
+  ],
+  "files_read": [
+    "cases/E7/input.json",
+    "frozen-v22/skills/phoenix-writing/SKILL.md",
+    "frozen-v22/skills/maintaining-writing-skills/SKILL.md（僅 YAML front matter）",
+    "frozen-v22/skills/creating-vitepress-post/SKILL.md（僅 YAML front matter）",
+    "frozen-v22/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "你可能會想，原資料都更新了，怎麼還會拿到舊答案？圖中的落差就在這裡：原資料在10:00更新，快取卻要到10:05才失效。假設你在這五分鐘內讀取，仍可能拿到快取裡的舊值；「可能」很重要，圖沒有記錄每次讀取的結果，也不能說這段時間人人都讀到舊資料。\n\n這條時間線讓我們看見，原資料更新與快取失效是兩件事，時間未必對得上。10:05標示的是失效，並未交代下一次讀取如何取得新值。它也只描述單一快取，沒有多服務同步或網路延遲的資料，因此不能拿它保證整個系統何時一致。\n\n圖說：單一快取示意：10:00原資料更新，至10:05快取失效前，讀取仍可能取得舊值。",
+  "execution_note": "先讀案例與三個候選技能的 YAML，依明示 Phoenix 風格讀 phoenix-writing 正文及圖文校準參考；未讀其他候選正文。依提供的圖像文字材料撰寫正文與一行圖說，以 Python 計數，含圖說共 219 個中文字。未瀏覽、製圖、附製圖 prompt、執行外部動作或寫入 repo/global；只寫本案例輸出 JSON。執行環境工具指定 GPT-6.1-sol/high，子 API 無 fast 欄位，未推斷主設定或跨模型效果。"
+}

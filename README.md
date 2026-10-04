@@ -133,6 +133,12 @@ pnpm new:post "系統架構" -d docs/design
 1.  **文章建立**：生成標準 frontmatter 的 Markdown 檔案。
 2.  **資源管理**：在 `docs/public/assets` 自動建立對應名稱的資料夾 (如 `post_tech_vue3_tutorial`)，方便存放該文章專屬圖片。
 
+## Agent 寫作技能
+
+[phoenix-writing](skills/phoenix-writing/SKILL.md) 處理明示的 Phoenix 作者風格；[creating-vitepress-post](skills/creating-vitepress-post/SKILL.md) 建立本站文章骨架；[maintaining-writing-skills](skills/maintaining-writing-skills/SKILL.md) 處理技能與文章維護。Codex 從 .agents/skills 讀取入口，Claude 相容入口在 .claude/skills，內容只有 repo skills 一份。
+
+一般對話草稿與既有改稿不呼叫新文 CLI。搬移的指定來源、相容位置、復原方式及驗收結果見 [技能維護紀錄](maintenance/writing-skills/MIGRATION.md)。
+
 ## 架構 🏗️
 
 ### 系統概覽 📊
