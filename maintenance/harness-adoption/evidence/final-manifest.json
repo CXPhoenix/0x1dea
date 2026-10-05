@@ -1,0 +1,1541 @@
+{
+  "recorded_at": "2026-10-04T12:19:38.820003+00:00",
+  "scope": "Current public evidence projection, excludes this manifest itself. Previous raw evidence index SHA is retained in publication-projection.json.",
+  "files": [
+    {
+      "path": "maintenance/harness-adoption/evidence/README.md",
+      "sha256": "75cdaaf90aa92fd23746d6303b1c82360f513f1ad91b6d8a50434288d812215d",
+      "size": 2539
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-home.png",
+      "sha256": "3978d9be874d334ee21cf3fe5b76df7b2ebd30f446847fca8e3a4de2f0873db1",
+      "size": 63068
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-mobile-list.png",
+      "sha256": "7f62bb58fefbd6d6a84a416fcb97bedf632a64e6829ac6d18bd917c1e7b1375f",
+      "size": 20336
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-mobile.png",
+      "sha256": "00de45590b7ddf7cac618ceef6d12b43ebed29173434d1794a58cf7e9b6f4702",
+      "size": 38969
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-particles-light.png",
+      "sha256": "b0979635677595b5213353fac9eeda3537ce0af5fd5ab4ca74fd2be07cec51ea",
+      "size": 64240
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-restorable-build.json",
+      "sha256": "936346d03240c8dd03e4e10fae580a57c0b1276dc99d2d671d8f776cbcf22328",
+      "size": 1275
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-restorable-build.log",
+      "sha256": "9c32bd991232f6f6fb3ae2f649e6700479a1c85c51eba3053b984c8c4d4c4138",
+      "size": 276
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-search-empty.png",
+      "sha256": "66e7d2f554ec3692f34233fb3142287865db7a18b19bd823f0ccba78d8c09d8d",
+      "size": 23516
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-server-final.log",
+      "sha256": "67b92ea459b70664708f9e8d1e05b23cbbd14d26c829ffbe91703fa8644845f3",
+      "size": 3538
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-unit-resumed.json",
+      "sha256": "ca1fc5bbb81fdb234f49b4e71ac81f76eb0f551ea97130cb00852f5d0688e28c",
+      "size": 1254
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-unit-resumed.log",
+      "sha256": "a91f37e3d9a60bb07166d188fda8da15bd9794aa5f65a80d8a4dfa0b4fe233cc",
+      "size": 376
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/bilingual-full-structure-provenance.json",
+      "sha256": "23b3245027a486b4fec1f3add7779dba5e3d152fdffaac93ba110f0e9ea6107a",
+      "size": 1283
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/bilingual-full-structure-provenance.log",
+      "sha256": "2077f22002e17089293d9c966473c5cca301ec02a0a3327de0109fae7469946c",
+      "size": 314
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-particles-records.json",
+      "sha256": "248e2eb665e1c0b2538ea8cdf3de1e657dcb8e6db1c5b68b57f63ff77d941b26",
+      "size": 6629
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-final.json",
+      "sha256": "48517ba073b39a4216d479b838c8165d07af3d3949a95422bdb09db1977b719f",
+      "size": 1190
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-final.log",
+      "sha256": "7663d394207dda08a31d22532445c4886441706ea6fbcbec0990d58aa2655f59",
+      "size": 2477
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-key-corrected.json",
+      "sha256": "fc5ec27756b23cd2f83fd04e1541646712d54de3eec561a571d8cdb0910d5e50",
+      "size": 1305
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-key-corrected.log",
+      "sha256": "069401dd76adbf57047e983bf4df9867bf211c37abf6ed070da3a7e2dcee4d0c",
+      "size": 305
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof.json",
+      "sha256": "c17877033b7163629fea048761e64e515869f56142998cab558e72f05bc9b5c7",
+      "size": 1278
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof.log",
+      "sha256": "a219ebc62371753d54a6ee6ce06af7a0c67c26ce518698a7ecd9c92c657f2589",
+      "size": 330
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-records.json",
+      "sha256": "aa1c2526420632d3cff38e75ce13130b13e76ead4792acc085d2e97cd378ee34",
+      "size": 62625
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/build-routes-assets-data-parity.json",
+      "sha256": "37f48a2848b7a4dd0907a1f97c02afde4b80c902a91ed460dfb552bbb99f3fef",
+      "size": 1179
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/build-routes-assets-data-parity.log",
+      "sha256": "0913c822266303c7d8d74db512f44470d8086647d9409e3a22bf3b2e49cf8a03",
+      "size": 13699
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-first.json",
+      "sha256": "273d0e1d3b4d44f9315cc12fe5548571d008a1fb447a96eacf7377ac5b913659",
+      "size": 1213
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-first.log",
+      "sha256": "5d1e4ff613ab1a0b1e1ad1fd7ba712543fdd6f42146f33dcb731797a6e9bed86",
+      "size": 36
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-green.json",
+      "sha256": "9290375544c56c761c40e80efb8c64fe2175a35d41a89f06c8e50ab51df91252",
+      "size": 1209
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-green.log",
+      "sha256": "c8fb0c0062da19abe437b578c09c10f8ef2c5a07aa871fa097db684909e19789",
+      "size": 458
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-article.png",
+      "sha256": "013abc79148816bb93bc36e715fb50ccac1d4018cac13bfa5d0bfaecf382f85c",
+      "size": 61456
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-build-initial.json",
+      "sha256": "6e404ffd7ec51213f85630a16c5a9bba979480f1a0779e3ae57a9c1adfc5f2a6",
+      "size": 1260
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-build-initial.log",
+      "sha256": "7bf529fdf13f45caa9277f3c2f7df8c32b36c612e6b347ee3dec8ba2e1b158da",
+      "size": 259
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-cli-ipc-allowed.json",
+      "sha256": "e83500aa84233e6c1b844ce9639dd1313d434e7f4452a9a1d675ae76f976700c",
+      "size": 1296
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-cli-ipc-allowed.log",
+      "sha256": "819ef4c42d62b536ff7b3b4485693d814491b5b351b2d01004261391b8c1f2cb",
+      "size": 6962
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-cli.json",
+      "sha256": "ce690543a0380b2d270c3699d64aaf3d88af1bbb5fdb1d13de0287ad6f8fca8d",
+      "size": 1275
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-cli.log",
+      "sha256": "58779fb5f86e3ca0050b5888eb9e2c790a90de60ef3e8b47f8faedbac905949f",
+      "size": 1047
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-dark.png",
+      "sha256": "2282b20b42d85a7edc568bf765175eecdb2ed1467ff3b35b8309e828692ccf29",
+      "size": 59938
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-framework-verify-after-retired-empty-dir.json",
+      "sha256": "841f510a0bff886efd9f7d880e9cba5428e859659267cb10d7a2c183911b2ff1",
+      "size": 1236
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-framework-verify-after-retired-empty-dir.log",
+      "sha256": "5c68bb18165bbf0453415e87778f44c1aea842d5e161e2c7ab963038d1760f55",
+      "size": 210
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-framework-verify.json",
+      "sha256": "514a2dc48f56ead3f7805e5fb8cfba16bd2eceb332e0ba7cfcf826d66da33ab4",
+      "size": 1192
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-framework-verify.log",
+      "sha256": "a6c3d0bba8684aa4458d14bd543e9af3b52ff28711597aca031dd2dd86106ca3",
+      "size": 411
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-home.png",
+      "sha256": "8012881e614506d7ead993e1b2ae3b64d8bcd05f4f3bf16c271e7efdaac7f95f",
+      "size": 64124
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-mobile-list.png",
+      "sha256": "0802b7273707f7f1be4b24c5cd8b7fa9398250983cd750875e72b58dd54e2ee0",
+      "size": 20258
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-mobile.png",
+      "sha256": "00de45590b7ddf7cac618ceef6d12b43ebed29173434d1794a58cf7e9b6f4702",
+      "size": 38969
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-particles-light.png",
+      "sha256": "da708f0435362a556fc4415460e8256e851d1fdc11bde899165bc362ecbcacca",
+      "size": 64394
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-server-final.log",
+      "sha256": "f90ab5c3d578977589481e9a9d0923fc6ef76045a6e67e3c8e25540ccd4560af",
+      "size": 3434
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-main.json",
+      "sha256": "472822b813650381dda68f0e90e6fd447f87eabd697bc56c48dab10995676565",
+      "size": 1171
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-main.log",
+      "sha256": "f067b36a9828a631e85f40e9f26042b2f49bd13055ebe6dfd2a9c1f951777610",
+      "size": 732
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-materializer.json",
+      "sha256": "7b4a24c9080314dfc4a6853f444bf80d74209eb7aa9326420547c912933202d9",
+      "size": 1205
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-materializer.log",
+      "sha256": "cda251d30da65cd9b63191a5a63267c05e0ca23202602a02ac9d4f3e300c5008",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-project.json",
+      "sha256": "0a6619360f5e1bed9fc6502164d4fa52074b9f04004b26b5be3e4ad219b101ce",
+      "size": 1168
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-project.log",
+      "sha256": "5c68bb18165bbf0453415e87778f44c1aea842d5e161e2c7ab963038d1760f55",
+      "size": 210
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-reviewed-drift.json",
+      "sha256": "487c57eaed74bb682568aa561183e2803cecdd529843b66274cd797f35fb7fa0",
+      "size": 1170
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-reviewed-drift.log",
+      "sha256": "29ce205c7eab08b5304d03d4d7770cc747c556b57991882592d437fb79a6cc41",
+      "size": 2749
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/copy-provenance.json",
+      "sha256": "38580aeffa0c58cb4fb98b2960d13de0171ec7458e856ef004fd0b81466d338d",
+      "size": 62661
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/coverage-trace-verifier-before-review.json",
+      "sha256": "dc8fcf7fc17e0b730fb8c63890dce8d2d37c943626972dadd1277d01b4be9dcd",
+      "size": 1218
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/coverage-trace-verifier-before-review.log",
+      "sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9",
+      "size": 736
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-catalog-green.json",
+      "sha256": "2168c24698b595ca3732c1b777ec3f430306dcfb4802d0db3a1b8d4b03ce844c",
+      "size": 1286
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-catalog-green.log",
+      "sha256": "a976ebdfae57b1f259529e3f2f8cefcde49a2b31b2d5a5c96efea67d400e685b",
+      "size": 1921
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-catalog-red.json",
+      "sha256": "871b7968ac52e8e085aa47e08a65f341a23eb6db4450a37f0511762862cef84e",
+      "size": 1386
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-catalog-red.log",
+      "sha256": "b65a56f981332a6cb304e348506f0f527978bfb341aec786c4a0eb024c4f80e3",
+      "size": 3714
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-final-main.json",
+      "sha256": "7c3e3cff44cf50849988c12cb35d9e116127976db1f02510327bb213d2950b02",
+      "size": 1196
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-final-main.log",
+      "sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9",
+      "size": 736
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-final-tests.json",
+      "sha256": "bbed4e274ec49bc89aea2c90746b4cf8b6cd7af47a9ea9665d70d56fe63e1b8c",
+      "size": 1281
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-final-tests.log",
+      "sha256": "1a83956e7021485bd9a940a2182f31eb156fb2468fd449f6aa4aa380b3d9e85a",
+      "size": 2786
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-main-01.json",
+      "sha256": "5234174dcce646f05bc524d2a76c0f6d55354b61007966fd91148caf284d731f",
+      "size": 1189
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-main-01.log",
+      "sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9",
+      "size": 736
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-pins-green.json",
+      "sha256": "cf132746471aa23841a99685be8120ef1b4c16ca78b006fa97f58c36a3386fa1",
+      "size": 1280
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-pins-green.log",
+      "sha256": "488b0f9a97f55bd21a802a9ba722ee1e7d18bb1df978f9eb38b1dbf77c94907d",
+      "size": 1744
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-pins-red.json",
+      "sha256": "e0029b5b3226c693296c043ba7e62665b4f257501b7bb394c47a2ee93efb7395",
+      "size": 1380
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-pins-red.log",
+      "sha256": "c2c453115bde33599ecd52d72984832376b37db1b01da82a1b5fcda463c152bf",
+      "size": 2674
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-selfreview.json",
+      "sha256": "9353709cdd0bc65a83731d7ba1f2b08101aa170562b8b7e734471c31ea98925a",
+      "size": 1279
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-selfreview.log",
+      "sha256": "669ffe2031050d85a8530c56a0f3c1970769c72775fbcbe6d0625e1d101c7280",
+      "size": 2786
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-tree-green.json",
+      "sha256": "3bbf654814c78d22e75a5f107763918fc8b8c81285c4d0e7d1ce8158afe64926",
+      "size": 1280
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-tree-green.log",
+      "sha256": "1d296cce6ef1e159e7b18509b1518f57c468033959c311bd40cf2db1c8960c43",
+      "size": 2100
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-tree-red.json",
+      "sha256": "4539bebf5221e8667f1d09d4b9f7c1f2eee1afda542909fbe5a12f4d9db10426",
+      "size": 1380
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-tree-red.log",
+      "sha256": "e446331435deb4f1dbd278fb7edc2f7bb00b1686721c1fcce416c4fdac2b9f68",
+      "size": 6119
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/fresh-writing-mechanical-final.json",
+      "sha256": "1990283eaaf5d2e677a496e6c4a465292a3590f07885a461b71e7671589efdf5",
+      "size": 1188
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/fresh-writing-mechanical-final.log",
+      "sha256": "0613edf5f8165da3d84586fbb2a3ccefb3c9742ef8103e72ee3ad4ebc6573336",
+      "size": 2675
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-bilingual-resumed.py",
+      "sha256": "e03d838bf1dc6af31e7e43b7caa87cb3bd86dc3616a74a9085b1b24c04cb415f",
+      "size": 2548
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-browser-evidence-resumed.py",
+      "sha256": "4a5f99ce7911c46fb22d349e1f4adc4c693311b26e391ff2aacaab618219fa48",
+      "size": 3272
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-build-parity-resumed.py",
+      "sha256": "a472c3478ec8faba815573cc96d7090725478249c0b9fcba140a334c731c476c",
+      "size": 1414
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-cli-resumed.py",
+      "sha256": "63500d77a8ff8145722567a3ae19b1003fbe0c5ab164acece0b38bcb07336477",
+      "size": 3532
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-native-catalog-resumed.py",
+      "sha256": "cfc7b372a0169466bf1a07cf58da5002a088efb177f5d388efc65341c145bdcb",
+      "size": 3615
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-originals-resumed.py",
+      "sha256": "40ec8e23ded6b812aef4d7abfd76d78bc14abd19dae9864f853838166791da91",
+      "size": 3453
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-writing-resumed.py",
+      "sha256": "f4d55bc51ff82cc84cfcf3fe3c163757dc44584a8d6cb946eabd7d4586adfd5a",
+      "size": 17730
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/exercise-rollback-resumed.py",
+      "sha256": "dbba4ed080fdd8de94061648850fee7494c40842ff93a2ca62a82572f652285d",
+      "size": 3101
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/run-check-resumed.py",
+      "sha256": "6d7a5e2056857526c1f2553fc0b1ad7926f975a8b87a2bd243a997ec44561966",
+      "size": 1710
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/serve-preview-resumed.py",
+      "sha256": "4829e29cfac3a5c9b3e516f87a9599aa580c93de30a61b5353d3a26b6c33cf2a",
+      "size": 662
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/verify-final-review-drift-resumed.py",
+      "sha256": "2df84ae1021f519968f6b49d3f9188259e0704a5ad6e5abe9efac2b550082614",
+      "size": 2778
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-figure30-with-publication-ledger.json",
+      "sha256": "77984fc4d2b08dd5e23dfd429677348ca57d272583a1f144e5622146bbb20cb0",
+      "size": 1256
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-figure30-with-publication-ledger.log",
+      "sha256": "fff2228ff01cad6069d3807c354d20080f8ed965b0df926c01a66e20bcb2f60c",
+      "size": 131
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-figure30.json",
+      "sha256": "8564f24f9d5a5cc4142ea9daa4bce681790072c944aaa83e8da945051965d185",
+      "size": 1210
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-figure30.log",
+      "sha256": "e4b2179ae78ebb48dc888c91621f2c268750a766ec2efd85f5f6679f7d2ba09f",
+      "size": 131
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-mechanical31.json",
+      "sha256": "7cbfbf7dfc2950540d877f45882841b7f03cd1a007ac1db6392c944f0b39a354",
+      "size": 1203
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-mechanical31.log",
+      "sha256": "0929a477b199a1bf8ddd39f5822465329c987ed065372245d705fbea56ef82fc",
+      "size": 132
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-regression62.json",
+      "sha256": "f811036c9c1523dbac37cb7168211f4b35cc8e18ac61c8b5f3224fa6d2dd3a14",
+      "size": 1222
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-regression62.log",
+      "sha256": "4501396e093bf60d39d09973e5847776d3e06d5d231a0af051da9320a0593266",
+      "size": 141
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-green.json",
+      "sha256": "6e579088508744447c3214af5f7daa4f488e71538609c86e78301719d07f89f7",
+      "size": 1292
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-green.log",
+      "sha256": "edf78d7fbffa5f070d16ca7dd4bd6d90c11ad873385c08f76bf98af2f9c4e46c",
+      "size": 3585
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-proof.json",
+      "sha256": "352a4ce46f54ab86ece395cfc4e202d979d4f2092e4ccfe58c4d120c8b6ffccd",
+      "size": 1227
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-proof.log",
+      "sha256": "a7bdd3bcf03da84ffaa422bb9400d35f74b17f7876846178077ed3f6a2beaec5",
+      "size": 920
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-red.json",
+      "sha256": "c288315fc17835e24f6d5ab0cc635bd1d03cd01c2b35ab55fd12bf8f2dc3cf73",
+      "size": 1393
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-red.log",
+      "sha256": "9f64af32bd09a67dc2e4952330cd75e2e6e9ab64cc7052cd577306590cbbef3f",
+      "size": 6538
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-write.json",
+      "sha256": "b8a76c727cacd86351cba7676803ffa41f19fcca84ea6a748b50a5fa4c23ce34",
+      "size": 1222
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-write.log",
+      "sha256": "6d0b7334b9cea24bd18a869d1b103616975fa4852419eee7d2be8e60009d8835",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-green-01.json",
+      "sha256": "8d79c033958365253997d2be81c93b6789ce88a16bf66224f8a8138abdc00795",
+      "size": 1373
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-green-01.log",
+      "sha256": "662bf11d6cec51ea94d681c6acd153b1675eef24e6ea1657f40214cb992956df",
+      "size": 6237
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-green-02.json",
+      "sha256": "dc1668c7d1d301c9b4aa0e0711ef47202eac10ad3e5e8f9513450d729d5d29e1",
+      "size": 1274
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-green-02.log",
+      "sha256": "783d8f32f16d5dd608e756c5239915233146d2312f50b0f9a26776190ab5c43d",
+      "size": 1906
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-metadata-green-01.json",
+      "sha256": "6dd172266cb83ee8d84088f08b3ad597a5fd143a7c217b301cba4df690c8a791",
+      "size": 1292
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-metadata-green-01.log",
+      "sha256": "db80bfa5102c56f6f8badca9db1909fd7cbbbf2c67d27fa813f1ad2eb7948ea1",
+      "size": 2918
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-metadata-red-01.json",
+      "sha256": "80c6364196c045673b3461fd8f92fe82b592e8d7b59efa6005d349617803e66f",
+      "size": 1392
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-metadata-red-01.log",
+      "sha256": "2096e200fb7326b5a5c172c47516a0f1807c06f63e6f9b4be938bc8935b7ff86",
+      "size": 6825
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-check-01.json",
+      "sha256": "7823e00a273d4f7361eb47e264e5589f7e4e82614380c2affc7cc892b20e75ca",
+      "size": 1222
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-check-01.log",
+      "sha256": "82495b8cd298f1d1d686aecf517bb3ed3328acebde560dd864175026c6a3d82b",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-determinism-01.json",
+      "sha256": "e12e3d6077fa49a27628e109c91309d29fcac96b7444b0954342086ac4d22990",
+      "size": 1217
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-determinism-01.log",
+      "sha256": "6bb25d938caa0d61ccc096e6a8f1952b17c31a995adc5d56d4c61cacedf251ee",
+      "size": 920
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-final-write.json",
+      "sha256": "df4ba7a1c10ecc8e893697aaa216d9d224981307fe7996652ebb25389114dccd",
+      "size": 1226
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-final-write.log",
+      "sha256": "41f7cddb06f8dbf10412385b9c1251ccabd532b62346a4647325d8464a1d8e8a",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-proof.py",
+      "sha256": "5acce8dbddbbd3d8c9504dbaf4168c51c962e300d6a259e4849ec6ec0d2411f3",
+      "size": 2261
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-repeat-01.json",
+      "sha256": "2c78af9e31852a5d5463e9abbea5ef79f7cb0f14c89224cb52a3e9485f264e23",
+      "size": 1224
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-repeat-01.log",
+      "sha256": "41f7cddb06f8dbf10412385b9c1251ccabd532b62346a4647325d8464a1d8e8a",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-write-01.json",
+      "sha256": "4f183ded7276a4ac1f0a0a300279ecc7c1ad9b92f0c5fbb956f69e9b997575ef",
+      "size": 1222
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-write-01.log",
+      "sha256": "41f7cddb06f8dbf10412385b9c1251ccabd532b62346a4647325d8464a1d8e8a",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-final-proof.json",
+      "sha256": "f90f1f5ad2d3d068f76709e67ce3d87ffa836d7943c9531dcbaf4e78bcf78ced",
+      "size": 1230
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-final-proof.log",
+      "sha256": "d3962d1c137066bcecfb1a77476ffb0e91a43b8929d53866f57092f2cee796f3",
+      "size": 920
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-final-write.json",
+      "sha256": "de71433d500869d2707047f39734be9599c91b6e697c33c50ccc2f17f2e4ebe0",
+      "size": 1226
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-final-write.log",
+      "sha256": "6d0b7334b9cea24bd18a869d1b103616975fa4852419eee7d2be8e60009d8835",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-green.json",
+      "sha256": "3eadaa26bc8b57b2c13b9108cf855df5b4abeb4bf4fef1bff5e5f07f5e6c41e1",
+      "size": 1293
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-green.log",
+      "sha256": "ba59c7f502241be9dd78a77fb700dd4de95e7c27fd9d15e3d6c94b80b62de1b9",
+      "size": 3089
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-red.json",
+      "sha256": "abee9e9a910834352da6777cec36d90e5ea9883cc5eec1d209a85c973099dd45",
+      "size": 1393
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-red.log",
+      "sha256": "c776038a02cc3d57112aab5faf086572325fe0ef60a4eed6e523e287bc78c0ba",
+      "size": 5771
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-01.json",
+      "sha256": "f204d47c04d99b631db1e9f8fc2a8aafa743a41b8707b49965c6acb29d22bcb3",
+      "size": 1374
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-01.log",
+      "sha256": "a3d2eb5c4c3703efb8f8ab280a08c27328679b28e8a49c7050d485a27e67a175",
+      "size": 7177
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-02.json",
+      "sha256": "8701a91620e1d373e3cdcee573af47b31697790d4a6f5f42c08be937d5a0a09e",
+      "size": 1375
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-02.log",
+      "sha256": "6595f67e35c5846388dd206ca74f725f5513793ebbfe182002d7c6529a91903d",
+      "size": 19448
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-03.json",
+      "sha256": "bc28a4a73bf28df578e92ad60ce8839e3c4039ba45164963ffd2eb90aed5bd37",
+      "size": 1375
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-03.log",
+      "sha256": "f4a5a3f0b9e803bd743226f6b7855aa31a83363682486ff8ccf041cd615dc1bb",
+      "size": 18709
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-routing-final-proof.json",
+      "sha256": "a4a9e78f575e3b43a10212bf8908aeb52ee099b10959d314732f394729159d19",
+      "size": 1233
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-routing-final-proof.log",
+      "sha256": "4a52e62f55f8ab3fa2d1a580f24489bbc8ce82bd991a174b2b13986d9a24a7e4",
+      "size": 920
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-routing-final-write.json",
+      "sha256": "956f445a29dadb9093876dc2703f5d7627a8de44912d69b509dbf3967b47ad15",
+      "size": 1227
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-routing-final-write.log",
+      "sha256": "6d0b7334b9cea24bd18a869d1b103616975fa4852419eee7d2be8e60009d8835",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-selfreview-01.json",
+      "sha256": "d66d09b971e5ca5cfb4f8b66e10968b3c0633e248f050c48d5de0d59af541219",
+      "size": 1285
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-selfreview-01.log",
+      "sha256": "ab07efeeca3544eaa8f198ac09c348ee457a4c223bc0287c3bba8280d7688584",
+      "size": 2751
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-summary.json",
+      "sha256": "676001c5189c63402bdd6ceade0a8ece2fbe268478d50decda6f77b9b2cc5616",
+      "size": 4529
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-catalog-observation.json",
+      "sha256": "4be7d5357dff7fad4db33298e5567de9aaedd580b486962d8b2c0d4fb8e9f6ed",
+      "size": 1171
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-catalog-observation.log",
+      "sha256": "af6a3b70ab2134b31c52f9679979bf8cbb09f8a3ce4aee61e8321187c445dd7d",
+      "size": 24334
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-catalog-proof.json",
+      "sha256": "af6a3b70ab2134b31c52f9679979bf8cbb09f8a3ce4aee61e8321187c445dd7d",
+      "size": 24334
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-cli-failed-sanitized.json",
+      "sha256": "a0bda1593f5d7d89007078274c582ca69c2243919a6115e48a35ec0452fdb3c0",
+      "size": 1500
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-discovery-prompt.txt",
+      "sha256": "df74b73d7a9b4ba6ad387d41970b22ae353f4cd1f205627b829b80688f568337",
+      "size": 956
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-closeout.json",
+      "sha256": "81182ceed3e7f400b151988f43644911c308922b4617c6a213bc089fb60817d5",
+      "size": 1190
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-closeout.log",
+      "sha256": "6afc9f1a2887611f2d66f6286c27ed811ab30f3f4dcbb58b5403596f1622f4de",
+      "size": 310919
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-final.json",
+      "sha256": "22be4fd51e65ccb6c637d310124b09fed5ebdf299f2dbe4931551c2290b66863",
+      "size": 1282
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-final.log",
+      "sha256": "126f19a75e4f995115770494d78bea15430600420715b5984b1f61a975da4f94",
+      "size": 228
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-full-tracked-tree.json",
+      "sha256": "a2379606ac8a1200c246c5b8135836c7a996bf96fc473a7ce8860f1a63408fea",
+      "size": 1307
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-full-tracked-tree.log",
+      "sha256": "5bbfd410d9cd7578fae1aa9c6a48adb2c45b58fbb74e01e7a316f41ad82c5314",
+      "size": 236
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-project-context.json",
+      "sha256": "392943d3a4313e9def966c9c4a68f648c952b06d5917c5cac17a8e8c343e9c87",
+      "size": 1203
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-project-context.log",
+      "sha256": "fd15d7e9fdf37fd747454ebeb407c0e2ea087d84b021479ef199d3836034a7ea",
+      "size": 310698
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-snapshot-digest-final.json",
+      "sha256": "6d14d16a0e845b23ca63fdce15e14f32a7774e5c0a2a9b6b487eb2d3a21a33b7",
+      "size": 1216
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-snapshot-digest-final.log",
+      "sha256": "6afc9f1a2887611f2d66f6286c27ed811ab30f3f4dcbb58b5403596f1622f4de",
+      "size": 310919
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/pinned-template-tests.json",
+      "sha256": "fe3f47f906309153b11da0894e8810016b863ca9cbe1c9666ea48e7e3723de51",
+      "size": 1226
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/pinned-template-tests.log",
+      "sha256": "a908654cc8e1b3e9910a1e29db75896b5ab6a786e1286eb0c2a83cb51c0acbeb",
+      "size": 3303
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-behavior-red.json",
+      "sha256": "c530113566d7b29ea43822477481e5ec2b863258768dfc518b92649a27fbaf23",
+      "size": 999
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-behavior-red.log",
+      "sha256": "215eaa841dd46ef35703162a35c65569005616e29fa982fd916cd5a76abde339",
+      "size": 1462
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-green.json",
+      "sha256": "fa8f44900be669253982f1116206ee361e805920a165f944f81de7c3287ceb61",
+      "size": 976
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-green.log",
+      "sha256": "9c0dee305f06c6994eaf7982d569fa06a19b1224723a2a5259bfe12da3502e04",
+      "size": 501
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-red.json",
+      "sha256": "3cb87f4c48e36c17376d17eb6fd1cbb0f026adbd9c214050b6be799b7dfc5f6a",
+      "size": 981
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-red.log",
+      "sha256": "8f468f5d3433b2a60956a107fc6aa2a93c9fc736b7ad4aca8fd1ab0246a55bc1",
+      "size": 2917
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-build.json",
+      "sha256": "93f5c5562a276ab8bbf356dc886a035537af0626074b32d3e6223c3ee639488d",
+      "size": 911
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-build.log",
+      "sha256": "e73cbad9d80895ab8a1415b4f334f1f28a5fd0aabcc19ccfe6e7a30e07c2c14e",
+      "size": 258
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-eslint-all.json",
+      "sha256": "76e88829eb8b6c5c5a551c8a3630a196f830e1123f2fb06e906cbdefd9135d55",
+      "size": 1816
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-eslint-all.log",
+      "sha256": "b9288f78bcef2cc3a3d1e832f7f6f813cbb47324d3b77de4b23a9e7cfa323db7",
+      "size": 130
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-eslint-ci-blocked.json",
+      "sha256": "bbf9961a158239b0bfdb71fe14fe2432ab414ebccaf23e106a3f62dc7071298d",
+      "size": 1616
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-eslint-ci-blocked.log",
+      "sha256": "877c818c8223685e2a8905b844c0699f3db6d612030e9f05f917e268d5eca6cc",
+      "size": 1066
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-main-whitelist-fixed.json",
+      "sha256": "8e12802a43da073d32dca3b822981af3d8ec9febdd5c92e58b9838c58c4abcf1",
+      "size": 969
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-main-whitelist-fixed.log",
+      "sha256": "f067b36a9828a631e85f40e9f26042b2f49bd13055ebe6dfd2a9c1f951777610",
+      "size": 732
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-main.json",
+      "sha256": "2ad6e3d5280bc0f10875d1d5890fa555569f0d8dd8c98239ded1ea5b78a78991",
+      "size": 938
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-main.log",
+      "sha256": "890d2d73c340ed4de469c36886d786195c458240444735de755f35a4ba9f9a1f",
+      "size": 77
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-preflight-audit.json",
+      "sha256": "3d864174455f6feaf52838cbbfaf015efbeb14c97fc51da01a63b524d264e77f",
+      "size": 956
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-preflight-audit.log",
+      "sha256": "34efb61274d37e47b9ee6b298b3254cd3ce008e9b9ee6c5d1ccb17453fe4976e",
+      "size": 2040
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-project.json",
+      "sha256": "b9a11ca0a66690543fe8beb2123097a40db501c4edd4405e57330abac7ea38dd",
+      "size": 935
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-project.log",
+      "sha256": "5c68bb18165bbf0453415e87778f44c1aea842d5e161e2c7ab963038d1760f55",
+      "size": 210
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-projection.json",
+      "sha256": "daa9ab9d1ff3344bf2800804914c8974a0763989e5660d20b41784aa6879bab6",
+      "size": 62086
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-python-final.json",
+      "sha256": "698a483d5fde0181d857d51ca183020c61cd34f60cbdd3bc971dca6719126cc1",
+      "size": 1003
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-python-final.log",
+      "sha256": "ac8d40843b840ce5841a8738534a847f9a33508fba6d9655bebc16ed4720428e",
+      "size": 7675
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-python-suite.json",
+      "sha256": "af1bd6d6e816a38c481de3582fb845a5c93633a875c57ff12b4fab867cbff12c",
+      "size": 1004
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-python-suite.log",
+      "sha256": "7a4b6775225bd05a0cef394bf0496a0054f198c1f86f885dfc8b0fc8f6ecc8d4",
+      "size": 7675
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-runtime-check.json",
+      "sha256": "76635966a23f9706983ff18fca4902fb77f4368d2a716460e78e2a1f91dfcead",
+      "size": 974
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-runtime-check.log",
+      "sha256": "cda251d30da65cd9b63191a5a63267c05e0ca23202602a02ac9d4f3e300c5008",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-staged-main.json",
+      "sha256": "8fb2b90bf5d5c117b539e6270c40dce474cde3eb9ada2b4d9c20dec528fbe2ff",
+      "size": 951
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-staged-main.log",
+      "sha256": "f067b36a9828a631e85f40e9f26042b2f49bd13055ebe6dfd2a9c1f951777610",
+      "size": 732
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-unit.json",
+      "sha256": "68261b5e74d4802ba875502587eee23a0a46ec66f39389bf9730d5acf36a148c",
+      "size": 909
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-unit.log",
+      "sha256": "1846376d081d5ce725c01d88a2b8e44e4428b38d2341f6c51e4bb2d1de0c0528",
+      "size": 376
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-whitelist-green.json",
+      "sha256": "7e90c396879f14c22c5b8de240c657d7582be689ac4c4ab168c7ad01281fa7b8",
+      "size": 996
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-whitelist-green.log",
+      "sha256": "d4c2e4435c1187d0944c5ac986b44938519f3f8e05feb551d51da26ab603add6",
+      "size": 491
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-whitelist-red.json",
+      "sha256": "50458b37ff15c36603d4621736c3b9df00ed086e56a075d2635e4e1b7c5b2012",
+      "size": 1000
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-whitelist-red.log",
+      "sha256": "ea48e4d5091029e0c6b43a7f721be1645f13f0a3e38fe4b045be9cc154b78219",
+      "size": 1386
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-edits.json",
+      "sha256": "3d63b00f9ce92593180aa7c83b2eb5b6046b4103f29b298af24ced7437ce057e",
+      "size": 6717
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-final.json",
+      "sha256": "aacdabd38b5e298c118fc0caa5aa8d0bafcd7ba8b366073f46c6d8378d2d9d2b",
+      "size": 1206
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-final.log",
+      "sha256": "c70fcf8ad92b2ae8101b00426910083a2ceac833a02ab897b08689bd80ecabeb",
+      "size": 4035
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-green.json",
+      "sha256": "311a91a7992555f214525ff069b767544fffab951797ad7c1f1452428fc0937a",
+      "size": 1206
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-green.log",
+      "sha256": "6612430d9bc60b5b1bab37ab398c3f6c152cac299d9a7d5f218be7bf6d88ca8b",
+      "size": 4035
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-red.json",
+      "sha256": "2466a70174ef9a613ba166080a69713b4783cbbd4729126e5b39b2a8e25e818f",
+      "size": 1306
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-red.log",
+      "sha256": "2077f22002e17089293d9c966473c5cca301ec02a0a3327de0109fae7469946c",
+      "size": 314
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-main.json",
+      "sha256": "fde3888236c233fb3046531e06a9c1617497c5757ba53bcf714b7210fcd38f93",
+      "size": 1190
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-main.log",
+      "sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9",
+      "size": 736
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-materializer.json",
+      "sha256": "382f04faba6d2f89ac436183e02878c5c9d3ba43bd720d141a61b36979c1585f",
+      "size": 1225
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-materializer.log",
+      "sha256": "cda251d30da65cd9b63191a5a63267c05e0ca23202602a02ac9d4f3e300c5008",
+      "size": 172
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-project.json",
+      "sha256": "1c1070dbd5cd1b9b5ce640e471c56808d3559982148d7a505604a58e9cf63b3b",
+      "size": 1189
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-project.log",
+      "sha256": "5c68bb18165bbf0453415e87778f44c1aea842d5e161e2c7ab963038d1760f55",
+      "size": 210
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-tracker.json",
+      "sha256": "72a925037ed22f886c6ab8729ed17f46aa3e9fa123b0f09d9eb6f412b141cee8",
+      "size": 1279
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-tracker.log",
+      "sha256": "62b29b86f7c1f50184b69d0a33d727e03e8cd5e9feac460f9648a6d7610a97a9",
+      "size": 3763
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-green.json",
+      "sha256": "e5e12f9db35730405e579a971959cdae6cc792d60a8b440c56d0e0c85ff41adc",
+      "size": 1968
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-green.log",
+      "sha256": "abf86b989ae8abf0533305b1fb423a4cc42c6e70abb03caac136c76a3dd495d0",
+      "size": 91
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-red.json",
+      "sha256": "429654e9d27d8bbfbe2f1553571acd967b322ed105e560cf6a0357af0c7266a0",
+      "size": 1970
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-red.log",
+      "sha256": "4834c8975f31cce796867791c9220507706bb63856796e7ed32bdb53a7b19ff4",
+      "size": 584
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-post-translation-main.json",
+      "sha256": "c06d17c17edb324681892e3dd07b52ed21e582996d46f1518222ea1e4ae51fbc",
+      "size": 1212
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-post-translation-main.log",
+      "sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9",
+      "size": 736
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-readme-green.json",
+      "sha256": "04ca8950e6d0839951d747e1e3047e6d074c7a14a71ba1fa3d3e63b413ea1c16",
+      "size": 1285
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-readme-green.log",
+      "sha256": "f53e21c373daded5ee51211c60a449ce48b91a85ec00080a74f4212bea1b0562",
+      "size": 240
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-readme-red.json",
+      "sha256": "171871def4cc0ddad8172554138f200acc04e5e3522ea9cd7ca948a6d234314c",
+      "size": 1386
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-readme-red.log",
+      "sha256": "b2eb5a290a50f7fc221bd84d923d857aea80568d222ba72d8eee8e39fd223e13",
+      "size": 956
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-behavior-red.json",
+      "sha256": "cdf0d6cfe6feb0829434c878f99fa0ef52c9dc35f2029d02ef05a7f531eca0dd",
+      "size": 1349
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-behavior-red.log",
+      "sha256": "685776bd77c4c53f6a54f69cd2b41a5f17d9d10d69a8889e1fff9b7be6112f88",
+      "size": 1131
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-green.json",
+      "sha256": "44425d1d8a1cf8addaf88f642858f3ede0e1996c75fedbcf5c9c222102035e4b",
+      "size": 1231
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-green.log",
+      "sha256": "fb811226606bf38266308d25fed248ed7a391375cccd376db0de3281c78423ee",
+      "size": 491
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-red.json",
+      "sha256": "2602217b06f9b32db2893631143237bf053b67ec02412365e7d899c2ef52051b",
+      "size": 1331
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-red.log",
+      "sha256": "2806bff39a25ddb0a797cfaa55fb333cd2855d34714e61b8a69827f7753813b3",
+      "size": 3028
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-summary.json",
+      "sha256": "adfb88314a888e80c19a4947c6877b0e06a977f4dad923f11a8e5098e8eb1fef",
+      "size": 12361
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-trace-green.json",
+      "sha256": "49e3d6b9298c23cf9870b74669c829a4bde3741fabd1e212635d5cfb8092f16f",
+      "size": 1234
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-trace-green.log",
+      "sha256": "4340a4008d83bc82cd9fc472531594ab98e7572ddb742bdd6a8393f0bad29dcc",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-trace-red.json",
+      "sha256": "23aef2bcb61ef80c4ecae1ec03c6b24a0dd3266b40d4836c80fbc7737a3eed25",
+      "size": 1333
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-trace-red.log",
+      "sha256": "369ffc086176fe28333ba1ca6b2440ecde65fbfb02baa02a3251138657c42b23",
+      "size": 10016
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-manifest.json",
+      "sha256": "26f7ad11137631099961c9b2b73d70aeb0906d4e36e9ab12d55797b8bcb967e2",
+      "size": 374191
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-security-report.md",
+      "sha256": "7503166013901b5b0f1c901e3afb9ce259d35d27b30cb29b6de92092b9216318",
+      "size": 5241
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-spec-guide-report.md",
+      "sha256": "8279ba2cc13bd8e850e095899210ae43b96002107fffe7d88ca1a8be9a946b46",
+      "size": 2557
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-spec-report.md",
+      "sha256": "3bd2a0937f1bc04efcf9198b7ee33ef23205dd80f23e784f9f70319d92c8e4ed",
+      "size": 3580
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-standards-guide-report.md",
+      "sha256": "8f35c6cad79e1c827ba9ab356bc6ae090236cf433efe27652bd2eba87ac891cb",
+      "size": 2411
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-standards-report.md",
+      "sha256": "88240688ac9df3f410e8782d05ec3b27d5362e48939644d3439bee404768f7da",
+      "size": 2936
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/commits.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/committed.diff",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/guide-addendum-manifest.json",
+      "sha256": "8c2db57b874beceecac71436c8b419f659434e67892de5038043456cd54568b4",
+      "size": 1355
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/publication-p2-closeout.json",
+      "sha256": "5a51fac4ec379046b0aafb8d4231505287368e6c8fd9a9888268c3a69552d015",
+      "size": 431
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/publication-security-report.md",
+      "sha256": "bd593903199288ff2d43adbfc58bb5e6864cc960de4ed22ba3bdb7523bd69f5b",
+      "size": 7010
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/publication-spec-report.md",
+      "sha256": "ad27800aa37dc0f0034344004b97940e752df7cae4266e817d4284076e40f5c7",
+      "size": 4104
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/publication-standards-report.md",
+      "sha256": "16288aacbe94f1d22653aaff03f1947310475ade9fca4828e583467fc0630e17",
+      "size": 3911
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/staged.diff",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/status.txt",
+      "sha256": "d415af2f9964ab2663f4ac3d055d412fa6c23995a9a7b93519ec461c6ca164be",
+      "size": 81469
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-actual-adopt-restore.json",
+      "sha256": "5591112580112e6a4e854d56bf993e629fbaa0f5dd25ee38c30bd8371738cc03",
+      "size": 1174
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-actual-adopt-restore.log",
+      "sha256": "8963fa56eeb4d055e5db79d81fc472b6a7da5f7127d1ac4a91ea47ae86b8d0b3",
+      "size": 144098
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-build.json",
+      "sha256": "1cffe1724a6f1d02279a10ee2d90a0b14f46910c2664a41c1b9f1770d2095068",
+      "size": 1269
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-build.log",
+      "sha256": "65f8419de502b325d3fae3baea8c7b471305280d54fd57401b6eb3fd5a28a62f",
+      "size": 275
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-cli.json",
+      "sha256": "a9f58f1cafd767875b9f7be4b9866fcbe6a632ca286bba994a068886fcafd7fc",
+      "size": 1281
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-cli.log",
+      "sha256": "480adba9a25dcad3d524169fec9456b41c973422451155c27c92ecfafc6c2e08",
+      "size": 7251
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-unit.json",
+      "sha256": "d81272d15ce3f14aa96e1a3ffc9bfcac861c113e1a4ca51655a6b8124906c6d8",
+      "size": 1268
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-unit.log",
+      "sha256": "82c09cf57cf931e8eee295949503ddd75ff6901c416e9af8bdbc214f20ed1428",
+      "size": 411
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/site-default-green.json",
+      "sha256": "fc1bd12e0aadd214f0cd15f8389d196d79da6b6af05c792b7af99950ed6abf22",
+      "size": 1247
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/site-default-green.log",
+      "sha256": "1a1da7e57df9e9a144e0a4efd01c4ef36646713530aaa400eb23dea18861ff47",
+      "size": 377
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/site-default-red.json",
+      "sha256": "4dc1fd971f043169fc2d790c0c1a75174f135e557a6247d3243c25ce01694c52",
+      "size": 1252
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/site-default-red.log",
+      "sha256": "529db4df9c83482230f31c9f5a4481698d8a6872194124a85343b72228022841",
+      "size": 1729
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/source-evidence-green.json",
+      "sha256": "2eb36eb38e7a974900e4ebfeec35c5c735564e65a2971202424995f86cd88b9b",
+      "size": 1271
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/source-evidence-green.log",
+      "sha256": "b0673792bbfeec55d93bdfb1f0d4e6efc80243c4ecd56ce9f55f39de05be0c76",
+      "size": 1452
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/source-evidence-red.json",
+      "sha256": "c846faa3c3338570926b3a98c56a55eab4f75ff7eb5319f299067e6ca4f20313",
+      "size": 1370
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/source-evidence-red.log",
+      "sha256": "7d14177c2fa305d341735610e136f21e9e990c6b0b8b55f4c7e8b3a4b8b10d82",
+      "size": 3289
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-behavior-red.json",
+      "sha256": "f351c706891724a0dd1d178059b53b69e80a1cfe065f0bf19588cdd791bfeac4",
+      "size": 1373
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-behavior-red.log",
+      "sha256": "974482ce4fb1c62109999d25bc4e1c63f23b4b3032325fc407b02071fd324a34",
+      "size": 9148
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-first-red.json",
+      "sha256": "f4b417b792122ec97398b03103e14a8e59efae081449699cc7438c5a8a7d3de4",
+      "size": 1366
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-first-red.log",
+      "sha256": "6c29085e65dc43e814bbe7eff377fd3a45e1c892c877924820df1e6506c78d55",
+      "size": 1362
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-green.json",
+      "sha256": "d32cdedbf910c612a692f15e8a905aedcd070ade332195dfc1b9191a1ca9061a",
+      "size": 1255
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-green.log",
+      "sha256": "3ecbc2278f0f534a801c1f52484ceefd8b79375115e042302327a93bd650a657",
+      "size": 1036
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-trace-final-tests-corrected-fixture.json",
+      "sha256": "0e944ab8f8efc19b9641f88fe62e4ab7c0785d592bb5f86b08e44c4693c760f1",
+      "size": 1315
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-trace-final-tests-corrected-fixture.log",
+      "sha256": "efa9b0141ef62339369cd76382ffb28f500c89bbd65c0a481e1f32698c195a52",
+      "size": 1607
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-trace-final-tests.json",
+      "sha256": "8d4b02f72eaa0791cbb7eaccdb74057194a28484db9edbfca8d1b3d34a5eb679",
+      "size": 1377
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-trace-final-tests.log",
+      "sha256": "f83288562f4c41254e7e9e96be3c606e8c1da41dfde2ba89940c6e8e323c0ed9",
+      "size": 2171
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E1-context.json",
+      "sha256": "abad9c39b6a78b255bd823691a8c4d60928bd37911d16b42021e963dcabbf792",
+      "size": 31547
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E2-context.json",
+      "sha256": "a1f60d75698ca4ee326b5d98bd3004cff9b5f803cfb4d458446334fba9ccc3a1",
+      "size": 31547
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E3-context.json",
+      "sha256": "6726c5ad0c7e9afcad1c32aaaa3bdb565f8502198bae53ef26e6a9d4fd1b61d1",
+      "size": 31547
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E4-context.json",
+      "sha256": "496a1fb3df89aa0ef32058100069b8989efd90c60983ad8b7e9ca249a2d2a57f",
+      "size": 31547
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E5-context.json",
+      "sha256": "59c630245ad72c2ce142da0871ea5efca8e9c63432b9908005a17a00331b8338",
+      "size": 31547
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E6-context.json",
+      "sha256": "98c7dbf55a72eb4714859409d0115fd8aed0ff3a2bee718f744b64fb0da169de",
+      "size": 31547
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E7-context.json",
+      "sha256": "6553f869af266cb225fd67e6e4d599f62f0b6c0e3ba4bcf70598c88ea29c2556",
+      "size": 31547
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E8-context.json",
+      "sha256": "a8a83a6e87b24f021e5640cfa310d11f2af10863453e92ca08ce27dce653a8ce",
+      "size": 31547
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E9-context.json",
+      "sha256": "1c8200cecbd8cbb5610b8dac794fcb8a03aefc760b871387ebb931e1923ffec3",
+      "size": 31547
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E1/AGENTS.txt",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E1/output.md",
+      "sha256": "ef6fd9bf5601e0eb4e717def3a25a7552193ad1d09a86822f441b13fc9a75092",
+      "size": 729
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E2/AGENTS.txt",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E2/output.md",
+      "sha256": "02fe8ea7967b55d470f3ab22980ade948a661100a9071d74d74572da9f52d337",
+      "size": 641
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E3/AGENTS.txt",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E3/output.md",
+      "sha256": "3d859960941fb27d83ddcdf25b09803275e30c1fa4b43da5d9d6a83705459696",
+      "size": 352
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E4/AGENTS.txt",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E4/output.md",
+      "sha256": "9005a1d3296c699d048db8cdf2f2c17c15968fb6a80ed2eaa96d7a38489c0ff8",
+      "size": 292
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E5/AGENTS.txt",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E5/output.md",
+      "sha256": "795981ccadeccece6240f7725738208eb1371761b1980433c432cbf70aeb2956",
+      "size": 46
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E6/AGENTS.txt",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E6/output.md",
+      "sha256": "fd4d8f5c531cb1e669e170477b083862fb3d69900116d82941f28ecbb6524d57",
+      "size": 573
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E7/AGENTS.txt",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E7/output.md",
+      "sha256": "5d670db14a86cc64c477b3f0d630f17a882633e464c2817944f52b644c701bdb",
+      "size": 697
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E8/AGENTS.txt",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E8/output.md",
+      "sha256": "a28b0a6315765c4b18bfaa47a3247bbe75d9c8bddd17852c2c268c59f4852326",
+      "size": 1020
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E9/AGENTS.txt",
+      "sha256": "321a25be6b4d39ec6cff81d0176ee66c501b92ba23fe83d036e449c59d406235",
+      "size": 511
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E9/output.md",
+      "sha256": "54510aba2b1e0251de73212100e33814f85e31335ebc0540e2a666979e2e6e87",
+      "size": 412
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-1-provenance.json",
+      "sha256": "084a7520ed49a6fae912ca8b17c788bf494f9ec67d759bca95164ba3a4a28e40",
+      "size": 5459
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-1.json",
+      "sha256": "6f549849f206696674e7d17b984c1dbda1cd6b7a23bab9ec2a37d32218e443f5",
+      "size": 10038
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-2-provenance.json",
+      "sha256": "2d807a925f4e8c50a7541e034dddaa66fba2b0236abb8b6333f02b018ade0637",
+      "size": 1696
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-2.json",
+      "sha256": "cfb54d7e8e0b10adeb983d0c8dbb72a1ec9e37da5918e6724d518b057c87d923",
+      "size": 5502
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-3-provenance.json",
+      "sha256": "f2524479395f5f67f4dade10ffd9e12ea74da14440342dca4ed6556e39384b69",
+      "size": 1734
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-3.json",
+      "sha256": "0bbb3ea4c9053fe8008c3261877e5d08d563416e9ef930bda9518828ad4dd236",
+      "size": 7060
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-runtime-freeze.json",
+      "sha256": "457072dc9c648e3442bc2586ce1d5374e1c3491d4ac57a16ca57a42edc04f9b5",
+      "size": 1264975
+    }
+  ]
+}

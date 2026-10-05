@@ -1,0 +1,22 @@
+{
+  "name": "framework-guard-main-01",
+  "argv": [
+    "python3",
+    "scripts/verify-harness-adoption.py"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:15:33.281458+00:00",
+  "ended_utc": "2026-10-04T11:15:46.419456+00:00",
+  "elapsed_seconds": 13.1390051250346,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9",
+  "log": "maintenance/harness-adoption/evidence/framework-guard-main-01.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "d72718904a966fbd4243b052963c9514ed126ab9ce7f79cf5f953d81fec7edfa",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

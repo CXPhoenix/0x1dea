@@ -1,0 +1,44 @@
+test_staged_approved_moves_baseline_and_management_are_accepted (__main__.AddedPathTests.test_staged_approved_moves_baseline_and_management_are_accepted) ... FAIL
+test_staged_unknown_product_is_rejected (__main__.AddedPathTests.test_staged_unknown_product_is_rejected) ... FAIL
+test_untracked_unknown_product_is_rejected (__main__.AddedPathTests.test_untracked_unknown_product_is_rejected) ... FAIL
+
+======================================================================
+FAIL: test_staged_approved_moves_baseline_and_management_are_accepted (__main__.AddedPathTests.test_staged_approved_moves_baseline_and_management_are_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 180, in test_staged_approved_moves_baseline_and_management_are_accepted
+    self.guard()
+    ~~~~~~~~~~^^
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 163, in guard
+    self.assertTrue(callable(guard), 'new-file guard must inspect both index and untracked files')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : new-file guard must inspect both index and untracked files
+
+======================================================================
+FAIL: test_staged_unknown_product_is_rejected (__main__.AddedPathTests.test_staged_unknown_product_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 169, in test_staged_unknown_product_is_rejected
+    self.guard()
+    ~~~~~~~~~~^^
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 163, in guard
+    self.assertTrue(callable(guard), 'new-file guard must inspect both index and untracked files')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : new-file guard must inspect both index and untracked files
+
+======================================================================
+FAIL: test_untracked_unknown_product_is_rejected (__main__.AddedPathTests.test_untracked_unknown_product_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 174, in test_untracked_unknown_product_is_rejected
+    self.guard()
+    ~~~~~~~~~~^^
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 163, in guard
+    self.assertTrue(callable(guard), 'new-file guard must inspect both index and untracked files')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : new-file guard must inspect both index and untracked files
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.742s
+
+FAILED (failures=3)

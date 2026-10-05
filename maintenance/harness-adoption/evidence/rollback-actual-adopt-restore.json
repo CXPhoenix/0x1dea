@@ -1,0 +1,22 @@
+{
+  "name": "rollback-actual-adopt-restore",
+  "argv": [
+    "python3",
+    "exercise-rollback-resumed.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:14:08.585905+00:00",
+  "ended_utc": "2026-10-04T11:14:14.561620+00:00",
+  "elapsed_seconds": 5.9758677911013365,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "8963fa56eeb4d055e5db79d81fc472b6a7da5f7127d1ac4a91ea47ae86b8d0b3",
+  "log": "maintenance/harness-adoption/evidence/rollback-actual-adopt-restore.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "a52173e2ebeb11e5e5ec3798aa314e5547e11504c763f5f4cff3ada5a6f22ebd",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

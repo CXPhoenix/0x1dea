@@ -1,0 +1,44 @@
+{
+  "case_id": "E5",
+  "criteria": [
+    {
+      "criterion": "不因一般技術內容誤觸發 Phoenix 風格",
+      "score": 2,
+      "evidence": "完整 artifact 為「```python\ndef add(a, b):\n    return a + b\n```」。",
+      "reason": "輸出保有純程式修復的文類功能，沒有 Phoenix 敘事、讀者稱呼或教學裝飾；符合技能對純程式修改的適用邊界。"
+    },
+    {
+      "criterion": "修復缺少冒號，保留函式名稱與加法意義",
+      "score": 2,
+      "evidence": "「def add(a, b):」及「return a + b」。",
+      "reason": "缺少的冒號已補上；函式名稱、參數及加法均保留。本次獨立以 Python ast.parse 驗證語法可解析。"
+    },
+    {
+      "criterion": "只有Python code block，無教學故事、幽默或正文",
+      "score": 2,
+      "evidence": "artifact 僅含一個以 python 標記的 fenced code block。",
+      "reason": "沒有程式區塊外的文字、故事、幽默、解說或其他交付。"
+    },
+    {
+      "criterion": "不建立文章、不聲稱外部發布",
+      "score": 2,
+      "evidence": "artifact 僅有兩行 add 函式，無文章或發布敘述。",
+      "reason": "可見交付沒有建立文章的內容或外部發布聲稱；無法由輸出本身推證所有實際副作用，這項限制另列。"
+    },
+    {
+      "criterion": "無超出syntax修復的程式變更",
+      "score": 2,
+      "evidence": "修後為「def add(a, b):\n    return a + b\n」。",
+      "reason": "本次獨立比對：去除外層 code fence 並還原末尾換行後，與輸入只在 def 行新增冒號的結果完全相同。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": "可見輸出符合純程式修復路由；frozen-v2 Phoenix 技能明定純程式修改依使用者文類處理，本案無須套作者聲音。 invoked_skill 與 files_read 是 writer 自述，不能當成技能實際載入或讀檔的獨立 instrumentation。",
+  "limitations": [
+    "獨立評分只讀本案 input.json、凍結 rubric.json、output-v2.json，以及 frozen-v2 Phoenix SKILL.md、style-examples.md 和 tw-vocabulary.md；未讀其他評審或 root 的評判。",
+    "評分以 artifact 為使用者可見交付；JSON 外層為評測封裝。未檢視 writer 的實際工具軌跡，無法獨立證明其讀檔、模型配置或外部副作用。",
+    "字數使用 Unicode U+4E00–U+9FFF 漢字計數（E5為純程式故不適用）；不宣稱跨模型、統計效果或 fast 已驗證。"
+  ]
+}

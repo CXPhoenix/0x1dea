@@ -1,0 +1,15 @@
+{
+  "case_id": "E1",
+  "invoked_skill": [
+    "phoenix-writing"
+  ],
+  "files_read": [
+    "cases/E1/input.json",
+    "frozen-v22/skills/phoenix-writing/SKILL.md",
+    "frozen-v22/skills/maintaining-writing-skills/SKILL.md（僅 YAML name/description）",
+    "frozen-v22/skills/creating-vitepress-post/SKILL.md（僅 YAML name/description）",
+    "frozen-v22/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "假設你按下付款，畫面卻因網路逾時卡住。你不知道伺服器是否收到請求，只好再送一次。麻煩在於：你想重試的是同一筆付款，並沒有要多付一筆。這個虛構案例中的「冪等性」，就是讓重送同一操作不會造成另一筆扣款。付款服務會讓同一操作帶著相同的「冪等鍵」，你可以把它想成這筆付款的識別標記。在鍵的有效期間內，只要重送的鍵與參數都相同，服務就回傳先前的結果，不再執行另一筆扣款。要付另一筆款，那是不同操作，就必須換一個鍵。記住這裡的條件：同鍵、同參數，而且仍在有效期間內；這個例子不能保證所有服務都只執行一次。",
+  "execution_note": "先讀案例輸入及三個候選技能的 YAML name/description，再讀 phoenix-writing 正文與風格對照。僅依封閉資料撰寫一段正文，以 Python 計算中文字數；未讀其他案例、rubric、baseline、design 或 live repo，未瀏覽、製圖或執行外部動作。工具指定 GPT-6.1-sol/high；子 API 沒有 fast 欄位，未推斷主設定或跨模型效果。"
+}

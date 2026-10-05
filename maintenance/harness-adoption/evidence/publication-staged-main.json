@@ -1,0 +1,21 @@
+{
+  "name": "publication-staged-main",
+  "argv": [
+    "python3",
+    "scripts/verify-harness-adoption.py"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T12:19:26.203861+00:00",
+  "ended_utc": "2026-10-04T12:19:31.134888+00:00",
+  "elapsed_seconds": 4.930623166961595,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "f067b36a9828a631e85f40e9f26042b2f49bd13055ebe6dfd2a9c1f951777610",
+  "log": "maintenance/harness-adoption/evidence/publication-staged-main.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "private_raw_log_sha256": "f067b36a9828a631e85f40e9f26042b2f49bd13055ebe6dfd2a9c1f951777610",
+  "raw_receipt_sha256": "e4edc286dd1c04d4a5e9ef314732cc9a434e52d8f4af6a81f8cd159fd9652306",
+  "publication_projection": "Machine-path aliases only; actual exit/status/times retained, raw receipt/log hashes retained."
+}

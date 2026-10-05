@@ -1,0 +1,30 @@
+{
+  "name": "materializer-code-review-red",
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/harness_adoption",
+    "-p",
+    "test_materializer.py",
+    "-v"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:00:01.798443+00:00",
+  "ended_utc": "2026-10-04T11:00:15.836612+00:00",
+  "elapsed_seconds": 14.043289375025779,
+  "exit_code": 1,
+  "status": "expected-red",
+  "log_sha256": "9f64af32bd09a67dc2e4952330cd75e2e6e9ab64cc7052cd577306590cbbef3f",
+  "log": "maintenance/harness-adoption/evidence/materializer-code-review-red.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "02fc412efe842056b68c0e8d5b28e1a14e64adf9f6b77f0d3ef2a231ac541a54",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "706337a0509a20cc7512330bd03edcfd6862dc651ab7dccc1354e242d2c0547b",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

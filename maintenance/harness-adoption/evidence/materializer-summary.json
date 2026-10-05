@@ -1,0 +1,96 @@
+{
+  "scope": "three owned physical product skill packages only; root owns broader adoption review and acceptance",
+  "source_regular_files": 52,
+  "canonical_regular_files": 43,
+  "historical_reference_backing_files": 9,
+  "generated_regular_files": 169,
+  "runtime_package_counts": {
+    ".agents": 35,
+    ".claude": 35
+  },
+  "implicit_invocation": {
+    "phoenix-writing": true,
+    "maintaining-writing-skills": true,
+    "creating-vitepress-post": true
+  },
+  "unit_tests": 16,
+  "tests_status": "pass",
+  "project_generation_check_determinism": "pass",
+  "framework_byte_identity": "pass vs pinned initialized scratch-resumed",
+  "all_depth_no_symlinks": "pass both runtime trees",
+  "fault_injection": "real filesystem temporary tree: after2 reinstalls restores physical outputs; after4 first install restores original symlink entries",
+  "tdd": "Tests precede generator. Final red-03: 15 assertion failures, 0 errors because generator absent. First green attempt retained: host /var alias causes fail-closed root-ancestor checks; fixture corrected to real /private/var location without weakening production validation. green-02 passes11; selfreview-01 passes16.",
+  "self_review": "Reviewed ownership/path containment/lstat enumeration/source hash policies/link projection/output drift/per-directory atomic replacements/rollback. Unknown Markdown syntax fails; literal fixtures and fenced/inline examples remain unchanged. Independent spec/code/security review belongs to parent; native runtime discovery/writer evaluation are not asserted by these tests.",
+  "proof_script": {
+    "path": "materializer-project-proof.py",
+    "sha256": "5acce8dbddbbd3d8c9504dbaf4168c51c962e300d6a259e4849ec6ec0d2411f3",
+    "actual_first_execution_path": "/tmp/ha-materializer-project-proof.py"
+  },
+  "records": [
+    {
+      "id": "materializer-red-03",
+      "metadata": "materializer-red-03.json",
+      "metadata_sha256": "0b05bd32083b25300f24aa3930dbb2de4bef9dac9a7669d909386ccc27bbc0ba",
+      "log_sha256": "39d506cc0adbacb797094710304317464aeae975bcd18ba32f0c66a772c575d3",
+      "status": "expected-red",
+      "exit_code": 1
+    },
+    {
+      "id": "materializer-green-01",
+      "metadata": "materializer-green-01.json",
+      "metadata_sha256": "16ca0df57f0ec9710693d44cc1d26791b05a7b20bc4528eeb1c6e7ec065a1b66",
+      "log_sha256": "352098b2c9ff131db57e4f6b4d010148a930abd25f531ecbfe43be560c845eba",
+      "status": "failure",
+      "exit_code": 1
+    },
+    {
+      "id": "materializer-green-02",
+      "metadata": "materializer-green-02.json",
+      "metadata_sha256": "857016423832876909be4f4d143fe26c36bfdae38b6714d55514dc10184058af",
+      "log_sha256": "783d8f32f16d5dd608e756c5239915233146d2312f50b0f9a26776190ab5c43d",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "materializer-selfreview-01",
+      "metadata": "materializer-selfreview-01.json",
+      "metadata_sha256": "7371fd4bf30aa202477a4eb71f8051b8fb90903aadd02ce943442b0a041f5fc6",
+      "log_sha256": "ab07efeeca3544eaa8f198ac09c348ee457a4c223bc0287c3bba8280d7688584",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "materializer-project-write-01",
+      "metadata": "materializer-project-write-01.json",
+      "metadata_sha256": "2bae0333723d21009078a8db987c2d35f04e836d2bb42ec6a4b068646459f73a",
+      "log_sha256": "41f7cddb06f8dbf10412385b9c1251ccabd532b62346a4647325d8464a1d8e8a",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "materializer-project-check-01",
+      "metadata": "materializer-project-check-01.json",
+      "metadata_sha256": "a9ec220c6e5ef3db16df31368a2db2398f6b0301af2688d19aee30211428e62b",
+      "log_sha256": "82495b8cd298f1d1d686aecf517bb3ed3328acebde560dd864175026c6a3d82b",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "materializer-project-repeat-01",
+      "metadata": "materializer-project-repeat-01.json",
+      "metadata_sha256": "c6de84850294ccbe11d005892d9f96a3e5972fa68927c4f4571661d39ce0bbb2",
+      "log_sha256": "41f7cddb06f8dbf10412385b9c1251ccabd532b62346a4647325d8464a1d8e8a",
+      "status": "pass",
+      "exit_code": 0
+    },
+    {
+      "id": "materializer-project-determinism-01",
+      "metadata": "materializer-project-determinism-01.json",
+      "metadata_sha256": "c6f9283340f03a69b58af608b66fdbac0467357bb3077056e1eace5723696487",
+      "log_sha256": "6bb25d938caa0d61ccc096e6a8f1952b17c31a995adc5d56d4c61cacedf251ee",
+      "status": "pass",
+      "exit_code": 0
+    }
+  ],
+  "remaining_blockers": []
+}

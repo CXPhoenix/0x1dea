@@ -20,9 +20,9 @@ export interface HelperConfig {
 }
 
 // 預設資料夾路徑
-export const DEFAULT_DIR = 'docs/post';
+export const DEFAULT_DIR = 'blog/post';
 // 更新 Assets 根目錄路徑
-export const ASSETS_ROOT = 'docs/public/assets';
+export const ASSETS_ROOT = 'blog/public/assets';
 
 // 參數解析器
 export function parseArgs(args: string[]): HelperConfig {
@@ -95,7 +95,7 @@ export function getFormattedDate(): string {
 }
 
 // 取得靜態資源資料夾名稱
-// 新邏輯: 移除 docs 前綴後的完整路徑 + "_" + 安全的文章名稱
+// 新邏輯: 移除 blog 前綴後的完整路徑 + "_" + 安全的文章名稱
 export function getAssetFolderName(targetDir: string, safeFileName: string): string {
     const cwd = process.cwd();
     // 確保 targetDir 轉為相對於專案根目錄的路徑
@@ -104,13 +104,13 @@ export function getAssetFolderName(targetDir: string, safeFileName: string): str
     const relativePath = path.relative(cwd, absoluteTarget);
 
     // 分割路徑並過濾掉第一個路徑
-    // split 會把 'docs/post/hello' 拆成 ['docs', 'post', 'hello']
+    // split 會把 'blog/post/hello' 拆成 ['blog', 'post', 'hello']
     const pathSegments = relativePath.split(path.sep).slice(1);
 
     // 組合前綴：post_hello
     const prefix = pathSegments.join('_');
 
-    // 如果前綴是空的 (代表檔案直接在 docs 下)，回傳檔名 `root_{檔名}`
+    // 如果前綴是空的 (代表檔案直接在 blog 下)，回傳檔名 `root_{檔名}`
     if (!prefix) {
         return `root_${safeFileName}`;
     }

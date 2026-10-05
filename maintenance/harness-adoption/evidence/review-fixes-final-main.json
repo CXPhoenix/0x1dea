@@ -1,0 +1,22 @@
+{
+  "name": "review-fixes-final-main",
+  "argv": [
+    "python3",
+    "scripts/verify-harness-adoption.py"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:34:25.042153+00:00",
+  "ended_utc": "2026-10-04T11:34:32.194426+00:00",
+  "elapsed_seconds": 7.152443917002529,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9",
+  "log": "maintenance/harness-adoption/evidence/review-fixes-final-main.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "91823a9d926f697be7998542726127d54f56d37f7f5bb1e5911054a95185505b",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

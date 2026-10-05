@@ -1,0 +1,125 @@
+{
+  "source": "accepted native spawn_agent tool arguments; no internal provider telemetry",
+  "writers": [
+    {
+      "task_name": "/root/reg22_write_e1",
+      "case": "E1",
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_write_e2",
+      "case": "E2",
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_write_e3",
+      "case": "E3",
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_write_e4",
+      "case": "E4",
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_write_e5",
+      "case": "E5",
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_write_e6",
+      "case": "E6",
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_write_e7",
+      "case": "E7",
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_write_e8",
+      "case": "E8",
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_write_e9",
+      "case": "E9",
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    }
+  ],
+  "judges": [
+    {
+      "task_name": "/root/reg22_judge_e1_e3",
+      "cases": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_judge_e4_e6",
+      "cases": [
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/reg22_judge_e7_e9",
+      "cases": [
+        "E7",
+        "E8",
+        "E9"
+      ],
+      "fork_turns": "none",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "spawn_accepted": true
+    }
+  ],
+  "main_work_fast": {
+    "service_tier": "fast",
+    "create_submitted": true,
+    "started": true,
+    "evidence": "parent report carried forward from same delegated work; not independently inspected by child"
+  },
+  "child_worker_fast": {
+    "API_field_available": false,
+    "verified": false
+  }
+}

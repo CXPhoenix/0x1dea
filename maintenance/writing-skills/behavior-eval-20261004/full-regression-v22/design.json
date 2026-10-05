@@ -1,0 +1,7 @@
+{
+  "scope": "Full nine-case v2.2 regression; original input/rubrics, corrected E7 rubric from figure followup",
+  "writers": "9 fresh independent agents, one case each; no rubric/baseline/evaluator access",
+  "judges": "3 fresh independent agents, 3 nonoverlapping cases each; no baseline or root verdict access",
+  "replication": "one initial completion per case; retries, if any, recorded separately",
+  "decision": "Do not claim interjudge agreement, statistical improvement or cross-model guarantees. Distinguish score variation, substantive violations and limits of single samples. Skill change requires a new freeze and complete-version verification to claim 9/9."
+}

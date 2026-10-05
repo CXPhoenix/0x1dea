@@ -1,0 +1,16 @@
+{
+  "cases": 8,
+  "cases_per_writer": 1,
+  "writers": "fresh independent, no evaluator answer/rubric access",
+  "judge": "fresh independent, given input/rubric/skill/output only; no root verdict",
+  "replication": "one completion per case, no generalization",
+  "frozen_paths": [
+    "skills/phoenix-writing/SKILL.md",
+    "skills/phoenix-writing/references/style-examples.md",
+    "skills/phoenix-writing/references/tw-vocabulary.md",
+    "skills/maintaining-writing-skills/SKILL.md",
+    "skills/maintaining-writing-skills/references/writing-process.md",
+    "skills/maintaining-writing-skills/references/article-maintenance.md",
+    "skills/creating-vitepress-post/SKILL.md"
+  ]
+}

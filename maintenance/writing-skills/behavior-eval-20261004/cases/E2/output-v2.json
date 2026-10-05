@@ -1,0 +1,11 @@
+{
+  "case_id": "E2",
+  "invoked_skill": "phoenix-writing",
+  "files_read": [
+    "cases/E2/input.json",
+    "frozen-v2/skills/phoenix-writing/SKILL.md",
+    "frozen-v2/skills/maintaining-writing-skills/references/writing-process.md"
+  ],
+  "artifact": "---\ntitle: 快取的代價\ndescription: 速度與資料更新之間的取捨\ncreatedTime: 2026-04-01T09:00:00+08:00\nthumbnail: /assets/cache/cover.png\n---\n\n# 快取的代價\n\n你可能會想，查過一次的答案，留著下次直接拿來用，不就好了？\n\n等到下次要用時，同一份資料可能已經改變，先前存下來的答案也就可能過期。為了避免繼續使用過期答案，我們必須設計失效策略，讓不再適用的快取失效。\n\n原始測試紀錄只顯示「這個單機案例省下重複運算」，沒有測分散式部署。\n\n我寧可先承擔較慢的回應，也不希望讀者拿到過期答案。\n",
+  "execution_note": "native writer; requested GPT-6.1-sol/high; fast not exposed"
+}

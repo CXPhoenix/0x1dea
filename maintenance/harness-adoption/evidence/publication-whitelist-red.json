@@ -1,0 +1,23 @@
+{
+  "name": "publication-whitelist-red",
+  "argv": [
+    "python3",
+    "tests/harness_adoption/test_tracker.py",
+    "AddedPathTests",
+    "-v"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T12:05:06.102921+00:00",
+  "ended_utc": "2026-10-04T12:05:06.888565+00:00",
+  "elapsed_seconds": 0.7848003340186551,
+  "exit_code": 1,
+  "status": "expected-red",
+  "log_sha256": "ea48e4d5091029e0c6b43a7f721be1645f13f0a3e38fe4b045be9cc154b78219",
+  "log": "maintenance/harness-adoption/evidence/publication-whitelist-red.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "private_raw_log_sha256": "9e70047b15a7a16f2874e7f31b6785a0fa71f53b0169d7cc70ab832afa434ba3",
+  "raw_receipt_sha256": "170f775ab17bf93ba531986ad7ca32f95fdec982554433a98e50bb90670d1a76",
+  "publication_projection": "Machine-path aliases only; actual exit/status/times retained, raw receipt/log hashes retained."
+}

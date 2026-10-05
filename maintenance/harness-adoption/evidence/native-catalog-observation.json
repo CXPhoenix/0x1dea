@@ -1,0 +1,20 @@
+{
+  "name": "native-catalog-observation",
+  "status": "pass",
+  "exit_code": 0,
+  "argv": [
+    "{EXISTING_CODEX_BIN}/codex",
+    "--no-daemon",
+    "app-server",
+    "--stdio"
+  ],
+  "started_epoch": 1791111315.910648,
+  "ended_epoch": 1791111318.708889,
+  "log": "maintenance/harness-adoption/evidence/native-catalog-observation.log",
+  "log_sha256": "af6a3b70ab2134b31c52f9679979bf8cbb09f8a3ce4aee61e8321187c445dd7d",
+  "surface": "fresh native Codex app-server JSON-RPC skills/list forceReload; 35 enabled repo skills; errors empty",
+  "recorded_at": "2026-10-04T11:23:53.285237+00:00",
+  "recording_note": "Parent captured the actual successful tool execution after the initial host-permission retry; native proof contains observed catalog. No model response or exec HTTP400 success is inferred.",
+  "private_raw_log_sha256": "a15e5be8cc75e6c7981918d9c443789b2c3f9c99c2e0feab51fd88a0d5f834d0",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

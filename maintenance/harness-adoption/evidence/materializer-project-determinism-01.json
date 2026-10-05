@@ -1,0 +1,22 @@
+{
+  "name": "materializer-project-determinism-01",
+  "argv": [
+    "python3",
+    "/tmp/ha-materializer-project-proof.py"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T10:51:44.595631+00:00",
+  "ended_utc": "2026-10-04T10:51:45.826945+00:00",
+  "elapsed_seconds": 1.230298166978173,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "6bb25d938caa0d61ccc096e6a8f1952b17c31a995adc5d56d4c61cacedf251ee",
+  "log": "maintenance/harness-adoption/evidence/materializer-project-determinism-01.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "c6f9283340f03a69b58af608b66fdbac0467357bb3077056e1eace5723696487",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

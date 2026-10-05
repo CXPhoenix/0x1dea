@@ -1,0 +1,41 @@
+test_baseline_and_authorized_descendant_history_are_accepted (__main__.PublicationAncestryTests.test_baseline_and_authorized_descendant_history_are_accepted) ... FAIL
+test_missing_baseline_object_is_rejected (__main__.PublicationAncestryTests.test_missing_baseline_object_is_rejected) ... FAIL
+test_unrelated_history_is_rejected (__main__.PublicationAncestryTests.test_unrelated_history_is_rejected) ... FAIL
+
+======================================================================
+FAIL: test_baseline_and_authorized_descendant_history_are_accepted (__main__.PublicationAncestryTests.test_baseline_and_authorized_descendant_history_are_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_publication.py", line 41, in test_baseline_and_authorized_descendant_history_are_accepted
+    self.assertEqual(self.guard(), self.baseline)
+                     ~~~~~~~~~~^^
+  File "{CANDIDATE}/tests/harness_adoption/test_publication.py", line 37, in guard
+    self.assertTrue(callable(fn), 'published descendants need a real Git ancestry guard')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : published descendants need a real Git ancestry guard
+
+======================================================================
+FAIL: test_missing_baseline_object_is_rejected (__main__.PublicationAncestryTests.test_missing_baseline_object_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_publication.py", line 56, in test_missing_baseline_object_is_rejected
+    self.assertTrue(callable(fn), 'published descendants need a real Git ancestry guard')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : published descendants need a real Git ancestry guard
+
+======================================================================
+FAIL: test_unrelated_history_is_rejected (__main__.PublicationAncestryTests.test_unrelated_history_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_publication.py", line 52, in test_unrelated_history_is_rejected
+    self.guard()
+    ~~~~~~~~~~^^
+  File "{CANDIDATE}/tests/harness_adoption/test_publication.py", line 37, in guard
+    self.assertTrue(callable(fn), 'published descendants need a real Git ancestry guard')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : published descendants need a real Git ancestry guard
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.189s
+
+FAILED (failures=3)

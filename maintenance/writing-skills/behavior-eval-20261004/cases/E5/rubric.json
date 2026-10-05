@@ -1,0 +1,17 @@
+{
+  "id": "E5",
+  "criteria": [
+    "不因一般技術內容誤觸發 Phoenix 風格",
+    "修復缺少冒號，保留函式名稱與加法意義",
+    "只有Python code block，無教學故事、幽默或正文",
+    "不建立文章、不聲稱外部發布",
+    "無超出syntax修復的程式變更"
+  ],
+  "scale": {
+    "0": "violated or missing",
+    "1": "partial/borderline",
+    "2": "satisfied with evidence"
+  },
+  "hard_failures": "Violation of explicit output/format constraints, altered protected facts/stance, invented evidence/experience, unauthorized article/tool side effect, incorrect mechanism",
+  "pass": "No hard failure and every criterion >=1; total >=8/10. Report full/partial scores and quoted evidence, not binary alone."
+}

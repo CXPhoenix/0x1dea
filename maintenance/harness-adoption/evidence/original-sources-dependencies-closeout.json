@@ -1,0 +1,22 @@
+{
+  "name": "original-sources-dependencies-closeout",
+  "argv": [
+    "python3",
+    "check-originals-resumed.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:37:49.143117+00:00",
+  "ended_utc": "2026-10-04T11:37:51.026867+00:00",
+  "elapsed_seconds": 1.8833272500196472,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "6afc9f1a2887611f2d66f6286c27ed811ab30f3f4dcbb58b5403596f1622f4de",
+  "log": "maintenance/harness-adoption/evidence/original-sources-dependencies-closeout.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "529bd6c0e407970c947c591e7f139e97103c7b121fb694f46cc9b5928f381391",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

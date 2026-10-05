@@ -1,0 +1,204 @@
+{
+  "time_utc": "2026-10-04T05:08:53.197840+00:00",
+  "method": "mechanical format/length/protected-byte checks; not a style or semantic judge",
+  "count": 31,
+  "failures": 0,
+  "checks": [
+    {
+      "case": "freeze",
+      "check": "skills/phoenix-writing/SKILL.md",
+      "passed": true,
+      "actual": "86cffc593f0184985a2595032edc26b4a8e86eb05a642f76f61841c7f7860d11"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/phoenix-writing/references/style-examples.md",
+      "passed": true,
+      "actual": "afd9240875e15b12fccfd44d59fbbafff7e0d16aded3c9a8c234ecf75aa92b2d"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/phoenix-writing/references/tw-vocabulary.md",
+      "passed": true,
+      "actual": "4219431491b4dd4357fc2a78da6f7720f48ad357cf8ea6d869dad8e4ab6d231a"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/maintaining-writing-skills/SKILL.md",
+      "passed": true,
+      "actual": "12b6a29fa02c124b709c6b1de0c04715c1671046897ba17de5ecde73fea2d5cf"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/maintaining-writing-skills/references/writing-process.md",
+      "passed": true,
+      "actual": "ac5b73ce8b9e4d595c7f00585503df21cca6232a9f6e2b2b1860a91ed8b536d3"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/maintaining-writing-skills/references/article-maintenance.md",
+      "passed": true,
+      "actual": "3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4"
+    },
+    {
+      "case": "freeze",
+      "check": "skills/creating-vitepress-post/SKILL.md",
+      "passed": true,
+      "actual": "737e8650091a90ba1f0f00aa778ce2b7bdd3d5acf7bdb276b017ce8be8c9d8d0"
+    },
+    {
+      "case": "E1",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E1"
+    },
+    {
+      "case": "E1",
+      "check": "180–320 Han characters",
+      "passed": true,
+      "actual": 228
+    },
+    {
+      "case": "E1",
+      "check": "no heading",
+      "passed": true,
+      "actual": 0
+    },
+    {
+      "case": "E2",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E2"
+    },
+    {
+      "case": "E2",
+      "check": "protected prefix/suffix exact",
+      "passed": true,
+      "actual": {
+        "prefix": true,
+        "suffix": true
+      }
+    },
+    {
+      "case": "E2",
+      "check": "paragraph separators unchanged",
+      "passed": true,
+      "actual": 5
+    },
+    {
+      "case": "E3",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E3"
+    },
+    {
+      "case": "E3",
+      "check": "<=80 English whitespace words",
+      "passed": true,
+      "actual": 63
+    },
+    {
+      "case": "E3",
+      "check": "one paragraph/no heading/question",
+      "passed": true,
+      "actual": "You keep a result in a cache so you can reuse it. But if the underlying data changes before that copy is removed or refreshed, you may be using a stale result. Cache invalidation addresses that gap: its rule decides when to remove or refresh the cached copy. Here, we are following one cache; coordinating changes across multiple services is outside this scenario."
+    },
+    {
+      "case": "E4",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E4"
+    },
+    {
+      "case": "E4",
+      "check": "three required labeled lines",
+      "passed": true,
+      "actual": [
+        "主旨：請主管核示是否延後上線。",
+        "說明：2026-10-03 的檢查共20項，已完成18項，尚有2項未完成；測試負責人為小林，目前尚未核准延後或新上線日期。",
+        "擬辦：擬請小林補完剩餘2項並回報，再由主管核示上線日期。"
+      ]
+    },
+    {
+      "case": "E4",
+      "check": "required facts literal",
+      "passed": true,
+      "actual": "主旨：請主管核示是否延後上線。\n說明：2026-10-03 的檢查共20項，已完成18項，尚有2項未完成；測試負責人為小林，目前尚未核准延後或新上線日期。\n擬辦：擬請小林補完剩餘2項並回報，再由主管核示上線日期。"
+    },
+    {
+      "case": "E5",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E5"
+    },
+    {
+      "case": "E5",
+      "check": "only syntax repair/code block",
+      "passed": true,
+      "actual": "```python\ndef add(a, b):\n    return a + b\n```"
+    },
+    {
+      "case": "E5",
+      "check": "writer reports no style invocation",
+      "passed": true,
+      "actual": false
+    },
+    {
+      "case": "E6",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E6"
+    },
+    {
+      "case": "E6",
+      "check": "body120–220 Han characters",
+      "passed": true,
+      "actual": 120
+    },
+    {
+      "case": "E6",
+      "check": "evidence/stance tokens",
+      "passed": true,
+      "actual": "我先不採用這個快取方案。你可能覺得我太保守：平均回應時間明明從200毫秒降到120毫秒，還在等什麼？但這份結果只來自單機、十次測試。我還沒測多服務之間的資料一致性，也沒測尖峰流量。這次看到的速度改善，還不足以讓我判斷整套系統能不能上線。我寧可先查清楚這些缺口，再決定是否採用。"
+    },
+    {
+      "case": "E7",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E7"
+    },
+    {
+      "case": "E7",
+      "check": "body150–260 Han characters",
+      "passed": true,
+      "actual": 179
+    },
+    {
+      "case": "E7",
+      "check": "one caption line",
+      "passed": true,
+      "actual": "圖說：單一快取時間線；10:00更新原資料，10:05快取失效，其間可能讀到舊值。"
+    },
+    {
+      "case": "E8",
+      "check": "json identity",
+      "passed": true,
+      "actual": "E8"
+    },
+    {
+      "case": "E8",
+      "check": "only A/B labels",
+      "passed": true,
+      "actual": true
+    },
+    {
+      "case": "E8",
+      "check": "A50–90/B180–300 Han characters",
+      "passed": true,
+      "actual": {
+        "A": 71,
+        "B": 215
+      }
+    }
+  ]
+}

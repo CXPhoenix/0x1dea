@@ -1,0 +1,15 @@
+{
+  "case_id": "E7",
+  "invoked_skill": [
+    "phoenix-writing"
+  ],
+  "files_read": [
+    "cases/E7/input.json",
+    "frozen-v22/skills/phoenix-writing/SKILL.md",
+    "frozen-v22/skills/maintaining-writing-skills/SKILL.md (YAML only)",
+    "frozen-v22/skills/creating-vitepress-post/SKILL.md (YAML only)",
+    "frozen-v22/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "原資料在10:00更新，快取卻到10:05才失效，這五分鐘的落差，就是圖裡值得留意的地方。你可能會想：資料都改了，讀取結果怎麼還會舊？因為原資料更新與快取失效是兩件事；假設你在這段期間讀取，仍可能拿到舊值，不代表每次讀取都一定如此。10:05標示的是快取失效，圖並未交代之後何時取得新值。因此，這條時間線適合說明單一快取的過期空窗；若要判斷多服務能否同步，或網路延遲會造成什麼影響，就得有其他資料，不能只靠這張圖下結論。\n\n圖說：單一快取時間線示意；10:00–10:05可能讀到舊值，未呈現跨服務同步或網路延遲。",
+  "execution_note": "先讀輸入及三個候選技能的 YAML 名稱與描述，再讀適用的 phoenix-writing 正文與圖文風格校準參考。以工具計算正文為 176 個中文字，含圖說為 206 個中文字。交付僅含正文及一行圖說；未瀏覽、未製圖或附製圖 prompt，未讀其他案例、評審材料、舊版輸出或 live repo，未執行外部動作。本 worker 指定 GPT-6.1-sol/high；API 無 fast 欄位，未推斷主 work 配置或跨模型效果。"
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "E8",
+  "invoked_skill": "phoenix-writing",
+  "files_read": [
+    "cases/E8/input.json",
+    "frozen-v2/skills/creating-vitepress-post/SKILL.md (YAML frontmatter only)",
+    "frozen-v2/skills/phoenix-writing/SKILL.md",
+    "frozen-v2/skills/maintaining-writing-skills/SKILL.md (YAML frontmatter only)",
+    "frozen-v2/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "A\n重試前，先問你這次呼叫會不會改變狀態。本案例讀取狀態不會；建立訂單會，重送可能多建一筆。別急著套重試，先辨別副作用。這只是案例設定，不能推成所有讀取 API 都無副作用。\n\nB\n你可能會想，請求再送一次，有什麼好想的？先看看送的是哪一種請求。\n\n在這個案例，讀取狀態不會改變狀態；重試只是再讀一次。建立訂單就不同了：它會改變狀態，重試可能再建立一筆。你原本要一筆訂單，重送後卻可能多出一筆；系統可不會因為你心裡想的是「再試一次」，就把建立訂單當成單純查看。\n\n所以，決定重試策略前，先問：這個操作會改變什麼？重做一次，會不會多做一次？辨別副作用，才能判斷重試可能帶來的結果。\n\n也別把案例當成通則：這裡的讀取沒有副作用，是情境設定，不能保證所有讀取 API 都如此。判斷要跟著實際操作走。",
+  "execution_note": "讀取封閉 fixture 與 frozen-v2 候選技能前置描述；明示 Phoenix 風格後讀取 phoenix-writing 正文與風格對照。以本機 Python 計算中文字（Unicode U+4E00–U+9FFF），A 71 字、B 215 字。未瀏覽、未讀評分資訊、未執行外部動作；只寫入指定輸出檔。"
+}

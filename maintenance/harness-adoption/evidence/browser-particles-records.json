@@ -1,0 +1,94 @@
+{
+  "recorded_at": "2026-10-04T11:15:51.724Z",
+  "records": [
+    {
+      "surface": "candidate",
+      "phase": "home-before",
+      "dom": "- link \"Skip to content\":\n  - /url: \"#VPContent\"\n- banner:\n  - link \"0x1DEA\":\n    - /url: /\n    - generic: \"0x1DEA\"\n  - navigation \"Main Navigation\":\n    - generic: Main Navigation\n    - link \"About Me\":\n      - /url: /about.html\n      - generic: About Me\n    - link \"文章總覽\":\n      - /url: /posts.html\n      - generic: 文章總覽\n    - button \"分類文章\":\n      - generic: 分類文章\n  - switch \"Switch to light theme\"\n  - link \"github\":\n    - /url: https://github.com/cxphoenix/0x1dea\n- heading \"0x1DEA 想像力的溢位\" [level=1]:\n  - generic: \"0x1DEA\"\n  - generic: 想像力的溢位\n- paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> 資安的世界也是 ~CXPh03n1x\n- link \"文章列表\":\n  - /url: /posts.html\n- img \"0x1DEA Overflow of Imaginations\"\n- article:\n  - heading \"🔑 資安教學\" [level=2]\n  - paragraph:\n    - text: 各種資安教學內容（太難的我也不會哈\n    - generic: ╮(╯_╰)╭\n- article:\n  - heading \"📝 技術文章\" [level=2]\n  - paragraph:\n    - text: 各種技術研究，還有我可愛的學術探索。\n    - generic: ლ(´•д• ̀ლ\n- article:\n  - heading \"🤖 AI 探索\" [level=2]\n  - paragraph:\n    - text: 現代的趨勢，然後...真的滿方便的！\n    - generic: (≖＿≖)✧\n- link \"為什麼你需要學研究方法？ 讓我們從「了解」走向「深究」的一條無止盡道路。 研究方法教學 2026年3月1日\":\n  - /url: /post/course/rm/why-we-need-rm.html\n  - heading \"為什麼你需要學研究方法？\" [level=3]\n  - paragraph: 讓我們從「了解」走向「深究」的一條無止盡道路。\n  - generic: 研究方法教學\n  - generic: 2026年3月1日\n- link \"安全？能吃嗎？ 我好像都懂「資訊安全」，深入後有一些新發現... 資安教學 2026年2月27日\":\n  - /url: /post/course/cybersec/what-is-safety.html\n  - heading \"安全？能吃嗎？\" [level=3]\n  - paragraph: 我好像都懂「資訊安全」，深入後有一些新發現...\n  - generic: 資安教學\n  - generic: 2026年2月27日\n- contentinfo:\n  - paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x\n  - paragraph: Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!",
+      "canvases": [
+        {
+          "cssHeight": 720,
+          "cssWidth": 1265,
+          "height": 1440,
+          "id": "",
+          "pointerEvents": "none",
+          "width": 2530
+        }
+      ],
+      "images": [
+        {
+          "complete": true,
+          "src": "/circleImage.svg",
+          "width": 512
+        },
+        {
+          "complete": true,
+          "src": "/heroImageWithoutText.svg",
+          "width": 512
+        }
+      ]
+    },
+    {
+      "surface": "baseline",
+      "phase": "home-before",
+      "dom": "- link \"Skip to content\":\n  - /url: \"#VPContent\"\n- banner:\n  - link \"0x1DEA\":\n    - /url: /\n    - generic: \"0x1DEA\"\n  - navigation \"Main Navigation\":\n    - generic: Main Navigation\n    - link \"About Me\":\n      - /url: /about.html\n      - generic: About Me\n    - link \"文章總覽\":\n      - /url: /posts.html\n      - generic: 文章總覽\n    - button \"分類文章\":\n      - generic: 分類文章\n  - switch \"Switch to light theme\"\n  - link \"github\":\n    - /url: https://github.com/cxphoenix/0x1dea\n- heading \"0x1DEA 想像力的溢位\" [level=1]:\n  - generic: \"0x1DEA\"\n  - generic: 想像力的溢位\n- paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> 資安的世界也是 ~CXPh03n1x\n- link \"文章列表\":\n  - /url: /posts.html\n- img \"0x1DEA Overflow of Imaginations\"\n- article:\n  - heading \"🔑 資安教學\" [level=2]\n  - paragraph:\n    - text: 各種資安教學內容（太難的我也不會哈\n    - generic: ╮(╯_╰)╭\n- article:\n  - heading \"📝 技術文章\" [level=2]\n  - paragraph:\n    - text: 各種技術研究，還有我可愛的學術探索。\n    - generic: ლ(´•д• ̀ლ\n- article:\n  - heading \"🤖 AI 探索\" [level=2]\n  - paragraph:\n    - text: 現代的趨勢，然後...真的滿方便的！\n    - generic: (≖＿≖)✧\n- link \"為什麼你需要學研究方法？ 讓我們從「了解」走向「深究」的一條無止盡道路。 研究方法教學 2026年3月1日\":\n  - /url: /post/course/rm/why-we-need-rm.html\n  - heading \"為什麼你需要學研究方法？\" [level=3]\n  - paragraph: 讓我們從「了解」走向「深究」的一條無止盡道路。\n  - generic: 研究方法教學\n  - generic: 2026年3月1日\n- link \"安全？能吃嗎？ 我好像都懂「資訊安全」，深入後有一些新發現... 資安教學 2026年2月27日\":\n  - /url: /post/course/cybersec/what-is-safety.html\n  - heading \"安全？能吃嗎？\" [level=3]\n  - paragraph: 我好像都懂「資訊安全」，深入後有一些新發現...\n  - generic: 資安教學\n  - generic: 2026年2月27日\n- contentinfo:\n  - paragraph: 魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x\n  - paragraph: Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!",
+      "canvases": [
+        {
+          "cssHeight": 720,
+          "cssWidth": 1265,
+          "height": 1440,
+          "id": "",
+          "pointerEvents": "none",
+          "width": 2530
+        }
+      ],
+      "images": [
+        {
+          "complete": true,
+          "src": "/circleImage.svg",
+          "width": 512
+        },
+        {
+          "complete": true,
+          "src": "/heroImageWithoutText.svg",
+          "width": 512
+        }
+      ]
+    },
+    {
+      "surface": "candidate",
+      "phase": "light",
+      "htmlClass": "mac",
+      "canvasCount": 1
+    },
+    {
+      "surface": "candidate",
+      "phase": "leave-home",
+      "canvasCount": 1
+    },
+    {
+      "surface": "candidate",
+      "phase": "return-home",
+      "canvasCount": 1,
+      "console": []
+    },
+    {
+      "surface": "baseline",
+      "phase": "light",
+      "htmlClass": "mac",
+      "canvasCount": 1
+    },
+    {
+      "surface": "baseline",
+      "phase": "leave-home",
+      "canvasCount": 1
+    },
+    {
+      "surface": "baseline",
+      "phase": "return-home",
+      "canvasCount": 1,
+      "console": []
+    }
+  ],
+  "limits": "DOM lifecycle/real screenshot/navigation smoke; no per-frame physics/performance/reduced-motion benchmark"
+}

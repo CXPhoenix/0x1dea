@@ -1,0 +1,30 @@
+{
+  "name": "tracker-trace-final-tests",
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/harness_adoption",
+    "-p",
+    "test_tracker.py",
+    "-v"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:06:35.980394+00:00",
+  "ended_utc": "2026-10-04T11:06:36.344550+00:00",
+  "elapsed_seconds": 0.3638332079863176,
+  "exit_code": 1,
+  "status": "failure",
+  "log_sha256": "f83288562f4c41254e7e9e96be3c606e8c1da41dfde2ba89940c6e8e323c0ed9",
+  "log": "maintenance/harness-adoption/evidence/tracker-trace-final-tests.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "0a75fb227d399f359fd257f73a6707e854349b9d2c2673809301715a58b31570",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "cad4955a5c8a5f8e77cada57a50462737b80067c5c0d7650031984ecfb073422",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

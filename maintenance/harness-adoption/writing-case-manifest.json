@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "E1",
+    "input_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E1/input.json",
+    "input_sha256": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918",
+    "rubric_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E1/rubric.json",
+    "rubric_sha256": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3",
+    "projection_annotation": null
+  },
+  {
+    "case_id": "E2",
+    "input_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E2/input.json",
+    "input_sha256": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6",
+    "rubric_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E2/rubric.json",
+    "rubric_sha256": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c",
+    "projection_annotation": null
+  },
+  {
+    "case_id": "E3",
+    "input_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E3/input.json",
+    "input_sha256": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e",
+    "rubric_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E3/rubric.json",
+    "rubric_sha256": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607",
+    "projection_annotation": null
+  },
+  {
+    "case_id": "E4",
+    "input_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E4/input.json",
+    "input_sha256": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425",
+    "rubric_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E4/rubric.json",
+    "rubric_sha256": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791",
+    "projection_annotation": null
+  },
+  {
+    "case_id": "E5",
+    "input_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E5/input.json",
+    "input_sha256": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca",
+    "rubric_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E5/rubric.json",
+    "rubric_sha256": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc",
+    "projection_annotation": null
+  },
+  {
+    "case_id": "E6",
+    "input_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E6/input.json",
+    "input_sha256": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01",
+    "rubric_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E6/rubric.json",
+    "rubric_sha256": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947",
+    "projection_annotation": null
+  },
+  {
+    "case_id": "E7",
+    "input_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E7/input.json",
+    "input_sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9",
+    "rubric_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E7/rubric.json",
+    "rubric_sha256": "9403f0de073b1246a81fd353bf288f34f2434b9704061a0a744ad64f481103b3",
+    "projection_annotation": null
+  },
+  {
+    "case_id": "E8",
+    "input_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E8/input.json",
+    "input_sha256": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2",
+    "rubric_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E8/rubric.json",
+    "rubric_sha256": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a",
+    "projection_annotation": null
+  },
+  {
+    "case_id": "E9",
+    "input_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E9/input.json",
+    "input_sha256": "3b74f474e294725b7ce45bbd01ea5ac5de45db42c53de56781e577018aeab00c",
+    "rubric_path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E9/rubric.json",
+    "rubric_sha256": "aa8747d2c643500b27b61c6248f3c8cef246783f7332e57fbaf9a976b94ca19b",
+    "projection_annotation": null
+  }
+]

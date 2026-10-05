@@ -50,3 +50,12 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+.spectra/
+openspec/.vector-search.db*
+
+# Local Harness handoffs and Python cache
+.proj.handoffs/
+__pycache__/
+*.pyc
+
+!maintenance/harness-adoption/evidence/**/*.log

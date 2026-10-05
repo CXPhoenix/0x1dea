@@ -1,0 +1,290 @@
+[
+  {
+    "source": ".claude/skills/spectra-apply/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-apply/SKILL.md.txt",
+    "sha256": "c44410aa314e818f992e1f6f69b8cbc432f0a7f9e04d044c3e3e5242ef474f70",
+    "blob": "053d761de5b3c6ec136645132455439327d8823c"
+  },
+  {
+    "source": ".claude/skills/spectra-archive/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-archive/SKILL.md.txt",
+    "sha256": "6e018f08cd963c9b74682a32ea23ca4194368990e410b818108492a64c204a4e",
+    "blob": "8f8b6e21a8946bb2864a5f22b03cfadd5839db07"
+  },
+  {
+    "source": ".claude/skills/spectra-ask/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-ask/SKILL.md.txt",
+    "sha256": "db0202ea4892fdf271bd2e615525c2c934552509a143e556433b4026e38b8057",
+    "blob": "74c8f93dd326d9449e4f86cc630076e10afe7c27"
+  },
+  {
+    "source": ".claude/skills/spectra-audit/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-audit/SKILL.md.txt",
+    "sha256": "91b0539dd9f3474c14438d32343eacf70ce6b7f3f0b03f4108a3c6afaa1e0095",
+    "blob": "13003430eb9a26cc35a29074fa5fc0b5c0264fd9"
+  },
+  {
+    "source": ".claude/skills/spectra-commit/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-commit/SKILL.md.txt",
+    "sha256": "9d19be3eba67874816889dd1f6c4db4c0bd1f1da0d906003b7301cb682fac25d",
+    "blob": "3a429b989abc664334d68c1db6f7a134887e0a25"
+  },
+  {
+    "source": ".claude/skills/spectra-debug/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-debug/SKILL.md.txt",
+    "sha256": "3feab58e515a90ceb1d5a9a9487df139e4c0f0097c74799af4f78cfc7e9024cb",
+    "blob": "b96cb2e152138bae3f44662fe1f52e0063201daf"
+  },
+  {
+    "source": ".claude/skills/spectra-discuss/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-discuss/SKILL.md.txt",
+    "sha256": "39c45831c90bb44790d9431770e9663d8731d62fb6d1584fe52930ccfccbcc7b",
+    "blob": "9b074c2e0753ac141ca99a4a216383bc6ec8d100"
+  },
+  {
+    "source": ".claude/skills/spectra-ingest/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-ingest/SKILL.md.txt",
+    "sha256": "ca330709558b7b3132a579cc18c98e1ca67bfd6733c40442a6975cb0707abc96",
+    "blob": "154ddff687dafcb8e0c13a57d2fac8f098b58b43"
+  },
+  {
+    "source": ".claude/skills/spectra-propose/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-propose/SKILL.md.txt",
+    "sha256": "55c7445158420b04b3cf380e591a10cd87bc941fbb98251d8f8a298b329da6a8",
+    "blob": "3ff001d40bbe3e95da30ba32386fafd5c12744f0"
+  },
+  {
+    "source": ".gemini/commands/spectra/apply.toml",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/apply.toml.txt",
+    "sha256": "7a984188489285ab0df405e238a65ee69da7b21840cd58908ffa462308064ccb",
+    "blob": "ff6281c1e655c4c8e2daece0b2890101baa1f199"
+  },
+  {
+    "source": ".gemini/commands/spectra/archive.toml",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/archive.toml.txt",
+    "sha256": "b0bb40db82eafd0e1d95ca38455762b0e0d418390b4170aa50cb67a0e8226982",
+    "blob": "18a663af94008e3adb82feae93378c6484241546"
+  },
+  {
+    "source": ".gemini/commands/spectra/ask.toml",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/ask.toml.txt",
+    "sha256": "4e538245ee3661112f5e15b1911f893cfd02cd4ca4270976de9953e65a5a03c4",
+    "blob": "dda0fc7489eccd7f1d9510832804171897e170f5"
+  },
+  {
+    "source": ".gemini/commands/spectra/audit.toml",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/audit.toml.txt",
+    "sha256": "46bfe686fde3f58154fa7bd1deacb16292c9177c299ffa7d53f1749b145414b8",
+    "blob": "d957c41cb210ee5a103602be638bddfc7b427362"
+  },
+  {
+    "source": ".gemini/commands/spectra/commit.toml",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/commit.toml.txt",
+    "sha256": "8693611462f53bcc311d57972ed47f8f6fb873e9106f2d63dde18c7c85289ff1",
+    "blob": "af407fd0237d7283edffaa65b768f2633855b69d"
+  },
+  {
+    "source": ".gemini/commands/spectra/debug.toml",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/debug.toml.txt",
+    "sha256": "30c69380d78011f28c4edb4544a350629c40ee1d4ca7a0b29855e47fd6f9bf94",
+    "blob": "212095ce11ae6419f3125c81c3e9fc0ce4ef61c9"
+  },
+  {
+    "source": ".gemini/commands/spectra/discuss.toml",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/discuss.toml.txt",
+    "sha256": "0ed33870fe8ad2c5f064dd8919541770377ad887f19371a4365c75ccd789bb36",
+    "blob": "6afec43e33828dd0401a601bf21b94fcf671b564"
+  },
+  {
+    "source": ".gemini/commands/spectra/ingest.toml",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/ingest.toml.txt",
+    "sha256": "d837d67a18f51e1e195173d9af4300cb42379898fb17a0f9d7a7bbfd100eaa7d",
+    "blob": "5e2606b3a00a63d1caa00b4c84cf9982219015cb"
+  },
+  {
+    "source": ".gemini/commands/spectra/propose.toml",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/propose.toml.txt",
+    "sha256": "5f8152d96a677a7b184d59e6080b4cb230fbf64f8c4c12c32dfca3accec40e16",
+    "blob": "35ed307ffbbe2571157ee2f806550a1a007b20fb"
+  },
+  {
+    "source": ".gemini/skills/spectra-apply/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-apply/SKILL.md.txt",
+    "sha256": "b8ef118964db40e49df026c1d705dfe0f1afce0ff7da87eedbc493429b54bce1",
+    "blob": "629577ff1c77e22b6f8dcdab52997f485093fee0"
+  },
+  {
+    "source": ".gemini/skills/spectra-archive/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-archive/SKILL.md.txt",
+    "sha256": "b8f5ba6c2b923afb6b9d7e59212442e27e0ab8795df0641a79c2c4007d8c1437",
+    "blob": "673c3ad7a7e0dac4e59cee021076efcbb5f8f1a5"
+  },
+  {
+    "source": ".gemini/skills/spectra-ask/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-ask/SKILL.md.txt",
+    "sha256": "313dad6e1021066ac7078220c98ade64b4cd71b27b2ac7529ff68e8f73d7a5c0",
+    "blob": "5a143a698dbde06151b7a67e4e53c268d15bbc6c"
+  },
+  {
+    "source": ".gemini/skills/spectra-audit/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-audit/SKILL.md.txt",
+    "sha256": "e9e639322f6f23cfb9e64d53d63309e3949bb1c369aea135af3f03c1051cda2b",
+    "blob": "e02d3f6f4fa78153bf44a4edd42a7c99926fa17b"
+  },
+  {
+    "source": ".gemini/skills/spectra-commit/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-commit/SKILL.md.txt",
+    "sha256": "a535a423fff22d60e8509a2fa0039ef9542bcb90030f374ebe8169e191f12e20",
+    "blob": "4469db75e07caafd5474c210721c3d83ed8db1cb"
+  },
+  {
+    "source": ".gemini/skills/spectra-debug/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-debug/SKILL.md.txt",
+    "sha256": "356b046161d3283a8f179a2913b1e7da5f274df60571a285ed789e544b9feb62",
+    "blob": "bd6ba43ad70eb2cf84914d12f152da7c92498fe4"
+  },
+  {
+    "source": ".gemini/skills/spectra-discuss/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-discuss/SKILL.md.txt",
+    "sha256": "1d3a4572eda3045ed691fc7bfdb3a94706bb7f70a2bd5e5820d77030931837bb",
+    "blob": "130f4f790fcfe9814fac5fbb127a7ebb6886069c"
+  },
+  {
+    "source": ".gemini/skills/spectra-ingest/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-ingest/SKILL.md.txt",
+    "sha256": "091346ee849d34593824665e8473fdf4b65bf8df72c3505cd5e99796ce32f5db",
+    "blob": "172ff7a8b6d6c8405530dc940b55bb0de921c88d"
+  },
+  {
+    "source": ".gemini/skills/spectra-propose/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-propose/SKILL.md.txt",
+    "sha256": "860154be0e3c2163eec0f7591cbf3990dc66b6192cfb5a0bfe482fa1e3384645",
+    "blob": "5224365442ebb261cf570f189cf54a4a352a7dd1"
+  },
+  {
+    "source": ".github/prompts/spectra-apply.prompt.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-apply.prompt.md.txt",
+    "sha256": "c40d4dbd1026fb816acae2b0682b99d4ab68c23b8d9bf4cecb6d9e8f635ac87a",
+    "blob": "e4addff477a0c84a583d4ec7a212e2e3cc0c4528"
+  },
+  {
+    "source": ".github/prompts/spectra-archive.prompt.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-archive.prompt.md.txt",
+    "sha256": "4eb93a70b0da1a496a6609c51975b9807f16c753db875eea8c60e91bacaa1c93",
+    "blob": "e19e2712e41580e44abe637fc1c5bcecfd10bd62"
+  },
+  {
+    "source": ".github/prompts/spectra-ask.prompt.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-ask.prompt.md.txt",
+    "sha256": "f46b9a180c145e6ac591ae85b87693d1b91b95622ffc510061c4d1d9cc028fe8",
+    "blob": "4fb411965222046ea4d6c2c4553058f2ebd051c6"
+  },
+  {
+    "source": ".github/prompts/spectra-audit.prompt.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-audit.prompt.md.txt",
+    "sha256": "fa96c200934171fc8aadcac5d69626f6839f17b9a7b439c7678587e0120d1933",
+    "blob": "19310f675cabfacd86f249d9ae3145bdb8c3bbc1"
+  },
+  {
+    "source": ".github/prompts/spectra-commit.prompt.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-commit.prompt.md.txt",
+    "sha256": "9377d5f84fcfde09e1f0961e3e7bf45b9bb896ec8d8857e3340e2154eb755a59",
+    "blob": "ab1939f9d0e824d539407b3c6778b72dc1af1c9a"
+  },
+  {
+    "source": ".github/prompts/spectra-debug.prompt.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-debug.prompt.md.txt",
+    "sha256": "6372883450a361035ee11065fcafd5353425fbd7a81c012c701a2a9a6b1631eb",
+    "blob": "4b8e596710558b99ac6c36e5bd39456d52c2b86a"
+  },
+  {
+    "source": ".github/prompts/spectra-discuss.prompt.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-discuss.prompt.md.txt",
+    "sha256": "d1ae0dd365c5b6608b36f652fdcc719f2d6325965e3607f7261bff37a9da46dd",
+    "blob": "4db82a1d15e79a6aac1b0334aceab64bc74164c1"
+  },
+  {
+    "source": ".github/prompts/spectra-ingest.prompt.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-ingest.prompt.md.txt",
+    "sha256": "3b2f4d758a58832d06b41ecda3254a4e7f3a607f6161f4c87403fc9cdfff274f",
+    "blob": "05afedc5e94af8c6022a4874ac0870b6d97943b6"
+  },
+  {
+    "source": ".github/prompts/spectra-propose.prompt.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-propose.prompt.md.txt",
+    "sha256": "2841c0aa25d08efae1b1ddceb1f29941ae2600eb51c05f40ec265b5f7330ce1c",
+    "blob": "e9fa07b578aac5a35d99ad187feddc2ad017baa7"
+  },
+  {
+    "source": ".github/skills/spectra-apply/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-apply/SKILL.md.txt",
+    "sha256": "b8ef118964db40e49df026c1d705dfe0f1afce0ff7da87eedbc493429b54bce1",
+    "blob": "629577ff1c77e22b6f8dcdab52997f485093fee0"
+  },
+  {
+    "source": ".github/skills/spectra-archive/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-archive/SKILL.md.txt",
+    "sha256": "b8f5ba6c2b923afb6b9d7e59212442e27e0ab8795df0641a79c2c4007d8c1437",
+    "blob": "673c3ad7a7e0dac4e59cee021076efcbb5f8f1a5"
+  },
+  {
+    "source": ".github/skills/spectra-ask/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-ask/SKILL.md.txt",
+    "sha256": "313dad6e1021066ac7078220c98ade64b4cd71b27b2ac7529ff68e8f73d7a5c0",
+    "blob": "5a143a698dbde06151b7a67e4e53c268d15bbc6c"
+  },
+  {
+    "source": ".github/skills/spectra-audit/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-audit/SKILL.md.txt",
+    "sha256": "e9e639322f6f23cfb9e64d53d63309e3949bb1c369aea135af3f03c1051cda2b",
+    "blob": "e02d3f6f4fa78153bf44a4edd42a7c99926fa17b"
+  },
+  {
+    "source": ".github/skills/spectra-commit/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-commit/SKILL.md.txt",
+    "sha256": "a535a423fff22d60e8509a2fa0039ef9542bcb90030f374ebe8169e191f12e20",
+    "blob": "4469db75e07caafd5474c210721c3d83ed8db1cb"
+  },
+  {
+    "source": ".github/skills/spectra-debug/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-debug/SKILL.md.txt",
+    "sha256": "356b046161d3283a8f179a2913b1e7da5f274df60571a285ed789e544b9feb62",
+    "blob": "bd6ba43ad70eb2cf84914d12f152da7c92498fe4"
+  },
+  {
+    "source": ".github/skills/spectra-discuss/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-discuss/SKILL.md.txt",
+    "sha256": "1d3a4572eda3045ed691fc7bfdb3a94706bb7f70a2bd5e5820d77030931837bb",
+    "blob": "130f4f790fcfe9814fac5fbb127a7ebb6886069c"
+  },
+  {
+    "source": ".github/skills/spectra-ingest/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-ingest/SKILL.md.txt",
+    "sha256": "091346ee849d34593824665e8473fdf4b65bf8df72c3505cd5e99796ce32f5db",
+    "blob": "172ff7a8b6d6c8405530dc940b55bb0de921c88d"
+  },
+  {
+    "source": ".github/skills/spectra-propose/SKILL.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-propose/SKILL.md.txt",
+    "sha256": "ba2afc256b18411cea2686c462f5146d9019c920fd5e290ffd119854ab75f076",
+    "blob": "5058d3708e6288ab6368380c95abbdf6ab93d793"
+  },
+  {
+    "source": "AGENTS.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/AGENTS.md.txt",
+    "sha256": "906bfad5899ca79ec8d37ceb4812267ce92eb2a1f3f1042e29af42e7109fdaa8",
+    "blob": "05171bf041194327c1f8317a4bc6d3bce18a920c"
+  },
+  {
+    "source": "CLAUDE.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/CLAUDE.md.txt",
+    "sha256": "7f8ed237a219b296081999cf9b2c740a0c0874425da6397291d89610ba4fdb8c",
+    "blob": "c46d6536686a4e44725aae5d936f9414cb93e628"
+  },
+  {
+    "source": "GEMINI.md",
+    "archive": "maintenance/harness-adoption/legacy-runtime/GEMINI.md.txt",
+    "sha256": "7a48fb2a0fe0b9fafe7ebbda4befe06b69a2010bd82166e4eb90e6ebbc52a771",
+    "blob": "5011bbf223c315857635966140aaa6a8c67e6b1e"
+  }
+]

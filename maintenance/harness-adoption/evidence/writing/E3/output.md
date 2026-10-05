@@ -1,0 +1,1 @@
+You keep a result in a cache so you can reuse it. If the underlying data changes while that copy remains, the cached result may be stale. Cache invalidation is the rule that decides when to remove or refresh the copy. Here, we’re following one cache: the issue is when its stored result needs to change, without coordination among multiple services.

@@ -1,0 +1,48 @@
+{
+  "case_id": "E4",
+  "criteria": [
+    {
+      "criterion": "正確三段各一行，保留正式模板功能",
+      "score": 2,
+      "evidence": "artifact 共3行，依序「主旨：請主管核示是否延後上線。」「說明：2026-10-03 檢查共20項……」「擬辦：擬請小林補完剩餘2項並回報……」。",
+      "reason": "三個標籤各占一行，分別承擔請求、事實說明與擬議處理；沒有標題、前言或額外正文。"
+    },
+    {
+      "criterion": "20／18／2、日期與負責人精確",
+      "score": 2,
+      "evidence": "「2026-10-03 檢查共20項，已完成18項，尚有2項未完成；測試負責人為小林」。",
+      "reason": "日期、總數、完成與未完成數、角色及姓名皆與輸入一致，未改變檢查範圍。"
+    },
+    {
+      "criterion": "區分請核示的提案與已核准決議",
+      "score": 2,
+      "evidence": "「請主管核示是否延後上線」「目前尚未核准延後上線或新上線日期」「再由主管核示上線日期」。",
+      "reason": "保留是否延後與上線日期均待主管核示，沒有把擬辦寫成已核准。"
+    },
+    {
+      "criterion": "無新增日期、承諾或義務",
+      "score": 2,
+      "evidence": "唯一日期為「2026-10-03」；擬辦為「擬請小林補完剩餘2項並回報，再由主管核示上線日期」。",
+      "reason": "擬辦內容逐項對應輸入，沒有新增期限、保證完成、核准狀態或責任。"
+    },
+    {
+      "criterion": "Phoenix請求不破壞正式無幽默限制",
+      "score": 2,
+      "evidence": "全文使用「主旨」「說明」「擬辦」「核示」「擬請」，沒有對話、旁白或幽默。",
+      "reason": "依 phoenix-writing 正式文類邊界維持模板與功能，明示無幽默要求優先於作者聲音裝飾。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": {
+    "assessment": "適用 phoenix-writing，但正式文類與三行模板限制優先；不需建立文章或啟動文章維護。",
+    "artifact_evidence": "正式用詞與三行模板符合路由邊界。",
+    "writer_self_report": "自述 invoked_skill 為 phoenix-writing，讀其正文及 style-examples；維護與新文技能只看 YAML。這是自述，未獨立驗證載入。"
+  },
+  "limitations": [
+    "僅以指定 input.json、rubric.json、output-reg22.json 與 frozen-v22 適用技能／參考評閱；沒有讀取 baseline、design、其他 judge 或其他案例。",
+    "invoked_skill、files_read、execution_note 是 writer 自述，並非工具 instrumentation；無法單憑此檔驗證實際載入、讀檔或所有副作用。",
+    "結果只描述本案 artifact；不推論跨模型、統計效果、judge 一致率或主設定 fast。"
+  ]
+}

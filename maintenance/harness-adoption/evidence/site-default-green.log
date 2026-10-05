@@ -1,0 +1,15 @@
+
+> 0x1dea@1.4.0 test:unit {CANDIDATE}
+> vitest run
+
+
+ RUN  v4.0.18 {CANDIDATE}
+
+ ✓ tests/vpHelper.vitest.ts (9 tests) 13ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 54ms
+
+ Test Files  2 passed (2)
+      Tests  11 passed (11)
+   Start at  18:45:50
+   Duration  1.66s (transform 452ms, setup 0ms, import 890ms, tests 67ms, environment 1.56s)
+

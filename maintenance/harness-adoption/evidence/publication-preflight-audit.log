@@ -1,0 +1,35 @@
+{
+  "status": "pass",
+  "recorded_at": "2026-10-04T12:11:05.224232+00:00",
+  "changed_files_scanned": 1405,
+  "python_sources_ast_parsed": 56,
+  "finite_credential_pattern_hits": [],
+  "actual_local_machine_path_hits": [],
+  "new_files_over_10MiB": [],
+  "published_receipts_verified": 109,
+  "omitted_large_diffs": [
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-applied.patch",
+      "size": 67034741,
+      "sha256": "cc4fed07eda846925cc77f35d691eb5f04266f58f0fa0d2c4b639bc8e6df2c44",
+      "reason": "Large duplicate binary/full WIP diff retained in private full bundle and frozen local packets; public Git history plus source/evidence remains reviewable."
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/final-tracked.diff",
+      "size": 67034143,
+      "sha256": "bedab37be688df152b30ab337e4a0a85f7389b32f74c37926e5f180c7cf4e21b",
+      "reason": "Large duplicate binary/full WIP diff retained in private full bundle and frozen local packets; public Git history plus source/evidence remains reviewable."
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/unstaged.diff",
+      "size": 13208177,
+      "sha256": "f90ead96cdad8d82a865c7c55bdefef32cbfd6760021be1ec407680440091b83",
+      "reason": "Large duplicate binary/full WIP diff retained in private full bundle and frozen local packets; public Git history plus source/evidence remains reviewable."
+    }
+  ],
+  "private_full_bundle_sha256_verified": "edf74f9816a6d39b714ec34283ba450ceabf6ca31c38fafc68a8d4036885c176",
+  "change_boundary": "Baseline/source/runtime pins and case answers remain; code delta is justified ancestry guard/exact test allowlist plus tests and authorized management/public projections.",
+  "historical_not_run_rows": 85,
+  "lint": "blocked: missing existing @unocss/eslint-plugin; first installer-prompt exit0 not accepted as lint pass; no install/rule disabling/hook skipping",
+  "security_scope": "Finite publication-pattern scan, not a whole-project secret/security guarantee."
+}

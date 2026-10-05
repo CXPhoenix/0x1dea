@@ -1,0 +1,117 @@
+test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) ... 
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='blocked', mixed=False) ... FAIL
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='blocked', mixed=True) ... FAIL
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='not-run', mixed=False) ... FAIL
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='not-run', mixed=True) ... FAIL
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='expected-red', mixed=False) ... FAIL
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='expected-red', mixed=True) ... FAIL
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='existing-failure', mixed=False) ... FAIL
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='existing-failure', mixed=True) ... FAIL
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='new-regression', mixed=False) ... FAIL
+  test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='new-regression', mixed=True) ... FAIL
+test_pass_trace_rejects_invalid_execution_receipt (__main__.TraceEvidenceTests.test_pass_trace_rejects_invalid_execution_receipt) ... ok
+test_trace_rejects_unknown_row_status (__main__.TraceEvidenceTests.test_trace_rejects_unknown_row_status) ... FAIL
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='blocked', mixed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='blocked', mixed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='not-run', mixed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='not-run', mixed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='expected-red', mixed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='expected-red', mixed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='existing-failure', mixed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='existing-failure', mixed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='new-regression', mixed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence (__main__.TraceEvidenceTests.test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence) (status='new-regression', mixed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 186, in test_pass_trace_rejects_each_nonpass_record_and_mixed_evidence
+    with self.assertRaisesRegex(ValueError, 'passed trace.*nonpass'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_trace_rejects_unknown_row_status (__main__.TraceEvidenceTests.test_trace_rejects_unknown_row_status)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 191, in test_trace_rejects_unknown_row_status
+    with self.assertRaisesRegex(ValueError, 'trace.*status'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.296s
+
+FAILED (failures=11)

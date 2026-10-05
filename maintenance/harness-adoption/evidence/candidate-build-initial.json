@@ -1,0 +1,23 @@
+{
+  "name": "candidate-build-initial",
+  "argv": [
+    "pnpm",
+    "docs:build"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T10:47:29.847856+00:00",
+  "ended_utc": "2026-10-04T10:47:45.294742+00:00",
+  "elapsed_seconds": 15.446660500019789,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "7bf529fdf13f45caa9277f3c2f7df8c32b36c612e6b347ee3dec8ba2e1b158da",
+  "log": "maintenance/harness-adoption/evidence/candidate-build-initial.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "ef3b2b18e34bdbd2afe1a2c5e4b32992eb0248b09c94343faa3649cf0fd630c4",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "165e25fe320c1e2b48b57d1827968ebb923aa673dd8ab5855b62d8b759935442",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

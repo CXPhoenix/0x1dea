@@ -73,7 +73,7 @@ pnpm docs:dev
 > **視覺要素**：動態粒子背景 (Particles) + 漸層文字 + 響應式佈局。
 
 <div align="center">
-  <img src="./docs/public/heroImage.png" alt="首頁展示" width="750">
+  <img src="./blog/public/heroImage.png" alt="首頁展示" width="750">
 </div>
 
 ## 安裝指南 📦
@@ -116,22 +116,28 @@ pnpm test:unit
 快速建立新文章的 CLI 工具，支援自動分類與靜態資源資料夾管理。
 
 > [!NOTE]
-> 預設文章資料夾在 `docs/post` 下。
+> 預設文章資料夾在 `blog/post` 下。
 
 ```bash
 # 基本用法
 pnpm new:post "文章標題"
 
-# 指定分類 (建立在 docs/post/tech 資料夾)
+# 指定分類 (建立在 blog/post/tech 資料夾)
 pnpm new:post "Vue3 教學" -c tech
 
 # 指定完整路徑
-pnpm new:post "系統架構" -d docs/design
+pnpm new:post "系統架構" -d blog/design
 ```
 
 **自動化行為**：
 1.  **文章建立**：生成標準 frontmatter 的 Markdown 檔案。
-2.  **資源管理**：在 `docs/public/assets` 自動建立對應名稱的資料夾 (如 `post_tech_vue3_tutorial`)，方便存放該文章專屬圖片。
+2.  **資源管理**：在 `blog/public/assets` 自動建立對應名稱的資料夾 (如 `post_tech_vue3_tutorial`)，方便存放該文章專屬圖片。
+
+## Agent 寫作技能
+
+[phoenix-writing](skills/phoenix-writing/SKILL.md) 處理明示的 Phoenix 作者風格；[creating-vitepress-post](skills/creating-vitepress-post/SKILL.md) 建立本站文章骨架；[maintaining-writing-skills](skills/maintaining-writing-skills/SKILL.md) 處理技能與文章維護。Codex 從 .agents/skills 讀取入口，Claude 相容入口在 .claude/skills，內容只有 repo skills 一份。
+
+一般對話草稿與既有改稿不呼叫新文 CLI。搬移的指定來源、相容位置、復原方式及驗收結果見 [技能維護紀錄](maintenance/writing-skills/MIGRATION.md)。
 
 ## 架構 🏗️
 
@@ -303,3 +309,7 @@ provide(sortPostsKey, (a, b) =>
     <sub>探索、學習、想像力溢位 ✨</sub>
   </p>
 </div>
+
+## 本地 Harness 協作
+
+網站原始碼在 blog；docs 是管理文件。從 [AGENTS.md](AGENTS.md)、[協作指南](docs/guide.md) 與 [.proj.specs](.proj.specs/0001-harness-adoption/spec.en.md) 進入。可執行進度只記錄在 .proj.specs／.proj.tickets；Notion 為外部索引。三個寫作技能只改 skills 下的來源，再產生實體 runtime 套件。範本 [MIT 授權](maintenance/harness-adoption/vendor/LICENSE) 與 [第三方聲明](THIRD_PARTY_NOTICES.md) 保留；產品原 LICENSE 不變。

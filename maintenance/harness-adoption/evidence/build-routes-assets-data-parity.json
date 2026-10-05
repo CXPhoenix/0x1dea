@@ -1,0 +1,22 @@
+{
+  "name": "build-routes-assets-data-parity",
+  "argv": [
+    "python3",
+    "check-build-parity-resumed.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:13:42.995807+00:00",
+  "ended_utc": "2026-10-04T11:13:43.432528+00:00",
+  "elapsed_seconds": 0.4365014999639243,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "0913c822266303c7d8d74db512f44470d8086647d9409e3a22bf3b2e49cf8a03",
+  "log": "maintenance/harness-adoption/evidence/build-routes-assets-data-parity.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "0d2c3a1593e7ae910ac18817d802d63a0ea50bd192c0e03b44c9a5a1d3395dd9",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

@@ -1,0 +1,206 @@
+{
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "capabilities": [
+    {
+      "capability": "newest-posts-widget",
+      "source": "openspec/specs/newest-posts-widget/spec.md",
+      "git_blob": "24328022e6b605d323551458e08bdb1435bc21a4",
+      "sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+      "requirements": 5,
+      "scenarios": 14,
+      "import": ".proj.specs/_baseline/ee7fecf/newest-posts-widget/spec.en.md",
+      "review": "not recorded under harness"
+    },
+    {
+      "capability": "phoenix-style-and-maintenance",
+      "source": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+      "git_blob": "bf6b088ca2d1f08294336af11100902a7d9810e9",
+      "sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+      "requirements": 4,
+      "scenarios": 7,
+      "import": ".proj.specs/_baseline/ee7fecf/phoenix-style-and-maintenance/spec.en.md",
+      "review": "not recorded under harness"
+    },
+    {
+      "capability": "post-content-model",
+      "source": "openspec/specs/post-content-model/spec.md",
+      "git_blob": "9f925a4a6c7963cdd675037749048f619a5a98c5",
+      "sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+      "requirements": 7,
+      "scenarios": 16,
+      "import": ".proj.specs/_baseline/ee7fecf/post-content-model/spec.en.md",
+      "review": "not recorded under harness"
+    },
+    {
+      "capability": "post-display-views",
+      "source": "openspec/specs/post-display-views/spec.md",
+      "git_blob": "5a4fc7ac37ba85990abf41e293397ab572c1cf72",
+      "sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+      "requirements": 7,
+      "scenarios": 18,
+      "import": ".proj.specs/_baseline/ee7fecf/post-display-views/spec.en.md",
+      "review": "not recorded under harness"
+    },
+    {
+      "capability": "theme-layout-particles",
+      "source": "openspec/specs/theme-layout-particles/spec.md",
+      "git_blob": "62dee28aeb554c0f453ca6324ef2a55171db0b53",
+      "sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+      "requirements": 4,
+      "scenarios": 16,
+      "import": ".proj.specs/_baseline/ee7fecf/theme-layout-particles/spec.en.md",
+      "review": "not recorded under harness"
+    },
+    {
+      "capability": "vitepress-post-scaffolding",
+      "source": "openspec/specs/vitepress-post-scaffolding/spec.md",
+      "git_blob": "fad7d445581ce01ae28f67db546ae115ee7a0f4a",
+      "sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7",
+      "requirements": 5,
+      "scenarios": 10,
+      "import": ".proj.specs/_baseline/ee7fecf/vitepress-post-scaffolding/spec.en.md",
+      "review": "not recorded under harness"
+    }
+  ],
+  "archives": [
+    {
+      "archive": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir",
+      "files": [
+        {
+          "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/.openspec.yaml",
+          "git_blob": "bab07b78ce5b709f9cba107a907d67e8b0de36ce",
+          "sha256": "7163f123b6dadba4ab99eb0991adb566011898daf2084d1d691f50ba1f519ffe"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/design.md",
+          "git_blob": "4e937ce7d5e5aa609b88a45493cd2032fbcc5b6a",
+          "sha256": "d3906f15b111f78c4b1dde95df73bec1f72151bc5ef3c9ad798989f1b0cd18b5"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/proposal.md",
+          "git_blob": "ecde8d03baa1085e0fcd3cc6a2a8ebfe1a8541dd",
+          "sha256": "e8b0dfce4a80939e282ca12f8247ac0e2dcb341c3d43c41266c5d24ea0d052a5"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/specs/vitepress-post-scaffolding/spec.md",
+          "git_blob": "178191fa3775715d67686a387a40c5692a176065",
+          "sha256": "5f4d90020f6b4b58439567f117c07863599543368346e34ec66bdfea659aa777"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/tasks.md",
+          "git_blob": "f301565b51b797fc086affa5d79b46b80a6f1e24",
+          "sha256": "eefb88c95f76b12b09298a7bef65c9db88b6aee3201fe3648bad9d22f423ea83"
+        }
+      ],
+      "review": "not recorded under harness",
+      "writable": false
+    },
+    {
+      "archive": "openspec/changes/archive/2026-04-28-capture-essential-specs",
+      "files": [
+        {
+          "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/.openspec.yaml",
+          "git_blob": "3092d07a41a03d9b988e6129a500405b388d0dca",
+          "sha256": "c788999a993aa62cd97aa570b876d06d3c24747b51dc355bd5353a0c0f767982"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/proposal.md",
+          "git_blob": "0cb542a69fa0a85514508a6c7d065a7482db959e",
+          "sha256": "f62b012c8e67b177ee0cb71af9e115c1b0147b4d6d17482192039ec2ebaa77b7"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/specs/newest-posts-widget/spec.md",
+          "git_blob": "ec20ad780f1ca8e19e8f5d28d6110e0e5c2cf356",
+          "sha256": "89cea7debf13cd0f2de16e8e8b861de857b5e8afe51a7b01262ed43232813d4c"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/specs/post-content-model/spec.md",
+          "git_blob": "aad13038b28e669f56673d220415a44dc1d4b8a6",
+          "sha256": "8fb3ff9e4070263d46a0e25963cc4e62b1d86555f061ba9e4d5f37f2e827893b"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/specs/post-display-views/spec.md",
+          "git_blob": "ea71a521fcf630cd710be6d307408bef447070e0",
+          "sha256": "6b2dd43854b087c2826001da8aaae3eaebae5fb973a124d005f3ba61fb5676e6"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/specs/theme-layout-particles/spec.md",
+          "git_blob": "c75a1c2139f2623ad6fff1efbdfd8889bf8da927",
+          "sha256": "c62986256778c2c44ca9f4f48978a6008c80c2cecd9cb3c49d49f3ec05c610d6"
+        },
+        {
+          "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/tasks.md",
+          "git_blob": "143773c067b701ba5f562d17ad73d5f23ee69673",
+          "sha256": "5b18025c47ac7377db9d7a2befba65dfa3931208d42ff259d173c2ba6c6356cc"
+        }
+      ],
+      "review": "not recorded under harness",
+      "writable": false
+    },
+    {
+      "archive": "openspec/changes/archive/2026-10-04-integrate-figures-in-prose",
+      "files": [
+        {
+          "path": "openspec/changes/archive/2026-10-04-integrate-figures-in-prose/.openspec.yaml",
+          "git_blob": "a2bae6e343795c31c2ff8b27c3acdde7c4d69a0f",
+          "sha256": "f438413b34e53a276b67a468ec8408ba90ffcba19e92c5d17a5b47a8575eecb1"
+        },
+        {
+          "path": "openspec/changes/archive/2026-10-04-integrate-figures-in-prose/proposal.md",
+          "git_blob": "7509a390dee84dd0a85d4351f72f8e04a7ddcbf3",
+          "sha256": "287328983a7e8bc6be1838053855af64133f0ef74cf51dcb75d738af5f352bf0"
+        },
+        {
+          "path": "openspec/changes/archive/2026-10-04-integrate-figures-in-prose/specs/phoenix-style-and-maintenance/spec.md",
+          "git_blob": "c3fe98381b10a08a2b1cb4b4e864ec03d6ae3c80",
+          "sha256": "a089254239a3c9a951b81bbf36f65608a354b8c793d4afe5a197a86636a3cc24"
+        },
+        {
+          "path": "openspec/changes/archive/2026-10-04-integrate-figures-in-prose/tasks.md",
+          "git_blob": "337baf8b4bf417eef95011c046c3dc38026ec97e",
+          "sha256": "9e78d6d88d4fdd7b868679d09312132edc8fa55a2ae556af03fa97c7b575973a"
+        }
+      ],
+      "review": "not recorded under harness",
+      "writable": false
+    },
+    {
+      "archive": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex",
+      "files": [
+        {
+          "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/.openspec.yaml",
+          "git_blob": "a2bae6e343795c31c2ff8b27c3acdde7c4d69a0f",
+          "sha256": "f438413b34e53a276b67a468ec8408ba90ffcba19e92c5d17a5b47a8575eecb1"
+        },
+        {
+          "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/design.md",
+          "git_blob": "3c9db5c4ab5e4d29219d7f7d403dad66e19819c3",
+          "sha256": "3c604b428c3dffe7743a72433f08946c7f5ff4cb2523df080bdf2f7eddb144c0"
+        },
+        {
+          "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/proposal.md",
+          "git_blob": "cb1c5b0002ebcfffd1f44ea35886034130f1ab04",
+          "sha256": "31f25a2589bd142fdee18b15fd787f77db42a3df270045e7be04935172181c54"
+        },
+        {
+          "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/specs/phoenix-style-and-maintenance/spec.md",
+          "git_blob": "5dabcacbc246d04cfb75c4745e62fd7e09e704c1",
+          "sha256": "dc8a1fadd938d7fccb601f260c8b8c1a2a469702c9d8f7d00c15689c9bca15b5"
+        },
+        {
+          "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/specs/vitepress-post-scaffolding/spec.md",
+          "git_blob": "5edf93574bef09234c06dceeb212ff768e3b58d9",
+          "sha256": "29398ae4649e789a2eb62c44b50456e89a296032d575113c4a9656c864b5c277"
+        },
+        {
+          "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/tasks.md",
+          "git_blob": "2f8b47ad9989a008feae7b18323e6a6625472c15",
+          "sha256": "d6ca69cdb5396a87a5329c5a43bdd00bba6affa4e4fd0b45ed2876895bcba4f2"
+        }
+      ],
+      "review": "not recorded under harness",
+      "writable": false
+    }
+  ],
+  "historical_harness_gates": "not recorded under harness"
+}

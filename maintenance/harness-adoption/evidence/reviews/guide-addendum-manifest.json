@@ -1,0 +1,31 @@
+{
+  "recorded_at": "2026-10-04T11:39:50.678481+00:00",
+  "base_packet": "code-round-2",
+  "base_packet_sha256": "e84119fb6d4478e51c7ef1bbed54987cfc93299b44165dcb5a66a38dc7b7ca34",
+  "sole_change": "docs/guide.md role-model description, no role/config/runtime/model mutation",
+  "old_guide_sha256": "31884e97cf655381ac15c4d85ae202028e272545c1a3cc55c60988c6588a5a53",
+  "new_guide_sha256": "ffe9127a0875942bdee4b2f12c2bcf028a76263aa3e6f9c22ccf4a676f93340a",
+  "files": [
+    {
+      "path": "docs/guide.md",
+      "sha256": "ffe9127a0875942bdee4b2f12c2bcf028a76263aa3e6f9c22ccf4a676f93340a"
+    },
+    {
+      "path": ".claude/agents/harness-reviewer.md",
+      "sha256": "0c42560fd1e2f4ea10665f294682da4074c6895c71f38a2546804f6cfaa2d224"
+    },
+    {
+      "path": ".claude/agents/harness-researcher.md",
+      "sha256": "44802eb27c6a2e67627c9ff8d6f2e698005a575e116d7faf2a516b3759758963"
+    },
+    {
+      "path": ".codex/agents/harness-reviewer.toml",
+      "sha256": "283aef8876fb3f6d2722eddaaf35a7d50d13230cc5e987ce29823ee5285af2d4"
+    },
+    {
+      "path": ".codex/agents/harness-researcher.toml",
+      "sha256": "060090fb8724cb5316259721d8404716e4d8d46ea14cbf44c237cc5f901fdcca"
+    }
+  ],
+  "meaningful_verification": "Direct comparison against pinned actual role settings; low-impact prose correction does not need a new implementation test."
+}

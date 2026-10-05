@@ -1,0 +1,22 @@
+{
+  "name": "historical-regression62",
+  "argv": [
+    "python3",
+    "historical-checks-resumed/behavior-eval-20261004/full-regression-v22/check_regression.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:05:53.829454+00:00",
+  "ended_utc": "2026-10-04T11:05:53.923413+00:00",
+  "elapsed_seconds": 0.0938464580103755,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "4501396e093bf60d39d09973e5847776d3e06d5d231a0af051da9320a0593266",
+  "log": "maintenance/harness-adoption/evidence/historical-regression62.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "f106b53122b435f38dcc620b6494ab58c7180102b8028bf7a732a91c37511b0b",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

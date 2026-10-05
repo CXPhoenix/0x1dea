@@ -1,0 +1,636 @@
+{
+  "status": "pass",
+  "argv": [
+    "{EXISTING_CODEX_BIN}/codex",
+    "--no-daemon",
+    "app-server",
+    "--stdio"
+  ],
+  "started_epoch": 1791111315.910648,
+  "ended_epoch": 1791111318.708889,
+  "native_fresh_process": true,
+  "forceReload": true,
+  "model_response_required": false,
+  "project_count": 35,
+  "project_skills": [
+    {
+      "name": "agent-browser",
+      "description": "Automate browser interaction, screenshots, extraction and web QA; also Electron apps, Slack UI workflows, and browsers in Vercel Sandbox or Bedrock AgentCore. Use when the task needs browser control.",
+      "path": "{CANDIDATE}/.agents/skills/agent-browser/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "archify",
+      "description": "Create polished, validated architecture, workflow, sequence, data-flow, and lifecycle/state diagrams as explorable standalone HTML with inline SVG, dark/light themes, optional trace motion, and PNG/JPEG/WebP/SVG/WebM export. Accept plain-language requirements or pasted Mermaid flowchart, sequenceDiagram, and stateDiagram input; inspect repository evidence when the diagram must reflect real code. Use when the user asks to visualize system architecture, infrastructure, cloud/security/network topology, technical workflows, API call sequences, request lifecycles, data pipelines, ETL/ELT, data lineage, state machines, or to convert/beautify Mermaid.",
+      "interface": {
+        "displayName": "Archify",
+        "shortDescription": "Create validated, interactive HTML diagrams",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/archify/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "code-review",
+      "description": "Review a branch, PR, work in progress, or changes since a ref against repository standards and the originating requirements.",
+      "interface": {
+        "displayName": "Code Review",
+        "shortDescription": "Review a diff on standards and spec",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/code-review/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "codebase-design",
+      "description": "Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.",
+      "interface": {
+        "displayName": "Codebase Design",
+        "shortDescription": "Vocabulary for deep-module design",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/codebase-design/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "creating-vitepress-post",
+      "description": "建立 0x1DEA VitePress 網站的新文章檔案與資源資料夾；適用於新增網站文章，不適用於既有改稿或僅在對話中寫草稿。",
+      "interface": {
+        "displayName": "creating-vitepress-post",
+        "shortDescription": null,
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/creating-vitepress-post/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "diagnosing-bugs",
+      "description": "Diagnosis loop for hard bugs and performance regressions. Use when the user says \"diagnose\"/\"debug this\", or reports something broken/throwing/failing/slow.",
+      "interface": {
+        "displayName": "Diagnosing Bugs",
+        "shortDescription": "Diagnose hard bugs and regressions",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/diagnosing-bugs/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "domain-modeling",
+      "description": "Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a CONTEXT.md, or recording or editing an ADR.",
+      "interface": {
+        "displayName": "Domain Modeling",
+        "shortDescription": "Build and sharpen a domain model",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/domain-modeling/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "evidence-report",
+      "description": "Produce a standalone HTML report whose every claim is traced to its evidence. Use at a grilling convergence point, when reporting adversarial-review findings, at epic close-out, or whenever a decision, comparison, or set of findings needs to be presented to the user with sources they can check. Output is a single self-contained .html file in the repo, written in Traditional Chinese.",
+      "path": "{CANDIDATE}/.agents/skills/evidence-report/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "grill-me",
+      "description": "A relentless interview to sharpen a plan or design.",
+      "interface": {
+        "displayName": "Grill Me",
+        "shortDescription": "Sharpen a plan through interview",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/grill-me/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "grill-with-docs",
+      "description": "A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.",
+      "interface": {
+        "displayName": "Grill with Docs",
+        "shortDescription": "Grill a design and write its docs",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/grill-with-docs/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "grilling",
+      "description": "Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.",
+      "interface": {
+        "displayName": "Grilling",
+        "shortDescription": "Stress-test thinking a round of questions at a time",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/grilling/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "handoff",
+      "description": "Compact the current conversation into a handoff document for another agent to pick up.",
+      "interface": {
+        "displayName": "Handoff",
+        "shortDescription": "Compact a conversation into a handoff",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/handoff/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "i-have-adhd",
+      "description": "Shape output for a reader with ADHD: lead with the next action, number multi-step work, restate state across turns, suppress tangents, give specific time estimates, make wins visible. Invoke with /i-have-adhd; stays on until \"stop adhd mode\".",
+      "interface": {
+        "displayName": "I Have ADHD",
+        "shortDescription": "Action-first output for ADHD readers",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": "Use $i-have-adhd to make this response action-first and easy to execute."
+      },
+      "path": "{CANDIDATE}/.agents/skills/i-have-adhd/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "implement",
+      "description": "Implement a piece of work based on a spec or set of tickets.",
+      "interface": {
+        "displayName": "Implement",
+        "shortDescription": "Build work from a spec or tickets",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/implement/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "description": "Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.",
+      "interface": {
+        "displayName": "Improve Codebase Architecture",
+        "shortDescription": "Find and grill architecture improvements",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/improve-codebase-architecture/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "maintaining-writing-skills",
+      "description": "維護 0x1DEA 的寫作技能、文章檔案與 agent 指引，或查驗搬移及舊版文章 validator；不負責作者風格或建立新文骨架。",
+      "interface": {
+        "displayName": "maintaining-writing-skills",
+        "shortDescription": null,
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/maintaining-writing-skills/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "phoenix-writing",
+      "description": "用 Phoenix 的作者聲音撰寫或修訂科普與技術教學；適用於明示 Phoenix 風格或延續已採此風格的作品。",
+      "interface": {
+        "displayName": "phoenix-writing",
+        "shortDescription": null,
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/phoenix-writing/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "prototype",
+      "description": "Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.",
+      "interface": {
+        "displayName": "Prototype",
+        "shortDescription": "Prototype to answer a design question",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/prototype/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "research",
+      "description": "Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.",
+      "interface": {
+        "displayName": "Research",
+        "shortDescription": "Research from high-trust sources",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/research/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "resolving-merge-conflicts",
+      "description": "Use when you need to resolve an in-progress git merge/rebase conflict.",
+      "interface": {
+        "displayName": "Resolving Merge Conflicts",
+        "shortDescription": "Resolve merge and rebase conflicts",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/resolving-merge-conflicts/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "security-review",
+      "description": "Review a branch diff for exploitable security defects, with independent false-positive checks and a report for this project's delivery pipeline.",
+      "path": "{CANDIDATE}/.agents/skills/security-review/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "setup-matt-pocock-skills",
+      "description": "Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills.",
+      "interface": {
+        "displayName": "Setup Matt Pocock Skills",
+        "shortDescription": "Configure a repo for the skills",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/setup-matt-pocock-skills/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "tdd",
+      "description": "Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions \"red-green-refactor\", or wants integration tests.",
+      "interface": {
+        "displayName": "TDD",
+        "shortDescription": "Test-driven red-green-refactor",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/tdd/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "teach",
+      "description": "Teach the user a new skill or concept, within this workspace.",
+      "interface": {
+        "displayName": "Teach",
+        "shortDescription": "Learn a concept in a guided workspace",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/teach/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "to-questionnaire",
+      "description": "Turn a decision you can't fully answer into a questionnaire for someone else to fill in.",
+      "interface": {
+        "displayName": "To Questionnaire",
+        "shortDescription": "Front-load questions into a doc for someone to answer",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/to-questionnaire/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "to-spec",
+      "description": "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed.",
+      "interface": {
+        "displayName": "To Spec",
+        "shortDescription": "Turn a conversation into a spec",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/to-spec/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "to-tickets",
+      "description": "Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).",
+      "interface": {
+        "displayName": "To Tickets",
+        "shortDescription": "Split a plan into tracer-bullet tickets",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/to-tickets/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "tune-skills",
+      "description": "Re-tune this project's Codex skills and Codex instructions for the model the user runs.",
+      "path": "{CANDIDATE}/.agents/skills/tune-skills/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "tw-emoji-commit",
+      "description": "Generate a detailed git commit message with emojis using Taiwan Traditional Chinese and English for technical terms.",
+      "path": "{CANDIDATE}/.agents/skills/tw-emoji-commit/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "tw-emoji-pr-note",
+      "description": "Generate a structured Pull Request description with emojis using Taiwan Traditional Chinese and English for technical terms, following OSS best practices.",
+      "path": "{CANDIDATE}/.agents/skills/tw-emoji-pr-note/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "tw-emoji-release-note",
+      "description": "Generate a structured Release Note / CHANGELOG entry with emojis using Taiwan Traditional Chinese and English for technical terms, following Keep a Changelog and Semantic Versioning conventions.",
+      "path": "{CANDIDATE}/.agents/skills/tw-emoji-release-note/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "wait-what",
+      "description": "Stop. That last message did not land: re-pitch it.",
+      "interface": {
+        "displayName": "Wait What",
+        "shortDescription": "Re-pitch that: simpler, with the context I'm missing",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/wait-what/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "wayfinder",
+      "description": "Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.",
+      "interface": {
+        "displayName": "Wayfinder",
+        "shortDescription": "Map a large effort as decision tickets",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/wayfinder/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "wizard",
+      "description": "Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.",
+      "interface": {
+        "displayName": "Wizard",
+        "shortDescription": "Generate an interactive setup wizard",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/wizard/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "writing-for-agents",
+      "description": "Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.",
+      "interface": {
+        "displayName": "Writing for Agents",
+        "shortDescription": "Write documents agents consume",
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/writing-for-agents/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    }
+  ],
+  "product_skill_locations": [
+    {
+      "name": "creating-vitepress-post",
+      "description": "建立 0x1DEA VitePress 網站的新文章檔案與資源資料夾；適用於新增網站文章，不適用於既有改稿或僅在對話中寫草稿。",
+      "interface": {
+        "displayName": "creating-vitepress-post",
+        "shortDescription": null,
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/creating-vitepress-post/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "maintaining-writing-skills",
+      "description": "維護 0x1DEA 的寫作技能、文章檔案與 agent 指引，或查驗搬移及舊版文章 validator；不負責作者風格或建立新文骨架。",
+      "interface": {
+        "displayName": "maintaining-writing-skills",
+        "shortDescription": null,
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/maintaining-writing-skills/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    },
+    {
+      "name": "phoenix-writing",
+      "description": "用 Phoenix 的作者聲音撰寫或修訂科普與技術教學；適用於明示 Phoenix 風格或延續已採此風格的作品。",
+      "interface": {
+        "displayName": "phoenix-writing",
+        "shortDescription": null,
+        "iconSmall": null,
+        "iconLarge": null,
+        "iconSmallUrl": null,
+        "iconLargeUrl": null,
+        "brandColor": null,
+        "defaultPrompt": null
+      },
+      "path": "{CANDIDATE}/.agents/skills/phoenix-writing/SKILL.md",
+      "scope": "repo",
+      "enabled": true,
+      "pluginId": null
+    }
+  ],
+  "errors": [],
+  "response_sha256": "6c85caeaa79a0d18d229319a3951a4ae3591d261f40caf5642bca2ba8c4d5b0d",
+  "limitation": "Native Codex discovery only; no claim of fresh Claude runtime discovery or CLI model generation."
+}

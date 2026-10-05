@@ -1,0 +1,11 @@
+{
+  "case_id": "E3",
+  "invoked_skill": true,
+  "files_read": [
+    "cases/E3/input.json",
+    "frozen-v2/skills/phoenix-writing/SKILL.md",
+    "frozen-v2/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "You keep a result in a cache so you can reuse it. But if the underlying data changes before that copy is removed or refreshed, you may be using a stale result. Cache invalidation addresses that gap: its rule decides when to remove or refresh the cached copy. Here, we are following one cache; coordinating changes across multiple services is outside this scenario.",
+  "execution_note": "Native independent writer; requested GPT-6.1-sol/high; fast flag not exposed."
+}

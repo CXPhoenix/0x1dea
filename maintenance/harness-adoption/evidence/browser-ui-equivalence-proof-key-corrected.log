@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "{WORKSPACE}/check-browser-evidence-resumed.py", line 31, in <module>
+    assert shot_shas['candidate-mobile-list.png']==shot_shas['baseline-mobile-list.png']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,22 @@
+{
+  "name": "historical-figure30-with-publication-ledger",
+  "argv": [
+    "python3",
+    "historical-checks-resumed/behavior-eval-20261004/figure-followup/check_figures.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:06:11.027378+00:00",
+  "ended_utc": "2026-10-04T11:06:11.215468+00:00",
+  "elapsed_seconds": 0.18764645792543888,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "fff2228ff01cad6069d3807c354d20080f8ed965b0df926c01a66e20bcb2f60c",
+  "log": "maintenance/harness-adoption/evidence/historical-figure30-with-publication-ledger.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "b873d31a60073ba01a6d1d3cfd5b3fabf326e41c712425524c11731a1f3ec4ec",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

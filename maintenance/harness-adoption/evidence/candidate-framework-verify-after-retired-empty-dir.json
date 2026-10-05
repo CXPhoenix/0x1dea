@@ -1,0 +1,22 @@
+{
+  "name": "candidate-framework-verify-after-retired-empty-dir",
+  "argv": [
+    "python3",
+    "scripts/verify-project.py"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T10:56:27.577277+00:00",
+  "ended_utc": "2026-10-04T10:56:28.089837+00:00",
+  "elapsed_seconds": 0.5103892500046641,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "5c68bb18165bbf0453415e87778f44c1aea842d5e161e2c7ab963038d1760f55",
+  "log": "maintenance/harness-adoption/evidence/candidate-framework-verify-after-retired-empty-dir.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "fbc93660da14197e174c190b9720070abfe8e1229f286c04daf88c637eb3101a",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

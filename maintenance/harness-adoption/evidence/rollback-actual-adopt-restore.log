@@ -1,0 +1,1877 @@
+{
+  "status": "pass",
+  "surface": "real independent disposable Git checkout restore",
+  "disposable": "rollback-resumed",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "applied_tracked_patch_sha256": "cc4fed07eda846925cc77f35d691eb5f04266f58f0fa0d2c4b639bc8e6df2c44",
+  "copied_new_regular_files": 977,
+  "adopted_runtime_skills": 35,
+  "pre_reset_status": " D .agents/skills/creating-vitepress-post\n D .agents/skills/maintaining-writing-skills\n D .agents/skills/phoenix-writing\n D .claude/skills/creating-vitepress-post\n D .claude/skills/maintaining-writing-skills\n D .claude/skills/phoenix-writing\n D .claude/skills/spectra-apply/SKILL.md\n D .claude/skills/spectra-archive/SKILL.md\n D .claude/skills/spectra-ask/SKILL.md\n D .claude/skills/spectra-audit/SKILL.md\n D .claude/skills/spectra-commit/SKILL.md\n D .claude/skills/spectra-debug/SKILL.md\n D .claude/skills/spectra-discuss/SKILL.md\n D .claude/skills/spectra-ingest/SKILL.md\n D .claude/skills/spectra-propose/SKILL.md\n D .gemini/commands/spectra/apply.toml\n D .gemini/commands/spectra/archive.toml\n D .gemini/commands/spectra/ask.toml\n D .gemini/commands/spectra/audit.toml\n D .gemini/commands/spectra/commit.toml\n D .gemini/commands/spectra/debug.toml\n D .gemini/commands/spectra/discuss.toml\n D .gemini/commands/spectra/ingest.toml\n D .gemini/commands/spectra/propose.toml\n D .gemini/skills/spectra-apply/SKILL.md\n D .gemini/skills/spectra-archive/SKILL.md\n D .gemini/skills/spectra-ask/SKILL.md\n D .gemini/skills/spectra-audit/SKILL.md\n D .gemini/skills/spectra-commit/SKILL.md\n D .gemini/skills/spectra-debug/SKILL.md\n D .gemini/skills/spectra-discuss/SKILL.md\n D .gemini/skills/spectra-ingest/SKILL.md\n D .gemini/skills/spectra-propose/SKILL.md\n D .github/prompts/spectra-apply.prompt.md\n D .github/prompts/spectra-archive.prompt.md\n D .github/prompts/spectra-ask.prompt.md\n D .github/prompts/spectra-audit.prompt.md\n D .github/prompts/spectra-commit.prompt.md\n D .github/prompts/spectra-debug.prompt.md\n D .github/prompts/spectra-discuss.prompt.md\n D .github/prompts/spectra-ingest.prompt.md\n D .github/prompts/spectra-propose.prompt.md\n D .github/skills/spectra-apply/SKILL.md\n D .github/skills/spectra-archive/SKILL.md\n D .github/skills/spectra-ask/SKILL.md\n D .github/skills/spectra-audit/SKILL.md\n D .github/skills/spectra-commit/SKILL.md\n D .github/skills/spectra-debug/SKILL.md\n D .github/skills/spectra-discuss/SKILL.md\n D .github/skills/spectra-ingest/SKILL.md\n D .github/skills/spectra-propose/SKILL.md\n M .gitignore\n M AGENTS.md\n M CLAUDE.md\n M GEMINI.md\n M README.md\n D docs/.vitepress/config.mts\n D docs/.vitepress/nav.yml\n D docs/.vitepress/sidebar.yml\n D docs/.vitepress/theme/Layout.vue\n D docs/.vitepress/theme/components/NewPost.vue\n D docs/.vitepress/theme/components/Particles.vue\n D docs/.vitepress/theme/components/PostBlock.vue\n D docs/.vitepress/theme/components/PostCard.vue\n D docs/.vitepress/theme/components/PostList.vue\n D docs/.vitepress/theme/components/__tests__/Particles.spec.ts\n D docs/.vitepress/theme/composables/usePostFilter.ts\n D docs/.vitepress/theme/composables/usePostSort.ts\n D docs/.vitepress/theme/index.ts\n D docs/.vitepress/theme/style.css\n D docs/about.md\n D docs/index.md\n D docs/post/.gitkeep\n D docs/post/course/cybersec/index.md\n D docs/post/course/cybersec/what-is-safety.md\n D docs/post/course/rm/index.md\n D docs/post/course/rm/why-we-need-rm.md\n D docs/posts.md\n D docs/public/assets/.gitkeep\n D docs/public/assets/fontawesome/css/brands.min.css\n D docs/public/assets/fontawesome/css/fontawesome.min.css\n D docs/public/assets/fontawesome/css/regular.min.css\n D docs/public/assets/fontawesome/css/solid.min.css\n D docs/public/assets/fontawesome/webfonts/fa-brands-400.woff2\n D docs/public/assets/fontawesome/webfonts/fa-regular-400.woff2\n D docs/public/assets/fontawesome/webfonts/fa-solid-900.woff2\n D docs/public/assets/fontawesome/webfonts/fa-v4compatibility.woff2\n D docs/public/assets/post_course_cybersec_what-is-safety/1772342178110.gif\n D docs/public/assets/post_course_cybersec_what-is-safety/20260227005508.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260227014249.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260228013411.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260228022122.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260228114351.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260228130720.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260301114806.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260301120037.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260301122300.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260301125241.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260301125313.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260301125401.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260301125743.png\n D docs/public/assets/post_course_cybersec_what-is-safety/20260301132349.png\n D docs/public/assets/post_course_rm_why-we-need-rm/20260302005553.png\n D docs/public/assets/post_course_rm_why-we-need-rm/20260302010537.png\n D docs/public/assets/post_course_rm_why-we-need-rm/20260302012511.png\n D docs/public/assets/post_course_rm_why-we-need-rm/20260307155631.png\n D docs/public/assets/post_course_rm_why-we-need-rm/20260307160403.png\n D docs/public/circleImage.svg\n D docs/public/heroImageWithoutText.svg\n D docs/public/phoenixWithText.svg\n D docs/shared/posts.data.ts\n M package.json\n M scripts/vpHelper.ts\n M skills/creating-vitepress-post/SKILL.md\n M skills/maintaining-writing-skills/SKILL.md\n M skills/maintaining-writing-skills/references/skill-maintenance.md\n M skills/maintaining-writing-skills/references/spectra-codex.md\n M skills/phoenix-writing/AGENTS.md\n M tests/vpHelper.vitest.ts\n M tsconfig.json\n?? .agents/skills/agent-browser/LICENSE\n?? .agents/skills/agent-browser/SKILL.md\n?? .agents/skills/agent-browser/agents/openai.yaml\n?? .agents/skills/archify/LICENSE\n?? .agents/skills/archify/SKILL.md\n?? .agents/skills/archify/THIRD_PARTY_NOTICES.md\n?? .agents/skills/archify/agents/openai.yaml\n?? .agents/skills/archify/assets/JetBrainsMono-OFL.txt\n?? .agents/skills/archify/assets/template.html\n?? .agents/skills/archify/bin/archify.mjs\n?? .agents/skills/archify/bin/open-artifact.mjs\n?? .agents/skills/archify/bin/preview.mjs\n?? .agents/skills/archify/bin/visual-check.mjs\n?? .agents/skills/archify/brand-marks/README.md\n?? .agents/skills/archify/brand-marks/catalog.json\n?? .agents/skills/archify/delta/architecture-delta.mjs\n?? .agents/skills/archify/examples/agent-run.lifecycle.json\n?? .agents/skills/archify/examples/agent-tool-call.workflow.json\n?? .agents/skills/archify/examples/async-job-roundtrip.sequence.json\n?? .agents/skills/archify/examples/brand-aware-delivery.architecture.json\n?? .agents/skills/archify/examples/cache-miss-request.sequence.json\n?? .agents/skills/archify/examples/checkout-platform.base.architecture.json\n?? .agents/skills/archify/examples/checkout-platform.head.architecture.json\n?? .agents/skills/archify/examples/dataflow-product-analytics.html\n?? .agents/skills/archify/examples/deployment-release.lifecycle.json\n?? .agents/skills/archify/examples/event-stream.dataflow.json\n?? .agents/skills/archify/examples/incident-response.workflow.json\n?? .agents/skills/archify/examples/lifecycle-agent-run.html\n?? .agents/skills/archify/examples/product-analytics.dataflow.json\n?? .agents/skills/archify/examples/production-deployment.architecture.json\n?? .agents/skills/archify/examples/release-delivery.workflow.json\n?? .agents/skills/archify/examples/sequence-cache-miss-request.html\n?? .agents/skills/archify/examples/web-app-rendered.html\n?? .agents/skills/archify/examples/web-app.architecture.json\n?? .agents/skills/archify/examples/workflow-agent-tool-call-rendered.html\n?? .agents/skills/archify/migrations/workflow-v2.mjs\n?? .agents/skills/archify/package-lock.json\n?? .agents/skills/archify/package.json\n?? .agents/skills/archify/recipes/scenarios.mjs\n?? .agents/skills/archify/references/authoring-contract.md\n?? .agents/skills/archify/references/brand-marks.md\n?? .agents/skills/archify/references/delivery-contract.md\n?? .agents/skills/archify/references/viewer-runtime.md\n?? .agents/skills/archify/renderers/architecture/grid.mjs\n?? .agents/skills/archify/renderers/architecture/render-architecture.mjs\n?? .agents/skills/archify/renderers/dataflow/README.md\n?? .agents/skills/archify/renderers/dataflow/render-dataflow.mjs\n?? .agents/skills/archify/renderers/lifecycle/README.md\n?? .agents/skills/archify/renderers/lifecycle/render-lifecycle.mjs\n?? .agents/skills/archify/renderers/sequence/README.md\n?? .agents/skills/archify/renderers/sequence/render-sequence.mjs\n?? .agents/skills/archify/renderers/shared/brand-marks.mjs\n?? .agents/skills/archify/renderers/shared/cli.mjs\n?? .agents/skills/archify/renderers/shared/desktop-readability.mjs\n?? .agents/skills/archify/renderers/shared/diagnostics.mjs\n?? .agents/skills/archify/renderers/shared/engineering-profiles.mjs\n?? .agents/skills/archify/renderers/shared/generated-brand-marks.mjs\n?? .agents/skills/archify/renderers/shared/generated-validators.mjs\n?? .agents/skills/archify/renderers/shared/geometry.mjs\n?? .agents/skills/archify/renderers/shared/i18n.mjs\n?? .agents/skills/archify/renderers/shared/layout-report.mjs\n?? .agents/skills/archify/renderers/shared/legend.mjs\n?? .agents/skills/archify/renderers/shared/output-path.mjs\n?? .agents/skills/archify/renderers/shared/repository-evidence.mjs\n?? .agents/skills/archify/renderers/shared/repository-location.mjs\n?? .agents/skills/archify/renderers/shared/text-fit.mjs\n?? .agents/skills/archify/renderers/shared/utils.mjs\n?? .agents/skills/archify/renderers/shared/validator.mjs\n?? .agents/skills/archify/renderers/workflow/README.md\n?? .agents/skills/archify/renderers/workflow/render-workflow.mjs\n?? .agents/skills/archify/renderers/workflow/workflow-compiler.mjs\n?? .agents/skills/archify/renderers/workflow/workflow-migration-geometry.mjs\n?? .agents/skills/archify/schemas/README.md\n?? .agents/skills/archify/schemas/architecture.schema.json\n?? .agents/skills/archify/schemas/common.schema.json\n?? .agents/skills/archify/schemas/dataflow.schema.json\n?? .agents/skills/archify/schemas/lifecycle.schema.json\n?? .agents/skills/archify/schemas/sequence.schema.json\n?? .agents/skills/archify/schemas/workflow.schema.json\n?? .agents/skills/archify/scripts/check-render-output.mjs\n?? .agents/skills/archify/scripts/check-update.mjs\n?? .agents/skills/archify/scripts/generate-brand-marks.mjs\n?? .agents/skills/archify/scripts/generate-validators.mjs\n?? .agents/skills/archify/scripts/render-examples.mjs\n?? .agents/skills/archify/scripts/update-contract.mjs\n?? .agents/skills/archify/skill-release.json\n?? .agents/skills/archify/test/adaptive-reader-layout.test.mjs\n?? .agents/skills/archify/test/animation.test.mjs\n?? .agents/skills/archify/test/architecture-delta.test.mjs\n?? .agents/skills/archify/test/artifact-receipt-flush.test.mjs\n?? .agents/skills/archify/test/authored-reachability.test.mjs\n?? .agents/skills/archify/test/authoring-safety-contract.test.mjs\n?? .agents/skills/archify/test/automatic-port-spread.test.mjs\n?? .agents/skills/archify/test/base-input-compatibility.test.mjs\n?? .agents/skills/archify/test/brand-marks.test.mjs\n?? .agents/skills/archify/test/chapter-delta-preview.test.mjs\n?? .agents/skills/archify/test/chapter-handoff.test.mjs\n?? .agents/skills/archify/test/chapter-rail.test.mjs\n?? .agents/skills/archify/test/checkout-line-endings.test.mjs\n?? .agents/skills/archify/test/clean-skill-staging.test.mjs\n?? .agents/skills/archify/test/cli-output-types.test.mjs\n?? .agents/skills/archify/test/cli.test.mjs\n?? .agents/skills/archify/test/community-proof-intake.test.mjs\n?? .agents/skills/archify/test/cursor-onboarding.test.mjs\n?? .agents/skills/archify/test/degraded.test.mjs\n?? .agents/skills/archify/test/delivery-contract.test.mjs\n?? .agents/skills/archify/test/desktop-reader-browser.test.mjs\n?? .agents/skills/archify/test/diagram-guide.test.mjs\n?? .agents/skills/archify/test/engineering-profile.test.mjs\n?? .agents/skills/archify/test/export-browser.test.mjs\n?? .agents/skills/archify/test/export-cleanup-browser.test.mjs\n?? .agents/skills/archify/test/finder-browser.test.mjs\n?? .agents/skills/archify/test/finder.test.mjs\n?? .agents/skills/archify/test/fixtures/automatic-routing-node-border-clearance.workflow.json\n?? .agents/skills/archify/test/fixtures/fail-migration-cleanup.mjs\n?? .agents/skills/archify/test/fixtures/issue-126/custom-widths.workflow.json\n?? .agents/skills/archify/test/fixtures/issue-126/explicit-route.workflow.json\n?? .agents/skills/archify/test/fixtures/issue-126/explicit-viewbox.workflow.json\n?? .agents/skills/archify/test/fixtures/issue-126/labels.workflow.json\n?? .agents/skills/archify/test/fixtures/v1-baseline/agent-run.lifecycle.json\n?? .agents/skills/archify/test/fixtures/v1-baseline/agent-tool-call.workflow.json\n?? .agents/skills/archify/test/fixtures/v1-baseline/cache-miss-request.sequence.json\n?? .agents/skills/archify/test/fixtures/v1-baseline/event-stream.dataflow.json\n?? .agents/skills/archify/test/fixtures/v1-baseline/product-analytics.dataflow.json\n?? .agents/skills/archify/test/fixtures/v1-baseline/production-deployment.architecture.json\n?? .agents/skills/archify/test/fixtures/v1-baseline/web-app.architecture.json\n?? .agents/skills/archify/test/fixtures/v1-workflow-700x400.workflow.json\n?? .agents/skills/archify/test/fixtures/v1-workflow-explicit-coordinates.workflow.json\n?? .agents/skills/archify/test/focus-browser.test.mjs\n?? .agents/skills/archify/test/gallery.test.mjs\n?? .agents/skills/archify/test/generate-validators.test.mjs\n?? .agents/skills/archify/test/generate-viewer.test.mjs\n?? .agents/skills/archify/test/generated-artifact-xml.test.mjs\n?? .agents/skills/archify/test/geometry.test.mjs\n?? .agents/skills/archify/test/golden.mjs\n?? .agents/skills/archify/test/grid.test.mjs\n?? .agents/skills/archify/test/guide-page.test.mjs\n?? .agents/skills/archify/test/guide.test.mjs\n?? .agents/skills/archify/test/guided-views-browser.test.mjs\n?? .agents/skills/archify/test/guided-views.test.mjs\n?? .agents/skills/archify/test/helpers/desktop-browser.mjs\n?? .agents/skills/archify/test/helpers/offline-fonts.mjs\n?? .agents/skills/archify/test/helpers/viewer-click.mjs\n?? .agents/skills/archify/test/helpers/xml.mjs\n?? .agents/skills/archify/test/i18n.test.mjs\n?? .agents/skills/archify/test/intent-trace-browser.test.mjs\n?? .agents/skills/archify/test/intent-trace.test.mjs\n?? .agents/skills/archify/test/landing.test.mjs\n?? .agents/skills/archify/test/layout-rules.test.mjs\n?? .agents/skills/archify/test/legend-contract.test.mjs\n?? .agents/skills/archify/test/motion-governor-browser.test.mjs\n?? .agents/skills/archify/test/motion-governor.test.mjs\n?? .agents/skills/archify/test/offline-font-browser.test.mjs\n?? .agents/skills/archify/test/offline-self-containment.test.mjs\n?? .agents/skills/archify/test/open-artifact.test.mjs\n?? .agents/skills/archify/test/ordinary-model-floor.test.mjs\n?? .agents/skills/archify/test/output-path.test.mjs\n?? .agents/skills/archify/test/presentation.test.mjs\n?? .agents/skills/archify/test/preset-tryon.test.mjs\n?? .agents/skills/archify/test/preview-contract.test.mjs\n?? .agents/skills/archify/test/preview.test.mjs\n?? .agents/skills/archify/test/proof-aperture.test.mjs\n?? .agents/skills/archify/test/reach-share-card.test.mjs\n?? .agents/skills/archify/test/reader-layout-browser.test.mjs\n?? .agents/skills/archify/test/readme-showcase.test.mjs\n?? .agents/skills/archify/test/real-repository-proof.test.mjs\n?? .agents/skills/archify/test/relationship-direct-explorer.test.mjs\n?? .agents/skills/archify/test/relationship-lens.test.mjs\n?? .agents/skills/archify/test/relationship-permalink.test.mjs\n?? .agents/skills/archify/test/relationship-pulse.test.mjs\n?? .agents/skills/archify/test/release-identity.test.mjs\n?? .agents/skills/archify/test/release-package-gates.test.mjs\n?? .agents/skills/archify/test/render-output-checks.test.mjs\n?? .agents/skills/archify/test/repair-receipt.test.mjs\n?? .agents/skills/archify/test/repository-evidence.test.mjs\n?? .agents/skills/archify/test/repository-language-metadata.test.mjs\n?? .agents/skills/archify/test/route-journey.test.mjs\n?? .agents/skills/archify/test/route-probe-browser.test.mjs\n?? .agents/skills/archify/test/route-probe.test.mjs\n?? .agents/skills/archify/test/route-share-card.test.mjs\n?? .agents/skills/archify/test/semantic-camera.test.mjs\n?? .agents/skills/archify/test/semantic-flow.test.mjs\n?? .agents/skills/archify/test/semantic-legend-gateway.test.mjs\n?? .agents/skills/archify/test/semantic-lens-browser.test.mjs\n?? .agents/skills/archify/test/semantic-lens.test.mjs\n?? .agents/skills/archify/test/semantic-passport.test.mjs\n?? .agents/skills/archify/test/semantic-radar.test.mjs\n?? .agents/skills/archify/test/semantic-zoom.test.mjs\n?? .agents/skills/archify/test/sequence-column-fit.test.mjs\n?? .agents/skills/archify/test/settled-flow.test.mjs\n?? .agents/skills/archify/test/share-card-export.test.mjs\n?? .agents/skills/archify/test/site-language-continuity.test.mjs\n?? .agents/skills/archify/test/site-language-integration.mjs\n?? .agents/skills/archify/test/skill-metadata.test.mjs\n?? .agents/skills/archify/test/stable-update-manifest.test.mjs\n?? .agents/skills/archify/test/start-page.test.mjs\n?? .agents/skills/archify/test/story-beat-navigator.test.mjs\n?? .agents/skills/archify/test/story-carrier.test.mjs\n?? .agents/skills/archify/test/story-director-strip.test.mjs\n?? .agents/skills/archify/test/story-follow-camera.test.mjs\n?? .agents/skills/archify/test/story-horizon.test.mjs\n?? .agents/skills/archify/test/story-moment-link.test.mjs\n?? .agents/skills/archify/test/story-shelf.test.mjs\n?? .agents/skills/archify/test/story-trail.test.mjs\n?? .agents/skills/archify/test/toolbar-polish.test.mjs\n?? .agents/skills/archify/test/update-contract.test.mjs\n?? .agents/skills/archify/test/update-notifier.test.mjs\n?? .agents/skills/archify/test/v1-compatibility.test.mjs\n?? .agents/skills/archify/test/vertical-edge.test.mjs\n?? .agents/skills/archify/test/viewer-camera-browser.test.mjs\n?? .agents/skills/archify/test/viewer-chrome-layout.test.mjs\n?? .agents/skills/archify/test/visual-check.test.mjs\n?? .agents/skills/archify/test/webm-artifact.smoke.mjs\n?? .agents/skills/archify/test/workflow-compiler-hard-contract.test.mjs\n?? .agents/skills/archify/test/workflow-compiler.test.mjs\n?? .agents/skills/archify/test/workflow-migration.test.mjs\n?? .agents/skills/archify/test/workflow-semantic-contract.test.mjs\n?? .agents/skills/code-review/LICENSE\n?? .agents/skills/code-review/SKILL.md\n?? .agents/skills/code-review/agents/openai.yaml\n?? .agents/skills/code-review/references/review-surface.md\n?? .agents/skills/code-review/references/smell-baseline.md\n?? .agents/skills/codebase-design/DEEPENING.md\n?? .agents/skills/codebase-design/DESIGN-IT-TWICE.md\n?? .agents/skills/codebase-design/LICENSE\n?? .agents/skills/codebase-design/SKILL.md\n?? .agents/skills/codebase-design/agents/openai.yaml\n?? .agents/skills/creating-vitepress-post/SKILL.md\n?? .agents/skills/creating-vitepress-post/agents/openai.yaml\n?? .agents/skills/diagnosing-bugs/LICENSE\n?? .agents/skills/diagnosing-bugs/SKILL.md\n?? .agents/skills/diagnosing-bugs/agents/openai.yaml\n?? .agents/skills/diagnosing-bugs/scripts/hitl-loop.template.sh\n?? .agents/skills/domain-modeling/ADR-FORMAT.md\n?? .agents/skills/domain-modeling/CONTEXT-FORMAT.md\n?? .agents/skills/domain-modeling/LICENSE\n?? .agents/skills/domain-modeling/SKILL.md\n?? .agents/skills/domain-modeling/agents/openai.yaml\n?? .agents/skills/evidence-report/LICENSE\n?? .agents/skills/evidence-report/SKILL.md\n?? .agents/skills/evidence-report/agents/openai.yaml\n?? .agents/skills/grill-me/LICENSE\n?? .agents/skills/grill-me/SKILL.md\n?? .agents/skills/grill-me/agents/openai.yaml\n?? .agents/skills/grill-with-docs/LICENSE\n?? .agents/skills/grill-with-docs/SKILL.md\n?? .agents/skills/grill-with-docs/agents/openai.yaml\n?? .agents/skills/grilling/LICENSE\n?? .agents/skills/grilling/SKILL.md\n?? .agents/skills/grilling/agents/openai.yaml\n?? .agents/skills/handoff/LICENSE\n?? .agents/skills/handoff/SKILL.md\n?? .agents/skills/handoff/agents/openai.yaml\n?? .agents/skills/i-have-adhd/LICENSE\n?? .agents/skills/i-have-adhd/SKILL.md\n?? .agents/skills/i-have-adhd/agents/gemini.toml\n?? .agents/skills/i-have-adhd/agents/openai.yaml\n?? .agents/skills/implement/LICENSE\n?? .agents/skills/implement/SKILL.md\n?? .agents/skills/implement/agents/openai.yaml\n?? .agents/skills/improve-codebase-architecture/HTML-REPORT.md\n?? .agents/skills/improve-codebase-architecture/LICENSE\n?? .agents/skills/improve-codebase-architecture/SKILL.md\n?? .agents/skills/improve-codebase-architecture/agents/openai.yaml\n?? .agents/skills/maintaining-writing-skills/SKILL.md\n?? .agents/skills/maintaining-writing-skills/agents/openai.yaml\n?? .agents/skills/maintaining-writing-skills/legacy-validator/config.json\n?? .agents/skills/maintaining-writing-skills/legacy-validator/rules/__init__.py\n?? .agents/skills/maintaining-writing-skills/legacy-validator/rules/_common.py\n?? .agents/skills/maintaining-writing-skills/legacy-validator/rules/tier1_format.py\n?? .agents/skills/maintaining-writing-skills/legacy-validator/rules/tier2_heuristic.py\n?? .agents/skills/maintaining-writing-skills/legacy-validator/rules/tier3_llm_hints.py\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/c1_violation.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_no_warning.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_with_warning.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e2e_full.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_clean.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_violation.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/k1_sparse.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/m1_hint.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/o1_hint.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_clean.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_violation.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s1_hint.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s2_hint.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s3_violation.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t1_hint.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_clean.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_violation.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_clean.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_violation.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_clean.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_violation.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/w1_violation.md\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/test_tier1.py\n?? .agents/skills/maintaining-writing-skills/legacy-validator/tests/test_tier2_tier3.py\n?? .agents/skills/maintaining-writing-skills/legacy-validator/validate_article.py\n?? .agents/skills/maintaining-writing-skills/references/article-maintenance.md\n?? .agents/skills/maintaining-writing-skills/references/legacy-validator.md\n?? .agents/skills/maintaining-writing-skills/references/skill-maintenance.md\n?? .agents/skills/maintaining-writing-skills/references/spectra-codex.md\n?? .agents/skills/maintaining-writing-skills/references/writing-process.md\n?? .agents/skills/phoenix-writing/AGENTS.md\n?? .agents/skills/phoenix-writing/CLAUDE.md\n?? .agents/skills/phoenix-writing/SKILL.md\n?? .agents/skills/phoenix-writing/agents/openai.yaml\n?? .agents/skills/phoenix-writing/reference/concept-escalation-example.md\n?? .agents/skills/phoenix-writing/reference/dialogue-voices.md\n?? .agents/skills/phoenix-writing/reference/domain-infosec.md\n?? .agents/skills/phoenix-writing/reference/editorial-rules.md\n?? .agents/skills/phoenix-writing/reference/humor-patterns.md\n?? .agents/skills/phoenix-writing/reference/kaomoji-catalog.md\n?? .agents/skills/phoenix-writing/reference/templates.md\n?? .agents/skills/phoenix-writing/reference/tw-vocabulary.md\n?? .agents/skills/phoenix-writing/reference/visual-guide.md\n?? .agents/skills/phoenix-writing/references/style-examples.md\n?? .agents/skills/phoenix-writing/references/tw-vocabulary.md\n?? .agents/skills/phoenix-writing/scripts/config.json\n?? .agents/skills/phoenix-writing/scripts/rules/__init__.py\n?? .agents/skills/phoenix-writing/scripts/rules/_common.py\n?? .agents/skills/phoenix-writing/scripts/rules/tier1_format.py\n?? .agents/skills/phoenix-writing/scripts/rules/tier2_heuristic.py\n?? .agents/skills/phoenix-writing/scripts/rules/tier3_llm_hints.py\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/c1_violation.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/e1_no_warning.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/e1_with_warning.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/e2e_full.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/f1_clean.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/f1_violation.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/k1_sparse.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/m1_hint.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/o1_hint.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/p1_clean.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/p1_violation.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/s1_hint.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/s2_hint.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/s3_violation.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/t1_hint.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/t2_clean.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/t2_violation.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/t3_clean.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/t3_violation.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/v1_clean.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/v1_violation.md\n?? .agents/skills/phoenix-writing/scripts/tests/fixtures/w1_violation.md\n?? .agents/skills/phoenix-writing/scripts/tests/test_tier1.py\n?? .agents/skills/phoenix-writing/scripts/tests/test_tier2_tier3.py\n?? .agents/skills/phoenix-writing/scripts/validate_article.py\n?? .agents/skills/prototype/LICENSE\n?? .agents/skills/prototype/LOGIC.md\n?? .agents/skills/prototype/SKILL.md\n?? .agents/skills/prototype/UI.md\n?? .agents/skills/prototype/agents/openai.yaml\n?? .agents/skills/research/LICENSE\n?? .agents/skills/research/SKILL.md\n?? .agents/skills/research/agents/openai.yaml\n?? .agents/skills/resolving-merge-conflicts/LICENSE\n?? .agents/skills/resolving-merge-conflicts/SKILL.md\n?? .agents/skills/resolving-merge-conflicts/agents/openai.yaml\n?? .agents/skills/security-review/LICENSE\n?? .agents/skills/security-review/SKILL.md\n?? .agents/skills/security-review/agents/openai.yaml\n?? .agents/skills/security-review/references/upstream-security-review.md\n?? .agents/skills/setup-matt-pocock-skills/LICENSE\n?? .agents/skills/setup-matt-pocock-skills/SKILL.md\n?? .agents/skills/setup-matt-pocock-skills/agents/openai.yaml\n?? .agents/skills/setup-matt-pocock-skills/domain.md\n?? .agents/skills/setup-matt-pocock-skills/issue-tracker-github.md\n?? .agents/skills/setup-matt-pocock-skills/issue-tracker-gitlab.md\n?? .agents/skills/setup-matt-pocock-skills/issue-tracker-local.md\n?? .agents/skills/setup-matt-pocock-skills/triage-labels.md\n?? .agents/skills/tdd/LICENSE\n?? .agents/skills/tdd/SKILL.md\n?? .agents/skills/tdd/agents/openai.yaml\n?? .agents/skills/tdd/mocking.md\n?? .agents/skills/tdd/tests.md\n?? .agents/skills/teach/GLOSSARY-FORMAT.md\n?? .agents/skills/teach/LEARNING-RECORD-FORMAT.md\n?? .agents/skills/teach/LICENSE\n?? .agents/skills/teach/MISSION-FORMAT.md\n?? .agents/skills/teach/RESOURCES-FORMAT.md\n?? .agents/skills/teach/SKILL.md\n?? .agents/skills/teach/agents/openai.yaml\n?? .agents/skills/to-questionnaire/LICENSE\n?? .agents/skills/to-questionnaire/SKILL.md\n?? .agents/skills/to-questionnaire/agents/openai.yaml\n?? .agents/skills/to-spec/LICENSE\n?? .agents/skills/to-spec/SKILL.md\n?? .agents/skills/to-spec/agents/openai.yaml\n?? .agents/skills/to-tickets/LICENSE\n?? .agents/skills/to-tickets/SKILL.md\n?? .agents/skills/to-tickets/agents/openai.yaml\n?? .agents/skills/tune-skills/SKILL.md\n?? .agents/skills/tune-skills/agents/openai.yaml\n?? .agents/skills/tune-skills/references/gpt-6.md\n?? .agents/skills/tw-emoji-commit/SKILL.md\n?? .agents/skills/tw-emoji-commit/agents/openai.yaml\n?? .agents/skills/tw-emoji-commit/scripts/sanitize_commit.py\n?? .agents/skills/tw-emoji-pr-note/SKILL.md\n?? .agents/skills/tw-emoji-pr-note/agents/openai.yaml\n?? .agents/skills/tw-emoji-pr-note/scripts/sanitize_pr_note.py\n?? .agents/skills/tw-emoji-release-note/SKILL.md\n?? .agents/skills/tw-emoji-release-note/agents/openai.yaml\n?? .agents/skills/tw-emoji-release-note/scripts/sanitize_release_note.py\n?? .agents/skills/wait-what/LICENSE\n?? .agents/skills/wait-what/SKILL.md\n?? .agents/skills/wait-what/agents/openai.yaml\n?? .agents/skills/wayfinder/LICENSE\n?? .agents/skills/wayfinder/SKILL.md\n?? .agents/skills/wayfinder/agents/openai.yaml\n?? .agents/skills/wizard/LICENSE\n?? .agents/skills/wizard/SKILL.md\n?? .agents/skills/wizard/agents/openai.yaml\n?? .agents/skills/wizard/template.sh\n?? .agents/skills/writing-for-agents/LICENSE\n?? .agents/skills/writing-for-agents/SKILL-MECHANICS.md\n?? .agents/skills/writing-for-agents/SKILL.md\n?? .agents/skills/writing-for-agents/agents/openai.yaml\n?? .claude/agents/harness-challenger.md\n?? .claude/agents/harness-executor.md\n?? .claude/agents/harness-researcher.md\n?? .claude/agents/harness-reviewer.md\n?? .claude/skills/agent-browser/LICENSE\n?? .claude/skills/agent-browser/SKILL.md\n?? .claude/skills/archify/LICENSE\n?? .claude/skills/archify/SKILL.md\n?? .claude/skills/archify/THIRD_PARTY_NOTICES.md\n?? .claude/skills/archify/assets/JetBrainsMono-OFL.txt\n?? .claude/skills/archify/assets/template.html\n?? .claude/skills/archify/bin/archify.mjs\n?? .claude/skills/archify/bin/open-artifact.mjs\n?? .claude/skills/archify/bin/preview.mjs\n?? .claude/skills/archify/bin/visual-check.mjs\n?? .claude/skills/archify/brand-marks/README.md\n?? .claude/skills/archify/brand-marks/catalog.json\n?? .claude/skills/archify/delta/architecture-delta.mjs\n?? .claude/skills/archify/examples/agent-run.lifecycle.json\n?? .claude/skills/archify/examples/agent-tool-call.workflow.json\n?? .claude/skills/archify/examples/async-job-roundtrip.sequence.json\n?? .claude/skills/archify/examples/brand-aware-delivery.architecture.json\n?? .claude/skills/archify/examples/cache-miss-request.sequence.json\n?? .claude/skills/archify/examples/checkout-platform.base.architecture.json\n?? .claude/skills/archify/examples/checkout-platform.head.architecture.json\n?? .claude/skills/archify/examples/dataflow-product-analytics.html\n?? .claude/skills/archify/examples/deployment-release.lifecycle.json\n?? .claude/skills/archify/examples/event-stream.dataflow.json\n?? .claude/skills/archify/examples/incident-response.workflow.json\n?? .claude/skills/archify/examples/lifecycle-agent-run.html\n?? .claude/skills/archify/examples/product-analytics.dataflow.json\n?? .claude/skills/archify/examples/production-deployment.architecture.json\n?? .claude/skills/archify/examples/release-delivery.workflow.json\n?? .claude/skills/archify/examples/sequence-cache-miss-request.html\n?? .claude/skills/archify/examples/web-app-rendered.html\n?? .claude/skills/archify/examples/web-app.architecture.json\n?? .claude/skills/archify/examples/workflow-agent-tool-call-rendered.html\n?? .claude/skills/archify/migrations/workflow-v2.mjs\n?? .claude/skills/archify/package-lock.json\n?? .claude/skills/archify/package.json\n?? .claude/skills/archify/recipes/scenarios.mjs\n?? .claude/skills/archify/references/authoring-contract.md\n?? .claude/skills/archify/references/brand-marks.md\n?? .claude/skills/archify/references/delivery-contract.md\n?? .claude/skills/archify/references/viewer-runtime.md\n?? .claude/skills/archify/renderers/architecture/grid.mjs\n?? .claude/skills/archify/renderers/architecture/render-architecture.mjs\n?? .claude/skills/archify/renderers/dataflow/README.md\n?? .claude/skills/archify/renderers/dataflow/render-dataflow.mjs\n?? .claude/skills/archify/renderers/lifecycle/README.md\n?? .claude/skills/archify/renderers/lifecycle/render-lifecycle.mjs\n?? .claude/skills/archify/renderers/sequence/README.md\n?? .claude/skills/archify/renderers/sequence/render-sequence.mjs\n?? .claude/skills/archify/renderers/shared/brand-marks.mjs\n?? .claude/skills/archify/renderers/shared/cli.mjs\n?? .claude/skills/archify/renderers/shared/desktop-readability.mjs\n?? .claude/skills/archify/renderers/shared/diagnostics.mjs\n?? .claude/skills/archify/renderers/shared/engineering-profiles.mjs\n?? .claude/skills/archify/renderers/shared/generated-brand-marks.mjs\n?? .claude/skills/archify/renderers/shared/generated-validators.mjs\n?? .claude/skills/archify/renderers/shared/geometry.mjs\n?? .claude/skills/archify/renderers/shared/i18n.mjs\n?? .claude/skills/archify/renderers/shared/layout-report.mjs\n?? .claude/skills/archify/renderers/shared/legend.mjs\n?? .claude/skills/archify/renderers/shared/output-path.mjs\n?? .claude/skills/archify/renderers/shared/repository-evidence.mjs\n?? .claude/skills/archify/renderers/shared/repository-location.mjs\n?? .claude/skills/archify/renderers/shared/text-fit.mjs\n?? .claude/skills/archify/renderers/shared/utils.mjs\n?? .claude/skills/archify/renderers/shared/validator.mjs\n?? .claude/skills/archify/renderers/workflow/README.md\n?? .claude/skills/archify/renderers/workflow/render-workflow.mjs\n?? .claude/skills/archify/renderers/workflow/workflow-compiler.mjs\n?? .claude/skills/archify/renderers/workflow/workflow-migration-geometry.mjs\n?? .claude/skills/archify/schemas/README.md\n?? .claude/skills/archify/schemas/architecture.schema.json\n?? .claude/skills/archify/schemas/common.schema.json\n?? .claude/skills/archify/schemas/dataflow.schema.json\n?? .claude/skills/archify/schemas/lifecycle.schema.json\n?? .claude/skills/archify/schemas/sequence.schema.json\n?? .claude/skills/archify/schemas/workflow.schema.json\n?? .claude/skills/archify/scripts/check-render-output.mjs\n?? .claude/skills/archify/scripts/check-update.mjs\n?? .claude/skills/archify/scripts/generate-brand-marks.mjs\n?? .claude/skills/archify/scripts/generate-validators.mjs\n?? .claude/skills/archify/scripts/render-examples.mjs\n?? .claude/skills/archify/scripts/update-contract.mjs\n?? .claude/skills/archify/skill-release.json\n?? .claude/skills/archify/test/adaptive-reader-layout.test.mjs\n?? .claude/skills/archify/test/animation.test.mjs\n?? .claude/skills/archify/test/architecture-delta.test.mjs\n?? .claude/skills/archify/test/artifact-receipt-flush.test.mjs\n?? .claude/skills/archify/test/authored-reachability.test.mjs\n?? .claude/skills/archify/test/authoring-safety-contract.test.mjs\n?? .claude/skills/archify/test/automatic-port-spread.test.mjs\n?? .claude/skills/archify/test/base-input-compatibility.test.mjs\n?? .claude/skills/archify/test/brand-marks.test.mjs\n?? .claude/skills/archify/test/chapter-delta-preview.test.mjs\n?? .claude/skills/archify/test/chapter-handoff.test.mjs\n?? .claude/skills/archify/test/chapter-rail.test.mjs\n?? .claude/skills/archify/test/checkout-line-endings.test.mjs\n?? .claude/skills/archify/test/clean-skill-staging.test.mjs\n?? .claude/skills/archify/test/cli-output-types.test.mjs\n?? .claude/skills/archify/test/cli.test.mjs\n?? .claude/skills/archify/test/community-proof-intake.test.mjs\n?? .claude/skills/archify/test/cursor-onboarding.test.mjs\n?? .claude/skills/archify/test/degraded.test.mjs\n?? .claude/skills/archify/test/delivery-contract.test.mjs\n?? .claude/skills/archify/test/desktop-reader-browser.test.mjs\n?? .claude/skills/archify/test/diagram-guide.test.mjs\n?? .claude/skills/archify/test/engineering-profile.test.mjs\n?? .claude/skills/archify/test/export-browser.test.mjs\n?? .claude/skills/archify/test/export-cleanup-browser.test.mjs\n?? .claude/skills/archify/test/finder-browser.test.mjs\n?? .claude/skills/archify/test/finder.test.mjs\n?? .claude/skills/archify/test/fixtures/automatic-routing-node-border-clearance.workflow.json\n?? .claude/skills/archify/test/fixtures/fail-migration-cleanup.mjs\n?? .claude/skills/archify/test/fixtures/issue-126/custom-widths.workflow.json\n?? .claude/skills/archify/test/fixtures/issue-126/explicit-route.workflow.json\n?? .claude/skills/archify/test/fixtures/issue-126/explicit-viewbox.workflow.json\n?? .claude/skills/archify/test/fixtures/issue-126/labels.workflow.json\n?? .claude/skills/archify/test/fixtures/v1-baseline/agent-run.lifecycle.json\n?? .claude/skills/archify/test/fixtures/v1-baseline/agent-tool-call.workflow.json\n?? .claude/skills/archify/test/fixtures/v1-baseline/cache-miss-request.sequence.json\n?? .claude/skills/archify/test/fixtures/v1-baseline/event-stream.dataflow.json\n?? .claude/skills/archify/test/fixtures/v1-baseline/product-analytics.dataflow.json\n?? .claude/skills/archify/test/fixtures/v1-baseline/production-deployment.architecture.json\n?? .claude/skills/archify/test/fixtures/v1-baseline/web-app.architecture.json\n?? .claude/skills/archify/test/fixtures/v1-workflow-700x400.workflow.json\n?? .claude/skills/archify/test/fixtures/v1-workflow-explicit-coordinates.workflow.json\n?? .claude/skills/archify/test/focus-browser.test.mjs\n?? .claude/skills/archify/test/gallery.test.mjs\n?? .claude/skills/archify/test/generate-validators.test.mjs\n?? .claude/skills/archify/test/generate-viewer.test.mjs\n?? .claude/skills/archify/test/generated-artifact-xml.test.mjs\n?? .claude/skills/archify/test/geometry.test.mjs\n?? .claude/skills/archify/test/golden.mjs\n?? .claude/skills/archify/test/grid.test.mjs\n?? .claude/skills/archify/test/guide-page.test.mjs\n?? .claude/skills/archify/test/guide.test.mjs\n?? .claude/skills/archify/test/guided-views-browser.test.mjs\n?? .claude/skills/archify/test/guided-views.test.mjs\n?? .claude/skills/archify/test/helpers/desktop-browser.mjs\n?? .claude/skills/archify/test/helpers/offline-fonts.mjs\n?? .claude/skills/archify/test/helpers/viewer-click.mjs\n?? .claude/skills/archify/test/helpers/xml.mjs\n?? .claude/skills/archify/test/i18n.test.mjs\n?? .claude/skills/archify/test/intent-trace-browser.test.mjs\n?? .claude/skills/archify/test/intent-trace.test.mjs\n?? .claude/skills/archify/test/landing.test.mjs\n?? .claude/skills/archify/test/layout-rules.test.mjs\n?? .claude/skills/archify/test/legend-contract.test.mjs\n?? .claude/skills/archify/test/motion-governor-browser.test.mjs\n?? .claude/skills/archify/test/motion-governor.test.mjs\n?? .claude/skills/archify/test/offline-font-browser.test.mjs\n?? .claude/skills/archify/test/offline-self-containment.test.mjs\n?? .claude/skills/archify/test/open-artifact.test.mjs\n?? .claude/skills/archify/test/ordinary-model-floor.test.mjs\n?? .claude/skills/archify/test/output-path.test.mjs\n?? .claude/skills/archify/test/presentation.test.mjs\n?? .claude/skills/archify/test/preset-tryon.test.mjs\n?? .claude/skills/archify/test/preview-contract.test.mjs\n?? .claude/skills/archify/test/preview.test.mjs\n?? .claude/skills/archify/test/proof-aperture.test.mjs\n?? .claude/skills/archify/test/reach-share-card.test.mjs\n?? .claude/skills/archify/test/reader-layout-browser.test.mjs\n?? .claude/skills/archify/test/readme-showcase.test.mjs\n?? .claude/skills/archify/test/real-repository-proof.test.mjs\n?? .claude/skills/archify/test/relationship-direct-explorer.test.mjs\n?? .claude/skills/archify/test/relationship-lens.test.mjs\n?? .claude/skills/archify/test/relationship-permalink.test.mjs\n?? .claude/skills/archify/test/relationship-pulse.test.mjs\n?? .claude/skills/archify/test/release-identity.test.mjs\n?? .claude/skills/archify/test/release-package-gates.test.mjs\n?? .claude/skills/archify/test/render-output-checks.test.mjs\n?? .claude/skills/archify/test/repair-receipt.test.mjs\n?? .claude/skills/archify/test/repository-evidence.test.mjs\n?? .claude/skills/archify/test/repository-language-metadata.test.mjs\n?? .claude/skills/archify/test/route-journey.test.mjs\n?? .claude/skills/archify/test/route-probe-browser.test.mjs\n?? .claude/skills/archify/test/route-probe.test.mjs\n?? .claude/skills/archify/test/route-share-card.test.mjs\n?? .claude/skills/archify/test/semantic-camera.test.mjs\n?? .claude/skills/archify/test/semantic-flow.test.mjs\n?? .claude/skills/archify/test/semantic-legend-gateway.test.mjs\n?? .claude/skills/archify/test/semantic-lens-browser.test.mjs\n?? .claude/skills/archify/test/semantic-lens.test.mjs\n?? .claude/skills/archify/test/semantic-passport.test.mjs\n?? .claude/skills/archify/test/semantic-radar.test.mjs\n?? .claude/skills/archify/test/semantic-zoom.test.mjs\n?? .claude/skills/archify/test/sequence-column-fit.test.mjs\n?? .claude/skills/archify/test/settled-flow.test.mjs\n?? .claude/skills/archify/test/share-card-export.test.mjs\n?? .claude/skills/archify/test/site-language-continuity.test.mjs\n?? .claude/skills/archify/test/site-language-integration.mjs\n?? .claude/skills/archify/test/skill-metadata.test.mjs\n?? .claude/skills/archify/test/stable-update-manifest.test.mjs\n?? .claude/skills/archify/test/start-page.test.mjs\n?? .claude/skills/archify/test/story-beat-navigator.test.mjs\n?? .claude/skills/archify/test/story-carrier.test.mjs\n?? .claude/skills/archify/test/story-director-strip.test.mjs\n?? .claude/skills/archify/test/story-follow-camera.test.mjs\n?? .claude/skills/archify/test/story-horizon.test.mjs\n?? .claude/skills/archify/test/story-moment-link.test.mjs\n?? .claude/skills/archify/test/story-shelf.test.mjs\n?? .claude/skills/archify/test/story-trail.test.mjs\n?? .claude/skills/archify/test/toolbar-polish.test.mjs\n?? .claude/skills/archify/test/update-contract.test.mjs\n?? .claude/skills/archify/test/update-notifier.test.mjs\n?? .claude/skills/archify/test/v1-compatibility.test.mjs\n?? .claude/skills/archify/test/vertical-edge.test.mjs\n?? .claude/skills/archify/test/viewer-camera-browser.test.mjs\n?? .claude/skills/archify/test/viewer-chrome-layout.test.mjs\n?? .claude/skills/archify/test/visual-check.test.mjs\n?? .claude/skills/archify/test/webm-artifact.smoke.mjs\n?? .claude/skills/archify/test/workflow-compiler-hard-contract.test.mjs\n?? .claude/skills/archify/test/workflow-compiler.test.mjs\n?? .claude/skills/archify/test/workflow-migration.test.mjs\n?? .claude/skills/archify/test/workflow-semantic-contract.test.mjs\n?? .claude/skills/code-review/LICENSE\n?? .claude/skills/code-review/SKILL.md\n?? .claude/skills/code-review/references/review-surface.md\n?? .claude/skills/code-review/references/smell-baseline.md\n?? .claude/skills/codebase-design/DEEPENING.md\n?? .claude/skills/codebase-design/DESIGN-IT-TWICE.md\n?? .claude/skills/codebase-design/LICENSE\n?? .claude/skills/codebase-design/SKILL.md\n?? .claude/skills/creating-vitepress-post/SKILL.md\n?? .claude/skills/diagnosing-bugs/LICENSE\n?? .claude/skills/diagnosing-bugs/SKILL.md\n?? .claude/skills/diagnosing-bugs/scripts/hitl-loop.template.sh\n?? .claude/skills/domain-modeling/ADR-FORMAT.md\n?? .claude/skills/domain-modeling/CONTEXT-FORMAT.md\n?? .claude/skills/domain-modeling/LICENSE\n?? .claude/skills/domain-modeling/SKILL.md\n?? .claude/skills/evidence-report/LICENSE\n?? .claude/skills/evidence-report/SKILL.md\n?? .claude/skills/grill-me/LICENSE\n?? .claude/skills/grill-me/SKILL.md\n?? .claude/skills/grill-with-docs/LICENSE\n?? .claude/skills/grill-with-docs/SKILL.md\n?? .claude/skills/grilling/LICENSE\n?? .claude/skills/grilling/SKILL.md\n?? .claude/skills/handoff/LICENSE\n?? .claude/skills/handoff/SKILL.md\n?? .claude/skills/i-have-adhd/LICENSE\n?? .claude/skills/i-have-adhd/SKILL.md\n?? .claude/skills/implement/LICENSE\n?? .claude/skills/implement/SKILL.md\n?? .claude/skills/improve-codebase-architecture/HTML-REPORT.md\n?? .claude/skills/improve-codebase-architecture/LICENSE\n?? .claude/skills/improve-codebase-architecture/SKILL.md\n?? .claude/skills/maintaining-writing-skills/SKILL.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/config.json\n?? .claude/skills/maintaining-writing-skills/legacy-validator/rules/__init__.py\n?? .claude/skills/maintaining-writing-skills/legacy-validator/rules/_common.py\n?? .claude/skills/maintaining-writing-skills/legacy-validator/rules/tier1_format.py\n?? .claude/skills/maintaining-writing-skills/legacy-validator/rules/tier2_heuristic.py\n?? .claude/skills/maintaining-writing-skills/legacy-validator/rules/tier3_llm_hints.py\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/c1_violation.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_no_warning.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_with_warning.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e2e_full.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_clean.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_violation.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/k1_sparse.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/m1_hint.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/o1_hint.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_clean.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_violation.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s1_hint.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s2_hint.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s3_violation.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t1_hint.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_clean.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_violation.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_clean.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_violation.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_clean.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_violation.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/fixtures/w1_violation.md\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/test_tier1.py\n?? .claude/skills/maintaining-writing-skills/legacy-validator/tests/test_tier2_tier3.py\n?? .claude/skills/maintaining-writing-skills/legacy-validator/validate_article.py\n?? .claude/skills/maintaining-writing-skills/references/article-maintenance.md\n?? .claude/skills/maintaining-writing-skills/references/legacy-validator.md\n?? .claude/skills/maintaining-writing-skills/references/skill-maintenance.md\n?? .claude/skills/maintaining-writing-skills/references/spectra-codex.md\n?? .claude/skills/maintaining-writing-skills/references/writing-process.md\n?? .claude/skills/phoenix-writing/AGENTS.md\n?? .claude/skills/phoenix-writing/CLAUDE.md\n?? .claude/skills/phoenix-writing/SKILL.md\n?? .claude/skills/phoenix-writing/reference/concept-escalation-example.md\n?? .claude/skills/phoenix-writing/reference/dialogue-voices.md\n?? .claude/skills/phoenix-writing/reference/domain-infosec.md\n?? .claude/skills/phoenix-writing/reference/editorial-rules.md\n?? .claude/skills/phoenix-writing/reference/humor-patterns.md\n?? .claude/skills/phoenix-writing/reference/kaomoji-catalog.md\n?? .claude/skills/phoenix-writing/reference/templates.md\n?? .claude/skills/phoenix-writing/reference/tw-vocabulary.md\n?? .claude/skills/phoenix-writing/reference/visual-guide.md\n?? .claude/skills/phoenix-writing/references/style-examples.md\n?? .claude/skills/phoenix-writing/references/tw-vocabulary.md\n?? .claude/skills/phoenix-writing/scripts/config.json\n?? .claude/skills/phoenix-writing/scripts/rules/__init__.py\n?? .claude/skills/phoenix-writing/scripts/rules/_common.py\n?? .claude/skills/phoenix-writing/scripts/rules/tier1_format.py\n?? .claude/skills/phoenix-writing/scripts/rules/tier2_heuristic.py\n?? .claude/skills/phoenix-writing/scripts/rules/tier3_llm_hints.py\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/c1_violation.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/e1_no_warning.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/e1_with_warning.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/e2e_full.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/f1_clean.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/f1_violation.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/k1_sparse.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/m1_hint.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/o1_hint.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/p1_clean.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/p1_violation.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/s1_hint.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/s2_hint.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/s3_violation.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/t1_hint.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/t2_clean.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/t2_violation.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/t3_clean.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/t3_violation.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/v1_clean.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/v1_violation.md\n?? .claude/skills/phoenix-writing/scripts/tests/fixtures/w1_violation.md\n?? .claude/skills/phoenix-writing/scripts/tests/test_tier1.py\n?? .claude/skills/phoenix-writing/scripts/tests/test_tier2_tier3.py\n?? .claude/skills/phoenix-writing/scripts/validate_article.py\n?? .claude/skills/prototype/LICENSE\n?? .claude/skills/prototype/LOGIC.md\n?? .claude/skills/prototype/SKILL.md\n?? .claude/skills/prototype/UI.md\n?? .claude/skills/research/LICENSE\n?? .claude/skills/research/SKILL.md\n?? .claude/skills/resolving-merge-conflicts/LICENSE\n?? .claude/skills/resolving-merge-conflicts/SKILL.md\n?? .claude/skills/security-review/LICENSE\n?? .claude/skills/security-review/SKILL.md\n?? .claude/skills/security-review/references/upstream-security-review.md\n?? .claude/skills/setup-matt-pocock-skills/LICENSE\n?? .claude/skills/setup-matt-pocock-skills/SKILL.md\n?? .claude/skills/setup-matt-pocock-skills/domain.md\n?? .claude/skills/setup-matt-pocock-skills/issue-tracker-github.md\n?? .claude/skills/setup-matt-pocock-skills/issue-tracker-gitlab.md\n?? .claude/skills/setup-matt-pocock-skills/issue-tracker-local.md\n?? .claude/skills/setup-matt-pocock-skills/triage-labels.md\n?? .claude/skills/tdd/LICENSE\n?? .claude/skills/tdd/SKILL.md\n?? .claude/skills/tdd/mocking.md\n?? .claude/skills/tdd/tests.md\n?? .claude/skills/teach/GLOSSARY-FORMAT.md\n?? .claude/skills/teach/LEARNING-RECORD-FORMAT.md\n?? .claude/skills/teach/LICENSE\n?? .claude/skills/teach/MISSION-FORMAT.md\n?? .claude/skills/teach/RESOURCES-FORMAT.md\n?? .claude/skills/teach/SKILL.md\n?? .claude/skills/to-questionnaire/LICENSE\n?? .claude/skills/to-questionnaire/SKILL.md\n?? .claude/skills/to-spec/LICENSE\n?? .claude/skills/to-spec/SKILL.md\n?? .claude/skills/to-tickets/LICENSE\n?? .claude/skills/to-tickets/SKILL.md\n?? .claude/skills/tune-skills/SKILL.md\n?? .claude/skills/tw-emoji-commit/SKILL.md\n?? .claude/skills/tw-emoji-commit/scripts/sanitize_commit.py\n?? .claude/skills/tw-emoji-pr-note/SKILL.md\n?? .claude/skills/tw-emoji-pr-note/scripts/sanitize_pr_note.py\n?? .claude/skills/tw-emoji-release-note/SKILL.md\n?? .claude/skills/tw-emoji-release-note/scripts/sanitize_release_note.py\n?? .claude/skills/wait-what/LICENSE\n?? .claude/skills/wait-what/SKILL.md\n?? .claude/skills/wayfinder/LICENSE\n?? .claude/skills/wayfinder/SKILL.md\n?? .claude/skills/wizard/LICENSE\n?? .claude/skills/wizard/SKILL.md\n?? .claude/skills/wizard/template.sh\n?? .claude/skills/writing-for-agents/LICENSE\n?? .claude/skills/writing-for-agents/SKILL-MECHANICS.md\n?? .claude/skills/writing-for-agents/SKILL.md\n?? .codex/agents/harness-researcher.toml\n?? .codex/agents/harness-reviewer.toml\n?? .codex/config.toml\n?? .proj.specs/0001-harness-adoption/baseline-traceability.json\n?? .proj.specs/0001-harness-adoption/candidate-traceability.json\n?? .proj.specs/0001-harness-adoption/review/prompt.md\n?? .proj.specs/0001-harness-adoption/review/round-1-inputs/spec.en.md\n?? .proj.specs/0001-harness-adoption/review/round-2-inputs/baseline-traceability.json\n?? .proj.specs/0001-harness-adoption/review/round-2-inputs/candidate-traceability.json\n?? .proj.specs/0001-harness-adoption/review/round-2-inputs/spec.en.md\n?? .proj.specs/0001-harness-adoption/review/round-2-inputs/traceability.md\n?? .proj.specs/0001-harness-adoption/review/round-2-surface.json\n?? .proj.specs/0001-harness-adoption/review/round-2.md\n?? .proj.specs/0001-harness-adoption/spec.en.md\n?? .proj.specs/0001-harness-adoption/spec.zh-TW.md\n?? .proj.specs/0001-harness-adoption/traceability.md\n?? .proj.specs/CAPABILITIES.md\n?? .proj.specs/OPEN-QUESTIONS.md\n?? .proj.specs/_baseline/ee7fecf/newest-posts-widget/spec.en.md\n?? .proj.specs/_baseline/ee7fecf/newest-posts-widget/spec.zh-TW.md\n?? .proj.specs/_baseline/ee7fecf/phoenix-style-and-maintenance/spec.en.md\n?? .proj.specs/_baseline/ee7fecf/phoenix-style-and-maintenance/spec.zh-TW.md\n?? .proj.specs/_baseline/ee7fecf/post-content-model/spec.en.md\n?? .proj.specs/_baseline/ee7fecf/post-content-model/spec.zh-TW.md\n?? .proj.specs/_baseline/ee7fecf/post-display-views/spec.en.md\n?? .proj.specs/_baseline/ee7fecf/post-display-views/spec.zh-TW.md\n?? .proj.specs/_baseline/ee7fecf/theme-layout-particles/spec.en.md\n?? .proj.specs/_baseline/ee7fecf/theme-layout-particles/spec.zh-TW.md\n?? .proj.specs/_baseline/ee7fecf/vitepress-post-scaffolding/spec.en.md\n?? .proj.specs/_baseline/ee7fecf/vitepress-post-scaffolding/spec.zh-TW.md\n?? .proj.tickets/0001-harness-adoption/T-0001-harness-adoption.md\n?? CONTEXT.md\n?? THIRD_PARTY_NOTICES.md\n?? blog/.vitepress/config.mts\n?? blog/.vitepress/nav.yml\n?? blog/.vitepress/sidebar.yml\n?? blog/.vitepress/theme/Layout.vue\n?? blog/.vitepress/theme/components/NewPost.vue\n?? blog/.vitepress/theme/components/Particles.vue\n?? blog/.vitepress/theme/components/PostBlock.vue\n?? blog/.vitepress/theme/components/PostCard.vue\n?? blog/.vitepress/theme/components/PostList.vue\n?? blog/.vitepress/theme/components/__tests__/Particles.spec.ts\n?? blog/.vitepress/theme/composables/usePostFilter.ts\n?? blog/.vitepress/theme/composables/usePostSort.ts\n?? blog/.vitepress/theme/index.ts\n?? blog/.vitepress/theme/style.css\n?? blog/about.md\n?? blog/index.md\n?? blog/post/.gitkeep\n?? blog/post/course/cybersec/index.md\n?? blog/post/course/cybersec/what-is-safety.md\n?? blog/post/course/rm/index.md\n?? blog/post/course/rm/why-we-need-rm.md\n?? blog/posts.md\n?? blog/public/assets/.gitkeep\n?? blog/public/assets/fontawesome/css/brands.min.css\n?? blog/public/assets/fontawesome/css/fontawesome.min.css\n?? blog/public/assets/fontawesome/css/regular.min.css\n?? blog/public/assets/fontawesome/css/solid.min.css\n?? blog/public/assets/fontawesome/webfonts/fa-brands-400.woff2\n?? blog/public/assets/fontawesome/webfonts/fa-regular-400.woff2\n?? blog/public/assets/fontawesome/webfonts/fa-solid-900.woff2\n?? blog/public/assets/fontawesome/webfonts/fa-v4compatibility.woff2\n?? blog/public/assets/post_course_cybersec_what-is-safety/1772342178110.gif\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260227005508.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260227014249.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260228013411.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260228022122.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260228114351.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260228130720.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260301114806.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260301120037.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260301122300.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260301125241.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260301125313.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260301125401.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260301125743.png\n?? blog/public/assets/post_course_cybersec_what-is-safety/20260301132349.png\n?? blog/public/assets/post_course_rm_why-we-need-rm/20260302005553.png\n?? blog/public/assets/post_course_rm_why-we-need-rm/20260302010537.png\n?? blog/public/assets/post_course_rm_why-we-need-rm/20260302012511.png\n?? blog/public/assets/post_course_rm_why-we-need-rm/20260307155631.png\n?? blog/public/assets/post_course_rm_why-we-need-rm/20260307160403.png\n?? blog/public/circleImage.svg\n?? blog/public/heroImageWithoutText.svg\n?? blog/public/phoenixWithText.svg\n?? blog/shared/posts.data.ts\n?? docs/README.md\n?? docs/adr/0001-walking-skeleton-then-epic-loop.md\n?? docs/adr/0002-ticket-status-in-frontmatter.md\n?? docs/adr/0003-adversarial-review-fixed-axes-two-rounds.md\n?? docs/adr/0004-existing-product-harness-adoption.md\n?? docs/adr/0005-physical-product-writing-packages.md\n?? docs/adr/0006-local-tracker-and-authorized-landing.md\n?? docs/adr/0007-validated-taiwan-writing-language-exception.md\n?? docs/agents/claude-orchestration.md\n?? docs/agents/codex.md\n?? docs/agents/domain.md\n?? docs/agents/issue-tracker.md\n?? docs/agents/language.md\n?? docs/agents/review.md\n?? docs/agents/runtime.md\n?? docs/agents/skill-sources.json\n?? docs/agents/template-source.json\n?? docs/agents/workflow.md\n?? docs/guide.md\n?? docs/security/archify-dependencies.md\n?? docs/security/windows-opener.md\n?? maintenance/harness-adoption/APPROVALS.md\n?? maintenance/harness-adoption/baseline-files.json\n?? maintenance/harness-adoption/candidate-delta.json\n?? maintenance/harness-adoption/framework-import-manifest.json\n?? maintenance/harness-adoption/generated-writing-manifest.json\n?? maintenance/harness-adoption/history-index.json\n?? maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-apply/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-archive/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-ask/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-audit/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-commit/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-debug/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-discuss/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-ingest/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.claude/skills/spectra-propose/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/apply.toml.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/archive.toml.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/ask.toml.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/audit.toml.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/commit.toml.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/debug.toml.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/discuss.toml.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/ingest.toml.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/commands/spectra/propose.toml.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-apply/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-archive/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-ask/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-audit/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-commit/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-debug/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-discuss/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-ingest/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.gemini/skills/spectra-propose/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-apply.prompt.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-archive.prompt.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-ask.prompt.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-audit.prompt.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-commit.prompt.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-debug.prompt.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-discuss.prompt.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-ingest.prompt.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/prompts/spectra-propose.prompt.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-apply/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-archive/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-ask/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-audit/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-commit/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-debug/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-discuss/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-ingest/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/.github/skills/spectra-propose/SKILL.md.txt\n?? maintenance/harness-adoption/legacy-runtime/AGENTS.md.txt\n?? maintenance/harness-adoption/legacy-runtime/CLAUDE.md.txt\n?? maintenance/harness-adoption/legacy-runtime/GEMINI.md.txt\n?? maintenance/harness-adoption/legacy-runtime/manifest.json\n?? maintenance/harness-adoption/legacy-runtime/skills/maintaining-writing-skills/references/spectra-codex.md.txt\n?? maintenance/harness-adoption/runtime-source-policy.json\n?? maintenance/harness-adoption/vendor/LICENSE\n?? maintenance/harness-adoption/writing-case-manifest.json\n?? scripts/materialize-writing-skills.py\n?? scripts/verify-harness-adoption.py\n?? scripts/verify-project.py\n?? skills-lock.json\n?? tests/harness_adoption/test_materializer.py\n?? tests/harness_adoption/test_tracker.py\n",
+  "actual_reset_argv": [
+    "git",
+    "reset",
+    "--hard",
+    "ee7fecfff72f47abc735d26ac7e9a943de04ebbf"
+  ],
+  "reset_stdout": "HEAD is now at ee7fecf 📝 docs: 將 Phoenix 寫作風格與維護流程移至 Codex 專案技能\n",
+  "actual_clean_argv": [
+    "git",
+    "clean",
+    "-fd"
+  ],
+  "clean_stdout": "Removing .agents/skills/agent-browser/\nRemoving .agents/skills/archify/\nRemoving .agents/skills/code-review/\nRemoving .agents/skills/codebase-design/\nRemoving .agents/skills/diagnosing-bugs/\nRemoving .agents/skills/domain-modeling/\nRemoving .agents/skills/evidence-report/\nRemoving .agents/skills/grill-me/\nRemoving .agents/skills/grill-with-docs/\nRemoving .agents/skills/grilling/\nRemoving .agents/skills/handoff/\nRemoving .agents/skills/i-have-adhd/\nRemoving .agents/skills/implement/\nRemoving .agents/skills/improve-codebase-architecture/\nRemoving .agents/skills/prototype/\nRemoving .agents/skills/research/\nRemoving .agents/skills/resolving-merge-conflicts/\nRemoving .agents/skills/security-review/\nRemoving .agents/skills/setup-matt-pocock-skills/\nRemoving .agents/skills/tdd/\nRemoving .agents/skills/teach/\nRemoving .agents/skills/to-questionnaire/\nRemoving .agents/skills/to-spec/\nRemoving .agents/skills/to-tickets/\nRemoving .agents/skills/tune-skills/\nRemoving .agents/skills/tw-emoji-commit/\nRemoving .agents/skills/tw-emoji-pr-note/\nRemoving .agents/skills/tw-emoji-release-note/\nRemoving .agents/skills/wait-what/\nRemoving .agents/skills/wayfinder/\nRemoving .agents/skills/wizard/\nRemoving .agents/skills/writing-for-agents/\nRemoving .claude/agents/\nRemoving .claude/skills/agent-browser/\nRemoving .claude/skills/archify/\nRemoving .claude/skills/code-review/\nRemoving .claude/skills/codebase-design/\nRemoving .claude/skills/diagnosing-bugs/\nRemoving .claude/skills/domain-modeling/\nRemoving .claude/skills/evidence-report/\nRemoving .claude/skills/grill-me/\nRemoving .claude/skills/grill-with-docs/\nRemoving .claude/skills/grilling/\nRemoving .claude/skills/handoff/\nRemoving .claude/skills/i-have-adhd/\nRemoving .claude/skills/implement/\nRemoving .claude/skills/improve-codebase-architecture/\nRemoving .claude/skills/prototype/\nRemoving .claude/skills/research/\nRemoving .claude/skills/resolving-merge-conflicts/\nRemoving .claude/skills/security-review/\nRemoving .claude/skills/setup-matt-pocock-skills/\nRemoving .claude/skills/tdd/\nRemoving .claude/skills/teach/\nRemoving .claude/skills/to-questionnaire/\nRemoving .claude/skills/to-spec/\nRemoving .claude/skills/to-tickets/\nRemoving .claude/skills/tune-skills/\nRemoving .claude/skills/tw-emoji-commit/\nRemoving .claude/skills/tw-emoji-pr-note/\nRemoving .claude/skills/tw-emoji-release-note/\nRemoving .claude/skills/wait-what/\nRemoving .claude/skills/wayfinder/\nRemoving .claude/skills/wizard/\nRemoving .claude/skills/writing-for-agents/\nRemoving .codex/\nRemoving .proj.specs/\nRemoving .proj.tickets/\nRemoving CONTEXT.md\nRemoving THIRD_PARTY_NOTICES.md\nRemoving blog/\nRemoving docs/README.md\nRemoving docs/adr/\nRemoving docs/agents/\nRemoving docs/guide.md\nRemoving docs/security/\nRemoving maintenance/harness-adoption/\nRemoving scripts/materialize-writing-skills.py\nRemoving scripts/verify-harness-adoption.py\nRemoving scripts/verify-project.py\nRemoving skills-lock.json\nRemoving tests/harness_adoption/\n",
+  "restored_entries": [
+    {
+      "path": ".agents/skills/creating-vitepress-post",
+      "type": "symlink",
+      "sha256": "89922a6d1bc901d6ac49ddd046e0e8027f44d9ea46474a236e6220261153a633"
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills",
+      "type": "symlink",
+      "sha256": "73bdaf38dd608d0ba16d1ea42742bcf554e1fe09dab5b4fc123e5dc6c3bb509e"
+    },
+    {
+      "path": ".agents/skills/phoenix-writing",
+      "type": "symlink",
+      "sha256": "907c1e2d1e3c929cb63c081ba2c8add502dfedcff9c66ff04f55f0beaa8b48ed"
+    },
+    {
+      "path": ".claude/hooks/check-staged-files.sh",
+      "type": "regular",
+      "sha256": "d084988bf09ad39d450b7607c56081b13451f96b47208d1e447052cb913dea0a"
+    },
+    {
+      "path": ".claude/settings.json",
+      "type": "regular",
+      "sha256": "39c2ce652df872ecc2fe846883925e28570d4abcb0e07b28673f5c8ef40fb134"
+    },
+    {
+      "path": ".claude/skills/creating-vitepress-post",
+      "type": "symlink",
+      "sha256": "89922a6d1bc901d6ac49ddd046e0e8027f44d9ea46474a236e6220261153a633"
+    },
+    {
+      "path": ".claude/skills/maintaining-writing-skills",
+      "type": "symlink",
+      "sha256": "73bdaf38dd608d0ba16d1ea42742bcf554e1fe09dab5b4fc123e5dc6c3bb509e"
+    },
+    {
+      "path": ".claude/skills/phoenix-writing",
+      "type": "symlink",
+      "sha256": "907c1e2d1e3c929cb63c081ba2c8add502dfedcff9c66ff04f55f0beaa8b48ed"
+    },
+    {
+      "path": ".claude/skills/spectra-apply/SKILL.md",
+      "type": "regular",
+      "sha256": "c44410aa314e818f992e1f6f69b8cbc432f0a7f9e04d044c3e3e5242ef474f70"
+    },
+    {
+      "path": ".claude/skills/spectra-archive/SKILL.md",
+      "type": "regular",
+      "sha256": "6e018f08cd963c9b74682a32ea23ca4194368990e410b818108492a64c204a4e"
+    },
+    {
+      "path": ".claude/skills/spectra-ask/SKILL.md",
+      "type": "regular",
+      "sha256": "db0202ea4892fdf271bd2e615525c2c934552509a143e556433b4026e38b8057"
+    },
+    {
+      "path": ".claude/skills/spectra-audit/SKILL.md",
+      "type": "regular",
+      "sha256": "91b0539dd9f3474c14438d32343eacf70ce6b7f3f0b03f4108a3c6afaa1e0095"
+    },
+    {
+      "path": ".claude/skills/spectra-commit/SKILL.md",
+      "type": "regular",
+      "sha256": "9d19be3eba67874816889dd1f6c4db4c0bd1f1da0d906003b7301cb682fac25d"
+    },
+    {
+      "path": ".claude/skills/spectra-debug/SKILL.md",
+      "type": "regular",
+      "sha256": "3feab58e515a90ceb1d5a9a9487df139e4c0f0097c74799af4f78cfc7e9024cb"
+    },
+    {
+      "path": ".claude/skills/spectra-discuss/SKILL.md",
+      "type": "regular",
+      "sha256": "39c45831c90bb44790d9431770e9663d8731d62fb6d1584fe52930ccfccbcc7b"
+    },
+    {
+      "path": ".claude/skills/spectra-ingest/SKILL.md",
+      "type": "regular",
+      "sha256": "ca330709558b7b3132a579cc18c98e1ca67bfd6733c40442a6975cb0707abc96"
+    },
+    {
+      "path": ".claude/skills/spectra-propose/SKILL.md",
+      "type": "regular",
+      "sha256": "55c7445158420b04b3cf380e591a10cd87bc941fbb98251d8f8a298b329da6a8"
+    },
+    {
+      "path": ".gemini/commands/spectra/apply.toml",
+      "type": "regular",
+      "sha256": "7a984188489285ab0df405e238a65ee69da7b21840cd58908ffa462308064ccb"
+    },
+    {
+      "path": ".gemini/commands/spectra/archive.toml",
+      "type": "regular",
+      "sha256": "b0bb40db82eafd0e1d95ca38455762b0e0d418390b4170aa50cb67a0e8226982"
+    },
+    {
+      "path": ".gemini/commands/spectra/ask.toml",
+      "type": "regular",
+      "sha256": "4e538245ee3661112f5e15b1911f893cfd02cd4ca4270976de9953e65a5a03c4"
+    },
+    {
+      "path": ".gemini/commands/spectra/audit.toml",
+      "type": "regular",
+      "sha256": "46bfe686fde3f58154fa7bd1deacb16292c9177c299ffa7d53f1749b145414b8"
+    },
+    {
+      "path": ".gemini/commands/spectra/commit.toml",
+      "type": "regular",
+      "sha256": "8693611462f53bcc311d57972ed47f8f6fb873e9106f2d63dde18c7c85289ff1"
+    },
+    {
+      "path": ".gemini/commands/spectra/debug.toml",
+      "type": "regular",
+      "sha256": "30c69380d78011f28c4edb4544a350629c40ee1d4ca7a0b29855e47fd6f9bf94"
+    },
+    {
+      "path": ".gemini/commands/spectra/discuss.toml",
+      "type": "regular",
+      "sha256": "0ed33870fe8ad2c5f064dd8919541770377ad887f19371a4365c75ccd789bb36"
+    },
+    {
+      "path": ".gemini/commands/spectra/ingest.toml",
+      "type": "regular",
+      "sha256": "d837d67a18f51e1e195173d9af4300cb42379898fb17a0f9d7a7bbfd100eaa7d"
+    },
+    {
+      "path": ".gemini/commands/spectra/propose.toml",
+      "type": "regular",
+      "sha256": "5f8152d96a677a7b184d59e6080b4cb230fbf64f8c4c12c32dfca3accec40e16"
+    },
+    {
+      "path": ".gemini/skills/creating-vitepress-post",
+      "type": "symlink",
+      "sha256": "89922a6d1bc901d6ac49ddd046e0e8027f44d9ea46474a236e6220261153a633"
+    },
+    {
+      "path": ".gemini/skills/spectra-apply/SKILL.md",
+      "type": "regular",
+      "sha256": "b8ef118964db40e49df026c1d705dfe0f1afce0ff7da87eedbc493429b54bce1"
+    },
+    {
+      "path": ".gemini/skills/spectra-archive/SKILL.md",
+      "type": "regular",
+      "sha256": "b8f5ba6c2b923afb6b9d7e59212442e27e0ab8795df0641a79c2c4007d8c1437"
+    },
+    {
+      "path": ".gemini/skills/spectra-ask/SKILL.md",
+      "type": "regular",
+      "sha256": "313dad6e1021066ac7078220c98ade64b4cd71b27b2ac7529ff68e8f73d7a5c0"
+    },
+    {
+      "path": ".gemini/skills/spectra-audit/SKILL.md",
+      "type": "regular",
+      "sha256": "e9e639322f6f23cfb9e64d53d63309e3949bb1c369aea135af3f03c1051cda2b"
+    },
+    {
+      "path": ".gemini/skills/spectra-commit/SKILL.md",
+      "type": "regular",
+      "sha256": "a535a423fff22d60e8509a2fa0039ef9542bcb90030f374ebe8169e191f12e20"
+    },
+    {
+      "path": ".gemini/skills/spectra-debug/SKILL.md",
+      "type": "regular",
+      "sha256": "356b046161d3283a8f179a2913b1e7da5f274df60571a285ed789e544b9feb62"
+    },
+    {
+      "path": ".gemini/skills/spectra-discuss/SKILL.md",
+      "type": "regular",
+      "sha256": "1d3a4572eda3045ed691fc7bfdb3a94706bb7f70a2bd5e5820d77030931837bb"
+    },
+    {
+      "path": ".gemini/skills/spectra-ingest/SKILL.md",
+      "type": "regular",
+      "sha256": "091346ee849d34593824665e8473fdf4b65bf8df72c3505cd5e99796ce32f5db"
+    },
+    {
+      "path": ".gemini/skills/spectra-propose/SKILL.md",
+      "type": "regular",
+      "sha256": "860154be0e3c2163eec0f7591cbf3990dc66b6192cfb5a0bfe482fa1e3384645"
+    },
+    {
+      "path": ".github/prompts/spectra-apply.prompt.md",
+      "type": "regular",
+      "sha256": "c40d4dbd1026fb816acae2b0682b99d4ab68c23b8d9bf4cecb6d9e8f635ac87a"
+    },
+    {
+      "path": ".github/prompts/spectra-archive.prompt.md",
+      "type": "regular",
+      "sha256": "4eb93a70b0da1a496a6609c51975b9807f16c753db875eea8c60e91bacaa1c93"
+    },
+    {
+      "path": ".github/prompts/spectra-ask.prompt.md",
+      "type": "regular",
+      "sha256": "f46b9a180c145e6ac591ae85b87693d1b91b95622ffc510061c4d1d9cc028fe8"
+    },
+    {
+      "path": ".github/prompts/spectra-audit.prompt.md",
+      "type": "regular",
+      "sha256": "fa96c200934171fc8aadcac5d69626f6839f17b9a7b439c7678587e0120d1933"
+    },
+    {
+      "path": ".github/prompts/spectra-commit.prompt.md",
+      "type": "regular",
+      "sha256": "9377d5f84fcfde09e1f0961e3e7bf45b9bb896ec8d8857e3340e2154eb755a59"
+    },
+    {
+      "path": ".github/prompts/spectra-debug.prompt.md",
+      "type": "regular",
+      "sha256": "6372883450a361035ee11065fcafd5353425fbd7a81c012c701a2a9a6b1631eb"
+    },
+    {
+      "path": ".github/prompts/spectra-discuss.prompt.md",
+      "type": "regular",
+      "sha256": "d1ae0dd365c5b6608b36f652fdcc719f2d6325965e3607f7261bff37a9da46dd"
+    },
+    {
+      "path": ".github/prompts/spectra-ingest.prompt.md",
+      "type": "regular",
+      "sha256": "3b2f4d758a58832d06b41ecda3254a4e7f3a607f6161f4c87403fc9cdfff274f"
+    },
+    {
+      "path": ".github/prompts/spectra-propose.prompt.md",
+      "type": "regular",
+      "sha256": "2841c0aa25d08efae1b1ddceb1f29941ae2600eb51c05f40ec265b5f7330ce1c"
+    },
+    {
+      "path": ".github/skills/spectra-apply/SKILL.md",
+      "type": "regular",
+      "sha256": "b8ef118964db40e49df026c1d705dfe0f1afce0ff7da87eedbc493429b54bce1"
+    },
+    {
+      "path": ".github/skills/spectra-archive/SKILL.md",
+      "type": "regular",
+      "sha256": "b8f5ba6c2b923afb6b9d7e59212442e27e0ab8795df0641a79c2c4007d8c1437"
+    },
+    {
+      "path": ".github/skills/spectra-ask/SKILL.md",
+      "type": "regular",
+      "sha256": "313dad6e1021066ac7078220c98ade64b4cd71b27b2ac7529ff68e8f73d7a5c0"
+    },
+    {
+      "path": ".github/skills/spectra-audit/SKILL.md",
+      "type": "regular",
+      "sha256": "e9e639322f6f23cfb9e64d53d63309e3949bb1c369aea135af3f03c1051cda2b"
+    },
+    {
+      "path": ".github/skills/spectra-commit/SKILL.md",
+      "type": "regular",
+      "sha256": "a535a423fff22d60e8509a2fa0039ef9542bcb90030f374ebe8169e191f12e20"
+    },
+    {
+      "path": ".github/skills/spectra-debug/SKILL.md",
+      "type": "regular",
+      "sha256": "356b046161d3283a8f179a2913b1e7da5f274df60571a285ed789e544b9feb62"
+    },
+    {
+      "path": ".github/skills/spectra-discuss/SKILL.md",
+      "type": "regular",
+      "sha256": "1d3a4572eda3045ed691fc7bfdb3a94706bb7f70a2bd5e5820d77030931837bb"
+    },
+    {
+      "path": ".github/skills/spectra-ingest/SKILL.md",
+      "type": "regular",
+      "sha256": "091346ee849d34593824665e8473fdf4b65bf8df72c3505cd5e99796ce32f5db"
+    },
+    {
+      "path": ".github/skills/spectra-propose/SKILL.md",
+      "type": "regular",
+      "sha256": "ba2afc256b18411cea2686c462f5146d9019c920fd5e290ffd119854ab75f076"
+    },
+    {
+      "path": ".gitignore",
+      "type": "regular",
+      "sha256": "8549dec7451ae6b22714e8d6a95ea988a8e76ad665694fe96ff676d5ff465016"
+    },
+    {
+      "path": ".spectra.yaml",
+      "type": "regular",
+      "sha256": "7036a01d45ac54eab2eb7a4e3467b64f91f0c383b7aa8ed4f48cb383d7636098"
+    },
+    {
+      "path": "AGENTS.md",
+      "type": "regular",
+      "sha256": "906bfad5899ca79ec8d37ceb4812267ce92eb2a1f3f1042e29af42e7109fdaa8"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "type": "regular",
+      "sha256": "b21386394d70b6bef7907dd170adc37bb4edc9477cb1a2c4c2ac4cb71958a508"
+    },
+    {
+      "path": "CLAUDE.md",
+      "type": "regular",
+      "sha256": "7f8ed237a219b296081999cf9b2c740a0c0874425da6397291d89610ba4fdb8c"
+    },
+    {
+      "path": "GEMINI.md",
+      "type": "regular",
+      "sha256": "7a48fb2a0fe0b9fafe7ebbda4befe06b69a2010bd82166e4eb90e6ebbc52a771"
+    },
+    {
+      "path": "LICENSE",
+      "type": "regular",
+      "sha256": "bae5ccc863235f984a52c07d011e48a86c0c12f923be2dedd8624c7abdc22c6c"
+    },
+    {
+      "path": "README.md",
+      "type": "regular",
+      "sha256": "3a62aece25c772c72a98fd14037b3eb5d966f7d27be36d91c0920036e7a63578"
+    },
+    {
+      "path": "assets/banner.png",
+      "type": "regular",
+      "sha256": "cfeeecc845b666d140a311fdbe37b034f79736e479a1a1f238331c3ff5d48d73"
+    },
+    {
+      "path": "docs/.vitepress/config.mts",
+      "type": "regular",
+      "sha256": "9b2bdfee14b84f2e48b96d67f55ce0435f5e9ce317a8b7d5377c6d772efd5a2e"
+    },
+    {
+      "path": "docs/.vitepress/nav.yml",
+      "type": "regular",
+      "sha256": "ab72fc098307fc93d7b5d5995c5004334d7773a4b8234d39b4a7cf2d9d434194"
+    },
+    {
+      "path": "docs/.vitepress/sidebar.yml",
+      "type": "regular",
+      "sha256": "5b236681eacbd7f2a705a99add47de3f99934ed32713f7e6f5e5eb801066b24c"
+    },
+    {
+      "path": "docs/.vitepress/theme/Layout.vue",
+      "type": "regular",
+      "sha256": "c1060a7a7723fb31c8e89ad2f25b0582fabc7557488c9be64dcc4f231bf71e25"
+    },
+    {
+      "path": "docs/.vitepress/theme/components/NewPost.vue",
+      "type": "regular",
+      "sha256": "0d1ff9d225eb8e587d1fb82edc1009b11d4418fe231848821b2ef962e7b494a1"
+    },
+    {
+      "path": "docs/.vitepress/theme/components/Particles.vue",
+      "type": "regular",
+      "sha256": "00315e78403ef2e5592f7715a9bf11fe90640b0458fe862a2414308d94b88bf2"
+    },
+    {
+      "path": "docs/.vitepress/theme/components/PostBlock.vue",
+      "type": "regular",
+      "sha256": "a807747c0255b5191c567b0ad3f3641681655e91a4f186544715148b9ea0d067"
+    },
+    {
+      "path": "docs/.vitepress/theme/components/PostCard.vue",
+      "type": "regular",
+      "sha256": "3863982cccb2cdbaca00795381a1bbcd02614141eb25159b80999304b83412e5"
+    },
+    {
+      "path": "docs/.vitepress/theme/components/PostList.vue",
+      "type": "regular",
+      "sha256": "f5aa65bf5e82ddfc30c7bc0b77ff481c2f7e1a71ca9239874bf4ead606c4a11a"
+    },
+    {
+      "path": "docs/.vitepress/theme/components/__tests__/Particles.spec.ts",
+      "type": "regular",
+      "sha256": "7037f1c3e5b67e546a6e58a3ffed28aef9ebd1d1963c3524969665fe8689e05b"
+    },
+    {
+      "path": "docs/.vitepress/theme/composables/usePostFilter.ts",
+      "type": "regular",
+      "sha256": "3519a66d691803045d6ea195971c97d43f1eebc1641c941465e616ce6ff46094"
+    },
+    {
+      "path": "docs/.vitepress/theme/composables/usePostSort.ts",
+      "type": "regular",
+      "sha256": "b7b68bcb3c04b7feda028195507a26ba0c3e3bf2268dfd8b6ab0818f5910f9aa"
+    },
+    {
+      "path": "docs/.vitepress/theme/index.ts",
+      "type": "regular",
+      "sha256": "384e6be118b3d77c2b3bdb0d36aa245c3051e070ea79ccbc6280cb550e5ce931"
+    },
+    {
+      "path": "docs/.vitepress/theme/style.css",
+      "type": "regular",
+      "sha256": "69b7789356647cf8c351869126e5157696b36f2ffe406683ff4887d997ca03a3"
+    },
+    {
+      "path": "docs/about.md",
+      "type": "regular",
+      "sha256": "59b83078d813a6a8cd9df3e13f964ff38d78cb6134a5f0187f6ea85c3e64af60"
+    },
+    {
+      "path": "docs/index.md",
+      "type": "regular",
+      "sha256": "9aef5c68033e63165730cf8538476ef3520e1e185bc65fad1b556307f51e17cb"
+    },
+    {
+      "path": "docs/post/.gitkeep",
+      "type": "regular",
+      "sha256": "a38cb199f645ee3fb12f6c2d11c7be2d19ab134d44264e19b4666c83319d1b3e"
+    },
+    {
+      "path": "docs/post/course/cybersec/index.md",
+      "type": "regular",
+      "sha256": "5c0f5a0ee566725173f71d1e4c38068a39997c43439b49d3350c23dad6ada646"
+    },
+    {
+      "path": "docs/post/course/cybersec/what-is-safety.md",
+      "type": "regular",
+      "sha256": "e9764dff227339d09a4cd96fcf7fcd14c1e607672f25dc8937ede62c2c13a800"
+    },
+    {
+      "path": "docs/post/course/rm/index.md",
+      "type": "regular",
+      "sha256": "de58994a451013bf09060b52c708c6c448cb819c383eca02e674081e0336c888"
+    },
+    {
+      "path": "docs/post/course/rm/why-we-need-rm.md",
+      "type": "regular",
+      "sha256": "d609c056d66b471586462f2fc3ce9d8ca7da5d8cf303863aeb1ef6629dfcef93"
+    },
+    {
+      "path": "docs/posts.md",
+      "type": "regular",
+      "sha256": "c948c4f804ca59d6154c992cb9de76a907b75d48a985d5f2775b132d58bbae16"
+    },
+    {
+      "path": "docs/public/assets/.gitkeep",
+      "type": "regular",
+      "sha256": "a38cb199f645ee3fb12f6c2d11c7be2d19ab134d44264e19b4666c83319d1b3e"
+    },
+    {
+      "path": "docs/public/assets/fontawesome/css/brands.min.css",
+      "type": "regular",
+      "sha256": "9e2091a3026c87116c2ee1948fbad3bffbf1b1f733c2f89d351d3dc7aab082f9"
+    },
+    {
+      "path": "docs/public/assets/fontawesome/css/fontawesome.min.css",
+      "type": "regular",
+      "sha256": "b164a2d2905748e1d48512f1e985606b4282c9438bbc0ee2958e56f658695d2b"
+    },
+    {
+      "path": "docs/public/assets/fontawesome/css/regular.min.css",
+      "type": "regular",
+      "sha256": "d452ca86262c736cab4d172137e27176c2e4c7c141c8150c9154312f2aac3dae"
+    },
+    {
+      "path": "docs/public/assets/fontawesome/css/solid.min.css",
+      "type": "regular",
+      "sha256": "abb7189386e7601b342822b2a72812cf972daeb3442b796d7a785ea6f860f7e6"
+    },
+    {
+      "path": "docs/public/assets/fontawesome/webfonts/fa-brands-400.woff2",
+      "type": "regular",
+      "sha256": "70c632ba73c7ad942141bb2f56994b8eddf0a284c01aab9f21e0cd10021530c4"
+    },
+    {
+      "path": "docs/public/assets/fontawesome/webfonts/fa-regular-400.woff2",
+      "type": "regular",
+      "sha256": "81aaa8342d90df0a3c0b87655e2c31a71941f0dd351fb9fb1ca5d692e744f6d0"
+    },
+    {
+      "path": "docs/public/assets/fontawesome/webfonts/fa-solid-900.woff2",
+      "type": "regular",
+      "sha256": "ff58a6b0a01dbce082458f6e5a58719df4e80e0c2b50f744bb5871e21eca6878"
+    },
+    {
+      "path": "docs/public/assets/fontawesome/webfonts/fa-v4compatibility.woff2",
+      "type": "regular",
+      "sha256": "4bad0278281153ad5354855ccfbc0674279ec47eff29b3d262c213478311cc52"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/1772342178110.gif",
+      "type": "regular",
+      "sha256": "72b6d5565bd8fe64acdaa8095e28f5020fb53359889cdbb8e0c13ba6d983efa5"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260227005508.png",
+      "type": "regular",
+      "sha256": "5a3094e2ba747556333e1f34c1773784c20a24af8dd029e8d8035558d592baff"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260227014249.png",
+      "type": "regular",
+      "sha256": "aa52bbba7acf5b4302c16507814045f4e8d1e0621b52c205a27d1fe90932d1e8"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260228013411.png",
+      "type": "regular",
+      "sha256": "0e9c53cf7cd8c42a7141bf7d916155d7ea6f6da67a4a70779186f9a307d6f92f"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260228022122.png",
+      "type": "regular",
+      "sha256": "a219da123e747a5d0a18652b85698d3b812a1a29d32314493b41e8f08322d8e2"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260228114351.png",
+      "type": "regular",
+      "sha256": "051e7ccf7c2d3a43220c94bf53336acf3d475c914499bf70acf52007f72dbb31"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260228130720.png",
+      "type": "regular",
+      "sha256": "75ebfb75472dc51071f6da4366023583aab412ddfa46c0d14dd373d2b8373ebe"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260301114806.png",
+      "type": "regular",
+      "sha256": "097f9b35af2ce28ac061ae2305d5802619aa342cf7eb4b5158b213010043b74c"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260301120037.png",
+      "type": "regular",
+      "sha256": "6d43abc8662f574dd4b3f09839a914d2135e5574938874f8b12723f1d53f285d"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260301122300.png",
+      "type": "regular",
+      "sha256": "0b9be3df40d223d35d502e90d17d90f6956a5137cae43c6729ec75ae01cd3d1b"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260301125241.png",
+      "type": "regular",
+      "sha256": "a58a448b69ef4f7ffdd2a19f25e031d1a46e1cf890d248bb4abfc0166fd12c5c"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260301125313.png",
+      "type": "regular",
+      "sha256": "1ed6afeef7d65a1ed614fe6e55c7180d5ef6facea8913c72b2a85fa44d0a21bf"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260301125401.png",
+      "type": "regular",
+      "sha256": "db48f430928196d5945709e28fbb28269839b9df1cb0316ce3dbb15108efbf92"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260301125743.png",
+      "type": "regular",
+      "sha256": "4137ea91db759d18a1e25224fe4d17d9102a6c6c2b216aad82768b0935f0d2ed"
+    },
+    {
+      "path": "docs/public/assets/post_course_cybersec_what-is-safety/20260301132349.png",
+      "type": "regular",
+      "sha256": "72aec17ca978801f12beeb6cf12b070e9e6a490045333dfc8becbbec5573e8c3"
+    },
+    {
+      "path": "docs/public/assets/post_course_rm_why-we-need-rm/20260302005553.png",
+      "type": "regular",
+      "sha256": "3b84d129e2b7fe73f42901e60ce6dd21662346fade6fa2e548a1f3bca8bc847d"
+    },
+    {
+      "path": "docs/public/assets/post_course_rm_why-we-need-rm/20260302010537.png",
+      "type": "regular",
+      "sha256": "4505260ab07b1cee2bcf9b0bc82966abfa7684a8b8ba3197549408540a26544e"
+    },
+    {
+      "path": "docs/public/assets/post_course_rm_why-we-need-rm/20260302012511.png",
+      "type": "regular",
+      "sha256": "44143e87b3895b2ba1f54008976637a6551734ed773e6902d6d062aa47c06baa"
+    },
+    {
+      "path": "docs/public/assets/post_course_rm_why-we-need-rm/20260307155631.png",
+      "type": "regular",
+      "sha256": "0b71220f06823328675e12fec3000927466de017f943a4c1ccba5d3cac990524"
+    },
+    {
+      "path": "docs/public/assets/post_course_rm_why-we-need-rm/20260307160403.png",
+      "type": "regular",
+      "sha256": "29e9a12b93218489a6f02032373b8b9d68f5b645202b02098c5d17f4b5831b94"
+    },
+    {
+      "path": "docs/public/circleImage.svg",
+      "type": "regular",
+      "sha256": "0a165ae3fcfec248007e24f112c569387102ddc9b73ac88528c679011efce4e7"
+    },
+    {
+      "path": "docs/public/heroImageWithoutText.svg",
+      "type": "regular",
+      "sha256": "309d453f1463e7fc581055a758429062538943580280bd89cb0306f075612291"
+    },
+    {
+      "path": "docs/public/phoenixWithText.svg",
+      "type": "regular",
+      "sha256": "ba3bf36a716cd2b31ff1b245da9be0d22864b69dc88c50eee0fc40a788a537a8"
+    },
+    {
+      "path": "docs/shared/posts.data.ts",
+      "type": "regular",
+      "sha256": "ddd0aefda75056c72a9cc556fdcc613549b632f926d6c3af611e196e596be77e"
+    },
+    {
+      "path": "eslint.config.js",
+      "type": "regular",
+      "sha256": "dca44fa9aee5fa130f0e8c19dfa910ef0ac367d06960857d61bba9474c7b15b7"
+    },
+    {
+      "path": "maintenance/writing-skills/INVENTORY.md",
+      "type": "regular",
+      "sha256": "c31badcf80e61f40757d92c0c1876f82476e24be187d660bc6fd272da7681ce4"
+    },
+    {
+      "path": "maintenance/writing-skills/MIGRATION.md",
+      "type": "regular",
+      "sha256": "830cd1d39514c7efca29619e0ed1718a0c577aeb7bfbab0e1b1cd8d82dc9041b"
+    },
+    {
+      "path": "maintenance/writing-skills/PUBLICATION.md",
+      "type": "regular",
+      "sha256": "c1e53cb91e14ade3fc34438509d0f20b75733e7f300a95b4b4d17f2efc3d923c"
+    },
+    {
+      "path": "maintenance/writing-skills/SOURCES.md",
+      "type": "regular",
+      "sha256": "f03da29140dd0e6864861399c130e1f35945511928735dbb0597b0e880e7310c"
+    },
+    {
+      "path": "maintenance/writing-skills/VALIDATION.md",
+      "type": "regular",
+      "sha256": "84cfa730667e1156c89fb40676138272b47a08b0edcbb28c7ddb329561962c57"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/REPORT.md",
+      "type": "regular",
+      "sha256": "b71e8b66905858f32f299b7c0d46c2eee695c4cdc84550c78cbe9bf954e44a33"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/REPORT.original-v2.md",
+      "type": "regular",
+      "sha256": "c4d805162b428092ccd890a24f3ec831a69e0f2c6ae923f5cd40920ca98247c1"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E1/input.json",
+      "type": "regular",
+      "sha256": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E1/judgment-v2.json",
+      "type": "regular",
+      "sha256": "5bbc2d0e3c71fc3ee74d0fc84725a3075e635736cb5a8f350e0b86ffb7da6528"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E1/output-v2.json",
+      "type": "regular",
+      "sha256": "b076f2015fc5a80ad348a8a3fbb403ca4e665e49f65bb0f2ee7298d9ff286574"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E1/rubric.json",
+      "type": "regular",
+      "sha256": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E2/input.json",
+      "type": "regular",
+      "sha256": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E2/judgment-v2.json",
+      "type": "regular",
+      "sha256": "d84b79fb94d3755716adeddda005dbd30a1ba7ecf26da41817496368232927d2"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E2/output-v2.json",
+      "type": "regular",
+      "sha256": "e36cab1675e4ca95772a22a4b646a03e6384b4d29a1047f5560c621668db8ecc"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E2/rubric.json",
+      "type": "regular",
+      "sha256": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E3/input.json",
+      "type": "regular",
+      "sha256": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E3/judgment-v2.json",
+      "type": "regular",
+      "sha256": "b1c9b0c01d2be459c77a4e612aa7bfd7bbf9c2802e7482f45451ddf105405cd4"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E3/output-v2.json",
+      "type": "regular",
+      "sha256": "7431f27e1331027e59f2acd09289da67f7b637a4f9a4f84ef4c9e6638f6704b0"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E3/rubric.json",
+      "type": "regular",
+      "sha256": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E4/input.json",
+      "type": "regular",
+      "sha256": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E4/judgment-v2.json",
+      "type": "regular",
+      "sha256": "f29e06fab36a4610c15f38e3f6947023af466c9ad87b54844536e668847b71c0"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E4/output-v2.json",
+      "type": "regular",
+      "sha256": "f3113cc0711a4fc5a921d5923cbddad0e4a5633637ca29f439a9b5ef9cdfe2b9"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E4/rubric.json",
+      "type": "regular",
+      "sha256": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E5/input.json",
+      "type": "regular",
+      "sha256": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E5/judgment-v2.json",
+      "type": "regular",
+      "sha256": "fe1d11cdca9d59b47b3eec559ead32e621a1ec48c285a393bfa5a9cf6b5c08eb"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E5/output-v2.json",
+      "type": "regular",
+      "sha256": "3b670c84f41018af45bfa8fe8c2b828289d30078e0e703db1ea99824eec9fad2"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E5/rubric.json",
+      "type": "regular",
+      "sha256": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E6/input.json",
+      "type": "regular",
+      "sha256": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E6/judgment-v2.json",
+      "type": "regular",
+      "sha256": "f388bc51d7e0e9e54458a5c5ea083819211ff83df6cc179615a540c1a6741d4d"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E6/output-v2.json",
+      "type": "regular",
+      "sha256": "536d121b53d4d89f5c267156669cf683bd7da29d9058cf21b66212f3c0289289"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E6/rubric.json",
+      "type": "regular",
+      "sha256": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E7/input.json",
+      "type": "regular",
+      "sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E7/judgment-v2.json",
+      "type": "regular",
+      "sha256": "7836364df367a0b01881a4d96886c353bc44d536f36181e18cc4a4192341fc96"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E7/output-v2.json",
+      "type": "regular",
+      "sha256": "f2f3609a1d2c7b70736ed32fa718b17e5f76411d15fbf8fdb2f1cae42cfabd2b"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E7/rubric.json",
+      "type": "regular",
+      "sha256": "aecfdaa4b5d3786cd86d3482e0139ba22604f2a0b2088f92e4f9ddcc9e179b05"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E8/input.json",
+      "type": "regular",
+      "sha256": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E8/judgment-v2.json",
+      "type": "regular",
+      "sha256": "09ed0ddcc3b33232f7e72dbaeff9d511d16a6625b7fa223d4c87ef03241a983b"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E8/output-v2.json",
+      "type": "regular",
+      "sha256": "da88f624dd3b2388fed2c35f299d0733a0a318ea18dc700dfe203f60fa554c8f"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/cases/E8/rubric.json",
+      "type": "regular",
+      "sha256": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/check_mechanical.py",
+      "type": "regular",
+      "sha256": "3cb4e1b881f495cb57fa490a547c291c26e04f9e1689f01d34b3acc4f7ef9091"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/design.json",
+      "type": "regular",
+      "sha256": "70d1e6ac5c3c5aa7fc15036dfca87c93110b47e3bf168516ebf71fda5905f2bf"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/execution-provenance.json",
+      "type": "regular",
+      "sha256": "414c1a8db6202fde40241ba8627a03682c9539dea9e2e67df0800de7e0423b88"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/REPORT.md",
+      "type": "regular",
+      "sha256": "6ae084bbcc91ed18e9dddeaeeae7086b91a6ad00aed568083e1dd8c36f958dca"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E7/input.json",
+      "type": "regular",
+      "sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E7/judgment-v21.json",
+      "type": "regular",
+      "sha256": "e291240b4e66a9a0994b9ad4187b1e619332a19c9696102764e0ffa844cb8b37"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E7/judgment-v22.json",
+      "type": "regular",
+      "sha256": "d74104ea0724a4c5ac591f9410fe04bd3f61635e6bbc41af6645df96066cf28f"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E7/output-v21.json",
+      "type": "regular",
+      "sha256": "be4e5dbc9c953c4d2483a3e2a1f847d55a0748bc332d104a899a10a7392ca79b"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E7/output-v22.json",
+      "type": "regular",
+      "sha256": "8398bffbff196476b8ede505a5b024a8dc27b8cbe53bc8fec06b497bbd3f9d27"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E7/rubric.json",
+      "type": "regular",
+      "sha256": "9403f0de073b1246a81fd353bf288f34f2434b9704061a0a744ad64f481103b3"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E9/input.json",
+      "type": "regular",
+      "sha256": "3b74f474e294725b7ce45bbd01ea5ac5de45db42c53de56781e577018aeab00c"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E9/judgment-v21.json",
+      "type": "regular",
+      "sha256": "fec1d09428a649c84a41ae557c4cbae73261270406324d4f9c9587c19604c756"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E9/output-v21.json",
+      "type": "regular",
+      "sha256": "0eec3cbb765640a2853e91e597cf7f0ffb2f03f44e58baa650d179e604e2abae"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/cases/E9/rubric.json",
+      "type": "regular",
+      "sha256": "aa8747d2c643500b27b61c6248f3c8cef246783f7332e57fbaf9a976b94ca19b"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/check_figures.py",
+      "type": "regular",
+      "sha256": "4001c8b520268cba0b224ad5fbb9025d5f0f599155768a95e517e3bdde6bbeb5"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/design.json",
+      "type": "regular",
+      "sha256": "c783ae00241fac06ee4b378b94ba76f58de0a7b6994d6bbc0f11e0d21306438a"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/execution-provenance.json",
+      "type": "regular",
+      "sha256": "47ec87549c0f48f6ec5068b41ec71b05540b8e0e828ebc50435b9ae93e490d12"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/freeze-v22.json",
+      "type": "regular",
+      "sha256": "5fc46d22cc4d2479627cc166504f7125e6bdf75d11f2b465fc1d49bb61a14d97"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/freeze.json",
+      "type": "regular",
+      "sha256": "56a875cbb02d8490a016f85155fd408201371ecfb14c2ba0bc7dfc3bc1a0f221"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/instruction-snapshot-v22.json",
+      "type": "regular",
+      "sha256": "ab65db5301d6a942ff58cf1677ffd04a39c47a65155304ac982be7f43dbdbce7"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/instruction-snapshot.json",
+      "type": "regular",
+      "sha256": "0640d770b1926e43a9cd56cc8b107df0d9e8367813311cd3ced97f9f373b017e"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/mechanical-checks-final.json",
+      "type": "regular",
+      "sha256": "477756b24a05e0f22641e4fc06f21e8f9c3e3436810af722bb64031ba3449222"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/mechanical-checks-v21.json",
+      "type": "regular",
+      "sha256": "4eadf89721cdcfb47f0b38852df0500d0afd474ec79fd78a2238dd5d10da765f"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/parent-qa-correction.json",
+      "type": "regular",
+      "sha256": "81c984adf36fc07aa759c7240c1f8e039c750c14336bcbd8d547671d63a501b1"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/results.json",
+      "type": "regular",
+      "sha256": "51e78ecf77d496a02c45938107831d8e5131a234168cffc05f4723e35b3e7890"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/figure-followup/verification-final.json",
+      "type": "regular",
+      "sha256": "9f20aff4f07940835c8726dd7b5e46a7f66204bc171e31e14240636ee9823b91"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/freeze.json",
+      "type": "regular",
+      "sha256": "911a11f0a519c245e2c0494668967bacf5f01b137fde214a6e32a9340b24dad8"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/REPORT.md",
+      "type": "regular",
+      "sha256": "c19bc312c6df4803aaa702c3d2493f044c02f077db02da842848d0921c774fa5"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E1/input.json",
+      "type": "regular",
+      "sha256": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E1/judgment.json",
+      "type": "regular",
+      "sha256": "5bbc2d0e3c71fc3ee74d0fc84725a3075e635736cb5a8f350e0b86ffb7da6528"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E1/output.json",
+      "type": "regular",
+      "sha256": "b076f2015fc5a80ad348a8a3fbb403ca4e665e49f65bb0f2ee7298d9ff286574"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E1/rubric.json",
+      "type": "regular",
+      "sha256": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E2/input.json",
+      "type": "regular",
+      "sha256": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E2/judgment.json",
+      "type": "regular",
+      "sha256": "d84b79fb94d3755716adeddda005dbd30a1ba7ecf26da41817496368232927d2"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E2/output.json",
+      "type": "regular",
+      "sha256": "e36cab1675e4ca95772a22a4b646a03e6384b4d29a1047f5560c621668db8ecc"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E2/rubric.json",
+      "type": "regular",
+      "sha256": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E3/input.json",
+      "type": "regular",
+      "sha256": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E3/judgment.json",
+      "type": "regular",
+      "sha256": "b1c9b0c01d2be459c77a4e612aa7bfd7bbf9c2802e7482f45451ddf105405cd4"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E3/output.json",
+      "type": "regular",
+      "sha256": "7431f27e1331027e59f2acd09289da67f7b637a4f9a4f84ef4c9e6638f6704b0"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E3/rubric.json",
+      "type": "regular",
+      "sha256": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E4/input.json",
+      "type": "regular",
+      "sha256": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E4/judgment.json",
+      "type": "regular",
+      "sha256": "f29e06fab36a4610c15f38e3f6947023af466c9ad87b54844536e668847b71c0"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E4/output.json",
+      "type": "regular",
+      "sha256": "f3113cc0711a4fc5a921d5923cbddad0e4a5633637ca29f439a9b5ef9cdfe2b9"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E4/rubric.json",
+      "type": "regular",
+      "sha256": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E5/input.json",
+      "type": "regular",
+      "sha256": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E5/judgment.json",
+      "type": "regular",
+      "sha256": "fe1d11cdca9d59b47b3eec559ead32e621a1ec48c285a393bfa5a9cf6b5c08eb"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E5/output.json",
+      "type": "regular",
+      "sha256": "3b670c84f41018af45bfa8fe8c2b828289d30078e0e703db1ea99824eec9fad2"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E5/rubric.json",
+      "type": "regular",
+      "sha256": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E6/input.json",
+      "type": "regular",
+      "sha256": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E6/judgment.json",
+      "type": "regular",
+      "sha256": "f388bc51d7e0e9e54458a5c5ea083819211ff83df6cc179615a540c1a6741d4d"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E6/output.json",
+      "type": "regular",
+      "sha256": "536d121b53d4d89f5c267156669cf683bd7da29d9058cf21b66212f3c0289289"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E6/rubric.json",
+      "type": "regular",
+      "sha256": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E7/input.json",
+      "type": "regular",
+      "sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E7/judgment.json",
+      "type": "regular",
+      "sha256": "d74104ea0724a4c5ac591f9410fe04bd3f61635e6bbc41af6645df96066cf28f"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E7/output.json",
+      "type": "regular",
+      "sha256": "8398bffbff196476b8ede505a5b024a8dc27b8cbe53bc8fec06b497bbd3f9d27"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E7/rubric.json",
+      "type": "regular",
+      "sha256": "9403f0de073b1246a81fd353bf288f34f2434b9704061a0a744ad64f481103b3"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E8/input.json",
+      "type": "regular",
+      "sha256": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E8/judgment.json",
+      "type": "regular",
+      "sha256": "09ed0ddcc3b33232f7e72dbaeff9d511d16a6625b7fa223d4c87ef03241a983b"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E8/output.json",
+      "type": "regular",
+      "sha256": "da88f624dd3b2388fed2c35f299d0733a0a318ea18dc700dfe203f60fa554c8f"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E8/rubric.json",
+      "type": "regular",
+      "sha256": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E9/input.json",
+      "type": "regular",
+      "sha256": "3b74f474e294725b7ce45bbd01ea5ac5de45db42c53de56781e577018aeab00c"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E9/judgment.json",
+      "type": "regular",
+      "sha256": "fec1d09428a649c84a41ae557c4cbae73261270406324d4f9c9587c19604c756"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E9/output.json",
+      "type": "regular",
+      "sha256": "0eec3cbb765640a2853e91e597cf7f0ffb2f03f44e58baa650d179e604e2abae"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/baselines/E9/rubric.json",
+      "type": "regular",
+      "sha256": "aa8747d2c643500b27b61c6248f3c8cef246783f7332e57fbaf9a976b94ca19b"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/case-manifest.json",
+      "type": "regular",
+      "sha256": "030033145bbeff8100e2d3a4eaeac3eb971030507945c572e06f75dd898073cc"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E1/input.json",
+      "type": "regular",
+      "sha256": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E1/judgment-reg22.json",
+      "type": "regular",
+      "sha256": "bfcabbac436695cbd3d11bab7cf73e3076f7b73e21ca4f052cebc25c9c6452ca"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E1/output-reg22.json",
+      "type": "regular",
+      "sha256": "fd64b36331c6159fdad82fd58520f8f1df8e22c3523591505cddb4f72fff5b5a"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E1/rubric.json",
+      "type": "regular",
+      "sha256": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E2/input.json",
+      "type": "regular",
+      "sha256": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E2/judgment-reg22.json",
+      "type": "regular",
+      "sha256": "49b75ec108fd9f78d711ca7e5fade2faa52e3db92aabb995a2050339972b711c"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E2/output-reg22.json",
+      "type": "regular",
+      "sha256": "e01e0a9b2013a720eff618619298786bdc129ba90db1786f7b9f1f17752601cd"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E2/rubric.json",
+      "type": "regular",
+      "sha256": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E3/input.json",
+      "type": "regular",
+      "sha256": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E3/judgment-reg22.json",
+      "type": "regular",
+      "sha256": "587d9c4c5db6668484747796ce9daf2be506c4e0e02de33834172ab602fff216"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E3/output-reg22.json",
+      "type": "regular",
+      "sha256": "b335fafdeb84ce54825cf3d3f395c9419ce12da9c1d819a057d7cf143ceea8a5"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E3/rubric.json",
+      "type": "regular",
+      "sha256": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E4/input.json",
+      "type": "regular",
+      "sha256": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E4/judgment-reg22.json",
+      "type": "regular",
+      "sha256": "ba7657db956c92cecc15cfdef7dbecd5479a9e17ce40692e9ce840c8d47ca551"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E4/output-reg22.json",
+      "type": "regular",
+      "sha256": "cc6edaa9983ee60583d487f199549c71b3476ab24164fab7e7f7dc6803a2dc66"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E4/rubric.json",
+      "type": "regular",
+      "sha256": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E5/input.json",
+      "type": "regular",
+      "sha256": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E5/judgment-reg22.json",
+      "type": "regular",
+      "sha256": "619800e6f4b1ae1872da0896b5b112e46fb98144dc84936d4a26f13f3e4bd58d"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E5/output-reg22.json",
+      "type": "regular",
+      "sha256": "1fc64478933dab11fa54fded25520553169e0b4e9f7ba27a6b9ba6a2ac8f9ec7"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E5/rubric.json",
+      "type": "regular",
+      "sha256": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E6/input.json",
+      "type": "regular",
+      "sha256": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E6/judgment-reg22.json",
+      "type": "regular",
+      "sha256": "7397e41f96c580df090ef5beb4c47ca99c3a03fe4f271dc0f1dcd70ad4ca6f01"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E6/output-reg22.json",
+      "type": "regular",
+      "sha256": "084faf66611407b96ed816cb43929e38a20667425be6d0a792fea480123f9d19"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E6/rubric.json",
+      "type": "regular",
+      "sha256": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E7/input.json",
+      "type": "regular",
+      "sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E7/judgment-reg22.json",
+      "type": "regular",
+      "sha256": "a70239f2767314533d3ba8c74ac2f297e1a761e688c5a197f01ba4d6dce8a1c5"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E7/output-reg22.json",
+      "type": "regular",
+      "sha256": "81704aeaf8c9711cdbddcacc6be190fa1f2044d3a5e714262e3251309713dd41"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E7/rubric.json",
+      "type": "regular",
+      "sha256": "9403f0de073b1246a81fd353bf288f34f2434b9704061a0a744ad64f481103b3"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E8/input.json",
+      "type": "regular",
+      "sha256": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E8/judgment-reg22.json",
+      "type": "regular",
+      "sha256": "90a98eaa3939aad178ea8116aaae6ea15edbcd2b534a3ce119e72b04c8654c2c"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E8/output-reg22.json",
+      "type": "regular",
+      "sha256": "16a564f08fe9e378c49b45201413132284c0c413201234c781679ec56eba88cc"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E8/rubric.json",
+      "type": "regular",
+      "sha256": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E9/input.json",
+      "type": "regular",
+      "sha256": "3b74f474e294725b7ce45bbd01ea5ac5de45db42c53de56781e577018aeab00c"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E9/judgment-reg22.json",
+      "type": "regular",
+      "sha256": "3537856ba34219b57ed82fde6b1016f205a397de77970e9e85d232ce7d0493e5"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E9/output-reg22.json",
+      "type": "regular",
+      "sha256": "2666fe0d33a42ecc3b660e1f52f7c217bbc712e45bf7e4a0adf23cd7bdf17f45"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/cases/E9/rubric.json",
+      "type": "regular",
+      "sha256": "aa8747d2c643500b27b61c6248f3c8cef246783f7332e57fbaf9a976b94ca19b"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/check_regression.py",
+      "type": "regular",
+      "sha256": "3e3c9f5546301f0b2c137ce5b6789c14a365140715bf07935ff929d011a361d1"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/checker-correction.json",
+      "type": "regular",
+      "sha256": "26ae57fcaadbf93056dd884b555c1a3fd044633b89b9319027dc49344e103bb1"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/design.json",
+      "type": "regular",
+      "sha256": "adbf89317acdd1262d628f84263693a0beb127e9bcc1ef77bae5bff5ba9f9d7a"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/execution-provenance.json",
+      "type": "regular",
+      "sha256": "6cc1a237aa601d467371c915f86eed26d5520af2b26bd958ba9cfb6595df6d4c"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/freeze.json",
+      "type": "regular",
+      "sha256": "e674fa8bb4f2fdca9971ca0388b649a1c0616590b825912958ef20ca42c5a636"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/instruction-snapshot.json",
+      "type": "regular",
+      "sha256": "ab65db5301d6a942ff58cf1677ffd04a39c47a65155304ac982be7f43dbdbce7"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/mechanical-checks-initial.json",
+      "type": "regular",
+      "sha256": "eb8445dc40c3a95a1b2905bf4da775adc2b92e04f6bbc05d2165469f9d2f2dff"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/mechanical-checks-reg22.json",
+      "type": "regular",
+      "sha256": "fcbe33112844fe6fe8ee6e0b31b153f5ac54ac5d2b40f16dac48bca82e9d7116"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/results.json",
+      "type": "regular",
+      "sha256": "3bade68a6114cf61606c21f14c364ee2738e661724daf3b57144579fea4d6c0b"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/full-regression-v22/verification-final.json",
+      "type": "regular",
+      "sha256": "5252ae022dc7661b71fe76018d962a25380151f4c5352c00a53939ea937cc3c4"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/instruction-snapshot.json",
+      "type": "regular",
+      "sha256": "8e8aced6dd37d187585b9d344cc09ac95dccf419be5f0eb0a9f2ad60d5ee0c8d"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/mechanical-checks-v2.json",
+      "type": "regular",
+      "sha256": "2127b2610c58e6e08a82602d1eb9eee33165e0274b22906438325e2f06f1af01"
+    },
+    {
+      "path": "maintenance/writing-skills/behavior-eval-20261004/results-v2.json",
+      "type": "regular",
+      "sha256": "16e40fff647c8de209df2fd5aeba533b1d944ef1aef5230087a47edcc264f3d0"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/AGENTS.md.txt",
+      "type": "regular",
+      "sha256": "9165179e5f8ab6485e789ff6d25d46816c8b9258fe9dc81da0148f2f9bf21992"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/CLAUDE.md.txt",
+      "type": "regular",
+      "sha256": "cfd8610b94859b0025df7d909210d33ee61a4c5c451e08474d6574bac052bdfe"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/SKILL.md",
+      "type": "regular",
+      "sha256": "69b2a0b2fb84992fa1f492899efe9fd9b9f13989c86e763a8f49ae31bbc390ef"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/concept-escalation-example.md",
+      "type": "regular",
+      "sha256": "48199b1336ec75764f255f7a498331b443bf8f4a82cfa7f702d7d5e8ab786fe8"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/dialogue-voices.md",
+      "type": "regular",
+      "sha256": "5613cad893a2fe8f1fea58eabad9c93fc35e7f215a1355f7d47184657f3cc414"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/domain-infosec.md",
+      "type": "regular",
+      "sha256": "da8157063087dc83c526950355d1dbfdb9f4f4a0c2e8a30ca3473005bc8a8e4b"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/editorial-rules.md",
+      "type": "regular",
+      "sha256": "b8e3b033f826aae8afe990dec4785f845ffb01d2dae91d7736e03dec822ccce4"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/humor-patterns.md",
+      "type": "regular",
+      "sha256": "75d319fce1d26014f8c7b170cf22721a8efd46bb70d41616c9d592b04f12c1c2"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/kaomoji-catalog.md",
+      "type": "regular",
+      "sha256": "1eb7793ca7c55c5948fe89bec227f0214c2841fc798853bc4d1ba65affc7022c"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/templates.md",
+      "type": "regular",
+      "sha256": "b0adb2dad18d7f92d1b5213579f8f105b1baca36fd2777de47a73ff44891978a"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/tw-vocabulary.md",
+      "type": "regular",
+      "sha256": "dd41de2cde6d538656aff06ecf415482b3f081af9bad878cb0eddc9097b2b293"
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/visual-guide.md",
+      "type": "regular",
+      "sha256": "094e6b89e257c5406d99cb8d2f50544b3eb851eacb06881bfb2ba8f29ce41a36"
+    },
+    {
+      "path": "maintenance/writing-skills/original-manifest.json",
+      "type": "regular",
+      "sha256": "efd1ff9be910d3b037026b0bb2d7bea3bdd827beacb747c7f02e712f3ae72542"
+    },
+    {
+      "path": "maintenance/writing-skills/publication-manifest.json",
+      "type": "regular",
+      "sha256": "6e8ba349d7462bf59459d1ffe77e73ee54639599523cf10431e2df4065b9ecab"
+    },
+    {
+      "path": "maintenance/writing-skills/residual-inventory.json",
+      "type": "regular",
+      "sha256": "10634991dd58eb5e0ac8257b265f647f7da75539757a2540b15cff279579c788"
+    },
+    {
+      "path": "maintenance/writing-skills/skills-mcp-manifest.json",
+      "type": "regular",
+      "sha256": "c67cd8b02818d2d784b757d01ec9097167ccba9178c26d188d488f08fe22fbe1"
+    },
+    {
+      "path": "maintenance/writing-skills/tests/cases.md",
+      "type": "regular",
+      "sha256": "87e2eba1b65e6d0c1f8c70b17a86a518f3636994a4c09edc8a460041ef43d7ec"
+    },
+    {
+      "path": "maintenance/writing-skills/tests/samples.json",
+      "type": "regular",
+      "sha256": "2eabc41995768f2586e7d50f1f11e889da1ae33d5dea7054142ca8a2bebcd4fd"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/.openspec.yaml",
+      "type": "regular",
+      "sha256": "7163f123b6dadba4ab99eb0991adb566011898daf2084d1d691f50ba1f519ffe"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/design.md",
+      "type": "regular",
+      "sha256": "d3906f15b111f78c4b1dde95df73bec1f72151bc5ef3c9ad798989f1b0cd18b5"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/proposal.md",
+      "type": "regular",
+      "sha256": "e8b0dfce4a80939e282ca12f8247ac0e2dcb341c3d43c41266c5d24ea0d052a5"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/specs/vitepress-post-scaffolding/spec.md",
+      "type": "regular",
+      "sha256": "5f4d90020f6b4b58439567f117c07863599543368346e34ec66bdfea659aa777"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-27-add-skills-for-scripts-dir/tasks.md",
+      "type": "regular",
+      "sha256": "eefb88c95f76b12b09298a7bef65c9db88b6aee3201fe3648bad9d22f423ea83"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/.openspec.yaml",
+      "type": "regular",
+      "sha256": "c788999a993aa62cd97aa570b876d06d3c24747b51dc355bd5353a0c0f767982"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/proposal.md",
+      "type": "regular",
+      "sha256": "f62b012c8e67b177ee0cb71af9e115c1b0147b4d6d17482192039ec2ebaa77b7"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/specs/newest-posts-widget/spec.md",
+      "type": "regular",
+      "sha256": "89cea7debf13cd0f2de16e8e8b861de857b5e8afe51a7b01262ed43232813d4c"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/specs/post-content-model/spec.md",
+      "type": "regular",
+      "sha256": "8fb3ff9e4070263d46a0e25963cc4e62b1d86555f061ba9e4d5f37f2e827893b"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/specs/post-display-views/spec.md",
+      "type": "regular",
+      "sha256": "6b2dd43854b087c2826001da8aaae3eaebae5fb973a124d005f3ba61fb5676e6"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/specs/theme-layout-particles/spec.md",
+      "type": "regular",
+      "sha256": "c62986256778c2c44ca9f4f48978a6008c80c2cecd9cb3c49d49f3ec05c610d6"
+    },
+    {
+      "path": "openspec/changes/archive/2026-04-28-capture-essential-specs/tasks.md",
+      "type": "regular",
+      "sha256": "5b18025c47ac7377db9d7a2befba65dfa3931208d42ff259d173c2ba6c6356cc"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-integrate-figures-in-prose/.openspec.yaml",
+      "type": "regular",
+      "sha256": "f438413b34e53a276b67a468ec8408ba90ffcba19e92c5d17a5b47a8575eecb1"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-integrate-figures-in-prose/proposal.md",
+      "type": "regular",
+      "sha256": "287328983a7e8bc6be1838053855af64133f0ef74cf51dcb75d738af5f352bf0"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-integrate-figures-in-prose/specs/phoenix-style-and-maintenance/spec.md",
+      "type": "regular",
+      "sha256": "a089254239a3c9a951b81bbf36f65608a354b8c793d4afe5a197a86636a3cc24"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-integrate-figures-in-prose/tasks.md",
+      "type": "regular",
+      "sha256": "9e78d6d88d4fdd7b868679d09312132edc8fa55a2ae556af03fa97c7b575973a"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/.openspec.yaml",
+      "type": "regular",
+      "sha256": "f438413b34e53a276b67a468ec8408ba90ffcba19e92c5d17a5b47a8575eecb1"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/design.md",
+      "type": "regular",
+      "sha256": "3c604b428c3dffe7743a72433f08946c7f5ff4cb2523df080bdf2f7eddb144c0"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/proposal.md",
+      "type": "regular",
+      "sha256": "31f25a2589bd142fdee18b15fd787f77db42a3df270045e7be04935172181c54"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/specs/phoenix-style-and-maintenance/spec.md",
+      "type": "regular",
+      "sha256": "dc8a1fadd938d7fccb601f260c8b8c1a2a469702c9d8f7d00c15689c9bca15b5"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/specs/vitepress-post-scaffolding/spec.md",
+      "type": "regular",
+      "sha256": "29398ae4649e789a2eb62c44b50456e89a296032d575113c4a9656c864b5c277"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-04-migrate-writing-skills-to-codex/tasks.md",
+      "type": "regular",
+      "sha256": "d6ca69cdb5396a87a5329c5a43bdd00bba6affa4e4fd0b45ed2876895bcba4f2"
+    },
+    {
+      "path": "openspec/config.yaml",
+      "type": "regular",
+      "sha256": "7f64d2448e1c83ffa6f2f3398b742fb5f2d4d3ea47b2c540a9076484977026b4"
+    },
+    {
+      "path": "openspec/specs/newest-posts-widget/spec.md",
+      "type": "regular",
+      "sha256": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183"
+    },
+    {
+      "path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+      "type": "regular",
+      "sha256": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8"
+    },
+    {
+      "path": "openspec/specs/post-content-model/spec.md",
+      "type": "regular",
+      "sha256": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b"
+    },
+    {
+      "path": "openspec/specs/post-display-views/spec.md",
+      "type": "regular",
+      "sha256": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2"
+    },
+    {
+      "path": "openspec/specs/theme-layout-particles/spec.md",
+      "type": "regular",
+      "sha256": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e"
+    },
+    {
+      "path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+      "type": "regular",
+      "sha256": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7"
+    },
+    {
+      "path": "package.json",
+      "type": "regular",
+      "sha256": "794ffd8ca1ba50510b7f8928f5708f4427634a5cd76caee83a62acbf0a55ed3c"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "type": "regular",
+      "sha256": "fbef52ab72fee1efbf3705903a9c5ecd961ea6a50a6a495e750a258b44593c66"
+    },
+    {
+      "path": "scripts/vpHelper.ts",
+      "type": "regular",
+      "sha256": "5eb30dca405c996625e805a368cd5e9fc5d0d41a8fae47e1a473caf2d2321411"
+    },
+    {
+      "path": "skills/creating-vitepress-post/SKILL.md",
+      "type": "regular",
+      "sha256": "737e8650091a90ba1f0f00aa778ce2b7bdd3d5acf7bdb276b017ce8be8c9d8d0"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/SKILL.md",
+      "type": "regular",
+      "sha256": "12b6a29fa02c124b709c6b1de0c04715c1671046897ba17de5ecde73fea2d5cf"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/config.json",
+      "type": "regular",
+      "sha256": "7d0a2bc380380076ce22181b4f0144681263d3f995e2eb0e9a6910de554f4433"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/rules/__init__.py",
+      "type": "regular",
+      "sha256": "9a5e2ad9f3c911faf5425d27885b8ac3ac2732701c09aa58ee7392fb2307a9f2"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/rules/_common.py",
+      "type": "regular",
+      "sha256": "de2f368946215d23884388e4b23e3ca27eb81705a7a3293998860d1ebda9d8d5"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/rules/tier1_format.py",
+      "type": "regular",
+      "sha256": "a08dd582c542e1cfd08efd656b9448049cbe4ae5cd4cd442fb623c53af56015f"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/rules/tier2_heuristic.py",
+      "type": "regular",
+      "sha256": "6d71fde5f86510c91417c36683c23e7b21185b8f6f79b41d6297a00fd0062753"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/rules/tier3_llm_hints.py",
+      "type": "regular",
+      "sha256": "6c8011b55fbd75ada01b469495ecdf47f1972f7431f89a30d1078c842c354c38"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/c1_violation.md",
+      "type": "regular",
+      "sha256": "93bc5fa1cdb9c3902bb18315f26ad0481941afc19f7cee4cadae1eccb9892d1c"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_no_warning.md",
+      "type": "regular",
+      "sha256": "5861529858a1a8633039e41e32ce251583935783a2e8c6fb5bfe0e9f2b952971"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e1_with_warning.md",
+      "type": "regular",
+      "sha256": "dd3326f3c3f65907572843b5dea1497644fc9dd9098ed56d6a9e0892ab2bd4f3"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/e2e_full.md",
+      "type": "regular",
+      "sha256": "05acf23f5d603acce6a9d2843c2fc49b220e14e498b2b8d9642578f891afcb40"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_clean.md",
+      "type": "regular",
+      "sha256": "f89e61496952bf388e9839338d0163eb8fea6175e29c200f056e07c174232464"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/f1_violation.md",
+      "type": "regular",
+      "sha256": "662209fc7c868dbbc04b0ebfa0d07754241d74a7baca3922779a11e0d488192a"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/k1_sparse.md",
+      "type": "regular",
+      "sha256": "a4a381c481bf945727e45faee9a049a1a56c6fb84d248bc76d5166b1ac8bff3d"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/m1_hint.md",
+      "type": "regular",
+      "sha256": "1194a9e083a26cfbfe6fc4809525d7667ed227ca53eb9443a6025daddc327661"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/o1_hint.md",
+      "type": "regular",
+      "sha256": "1849b6e8a4441908eb3ce58c5b07280372754c5a0b59ad50d1b9ef99c7d99c4d"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_clean.md",
+      "type": "regular",
+      "sha256": "cde764b67391aa22e3d8cca2496b4d00ebb859705e45083b925a51a94b7cccfc"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/p1_violation.md",
+      "type": "regular",
+      "sha256": "2540949712da8baae6e7b4772d275999c4b97425b686d4b59eb90cc8502c3909"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s1_hint.md",
+      "type": "regular",
+      "sha256": "4713d252d7c3cce029aecaa68d354c91ab81c183ecc5e9a1f566c554541f7557"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s2_hint.md",
+      "type": "regular",
+      "sha256": "ea42cad5c5ba344c2c0a48edc0f3b8416c773a8ba75624dcc91a67fb4313e0b6"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/s3_violation.md",
+      "type": "regular",
+      "sha256": "f005ae9ba9ea5dad1c80943068e5c83e49c7a6d0cbfc0d93f8cf3320d87987a8"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t1_hint.md",
+      "type": "regular",
+      "sha256": "5563ef1fbd42c8ccd5d0ade5afda423c8d431addfadc49a11b65cd4794dd3317"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_clean.md",
+      "type": "regular",
+      "sha256": "faa496e2c785ff2fb82f41e69c93d0cdff6980924f59acbdaa308b11dc76ce25"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t2_violation.md",
+      "type": "regular",
+      "sha256": "9bac8527e8a1399c5cc325ec9ea5f69d59bddbed0fa3bcf1b7c7bf426744de14"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_clean.md",
+      "type": "regular",
+      "sha256": "b873714ec708ef534453477e980168dac582de117249c75800b1f4099ae38b59"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/t3_violation.md",
+      "type": "regular",
+      "sha256": "8866d834f2e78b99cbc1513b5fc2fafb6711b10f960420edd5373333ab941e00"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_clean.md",
+      "type": "regular",
+      "sha256": "e8b2ab05682c22dbbafbcd36dd8a877ed177fa2244e9d631cca0d01d7b2a08df"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/v1_violation.md",
+      "type": "regular",
+      "sha256": "9284043823b17ff4170ae91ec359754d88fbe264d605349c3db5cc87ffae4c95"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/fixtures/w1_violation.md",
+      "type": "regular",
+      "sha256": "fd7fd5a9580219ff2bb339cc628c4b46e6fff54501cdfbfd41fe6846a4414992"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/test_tier1.py",
+      "type": "regular",
+      "sha256": "d2cc44aab938025b92e22696f0e3ed32c61ebb6fdfac601514bd5dcacd9d83bc"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/tests/test_tier2_tier3.py",
+      "type": "regular",
+      "sha256": "f16b4932c945f7b92578c9ab45313ac13d2a559dc325cc79581ef9836407c2ee"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/legacy-validator/validate_article.py",
+      "type": "regular",
+      "sha256": "bcbf73c6144fb372b633bfed06a65c9e3318180d987622b273d4a8c8410f1c19"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/references/article-maintenance.md",
+      "type": "regular",
+      "sha256": "3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/references/legacy-validator.md",
+      "type": "regular",
+      "sha256": "9ec63a5c8aa345635697aff5304babf8276666f3995f957c698ed43fc1ff090c"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/references/skill-maintenance.md",
+      "type": "regular",
+      "sha256": "ba4a5392b44e7270162ab456cfc5b57e52a929fc7d03ab483bb577f464acd758"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/references/spectra-codex.md",
+      "type": "regular",
+      "sha256": "ac55ab3da2683c57a399bd183c154c18ffa2aa441939aad4093a4de67e67a38e"
+    },
+    {
+      "path": "skills/maintaining-writing-skills/references/writing-process.md",
+      "type": "regular",
+      "sha256": "90cabbc770cf0220ccb18e2dc567e9aeadc75487f1f052a664e0d8ce8939dda4"
+    },
+    {
+      "path": "skills/phoenix-writing/AGENTS.md",
+      "type": "regular",
+      "sha256": "01b0f3c8b94f2d67d695da85734de12e4dfdbf54ef2c5a268a1de2833a4d755f"
+    },
+    {
+      "path": "skills/phoenix-writing/CLAUDE.md",
+      "type": "regular",
+      "sha256": "dcba1327a5a569c7992b66d4109b5c7fe2b49affd98c7900c7e411d5936b7f28"
+    },
+    {
+      "path": "skills/phoenix-writing/SKILL.md",
+      "type": "regular",
+      "sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73"
+    },
+    {
+      "path": "skills/phoenix-writing/reference",
+      "type": "symlink",
+      "sha256": "1cb52202e5157351dd1044476eba8d864757f30ddb410fcf1c2c333b0a6b4ae0"
+    },
+    {
+      "path": "skills/phoenix-writing/references/style-examples.md",
+      "type": "regular",
+      "sha256": "1ff689c5e10c2fb5d221f76f64f3bcdff9d79ae21fd48a7764b8571bc3d05a70"
+    },
+    {
+      "path": "skills/phoenix-writing/references/tw-vocabulary.md",
+      "type": "regular",
+      "sha256": "4219431491b4dd4357fc2a78da6f7720f48ad357cf8ea6d869dad8e4ab6d231a"
+    },
+    {
+      "path": "skills/phoenix-writing/scripts",
+      "type": "symlink",
+      "sha256": "95f3504e0b766934407433d11c85aa44c2b0356dfef5bc57a498411224c95b45"
+    },
+    {
+      "path": "tests/vpHelper.vitest.ts",
+      "type": "regular",
+      "sha256": "1878364246b56ebd41dae316f5799a393ccb6ed41a648b6822895842b563f6d1"
+    },
+    {
+      "path": "tsconfig.json",
+      "type": "regular",
+      "sha256": "50421e49c2f7f76ec75415c5c2e0e4b4333ca00210eeee992f13a5085796a965"
+    },
+    {
+      "path": "vitest.config.ts",
+      "type": "regular",
+      "sha256": "fc4bd97c7bb104620a4b4b4b865a78d6780a75517655569c80ba52eb852bd21d"
+    }
+  ],
+  "git_clean": true,
+  "unit_cli_build": "subsequent distinct real runs required"
+}

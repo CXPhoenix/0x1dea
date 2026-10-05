@@ -1,0 +1,15 @@
+test_readme_pnpm_commands_must_exist_in_package_scripts (__main__.TrackerTests.test_readme_pnpm_commands_must_exist_in_package_scripts) ... FAIL
+
+======================================================================
+FAIL: test_readme_pnpm_commands_must_exist_in_package_scripts (__main__.TrackerTests.test_readme_pnpm_commands_must_exist_in_package_scripts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{CANDIDATE}/tests/harness_adoption/test_tracker.py", line 99, in test_readme_pnpm_commands_must_exist_in_package_scripts
+    self.assertTrue(callable(guard), 'README commands need a package-script guard')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : README commands need a package-script guard
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

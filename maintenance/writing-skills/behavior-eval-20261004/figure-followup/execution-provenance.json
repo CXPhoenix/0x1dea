@@ -1,0 +1,66 @@
+{
+  "source": "Accepted native spawn_agent arguments and completion notifications; main work status supplied by parent",
+  "writers": [
+    {
+      "task_name": "/root/figure_writer_e7_v21",
+      "case": "E7",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "spawn_accepted": true
+    },
+    {
+      "task_name": "/root/figure_writer_e9_v21",
+      "case": "E9",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "spawn_accepted": true
+    }
+  ],
+  "judge": {
+    "task_name": "/root/figure_judge_v21",
+    "cases": [
+      "E7",
+      "E9"
+    ],
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fork_turns": "none",
+    "spawn_accepted": true
+  },
+  "main_work": {
+    "service_tier": "fast",
+    "create_submitted": true,
+    "started": true,
+    "evidence": "parent explicitly reports create service_tier fast submitted and started; this child did not inspect provider telemetry"
+  },
+  "worker_fast": {
+    "API_field_exposed": false,
+    "setting_verified": false,
+    "scope": "writer/judge only; does not override or infer main work service_tier"
+  },
+  "limitations": [
+    "one completion per affected case; same model; no performance statistics or cross-model result",
+    "writer invocation/files_read are self-reported",
+    "original seven unaffected cases not rerun"
+  ],
+  "v22_rerun": {
+    "case": "E7",
+    "writers": [
+      {
+        "task_name": "/root/figure_writer_e7_v22",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "fork_turns": "none"
+      }
+    ],
+    "judge": {
+      "task_name": "/root/figure_judge_v22",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "fork_turns": "none"
+    },
+    "reason": "new independent judge rejected v2.1 unmarked hypothetical stale-read event"
+  }
+}

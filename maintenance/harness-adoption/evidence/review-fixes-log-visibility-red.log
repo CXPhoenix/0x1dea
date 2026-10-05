@@ -1,0 +1,6 @@
+{'existing_logs': 72, 'ignored_logs': 72, 'missing_inventory_logs': 72, 'first_ignored': ['maintenance/harness-adoption/evidence/baseline-restorable-build.log', 'maintenance/harness-adoption/evidence/baseline-server-final.log', 'maintenance/harness-adoption/evidence/baseline-unit-resumed.log']}
+Traceback (most recent call last):
+  File "<string>", line 12, in <module>
+    assert logs and not ignored and not missing, 'acceptance logs must be visible to Git inventory'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: acceptance logs must be visible to Git inventory

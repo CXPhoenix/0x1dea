@@ -1,0 +1,22 @@
+{
+  "name": "coverage-trace-verifier-before-review",
+  "argv": [
+    "python3",
+    "scripts/verify-harness-adoption.py"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:24:36.706831+00:00",
+  "ended_utc": "2026-10-04T11:24:42.136347+00:00",
+  "elapsed_seconds": 5.429036333109252,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "4775f957ab5fa6bf3e462af985c73d8b3b78a52a00ca3ae191f39fab054525b9",
+  "log": "maintenance/harness-adoption/evidence/coverage-trace-verifier-before-review.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "1a6e4f728422e4546412eb549f283cdbdb22e614a1625fd1949188a1f5b2f060",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

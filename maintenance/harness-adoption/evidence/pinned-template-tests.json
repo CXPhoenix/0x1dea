@@ -1,0 +1,27 @@
+{
+  "name": "pinned-template-tests",
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "{WORKSPACE}/vendor-resumed",
+  "started_utc": "2026-10-04T10:56:12.085421+00:00",
+  "ended_utc": "2026-10-04T10:56:39.395546+00:00",
+  "elapsed_seconds": 27.31226170901209,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "a908654cc8e1b3e9910a1e29db75896b5ab6a786e1286eb0c2a83cb51c0acbeb",
+  "log": "maintenance/harness-adoption/evidence/pinned-template-tests.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "c5049bd53b830ddc500add8452c829d0fb9e18025f601901be419e95b253bbc5",
+  "portable_cwd": "{WORKSPACE}/vendor-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

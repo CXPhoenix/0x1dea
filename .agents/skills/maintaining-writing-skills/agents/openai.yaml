@@ -1,0 +1,4 @@
+interface:
+  display_name: "maintaining-writing-skills"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,23 @@
+{
+  "name": "review-fixes-bilingual-red",
+  "argv": [
+    "python3",
+    "{WORKSPACE}/check-bilingual-resumed.py"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:35:06.396732+00:00",
+  "ended_utc": "2026-10-04T11:35:06.500671+00:00",
+  "elapsed_seconds": 0.10352887492626905,
+  "exit_code": 1,
+  "status": "expected-red",
+  "log_sha256": "2077f22002e17089293d9c966473c5cca301ec02a0a3327de0109fae7469946c",
+  "log": "maintenance/harness-adoption/evidence/review-fixes-bilingual-red.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "13ba47fae1959045d7d44e6a6048a50f494182fb189e8a4a7bac8cf7803094ac",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "e15f21a583d6d24a72fccb21f68045f434bc736b7fe18a77209024c5ab7a5975",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

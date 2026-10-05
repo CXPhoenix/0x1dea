@@ -1,0 +1,25 @@
+{
+  "name": "review-fixes-readme-red",
+  "argv": [
+    "python3",
+    "tests/harness_adoption/test_tracker.py",
+    "TrackerTests.test_readme_pnpm_commands_must_exist_in_package_scripts",
+    "-v"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:31:30.016521+00:00",
+  "ended_utc": "2026-10-04T11:31:30.116678+00:00",
+  "elapsed_seconds": 0.09992337506264448,
+  "exit_code": 1,
+  "status": "expected-red",
+  "log_sha256": "b2eb5a290a50f7fc221bd84d923d857aea80568d222ba72d8eee8e39fd223e13",
+  "log": "maintenance/harness-adoption/evidence/review-fixes-readme-red.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "19767e17da6ce86ad5ce22930f0d6964b0eaf4b6df10bbb31b4645fecd8c7faf",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "6c449c77aa706b1f5bf4acbfd22786d7163fdea2bd6ce777400e3ffb3f129f78",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

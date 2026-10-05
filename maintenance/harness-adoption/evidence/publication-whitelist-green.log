@@ -1,0 +1,8 @@
+test_staged_approved_moves_baseline_and_management_are_accepted (__main__.AddedPathTests.test_staged_approved_moves_baseline_and_management_are_accepted) ... ok
+test_staged_unknown_product_is_rejected (__main__.AddedPathTests.test_staged_unknown_product_is_rejected) ... ok
+test_untracked_unknown_product_is_rejected (__main__.AddedPathTests.test_untracked_unknown_product_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.686s
+
+OK

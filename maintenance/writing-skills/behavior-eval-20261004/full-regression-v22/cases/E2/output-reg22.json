@@ -1,0 +1,15 @@
+{
+  "case_id": "E2",
+  "invoked_skill": [
+    "phoenix-writing"
+  ],
+  "files_read": [
+    "cases/E2/input.json",
+    "frozen-v22/skills/phoenix-writing/SKILL.md",
+    "frozen-v22/skills/maintaining-writing-skills/SKILL.md (YAML only)",
+    "frozen-v22/skills/creating-vitepress-post/SKILL.md (YAML only)",
+    "frozen-v22/skills/maintaining-writing-skills/references/writing-process.md"
+  ],
+  "artifact": "---\ntitle: 快取的代價\ndescription: 速度與資料更新之間的取捨\ncreatedTime: 2026-04-01T09:00:00+08:00\nthumbnail: /assets/cache/cover.png\n---\n\n# 快取的代價\n\n你可能會想，查過一次的答案，留著下次直接拿來用，不就好了？\n\n同一份資料在下次查詢前也可能已經改變，快取裡的答案便可能過期。因此，我們必須設計失效策略，讓過期的快取不再被拿來當答案。\n\n原始測試紀錄只顯示「這個單機案例省下重複運算」，沒有測分散式部署。\n\n我寧可先承擔較慢的回應，也不希望讀者拿到過期答案。\n",
+  "execution_note": "先讀 E2 輸入與三個候選技能的 YAML name/description，依既有 Phoenix 聲音修訂要求讀 phoenix-writing 正文及寫作流程的修訂參考。只替換指定的相鄰兩句，以字串還原比對確認其餘文字保留，並計數確認未新增段落。只寫本次回歸輸出 JSON，未建立文章檔案、未瀏覽、製圖或執行外部動作。子代理工具指定 GPT-6.1-sol/high，API 無 fast 欄位；未推斷主設定或跨模型效果。"
+}

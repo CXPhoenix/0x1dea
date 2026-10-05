@@ -1,0 +1,29 @@
+{
+  "name": "framework-guard-selfreview",
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/harness_adoption",
+    "-p",
+    "test_tracker.py",
+    "-v"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:15:32.502371+00:00",
+  "ended_utc": "2026-10-04T11:15:42.483400+00:00",
+  "elapsed_seconds": 9.979995582951233,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "669ffe2031050d85a8530c56a0f3c1970769c72775fbcbe6d0625e1d101c7280",
+  "log": "maintenance/harness-adoption/evidence/framework-guard-selfreview.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "7e198132b4a13b4cb623fb753b6d4846585c23e602567a8151e8f90c68c3a59a",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

@@ -1,0 +1,41 @@
+Built static surface {WORKSPACE}/rollback-resumed/docs/.vitepress/dist on loopback 127.0.0.1:4176
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] code 404, message File not found
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/fontawesome/fontawesome.min.css HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /vp-icons.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/style.CF_CKQ9o.css HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/app.DbnoHPhr.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] code 404, message File not found
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/fontawesome/solid.min.css HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] code 404, message File not found
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/fontawesome/regular.min.css HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/inter-roman-latin.Di8DUHzh.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] code 404, message File not found
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/fontawesome/brands.min.css HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/chunks/framework.TfuNxy9f.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/chunks/theme.CTFQ_icf.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/index.md.BrwkOmXZ.lean.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /circleImage.svg HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /heroImageWithoutText.svg HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/chunks/particles.es.HGQYb_zu.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/chunks/EasingType.1ClTOyCX.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/inter-roman-cyrillic.C5lxZ8CY.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:28] "GET /assets/inter-roman-vietnamese.BjW4sHH5.woff2 HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:29] "GET /assets/chunks/index.DL9XF96_.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:29] "GET /assets/about.md.TBdz59TB.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:29] "GET /assets/post_course_rm_why-we-need-rm.md.Lz2d3NRk.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:29] "GET /assets/post_course_rm_index.md._Ny4YOpj.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:29] "GET /assets/posts.md.DBhTbHYe.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:29] "GET /assets/post_course_cybersec_index.md.75WqGZmt.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:50] "GET /assets/posts.md.DBhTbHYe.js HTTP/1.1" 304 -
+127.0.0.1 - - [04/Oct/2026 19:15:50] "GET /assets/post_course_cybersec_what-is-safety.md.CbMknFp-.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 19:15:51] "GET /assets/index.md.BrwkOmXZ.js HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "{WORKSPACE}/serve-preview-resumed.py", line 14, in <module>
+    ThreadingHTTPServer(('127.0.0.1', int(sys.argv[2])), Handler).serve_forever()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/selectors.py", line 398, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

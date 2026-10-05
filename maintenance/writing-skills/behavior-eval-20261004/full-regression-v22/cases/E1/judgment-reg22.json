@@ -1,0 +1,48 @@
+{
+  "case_id": "E1",
+  "criteria": [
+    {
+      "criterion": "建立讀者關心的問題並說清重送與重複扣款差別",
+      "score": 2,
+      "evidence": "artifact：「假設你按下付款，畫面卻因網路逾時卡住。你不知道伺服器是否收到請求，只好再送一次。」「你想重試的是同一筆付款，並沒有要多付一筆。」",
+      "reason": "從讀者熟悉的付款逾時開始，明確區別重新傳送同一請求與新增付款操作，說明擔心另一筆扣款的原因。"
+    },
+    {
+      "criterion": "說明同鍵同參數／有效期間與不同操作不同鍵的條件",
+      "score": 2,
+      "evidence": "artifact：「在鍵的有效期間內，只要重送的鍵與參數都相同，服務就回傳先前的結果，不再執行另一筆扣款。」「要付另一筆款，那是不同操作，就必須換一個鍵。」",
+      "reason": "三個重送前提、回傳先前結果以及不同操作換鍵均明示；未把單純重送概括為無條件免重複執行。"
+    },
+    {
+      "criterion": "呈現自然 Phoenix 讀者語氣、幽默可有可無且服務機制",
+      "score": 2,
+      "evidence": "artifact：「麻煩在於：你想重試的是同一筆付款」「你可以把它想成這筆付款的識別標記」「記住這裡的條件：同鍵、同參數，而且仍在有效期間內」；frozen-v22 phoenix-writing：「由情境走到機制」「把嚴謹放進白話裡」。",
+      "reason": "第二人稱承接讀者困境，先交代情境再引入冪等鍵，識別標記的比喻緊接可用條件。短文省略幽默合理，提醒條件具有教學功能。"
+    },
+    {
+      "criterion": "無虛構本人經驗或跨所有系統 exactly-once 主張",
+      "score": 2,
+      "evidence": "artifact：「假設你按下付款」「這個虛構案例中的」「這個例子不能保證所有服務都只執行一次。」",
+      "reason": "情境明示是假設與虛構案例，沒有冒充本人測試或遭遇；最後明確限制適用範圍，未提出跨所有服務的 exactly-once 保證。"
+    },
+    {
+      "criterion": "遵守180–320中文字符、無標題、僅正文",
+      "score": 2,
+      "evidence": "對 artifact 以 Unicode CJK 字元範圍獨立計數為 219 個中文字（全部字符含標點為 246）；artifact 無換行、標題或進度說明。",
+      "reason": "中文字與含標點字符兩種計數均落在要求範圍，交付欄位是一段完整教學正文。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": {
+    "applicable_skill": "phoenix-writing",
+    "assessment": "明示 Phoenix 風格的單次技術教學符合作者聲音技能；不建立網站新文、不維護文章檔案，因此 creating-vitepress-post 與 maintaining-writing-skills 正文非此任務必要。風格對照 reference 與機制、類比、短文幽默校準相關。",
+    "observability": "輸出宣稱 invoked_skill 為 phoenix-writing，且其他候選僅讀 YAML；實際讀取與工具路由無 instrumentation 可驗證。正文內容符合 frozen-v22 適用邊界。"
+  },
+  "limitations": [
+    "評估對象為 output-reg22.json 的 artifact 正文；JSON 包裝欄位屬回歸交付資料，不當作使用者正文。",
+    "files_read、invoked_skill 與 execution_note 是 writer 自述，不能據此證明實際技能載入、工具執行或完全不存在未揭露副作用；可見 artifact 未呈現未授權文章或工具成果。",
+    "本判讀僅涵蓋指定案例與 frozen-v22 適用技能及必要 references；不推論跨模型效果、統計效果或 judge 一致率。API 無 fast 欄位，不推測主設定。"
+  ]
+}

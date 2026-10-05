@@ -1,0 +1,25 @@
+{
+  "name": "rollback-restored-cli",
+  "argv": [
+    "python3",
+    "check-cli-resumed.py",
+    "rollback-resumed",
+    "docs"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T11:14:50.170818+00:00",
+  "ended_utc": "2026-10-04T11:14:54.689325+00:00",
+  "elapsed_seconds": 4.518037540954538,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "480adba9a25dcad3d524169fec9456b41c973422451155c27c92ecfafc6c2e08",
+  "log": "maintenance/harness-adoption/evidence/rollback-restored-cli.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "0f7d0abdfacc6dc5701351a7da32ce8b6069750d1257185a1f2ae7ad93aa3cba",
+  "portable_cwd": "{WORKSPACE}",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "f382921b0adcf4db9713fce0fbb7affc12f3ccb04fc79f1a7821aac18717dc88",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

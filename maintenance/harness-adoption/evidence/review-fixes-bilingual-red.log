@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "{WORKSPACE}/check-bilingual-resumed.py", line 18, in <module>
+    assert not(codes(a)-codes(b)), f'missing inline code {en.parent.name}: {codes(a)-codes(b)}'
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: missing inline code newest-posts-widget: Counter({'slice': 1})

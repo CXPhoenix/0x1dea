@@ -1,0 +1,48 @@
+{
+  "case_id": "E1",
+  "criteria": [
+    {
+      "criterion": "建立讀者關心的問題並說清重送與重複扣款差別",
+      "score": 2,
+      "evidence": "「再送一次，會不會扣兩次？」；「請求可以再送，扣款效果不跟著重複。」",
+      "reason": "從付款 App 的逾時疑問進入，明確區分再次傳送請求與再次執行扣款；也交代逾時不能判斷伺服器是否已處理。"
+    },
+    {
+      "criterion": "說明同鍵同參數／有效期間與不同操作不同鍵的條件",
+      "score": 2,
+      "evidence": "「在鍵的有效期間內，重送相同鍵、相同參數的請求，就回傳先前結果，不再執行另一筆扣款。」；「新的付款是不同操作，必須換一個鍵。」",
+      "reason": "完整保留有效期間、同鍵同參數與不同操作不同鍵三項條件，符合提供的付款服務機制。"
+    },
+    {
+      "criterion": "呈現自然 Phoenix 讀者語氣、幽默可有可無且服務機制",
+      "score": 2,
+      "evidence": "「假設你按下付款，畫面卻因網路逾時停住。」；「你可以把鍵想成這次付款的識別標記」",
+      "reason": "以讀者熟悉情境、直接稱呼和有明確對應的識別標記解釋術語，沿情境走到機制；未為短文強加幽默或角色對話。"
+    },
+    {
+      "criterion": "無虛構本人經驗或跨所有系統 exactly-once 主張",
+      "score": 2,
+      "evidence": "「假設你按下付款」；「這項保護也有服務與有效期間的界限，不能據此認為所有服務都保證只執行一次。」",
+      "reason": "明示假設，未冒充本人經驗；結尾保留案例邊界，沒有跨所有服務 exactly-once 主張。"
+    },
+    {
+      "criterion": "遵守180–320中文字符、無標題、僅正文",
+      "score": 2,
+      "evidence": "artifact 從「假設你按下付款」到「所有服務都保證只執行一次。」為單段正文；實測228個漢字、含標點254個Unicode字元。",
+      "reason": "兩種常見計數皆在180–320範圍，無標題、來源清單或交付說明。"
+    }
+  ],
+  "total": 10,
+  "hard_failures": [],
+  "verdict": "pass",
+  "routing_assessment": {
+    "assessment": "明示 Phoenix 風格的單次技術解釋，phoenix-writing 適用；style-examples 的情境、類比界限分支相關。",
+    "boundary": "僅交付對話正文，不應建立文章骨架或寫作專案；可觀察輸出未聲稱上述動作。",
+    "instrumentation": "writer 自述讀過 phoenix-writing 與 style-examples；不能據此證明真正讀取或工具路由。"
+  },
+  "limitations": [
+    "僅依本案 input.json、預先凍結 rubric.json、output-v2.json 的 artifact 及 frozen-v2 適用技能／參考評分；未讀其他評審或 root 的評判。",
+    "invoked_skill 與 files_read 是 writer 自述，未當成實際 instrumentation；缺少工具執行軌跡，不能確認實際技能載入、外部查詢或文章／工具副作用。未觀察到硬性失敗不等於已證明所有執行行為。",
+    "正文格式以 artifact 評估，JSON 封裝與 execution_note 未視為正文。此次四個固定案例不支持跨模型、統計效力或未驗證 fast 結論。"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "cases": [
+    "E7",
+    "E9"
+  ],
+  "E7": "same original input; updated rubric, frozen v2.1 actual rerun",
+  "E9": "new explicit guided-reading boundary; same figure data",
+  "writers": "one fresh independent writer per case, no rubric/old output access",
+  "judge": "new separate independent judge, no old/root verdict access",
+  "replication": "one completion each; same model; no overall effect estimate or cross-model claim"
+}

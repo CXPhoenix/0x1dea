@@ -1,0 +1,43 @@
+{
+  "canonical_task_name": "/root/writing_judge_3",
+  "recorded_at": "2026-10-04T11:11:23.716432+00:00",
+  "record_purpose": "保存此前已完成的獨立驗收報告與實際檢視來源；recorded_at 為本次記錄時間，並非此前驗收時間。",
+  "files": [
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-3/E7/input.json",
+      "sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-3/E7/rubric.json",
+      "sha256": "9403f0de073b1246a81fd353bf288f34f2434b9704061a0a744ad64f481103b3"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-3/E7/output.md",
+      "sha256": "5d670db14a86cc64c477b3f0d630f17a882633e464c2817944f52b644c701bdb"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-3/E8/input.json",
+      "sha256": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-3/E8/rubric.json",
+      "sha256": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-3/E8/output.md",
+      "sha256": "a28b0a6315765c4b18bfaa47a3247bbe75d9c8bddd17852c2c268c59f4852326"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-3/E9/input.json",
+      "sha256": "3b74f474e294725b7ce45bbd01ea5ac5de45db42c53de56781e577018aeab00c"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-3/E9/rubric.json",
+      "sha256": "aa8747d2c643500b27b61c6248f3c8cef246783f7332e57fbaf9a976b94ca19b"
+    },
+    {
+      "path": "{WORKSPACE}/judges-resumed/group-3/E9/output.md",
+      "sha256": "54510aba2b1e0251de73212100e33814f85e31335ebc0540e2a666979e2e6e87"
+    }
+  ]
+}

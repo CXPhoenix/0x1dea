@@ -1,0 +1,74 @@
+{
+  "case_id": "E7",
+  "criteria": [
+    {
+      "criterion": "正文直接解釋更新與失效的落差，圖的證據融入論述；不以移動視線操作導語替代正文，不要求提問開場",
+      "score": 2,
+      "evidence": [
+        "「原資料在10:00已經更新，但快取要到10:05才失效；中間五分鐘，讀取仍可能拿到先前存下的值。」",
+        "「它能說明這個單一快取的舊值窗口」"
+      ],
+      "reason": "正文直接用時間點及五分鐘落差解釋快取窗口，沒有以移動視線命令串接段落；不以是否提問開場計分。"
+    },
+    {
+      "criterion": "10:00、10:05及空窗精確，讀取結果保留可能性",
+      "score": 1,
+      "evidence": [
+        "「你在10:01讀到舊資料，先別急著懷疑更新失敗。」",
+        "「中間五分鐘，讀取仍可能拿到先前存下的值。」",
+        "「關鍵是「可能」：圖沒有說每次讀取都會得到舊值」"
+      ],
+      "reason": "更新、失效與五分鐘區間正確，後文及圖說也保留可能性；但開場直接斷言讀者在10:01讀到舊資料，輸入只提供區間內可能讀舊值，未提供該筆事件，也未將新增情境標記為假設。因此不給滿分；不是把後文判成全部請求必然讀舊值。"
+    },
+    {
+      "criterion": "保留單快取範圍與圖的資料限制，不推導跨服務保證",
+      "score": 2,
+      "evidence": [
+        "「它能說明這個單一快取的舊值窗口；至於多個服務何時同步、網路延遲多久，這張圖沒有提供答案。」",
+        "「10:05也只標示快取失效，不能直接當成新值已經送到你面前。」"
+      ],
+      "reason": "明確保留單快取範圍、未提供的多服務與網路資訊，以及失效不等於下一次讀取保證新值的界限。"
+    },
+    {
+      "criterion": "Phoenix語氣自然且因果承接；可對讀者說話、可提問但無固定配方",
+      "score": 2,
+      "evidence": [
+        "「先別急著懷疑更新失敗。」",
+        "「就像底稿改好了，手上的影本卻還沒換，兩邊暫時不同步。」",
+        "「關鍵是「可能」」"
+      ],
+      "reason": "對讀者說話，從更新疑問接到快取機制，以底稿／影本類比理解不同步，再接上圖的限制；語氣自然，沒有固定問句、角色對話或幽默配額。開場新增事件的事實問題在第二項及 hard failure 記錄。"
+    },
+    {
+      "criterion": "150–260個中文字，只交付正文與一行圖說，無製圖prompt或生成聲稱",
+      "score": 2,
+      "evidence": [
+        "正文共162個中文字；含圖說共185個中文字，依 artifact 的 Unicode U+4E00–U+9FFF 計數。",
+        "「圖說：原資料更新後，單一快取在失效前仍可能回傳舊值。」"
+      ],
+      "reason": "正文篇幅符合，artifact 為兩段正文及一行圖說，沒有額外說明、製圖 prompt 或生成聲稱；執行中繼資料不混入 artifact 交付內容。"
+    }
+  ],
+  "total": 9,
+  "hard_failures": [
+    {
+      "type": "altered_possibility_and_invented_event",
+      "evidence": "「你在10:01讀到舊資料，先別急著懷疑更新失敗。」",
+      "reason": "圖僅提供10:00–10:05可能讀取舊值，沒有確定的10:01讀取事件。開場未用「若」「例如」等明示假設，將允許的可能情境寫成已發生事件；違反不增加或變更圖之事實與可能性的邊界。後文的可能性說明沒有改寫這句的斷言。"
+    }
+  ],
+  "verdict": "fail",
+  "routing_assessment": {
+    "assessment": "所述路由符合任務用途，但未有 instrumentation 可驗證實際路由。",
+    "evidence": [
+      "input 明示「用 Phoenix 風格」；output 自述 invoked_skill 為 phoenix-writing。",
+      "frozen-v21 phoenix-writing 明定對話草稿只交付文字；creating-vitepress-post 僅適用建立本站文章，maintaining-writing-skills 不負責作者風格。"
+    ],
+    "reason": "此案為對話圖文草稿，phoenix-writing 適用；沒有建立文章或維護技能的要求。一般圖文應自然融合圖證據，本 artifact 符合該形式。候選技能出現在 files_read 中不能當作正文實讀或已調用的工具證據。"
+  },
+  "limitations": [
+    "本判定只讀指定案例的 input.json、rubric.json、output-v21.json，以及 frozen-v21 三份技能正文與 phoenix-writing 的 style-examples.md；未讀其他案例、舊結果、parent-qa-correction、design 或其他評審意見。",
+    "writer 的 files_read、invoked_skill 與 execution_note 是自述，不是讀檔、技能調用或副作用的 instrumentation；只能確認 artifact 的可見內容。",
+    "這是同一指定模型 GPT-6.1-sol/high 的單次案例判讀，未進行跨模型比較、重複抽樣或統計效果評估。spawn API 不能控制 fast，未據此猜測主 work 的配置或狀態。"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "publication-preflight-audit",
+  "argv": [
+    "python3",
+    "audit-publication-preflight.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-04T12:11:02.681949+00:00",
+  "ended_utc": "2026-10-04T12:11:05.238276+00:00",
+  "elapsed_seconds": 2.5559896669583395,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "34efb61274d37e47b9ee6b298b3254cd3ce008e9b9ee6c5d1ccb17453fe4976e",
+  "log": "maintenance/harness-adoption/evidence/publication-preflight-audit.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "private_raw_log_sha256": "34efb61274d37e47b9ee6b298b3254cd3ce008e9b9ee6c5d1ccb17453fe4976e",
+  "raw_receipt_sha256": "3bce5f25aa67b60843997df69000e666fe13a87b0dc69970a826828f6fbda509",
+  "publication_projection": "Machine-path aliases only; actual exit/status/times retained, raw receipt/log hashes retained."
+}

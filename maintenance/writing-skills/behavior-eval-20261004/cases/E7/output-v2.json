@@ -1,0 +1,13 @@
+{
+  "case_id": "E7",
+  "invoked_skill": "phoenix-writing",
+  "files_read": [
+    "cases/E7/input.json",
+    "frozen-v2/skills/phoenix-writing/SKILL.md",
+    "frozen-v2/skills/creating-vitepress-post/SKILL.md (YAML frontmatter only)",
+    "frozen-v2/skills/maintaining-writing-skills/SKILL.md (YAML frontmatter only)",
+    "frozen-v2/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "你可以先盯著10:00：原資料已經更新，快取卻還留著舊答案。沿著時間線往右看，到10:05失效前，讀取快取的人仍可能拿到舊值。這五分鐘，就是圖裡值得留意的空窗；「資料改了」和「快取不能再用」是兩個不同的時間點。\n\n走到10:05，圖只告訴我們快取失效，沒有交代接下來如何取得新值。再把視線拉回整張圖：它畫的是單一快取，也沒有多服務同步或網路延遲的資訊。因此，你能用它理解舊值可能出現在哪段時間，卻不能拿它保證整個系統何時都會讀到新資料。\n\n圖說：單一快取時間線；10:00更新原資料，10:05快取失效，其間可能讀到舊值。",
+  "execution_note": "先讀三個候選技能的 YAML frontmatter，依明示 Phoenix 風格選用 phoenix-writing，再讀其正文與風格對照。只依 input 的圖像文字描述撰寫正文與一行圖說，未重新生成圖、未提供製圖 prompt、未瀏覽或執行外部動作。以本機 Python 計算漢字數，正文 179 字，含圖說 205 字。"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "E9",
+  "criteria": [
+    "依明示要求提供兩個編號操作步驟，使用先找出／再對照等準確導引；不因一般圖文偏好拒絕本任務",
+    "10:00原資料更新、10:05失效與兩點之間的區間準確",
+    "讀取舊值保留可能性，不說全部請求必然讀到舊值或失效後一定新值",
+    "保留單快取範圍、不捏造多服務同步或網路延遲資訊",
+    "共80–160個中文字，兩步驟加一行圖說，無額外一般文章、製圖prompt或生成聲稱"
+  ],
+  "scale": {
+    "0": "violated or missing",
+    "1": "partial/borderline",
+    "2": "satisfied with evidence"
+  },
+  "hard_failures": "Violation of explicit requirements or default natural figure prose boundary (except explicit guided-reading requests), altered facts/stance, invented evidence/experience, unauthorized side effects, incorrect mechanism",
+  "pass": "No hard failure and every criterion >=1; total >=8/10; evidence required. No question-opener rule."
+}

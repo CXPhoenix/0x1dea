@@ -1,0 +1,52 @@
+{
+  "old_E7_original_judge": {
+    "score": 9,
+    "verdict": "pass",
+    "status": "preserved original historical judgment, not final QA"
+  },
+  "parent_qa": {
+    "verdict": "fail",
+    "reason": "Gaze-direction commands replace natural prose and violate user preference: 你可以先盯著、沿著時間線往右看、再把視線拉回整張圖. Prior question-opener deduction is not valid as a general Phoenix requirement."
+  },
+  "corrective_scope": [
+    "core v2.1 self-check",
+    "style examples positive and boundary",
+    "writing process figure paragraph",
+    "corrected E7 rubric and two new actual outputs"
+  ],
+  "unchanged_original_json_hashes": {
+    "cases/E5/output-v2.json": "ae4cb5eb464401f48fd5882a1a688a10eee2adb4b48904e2f3adb3a93633b0fd",
+    "cases/E5/input.json": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca",
+    "cases/E5/rubric.json": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc",
+    "cases/E5/judgment-v2.json": "fe1d11cdca9d59b47b3eec559ead32e621a1ec48c285a393bfa5a9cf6b5c08eb",
+    "cases/E2/output-v2.json": "8f9cc03f7aba9c142466457851d95abf04d3bbd591bba456d68464de55099400",
+    "cases/E2/input.json": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6",
+    "cases/E2/rubric.json": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c",
+    "cases/E2/judgment-v2.json": "d84b79fb94d3755716adeddda005dbd30a1ba7ecf26da41817496368232927d2",
+    "cases/E3/output-v2.json": "995441471a5b16be876155724cca9ad5a025fc55a71f40865fc1460ec3dec385",
+    "cases/E3/input.json": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e",
+    "cases/E3/rubric.json": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607",
+    "cases/E3/judgment-v2.json": "b1c9b0c01d2be459c77a4e612aa7bfd7bbf9c2802e7482f45451ddf105405cd4",
+    "cases/E4/output-v2.json": "54fbac364bdda41467f2f68439ba520f64b7fbd7f5883b6219d9759edab57d72",
+    "cases/E4/input.json": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425",
+    "cases/E4/rubric.json": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791",
+    "cases/E4/judgment-v2.json": "f29e06fab36a4610c15f38e3f6947023af466c9ad87b54844536e668847b71c0",
+    "cases/E1/output-v2.json": "c0a685bfa83fd384886907868c3c16e0fd6b86c6abd2ab2ac9251b1254f112b9",
+    "cases/E1/input.json": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918",
+    "cases/E1/rubric.json": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3",
+    "cases/E1/judgment-v2.json": "5bbc2d0e3c71fc3ee74d0fc84725a3075e635736cb5a8f350e0b86ffb7da6528",
+    "cases/E6/output-v2.json": "e80f8407b763264599dd8518e670d0008c42e528540cfa203101de8f8d83881b",
+    "cases/E6/input.json": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01",
+    "cases/E6/rubric.json": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947",
+    "cases/E6/judgment-v2.json": "f388bc51d7e0e9e54458a5c5ea083819211ff83df6cc179615a540c1a6741d4d",
+    "cases/E8/output-v2.json": "da88f624dd3b2388fed2c35f299d0733a0a318ea18dc700dfe203f60fa554c8f",
+    "cases/E8/input.json": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2",
+    "cases/E8/rubric.json": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a",
+    "cases/E8/judgment-v2.json": "09ed0ddcc3b33232f7e72dbaeff9d511d16a6625b7fa223d4c87ef03241a983b",
+    "cases/E7/output-v2.json": "f2f3609a1d2c7b70736ed32fa718b17e5f76411d15fbf8fdb2f1cae42cfabd2b",
+    "cases/E7/input.json": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9",
+    "cases/E7/rubric.json": "aecfdaa4b5d3786cd86d3482e0139ba22604f2a0b2088f92e4f9ddcc9e179b05",
+    "cases/E7/judgment-v2.json": "7836364df367a0b01881a4d96886c353bc44d536f36181e18cc4a4192341fc96"
+  },
+  "other7": "Not rerun; their original judged artifacts and rubrics remain unchanged."
+}

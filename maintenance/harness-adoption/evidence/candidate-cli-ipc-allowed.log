@@ -1,0 +1,181 @@
+{
+  "status": "pass",
+  "site_root": "blog",
+  "repo": "{CANDIDATE}",
+  "actual_cli_cases": 8,
+  "records": [
+    {
+      "case": "default",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{CANDIDATE}/node_modules/tsx/dist/cli.mjs",
+        "{CANDIDATE}/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Hello World"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-tioc_abc",
+      "exit": 0,
+      "stdout": "正在建立資料夾: blog/post...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-tioc_abc/blog/post/Hello_World.md\n🖼️  資源: {HOST_TMP}/harness-cli-tioc_abc/blog/public/assets/post_Hello_World\n📅 時間: 2026-10-04T18:54:14+08:00\n",
+      "stderr": "",
+      "article": "blog/post/Hello_World.md",
+      "assets": "blog/public/assets/post_Hello_World",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "blog/post/Hello_World.md": "254fd92b8298932d6824fe8b958db2b50833ddcdee1a50f92d23a911d987ff09"
+      }
+    },
+    {
+      "case": "category",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{CANDIDATE}/node_modules/tsx/dist/cli.mjs",
+        "{CANDIDATE}/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Course Intro",
+        "-c",
+        "course/intro"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-qnt0i6hm",
+      "exit": 0,
+      "stdout": "正在建立資料夾: blog/post/course/intro...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-qnt0i6hm/blog/post/course/intro/Course_Intro.md\n🖼️  資源: {HOST_TMP}/harness-cli-qnt0i6hm/blog/public/assets/post_course_intro_Course_Intro\n📅 時間: 2026-10-04T18:54:16+08:00\n",
+      "stderr": "",
+      "article": "blog/post/course/intro/Course_Intro.md",
+      "assets": "blog/public/assets/post_course_intro_Course_Intro",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "blog/post/course/intro/Course_Intro.md": "aa2936cc3607c4c0a7ff51b282ef47cf52a3b33faf3396a5af31368fa644d731"
+      }
+    },
+    {
+      "case": "custom",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{CANDIDATE}/node_modules/tsx/dist/cli.mjs",
+        "{CANDIDATE}/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Custom Note",
+        "-d",
+        "blog/post/special"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-w7oh9sq8",
+      "exit": 0,
+      "stdout": "正在建立資料夾: blog/post/special...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-w7oh9sq8/blog/post/special/Custom_Note.md\n🖼️  資源: {HOST_TMP}/harness-cli-w7oh9sq8/blog/public/assets/post_special_Custom_Note\n📅 時間: 2026-10-04T18:54:18+08:00\n",
+      "stderr": "",
+      "article": "blog/post/special/Custom_Note.md",
+      "assets": "blog/public/assets/post_special_Custom_Note",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "blog/post/special/Custom_Note.md": "d2248d62e5b46a1461a4b7cb8adbf78e751c65521cb7f583b421912f2bf15384"
+      }
+    },
+    {
+      "case": "root",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{CANDIDATE}/node_modules/tsx/dist/cli.mjs",
+        "{CANDIDATE}/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Root Note",
+        "-d",
+        "blog"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-xg6ihwci",
+      "exit": 0,
+      "stdout": "正在建立資料夾: blog...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-xg6ihwci/blog/Root_Note.md\n🖼️  資源: {HOST_TMP}/harness-cli-xg6ihwci/blog/public/assets/root_Root_Note\n📅 時間: 2026-10-04T18:54:19+08:00\n",
+      "stderr": "",
+      "article": "blog/Root_Note.md",
+      "assets": "blog/public/assets/root_Root_Note",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "blog/Root_Note.md": "4bf05debe11d5cb8f846732eb89377616b25f2f1edf35a52539d1cddd87fa469"
+      }
+    },
+    {
+      "case": "unicode-space",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{CANDIDATE}/node_modules/tsx/dist/cli.mjs",
+        "{CANDIDATE}/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "繁中 Hello 測試"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-gat7p3_c",
+      "exit": 0,
+      "stdout": "正在建立資料夾: blog/post...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-gat7p3_c/blog/post/繁中_Hello_測試.md\n🖼️  資源: {HOST_TMP}/harness-cli-gat7p3_c/blog/public/assets/post_繁中_Hello_測試\n📅 時間: 2026-10-04T18:54:21+08:00\n",
+      "stderr": "",
+      "article": "blog/post/繁中_Hello_測試.md",
+      "assets": "blog/public/assets/post_繁中_Hello_測試",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "blog/post/繁中_Hello_測試.md": "ea7d1517eee3a5d3008f6355321b319fb57fde4fe8d957f80a6e33edee2bdd84"
+      }
+    },
+    {
+      "case": "explicit-legacy-d",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{CANDIDATE}/node_modules/tsx/dist/cli.mjs",
+        "{CANDIDATE}/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "Legacy Note",
+        "-d",
+        "docs/post/special"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-eytgroqa",
+      "exit": 0,
+      "stdout": "正在建立資料夾: docs/post/special...\n\u001b[32m✅ 成功建立新文章！\u001b[0m\n📄 文章: {HOST_TMP}/harness-cli-eytgroqa/docs/post/special/Legacy_Note.md\n🖼️  資源: {HOST_TMP}/harness-cli-eytgroqa/blog/public/assets/post_special_Legacy_Note\n📅 時間: 2026-10-04T18:54:22+08:00\n",
+      "stderr": "",
+      "article": "docs/post/special/Legacy_Note.md",
+      "assets": "blog/public/assets/post_special_Legacy_Note",
+      "duplicate_exit": 1,
+      "duplicate_preserved": true,
+      "sha256": {
+        "docs/post/special/Legacy_Note.md": "ce09830e56cc4fb389f34f41f3ad1e8ddae325fbdef309901402ce03bd9af82d"
+      }
+    },
+    {
+      "case": "conflict",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{CANDIDATE}/node_modules/tsx/dist/cli.mjs",
+        "{CANDIDATE}/scripts/vpHelper.ts",
+        "new",
+        "post",
+        "X",
+        "-c",
+        "course",
+        "-d",
+        "blog/post/other"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-negative-eyuivc0j",
+      "exit": 1,
+      "stderr": "\u001b[31m❌ 發生錯誤:\u001b[0m\n參數 -c 與 -d 不能同時使用。\n",
+      "no_writes": true
+    },
+    {
+      "case": "missing-title",
+      "argv": [
+        "{EXISTING_NODE_BIN}/node",
+        "{CANDIDATE}/node_modules/tsx/dist/cli.mjs",
+        "{CANDIDATE}/scripts/vpHelper.ts",
+        "new",
+        "post"
+      ],
+      "cwd": "{HOST_TMP}/harness-cli-negative-lhey3opv",
+      "exit": 1,
+      "stderr": "\u001b[31m錯誤: 請輸入文章名稱 (post_name)。\u001b[0m\n",
+      "no_writes": true
+    }
+  ]
+}

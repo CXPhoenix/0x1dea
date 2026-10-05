@@ -1,0 +1,21 @@
+{
+  "name": "publication-unit",
+  "argv": [
+    "pnpm",
+    "test:unit"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T12:04:35.572679+00:00",
+  "ended_utc": "2026-10-04T12:04:38.701469+00:00",
+  "elapsed_seconds": 3.128420167020522,
+  "exit_code": 0,
+  "status": "pass",
+  "log_sha256": "1846376d081d5ce725c01d88a2b8e44e4428b38d2341f6c51e4bb2d1de0c0528",
+  "log": "maintenance/harness-adoption/evidence/publication-unit.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "private_raw_log_sha256": "3431b8c5290fc89b6e7373767c97aeeb9cfb0d9fdae07e9d1a68d0aee0516f9c",
+  "raw_receipt_sha256": "9d19eb3502508a47a1dacd77e676e6e10db89a8493f77bc4c4f329815881e4f6",
+  "publication_projection": "Machine-path aliases only; actual exit/status/times retained, raw receipt/log hashes retained."
+}

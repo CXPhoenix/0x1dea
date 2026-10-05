@@ -1,0 +1,157 @@
+{
+  "method": "mechanical only; judgment integrity is checked, semantic/style verdict is not recomputed",
+  "checks": [
+    {
+      "check": "instruction-snapshot.json:skills/phoenix-writing/SKILL.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot.json:skills/phoenix-writing/references/style-examples.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot.json:skills/phoenix-writing/references/tw-vocabulary.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot.json:skills/maintaining-writing-skills/SKILL.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot.json:skills/maintaining-writing-skills/references/writing-process.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot.json:skills/maintaining-writing-skills/references/article-maintenance.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot.json:skills/creating-vitepress-post/SKILL.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot-v22.json:skills/phoenix-writing/SKILL.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot-v22.json:skills/phoenix-writing/references/style-examples.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot-v22.json:skills/phoenix-writing/references/tw-vocabulary.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot-v22.json:skills/maintaining-writing-skills/SKILL.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot-v22.json:skills/maintaining-writing-skills/references/writing-process.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot-v22.json:skills/maintaining-writing-skills/references/article-maintenance.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "instruction-snapshot-v22.json:skills/creating-vitepress-post/SKILL.md",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E7v21 identity",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E7v21 150–260 Han",
+      "passed": true,
+      "actual": 162
+    },
+    {
+      "check": "E7v21 caption",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E7v21 old gaze literals absent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E7v21 judgment data integrity",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E9v21 identity",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E9v21 80–160 Han",
+      "passed": true,
+      "actual": 111
+    },
+    {
+      "check": "E9v21 steps+caption",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E9v21 requested guide",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E9v21 judgment data integrity",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E7v22 identity",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E7v22 150–260 Han",
+      "passed": true,
+      "actual": 176
+    },
+    {
+      "check": "E7v22 caption",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E7v22 old gaze literals absent",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "E7v22 judgment data integrity",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "original32 case JSON preserved",
+      "passed": true,
+      "actual": null
+    }
+  ],
+  "total": 30,
+  "failures": 0
+}

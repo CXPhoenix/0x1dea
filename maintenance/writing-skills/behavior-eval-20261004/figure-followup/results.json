@@ -1,0 +1,40 @@
+{
+  "initial_v2_E7": {
+    "original_judge": "9/10 pass",
+    "parent_QA": "fail, natural prose preference violated; question-opener rubric invalid"
+  },
+  "followup": [
+    {
+      "case_id": "E7",
+      "version": "v21",
+      "score": 9,
+      "verdict": "fail",
+      "hard_failures": [
+        {
+          "type": "altered_possibility_and_invented_event",
+          "evidence": "「你在10:01讀到舊資料，先別急著懷疑更新失敗。」",
+          "reason": "圖僅提供10:00–10:05可能讀取舊值，沒有確定的10:01讀取事件。開場未用「若」「例如」等明示假設，將允許的可能情境寫成已發生事件；違反不增加或變更圖之事實與可能性的邊界。後文的可能性說明沒有改寫這句的斷言。"
+        }
+      ]
+    },
+    {
+      "case_id": "E9",
+      "version": "v21",
+      "score": 10,
+      "verdict": "pass",
+      "hard_failures": []
+    },
+    {
+      "case_id": "E7",
+      "version": "v22",
+      "score": 10,
+      "verdict": "pass",
+      "hard_failures": []
+    }
+  ],
+  "final_core_version": "2.2",
+  "core_sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73",
+  "live_instruction_hashes_match_final_freeze": 7,
+  "other_original_cases": "7 original cases retained, not rerun",
+  "interpretation": "Only observed outputs, no cross-model, rate estimate, judge-agreement estimate or causal/statistical improvement claim"
+}

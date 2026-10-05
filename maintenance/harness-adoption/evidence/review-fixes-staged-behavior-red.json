@@ -1,0 +1,25 @@
+{
+  "name": "review-fixes-staged-behavior-red",
+  "argv": [
+    "python3",
+    "tests/harness_adoption/test_tracker.py",
+    "AddedPathTests",
+    "-v"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:32:52.381059+00:00",
+  "ended_utc": "2026-10-04T11:32:53.221305+00:00",
+  "elapsed_seconds": 0.8386074580485001,
+  "exit_code": 1,
+  "status": "expected-red",
+  "log_sha256": "685776bd77c4c53f6a54f69cd2b41a5f17d9d10d69a8889e1fff9b7be6112f88",
+  "log": "maintenance/harness-adoption/evidence/review-fixes-staged-behavior-red.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "449b64a7359f00dc01f2508e765ad11e436841bb91151cc875601d7b5c19663d",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "fbde86501858d6d7f3fa1a88457b854ffefc9be79b7b6f27c4416e13e5861d9c",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}

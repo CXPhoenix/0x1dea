@@ -1,0 +1,28 @@
+{
+  "name": "fresh-writing-mechanical-final",
+  "observed_at_utc": "2026-10-04T11:15:34.700224+00:00",
+  "scope": "Mechanical checks only; no semantic rescoring; no source/writer/judge mutation or network/install.",
+  "check_count": 3587,
+  "passed": 3587,
+  "failed": 0,
+  "evidence_gaps": [
+    "Writer context JSON has no embedded creation timestamp. Saved current filesystem birthtime/mtime precedes output file birthtime; these are mutable metadata, not an immutable historical freeze.",
+    "Output.md files are parent serialization of completed native responses with a final newline. File birthtime is not native response completion time; original response API JSON is not persisted here.",
+    "Native dispatch fork_turns=none and inherited model/no overrides is a parent-supplied attestation; conversation tool receipts are not copied as raw API JSON.",
+    "Judge groups 2 and 3 preservation timestamps are not original judging timestamps. Group 1 is a fresh rejudge because the old report was not available in the live agent; writers were not rerun according to parent attestation.",
+    "One group-1 self-provenance read has null read_at_utc as disclosed in its record; its reconstructed historical hash is not treated as a directly observed current-file hash.",
+    "File contents, directory inventories and hashes cannot prove that an agent never called a tool or read an unlisted file. No such claim is made.",
+    "The saved manifest generator_sha256 is recorded metadata only; the generator script is outside this verification read scope. API 400 attempts are not claimed successful and native catalog verification belongs to separate evidence."
+  ],
+  "freeze_path": "evidence/resumed/writing-runtime-freeze.json",
+  "freeze_sha256": "457072dc9c648e3442bc2586ce1d5374e1c3491d4ac57a16ca57a42edc04f9b5"
+}
+{"check": "E1.body.Han_count", "passed": true, "actual": 214, "minimum": 180, "maximum": 320}
+{"check": "E3.English_word_count", "passed": true, "whitespace_word_count": 61}
+{"check": "E6.body.Han_count", "passed": true, "actual": 132, "minimum": 120, "maximum": 220}
+{"check": "E6.body_plus_gap.Han_count", "passed": true, "actual": 174, "minimum": 120, "maximum": 220}
+{"check": "E7.body.Han_count", "passed": true, "actual": 176, "minimum": 150, "maximum": 260}
+{"check": "E7.body_plus_caption.Han_count", "passed": true, "actual": 200, "minimum": 150, "maximum": 260}
+{"check": "E8.A.Han_count", "passed": true, "actual": 69, "minimum": 50, "maximum": 90}
+{"check": "E8.B.Han_count", "passed": true, "actual": 226, "minimum": 180, "maximum": 300}
+{"check": "E9.whole_artifact.Han_count", "passed": true, "actual": 107, "minimum": 80, "maximum": 160}

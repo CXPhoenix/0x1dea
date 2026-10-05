@@ -1,0 +1,10 @@
+{
+  "case_id": "E1",
+  "invoked_skill": true,
+  "files_read": [
+    "frozen-v2/skills/phoenix-writing/SKILL.md",
+    "frozen-v2/skills/phoenix-writing/references/style-examples.md"
+  ],
+  "artifact": "假設你按下付款，畫面卻因網路逾時停住。你可能會想：再送一次，會不會扣兩次？麻煩在於，逾時只讓你不知道伺服器是否收到請求，不能拿來判斷付款有沒有處理。這個案例的付款服務用「冪等鍵」辨認同一操作：在鍵的有效期間內，重送相同鍵、相同參數的請求，就回傳先前結果，不再執行另一筆扣款。你可以把鍵想成這次付款的識別標記；同一標記讓服務沿用已有結果。這就是冪等性在本例的作用：請求可以再送，扣款效果不跟著重複。不過，新的付款是不同操作，必須換一個鍵。這項保護也有服務與有效期間的界限，不能據此認為所有服務都保證只執行一次。",
+  "execution_note": "native writer; requested GPT-6.1-sol/high; fast control not exposed"
+}

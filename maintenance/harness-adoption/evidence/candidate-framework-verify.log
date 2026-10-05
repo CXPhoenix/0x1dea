@@ -1,0 +1,9 @@
+FAIL: Missing Claude SKILL.md: spectra-apply
+FAIL: Missing Claude SKILL.md: spectra-archive
+FAIL: Missing Claude SKILL.md: spectra-ask
+FAIL: Missing Claude SKILL.md: spectra-audit
+FAIL: Missing Claude SKILL.md: spectra-commit
+FAIL: Missing Claude SKILL.md: spectra-debug
+FAIL: Missing Claude SKILL.md: spectra-discuss
+FAIL: Missing Claude SKILL.md: spectra-ingest
+FAIL: Missing Claude SKILL.md: spectra-propose

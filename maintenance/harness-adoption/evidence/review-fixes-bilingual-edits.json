@@ -1,0 +1,157 @@
+{
+  "purpose": "Restore original inline identifiers occurrence-by-occurrence in corresponding translated clauses; historical review states unchanged",
+  "protected_english_sha256": {
+    ".proj.specs/_baseline/ee7fecf/post-display-views/spec.en.md": "4484760592935b576d2ca0fe0c6f9bb504ba413e1bf8373088d877fd1e6f36c2",
+    ".proj.specs/_baseline/ee7fecf/theme-layout-particles/spec.en.md": "dfd625fc0269f3b5d9b903b04f781e0a22b6bca5d046522955b92c693324ad0e",
+    ".proj.specs/_baseline/ee7fecf/post-content-model/spec.en.md": "3863c2f9d41d057209b76adf4555354cd9dd35445445146f6b5fda5580e82a8b",
+    ".proj.specs/_baseline/ee7fecf/phoenix-style-and-maintenance/spec.en.md": "6a61979ce101a3aa9ea37f9c6dc1170c7eb7868f1fe107b64ed7723db1ab58f8",
+    ".proj.specs/_baseline/ee7fecf/newest-posts-widget/spec.en.md": "c9e74f5cd7f18c66b399b176b2d4b650586aec18e49e8f9b95771d240289d183",
+    ".proj.specs/_baseline/ee7fecf/vitepress-post-scaffolding/spec.en.md": "953915dc3e8655c2ae4448e4b57eaf830360ae354ea9536776200f9ae9b34eb7"
+  },
+  "changes": [
+    {
+      "path": ".proj.specs/_baseline/ee7fecf/newest-posts-widget/spec.zh-TW.md",
+      "before_sha256": "1b3d0cba210983442c802221a2a45841ccb1aeb3024b869b7f86ea3f78134972",
+      "after_sha256": "6d598a31587641ec08c30c0e32bf138bbf060252361b919833121634c3893f38",
+      "corresponding_body_edits": [
+        {
+          "before": "套用 JavaScript 負索引語意",
+          "after": "套用 JavaScript 負索引 `slice` 語意"
+        }
+      ]
+    },
+    {
+      "path": ".proj.specs/_baseline/ee7fecf/post-content-model/spec.zh-TW.md",
+      "before_sha256": "4b067714992386ac68f7a05ecf896994f0171d68885ad60e775bab0135748362",
+      "after_sha256": "fbe59db966e75f9572c25b84afd243a51f06a4b53f311d5bfa0ac2a1ba1dc689",
+      "corresponding_body_edits": [
+        {
+          "before": "所以空字串會進入第二層",
+          "after": "所以空字串 `category` 會進入第二層"
+        }
+      ]
+    },
+    {
+      "path": ".proj.specs/_baseline/ee7fecf/post-display-views/spec.zh-TW.md",
+      "before_sha256": "88ad399bebe6a6dc441890988e47298d295927c591a60297467791c75d8f1ff6",
+      "after_sha256": "2171fbbc9353a8b746fa19c281b95f0cb0336e18bc53eff09be60ef9489d6607",
+      "corresponding_body_edits": [
+        {
+          "before": "兩個元件都必須宣告",
+          "after": "`PostCard` 與 `PostBlock` 都必須宣告"
+        },
+        {
+          "before": "是各 `.vue` 中的**元件本地**介面",
+          "after": "是各 `.vue` 中的**元件本地** `Post` 介面"
+        },
+        {
+          "before": "注意：兩者不宣告",
+          "after": "注意：`PostCard` 與 `PostBlock` 不宣告"
+        },
+        {
+          "before": "- 必須顯示空狀態，可見文字",
+          "after": "- `PostList` 必須顯示空狀態，可見文字"
+        },
+        {
+          "before": "- 不得顯示控制列。",
+          "after": "- `PostList` 不得顯示控制列。"
+        },
+        {
+          "before": "只顯示標題包含 `\"safety\"`",
+          "after": "只顯示 `title` 包含 `\"safety\"`"
+        },
+        {
+          "before": "只有分類符合的文章被排除",
+          "after": "只有 `category` 符合的文章被排除"
+        },
+        {
+          "before": "文章時間為 2026-03-01、2026-02-15、2026-01-20",
+          "after": "文章 `createdTime` 為 2026-03-01、2026-02-15、2026-01-20"
+        },
+        {
+          "before": "的文章時間為 2026-03-01 與 2026-01-15",
+          "after": "的文章 `createdTime` 為 2026-03-01 與 2026-01-15"
+        },
+        {
+          "before": "`sortBy === 'category'` 時，每個分類必須有標題",
+          "after": "`sortBy === 'category'` 時，`PostList` 必須為每個分類顯示標題"
+        },
+        {
+          "before": "，Map 保留插入順序",
+          "after": "，`Map` 保留插入順序"
+        },
+        {
+          "before": "必須在主題 `enhanceApp` 中全域註冊四個 Vue 元件",
+          "after": "必須在主題 `enhanceApp` 中全域註冊 `PostCard`、`PostBlock`、`PostList` 與 `NewPost` 四個 Vue 元件"
+        }
+      ]
+    },
+    {
+      "path": ".proj.specs/_baseline/ee7fecf/theme-layout-particles/spec.zh-TW.md",
+      "before_sha256": "e9173d4f20700c8b756e18873da8ef53f133b886fe44fd3cfc5bc10a8b306fa0",
+      "after_sha256": "bb9921c98c31a300c3f056f9fef59bcbcca1ff4ede34e6c976b8f36d71dbe73e",
+      "corresponding_body_edits": [
+        {
+          "before": "或子目錄 index 預設",
+          "after": "或子目錄 `index.md` 預設"
+        },
+        {
+          "before": "`showParticleBg` 必須從 `useData().frontmatter` 計算：",
+          "after": "`showParticleBg` 必須是從 `useData().frontmatter` 衍生的 `computed`："
+        },
+        {
+          "before": "；為 `false` 時為 `'#000000'`",
+          "after": "； `isDark.value` 為 `false` 時為 `'#000000'`"
+        },
+        {
+          "before": "**docs/ 任何位置**",
+          "after": "**`docs/` 任何位置**"
+        },
+        {
+          "before": "建立 relativePath 以",
+          "after": "建立 `relativePath` 以"
+        },
+        {
+          "before": "設定預設。左側為",
+          "after": "設定預設。`??=` 左側為"
+        },
+        {
+          "before": "因此明確宣告 null（",
+          "after": "因此明確宣告 `null`（"
+        },
+        {
+          "before": "- **THEN** 執行後 frontmatter 有",
+          "after": "- **THEN** 執行 `transformPageData` 後 frontmatter 有"
+        },
+        {
+          "before": "- **WHEN** 該 index frontmatter 宣告 `sidebar: true`",
+          "after": "- **WHEN** `docs/post/course/cybersec/index.md` frontmatter 宣告 `sidebar: true`"
+        },
+        {
+          "before": "- **THEN** 執行後 `sidebar` 為",
+          "after": "- **THEN** 執行 `transformPageData` 後 `sidebar` 為"
+        },
+        {
+          "before": "- **THEN** 執行後 `showParticle` 為",
+          "after": "- **THEN** 執行 `transformPageData` 後 `showParticle` 為"
+        },
+        {
+          "before": "因 `??=` 對 null 與 undefined 都套用預設",
+          "after": "因 `??=` 對 `null` 與 `undefined` 都套用預設"
+        },
+        {
+          "before": "，不可用 null",
+          "after": "，不可用 `null`"
+        },
+        {
+          "before": "- **THEN** 不注入任何五項預設",
+          "after": "- **THEN** `transformPageData` 不注入任何五項預設"
+        },
+        {
+          "before": "- **THEN** 不注入任何預設",
+          "after": "- **THEN** `transformPageData` 不注入任何預設"
+        }
+      ]
+    }
+  ]
+}

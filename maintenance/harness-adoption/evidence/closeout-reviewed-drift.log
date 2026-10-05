@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "review_packet_sha256": "e84119fb6d4478e51c7ef1bbed54987cfc93299b44165dcb5a66a38dc7b7ca34",
+  "frozen_entries": 1597,
+  "allowed_closeout_changes": [
+    ".proj.specs/0001-harness-adoption/coverage-report.md",
+    ".proj.specs/0001-harness-adoption/traceability.md",
+    ".proj.tickets/0001-harness-adoption/T-0001-harness-adoption.md",
+    "docs/guide.md",
+    "maintenance/harness-adoption/evidence/copy-provenance.json"
+  ],
+  "allowed_closeout_additions": [
+    ".proj.specs/0001-harness-adoption/review/code-T-0001.md",
+    ".proj.specs/0001-harness-adoption/review/security-T-0001.md",
+    "maintenance/harness-adoption/LOCAL-REVIEW.md",
+    "maintenance/harness-adoption/evidence/closeout-main.json",
+    "maintenance/harness-adoption/evidence/closeout-main.log",
+    "maintenance/harness-adoption/evidence/closeout-materializer.json",
+    "maintenance/harness-adoption/evidence/closeout-materializer.log",
+    "maintenance/harness-adoption/evidence/closeout-project.json",
+    "maintenance/harness-adoption/evidence/closeout-project.log",
+    "maintenance/harness-adoption/evidence/harness/verify-final-review-drift-resumed.py",
+    "maintenance/harness-adoption/evidence/original-sources-dependencies-closeout.json",
+    "maintenance/harness-adoption/evidence/original-sources-dependencies-closeout.log",
+    "maintenance/harness-adoption/evidence/review-fixes-summary.json",
+    "maintenance/harness-adoption/evidence/reviews/code-round-2-manifest.json",
+    "maintenance/harness-adoption/evidence/reviews/code-round-2-security-report.md",
+    "maintenance/harness-adoption/evidence/reviews/code-round-2-spec-guide-report.md",
+    "maintenance/harness-adoption/evidence/reviews/code-round-2-spec-report.md",
+    "maintenance/harness-adoption/evidence/reviews/code-round-2-standards-guide-report.md",
+    "maintenance/harness-adoption/evidence/reviews/code-round-2-standards-report.md",
+    "maintenance/harness-adoption/evidence/reviews/commits.txt",
+    "maintenance/harness-adoption/evidence/reviews/committed.diff",
+    "maintenance/harness-adoption/evidence/reviews/final-tracked.diff",
+    "maintenance/harness-adoption/evidence/reviews/guide-addendum-manifest.json",
+    "maintenance/harness-adoption/evidence/reviews/staged.diff",
+    "maintenance/harness-adoption/evidence/reviews/status.txt",
+    "maintenance/harness-adoption/evidence/reviews/unstaged.diff"
+  ],
+  "code_spec_source_changes_since_review": [],
+  "documentation_change_reviewed_in_addendum": [
+    "docs/guide.md"
+  ],
+  "guide_addendum_sha256": "8c2db57b874beceecac71436c8b419f659434e67892de5038043456cd54568b4",
+  "head": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "branch": "tickets/T-0001/harness-adoption",
+  "staged_changes": []
+}

@@ -1,0 +1,30 @@
+{
+  "name": "framework-guard-pins-red",
+  "argv": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/harness_adoption",
+    "-p",
+    "test_tracker.py",
+    "-v"
+  ],
+  "cwd": "{CANDIDATE}",
+  "started_utc": "2026-10-04T11:12:52.921472+00:00",
+  "ended_utc": "2026-10-04T11:12:53.717459+00:00",
+  "elapsed_seconds": 0.7953181250486523,
+  "exit_code": 1,
+  "status": "expected-red",
+  "log_sha256": "c2c453115bde33599ecd52d72984832376b37db1b01da82a1b5fcda463c152bf",
+  "log": "maintenance/harness-adoption/evidence/framework-guard-pins-red.log",
+  "baseline": "ee7fecfff72f47abc735d26ac7e9a943de04ebbf",
+  "node_selection": "existing NVM v24.13.0; no install",
+  "package_manager_network": "disabled",
+  "raw_receipt_sha256": "b64585df04fcda629d4faf2d9f5f75e47c61de09d50351e095be7625c8b88a4c",
+  "portable_cwd": "{WORKSPACE}/implementation-resumed",
+  "receipt_projection": "log reference rebased into candidate; original exit/status/times/argv/cwd retained; raw receipt hash saved",
+  "private_raw_log_sha256": "8ca7cb871af96ae6e034027889c06b2df960001b4b9dfde7615caeb3166d2894",
+  "publication_projection": "Actual exit/status/times retained; machine paths replaced with declared logical aliases. log_sha256 binds this public log; private_raw_log_sha256, when present, binds the actual preprojection log. The original raw receipt hash is retained."
+}
