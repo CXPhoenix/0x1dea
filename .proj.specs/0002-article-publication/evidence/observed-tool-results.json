@@ -1,0 +1,26 @@
+{
+  "source": "Observed tool outputs during this task; these entries are transcripts, not reruns",
+  "unit": {
+    "command": "pnpm test:unit",
+    "exit_code": 0,
+    "test_files": 2,
+    "tests_passed": 11
+  },
+  "trusted_site_build": {
+    "command": "pnpm docs:build",
+    "exit_code": 0,
+    "seconds_reported": 3.11,
+    "surface": "unchanged trusted blog source, not untrusted candidate"
+  },
+  "build_isolation": {
+    "command": "sandbox-exec minimal process/read boundary probe",
+    "exit_code": 71,
+    "status": "blocked",
+    "diagnostic": "sandbox_apply: Operation not permitted"
+  },
+  "eslint": {
+    "command": "pnpm exec eslint scripts/vpHelper.ts tests/vpHelper.vitest.ts",
+    "status": "blocked",
+    "diagnostic": "Package is required for this config: @unocss/eslint-plugin. Install prompt not accepted; no lint result."
+  }
+}

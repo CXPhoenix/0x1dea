@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import PostCard from './PostCard.vue'
+import { computed, ref } from 'vue'
 import PostBlock from './PostBlock.vue'
+import PostCard from './PostCard.vue'
 
 interface Post {
   title: string
@@ -33,7 +33,7 @@ const sortOrder = ref<'asc' | 'desc'>('desc')
 const viewMode = ref<'card' | 'block'>('block')
 
 // Helper: Normalize date for comparison
-const getTime = (post: Post) => {
+function getTime(post: Post) {
   const time = post.createdTime
   if (typeof time === 'object' && time !== null && 'seconds' in time) {
     return time.seconds * 1000
@@ -44,14 +44,16 @@ const getTime = (post: Post) => {
 // Filtered and Sorted Data
 const processedPosts = computed(() => {
   // 1. Filter
-  let filtered = props.posts.filter(post => {
+  const filtered = props.posts.filter((post) => {
     const q = searchQuery.value.toLowerCase().trim()
-    if (!q) return true
+    if (!q)
+      return true
 
     const titleMatch = post.title?.toLowerCase().includes(q)
     if (sortBy.value === 'time') {
       return titleMatch
-    } else {
+    }
+    else {
       const categoryMatch = (post.category || '綜合').toLowerCase().includes(q)
       return titleMatch || categoryMatch
     }
@@ -62,7 +64,8 @@ const processedPosts = computed(() => {
     let result = 0
     if (sortBy.value === 'time') {
       result = getTime(a) - getTime(b)
-    } else {
+    }
+    else {
       const catA = a.category || '綜合'
       const catB = b.category || '綜合'
       result = catA.localeCompare(catB)
@@ -77,38 +80,39 @@ const processedPosts = computed(() => {
 
 // Grouped data if in category mode
 const groupedData = computed(() => {
-  if (sortBy.value !== 'category') return null
+  if (sortBy.value !== 'category')
+    return null
 
   const groups: Map<string, Group> = new Map()
 
-  processedPosts.value.forEach(post => {
+  processedPosts.value.forEach((post) => {
     const category = post.category || '綜合'
     if (!groups.has(category)) {
       groups.set(category, {
         name: category,
         categoryRootPath: post.categoryRootPath,
-        posts: []
+        posts: [],
       })
     }
     groups.get(category)!.posts.push(post)
   })
 
-  return Array.from(groups.entries()).map(([name, group]) => ({ name: group.name, categoryRootPath: group.categoryRootPath, posts: group.posts }))
+  return Array.from(groups.entries()).map(([, group]) => ({ name: group.name, categoryRootPath: group.categoryRootPath, posts: group.posts }))
 })
 
 const transitionKey = computed(() => {
   return `${sortBy.value}-${sortOrder.value}-${viewMode.value}`
 })
 
-const toggleSortMode = () => {
+function toggleSortMode() {
   sortBy.value = sortBy.value === 'time' ? 'category' : 'time'
 }
 
-const toggleSortOrder = () => {
+function toggleSortOrder() {
   sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc'
 }
 
-const toggleViewMode = () => {
+function toggleViewMode() {
   viewMode.value = viewMode.value === 'card' ? 'block' : 'card'
 }
 </script>
@@ -116,56 +120,62 @@ const toggleViewMode = () => {
 <template>
   <div class="post-list-container">
     <!-- Controls Section -->
-    <div class="controls-wrapper" v-if="processedPosts.length > 0">
+    <div v-if="processedPosts.length > 0" class="controls-wrapper">
       <div class="search-bar">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
         </svg>
-        <input v-model="searchQuery" type="text" :placeholder="sortBy === 'time' ? '搜尋文章標題...' : '搜尋標題或類型...'"
-          class="search-input" />
+        <input
+          v-model="searchQuery" type="text" :placeholder="sortBy === 'time' ? '搜尋文章標題...' : '搜尋標題或類型...'"
+          class="search-input"
+        >
       </div>
 
       <div class="actions">
-        <button class="control-btn" @click="toggleViewMode" :title="viewMode === 'card' ? '切換至列表模式' : '切換至卡片模式'">
-          <svg v-if="viewMode === 'card'" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2">
-            <line x1="8" y1="6" x2="21" y2="6"></line>
-            <line x1="8" y1="12" x2="21" y2="12"></line>
-            <line x1="8" y1="18" x2="21" y2="18"></line>
-            <line x1="3" y1="6" x2="3.01" y2="6"></line>
-            <line x1="3" y1="12" x2="3.01" y2="12"></line>
-            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+        <button class="control-btn" :title="viewMode === 'card' ? '切換至列表模式' : '切換至卡片模式'" @click="toggleViewMode">
+          <svg
+            v-if="viewMode === 'card'" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="8" y1="6" x2="21" y2="6" />
+            <line x1="8" y1="12" x2="21" y2="12" />
+            <line x1="8" y1="18" x2="21" y2="18" />
+            <line x1="3" y1="6" x2="3.01" y2="6" />
+            <line x1="3" y1="12" x2="3.01" y2="12" />
+            <line x1="3" y1="18" x2="3.01" y2="18" />
           </svg>
           <svg v-else class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="7" height="7"></rect>
-            <rect x="14" y="3" width="7" height="7"></rect>
-            <rect x="14" y="14" width="7" height="7"></rect>
-            <rect x="3" y="14" width="7" height="7"></rect>
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
           </svg>
         </button>
 
-        <button class="control-btn" @click="toggleSortMode" title="切換排序方式">
+        <button class="control-btn" title="切換排序方式" @click="toggleSortMode">
           <span class="btn-text">{{ sortBy === 'time' ? '時間排序' : '類型排序' }}</span>
           <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="16 3 21 3 21 8"></polyline>
-            <line x1="4" y1="20" x2="21" y2="3"></line>
-            <polyline points="21 16 21 21 16 21"></polyline>
-            <line x1="15" y1="15" x2="21" y2="21"></line>
-            <line x1="4" y1="4" x2="9" y2="9"></line>
+            <polyline points="16 3 21 3 21 8" />
+            <line x1="4" y1="20" x2="21" y2="3" />
+            <polyline points="21 16 21 21 16 21" />
+            <line x1="15" y1="15" x2="21" y2="21" />
+            <line x1="4" y1="4" x2="9" y2="9" />
           </svg>
         </button>
 
-        <button class="control-btn" @click="toggleSortOrder" title="切換升降冪">
+        <button class="control-btn" title="切換升降冪" @click="toggleSortOrder">
           <span class="btn-text">{{ sortOrder === 'asc' ? '升冪' : '降冪' }}</span>
-          <svg v-if="sortOrder === 'asc'" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-            stroke-width="2">
-            <line x1="12" y1="19" x2="12" y2="5"></line>
-            <polyline points="5 12 12 5 19 12"></polyline>
+          <svg
+            v-if="sortOrder === 'asc'" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="12" y1="19" x2="12" y2="5" />
+            <polyline points="5 12 12 5 19 12" />
           </svg>
           <svg v-else class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="12" y1="5" x2="12" y2="19"></line>
-            <polyline points="19 12 12 19 5 12"></polyline>
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <polyline points="19 12 12 19 5 12" />
           </svg>
         </button>
       </div>
@@ -178,12 +188,14 @@ const toggleViewMode = () => {
         <template v-if="sortBy === 'category'">
           <div v-for="group in groupedData" :key="group.name" class="category-block">
             <h2 class="category-header">
-              <span class="category-indicator"></span>
+              <span class="category-indicator" />
               <a :href="group.categoryRootPath" target="_top" style="text-underline-offset: 0.3rem;">{{ group.name }}</a>
             </h2>
             <div class="post-grid" :class="viewMode">
-              <component :is="viewMode === 'card' ? PostCard : PostBlock" v-for="post in group.posts" :key="post.url"
-                :post="post" :showCategory="false" />
+              <component
+                :is="viewMode === 'card' ? PostCard : PostBlock" v-for="post in group.posts" :key="post.url"
+                :post="post" :show-category="false"
+              />
             </div>
           </div>
         </template>
@@ -191,8 +203,10 @@ const toggleViewMode = () => {
         <!-- Flat View -->
         <template v-else>
           <div class="post-grid" :class="viewMode">
-            <component :is="viewMode === 'card' ? PostCard : PostBlock" v-for="post in processedPosts" :key="post.url"
-              :post="post" :showCategory="true" />
+            <component
+              :is="viewMode === 'card' ? PostCard : PostBlock" v-for="post in processedPosts" :key="post.url"
+              :post="post" :show-category="true"
+            />
           </div>
         </template>
       </div>
@@ -200,8 +214,12 @@ const toggleViewMode = () => {
 
     <!-- Empty State -->
     <div v-if="processedPosts.length === 0" class="empty-state">
-      <div class="empty-visual">📭</div>
-      <p class="pt-4">沒有任何文章，努力產生中！<br />((└(:3」┌)┘))</p>
+      <div class="empty-visual">
+        📭
+      </div>
+      <p class="pt-4">
+        沒有任何文章，努力產生中！<br>((└(:3」┌)┘))
+      </p>
     </div>
   </div>
 </template>

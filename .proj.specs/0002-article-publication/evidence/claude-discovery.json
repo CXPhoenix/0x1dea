@@ -1,0 +1,8 @@
+{
+  "runtime": "Claude Code",
+  "status": "pass",
+  "reason": "Native initialization catalog contains skill",
+  "session_persistence": false,
+  "tools_enabled": false,
+  "skill_found": true
+}

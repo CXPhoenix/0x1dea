@@ -1,0 +1,4 @@
+.proj.specs/0002-article-publication/evidence/lint-cleanup-before-regressions.txt:16: new blank line at EOF.
+.proj.specs/0002-article-publication/evidence/lint-cleanup-clean-lint.txt:4: new blank line at EOF.
+.proj.specs/0002-article-publication/evidence/lint-cleanup-clean-vitest.txt:16: new blank line at EOF.
+.proj.specs/0002-article-publication/evidence/lint-cleanup-vitest.txt:16: new blank line at EOF.

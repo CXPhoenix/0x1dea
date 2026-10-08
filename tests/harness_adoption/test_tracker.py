@@ -15,6 +15,75 @@ class TrackerTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
 
+    def test_authorized_lint_dependency_is_exact_and_fail_closed(self):
+        before = '{"devDependencies":{"@types/js-yaml":"^4.0.9"}}'
+        after = '{"devDependencies":{"@types/js-yaml":"^4.0.9","@unocss/eslint-plugin":"66.6.0"}}'
+        verifier.check_lint_dependency_delta(before, after)
+        for unsafe in (after.replace('66.6.0', '66.10.5'), after.replace('^4.0.9', '^4.1.0'), after.replace('"66.6.0"', '"66.6.0","other-package":"1.0.0"'), before):
+            with self.assertRaises(ValueError):
+                verifier.check_lint_dependency_delta(before, unsafe)
+
+    def test_lint_cleanup_manifest_is_exact_and_fail_closed(self):
+        import json
+        guard = getattr(verifier, 'check_lint_cleanup_delta', None)
+        self.assertTrue(callable(guard), 'cleanup needs a separate successor contract')
+        before = {'devDependencies': {'eslint': '^10.0.0', '@unocss/eslint-plugin': '66.6.0'}, 'scripts': {'test:unit': 'vitest run'}}
+        after = json.loads(json.dumps(before))
+        after['devDependencies']['eslint'] = '9.39.2'
+        after['scripts']['lint'] = verifier.LINT_COMMAND
+        guard(json.dumps(before), json.dumps(after))
+        for section, key, value in (
+            ('devDependencies', 'eslint', '^9.39.2'),
+            ('devDependencies', '@unocss/eslint-plugin', '66.10.5'),
+            ('devDependencies', 'unrelated', '1.0.0'),
+            ('scripts', 'lint', 'eslint scripts --quiet'),
+            ('scripts', 'test:unit', 'echo pass'),
+        ):
+            unsafe = json.loads(json.dumps(after))
+            unsafe[section][key] = value
+            with self.assertRaises(ValueError):
+                guard(json.dumps(before), json.dumps(unsafe))
+
+    def test_lint_successor_rejects_source_scope_and_history_tampering(self):
+        import json
+        import shutil
+        import subprocess
+        source = MODULE.parents[1]
+        if not (source / 'maintenance/lint-cleanup/source-boundary.json').exists():
+            self.skipTest('lint successor is absent in this historical tree')
+        fixture = self.root / 'successor'
+        subprocess.run(['git', 'clone', '--shared', '--no-checkout', str(source), str(fixture)], check=True, capture_output=True)
+        names = set(verifier.LINT_UPDATE_NAMES) | {
+            'uno.config.ts', 'tests/lintCleanup.vitest.ts', 'maintenance/lint-cleanup/source-boundary.json',
+            'maintenance/article-publication/source-boundary.json',
+        }
+        for name in names:
+            target = fixture / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source / name, target)
+        verifier.check_lint_successor(fixture)
+        boundary_path = fixture / 'maintenance/lint-cleanup/source-boundary.json'
+        original = boundary_path.read_bytes()
+        for change in ('scope', 'base', 'path', 'before_hash', 'after_hash', 'new_hash'):
+            data = json.loads(original)
+            if change == 'scope': data['scope'] = 'unapproved'
+            elif change == 'base': data['base'] = '0' * 40
+            elif change == 'path': data['preserved_updates']['blog/about.md'] = data['preserved_updates']['package.json']
+            elif change == 'before_hash': data['preserved_updates']['package.json']['before_sha256'] = '0' * 64
+            elif change == 'after_hash': data['preserved_updates']['package.json']['after_sha256'] = '0' * 64
+            else: data['new_sources']['uno.config.ts'] = '0' * 64
+            boundary_path.write_text(json.dumps(data))
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                verifier.check_lint_successor(fixture)
+        boundary_path.write_bytes(original)
+        for name in ('scripts/vpHelper.ts', 'uno.config.ts', 'maintenance/article-publication/source-boundary.json'):
+            target = fixture / name
+            content = target.read_bytes()
+            target.write_bytes(content + b'\nchanged')
+            with self.subTest(path=name), self.assertRaises(ValueError):
+                verifier.check_lint_successor(fixture)
+            target.write_bytes(content)
+
     def ticket(self, number=1, status='todo', blockers='[]', extra=''):
         p = self.root / f'.proj.tickets/0001-demo/T-{number:04d}-demo.md'
         p.parent.mkdir(parents=True, exist_ok=True)
@@ -258,7 +327,7 @@ class FrameworkImportTests(unittest.TestCase):
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(self.source_root / name, target)
         for runtime in ('.agents', '.claude'):
-            for product in ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post'):
+            for product in ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post', 'managing-article-publication'):
                 name = f'{runtime}/skills/{product}/SKILL.md'
                 target = self.root / name
                 target.parent.mkdir(parents=True, exist_ok=True)
@@ -341,15 +410,15 @@ class FrameworkImportTests(unittest.TestCase):
         path = self.root / '.agents/skills/phoenix-writing';path.rename(self.root / 'saved-product')
         with self.assertRaisesRegex(ValueError, 'runtime skill roots'):self.guard()
         replacement = self.root / '.agents/skills/unapproved';replacement.mkdir()
-        (replacement / 'SKILL.md').write_text('Unknown despite still having 35 roots')
+        (replacement / 'SKILL.md').write_text('Unknown despite still having 36 roots')
         with self.assertRaisesRegex(ValueError, 'runtime skill roots'):self.guard()
         shutil.rmtree(replacement);(self.root / 'saved-product').rename(path)
         (path / 'SKILL.md').unlink()
         with self.assertRaisesRegex(ValueError, 'missing'):self.guard()
 
-    def test_verified_catalog_reports_35_physical_skills_per_runtime(self):
+    def test_verified_catalog_reports_36_physical_skills_per_runtime(self):
         result = self.guard()
-        self.assertEqual(result['runtime_skill_counts'], {'.agents':35, '.claude':35})
+        self.assertEqual(result['runtime_skill_counts'], {'.agents':36, '.claude':36})
         self.assertEqual(result['source_commit'],'917e6025da0901a79dda016e1ce5bd89b6e6e19f')
         self.assertEqual(result['source_digest'],'b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5')
 

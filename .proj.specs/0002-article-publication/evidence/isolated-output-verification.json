@@ -1,0 +1,126 @@
+{
+  "candidate_tree": "8dbcb02b3a5ea08c61bd924beb697196e0436274",
+  "output_scan": {
+    "asset_signatures": [],
+    "files": {
+      "404.html": {
+        "mode": "100644",
+        "sha256": "1bacf6606e618e1f64aebb66575a4a922c255bf6723674514b44668de8ccfa29"
+      },
+      "assets/app.Brl_7yAP.js": {
+        "mode": "100644",
+        "sha256": "84d40c6b925893ec707c0ce542359146c0ccb18e3b08c1492a167a435e1adbd7"
+      },
+      "assets/chunks/framework.B4lDrjmv.js": {
+        "mode": "100644",
+        "sha256": "f43ee8b1e2781c25852c35bdfefb03a61b655d8c775d9dd9d7963a264d63923f"
+      },
+      "assets/chunks/theme.DLIWAsCo.js": {
+        "mode": "100644",
+        "sha256": "705014da334c735ccd4b7fe4b00b493625215292711b9feb558febf2e2998b1d"
+      },
+      "assets/index.md.CjaiMBxd.js": {
+        "mode": "100644",
+        "sha256": "d3b04c7b056c158734cc73bcafc9e1506d01701dc2857408a4b7cf74686ed124"
+      },
+      "assets/index.md.CjaiMBxd.lean.js": {
+        "mode": "100644",
+        "sha256": "d3b04c7b056c158734cc73bcafc9e1506d01701dc2857408a4b7cf74686ed124"
+      },
+      "assets/inter-italic-cyrillic-ext.r48I6akx.woff2": {
+        "mode": "100644",
+        "sha256": "3f2ea09e148441f83171eae388d00da780b24b9bd155c141d0b5fbb0d803871d"
+      },
+      "assets/inter-italic-cyrillic.By2_1cv3.woff2": {
+        "mode": "100644",
+        "sha256": "2a1c3126375078cd85d262aad635ac9d9ff9ac2c18b8143b2d21d540f9cd3dfb"
+      },
+      "assets/inter-italic-greek-ext.1u6EdAuj.woff2": {
+        "mode": "100644",
+        "sha256": "bae39b1cc79168c9ac47f120c3eaa82cb634dc17e457cdd484725d8c7a60ab3e"
+      },
+      "assets/inter-italic-greek.DJ8dCoTZ.woff2": {
+        "mode": "100644",
+        "sha256": "138cf731e5a284e262c576f765a6cb8f58045cb798d16693091e2251a0f63559"
+      },
+      "assets/inter-italic-latin-ext.CN1xVJS-.woff2": {
+        "mode": "100644",
+        "sha256": "3e166de9aeff2d6a3d13c9228e03f7ff76369f5fa95fe0ab1d1d44235d5516aa"
+      },
+      "assets/inter-italic-latin.C2AdPX0b.woff2": {
+        "mode": "100644",
+        "sha256": "3570e65005ccd9ecd87c6ccc7c713fc474a80ff7c3abbb1063f0e8ab4f8dc891"
+      },
+      "assets/inter-italic-vietnamese.BSbpV94h.woff2": {
+        "mode": "100644",
+        "sha256": "a0aae13c473b99b63f3c0b8b692b3b2a4023145171aa86964f268235573e4ce5"
+      },
+      "assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2": {
+        "mode": "100644",
+        "sha256": "a49e47fb34f94acf8ceb57603cb2fc4c01861527a9a304de3a0236b7b67da2c6"
+      },
+      "assets/inter-roman-cyrillic.C5lxZ8CY.woff2": {
+        "mode": "100644",
+        "sha256": "d888610b6342164a592e59a4ce91a3755126a6ca2ee4e0d75c8e915eebaeed68"
+      },
+      "assets/inter-roman-greek-ext.CqjqNYQ-.woff2": {
+        "mode": "100644",
+        "sha256": "7b7519f21aff6b3a011099999cec8a9d4c99173a8c9adeecffb0bd032fc49f69"
+      },
+      "assets/inter-roman-greek.BBVDIX6e.woff2": {
+        "mode": "100644",
+        "sha256": "1a1997dfdcd7a9e0d2b26944b4b7fd1f1b2fde91bb405cb7a5870f93b45d2e05"
+      },
+      "assets/inter-roman-latin-ext.4ZJIpNVo.woff2": {
+        "mode": "100644",
+        "sha256": "539d139f99942e93bead7bbcd18bc00f5a73932eb3a8997367f2b79f4f75bc60"
+      },
+      "assets/inter-roman-latin.Di8DUHzh.woff2": {
+        "mode": "100644",
+        "sha256": "f7ab715caa2c78facb4334b211c81ee66f037cf9c99ca3f24acd543e84a93278"
+      },
+      "assets/inter-roman-vietnamese.BjW4sHH5.woff2": {
+        "mode": "100644",
+        "sha256": "b315417b28ce251a54000a824d73c5af36798a88b3c05594f28dada0cbffab5a"
+      },
+      "assets/post_A.md.KTDvELmN.js": {
+        "mode": "100644",
+        "sha256": "4b3ecd4b30bacdea4552dee847c990b050739dc913e078d7a6320e9a1ae10d1e"
+      },
+      "assets/post_A.md.KTDvELmN.lean.js": {
+        "mode": "100644",
+        "sha256": "4b3ecd4b30bacdea4552dee847c990b050739dc913e078d7a6320e9a1ae10d1e"
+      },
+      "assets/style.BRXcFk6z.css": {
+        "mode": "100644",
+        "sha256": "1caf8f9ed213ccbc125ed6cd02a53ffeb8b1890d83be680b78c23ed7e7beeb0a"
+      },
+      "hashmap.json": {
+        "mode": "100644",
+        "sha256": "94794fa72b9c82647797312d1d667d273328b3e3fa263479f6762247f885f1f5"
+      },
+      "index.html": {
+        "mode": "100644",
+        "sha256": "a1ef774cf08b11eca880fb0ccf14d8e3fbd8dc8968e7bb5895ca75637e0ae61d"
+      },
+      "post/A.html": {
+        "mode": "100644",
+        "sha256": "40251a05d7f4c6653f43325ea1171ea2def8ab8f9b7653a4eee6fea82be74550"
+      },
+      "vp-icons.css": {
+        "mode": "100644",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "forbidden_routes": [
+      "/post/B.html"
+    ],
+    "limits": "Supplementary detection only: rewrites, transformations and short fragments may evade signatures. Exact candidate tree/diff is the primary guarantee. This is not build provenance, confidentiality or publication authorization.",
+    "output_manifest_sha256": "9d4b4f88e0987ce54c82b9f95a4b4862ca0e2cbe59d780914d020ae516cad2ba",
+    "prose_signature_count": 1,
+    "status": "supplementary-pass",
+    "unverified_articles": []
+  },
+  "publishable": false,
+  "verified": true
+}

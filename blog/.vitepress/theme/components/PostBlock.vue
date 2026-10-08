@@ -17,23 +17,24 @@ const props = withDefaults(defineProps<{
   post: Post
   showCategory?: boolean
 }>(), {
-  showCategory: true
+  showCategory: true,
 })
 
 const formattedDate = computed(() => {
   let date: Date
   const rawTime = props.post.createdTime
-  
+
   if (typeof rawTime === 'object' && rawTime !== null && 'seconds' in rawTime) {
     date = new Date(rawTime.seconds * 1000)
-  } else {
+  }
+  else {
     date = new Date(rawTime as string | number | Date)
   }
-  
+
   return date.toLocaleDateString('zh-TW', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   })
 })
 </script>
@@ -61,7 +62,7 @@ const formattedDate = computed(() => {
   transition: all 0.3s ease;
   border-radius: 12px;
   overflow: hidden;
-  
+
   /* Liquid Glass Effect - Subtle */
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(8px);
@@ -151,12 +152,12 @@ const formattedDate = computed(() => {
     gap: 0.75rem;
     padding: 1rem;
   }
-  
+
   .meta {
     width: 100%;
     justify-content: space-between;
   }
-  
+
   .title, .description {
     white-space: normal;
     display: -webkit-box;
@@ -164,7 +165,7 @@ const formattedDate = computed(() => {
     line-clamp: 2;
     -webkit-box-orient: vertical;
   }
-  
+
   .description {
     -webkit-line-clamp: 1;
     line-clamp: 1;

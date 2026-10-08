@@ -364,6 +364,40 @@
       "source_sha256": "90cabbc770cf0220ccb18e2dc567e9aeadc75487f1f052a664e0d8ce8939dda4"
     },
     {
+      "links": [],
+      "logical_source": "skills/managing-article-publication/SKILL.md",
+      "path": ".agents/skills/managing-article-publication/SKILL.md",
+      "sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2",
+      "source": "skills/managing-article-publication/SKILL.md",
+      "source_sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2"
+    },
+    {
+      "path": ".agents/skills/managing-article-publication/agents/openai.yaml",
+      "sha256": "ccbaa506f5d60ef70dae90a259a09e14b341405426cc3d787695a566665410ae",
+      "source": "generated:codex-metadata"
+    },
+    {
+      "links": [],
+      "logical_source": "skills/managing-article-publication/references/future-actions.md",
+      "path": ".agents/skills/managing-article-publication/references/future-actions.md",
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5",
+      "source": "skills/managing-article-publication/references/future-actions.md",
+      "source_sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5"
+    },
+    {
+      "links": [
+        {
+          "from": "../../../scripts/article-publication.py",
+          "to": "../../../../scripts/article-publication.py"
+        }
+      ],
+      "logical_source": "skills/managing-article-publication/references/local.md",
+      "path": ".agents/skills/managing-article-publication/references/local.md",
+      "sha256": "91bbc62ea32b3662e7cf918add672bb467c8564a77489993a77f76fc11e7b26d",
+      "source": "skills/managing-article-publication/references/local.md",
+      "source_sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be"
+    },
+    {
       "links": [
         {
           "from": "../../maintenance/writing-skills/SOURCES.md",
@@ -1097,6 +1131,35 @@
       "source_sha256": "90cabbc770cf0220ccb18e2dc567e9aeadc75487f1f052a664e0d8ce8939dda4"
     },
     {
+      "links": [],
+      "logical_source": "skills/managing-article-publication/SKILL.md",
+      "path": ".claude/skills/managing-article-publication/SKILL.md",
+      "sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2",
+      "source": "skills/managing-article-publication/SKILL.md",
+      "source_sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2"
+    },
+    {
+      "links": [],
+      "logical_source": "skills/managing-article-publication/references/future-actions.md",
+      "path": ".claude/skills/managing-article-publication/references/future-actions.md",
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5",
+      "source": "skills/managing-article-publication/references/future-actions.md",
+      "source_sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5"
+    },
+    {
+      "links": [
+        {
+          "from": "../../../scripts/article-publication.py",
+          "to": "../../../../scripts/article-publication.py"
+        }
+      ],
+      "logical_source": "skills/managing-article-publication/references/local.md",
+      "path": ".claude/skills/managing-article-publication/references/local.md",
+      "sha256": "91bbc62ea32b3662e7cf918add672bb467c8564a77489993a77f76fc11e7b26d",
+      "source": "skills/managing-article-publication/references/local.md",
+      "source_sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be"
+    },
+    {
       "links": [
         {
           "from": "../../maintenance/writing-skills/SOURCES.md",
@@ -1472,12 +1535,13 @@
       "source_sha256": "bcbf73c6144fb372b633bfed06a65c9e3318180d987622b273d4a8c8410f1c19"
     }
   ],
-  "generator_sha256": "879f3f7fa90e0c7ea470194c0b84fbc2a61265e10b9464520812971af2ddbbe4",
+  "generator_sha256": "8446420db45e314c65292327cac6f601f66001d8c91048702c73a1018bac6de4",
   "schema_version": 1,
   "skills": [
     "phoenix-writing",
     "maintaining-writing-skills",
-    "creating-vitepress-post"
+    "creating-vitepress-post",
+    "managing-article-publication"
   ],
-  "source_policy_sha256": "308a3d3d50012839e847b781037d8477e0d4f911f48bea3a2b029c7c14c9f995"
+  "source_policy_sha256": "7879465c123f916589ca4350b129e62f45b3350a66cfccba308ea546bfe7b864"
 }

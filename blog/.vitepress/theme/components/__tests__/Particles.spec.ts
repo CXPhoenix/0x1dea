@@ -1,36 +1,35 @@
-import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+import { describe, expect, it, vi } from 'vitest'
 import Particles from '../Particles.vue'
 
 // Mock vitepress useData
 vi.mock('vitepress', () => ({
   useData: () => ({
-    isDark: { value: false }
-  })
+    isDark: { value: false },
+  }),
 }))
 
-
-describe('Particles.vue', () => {
+describe('particles.vue', () => {
   const VueParticlesMock = {
     name: 'vue-particles',
     template: '<div class="vue-particles-stub"></div>',
-    props: ['options']
+    props: ['options'],
   }
 
   it('renders vue-particles component', () => {
     const wrapper = mount(Particles, {
       global: {
         components: {
-          'vue-particles': VueParticlesMock
+          'vue-particles': VueParticlesMock,
         },
         stubs: {
-          'ClientOnly': {
-            template: '<slot />'
-          }
-        }
-      }
+          ClientOnly: {
+            template: '<slot />',
+          },
+        },
+      },
     })
-    
+
     expect(wrapper.findComponent({ name: 'vue-particles' }).exists()).toBe(true)
     expect(wrapper.find('.vue-particles-stub').exists()).toBe(true)
   })
@@ -39,20 +38,20 @@ describe('Particles.vue', () => {
     const wrapper = mount(Particles, {
       global: {
         components: {
-          'vue-particles': VueParticlesMock
+          'vue-particles': VueParticlesMock,
         },
         stubs: {
-          'ClientOnly': {
-            template: '<slot />'
-          }
-        }
-      }
+          ClientOnly: {
+            template: '<slot />',
+          },
+        },
+      },
     })
-    
+
     const particlesComponent = wrapper.findComponent({ name: 'vue-particles' })
     expect(particlesComponent.exists()).toBe(true)
-    
-    const options = particlesComponent.props('options')
+
+    const options = particlesComponent.props('options') as { particles: { move: { enable: boolean } } }
     expect(options).toBeDefined()
     // Verify specific option structure to match what's in the component
     expect(options.particles.move.enable).toBe(true)

@@ -1,0 +1,12 @@
+{
+  "head": "bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0",
+  "original_checkout_status": "clean",
+  "blog_diff": "empty",
+  "reviewed_implementation_drift": [],
+  "post_review_metadata_changes": [
+    ".proj.tickets/0002-article-publication/T-0002-article-publication-preparation.md"
+  ],
+  "new_closeout_files": "coverage/review/evidence/handoff reports only",
+  "product_commits": 0,
+  "harness_final_exit_code": 0
+}

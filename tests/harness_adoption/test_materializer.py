@@ -1,4 +1,4 @@
-"""Real filesystem and CLI regression tests for the three-package materializer."""
+"""Real filesystem and CLI regression tests for the owned-package materializer."""
 import hashlib
 import json
 import os
@@ -9,7 +9,7 @@ import tempfile
 import unittest
 
 SCRIPT = Path(__file__).resolve().parents[2] / "scripts/materialize-writing-skills.py"
-NAMES = ("phoenix-writing", "maintaining-writing-skills", "creating-vitepress-post")
+NAMES = ("phoenix-writing", "maintaining-writing-skills", "creating-vitepress-post", "managing-article-publication")
 ALIASES = (
     ("skills/phoenix-writing/reference", "../../maintenance/writing-skills/legacy/phoenix-writing/reference", "maintenance/writing-skills/legacy/phoenix-writing/reference", "phoenix-writing/reference"),
     ("skills/phoenix-writing/scripts", "../maintaining-writing-skills/legacy-validator", "skills/maintaining-writing-skills/legacy-validator", "phoenix-writing/scripts"),
@@ -50,7 +50,7 @@ class MaterializerTests(unittest.TestCase):
             for p in sorted((self.root/root).rglob("*")):
                 if p.is_file() and not p.is_symlink():
                     inputs.append({"path": p.relative_to(self.root).as_posix(), "sha256": sha(p.read_bytes())})
-        policy = {"schema_version": 1, "skills": list(NAMES), "implicit": {NAMES[0]: True, NAMES[1]: True, NAMES[2]: True}, "inputs": inputs, "aliases": [{"path": p,"literal_target": t,"backing_root": b,"runtime_subpath": d,"literal_sha256": sha(t.encode())} for p,t,b,d in ALIASES]}
+        policy = {"schema_version": 1, "skills": list(NAMES), "implicit": {name: True for name in NAMES}, "inputs": inputs, "aliases": [{"path": p,"literal_target": t,"backing_root": b,"runtime_subpath": d,"literal_sha256": sha(t.encode())} for p,t,b,d in ALIASES]}
         self.put("maintenance/harness-adoption/runtime-source-policy.json", json.dumps(policy, sort_keys=True, indent=2)+"\n")
 
     def run_cli(self, mode="--write", *extra):
@@ -78,6 +78,8 @@ class MaterializerTests(unittest.TestCase):
             self.assertIn("`[literal](../../missing.md)`", text)
             self.assertIn("[x](../../missing.md)",text)
             self.assertIn("(../../../../maintenance/writing-skills/SOURCES.md)", (self.root/f"{runtime}/skills/maintaining-writing-skills/references/context.md").read_text())
+        for runtime in ('.agents','.claude'):
+            self.assertTrue((self.root/f'{runtime}/skills/managing-article-publication/SKILL.md').is_file())
         codex=(self.root/".agents/skills/phoenix-writing/agents/openai.yaml").read_text()
         self.assertIn("allow_implicit_invocation: true",codex)
         self.assertIn("allow_implicit_invocation: true",(self.root/".agents/skills/creating-vitepress-post/agents/openai.yaml").read_text())

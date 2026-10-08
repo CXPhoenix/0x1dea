@@ -1,0 +1,125 @@
+[
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/article_publication",
+      "-v"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "log": ".proj.specs/0002-article-publication/evidence/pre-push-cli.txt",
+    "log_sha256": "1c20470efa6a4741ece59218a70e456b0be399d2a1de2f649ace07f3c65f97ce",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/harness_adoption",
+      "-v"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "log": ".proj.specs/0002-article-publication/evidence/pre-push-harness.txt",
+    "log_sha256": "19954b9966c629946970be551070ab05aeb5cd9d9d29605b2a92bbcda04337d9",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "command": [
+      "pnpm",
+      "test:unit"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "log": ".proj.specs/0002-article-publication/evidence/pre-push-vitest.txt",
+    "log_sha256": "0f16909b58eb350d474ebfbfeb0040d760c3e40775533e4b3318b317b189173f",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/verify-project.py"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "log": ".proj.specs/0002-article-publication/evidence/pre-push-structure.txt",
+    "log_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/materialize-writing-skills.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "log": ".proj.specs/0002-article-publication/evidence/pre-push-materializer.txt",
+    "log_sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/verify-harness-adoption.py"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "log": ".proj.specs/0002-article-publication/evidence/pre-push-preservation.txt",
+    "log_sha256": "b1691ad9404fc889d5c45194ffaff01b3b65670c3807cea34a3ff1fc878c8c63",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "command": [
+      "pnpm",
+      "docs:build"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "log": ".proj.specs/0002-article-publication/evidence/pre-push-trusted-build.txt",
+    "log_sha256": "8597453628b784f09f78a767aa2c71f758d43d3b919e71f270d0f752c0aa99ee",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "status": "pass",
+    "log": ".proj.specs/0002-article-publication/evidence/pre-push-diff.txt",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "command": [
+      "pnpm",
+      "exec",
+      "eslint",
+      "scripts/vpHelper.ts",
+      "tests/vpHelper.vitest.ts",
+      "package.json",
+      "--format",
+      "json"
+    ],
+    "exit_code": 1,
+    "status": "existing-failure",
+    "errors": 363,
+    "summary": "pre-push-eslint-summary.json",
+    "rules_disabled": false,
+    "autofix": false
+  },
+  {
+    "command": "AST parse of six changed Python files",
+    "status": "pass",
+    "exit_code": 0
+  }
+]

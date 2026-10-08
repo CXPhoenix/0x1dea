@@ -1,0 +1,4 @@
+interface:
+  display_name: "managing-article-publication"
+policy:
+  allow_implicit_invocation: true

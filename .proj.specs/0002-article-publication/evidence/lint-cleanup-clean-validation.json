@@ -1,0 +1,50 @@
+{
+  "snapshot": "same final source/dependency snapshot; disposable fresh node_modules",
+  "node": "24.13.0",
+  "pnpm": "10.28.0",
+  "records": [
+    {
+      "command": [
+        "pnpm",
+        "install",
+        "--frozen-lockfile",
+        "--ignore-scripts",
+        "--strict-peer-dependencies",
+        "--registry=https://registry.npmjs.org",
+        "--store-dir=<temporary cache>"
+      ],
+      "exit_code": 0,
+      "log": "lint-cleanup-clean-install.txt",
+      "log_sha256": "ba0e25e6e279d726e68bf5ca477b5a4d1a00f61833fa18aef4306ad3aa080db8"
+    },
+    {
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "exit_code": 0,
+      "log": "lint-cleanup-clean-lint.txt",
+      "log_sha256": "fc102968a54862361e32a7f6dccfc41cccb1761a518739a3c3b7dc903f2e54f7"
+    },
+    {
+      "command": [
+        "pnpm",
+        "test:unit"
+      ],
+      "exit_code": 0,
+      "log": "lint-cleanup-clean-vitest.txt",
+      "log_sha256": "78871a64fdf87dc448b52c591404a40975f7733f2eae2b06ef2c256640a7dd24"
+    },
+    {
+      "command": [
+        "pnpm",
+        "docs:build"
+      ],
+      "exit_code": 0,
+      "log": "lint-cleanup-clean-build.txt",
+      "log_sha256": "1e69f270e29f812dd2fc560c2e425680a23eedb2e34c23bc974992fd12324938"
+    }
+  ],
+  "peer_warning_count": 0,
+  "installation_scripts": false
+}

@@ -1,0 +1,3 @@
+
+> 0x1dea@1.4.0 lint <temporary>
+> eslint scripts tests blog/shared blog/.vitepress eslint.config.js vitest.config.ts uno.config.ts tsconfig.json package.json --max-warnings 0

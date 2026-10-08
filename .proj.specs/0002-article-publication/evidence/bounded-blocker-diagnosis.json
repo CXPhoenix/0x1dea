@@ -1,0 +1,58 @@
+{
+  "scope": "bounded host capability diagnosis only; no product implementation changes",
+  "automatic_review_rejection": false,
+  "probes": [
+    {
+      "name": "default execution sandbox minimal sandbox-exec",
+      "exit_code": 71,
+      "diagnostic": "sandbox_apply: Operation not permitted"
+    },
+    {
+      "name": "escalated deny-default echo",
+      "automatic_review": "allowed",
+      "exit_code": 134,
+      "diagnostic": "empty stdout/stderr"
+    },
+    {
+      "name": "escalated allow-default/no-network true",
+      "automatic_review": "allowed",
+      "exit_code": 0
+    },
+    {
+      "name": "escalated strict read/write synthetic sentinel",
+      "automatic_review": "allowed",
+      "exit_code": 134,
+      "diagnostic": "no sentinel receipt, failed before validation"
+    },
+    {
+      "name": "escalated read-only-boundary diagnostic, write limits removed",
+      "automatic_review": "allowed",
+      "exit_code": 134,
+      "diagnostic": "no sentinel receipt; not accepted as build profile"
+    }
+  ],
+  "codex_native_discovery": {
+    "runtime": "Codex app-server",
+    "method": "skills/list",
+    "fresh_reload": true,
+    "status": "pass",
+    "matching_skills": [
+      {
+        "name": "managing-article-publication",
+        "description": "Prepare article previews or selected publication candidates for 0x1DEA.",
+        "path": "[isolated-repository]/.agents/skills/managing-article-publication/SKILL.md",
+        "scope": "repo",
+        "enabled": true
+      }
+    ],
+    "thread_or_session_requests": false,
+    "trust_settings_credentials_changed": false
+  },
+  "conclusions": {
+    "codex_sqlite": "Default workspace sandbox prevented ordinary native runtime initialization; exact escalation completed skills/list. Ordinary runtime SQLite initialization permitted, no thread/session API or settings/trust/credential changes.",
+    "sandbox_exec": "Host can apply a transient no-network sandbox after escalation. A complete read/write-limited build boundary is still unverified: scoped synthetic probes exit 134 before assertions. This is a technical startup/profile issue, not auto-review rejection.",
+    "candidate_build": "not run; no weaker-profile substitution",
+    "eslint": "still blocked, dependency not installed"
+  },
+  "next_minimum_step": "A bounded investigation of the missing runtime read allowlist or an already-tested transient build profile is required before candidate build. No security-setting, persistent permission or credential change is needed/authorized; this task stops here."
+}

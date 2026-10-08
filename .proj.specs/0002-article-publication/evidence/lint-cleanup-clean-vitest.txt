@@ -1,0 +1,15 @@
+
+> 0x1dea@1.4.0 test:unit <temporary>
+> vitest run
+
+
+ RUN  v4.0.18 <temporary>
+
+ ✓ tests/vpHelper.vitest.ts (9 tests) 5ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 22ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 71ms
+
+ Test Files  3 passed (3)
+      Tests  14 passed (14)
+   Start at  22:55:02
+   Duration  767ms (transform 292ms, setup 0ms, import 548ms, tests 98ms, environment 923ms)

@@ -1,0 +1,7 @@
+{
+  "inside_read": true,
+  "outside_read_denied": true,
+  "outside_write_denied": true,
+  "network_denied": true,
+  "status": "pass"
+}

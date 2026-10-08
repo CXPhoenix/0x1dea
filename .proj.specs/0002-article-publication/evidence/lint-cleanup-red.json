@@ -1,0 +1,5759 @@
+{
+  "head": "8890d5250e22ec4ee0e0493c1e72bab89d16489b",
+  "command": "pnpm exec eslint . --config <temporary diagnostic config> --format json",
+  "diagnostic_only": "Original config plus default empty UnoCSS config; no rule changes.",
+  "exit_code": 1,
+  "files": [
+    {
+      "path": "blog/.vitepress/config.mts",
+      "errors": 15,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"node:fs\" (value-builtin) to come before \"vitepress\" (value-external).",
+          "line": 2,
+          "column": 1,
+          "messageId": "unexpectedImportsGroupOrder",
+          "endLine": 2,
+          "endColumn": 25
+        },
+        {
+          "ruleId": "antfu/top-level-function",
+          "severity": 2,
+          "message": "Top-level functions should be declared with function keyword",
+          "line": 8,
+          "column": 7,
+          "messageId": "topLevelFunctionDeclaration",
+          "endLine": 8,
+          "endColumn": 36
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 14,
+          "column": 3,
+          "messageId": "sameLineClose",
+          "endLine": 14,
+          "endColumn": 4
+        },
+        {
+          "ruleId": "style/quotes",
+          "severity": 2,
+          "message": "Strings must use singlequote.",
+          "line": 22,
+          "column": 10,
+          "messageId": "wrongQuotes",
+          "endLine": 22,
+          "endColumn": 18
+        },
+        {
+          "ruleId": "style/quotes",
+          "severity": 2,
+          "message": "Strings must use singlequote.",
+          "line": 23,
+          "column": 16,
+          "messageId": "wrongQuotes",
+          "endLine": 23,
+          "endColumn": 58
+        },
+        {
+          "ruleId": "style/quotes",
+          "severity": 2,
+          "message": "Strings must use singlequote.",
+          "line": 25,
+          "column": 35,
+          "messageId": "wrongQuotes",
+          "endLine": 25,
+          "endColumn": 50
+        },
+        {
+          "ruleId": "style/quotes",
+          "severity": 2,
+          "message": "Strings must use singlequote.",
+          "line": 32,
+          "column": 11,
+          "messageId": "wrongQuotes",
+          "endLine": 32,
+          "endColumn": 29
+        },
+        {
+          "ruleId": "ts/no-unsafe-assignment",
+          "severity": 2,
+          "message": "Unsafe assignment of an `any` value.",
+          "line": 33,
+          "column": 5,
+          "messageId": "anyAssignment",
+          "endLine": 33,
+          "endColumn": 36
+        },
+        {
+          "ruleId": "ts/no-unsafe-assignment",
+          "severity": 2,
+          "message": "Unsafe assignment of an `any` value.",
+          "line": 34,
+          "column": 5,
+          "messageId": "anyAssignment",
+          "endLine": 34,
+          "endColumn": 44
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 35,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 35,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 38,
+          "column": 89,
+          "messageId": "missing",
+          "endLine": 39,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 42,
+          "column": 70,
+          "messageId": "missing",
+          "endLine": 42,
+          "endColumn": 71
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 43,
+          "column": 6,
+          "messageId": "missing",
+          "endLine": 44,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 47,
+          "column": 15,
+          "messageId": "missing",
+          "endLine": 48,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 48,
+          "column": 6,
+          "messageId": "missing",
+          "endLine": 49,
+          "endColumn": 1
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/nav.yml",
+      "errors": 2,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 11,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 11,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/no-multiple-empty-lines",
+          "severity": 2,
+          "message": "Too many blank lines at the end of file. Max of 0 allowed.",
+          "line": 11,
+          "column": 1,
+          "messageId": "blankEndOfFile",
+          "endLine": 12,
+          "endColumn": 1
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/sidebar.yml",
+      "errors": 10,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "yaml/plain-scalar",
+          "severity": 2,
+          "message": "Must use plain style scalar.",
+          "line": 1,
+          "column": 1,
+          "messageId": "required",
+          "endLine": 1,
+          "endColumn": 18
+        },
+        {
+          "ruleId": "yaml/quotes",
+          "severity": 2,
+          "message": "Strings must use singlequote.",
+          "line": 1,
+          "column": 1,
+          "messageId": "wrongQuotes",
+          "endLine": 1,
+          "endColumn": 18
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 3,
+          "column": 11,
+          "messageId": "trailingSpace",
+          "endLine": 3,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "yaml/plain-scalar",
+          "severity": 2,
+          "message": "Must use plain style scalar.",
+          "line": 7,
+          "column": 1,
+          "messageId": "required",
+          "endLine": 7,
+          "endColumn": 24
+        },
+        {
+          "ruleId": "yaml/quotes",
+          "severity": 2,
+          "message": "Strings must use singlequote.",
+          "line": 7,
+          "column": 1,
+          "messageId": "wrongQuotes",
+          "endLine": 7,
+          "endColumn": 24
+        },
+        {
+          "ruleId": "yaml/plain-scalar",
+          "severity": 2,
+          "message": "Must use plain style scalar.",
+          "line": 13,
+          "column": 1,
+          "messageId": "required",
+          "endLine": 13,
+          "endColumn": 16
+        },
+        {
+          "ruleId": "yaml/quotes",
+          "severity": 2,
+          "message": "Strings must use singlequote.",
+          "line": 13,
+          "column": 1,
+          "messageId": "wrongQuotes",
+          "endLine": 13,
+          "endColumn": 16
+        },
+        {
+          "ruleId": "yaml/plain-scalar",
+          "severity": 2,
+          "message": "Must use plain style scalar.",
+          "line": 23,
+          "column": 1,
+          "messageId": "required",
+          "endLine": 23,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "yaml/quotes",
+          "severity": 2,
+          "message": "Strings must use singlequote.",
+          "line": 23,
+          "column": 1,
+          "messageId": "wrongQuotes",
+          "endLine": 23,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/no-multiple-empty-lines",
+          "severity": 2,
+          "message": "Too many blank lines at the end of file. Max of 0 allowed.",
+          "line": 30,
+          "column": 1,
+          "messageId": "blankEndOfFile",
+          "endLine": 31,
+          "endColumn": 1
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/Layout.vue",
+      "errors": 2,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"vitepress\" to come before \"vitepress/theme\".",
+          "line": 3,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 3,
+          "endColumn": 36
+        },
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"vue\" (value-external) to come before \"./components/Particles.vue\" (value-sibling).",
+          "line": 5,
+          "column": 1,
+          "messageId": "unexpectedImportsGroupOrder",
+          "endLine": 5,
+          "endColumn": 31
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/components/NewPost.vue",
+      "errors": 4,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"../composables/usePostSort\" to come before \"./PostBlock.vue\".",
+          "line": 5,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 5,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"../composables/usePostFilter\" to come before \"../composables/usePostSort\".",
+          "line": 6,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 6,
+          "endColumn": 61
+        },
+        {
+          "ruleId": "style/member-delimiter-style",
+          "severity": 2,
+          "message": "Unexpected separator (,).",
+          "line": 9,
+          "column": 18,
+          "messageId": "unexpectedComma",
+          "endLine": 9,
+          "endColumn": 18
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 13,
+          "column": 22,
+          "messageId": "missing",
+          "endLine": 14,
+          "endColumn": 1
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/components/Particles.vue",
+      "errors": 22,
+      "warnings": 1,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"vitepress\" to come before \"vue\".",
+          "line": 3,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 3,
+          "endColumn": 36
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 13,
+          "column": 14,
+          "messageId": "missing",
+          "endLine": 14,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 17,
+          "column": 27,
+          "messageId": "missing",
+          "endLine": 18,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 18,
+          "column": 6,
+          "messageId": "missing",
+          "endLine": 19,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 25,
+          "column": 21,
+          "messageId": "missing",
+          "endLine": 26,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 29,
+          "column": 24,
+          "messageId": "missing",
+          "endLine": 30,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 32,
+          "column": 21,
+          "messageId": "missing",
+          "endLine": 33,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 33,
+          "column": 8,
+          "messageId": "missing",
+          "endLine": 34,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 37,
+          "column": 20,
+          "messageId": "missing",
+          "endLine": 38,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 41,
+          "column": 22,
+          "messageId": "missing",
+          "endLine": 42,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 42,
+          "column": 8,
+          "messageId": "missing",
+          "endLine": 43,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 43,
+          "column": 6,
+          "messageId": "missing",
+          "endLine": 44,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 47,
+          "column": 25,
+          "messageId": "missing",
+          "endLine": 48,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 54,
+          "column": 15,
+          "messageId": "missing",
+          "endLine": 55,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 62,
+          "column": 22,
+          "messageId": "missing",
+          "endLine": 63,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 68,
+          "column": 19,
+          "messageId": "missing",
+          "endLine": 69,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 70,
+          "column": 16,
+          "messageId": "missing",
+          "endLine": 71,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 73,
+          "column": 18,
+          "messageId": "missing",
+          "endLine": 74,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 76,
+          "column": 21,
+          "messageId": "missing",
+          "endLine": 77,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 79,
+          "column": 32,
+          "messageId": "missing",
+          "endLine": 80,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 80,
+          "column": 6,
+          "messageId": "missing",
+          "endLine": 81,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 82,
+          "column": 21,
+          "messageId": "missing",
+          "endLine": 83,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "vue/attributes-order",
+          "severity": 1,
+          "message": "Attribute \":key\" should go before \":options\".",
+          "line": 91,
+          "column": 7,
+          "messageId": "expectedOrder",
+          "endLine": 91,
+          "endColumn": 39
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/components/PostBlock.vue",
+      "errors": 10,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 20,
+          "column": 21,
+          "messageId": "missing",
+          "endLine": 21,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 26,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 26,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 29,
+          "column": 3,
+          "messageId": "sameLineClose",
+          "endLine": 29,
+          "endColumn": 4
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 32,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 32,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 36,
+          "column": 19,
+          "messageId": "missing",
+          "endLine": 37,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 64,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 64,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 154,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 154,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 159,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 159,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 167,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 167,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/eol-last",
+          "severity": 2,
+          "message": "Newline required at end of file but not found.",
+          "line": 173,
+          "column": 9,
+          "messageId": "missing"
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/components/PostCard.vue",
+      "errors": 8,
+      "warnings": 1,
+      "messages": [
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 20,
+          "column": 21,
+          "messageId": "missing",
+          "endLine": 21,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 26,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 26,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 29,
+          "column": 3,
+          "messageId": "sameLineClose",
+          "endLine": 29,
+          "endColumn": 4
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 32,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 32,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 36,
+          "column": 19,
+          "messageId": "missing",
+          "endLine": 37,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Disallow self-closing on HTML void elements (<img/>).",
+          "line": 45,
+          "column": 72,
+          "messageId": "disallowSelfClosing",
+          "endLine": 45,
+          "endColumn": 74
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 67,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 67,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 148,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 148,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/eol-last",
+          "severity": 2,
+          "message": "Newline required at end of file but not found.",
+          "line": 156,
+          "column": 9,
+          "messageId": "missing"
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/components/PostList.vue",
+      "errors": 21,
+      "warnings": 44,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-named-imports",
+          "severity": 2,
+          "message": "Expected \"computed\" to come before \"ref\".",
+          "line": 2,
+          "column": 15,
+          "messageId": "unexpectedNamedImportsOrder",
+          "endLine": 2,
+          "endColumn": 23
+        },
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"./PostBlock.vue\" to come before \"./PostCard.vue\".",
+          "line": 4,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 4,
+          "endColumn": 40
+        },
+        {
+          "ruleId": "antfu/top-level-function",
+          "severity": 2,
+          "message": "Top-level functions should be declared with function keyword",
+          "line": 36,
+          "column": 7,
+          "messageId": "topLevelFunctionDeclaration",
+          "endLine": 36,
+          "endColumn": 33
+        },
+        {
+          "ruleId": "prefer-const",
+          "severity": 2,
+          "message": "'filtered' is never reassigned. Use 'const' instead.",
+          "line": 47,
+          "column": 7,
+          "messageId": "useConst",
+          "endLine": 47,
+          "endColumn": 15
+        },
+        {
+          "ruleId": "style/arrow-parens",
+          "severity": 2,
+          "message": "Expected parentheses around arrow function argument having a body with curly braces.",
+          "line": 47,
+          "column": 37,
+          "messageId": "expectedParensBlock",
+          "endLine": 47,
+          "endColumn": 41
+        },
+        {
+          "ruleId": "antfu/if-newline",
+          "severity": 2,
+          "message": "Expect newline after if",
+          "line": 49,
+          "column": 11,
+          "messageId": "missingIfNewline",
+          "endLine": 49,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 54,
+          "column": 5,
+          "messageId": "sameLineClose",
+          "endLine": 54,
+          "endColumn": 6
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 65,
+          "column": 5,
+          "messageId": "sameLineClose",
+          "endLine": 65,
+          "endColumn": 6
+        },
+        {
+          "ruleId": "antfu/if-newline",
+          "severity": 2,
+          "message": "Expect newline after if",
+          "line": 80,
+          "column": 34,
+          "messageId": "missingIfNewline",
+          "endLine": 80,
+          "endColumn": 36
+        },
+        {
+          "ruleId": "style/arrow-parens",
+          "severity": 2,
+          "message": "Expected parentheses around arrow function argument having a body with curly braces.",
+          "line": 84,
+          "column": 32,
+          "messageId": "expectedParensBlock",
+          "endLine": 84,
+          "endColumn": 36
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 90,
+          "column": 18,
+          "messageId": "missing",
+          "endLine": 91,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "unused-imports/no-unused-vars",
+          "severity": 2,
+          "message": "'name' is defined but never used. Allowed unused args must match /^_/u.",
+          "line": 96,
+          "column": 45,
+          "messageId": "unusedVar",
+          "endLine": 96,
+          "endColumn": 49
+        },
+        {
+          "ruleId": "antfu/top-level-function",
+          "severity": 2,
+          "message": "Top-level functions should be declared with function keyword",
+          "line": 103,
+          "column": 7,
+          "messageId": "topLevelFunctionDeclaration",
+          "endLine": 103,
+          "endColumn": 30
+        },
+        {
+          "ruleId": "antfu/top-level-function",
+          "severity": 2,
+          "message": "Top-level functions should be declared with function keyword",
+          "line": 107,
+          "column": 7,
+          "messageId": "topLevelFunctionDeclaration",
+          "endLine": 107,
+          "endColumn": 31
+        },
+        {
+          "ruleId": "antfu/top-level-function",
+          "severity": 2,
+          "message": "Top-level functions should be declared with function keyword",
+          "line": 111,
+          "column": 7,
+          "messageId": "topLevelFunctionDeclaration",
+          "endLine": 111,
+          "endColumn": 30
+        },
+        {
+          "ruleId": "vue/attributes-order",
+          "severity": 1,
+          "message": "Attribute \"v-if\" should go before \"class\".",
+          "line": 119,
+          "column": 35,
+          "messageId": "expectedOrder",
+          "endLine": 119,
+          "endColumn": 67
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<circle>).",
+          "line": 122,
+          "column": 41,
+          "messageId": "requireSelfClosing",
+          "endLine": 122,
+          "endColumn": 50
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 123,
+          "column": 55,
+          "messageId": "requireSelfClosing",
+          "endLine": 123,
+          "endColumn": 62
+        },
+        {
+          "ruleId": "vue/first-attribute-linebreak",
+          "severity": 1,
+          "message": "Expected a linebreak before this attribute.",
+          "line": 125,
+          "column": 16,
+          "messageId": "expected",
+          "endLine": 125,
+          "endColumn": 37
+        },
+        {
+          "ruleId": "vue/html-indent",
+          "severity": 2,
+          "message": "Expected indentation of 15 spaces but found 10 spaces.",
+          "line": 126,
+          "column": 1,
+          "endLine": 126,
+          "endColumn": 11
+        },
+        {
+          "ruleId": "vue/html-closing-bracket-newline",
+          "severity": 1,
+          "message": "Expected 1 line break before closing bracket, but no line breaks found.",
+          "line": 126,
+          "column": 31,
+          "messageId": "expectedBeforeClosingBracket",
+          "endLine": 126,
+          "endColumn": 32
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Disallow self-closing on HTML void elements (<input/>).",
+          "line": 126,
+          "column": 32,
+          "messageId": "disallowSelfClosing",
+          "endLine": 126,
+          "endColumn": 34
+        },
+        {
+          "ruleId": "vue/attributes-order",
+          "severity": 1,
+          "message": "Attribute \":title\" should go before \"@click\".",
+          "line": 130,
+          "column": 61,
+          "messageId": "expectedOrder",
+          "endLine": 130,
+          "endColumn": 113
+        },
+        {
+          "ruleId": "vue/first-attribute-linebreak",
+          "severity": 1,
+          "message": "Expected a linebreak before this attribute.",
+          "line": 131,
+          "column": 16,
+          "messageId": "expected",
+          "endLine": 131,
+          "endColumn": 42
+        },
+        {
+          "ruleId": "vue/html-indent",
+          "severity": 2,
+          "message": "Expected indentation of 15 spaces but found 12 spaces.",
+          "line": 132,
+          "column": 1,
+          "endLine": 132,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "vue/html-closing-bracket-newline",
+          "severity": 1,
+          "message": "Expected 1 line break before closing bracket, but no line breaks found.",
+          "line": 132,
+          "column": 29,
+          "messageId": "expectedBeforeClosingBracket",
+          "endLine": 132,
+          "endColumn": 29
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 133,
+          "column": 48,
+          "messageId": "requireSelfClosing",
+          "endLine": 133,
+          "endColumn": 55
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 134,
+          "column": 50,
+          "messageId": "requireSelfClosing",
+          "endLine": 134,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 135,
+          "column": 50,
+          "messageId": "requireSelfClosing",
+          "endLine": 135,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 136,
+          "column": 50,
+          "messageId": "requireSelfClosing",
+          "endLine": 136,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 137,
+          "column": 52,
+          "messageId": "requireSelfClosing",
+          "endLine": 137,
+          "endColumn": 59
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 138,
+          "column": 52,
+          "messageId": "requireSelfClosing",
+          "endLine": 138,
+          "endColumn": 59
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<rect>).",
+          "line": 141,
+          "column": 52,
+          "messageId": "requireSelfClosing",
+          "endLine": 141,
+          "endColumn": 59
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<rect>).",
+          "line": 142,
+          "column": 53,
+          "messageId": "requireSelfClosing",
+          "endLine": 142,
+          "endColumn": 60
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<rect>).",
+          "line": 143,
+          "column": 54,
+          "messageId": "requireSelfClosing",
+          "endLine": 143,
+          "endColumn": 61
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<rect>).",
+          "line": 144,
+          "column": 53,
+          "messageId": "requireSelfClosing",
+          "endLine": 144,
+          "endColumn": 60
+        },
+        {
+          "ruleId": "vue/attributes-order",
+          "severity": 1,
+          "message": "Attribute \"title\" should go before \"@click\".",
+          "line": 148,
+          "column": 61,
+          "messageId": "expectedOrder",
+          "endLine": 148,
+          "endColumn": 75
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<polyline>).",
+          "line": 151,
+          "column": 47,
+          "messageId": "requireSelfClosing",
+          "endLine": 151,
+          "endColumn": 58
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 152,
+          "column": 49,
+          "messageId": "requireSelfClosing",
+          "endLine": 152,
+          "endColumn": 56
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<polyline>).",
+          "line": 153,
+          "column": 50,
+          "messageId": "requireSelfClosing",
+          "endLine": 153,
+          "endColumn": 61
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 154,
+          "column": 51,
+          "messageId": "requireSelfClosing",
+          "endLine": 154,
+          "endColumn": 58
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 155,
+          "column": 47,
+          "messageId": "requireSelfClosing",
+          "endLine": 155,
+          "endColumn": 54
+        },
+        {
+          "ruleId": "vue/attributes-order",
+          "severity": 1,
+          "message": "Attribute \"title\" should go before \"@click\".",
+          "line": 159,
+          "column": 62,
+          "messageId": "expectedOrder",
+          "endLine": 159,
+          "endColumn": 75
+        },
+        {
+          "ruleId": "vue/first-attribute-linebreak",
+          "severity": 1,
+          "message": "Expected a linebreak before this attribute.",
+          "line": 161,
+          "column": 16,
+          "messageId": "expected",
+          "endLine": 161,
+          "endColumn": 42
+        },
+        {
+          "ruleId": "vue/html-indent",
+          "severity": 2,
+          "message": "Expected indentation of 15 spaces but found 12 spaces.",
+          "line": 162,
+          "column": 1,
+          "endLine": 162,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "vue/html-closing-bracket-newline",
+          "severity": 1,
+          "message": "Expected 1 line break before closing bracket, but no line breaks found.",
+          "line": 162,
+          "column": 29,
+          "messageId": "expectedBeforeClosingBracket",
+          "endLine": 162,
+          "endColumn": 29
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 163,
+          "column": 50,
+          "messageId": "requireSelfClosing",
+          "endLine": 163,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<polyline>).",
+          "line": 164,
+          "column": 48,
+          "messageId": "requireSelfClosing",
+          "endLine": 164,
+          "endColumn": 59
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<line>).",
+          "line": 167,
+          "column": 50,
+          "messageId": "requireSelfClosing",
+          "endLine": 167,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on SVG elements (<polyline>).",
+          "line": 168,
+          "column": 49,
+          "messageId": "requireSelfClosing",
+          "endLine": 168,
+          "endColumn": 60
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Require self-closing on HTML elements (<span>).",
+          "line": 181,
+          "column": 48,
+          "messageId": "requireSelfClosing",
+          "endLine": 181,
+          "endColumn": 55
+        },
+        {
+          "ruleId": "vue/first-attribute-linebreak",
+          "severity": 1,
+          "message": "Expected a linebreak before this attribute.",
+          "line": 185,
+          "column": 26,
+          "messageId": "expected",
+          "endLine": 185,
+          "endColumn": 74
+        },
+        {
+          "ruleId": "vue/html-indent",
+          "severity": 2,
+          "message": "Expected indentation of 25 spaces but found 16 spaces.",
+          "line": 186,
+          "column": 1,
+          "endLine": 186,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "vue/attribute-hyphenation",
+          "severity": 1,
+          "message": "Attribute ':showCategory' must be hyphenated.",
+          "line": 186,
+          "column": 30,
+          "messageId": "mustBeHyphenated",
+          "endLine": 186,
+          "endColumn": 51
+        },
+        {
+          "ruleId": "vue/html-closing-bracket-newline",
+          "severity": 1,
+          "message": "Expected 1 line break before closing bracket, but no line breaks found.",
+          "line": 186,
+          "column": 51,
+          "messageId": "expectedBeforeClosingBracket",
+          "endLine": 186,
+          "endColumn": 52
+        },
+        {
+          "ruleId": "vue/first-attribute-linebreak",
+          "severity": 1,
+          "message": "Expected a linebreak before this attribute.",
+          "line": 194,
+          "column": 24,
+          "messageId": "expected",
+          "endLine": 194,
+          "endColumn": 72
+        },
+        {
+          "ruleId": "vue/html-indent",
+          "severity": 2,
+          "message": "Expected indentation of 23 spaces but found 14 spaces.",
+          "line": 195,
+          "column": 1,
+          "endLine": 195,
+          "endColumn": 15
+        },
+        {
+          "ruleId": "vue/attribute-hyphenation",
+          "severity": 1,
+          "message": "Attribute ':showCategory' must be hyphenated.",
+          "line": 195,
+          "column": 28,
+          "messageId": "mustBeHyphenated",
+          "endLine": 195,
+          "endColumn": 48
+        },
+        {
+          "ruleId": "vue/html-closing-bracket-newline",
+          "severity": 1,
+          "message": "Expected 1 line break before closing bracket, but no line breaks found.",
+          "line": 195,
+          "column": 48,
+          "messageId": "expectedBeforeClosingBracket",
+          "endLine": 195,
+          "endColumn": 49
+        },
+        {
+          "ruleId": "vue/singleline-html-element-content-newline",
+          "severity": 1,
+          "message": "Expected 1 line break after opening tag (`<div>`), but no line breaks found.",
+          "line": 203,
+          "column": 33,
+          "messageId": "unexpectedAfterClosingBracket",
+          "endLine": 203,
+          "endColumn": 33
+        },
+        {
+          "ruleId": "vue/singleline-html-element-content-newline",
+          "severity": 1,
+          "message": "Expected 1 line break before closing tag (`</div>`), but no line breaks found.",
+          "line": 203,
+          "column": 35,
+          "messageId": "unexpectedBeforeOpeningBracket",
+          "endLine": 203,
+          "endColumn": 35
+        },
+        {
+          "ruleId": "vue/singleline-html-element-content-newline",
+          "severity": 1,
+          "message": "Expected 1 line break after opening tag (`<p>`), but no line breaks found.",
+          "line": 204,
+          "column": 23,
+          "messageId": "unexpectedAfterClosingBracket",
+          "endLine": 204,
+          "endColumn": 23
+        },
+        {
+          "ruleId": "vue/html-self-closing",
+          "severity": 1,
+          "message": "Disallow self-closing on HTML void elements (<br/>).",
+          "line": 204,
+          "column": 40,
+          "messageId": "disallowSelfClosing",
+          "endLine": 204,
+          "endColumn": 42
+        },
+        {
+          "ruleId": "vue/singleline-html-element-content-newline",
+          "severity": 1,
+          "message": "Expected 1 line break before closing tag (`</p>`), but no line breaks found.",
+          "line": 204,
+          "column": 54,
+          "messageId": "unexpectedBeforeOpeningBracket",
+          "endLine": 204,
+          "endColumn": 54
+        },
+        {
+          "ruleId": "style/eol-last",
+          "severity": 2,
+          "message": "Newline required at end of file but not found.",
+          "line": 396,
+          "column": 9,
+          "messageId": "missing"
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/components/__tests__/Particles.spec.ts",
+      "errors": 24,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-named-imports",
+          "severity": 2,
+          "message": "Expected \"expect\" to come before \"it\".",
+          "line": 1,
+          "column": 24,
+          "messageId": "unexpectedNamedImportsOrder",
+          "endLine": 1,
+          "endColumn": 30
+        },
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"@vue/test-utils\" to come before \"vitest\".",
+          "line": 2,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 2,
+          "endColumn": 40
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 8,
+          "column": 29,
+          "messageId": "missing",
+          "endLine": 9,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 9,
+          "column": 5,
+          "messageId": "missing",
+          "endLine": 10,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/no-multiple-empty-lines",
+          "severity": 2,
+          "message": "More than 1 blank line not allowed.",
+          "line": 12,
+          "column": 1,
+          "messageId": "consecutiveBlank",
+          "endLine": 13,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "test/prefer-lowercase-title",
+          "severity": 2,
+          "message": "`describe`s should begin with lowercase",
+          "line": 13,
+          "column": 10,
+          "messageId": "lowerCaseTitle",
+          "endLine": 13,
+          "endColumn": 25
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 17,
+          "column": 23,
+          "messageId": "missing",
+          "endLine": 18,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 24,
+          "column": 44,
+          "messageId": "missing",
+          "endLine": 25,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/quote-props",
+          "severity": 2,
+          "message": "Properties shouldn't be quoted as all quotes are redundant.",
+          "line": 27,
+          "column": 11,
+          "messageId": "redundantQuoting",
+          "endLine": 29,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 28,
+          "column": 33,
+          "messageId": "missing",
+          "endLine": 29,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 29,
+          "column": 12,
+          "messageId": "missing",
+          "endLine": 30,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 30,
+          "column": 10,
+          "messageId": "missing",
+          "endLine": 31,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 31,
+          "column": 8,
+          "messageId": "missing",
+          "endLine": 32,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 33,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 33,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 42,
+          "column": 44,
+          "messageId": "missing",
+          "endLine": 43,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/quote-props",
+          "severity": 2,
+          "message": "Properties shouldn't be quoted as all quotes are redundant.",
+          "line": 45,
+          "column": 11,
+          "messageId": "redundantQuoting",
+          "endLine": 47,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 46,
+          "column": 33,
+          "messageId": "missing",
+          "endLine": 47,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 47,
+          "column": 12,
+          "messageId": "missing",
+          "endLine": 48,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 48,
+          "column": 10,
+          "messageId": "missing",
+          "endLine": 49,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 49,
+          "column": 8,
+          "messageId": "missing",
+          "endLine": 50,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 51,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 51,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 54,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 54,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "ts/no-unsafe-assignment",
+          "severity": 2,
+          "message": "Unsafe assignment of an `any` value.",
+          "line": 55,
+          "column": 11,
+          "messageId": "anyAssignment",
+          "endLine": 55,
+          "endColumn": 56
+        },
+        {
+          "ruleId": "ts/no-unsafe-member-access",
+          "severity": 2,
+          "message": "Unsafe member access .particles on an `any` value.",
+          "line": 58,
+          "column": 20,
+          "messageId": "unsafeMemberExpression",
+          "endLine": 58,
+          "endColumn": 29
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/composables/usePostFilter.ts",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"vue\" (type-import) to come before \"vue\" (value-external).",
+          "line": 2,
+          "column": 1,
+          "messageId": "unexpectedImportsGroupOrder",
+          "endLine": 2,
+          "endColumn": 40
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/composables/usePostSort.ts",
+      "errors": 1,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"vue\" (type-import) to come before \"vue\" (value-external).",
+          "line": 2,
+          "column": 1,
+          "messageId": "unexpectedImportsGroupOrder",
+          "endLine": 2,
+          "endColumn": 40
+        }
+      ]
+    },
+    {
+      "path": "blog/.vitepress/theme/index.ts",
+      "errors": 9,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"./components/PostCard.vue\" to come before \"./Layout.vue\".",
+          "line": 4,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 4,
+          "endColumn": 49
+        },
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"./components/PostBlock.vue\" to come before \"./components/PostCard.vue\".",
+          "line": 5,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 5,
+          "endColumn": 51
+        },
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"./components/NewPost.vue\" to come before \"./components/PostList.vue\".",
+          "line": 7,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 7,
+          "endColumn": 47
+        },
+        {
+          "ruleId": "ts/no-unsafe-assignment",
+          "severity": 2,
+          "message": "Unsafe assignment of an error typed value.",
+          "line": 13,
+          "column": 3,
+          "messageId": "anyAssignment",
+          "endLine": 13,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "object-shorthand",
+          "severity": 2,
+          "message": "Expected property shorthand.",
+          "line": 13,
+          "column": 3,
+          "messageId": "expectedPropertyShorthand",
+          "endLine": 13,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "unused-imports/no-unused-vars",
+          "severity": 2,
+          "message": "'router' is defined but never used. Allowed unused args must match /^_/u.",
+          "line": 14,
+          "column": 27,
+          "messageId": "unusedVar",
+          "endLine": 14,
+          "endColumn": 33
+        },
+        {
+          "ruleId": "unused-imports/no-unused-vars",
+          "severity": 2,
+          "message": "'siteData' is defined but never used. Allowed unused args must match /^_/u.",
+          "line": 14,
+          "column": 35,
+          "messageId": "unusedVar",
+          "endLine": 14,
+          "endColumn": 43
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 23,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 23,
+          "endColumn": 7
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 30,
+          "column": 4,
+          "messageId": "missing",
+          "endLine": 31,
+          "endColumn": 1
+        }
+      ]
+    },
+    {
+      "path": "blog/shared/posts.data.ts",
+      "errors": 23,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-named-imports",
+          "severity": 2,
+          "message": "Expected \"ContentData\" to come before \"createContentLoader\".",
+          "line": 1,
+          "column": 31,
+          "messageId": "unexpectedNamedImportsOrder",
+          "endLine": 1,
+          "endColumn": 47
+        },
+        {
+          "ruleId": "import/consistent-type-specifier-style",
+          "severity": 2,
+          "message": "Prefer using a top-level type-only import instead of inline type specifiers.",
+          "line": 1,
+          "column": 31,
+          "messageId": "topLevel",
+          "endLine": 1,
+          "endColumn": 47
+        },
+        {
+          "ruleId": "regexp/no-unused-capturing-group",
+          "severity": 2,
+          "message": "Capturing group number 1 is defined but never used.",
+          "line": 29,
+          "column": 17,
+          "messageId": "unusedCapturingGroup",
+          "endLine": 29,
+          "endColumn": 26
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 38,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 38,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 51,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 51,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "ts/strict-boolean-expressions",
+          "severity": 2,
+          "message": "Unexpected any value in array predicate return type. An explicit comparison or type conversion is required.",
+          "line": 58,
+          "column": 20,
+          "messageId": "conditionErrorAny",
+          "endLine": 58,
+          "endColumn": 54
+        },
+        {
+          "ruleId": "style/arrow-parens",
+          "severity": 2,
+          "message": "Unexpected parentheses around single function argument having a body with no curly braces.",
+          "line": 58,
+          "column": 21,
+          "messageId": "unexpectedParensInline",
+          "endLine": 58,
+          "endColumn": 25
+        },
+        {
+          "ruleId": "ts/no-unsafe-argument",
+          "severity": 2,
+          "message": "Unsafe argument of type `any` assigned to a parameter of type `string`.",
+          "line": 61,
+          "column": 42,
+          "messageId": "unsafeArgument",
+          "endLine": 61,
+          "endColumn": 67
+        },
+        {
+          "ruleId": "style/arrow-parens",
+          "severity": 2,
+          "message": "Unexpected parentheses around single function argument having a body with no curly braces.",
+          "line": 65,
+          "column": 16,
+          "messageId": "unexpectedParensInline",
+          "endLine": 65,
+          "endColumn": 20
+        },
+        {
+          "ruleId": "ts/strict-boolean-expressions",
+          "severity": 2,
+          "message": "Unexpected any value in conditional. An explicit comparison or type conversion is required.",
+          "line": 65,
+          "column": 26,
+          "messageId": "conditionErrorAny",
+          "endLine": 65,
+          "endColumn": 50
+        },
+        {
+          "ruleId": "ts/no-unsafe-assignment",
+          "severity": 2,
+          "message": "Unsafe assignment of an `any` value.",
+          "line": 72,
+          "column": 11,
+          "messageId": "anyAssignment",
+          "endLine": 72,
+          "endColumn": 49
+        },
+        {
+          "ruleId": "ts/strict-boolean-expressions",
+          "severity": 2,
+          "message": "Unexpected any value in conditional. An explicit comparison or type conversion is required.",
+          "line": 72,
+          "column": 18,
+          "messageId": "conditionErrorAny",
+          "endLine": 72,
+          "endColumn": 40
+        },
+        {
+          "ruleId": "ts/no-unsafe-assignment",
+          "severity": 2,
+          "message": "Unsafe assignment of an `any` value.",
+          "line": 74,
+          "column": 11,
+          "messageId": "anyAssignment",
+          "endLine": 74,
+          "endColumn": 65
+        },
+        {
+          "ruleId": "ts/strict-boolean-expressions",
+          "severity": 2,
+          "message": "Unexpected any value in conditional. An explicit comparison or type conversion is required.",
+          "line": 75,
+          "column": 24,
+          "messageId": "conditionErrorAny",
+          "endLine": 75,
+          "endColumn": 52
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 75,
+          "column": 52,
+          "messageId": "trailingSpace",
+          "endLine": 75,
+          "endColumn": 53
+        },
+        {
+          "ruleId": "ts/no-unsafe-argument",
+          "severity": 2,
+          "message": "Unsafe argument of type `any` assigned to a parameter of type `string | number | Date`.",
+          "line": 76,
+          "column": 24,
+          "messageId": "unsafeArgument",
+          "endLine": 76,
+          "endColumn": 52
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 76,
+          "column": 53,
+          "messageId": "trailingSpace",
+          "endLine": 76,
+          "endColumn": 54
+        },
+        {
+          "ruleId": "ts/no-unsafe-assignment",
+          "severity": 2,
+          "message": "Unsafe assignment of an `any` value.",
+          "line": 78,
+          "column": 11,
+          "messageId": "anyAssignment",
+          "endLine": 78,
+          "endColumn": 99
+        },
+        {
+          "ruleId": "ts/strict-boolean-expressions",
+          "severity": 2,
+          "message": "Unexpected any value in conditional. An explicit comparison or type conversion is required.",
+          "line": 78,
+          "column": 22,
+          "messageId": "conditionErrorAny",
+          "endLine": 78,
+          "endColumn": 48
+        },
+        {
+          "ruleId": "ts/no-unsafe-assignment",
+          "severity": 2,
+          "message": "Unsafe assignment of an `any` value.",
+          "line": 79,
+          "column": 11,
+          "messageId": "anyAssignment",
+          "endLine": 79,
+          "endColumn": 129
+        },
+        {
+          "ruleId": "ts/strict-boolean-expressions",
+          "severity": 2,
+          "message": "Unexpected any value in conditional. An explicit comparison or type conversion is required.",
+          "line": 79,
+          "column": 21,
+          "messageId": "conditionErrorAny",
+          "endLine": 79,
+          "endColumn": 46
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 86,
+          "column": 4,
+          "messageId": "missing",
+          "endLine": 87,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/eol-last",
+          "severity": 2,
+          "message": "Newline required at end of file but not found.",
+          "line": 87,
+          "column": 3,
+          "messageId": "missing"
+        }
+      ]
+    },
+    {
+      "path": "eslint.config.js",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "package.json",
+      "errors": 8,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "jsonc/sort-keys",
+          "severity": 2,
+          "message": "Expected object keys to be in specified order. 'scripts' should be after 'license'.",
+          "line": 5,
+          "column": 3,
+          "messageId": "shouldBeAfter",
+          "endLine": 5,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "jsonc/sort-keys",
+          "severity": 2,
+          "message": "Expected object keys to be in specified order. 'type' should be before 'version'.",
+          "line": 12,
+          "column": 3,
+          "messageId": "shouldBeBefore",
+          "endLine": 12,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "jsonc/sort-keys",
+          "severity": 2,
+          "message": "Expected object keys to be in specified order. 'keywords' should be after 'license'.",
+          "line": 13,
+          "column": 3,
+          "messageId": "shouldBeAfter",
+          "endLine": 13,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "jsonc/sort-keys",
+          "severity": 2,
+          "message": "Expected object keys to be in specified order. 'repository' should be after 'license'.",
+          "line": 31,
+          "column": 3,
+          "messageId": "shouldBeAfter",
+          "endLine": 31,
+          "endColumn": 15
+        },
+        {
+          "ruleId": "jsonc/sort-keys",
+          "severity": 2,
+          "message": "Expected object keys to be in specified order. 'bugs' should be after 'license'.",
+          "line": 35,
+          "column": 3,
+          "messageId": "shouldBeAfter",
+          "endLine": 35,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "jsonc/sort-keys",
+          "severity": 2,
+          "message": "Expected object keys to be in specified order. 'homepage' should be after 'license'.",
+          "line": 38,
+          "column": 3,
+          "messageId": "shouldBeAfter",
+          "endLine": 38,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "jsonc/sort-keys",
+          "severity": 2,
+          "message": "Expected object keys to be in specified order. 'packageManager' should be before 'description'.",
+          "line": 41,
+          "column": 3,
+          "messageId": "shouldBeBefore",
+          "endLine": 41,
+          "endColumn": 19
+        },
+        {
+          "ruleId": "style/eol-last",
+          "severity": 2,
+          "message": "Newline required at end of file but not found.",
+          "line": 65,
+          "column": 2,
+          "messageId": "missing"
+        }
+      ]
+    },
+    {
+      "path": "scripts/vpHelper.ts",
+      "errors": 223,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 8,
+          "column": 25,
+          "messageId": "extraSemi",
+          "endLine": 8,
+          "endColumn": 26
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 9,
+          "column": 29,
+          "messageId": "extraSemi",
+          "endLine": 9,
+          "endColumn": 30
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 10,
+          "column": 35,
+          "messageId": "extraSemi",
+          "endLine": 10,
+          "endColumn": 36
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 11,
+          "column": 41,
+          "messageId": "extraSemi",
+          "endLine": 11,
+          "endColumn": 42
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 15,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 15,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/member-delimiter-style",
+          "severity": 2,
+          "message": "Unexpected separator (;).",
+          "line": 15,
+          "column": 23,
+          "messageId": "unexpectedSemi",
+          "endLine": 15,
+          "endColumn": 23
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 16,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 16,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 17,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 17,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/member-delimiter-style",
+          "severity": 2,
+          "message": "Unexpected separator (;).",
+          "line": 17,
+          "column": 21,
+          "messageId": "unexpectedSemi",
+          "endLine": 17,
+          "endColumn": 21
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 18,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 18,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/member-delimiter-style",
+          "severity": 2,
+          "message": "Unexpected separator (;).",
+          "line": 18,
+          "column": 7,
+          "messageId": "unexpectedSemi",
+          "endLine": 18,
+          "endColumn": 7
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 19,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 19,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/member-delimiter-style",
+          "severity": 2,
+          "message": "Unexpected separator (;).",
+          "line": 19,
+          "column": 22,
+          "messageId": "unexpectedSemi",
+          "endLine": 19,
+          "endColumn": 22
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 23,
+          "column": 39,
+          "messageId": "extraSemi",
+          "endLine": 23,
+          "endColumn": 40
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 25,
+          "column": 48,
+          "messageId": "extraSemi",
+          "endLine": 25,
+          "endColumn": 49
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 29,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 29,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 30,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 30,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 31,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 31,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 32,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 32,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 32,
+          "column": 29,
+          "messageId": "missing",
+          "endLine": 32,
+          "endColumn": 30
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 33,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 33,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 34,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 34,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 34,
+          "column": 21,
+          "messageId": "missing",
+          "endLine": 35,
+          "endColumn": 1
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 35,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 35,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 35,
+          "column": 6,
+          "messageId": "extraSemi",
+          "endLine": 35,
+          "endColumn": 7
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 37,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 37,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 38,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 38,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 38,
+          "column": 31,
+          "messageId": "extraSemi",
+          "endLine": 38,
+          "endColumn": 32
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 39,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 39,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 39,
+          "column": 30,
+          "messageId": "extraSemi",
+          "endLine": 39,
+          "endColumn": 31
+        },
+        {
+          "ruleId": "style/no-multi-spaces",
+          "severity": 2,
+          "message": "Multiple spaces found before '// 是否使用了 -c'.",
+          "line": 39,
+          "column": 31,
+          "messageId": "multipleSpaces",
+          "endLine": 39,
+          "endColumn": 33
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 41,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 41,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 42,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 42,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 42,
+          "column": 28,
+          "messageId": "extraSemi",
+          "endLine": 42,
+          "endColumn": 29
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 44,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 44,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 45,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 45,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 46,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 46,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 47,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 47,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 47,
+          "column": 54,
+          "messageId": "extraSemi",
+          "endLine": 47,
+          "endColumn": 55
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 48,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 48,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 50,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 50,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 51,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 51,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 51,
+          "column": 49,
+          "messageId": "extraSemi",
+          "endLine": 51,
+          "endColumn": 50
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 52,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 52,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 52,
+          "column": 38,
+          "messageId": "extraSemi",
+          "endLine": 52,
+          "endColumn": 39
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 53,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 53,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 53,
+          "column": 20,
+          "messageId": "extraSemi",
+          "endLine": 53,
+          "endColumn": 21
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 54,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 54,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 54,
+          "column": 13,
+          "messageId": "sameLineClose",
+          "endLine": 54,
+          "endColumn": 14
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 55,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 55,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 55,
+          "column": 50,
+          "messageId": "extraSemi",
+          "endLine": 55,
+          "endColumn": 51
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 56,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 56,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 57,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 57,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 57,
+          "column": 9,
+          "messageId": "sameLineClose",
+          "endLine": 57,
+          "endColumn": 10
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 58,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 58,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 59,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 59,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 60,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 60,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 60,
+          "column": 54,
+          "messageId": "extraSemi",
+          "endLine": 60,
+          "endColumn": 55
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 61,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 61,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 63,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 63,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 64,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 64,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 65,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 65,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 65,
+          "column": 73,
+          "messageId": "extraSemi",
+          "endLine": 65,
+          "endColumn": 74
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 66,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 66,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 66,
+          "column": 37,
+          "messageId": "extraSemi",
+          "endLine": 66,
+          "endColumn": 38
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 67,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 67,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 67,
+          "column": 20,
+          "messageId": "extraSemi",
+          "endLine": 67,
+          "endColumn": 21
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 68,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 68,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 68,
+          "column": 13,
+          "messageId": "sameLineClose",
+          "endLine": 68,
+          "endColumn": 14
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 69,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 69,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 69,
+          "column": 52,
+          "messageId": "extraSemi",
+          "endLine": 69,
+          "endColumn": 53
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 70,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 70,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 71,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 71,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 71,
+          "column": 9,
+          "messageId": "sameLineClose",
+          "endLine": 71,
+          "endColumn": 10
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 72,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 72,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 73,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 73,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 74,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 74,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 74,
+          "column": 41,
+          "messageId": "extraSemi",
+          "endLine": 74,
+          "endColumn": 42
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 75,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 75,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 75,
+          "column": 13,
+          "messageId": "sameLineClose",
+          "endLine": 75,
+          "endColumn": 14
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 76,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 76,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 8 spaces but found 16.",
+          "line": 77,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 77,
+          "endColumn": 17
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 77,
+          "column": 38,
+          "messageId": "extraSemi",
+          "endLine": 77,
+          "endColumn": 39
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 78,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 78,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 79,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 79,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 80,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 80,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 81,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 81,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 81,
+          "column": 18,
+          "messageId": "extraSemi",
+          "endLine": 81,
+          "endColumn": 19
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 86,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 86,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 86,
+          "column": 27,
+          "messageId": "extraSemi",
+          "endLine": 86,
+          "endColumn": 28
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 87,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 87,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 88,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 88,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 88,
+          "column": 38,
+          "messageId": "extraSemi",
+          "endLine": 88,
+          "endColumn": 39
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 89,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 89,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 89,
+          "column": 54,
+          "messageId": "extraSemi",
+          "endLine": 89,
+          "endColumn": 55
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 91,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 91,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 92,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 92,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 93,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 93,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 94,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 94,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 94,
+          "column": 65,
+          "messageId": "extraSemi",
+          "endLine": 94,
+          "endColumn": 66
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 100,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 100,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 100,
+          "column": 30,
+          "messageId": "extraSemi",
+          "endLine": 100,
+          "endColumn": 31
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 101,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 101,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 102,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 102,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 103,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 103,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 103,
+          "column": 97,
+          "messageId": "extraSemi",
+          "endLine": 103,
+          "endColumn": 98
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 104,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 104,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 104,
+          "column": 60,
+          "messageId": "extraSemi",
+          "endLine": 104,
+          "endColumn": 61
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 106,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 106,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 107,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 107,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 108,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 108,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 108,
+          "column": 63,
+          "messageId": "extraSemi",
+          "endLine": 108,
+          "endColumn": 64
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 110,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 110,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 111,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 111,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 111,
+          "column": 42,
+          "messageId": "extraSemi",
+          "endLine": 111,
+          "endColumn": 43
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 113,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 113,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 114,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 114,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 115,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 115,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 115,
+          "column": 38,
+          "messageId": "extraSemi",
+          "endLine": 115,
+          "endColumn": 39
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 116,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 116,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 118,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 118,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 119,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 119,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 119,
+          "column": 39,
+          "messageId": "extraSemi",
+          "endLine": 119,
+          "endColumn": 40
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 124,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 124,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 125,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 125,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 125,
+          "column": 49,
+          "messageId": "extraSemi",
+          "endLine": 125,
+          "endColumn": 50
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 127,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 127,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 128,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 128,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 128,
+          "column": 63,
+          "messageId": "extraSemi",
+          "endLine": 128,
+          "endColumn": 64
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 130,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 130,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 131,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 131,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 132,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 132,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "unicorn/escape-case",
+          "severity": 2,
+          "message": "Use uppercase characters for the value of the escape sequence.",
+          "line": 132,
+          "column": 27,
+          "messageId": "escape-uppercase",
+          "endLine": 132,
+          "endColumn": 46
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 132,
+          "column": 61,
+          "messageId": "extraSemi",
+          "endLine": 132,
+          "endColumn": 62
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 133,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 133,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 133,
+          "column": 108,
+          "messageId": "extraSemi",
+          "endLine": 133,
+          "endColumn": 109
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 134,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 134,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 134,
+          "column": 28,
+          "messageId": "extraSemi",
+          "endLine": 134,
+          "endColumn": 29
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 135,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 135,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 137,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 137,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 138,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 138,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "unicorn/escape-case",
+          "severity": 2,
+          "message": "Use uppercase characters for the value of the escape sequence.",
+          "line": 138,
+          "column": 27,
+          "messageId": "escape-uppercase",
+          "endLine": 138,
+          "endColumn": 46
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 138,
+          "column": 75,
+          "messageId": "extraSemi",
+          "endLine": 138,
+          "endColumn": 76
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 139,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 139,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 139,
+          "column": 28,
+          "messageId": "extraSemi",
+          "endLine": 139,
+          "endColumn": 29
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 140,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 140,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 142,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 142,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 143,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 143,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 143,
+          "column": 66,
+          "messageId": "extraSemi",
+          "endLine": 143,
+          "endColumn": 67
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 145,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 145,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 146,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 146,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/arrow-parens",
+          "severity": 2,
+          "message": "Unexpected parentheses around single function argument having a body with no curly braces.",
+          "line": 146,
+          "column": 54,
+          "messageId": "unexpectedParensInline",
+          "endLine": 146,
+          "endColumn": 58
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 146,
+          "column": 82,
+          "messageId": "extraSemi",
+          "endLine": 146,
+          "endColumn": 83
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 148,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 148,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 149,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 149,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 149,
+          "column": 38,
+          "messageId": "extraSemi",
+          "endLine": 149,
+          "endColumn": 39
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 150,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 150,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 150,
+          "column": 61,
+          "messageId": "extraSemi",
+          "endLine": 150,
+          "endColumn": 62
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 151,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 151,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 152,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 152,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 153,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 153,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 153,
+          "column": 46,
+          "messageId": "extraSemi",
+          "endLine": 153,
+          "endColumn": 47
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 153,
+          "column": 47,
+          "messageId": "trailingSpace",
+          "endLine": 153,
+          "endColumn": 48
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 154,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 154,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 154,
+          "column": 56,
+          "messageId": "extraSemi",
+          "endLine": 154,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 156,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 156,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 157,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 157,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 157,
+          "column": 76,
+          "messageId": "extraSemi",
+          "endLine": 157,
+          "endColumn": 77
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 158,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 158,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 158,
+          "column": 81,
+          "messageId": "extraSemi",
+          "endLine": 158,
+          "endColumn": 82
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 160,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 160,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 161,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 161,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 161,
+          "column": 47,
+          "messageId": "extraSemi",
+          "endLine": 161,
+          "endColumn": 48
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 162,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 162,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 163,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 163,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 171,
+          "column": 2,
+          "messageId": "extraSemi",
+          "endLine": 171,
+          "endColumn": 3
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 173,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 173,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 175,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 175,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 176,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 176,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 177,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 177,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 177,
+          "column": 54,
+          "messageId": "extraSemi",
+          "endLine": 177,
+          "endColumn": 55
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 178,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 178,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 178,
+          "column": 57,
+          "messageId": "extraSemi",
+          "endLine": 178,
+          "endColumn": 58
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 179,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 179,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 181,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 181,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 182,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 182,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 183,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 183,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "unicorn/escape-case",
+          "severity": 2,
+          "message": "Use uppercase characters for the value of the escape sequence.",
+          "line": 183,
+          "column": 27,
+          "messageId": "escape-uppercase",
+          "endLine": 183,
+          "endColumn": 46
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 183,
+          "column": 101,
+          "messageId": "extraSemi",
+          "endLine": 183,
+          "endColumn": 102
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 184,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 184,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 184,
+          "column": 28,
+          "messageId": "extraSemi",
+          "endLine": 184,
+          "endColumn": 29
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 185,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 185,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 187,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 187,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 188,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 188,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 188,
+          "column": 56,
+          "messageId": "extraSemi",
+          "endLine": 188,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 190,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 190,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 191,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 191,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 191,
+          "column": 56,
+          "messageId": "extraSemi",
+          "endLine": 191,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 193,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 193,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "unicorn/escape-case",
+          "severity": 2,
+          "message": "Use uppercase characters for the value of the escape sequence.",
+          "line": 193,
+          "column": 21,
+          "messageId": "escape-uppercase",
+          "endLine": 193,
+          "endColumn": 40
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 193,
+          "column": 55,
+          "messageId": "extraSemi",
+          "endLine": 193,
+          "endColumn": 56
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 194,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 194,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 194,
+          "column": 42,
+          "messageId": "extraSemi",
+          "endLine": 194,
+          "endColumn": 43
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 195,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 195,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 195,
+          "column": 48,
+          "messageId": "extraSemi",
+          "endLine": 195,
+          "endColumn": 49
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 196,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 196,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 196,
+          "column": 45,
+          "messageId": "extraSemi",
+          "endLine": 196,
+          "endColumn": 46
+        },
+        {
+          "ruleId": "style/padded-blocks",
+          "severity": 2,
+          "message": "Block must not be padded by blank lines.",
+          "line": 196,
+          "column": 46,
+          "messageId": "extraPadBlock",
+          "endLine": 198,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 198,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 198,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/brace-style",
+          "severity": 2,
+          "message": "Closing curly brace appears on the same line as the subsequent block.",
+          "line": 198,
+          "column": 5,
+          "messageId": "sameLineClose",
+          "endLine": 198,
+          "endColumn": 6
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 199,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 199,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "unicorn/escape-case",
+          "severity": 2,
+          "message": "Use uppercase characters for the value of the escape sequence.",
+          "line": 199,
+          "column": 23,
+          "messageId": "escape-uppercase",
+          "endLine": 199,
+          "endColumn": 42
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 199,
+          "column": 54,
+          "messageId": "extraSemi",
+          "endLine": 199,
+          "endColumn": 55
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 200,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 200,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "ts/no-unsafe-member-access",
+          "severity": 2,
+          "message": "Unsafe member access .message on an `any` value.",
+          "line": 200,
+          "column": 29,
+          "messageId": "unsafeMemberExpression",
+          "endLine": 200,
+          "endColumn": 36
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 200,
+          "column": 37,
+          "messageId": "extraSemi",
+          "endLine": 200,
+          "endColumn": 38
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 201,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 201,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 201,
+          "column": 24,
+          "messageId": "extraSemi",
+          "endLine": 201,
+          "endColumn": 25
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 202,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 202,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 206,
+          "column": 72,
+          "messageId": "extraSemi",
+          "endLine": 206,
+          "endColumn": 73
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 208,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 208,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 208,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 208,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/eol-last",
+          "severity": 2,
+          "message": "Newline required at end of file but not found.",
+          "line": 209,
+          "column": 2,
+          "messageId": "missing"
+        }
+      ]
+    },
+    {
+      "path": "tests/vpHelper.vitest.ts",
+      "errors": 132,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-named-imports",
+          "severity": 2,
+          "message": "Expected \"expect\" to come before \"it\".",
+          "line": 1,
+          "column": 24,
+          "messageId": "unexpectedNamedImportsOrder",
+          "endLine": 1,
+          "endColumn": 30
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 1,
+          "column": 46,
+          "messageId": "extraSemi",
+          "endLine": 1,
+          "endColumn": 47
+        },
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"node:path\" (value-builtin) to come before \"vitest\" (value-external).",
+          "line": 2,
+          "column": 1,
+          "messageId": "unexpectedImportsGroupOrder",
+          "endLine": 2,
+          "endColumn": 30
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 2,
+          "column": 29,
+          "messageId": "extraSemi",
+          "endLine": 2,
+          "endColumn": 30
+        },
+        {
+          "ruleId": "perfectionist/sort-named-imports",
+          "severity": 2,
+          "message": "Expected \"getFormattedDate\" to come before \"parseArgs\".",
+          "line": 3,
+          "column": 21,
+          "messageId": "unexpectedNamedImportsOrder",
+          "endLine": 3,
+          "endColumn": 37
+        },
+        {
+          "ruleId": "perfectionist/sort-named-imports",
+          "severity": 2,
+          "message": "Expected \"getAssetFolderName\" to come before \"getFormattedDate\".",
+          "line": 3,
+          "column": 39,
+          "messageId": "unexpectedNamedImportsOrder",
+          "endLine": 3,
+          "endColumn": 57
+        },
+        {
+          "ruleId": "perfectionist/sort-named-imports",
+          "severity": 2,
+          "message": "Expected \"DEFAULT_DIR\" to come before \"getAssetFolderName\".",
+          "line": 3,
+          "column": 59,
+          "messageId": "unexpectedNamedImportsOrder",
+          "endLine": 3,
+          "endColumn": 70
+        },
+        {
+          "ruleId": "unused-imports/no-unused-imports",
+          "severity": 2,
+          "message": "'DEFAULT_DIR' is defined but never used.",
+          "line": 3,
+          "column": 59,
+          "messageId": "unusedVar",
+          "endLine": 3,
+          "endColumn": 70
+        },
+        {
+          "ruleId": "perfectionist/sort-named-imports",
+          "severity": 2,
+          "message": "Expected \"ASSETS_ROOT\" to come before \"DEFAULT_DIR\".",
+          "line": 3,
+          "column": 72,
+          "messageId": "unexpectedNamedImportsOrder",
+          "endLine": 3,
+          "endColumn": 83
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 3,
+          "column": 112,
+          "messageId": "extraSemi",
+          "endLine": 3,
+          "endColumn": 113
+        },
+        {
+          "ruleId": "style/padded-blocks",
+          "severity": 2,
+          "message": "Block must not be padded by blank lines.",
+          "line": 5,
+          "column": 28,
+          "messageId": "extraPadBlock",
+          "endLine": 7,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 6,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 6,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 7,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 7,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 8,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 8,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 9,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 9,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 10,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 10,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 11,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 11,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 12,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 12,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 12,
+          "column": 54,
+          "messageId": "extraSemi",
+          "endLine": 12,
+          "endColumn": 55
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 13,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 13,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 13,
+          "column": 43,
+          "messageId": "extraSemi",
+          "endLine": 13,
+          "endColumn": 44
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 14,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 14,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 14,
+          "column": 60,
+          "messageId": "extraSemi",
+          "endLine": 14,
+          "endColumn": 61
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 15,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 15,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 15,
+          "column": 54,
+          "messageId": "extraSemi",
+          "endLine": 15,
+          "endColumn": 55
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 16,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 16,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 16,
+          "column": 57,
+          "messageId": "extraSemi",
+          "endLine": 16,
+          "endColumn": 58
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 17,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 17,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 17,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 17,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 18,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 18,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 9.",
+          "line": 19,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 19,
+          "endColumn": 10
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 20,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 20,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 20,
+          "column": 81,
+          "messageId": "extraSemi",
+          "endLine": 20,
+          "endColumn": 82
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 21,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 21,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 21,
+          "column": 71,
+          "messageId": "extraSemi",
+          "endLine": 21,
+          "endColumn": 72
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 22,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 22,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 22,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 22,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 23,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 23,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 23,
+          "column": 7,
+          "messageId": "extraSemi",
+          "endLine": 23,
+          "endColumn": 8
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 25,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 25,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 26,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 26,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 27,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 27,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 27,
+          "column": 47,
+          "messageId": "extraSemi",
+          "endLine": 27,
+          "endColumn": 48
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 28,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 28,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 28,
+          "column": 73,
+          "messageId": "extraSemi",
+          "endLine": 28,
+          "endColumn": 74
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 29,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 29,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 29,
+          "column": 43,
+          "messageId": "extraSemi",
+          "endLine": 29,
+          "endColumn": 44
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 30,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 30,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 30,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 30,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 31,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 31,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 31,
+          "column": 7,
+          "messageId": "extraSemi",
+          "endLine": 31,
+          "endColumn": 8
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 33,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 33,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 34,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 34,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 13.",
+          "line": 35,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 35,
+          "endColumn": 14
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 35,
+          "column": 60,
+          "messageId": "extraSemi",
+          "endLine": 35,
+          "endColumn": 61
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 36,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 36,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 36,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 36,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 37,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 37,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 37,
+          "column": 7,
+          "messageId": "extraSemi",
+          "endLine": 37,
+          "endColumn": 8
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 39,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 39,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 40,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 40,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/no-trailing-spaces",
+          "severity": 2,
+          "message": "Trailing spaces not allowed.",
+          "line": 41,
+          "column": 1,
+          "messageId": "trailingSpace",
+          "endLine": 41,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 42,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 42,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 43,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 43,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 44,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 44,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 44,
+          "column": 42,
+          "messageId": "extraSemi",
+          "endLine": 44,
+          "endColumn": 43
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 45,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 45,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 45,
+          "column": 37,
+          "messageId": "extraSemi",
+          "endLine": 45,
+          "endColumn": 38
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 46,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 46,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 46,
+          "column": 42,
+          "messageId": "extraSemi",
+          "endLine": 46,
+          "endColumn": 43
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 47,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 47,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 47,
+          "column": 75,
+          "messageId": "extraSemi",
+          "endLine": 47,
+          "endColumn": 76
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 48,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 48,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 48,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 48,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 50,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 50,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 51,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 51,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 52,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 52,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 52,
+          "column": 48,
+          "messageId": "extraSemi",
+          "endLine": 52,
+          "endColumn": 49
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 53,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 53,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 53,
+          "column": 37,
+          "messageId": "extraSemi",
+          "endLine": 53,
+          "endColumn": 38
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 54,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 54,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 54,
+          "column": 48,
+          "messageId": "extraSemi",
+          "endLine": 54,
+          "endColumn": 49
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 55,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 55,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 55,
+          "column": 75,
+          "messageId": "extraSemi",
+          "endLine": 55,
+          "endColumn": 76
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 56,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 56,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 56,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 56,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 58,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 58,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 59,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 59,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 60,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 60,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 60,
+          "column": 47,
+          "messageId": "extraSemi",
+          "endLine": 60,
+          "endColumn": 48
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 61,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 61,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 61,
+          "column": 43,
+          "messageId": "extraSemi",
+          "endLine": 61,
+          "endColumn": 44
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 62,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 62,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 62,
+          "column": 53,
+          "messageId": "extraSemi",
+          "endLine": 62,
+          "endColumn": 54
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 63,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 63,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 63,
+          "column": 75,
+          "messageId": "extraSemi",
+          "endLine": 63,
+          "endColumn": 76
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 64,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 64,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 64,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 64,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 66,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 66,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 67,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 67,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 68,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 68,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 69,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 69,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 69,
+          "column": 37,
+          "messageId": "extraSemi",
+          "endLine": 69,
+          "endColumn": 38
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 70,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 70,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 70,
+          "column": 44,
+          "messageId": "extraSemi",
+          "endLine": 70,
+          "endColumn": 45
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 71,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 71,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 71,
+          "column": 49,
+          "messageId": "extraSemi",
+          "endLine": 71,
+          "endColumn": 50
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 72,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 72,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 72,
+          "column": 75,
+          "messageId": "extraSemi",
+          "endLine": 72,
+          "endColumn": 76
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 73,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 73,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 73,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 73,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 75,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 75,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 76,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 76,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 77,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 77,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 78,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 78,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 79,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 79,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "node/prefer-global/process",
+          "severity": 2,
+          "message": "Unexpected use of the global variable 'process'. Use 'require(\"process\")' instead.",
+          "line": 79,
+          "column": 25,
+          "messageId": "preferModule",
+          "endLine": 79,
+          "endColumn": 32
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 79,
+          "column": 38,
+          "messageId": "extraSemi",
+          "endLine": 79,
+          "endColumn": 39
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 80,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 80,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 80,
+          "column": 62,
+          "messageId": "extraSemi",
+          "endLine": 80,
+          "endColumn": 63
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 81,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 81,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 81,
+          "column": 37,
+          "messageId": "extraSemi",
+          "endLine": 81,
+          "endColumn": 38
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 82,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 82,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 82,
+          "column": 43,
+          "messageId": "extraSemi",
+          "endLine": 82,
+          "endColumn": 44
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 6 spaces but found 12.",
+          "line": 83,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 83,
+          "endColumn": 13
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 83,
+          "column": 75,
+          "messageId": "extraSemi",
+          "endLine": 83,
+          "endColumn": 76
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 4 spaces but found 8.",
+          "line": 84,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 84,
+          "endColumn": 9
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 84,
+          "column": 11,
+          "messageId": "extraSemi",
+          "endLine": 84,
+          "endColumn": 12
+        },
+        {
+          "ruleId": "style/indent",
+          "severity": 2,
+          "message": "Expected indentation of 2 spaces but found 4.",
+          "line": 85,
+          "column": 1,
+          "messageId": "wrongIndentation",
+          "endLine": 85,
+          "endColumn": 5
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 85,
+          "column": 7,
+          "messageId": "extraSemi",
+          "endLine": 85,
+          "endColumn": 8
+        },
+        {
+          "ruleId": "style/semi",
+          "severity": 2,
+          "message": "Extra semicolon.",
+          "line": 86,
+          "column": 3,
+          "messageId": "extraSemi",
+          "endLine": 86,
+          "endColumn": 4
+        },
+        {
+          "ruleId": "style/eol-last",
+          "severity": 2,
+          "message": "Newline required at end of file but not found.",
+          "line": 86,
+          "column": 4,
+          "messageId": "missing"
+        }
+      ]
+    },
+    {
+      "path": "tsconfig.json",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "vitest.config.ts",
+      "errors": 2,
+      "warnings": 0,
+      "messages": [
+        {
+          "ruleId": "perfectionist/sort-imports",
+          "severity": 2,
+          "message": "Expected \"@vitejs/plugin-vue\" to come before \"vitest/config\".",
+          "line": 2,
+          "column": 1,
+          "messageId": "unexpectedImportsOrder",
+          "endLine": 2,
+          "endColumn": 37
+        },
+        {
+          "ruleId": "style/comma-dangle",
+          "severity": 2,
+          "message": "Missing trailing comma.",
+          "line": 10,
+          "column": 4,
+          "messageId": "missing",
+          "endLine": 11,
+          "endColumn": 1
+        }
+      ]
+    }
+  ],
+  "errors": 517,
+  "warnings": 46
+}
