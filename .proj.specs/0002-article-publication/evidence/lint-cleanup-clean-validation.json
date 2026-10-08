@@ -24,7 +24,7 @@
       ],
       "exit_code": 0,
       "log": "lint-cleanup-clean-lint.txt",
-      "log_sha256": "9ffa85fdcc0e3520c3ae80250e33afd53d0472d079d0e723e34c069aedd77842"
+      "log_sha256": "fc102968a54862361e32a7f6dccfc41cccb1761a518739a3c3b7dc903f2e54f7"
     },
     {
       "command": [
@@ -33,7 +33,7 @@
       ],
       "exit_code": 0,
       "log": "lint-cleanup-clean-vitest.txt",
-      "log_sha256": "dae380c087d75331375f5b49b3fe6a9013b496662394801a19971109e333d4dc"
+      "log_sha256": "78871a64fdf87dc448b52c591404a40975f7733f2eae2b06ef2c256640a7dd24"
     },
     {
       "command": [

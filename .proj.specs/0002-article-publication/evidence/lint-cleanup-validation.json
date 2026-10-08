@@ -37,7 +37,7 @@
     "exit_code": 0,
     "status": "pass",
     "log": "lint-cleanup-vitest.txt",
-    "log_sha256": "29b4eb5962673d451641656f3f9148c8d52402c347d4841b14ffe30ac1d016a4"
+    "log_sha256": "91f0206bb1ce0dc54449bc29749dce135a53d78d88993743458caa016308b39f"
   },
   {
     "command": [
@@ -108,12 +108,14 @@
     "command": [
       "git",
       "diff",
+      "64799e6df56cc1fab6673ce387f78794938619cb",
       "--check"
     ],
     "exit_code": 0,
     "status": "pass",
     "log": "lint-cleanup-diff.txt",
-    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scope": "Complete staging-to-final-working-tree diff, including committed publication and lint files; rechecked after correcting evidence-only EOF blanks."
   },
   {
     "command": [

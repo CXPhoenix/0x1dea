@@ -98,3 +98,13 @@ historical and bounded to its synthetic candidate.
 
 Reports and evidence paths above resolve from this epic, with log/JSON files under
 `evidence/`. Commit/branch push/draft PR do not mean merge, deployment or done.
+
+## Evidence whitespace correction
+
+The first lint commit had four new logs with an extra blank line at EOF. The
+post-commit full staging diff detected these; the earlier unstaged diff check
+did not cover untracked evidence. A separate evidence-only correction normalizes
+those endings and updates log hashes. The failing full diff is preserved in
+`evidence/lint-cleanup-commit-whitespace-red.txt`; staged and complete staging
+diff checks were rerun before push. Product code, dependencies, tests and
+preservation boundaries are unchanged by this correction.

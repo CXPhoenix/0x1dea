@@ -36,3 +36,13 @@ Vitest 14，以及 build/materializer/structure/preservation 通過。
 瀏覽器驗證。既有隔離證據只適用其合成候選，未宣稱重新做過 escape audit。
 三份 log 遮罩、hash 更新、繁中錯字及 targeted public scan 的六檔 delta
 已由兩位 reviewer 獨立補核，產品 code/tests/successor 未變。
+
+## Final evidence-only correction review
+
+After lint commit `724ddad73f8411a33c77c68d75f95b41d3af2988`, the complete
+staging diff detected four extra EOF blank lines in new logs. Independent
+Standards, Spec and security/public-information reviewers checked the seven
+tracked evidence/document changes and new portable red log. All 14 referenced
+log hashes match, no product/dependency/test/boundary changed, and no new finding
+remains. The full staging working-tree whitespace check passes. Reviewers did
+not rerun product tests or sandbox checks for this evidence-only delta.
