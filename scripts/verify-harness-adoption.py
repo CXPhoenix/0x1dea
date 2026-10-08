@@ -143,8 +143,8 @@ def check_preserved(root, baseline, exceptions):
 
 
 def allowed_new(name):
-    prefixes = ('.proj.specs/', '.proj.tickets/', 'docs/agents/', 'docs/adr/', 'docs/security/', 'maintenance/harness-adoption/', '.agents/skills/', '.claude/skills/', '.claude/agents/', '.codex/')
-    exact = {'docs/README.md', 'docs/guide.md', 'scripts/verify-project.py', 'scripts/verify-harness-adoption.py', 'scripts/materialize-writing-skills.py', 'skills-lock.json', 'THIRD_PARTY_NOTICES.md', 'CONTEXT.md', 'tests/harness_adoption/test_tracker.py', 'tests/harness_adoption/test_materializer.py', 'tests/harness_adoption/test_publication.py'}
+    prefixes = ('.proj.specs/', '.proj.tickets/', 'docs/agents/', 'docs/adr/', 'docs/security/', 'maintenance/harness-adoption/', 'maintenance/article-publication/', 'skills/managing-article-publication/', 'tests/article_publication/', '.agents/skills/', '.claude/skills/', '.claude/agents/', '.codex/')
+    exact = {'docs/README.md', 'docs/guide.md', 'scripts/verify-project.py', 'scripts/verify-harness-adoption.py', 'scripts/materialize-writing-skills.py', 'scripts/article-publication.py', 'skills-lock.json', 'THIRD_PARTY_NOTICES.md', 'CONTEXT.md', 'tests/harness_adoption/test_tracker.py', 'tests/harness_adoption/test_materializer.py', 'tests/harness_adoption/test_publication.py'}
     return name in exact or name.startswith(prefixes)
 
 
@@ -241,7 +241,7 @@ def check_framework(root):
         path = regular_path(root, name)
         if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             raise ValueError(f'framework source SHA mismatch: {name}')
-    product = {'phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post'}
+    product = {'phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post', 'managing-article-publication'}
     catalogs = {}
     for runtime in ('.agents', '.claude'):
         prefix = runtime + '/skills/'
@@ -311,6 +311,46 @@ def check_adoption_ancestry(root, baseline_commit):
     return head
 
 
+def check_lint_dependency_delta(before, after):
+    """Permit only the owner's bounded follow-up dependency addition."""
+    expected = json.loads(before)
+    current = json.loads(after)
+    dependencies = expected['devDependencies']
+    if '@unocss/eslint-plugin' in dependencies:
+        raise ValueError('lint dependency already present in baseline')
+    dependencies['@unocss/eslint-plugin'] = '66.6.0'
+    if current != expected:
+        raise ValueError('unapproved lint dependency delta')
+
+
+def phase1_preserved_updates(root, exceptions):
+    """Keep adoption evidence immutable; validate the reviewed successor projection."""
+    name='maintenance/article-publication/source-boundary.json'
+    if not (root/name).exists():
+        return exceptions
+    boundary=json.loads(regular_path(root,name).read_text())
+    base='bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0'
+    if (set(boundary)!={'version','ticket','base','preserved_updates'} or boundary['version']!=1
+            or boundary['ticket']!='T-0002' or boundary['base']!=base
+            or set(boundary['preserved_updates']) not in (
+                {'AGENTS.md'}, {'AGENTS.md', 'package.json', 'pnpm-lock.yaml'})):
+        raise ValueError('unapproved article publication source boundary')
+    if 'package.json' in boundary['preserved_updates']:
+        before=subprocess.check_output(['git','show',base+':package.json'],cwd=root)
+        check_lint_dependency_delta(before, regular_path(root,'package.json').read_bytes())
+    result={name:dict(value) for name,value in exceptions.items()}
+    for name,record in boundary['preserved_updates'].items():
+        if set(record)!={'before_sha256','after_sha256'}:
+            raise ValueError('invalid successor hash fields')
+        before=subprocess.check_output(['git','show',base+':'+name],cwd=root)
+        if (hashlib.sha256(before).hexdigest()!=record['before_sha256']
+                or (name in exceptions and record['before_sha256']!=exceptions[name]['sha256'])
+                or entry_sha(regular_path(root,name))!=record['after_sha256']):
+            raise ValueError('article publication preserved source hash mismatch: '+name)
+        result.setdefault(name, {})['sha256']=record['after_sha256']
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
@@ -324,7 +364,7 @@ def main():
     if set(delta['exceptions']) != approved_exception_names(baseline['files']):
         raise ValueError('unapproved/missing exception entry')
     check_adoption_ancestry(root, baseline['baseline'])
-    moves = check_preserved(root, baseline['files'], delta['exceptions'])
+    moves = check_preserved(root, baseline['files'], phase1_preserved_updates(root,delta['exceptions']))
     if len(moves) != 55: raise ValueError('site move count mismatch')
     baseline_names = {f['path'] for f in baseline['files']}
     moved = {m['candidate'] for m in moves}
@@ -337,10 +377,18 @@ def main():
         else:
             content = content.replace('docs', 'blog')
             if name == 'tests/vpHelper.vitest.ts': content = content.replace('expect(config.options.dir).toBe(DEFAULT_DIR);', "expect(config.options.dir).toBe('blog/post');")
-        if (root / name).read_text() != content: raise ValueError(f'nonliteral adapter change: {name}')
+        actual = (root / name).read_text()
+        boundary_path=root/'maintenance/article-publication/source-boundary.json'
+        lint_update=(name=='package.json' and boundary_path.exists()
+                     and 'package.json' in json.loads(regular_path(root,str(boundary_path.relative_to(root))).read_text())['preserved_updates'])
+        if lint_update:
+            check_lint_dependency_delta(content, actual)
+        elif actual != content:
+            raise ValueError(f'nonliteral adapter change: {name}')
     state = check_tickets(root)
     translations = list((root / '.proj.specs').glob('**/spec.zh-TW.md'))
-    if len(translations) != 7: raise ValueError('six baseline + one adoption translations required')
+    historical=[p for p in translations if p.is_relative_to(root/'.proj.specs/_baseline') or p.parent.name=='0001-harness-adoption']
+    if len(historical)!=7: raise ValueError('six baseline + one adoption translations required')
     for path in translations: check_translation(path, root)
     trace_count = check_trace(root, state['tickets'])
     print(json.dumps({'status': 'pass', 'framework': framework, 'site_moves': len(moves), 'baseline_entries': len(baseline['files']), 'translations': len(translations), 'trace_rows': trace_count, 'tracker': state}, indent=2))

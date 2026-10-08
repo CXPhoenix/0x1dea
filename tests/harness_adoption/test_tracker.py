@@ -15,6 +15,14 @@ class TrackerTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
 
+    def test_authorized_lint_dependency_is_exact_and_fail_closed(self):
+        before = '{"devDependencies":{"@types/js-yaml":"^4.0.9"}}'
+        after = '{"devDependencies":{"@types/js-yaml":"^4.0.9","@unocss/eslint-plugin":"66.6.0"}}'
+        verifier.check_lint_dependency_delta(before, after)
+        for unsafe in (after.replace('66.6.0', '66.10.5'), after.replace('^4.0.9', '^4.1.0'), after.replace('"66.6.0"', '"66.6.0","other-package":"1.0.0"'), before):
+            with self.assertRaises(ValueError):
+                verifier.check_lint_dependency_delta(before, unsafe)
+
     def ticket(self, number=1, status='todo', blockers='[]', extra=''):
         p = self.root / f'.proj.tickets/0001-demo/T-{number:04d}-demo.md'
         p.parent.mkdir(parents=True, exist_ok=True)
@@ -258,7 +266,7 @@ class FrameworkImportTests(unittest.TestCase):
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(self.source_root / name, target)
         for runtime in ('.agents', '.claude'):
-            for product in ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post'):
+            for product in ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post', 'managing-article-publication'):
                 name = f'{runtime}/skills/{product}/SKILL.md'
                 target = self.root / name
                 target.parent.mkdir(parents=True, exist_ok=True)
@@ -341,15 +349,15 @@ class FrameworkImportTests(unittest.TestCase):
         path = self.root / '.agents/skills/phoenix-writing';path.rename(self.root / 'saved-product')
         with self.assertRaisesRegex(ValueError, 'runtime skill roots'):self.guard()
         replacement = self.root / '.agents/skills/unapproved';replacement.mkdir()
-        (replacement / 'SKILL.md').write_text('Unknown despite still having 35 roots')
+        (replacement / 'SKILL.md').write_text('Unknown despite still having 36 roots')
         with self.assertRaisesRegex(ValueError, 'runtime skill roots'):self.guard()
         shutil.rmtree(replacement);(self.root / 'saved-product').rename(path)
         (path / 'SKILL.md').unlink()
         with self.assertRaisesRegex(ValueError, 'missing'):self.guard()
 
-    def test_verified_catalog_reports_35_physical_skills_per_runtime(self):
+    def test_verified_catalog_reports_36_physical_skills_per_runtime(self):
         result = self.guard()
-        self.assertEqual(result['runtime_skill_counts'], {'.agents':35, '.claude':35})
+        self.assertEqual(result['runtime_skill_counts'], {'.agents':36, '.claude':36})
         self.assertEqual(result['source_commit'],'917e6025da0901a79dda016e1ce5bd89b6e6e19f')
         self.assertEqual(result['source_digest'],'b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5')
 

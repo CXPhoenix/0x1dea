@@ -1,0 +1,24 @@
+{
+  "demo": "[local-validation-workspace]/article-publication-demo",
+  "synthetic_data_only": true,
+  "remotes": "",
+  "preview_articles": [
+    "blog/post/A.md",
+    "blog/post/B.md"
+  ],
+  "prepare_articles": [
+    "blog/post/A.md"
+  ],
+  "changed_paths": [
+    "blog/post/A.md"
+  ],
+  "candidate_tree": "8dbcb02b3a5ea08c61bd924beb697196e0436274",
+  "independent_article_tree": "8dbcb02b3a5ea08c61bd924beb697196e0436274",
+  "tree_equal": true,
+  "verify": {
+    "candidate_tree": "8dbcb02b3a5ea08c61bd924beb697196e0436274",
+    "publishable": false,
+    "verified": true
+  },
+  "product_commits": 0
+}

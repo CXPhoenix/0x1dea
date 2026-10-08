@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate pinned inputs and materialize the three owned physical skill packages.
+"""Validate pinned inputs and materialize the owned physical product skill packages.
 
 No dependency installation, symlink traversal, or implicit source repinning. Edit the
 canonical files and explicitly review/update runtime-source-policy.json first.
@@ -17,7 +17,7 @@ import sys
 import tempfile
 from urllib.parse import quote, unquote, urlsplit
 
-NAMES = ("phoenix-writing", "maintaining-writing-skills", "creating-vitepress-post")
+NAMES = ("phoenix-writing", "maintaining-writing-skills", "creating-vitepress-post", "managing-article-publication")
 RUNTIMES = (".agents", ".claude")
 POLICY = "maintenance/harness-adoption/runtime-source-policy.json"
 MANIFEST = "maintenance/harness-adoption/generated-writing-manifest.json"

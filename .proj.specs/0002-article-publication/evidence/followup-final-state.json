@@ -1,0 +1,66 @@
+{
+  "commands_operational": true,
+  "installed_plugin_version": "66.6.0",
+  "review_packet_drift": false,
+  "original_repo_clean": true,
+  "original_repo_path": "[original-checkout]",
+  "isolated_repo_path": "[isolated-repository]",
+  "interrupted_installation": false,
+  "product_commits_push_or_publication": false,
+  "checks": [
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit_code": 0,
+      "stdout": " M AGENTS.md\n M docs/adr/0005-physical-product-writing-packages.md\n M docs/agents/runtime.md\n M docs/agents/skill-sources.json\n M maintenance/harness-adoption/generated-writing-manifest.json\n M maintenance/harness-adoption/runtime-source-policy.json\n M package.json\n M pnpm-lock.yaml\n M scripts/materialize-writing-skills.py\n M scripts/verify-harness-adoption.py\n M tests/harness_adoption/test_materializer.py\n M tests/harness_adoption/test_tracker.py\n?? .agents/skills/managing-article-publication/\n?? .claude/skills/managing-article-publication/\n?? .proj.specs/0002-article-publication/\n?? .proj.tickets/0002-article-publication/\n?? maintenance/article-publication/\n?? scripts/article-publication.py\n?? skills/managing-article-publication/\n?? tests/article_publication/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "HEAD",
+        "--",
+        "blog",
+        "scripts/vpHelper.ts",
+        "tests/vpHelper.vitest.ts"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/verify-harness-adoption.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"framework\": {\n    \"pinned_files\": 641,\n    \"source_commit\": \"917e6025da0901a79dda016e1ce5bd89b6e6e19f\",\n    \"source_digest\": \"b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5\",\n    \"runtime_skill_counts\": {\n      \".agents\": 36,\n      \".claude\": 36\n    }\n  },\n  \"site_moves\": 55,\n  \"baseline_entries\": 370,\n  \"translations\": 8,\n  \"trace_rows\": 113,\n  \"tracker\": {\n    \"tickets\": {\n      \"T-0001\": {\n        \"id\": \"T-0001\",\n        \"title\": \"Adopt Harness and relocate the existing website root\",\n        \"epic\": \"0001-harness-adoption\",\n        \"status\": \"review\",\n        \"blocked_by\": []\n      },\n      \"T-0002\": {\n        \"id\": \"T-0002\",\n        \"title\": \"Prepare local article preview and selected candidates\",\n        \"epic\": \"0002-article-publication\",\n        \"status\": \"review\",\n        \"blocked_by\": []\n      }\n    },\n    \"next_id\": \"T-0003\",\n    \"frontier\": [],\n    \"blocked\": {},\n    \"paused\": []\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

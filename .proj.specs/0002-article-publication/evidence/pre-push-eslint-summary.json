@@ -1,0 +1,17 @@
+[
+  {
+    "path": "package.json",
+    "errors": 8,
+    "warnings": 0
+  },
+  {
+    "path": "scripts/vpHelper.ts",
+    "errors": 223,
+    "warnings": 0
+  },
+  {
+    "path": "tests/vpHelper.vitest.ts",
+    "errors": 132,
+    "warnings": 0
+  }
+]

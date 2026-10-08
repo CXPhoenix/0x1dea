@@ -15,3 +15,12 @@ literal targets and individual regular backing files are explicitly enumerated;
 the materializer never follows them to discover inputs. Runtime trees contain none.
 Staged installation preserves old targets on failure. `--check` recomputes expected
 bytes in temporary storage without installing or silently repinning source hashes.
+
+## Phase-1 article publication extension — 2026-10-07
+
+T-0002 extends ownership to four canonical product skills by adding English
+`skills/managing-article-publication`. Its two physical runtime copies are generated
+with discoverable invocation policy, not edited independently. Source policy,
+manifest, generator and catalog verifier explicitly enumerate the fourth package.
+The three-tree Chinese exception and 32 immutable framework packages are unchanged.
+Skill invocation and local preparation receipts grant no publication authority.

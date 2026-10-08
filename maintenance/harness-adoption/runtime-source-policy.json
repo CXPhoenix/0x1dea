@@ -18,6 +18,7 @@
   "implicit": {
     "creating-vitepress-post": true,
     "maintaining-writing-skills": true,
+    "managing-article-publication": true,
     "phoenix-writing": true
   },
   "inputs": [
@@ -210,6 +211,18 @@
       "sha256": "90cabbc770cf0220ccb18e2dc567e9aeadc75487f1f052a664e0d8ce8939dda4"
     },
     {
+      "path": "skills/managing-article-publication/SKILL.md",
+      "sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2"
+    },
+    {
+      "path": "skills/managing-article-publication/references/future-actions.md",
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5"
+    },
+    {
+      "path": "skills/managing-article-publication/references/local.md",
+      "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be"
+    },
+    {
       "path": "skills/phoenix-writing/AGENTS.md",
       "sha256": "7f3f611826b9deabcf7616018af6f358517c075380632502dab3366c93c4926d"
     },
@@ -234,6 +247,7 @@
   "skills": [
     "phoenix-writing",
     "maintaining-writing-skills",
-    "creating-vitepress-post"
+    "creating-vitepress-post",
+    "managing-article-publication"
   ]
 }

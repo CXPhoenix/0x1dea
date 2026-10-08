@@ -1,0 +1,43 @@
+{
+  "status": "existing-failure",
+  "presentation": "Public diagnostic summary; detailed original output retained locally.",
+  "files": [
+    {
+      "path": "scripts/vpHelper.ts",
+      "errors": 223,
+      "warnings": 0,
+      "fatal_errors": 0,
+      "rules": {
+        "style/semi": 66,
+        "style/indent": 133,
+        "style/member-delimiter-style": 4,
+        "style/comma-dangle": 2,
+        "style/no-multi-spaces": 1,
+        "style/brace-style": 6,
+        "unicorn/escape-case": 5,
+        "style/arrow-parens": 1,
+        "style/no-trailing-spaces": 2,
+        "style/padded-blocks": 1,
+        "ts/no-unsafe-member-access": 1,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "tests/vpHelper.vitest.ts",
+      "errors": 132,
+      "warnings": 0,
+      "fatal_errors": 0,
+      "rules": {
+        "perfectionist/sort-named-imports": 5,
+        "style/semi": 49,
+        "perfectionist/sort-imports": 1,
+        "unused-imports/no-unused-imports": 1,
+        "style/padded-blocks": 1,
+        "style/no-trailing-spaces": 3,
+        "style/indent": 70,
+        "node/prefer-global/process": 1,
+        "style/eol-last": 1
+      }
+    }
+  ]
+}

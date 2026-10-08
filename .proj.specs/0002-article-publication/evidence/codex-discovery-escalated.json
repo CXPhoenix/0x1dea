@@ -1,0 +1,17 @@
+{
+  "runtime": "Codex app-server",
+  "method": "skills/list",
+  "fresh_reload": true,
+  "status": "pass",
+  "matching_skills": [
+    {
+      "name": "managing-article-publication",
+      "description": "Prepare article previews or selected publication candidates for 0x1DEA.",
+      "path": "[isolated-repository]/.agents/skills/managing-article-publication/SKILL.md",
+      "scope": "repo",
+      "enabled": true
+    }
+  ],
+  "thread_or_session_requests": false,
+  "trust_settings_credentials_changed": false
+}

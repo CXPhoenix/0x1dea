@@ -165,3 +165,11 @@ three skills or run a tuning workflow as an adoption step. Provenance is in
 
 Notion DAILY9 is an index managed by the parent; local files are the executable tracker.
 No local action implies authority to update that external index.
+
+## Local article publication preparation
+
+For combined article preview or selected publication preparation, load the active
+runtime's `managing-article-publication`. Its English canonical source is the fourth
+materialized product package; the Chinese exception above remains three trees.
+Phase 1 reconstructs and verifies local candidates only. Actual publication and
+rollback require separate authorization; public preview is not confidential storage.

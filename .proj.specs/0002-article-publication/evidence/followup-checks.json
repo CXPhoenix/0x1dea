@@ -1,0 +1,107 @@
+[
+  {
+    "name": "cli-tests-followup",
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/article_publication",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": ".proj.specs/0002-article-publication/evidence/cli-tests-followup.txt",
+    "log_sha256": "ce9fce0c27aec4825b74229ce4246bad5b127f3a52feb20e08f228030eb99fb6",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "name": "harness-tests-followup",
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/harness_adoption",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": ".proj.specs/0002-article-publication/evidence/harness-tests-followup.txt",
+    "log_sha256": "b6649d7cf92f21551f8f78ae2b053f585fbae1b7ce900351a88a521e47a7a45b",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "name": "vitest-followup",
+    "command": [
+      "pnpm",
+      "test:unit"
+    ],
+    "exit_code": 0,
+    "log": ".proj.specs/0002-article-publication/evidence/vitest-followup.txt",
+    "log_sha256": "7b7ece7acf7984f91702d820342dfc961fc5b02ef9f31d996bd2379efbac9a87",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "name": "structure-followup",
+    "command": [
+      "python3",
+      "scripts/verify-project.py"
+    ],
+    "exit_code": 0,
+    "log": ".proj.specs/0002-article-publication/evidence/structure-followup.txt",
+    "log_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "name": "materializer-followup",
+    "command": [
+      "python3",
+      "scripts/materialize-writing-skills.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": ".proj.specs/0002-article-publication/evidence/materializer-followup.txt",
+    "log_sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "name": "harness-check-followup",
+    "command": [
+      "python3",
+      "scripts/verify-harness-adoption.py"
+    ],
+    "exit_code": 1,
+    "log": ".proj.specs/0002-article-publication/evidence/harness-check-followup.txt",
+    "log_sha256": "1ba6e66110752d9bf2ed229d6d4f6b8ba665b89b868ed888493e4147baf48830",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "name": "trusted-build-followup",
+    "command": [
+      "pnpm",
+      "docs:build"
+    ],
+    "exit_code": 0,
+    "log": ".proj.specs/0002-article-publication/evidence/trusted-build-followup.txt",
+    "log_sha256": "aecf3929f3f152dc0ccb209111f455e8c5991bcc9cfcf15c1bace457dc2f7858",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "name": "diff-followup",
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": ".proj.specs/0002-article-publication/evidence/diff-followup.txt",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  {
+    "name": "eslint-package-baseline",
+    "exit_code": 1,
+    "log": ".proj.specs/0002-article-publication/evidence/eslint-package-baseline.json"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "codex": {
+    "runtime": "Codex app-server",
+    "method": "skills/list",
+    "fresh_reload": true,
+    "status": "pass",
+    "matching_skills": [
+      {
+        "name": "managing-article-publication",
+        "description": "Prepare article previews or selected publication candidates for 0x1DEA.",
+        "path": "[isolated-repository]/.agents/skills/managing-article-publication/SKILL.md",
+        "scope": "repo",
+        "enabled": true
+      }
+    ],
+    "thread_or_session_requests": false,
+    "trust_settings_credentials_changed": false
+  },
+  "claude": {
+    "runtime": "Claude Code",
+    "status": "pass",
+    "reason": "Native initialization catalog contains skill",
+    "session_persistence": false,
+    "tools_enabled": false,
+    "skill_found": true
+  },
+  "build_isolation": "blocked",
+  "eslint": "blocked"
+}

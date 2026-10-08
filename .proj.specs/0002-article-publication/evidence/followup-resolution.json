@@ -1,0 +1,39 @@
+{
+  "authorization": {
+    "approved_on": "2026-10-08",
+    "scope": "Bounded isolation diagnosis and exact missing dependency installation in an isolated clone. Private approval records omitted from public evidence."
+  },
+  "dependency": {
+    "package": "@unocss/eslint-plugin",
+    "version": "66.6.0",
+    "registry": "https://registry.npmjs.org/",
+    "installation_exit_code": 0,
+    "install_scripts": false,
+    "existing_package_versions_changed": false,
+    "peer_warning": "Existing ESLint 10.0.0 is outside several installed plugins TypeScript ESLint ^8.57/^9 peer ranges; warnings retained, no unrelated upgrade/downgrade."
+  },
+  "isolation": {
+    "initial_exit_code": 134,
+    "observed_kernel_denial": "Sandbox: echo(52677) deny(1) file-read-data /",
+    "only_added_read_rule": "(allow file-read-data (literal \"/\"))",
+    "sentinel": "isolation-sentinel-followup.json",
+    "build_exit_code": 0,
+    "profile": "Host-specific profile retained locally; read/write scopes summarized in public-evidence.md",
+    "build_log": "isolated-build-followup.txt",
+    "build_log_sha256": "ce4346441385681460213767e1498c1cb7fa76b16bc7055551efa905f51deed0",
+    "scope": "Synthetic A-only candidate using pinned installed VitePress; not actual live-site publication.",
+    "source_receipt_unchanged": true,
+    "output_verification": "isolated-output-verification.json",
+    "public_log_redaction": "Machine-local paths redacted and trailing whitespace normalized; hash covers the published copy."
+  },
+  "eslint": {
+    "existing_ts_errors": 355,
+    "existing_ts_bytes_equal_HEAD": true,
+    "package_errors": 8,
+    "package_messages_identical_to_HEAD_baseline": true,
+    "status": "existing-failure",
+    "autofix_run": false
+  },
+  "historical_manifests_modified": false,
+  "publication": false
+}
