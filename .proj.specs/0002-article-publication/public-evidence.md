@@ -33,9 +33,25 @@ The owner authorized committing the reviewed phase-1 work and non-force pushing
 the ticket branch for inspection. This does not complete publication or landing.
 The publication CLI remains local-only and returns `publishable: false`.
 
-Lint executes but remains an existing failure: 355 errors in the unchanged
-TypeScript helper/tests, plus 8 manifest errors identical to the baseline.
-ESLint 10 peer-range warnings remain visible. A later scoped lint cleanup must
-preserve behavior, rerun tests and checks, obtain review, and update exact
-preservation evidence for authorized changes without rewriting the historical
-adoption manifests. PR creation, merge and deployment are separate actions.
+The earlier phase-1 validation observed 355 TypeScript errors and 8 manifest
+errors. The authorized cleanup now uses the complete first-party scope documented
+in [lint-cleanup.md](lint-cleanup.md), exposed by `pnpm lint`; final results and
+exact rules/files are in [validation](evidence/lint-cleanup-validation.json).
+ESLint 9.39.2 satisfies the existing plugins' peer ranges. The strict-peer frozen
+clean installation, CLI/harness/Vitest, build, materializer, structure, preservation
+and semantic comparisons all pass. Historical adoption and publication manifests
+remain unchanged; the separate cleanup successor records only the authorized files.
+
+The unrestricted `eslint .` diagnostic still includes immutable imported packages
+and historical/educational Markdown; its failure is recorded in
+[broad diagnostic](evidence/lint-cleanup-broad-diagnostic.json). No rule or ignore
+was added to suppress it. This work does not claim the broader command passes.
+Browser read-only comparison loaded both versions with the same article/date/order
+surface. Chrome input dispatch timed out, so interactive browser verification is
+blocked; Vue public-interface regression tests and built HTML/CSS comparisons pass.
+These limits remain explicit and do not grant publication authority.
+
+The owner subsequently authorized commit, non-force branch push and a combined
+draft PR targeting staging for the publication skill and cleanup. Merge, direct
+protected-branch push, additional deployment and security settings remain excluded.
+The publication CLI stays local-only and `publishable: false`.

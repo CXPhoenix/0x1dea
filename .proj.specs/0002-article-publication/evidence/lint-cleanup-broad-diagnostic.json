@@ -1,0 +1,4832 @@
+{
+  "command": [
+    "pnpm",
+    "exec",
+    "eslint",
+    ".",
+    "--format",
+    "json"
+  ],
+  "exit_code": 1,
+  "eslint": "9.39.2",
+  "files_scanned": 1238,
+  "errors": 182359,
+  "warnings": 2,
+  "diagnostic_scope": "Includes immutable imported framework code, historical evidence and instructional Markdown. Not the product lint scope.",
+  "files_with_diagnostics": [
+    {
+      "path": ".agents/skills/archify/agents/openai.yaml",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 1,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/bin/archify.mjs",
+      "errors": 907,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 669,
+        "node/prefer-global/process": 22,
+        "antfu/if-newline": 53,
+        "antfu/curly": 10,
+        "style/brace-style": 68,
+        "style/multiline-ternary": 8,
+        "no-console": 36,
+        "prefer-const": 2,
+        "style/arrow-parens": 24,
+        "node/prefer-global/buffer": 1,
+        "style/indent": 6,
+        "antfu/no-top-level-await": 8
+      }
+    },
+    {
+      "path": ".agents/skills/archify/bin/open-artifact.mjs",
+      "errors": 29,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 22,
+        "style/arrow-parens": 2,
+        "node/prefer-global/process": 1,
+        "style/brace-style": 2,
+        "antfu/if-newline": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/bin/preview.mjs",
+      "errors": 372,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 296,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 21,
+        "style/arrow-parens": 3,
+        "antfu/if-newline": 22,
+        "node/prefer-global/process": 12,
+        "style/max-statements-per-line": 9,
+        "node/prefer-global/buffer": 2,
+        "style/quotes": 1,
+        "no-console": 5
+      }
+    },
+    {
+      "path": ".agents/skills/archify/bin/visual-check.mjs",
+      "errors": 323,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 261,
+        "style/arrow-parens": 16,
+        "antfu/consistent-list-newline": 4,
+        "style/quotes": 1,
+        "style/brace-style": 10,
+        "node/prefer-global/process": 10,
+        "antfu/if-newline": 19,
+        "no-cond-assign": 1,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/delta/architecture-delta.mjs",
+      "errors": 456,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 334,
+        "style/arrow-parens": 35,
+        "antfu/if-newline": 55,
+        "no-use-before-define": 1,
+        "unicorn/escape-case": 1,
+        "antfu/curly": 2,
+        "style/quotes": 1,
+        "style/quote-props": 5,
+        "regexp/no-super-linear-backtracking": 6,
+        "regexp/optimal-quantifier-concatenation": 6,
+        "no-cond-assign": 2,
+        "style/brace-style": 5,
+        "regexp/no-contradiction-with-assertion": 1,
+        "style/multiline-ternary": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/migrations/workflow-v2.mjs",
+      "errors": 67,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 58,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 2,
+        "style/arrow-parens": 4,
+        "antfu/if-newline": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/package.json",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "jsonc/sort-keys": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/recipes/scenarios.mjs",
+      "errors": 112,
+      "warnings": 0,
+      "rules": {
+        "antfu/consistent-list-newline": 60,
+        "style/semi": 37,
+        "style/arrow-parens": 9,
+        "style/multiline-ternary": 4,
+        "unicorn/escape-case": 1,
+        "antfu/if-newline": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/architecture/grid.mjs",
+      "errors": 35,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 26,
+        "antfu/if-newline": 4,
+        "unicorn/prefer-number-properties": 4,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/architecture/render-architecture.mjs",
+      "errors": 448,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 333,
+        "perfectionist/sort-imports": 4,
+        "perfectionist/sort-named-imports": 16,
+        "no-unused-vars": 1,
+        "unused-imports/no-unused-imports": 1,
+        "node/prefer-global/process": 3,
+        "style/arrow-parens": 41,
+        "antfu/no-top-level-await": 1,
+        "antfu/if-newline": 38,
+        "style/brace-style": 1,
+        "style/comma-dangle": 5,
+        "style/indent-binary-ops": 3,
+        "no-console": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/dataflow/render-dataflow.mjs",
+      "errors": 192,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 143,
+        "perfectionist/sort-imports": 3,
+        "perfectionist/sort-named-imports": 11,
+        "style/comma-dangle": 10,
+        "antfu/no-top-level-await": 1,
+        "style/arrow-parens": 7,
+        "antfu/if-newline": 17
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/lifecycle/render-lifecycle.mjs",
+      "errors": 230,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 166,
+        "perfectionist/sort-imports": 3,
+        "perfectionist/sort-named-imports": 10,
+        "style/comma-dangle": 13,
+        "antfu/no-top-level-await": 1,
+        "antfu/if-newline": 18,
+        "style/multiline-ternary": 2,
+        "style/operator-linebreak": 2,
+        "style/arrow-parens": 15
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/sequence/render-sequence.mjs",
+      "errors": 166,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 120,
+        "perfectionist/sort-imports": 3,
+        "perfectionist/sort-named-imports": 8,
+        "no-unused-vars": 1,
+        "unused-imports/no-unused-imports": 1,
+        "antfu/no-top-level-await": 1,
+        "style/comma-dangle": 13,
+        "antfu/if-newline": 12,
+        "style/arrow-parens": 7
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/brand-marks.mjs",
+      "errors": 331,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 247,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 31,
+        "style/brace-style": 6,
+        "style/arrow-parens": 10,
+        "antfu/curly": 1,
+        "node/prefer-global/process": 3,
+        "style/max-statements-per-line": 2,
+        "node/prefer-global/buffer": 6,
+        "style/indent-binary-ops": 3,
+        "unicorn/number-literal-case": 10,
+        "style/indent": 5,
+        "antfu/consistent-chaining": 2,
+        "style/multiline-ternary": 4
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/cli.mjs",
+      "errors": 102,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 83,
+        "perfectionist/sort-named-imports": 1,
+        "perfectionist/sort-imports": 3,
+        "node/prefer-global/process": 4,
+        "antfu/if-newline": 6,
+        "style/arrow-parens": 3,
+        "antfu/consistent-chaining": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/desktop-readability.mjs",
+      "errors": 9,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 9
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/diagnostics.mjs",
+      "errors": 64,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 39,
+        "node/prefer-global/process": 6,
+        "antfu/if-newline": 4,
+        "style/arrow-parens": 4,
+        "style/multiline-ternary": 2,
+        "style/brace-style": 2,
+        "style/indent": 7
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/engineering-profiles.mjs",
+      "errors": 56,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 39,
+        "style/arrow-parens": 8,
+        "antfu/if-newline": 8,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/generated-brand-marks.mjs",
+      "errors": 4192,
+      "warnings": 0,
+      "rules": {
+        "style/quote-props": 1367,
+        "style/quotes": 2458,
+        "style/comma-dangle": 366,
+        "style/semi": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/generated-validators.mjs",
+      "errors": 53937,
+      "warnings": 0,
+      "rules": {
+        "style/quotes": 8534,
+        "style/semi-spacing": 1802,
+        "style/max-statements-per-line": 2,
+        "style/object-curly-spacing": 5348,
+        "style/quote-props": 1076,
+        "style/key-spacing": 6556,
+        "style/comma-spacing": 5216,
+        "no-unused-vars": 7,
+        "unused-imports/no-unused-vars": 41,
+        "antfu/top-level-function": 1,
+        "style/semi": 3389,
+        "unicorn/number-literal-case": 4,
+        "antfu/if-newline": 1,
+        "antfu/curly": 1,
+        "prefer-regex-literals": 5,
+        "regexp/prefer-w": 1,
+        "style/space-infix-ops": 2086,
+        "style/block-spacing": 8672,
+        "style/space-before-blocks": 2895,
+        "style/keyword-spacing": 5141,
+        "style/brace-style": 1441,
+        "prefer-const": 418,
+        "prefer-template": 1058,
+        "style/spaced-comment": 5,
+        "yoda": 9,
+        "unicorn/prefer-number-properties": 177,
+        "vars-on-top": 20,
+        "no-var": 20,
+        "no-redeclare": 10,
+        "regexp/use-ignore-case": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/geometry.mjs",
+      "errors": 673,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 505,
+        "style/arrow-parens": 29,
+        "style/operator-linebreak": 9,
+        "style/comma-dangle": 10,
+        "antfu/if-newline": 111,
+        "antfu/curly": 5,
+        "node/prefer-global/process": 1,
+        "style/indent-binary-ops": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/i18n.mjs",
+      "errors": 24,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 18,
+        "style/quotes": 1,
+        "style/arrow-parens": 2,
+        "regexp/prefer-w": 2,
+        "regexp/use-ignore-case": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/layout-report.mjs",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/legend.mjs",
+      "errors": 95,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 77,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 8,
+        "antfu/if-newline": 8,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/output-path.mjs",
+      "errors": 137,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 114,
+        "style/brace-style": 11,
+        "antfu/if-newline": 9,
+        "node/prefer-global/process": 2,
+        "unicorn/escape-case": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/repository-evidence.mjs",
+      "errors": 94,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 71,
+        "no-control-regex": 1,
+        "unicorn/escape-case": 1,
+        "antfu/if-newline": 10,
+        "antfu/curly": 5,
+        "style/arrow-parens": 2,
+        "regexp/prefer-w": 2,
+        "regexp/use-ignore-case": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/repository-location.mjs",
+      "errors": 58,
+      "warnings": 0,
+      "rules": {
+        "antfu/if-newline": 10,
+        "style/semi": 38,
+        "no-control-regex": 2,
+        "unicorn/escape-case": 2,
+        "style/arrow-parens": 1,
+        "style/max-statements-per-line": 1,
+        "style/brace-style": 1,
+        "style/multiline-ternary": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/text-fit.mjs",
+      "errors": 8,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 8
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/utils.mjs",
+      "errors": 68,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 47,
+        "style/arrow-parens": 2,
+        "no-regex-spaces": 2,
+        "regexp/no-useless-range": 10,
+        "unicorn/number-literal-case": 4,
+        "antfu/if-newline": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/shared/validator.mjs",
+      "errors": 31,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 26,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 3,
+        "prefer-template": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/workflow/README.md",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "null": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/workflow/render-workflow.mjs",
+      "errors": 22,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 13,
+        "antfu/no-top-level-await": 1,
+        "style/comma-dangle": 1,
+        "node/prefer-global/process": 4,
+        "antfu/if-newline": 1,
+        "style/brace-style": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/workflow/workflow-compiler.mjs",
+      "errors": 4880,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 1445,
+        "perfectionist/sort-imports": 4,
+        "perfectionist/sort-named-imports": 12,
+        "style/comma-dangle": 7,
+        "antfu/if-newline": 186,
+        "antfu/curly": 14,
+        "style/arrow-parens": 94,
+        "style/brace-style": 14,
+        "style/multiline-ternary": 12,
+        "style/indent": 3063,
+        "antfu/consistent-chaining": 2,
+        "style/indent-binary-ops": 5,
+        "antfu/consistent-list-newline": 17,
+        "no-use-before-define": 2,
+        "style/quote-props": 2,
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/renderers/workflow/workflow-migration-geometry.mjs",
+      "errors": 57,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 48,
+        "antfu/if-newline": 7,
+        "style/arrow-parens": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/schemas/README.md",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "null": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/scripts/check-render-output.mjs",
+      "errors": 405,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 301,
+        "perfectionist/sort-imports": 1,
+        "node/prefer-global/process": 4,
+        "style/brace-style": 2,
+        "style/arrow-parens": 40,
+        "style/multiline-ternary": 2,
+        "antfu/if-newline": 52,
+        "regexp/no-contradiction-with-assertion": 2,
+        "regexp/use-ignore-case": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/scripts/check-update.mjs",
+      "errors": 806,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 622,
+        "perfectionist/sort-named-imports": 1,
+        "style/arrow-parens": 16,
+        "antfu/consistent-list-newline": 3,
+        "antfu/if-newline": 78,
+        "antfu/curly": 8,
+        "style/brace-style": 60,
+        "node/prefer-global/buffer": 5,
+        "node/prefer-global/process": 13
+      }
+    },
+    {
+      "path": ".agents/skills/archify/scripts/generate-brand-marks.mjs",
+      "errors": 68,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 52,
+        "style/arrow-parens": 4,
+        "antfu/if-newline": 5,
+        "node/prefer-global/process": 4,
+        "style/brace-style": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/scripts/generate-validators.mjs",
+      "errors": 35,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 31,
+        "node/prefer-global/process": 3,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/scripts/render-examples.mjs",
+      "errors": 10,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 8,
+        "node/prefer-global/process": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/scripts/update-contract.mjs",
+      "errors": 93,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 61,
+        "no-control-regex": 1,
+        "unicorn/escape-case": 1,
+        "regexp/use-ignore-case": 1,
+        "antfu/if-newline": 12,
+        "style/arrow-parens": 1,
+        "style/brace-style": 1,
+        "antfu/consistent-list-newline": 13,
+        "style/indent-binary-ops": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/adaptive-reader-layout.test.mjs",
+      "errors": 64,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 62,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/animation.test.mjs",
+      "errors": 127,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 117,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 3,
+        "no-regex-spaces": 1,
+        "style/arrow-parens": 4
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/architecture-delta.test.mjs",
+      "errors": 397,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 349,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 1,
+        "style/arrow-parens": 35,
+        "regexp/no-super-linear-backtracking": 2,
+        "regexp/optimal-quantifier-concatenation": 2,
+        "antfu/consistent-list-newline": 6
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/artifact-receipt-flush.test.mjs",
+      "errors": 78,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 66,
+        "test/no-import-node-test": 1,
+        "style/brace-style": 3,
+        "node/prefer-global/buffer": 4,
+        "style/arrow-parens": 2,
+        "style/multiline-ternary": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/authored-reachability.test.mjs",
+      "errors": 58,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 55,
+        "perfectionist/sort-imports": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/authoring-safety-contract.test.mjs",
+      "errors": 38,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 36,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/automatic-port-spread.test.mjs",
+      "errors": 111,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 100,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 1,
+        "style/arrow-parens": 1,
+        "antfu/consistent-list-newline": 6,
+        "regexp/no-dupe-disjunctions": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/base-input-compatibility.test.mjs",
+      "errors": 18,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 17,
+        "test/no-import-node-test": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/brand-marks.test.mjs",
+      "errors": 478,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 397,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "style/arrow-parens": 35,
+        "regexp/strict": 1,
+        "style/max-statements-per-line": 4,
+        "antfu/if-newline": 6,
+        "regexp/use-ignore-case": 1,
+        "node/prefer-global/buffer": 11,
+        "style/brace-style": 13,
+        "regexp/no-dupe-disjunctions": 2,
+        "unicorn/number-literal-case": 5
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/chapter-delta-preview.test.mjs",
+      "errors": 95,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 88,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 3,
+        "regexp/no-dupe-disjunctions": 1,
+        "antfu/if-newline": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/chapter-handoff.test.mjs",
+      "errors": 68,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 66,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/chapter-rail.test.mjs",
+      "errors": 59,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 57,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/checkout-line-endings.test.mjs",
+      "errors": 55,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 39,
+        "perfectionist/sort-imports": 1,
+        "antfu/consistent-list-newline": 3,
+        "node/prefer-global/buffer": 6,
+        "unicorn/number-literal-case": 4,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/clean-skill-staging.test.mjs",
+      "errors": 263,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 238,
+        "test/no-import-node-test": 1,
+        "antfu/if-newline": 3,
+        "style/brace-style": 19,
+        "antfu/consistent-list-newline": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/cli-output-types.test.mjs",
+      "errors": 174,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 136,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "style/arrow-parens": 10,
+        "antfu/if-newline": 3,
+        "style/brace-style": 1,
+        "style/max-statements-per-line": 9,
+        "antfu/consistent-list-newline": 12
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/cli.test.mjs",
+      "errors": 537,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 522,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1,
+        "style/max-statements-per-line": 2,
+        "antfu/if-newline": 2,
+        "style/arrow-parens": 8
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/community-proof-intake.test.mjs",
+      "errors": 45,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 44,
+        "test/no-import-node-test": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/cursor-onboarding.test.mjs",
+      "errors": 50,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 47,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/degraded.test.mjs",
+      "errors": 87,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 79,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 2,
+        "antfu/consistent-list-newline": 2,
+        "style/brace-style": 1,
+        "style/max-statements-per-line": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/delivery-contract.test.mjs",
+      "errors": 42,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 39,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/desktop-reader-browser.test.mjs",
+      "errors": 47,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 41,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 2,
+        "style/brace-style": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/diagram-guide.test.mjs",
+      "errors": 65,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 63,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/engineering-profile.test.mjs",
+      "errors": 172,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 126,
+        "perfectionist/sort-imports": 1,
+        "style/max-statements-per-line": 1,
+        "style/arrow-parens": 24,
+        "style/operator-linebreak": 2,
+        "style/brace-style": 2,
+        "node/prefer-global/buffer": 1,
+        "antfu/consistent-list-newline": 14
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/export-browser.test.mjs",
+      "errors": 372,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 186,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 7,
+        "style/max-statements-per-line": 19,
+        "prefer-template": 15,
+        "style/comma-spacing": 57,
+        "style/semi-spacing": 28,
+        "node/prefer-global/buffer": 2,
+        "style/arrow-spacing": 20,
+        "antfu/curly": 1,
+        "style/space-infix-ops": 19,
+        "style/brace-style": 1,
+        "style/object-curly-spacing": 6,
+        "style/key-spacing": 4,
+        "style/keyword-spacing": 1,
+        "style/block-spacing": 2,
+        "style/space-before-blocks": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/export-cleanup-browser.test.mjs",
+      "errors": 122,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 103,
+        "perfectionist/sort-imports": 2,
+        "antfu/consistent-list-newline": 6,
+        "antfu/if-newline": 5,
+        "prefer-template": 2,
+        "style/brace-style": 1,
+        "node/prefer-global/buffer": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/finder-browser.test.mjs",
+      "errors": 244,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 176,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 2,
+        "prefer-template": 10,
+        "antfu/consistent-list-newline": 5,
+        "style/max-statements-per-line": 47,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/finder.test.mjs",
+      "errors": 75,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 73,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/fixtures/fail-migration-cleanup.mjs",
+      "errors": 12,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 12
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/focus-browser.test.mjs",
+      "errors": 982,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 149,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 2,
+        "style/max-statements-per-line": 68,
+        "prefer-template": 14,
+        "style/comma-spacing": 285,
+        "style/arrow-spacing": 40,
+        "style/space-infix-ops": 93,
+        "style/object-curly-spacing": 70,
+        "style/key-spacing": 61,
+        "style/semi-spacing": 169,
+        "style/space-before-function-paren": 12,
+        "style/keyword-spacing": 9,
+        "style/block-spacing": 4,
+        "style/space-before-blocks": 2,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/gallery.test.mjs",
+      "errors": 101,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 83,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 11,
+        "antfu/consistent-list-newline": 5
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/generate-validators.test.mjs",
+      "errors": 29,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 26,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/generate-viewer.test.mjs",
+      "errors": 124,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 112,
+        "perfectionist/sort-imports": 2,
+        "antfu/consistent-list-newline": 2,
+        "antfu/if-newline": 6,
+        "unicorn/escape-case": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/generated-artifact-xml.test.mjs",
+      "errors": 45,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 40,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 1,
+        "antfu/if-newline": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/geometry.test.mjs",
+      "errors": 367,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 322,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 13,
+        "style/comma-dangle": 4,
+        "style/max-statements-per-line": 1,
+        "style/arrow-parens": 7,
+        "unicorn/prefer-number-properties": 1,
+        "antfu/consistent-list-newline": 17
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/golden.mjs",
+      "errors": 153,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 103,
+        "no-console": 6,
+        "style/brace-style": 7,
+        "antfu/if-newline": 1,
+        "style/max-statements-per-line": 1,
+        "antfu/consistent-list-newline": 26,
+        "style/arrow-parens": 8,
+        "node/prefer-global/process": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/grid.test.mjs",
+      "errors": 28,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 24,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/guide-page.test.mjs",
+      "errors": 46,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 39,
+        "perfectionist/sort-imports": 2,
+        "style/brace-style": 1,
+        "style/arrow-parens": 2,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/guide.test.mjs",
+      "errors": 44,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 38,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 1,
+        "style/arrow-parens": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/guided-views-browser.test.mjs",
+      "errors": 1061,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 262,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 6,
+        "prefer-template": 21,
+        "antfu/consistent-list-newline": 5,
+        "style/max-statements-per-line": 106,
+        "style/comma-spacing": 318,
+        "style/object-curly-spacing": 100,
+        "style/space-infix-ops": 90,
+        "style/key-spacing": 80,
+        "style/arrow-spacing": 8,
+        "style/semi-spacing": 28,
+        "prefer-const": 1,
+        "style/keyword-spacing": 19,
+        "style/space-before-blocks": 4,
+        "style/quotes": 2,
+        "style/no-multiple-empty-lines": 1,
+        "style/quote-props": 2,
+        "style/block-spacing": 2,
+        "node/prefer-global/buffer": 1,
+        "style/operator-linebreak": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/guided-views.test.mjs",
+      "errors": 106,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 100,
+        "perfectionist/sort-imports": 1,
+        "antfu/consistent-list-newline": 2,
+        "style/arrow-parens": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/helpers/desktop-browser.mjs",
+      "errors": 17,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 12,
+        "antfu/consistent-list-newline": 4,
+        "node/prefer-global/process": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/helpers/offline-fonts.mjs",
+      "errors": 61,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 44,
+        "style/arrow-parens": 5,
+        "regexp/no-dupe-characters-character-class": 1,
+        "node/prefer-global/buffer": 1,
+        "style/max-statements-per-line": 1,
+        "antfu/if-newline": 6,
+        "antfu/curly": 2,
+        "regexp/no-unused-capturing-group": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/helpers/viewer-click.mjs",
+      "errors": 48,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 38,
+        "style/arrow-parens": 3,
+        "antfu/consistent-list-newline": 4,
+        "antfu/if-newline": 1,
+        "no-undef": 1,
+        "prefer-template": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/helpers/xml.mjs",
+      "errors": 20,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 17,
+        "antfu/if-newline": 2,
+        "style/arrow-parens": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/i18n.test.mjs",
+      "errors": 212,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 173,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 1,
+        "antfu/if-newline": 3,
+        "style/brace-style": 4,
+        "style/arrow-parens": 8,
+        "regexp/no-contradiction-with-assertion": 4,
+        "unicorn/escape-case": 4,
+        "prefer-regex-literals": 1,
+        "style/quote-props": 2,
+        "regexp/prefer-w": 3,
+        "regexp/use-ignore-case": 1,
+        "style/padded-blocks": 1,
+        "style/quotes": 5
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/intent-trace-browser.test.mjs",
+      "errors": 198,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 146,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 2,
+        "prefer-template": 9,
+        "antfu/consistent-list-newline": 3,
+        "style/max-statements-per-line": 34,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/intent-trace.test.mjs",
+      "errors": 76,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 74,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/landing.test.mjs",
+      "errors": 88,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 71,
+        "perfectionist/sort-imports": 1,
+        "antfu/consistent-list-newline": 15
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/layout-rules.test.mjs",
+      "errors": 691,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 615,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 2,
+        "style/arrow-parens": 11,
+        "antfu/if-newline": 3,
+        "antfu/consistent-list-newline": 53,
+        "regexp/no-useless-escape": 2,
+        "regexp/strict": 2,
+        "prefer-regex-literals": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/legend-contract.test.mjs",
+      "errors": 187,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 161,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 1,
+        "style/arrow-parens": 17,
+        "style/brace-style": 1,
+        "antfu/consistent-list-newline": 4,
+        "regexp/no-contradiction-with-assertion": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/motion-governor-browser.test.mjs",
+      "errors": 267,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 171,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 4,
+        "prefer-template": 15,
+        "antfu/consistent-list-newline": 3,
+        "style/quotes": 1,
+        "node/prefer-global/buffer": 1,
+        "style/max-statements-per-line": 9,
+        "style/comma-spacing": 28,
+        "style/key-spacing": 23,
+        "style/object-curly-spacing": 8,
+        "style/padded-blocks": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/motion-governor.test.mjs",
+      "errors": 85,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 82,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/offline-font-browser.test.mjs",
+      "errors": 132,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 113,
+        "perfectionist/sort-imports": 1,
+        "no-cond-assign": 1,
+        "antfu/if-newline": 4,
+        "antfu/curly": 2,
+        "unicorn/new-for-builtins": 3,
+        "style/brace-style": 4,
+        "style/max-statements-per-line": 2,
+        "prefer-template": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/offline-self-containment.test.mjs",
+      "errors": 63,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 52,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 4,
+        "style/quotes": 2,
+        "prefer-template": 1,
+        "style/brace-style": 1,
+        "antfu/consistent-chaining": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/open-artifact.test.mjs",
+      "errors": 59,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 47,
+        "perfectionist/sort-imports": 1,
+        "style/quotes": 2,
+        "style/no-multiple-empty-lines": 1,
+        "style/max-statements-per-line": 1,
+        "antfu/consistent-list-newline": 6
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/ordinary-model-floor.test.mjs",
+      "errors": 435,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 350,
+        "test/no-import-node-test": 1,
+        "style/arrow-parens": 48,
+        "antfu/consistent-list-newline": 36
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/output-path.test.mjs",
+      "errors": 384,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 342,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "style/brace-style": 2,
+        "antfu/if-newline": 1,
+        "unicorn/escape-case": 2,
+        "antfu/consistent-list-newline": 23,
+        "node/prefer-global/buffer": 2,
+        "style/max-statements-per-line": 4,
+        "style/arrow-parens": 5
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/presentation.test.mjs",
+      "errors": 46,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 44,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/preset-tryon.test.mjs",
+      "errors": 82,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 75,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 1,
+        "no-regex-spaces": 2,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/preview-contract.test.mjs",
+      "errors": 36,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 31,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "no-unused-vars": 1,
+        "unused-imports/no-unused-vars": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/preview.test.mjs",
+      "errors": 331,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 281,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 1,
+        "style/arrow-parens": 33,
+        "style/max-statements-per-line": 3,
+        "no-regex-spaces": 1,
+        "style/brace-style": 8,
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/proof-aperture.test.mjs",
+      "errors": 63,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 60,
+        "perfectionist/sort-imports": 1,
+        "regexp/no-super-linear-backtracking": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/reach-share-card.test.mjs",
+      "errors": 113,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 110,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/reader-layout-browser.test.mjs",
+      "errors": 198,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 167,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 16,
+        "style/brace-style": 2,
+        "antfu/consistent-list-newline": 1,
+        "prefer-template": 1,
+        "regexp/no-contradiction-with-assertion": 4,
+        "node/prefer-global/buffer": 1,
+        "style/quotes": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/readme-showcase.test.mjs",
+      "errors": 199,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 186,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 3,
+        "unicorn/number-literal-case": 3,
+        "style/brace-style": 2,
+        "node/prefer-global/buffer": 1,
+        "style/arrow-parens": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/real-repository-proof.test.mjs",
+      "errors": 115,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 104,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 3,
+        "antfu/if-newline": 1,
+        "style/brace-style": 4,
+        "style/padded-blocks": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/relationship-direct-explorer.test.mjs",
+      "errors": 86,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 84,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/relationship-lens.test.mjs",
+      "errors": 89,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 85,
+        "perfectionist/sort-imports": 1,
+        "style/quotes": 1,
+        "style/arrow-parens": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/relationship-permalink.test.mjs",
+      "errors": 93,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 86,
+        "perfectionist/sort-imports": 1,
+        "antfu/consistent-list-newline": 2,
+        "regexp/no-contradiction-with-assertion": 1,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/relationship-pulse.test.mjs",
+      "errors": 91,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 89,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/release-identity.test.mjs",
+      "errors": 186,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 164,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "style/brace-style": 17,
+        "style/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/release-package-gates.test.mjs",
+      "errors": 472,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 437,
+        "perfectionist/sort-imports": 1,
+        "antfu/top-level-function": 1,
+        "antfu/if-newline": 4,
+        "no-regex-spaces": 1,
+        "antfu/consistent-list-newline": 6,
+        "style/brace-style": 14,
+        "antfu/curly": 1,
+        "node/prefer-global/buffer": 2,
+        "unicorn/number-literal-case": 2,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/render-output-checks.test.mjs",
+      "errors": 247,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 225,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 3,
+        "style/arrow-parens": 17
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/repair-receipt.test.mjs",
+      "errors": 116,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 108,
+        "test/no-import-node-test": 1,
+        "style/arrow-parens": 7
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/repository-evidence.test.mjs",
+      "errors": 389,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 370,
+        "test/no-import-node-test": 1,
+        "style/arrow-parens": 10,
+        "style/brace-style": 5,
+        "antfu/consistent-list-newline": 1,
+        "antfu/if-newline": 1,
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/repository-language-metadata.test.mjs",
+      "errors": 13,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 11,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/route-journey.test.mjs",
+      "errors": 95,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 92,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/route-probe-browser.test.mjs",
+      "errors": 369,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 221,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 4,
+        "prefer-template": 11,
+        "antfu/consistent-list-newline": 7,
+        "style/max-statements-per-line": 85,
+        "style/arrow-spacing": 4,
+        "style/comma-spacing": 20,
+        "style/space-infix-ops": 7,
+        "style/quotes": 2,
+        "style/object-curly-spacing": 2,
+        "style/key-spacing": 1,
+        "style/semi-spacing": 1,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/route-probe.test.mjs",
+      "errors": 85,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 83,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/route-share-card.test.mjs",
+      "errors": 129,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 121,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 5,
+        "style/padded-blocks": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/semantic-camera.test.mjs",
+      "errors": 61,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 59,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/semantic-flow.test.mjs",
+      "errors": 63,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 61,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/semantic-legend-gateway.test.mjs",
+      "errors": 121,
+      "warnings": 1,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 99,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 1,
+        "antfu/consistent-list-newline": 19,
+        "regexp/no-useless-flag": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/semantic-lens-browser.test.mjs",
+      "errors": 326,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 235,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 6,
+        "prefer-template": 13,
+        "antfu/consistent-list-newline": 3,
+        "style/max-statements-per-line": 62,
+        "prefer-const": 1,
+        "style/quotes": 2,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/semantic-lens.test.mjs",
+      "errors": 74,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 72,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/semantic-passport.test.mjs",
+      "errors": 71,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 69,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/semantic-radar.test.mjs",
+      "errors": 257,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 240,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 1,
+        "style/brace-style": 7,
+        "unused-imports/no-unused-vars": 1,
+        "antfu/consistent-list-newline": 4,
+        "prefer-template": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/semantic-zoom.test.mjs",
+      "errors": 59,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 57,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/sequence-column-fit.test.mjs",
+      "errors": 85,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 74,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 2,
+        "style/arrow-parens": 1,
+        "antfu/if-newline": 1,
+        "style/comma-dangle": 3,
+        "antfu/consistent-list-newline": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/settled-flow.test.mjs",
+      "errors": 71,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 69,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/share-card-export.test.mjs",
+      "errors": 95,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 92,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/site-language-continuity.test.mjs",
+      "errors": 263,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 234,
+        "perfectionist/sort-imports": 3,
+        "perfectionist/sort-named-imports": 1,
+        "antfu/if-newline": 4,
+        "style/multiline-ternary": 3,
+        "style/brace-style": 3,
+        "unused-imports/no-unused-vars": 1,
+        "style/arrow-parens": 3,
+        "regexp/no-contradiction-with-assertion": 1,
+        "style/quotes": 1,
+        "antfu/consistent-list-newline": 8
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/site-language-integration.mjs",
+      "errors": 8,
+      "warnings": 0,
+      "rules": {
+        "node/prefer-global/process": 4,
+        "style/semi": 3,
+        "antfu/no-top-level-await": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/skill-metadata.test.mjs",
+      "errors": 65,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 57,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "regexp/no-super-linear-backtracking": 1,
+        "node/prefer-global/buffer": 1,
+        "style/arrow-parens": 2,
+        "regexp/no-useless-escape": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/stable-update-manifest.test.mjs",
+      "errors": 104,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 86,
+        "perfectionist/sort-imports": 1,
+        "test/no-import-node-test": 1,
+        "antfu/consistent-list-newline": 13,
+        "node/prefer-global/buffer": 1,
+        "unicorn/escape-case": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/start-page.test.mjs",
+      "errors": 211,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 177,
+        "perfectionist/sort-imports": 2,
+        "no-regex-spaces": 2,
+        "antfu/consistent-list-newline": 10,
+        "style/arrow-parens": 10,
+        "antfu/if-newline": 5,
+        "style/max-statements-per-line": 1,
+        "style/brace-style": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/story-beat-navigator.test.mjs",
+      "errors": 78,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 75,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/story-carrier.test.mjs",
+      "errors": 61,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 59,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/story-director-strip.test.mjs",
+      "errors": 61,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 58,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/story-follow-camera.test.mjs",
+      "errors": 74,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 72,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/story-horizon.test.mjs",
+      "errors": 66,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 63,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/story-moment-link.test.mjs",
+      "errors": 65,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 62,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/story-shelf.test.mjs",
+      "errors": 53,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 51,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/story-trail.test.mjs",
+      "errors": 60,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 58,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/toolbar-polish.test.mjs",
+      "errors": 48,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 46,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/update-contract.test.mjs",
+      "errors": 40,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 37,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-named-imports": 1,
+        "unicorn/escape-case": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/update-notifier.test.mjs",
+      "errors": 1903,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 1763,
+        "perfectionist/sort-imports": 1,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-named-imports": 1,
+        "antfu/if-newline": 13,
+        "style/arrow-parens": 30,
+        "style/brace-style": 24,
+        "style/max-statements-per-line": 30,
+        "style/indent-binary-ops": 1,
+        "antfu/consistent-list-newline": 7,
+        "node/prefer-global/buffer": 14,
+        "style/indent": 12,
+        "no-use-before-define": 1,
+        "antfu/curly": 3,
+        "regexp/no-useless-non-capturing-group": 1,
+        "unicorn/number-literal-case": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/v1-compatibility.test.mjs",
+      "errors": 107,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 100,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 3,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/vertical-edge.test.mjs",
+      "errors": 40,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 37,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/viewer-camera-browser.test.mjs",
+      "errors": 171,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 152,
+        "perfectionist/sort-imports": 2,
+        "antfu/consistent-list-newline": 5,
+        "antfu/if-newline": 5,
+        "prefer-template": 2,
+        "node/prefer-global/buffer": 1,
+        "style/max-statements-per-line": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/viewer-chrome-layout.test.mjs",
+      "errors": 430,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 392,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 9,
+        "style/arrow-parens": 3,
+        "style/brace-style": 17,
+        "prefer-template": 2,
+        "style/no-multiple-empty-lines": 1,
+        "antfu/consistent-list-newline": 1,
+        "antfu/curly": 2,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/visual-check.test.mjs",
+      "errors": 225,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 202,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 1,
+        "no-unused-vars": 1,
+        "unused-imports/no-unused-vars": 1,
+        "node/prefer-global/buffer": 1,
+        "antfu/if-newline": 1,
+        "style/arrow-parens": 16
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/webm-artifact.smoke.mjs",
+      "errors": 614,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 498,
+        "perfectionist/sort-named-imports": 1,
+        "node/prefer-global/process": 14,
+        "antfu/if-newline": 17,
+        "style/brace-style": 5,
+        "unused-imports/no-unused-vars": 2,
+        "style/arrow-parens": 9,
+        "antfu/no-top-level-await": 36,
+        "no-console": 11,
+        "node/prefer-global/buffer": 5,
+        "antfu/consistent-list-newline": 16
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/workflow-compiler-hard-contract.test.mjs",
+      "errors": 847,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 707,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 12,
+        "antfu/consistent-list-newline": 111,
+        "antfu/if-newline": 2,
+        "style/max-statements-per-line": 1,
+        "style/indent": 7,
+        "style/brace-style": 4,
+        "unicorn/prefer-string-starts-ends-with": 1
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/workflow-compiler.test.mjs",
+      "errors": 489,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 413,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 13,
+        "antfu/consistent-list-newline": 54,
+        "antfu/if-newline": 1,
+        "style/indent-binary-ops": 1,
+        "regexp/no-contradiction-with-assertion": 5
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/workflow-migration.test.mjs",
+      "errors": 313,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 304,
+        "perfectionist/sort-imports": 2,
+        "style/arrow-parens": 3,
+        "node/prefer-global/buffer": 3
+      }
+    },
+    {
+      "path": ".agents/skills/archify/test/workflow-semantic-contract.test.mjs",
+      "errors": 45,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 39,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 4
+      }
+    },
+    {
+      "path": ".agents/skills/code-review/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/codebase-design/SKILL.md",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 2
+      }
+    },
+    {
+      "path": ".agents/skills/codebase-design/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/creating-vitepress-post/agents/openai.yaml",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 1,
+        "yaml/quotes": 1
+      }
+    },
+    {
+      "path": ".agents/skills/diagnosing-bugs/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/domain-modeling/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/grill-me/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/grill-with-docs/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/grilling/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/handoff/SKILL.md",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "style/no-multi-spaces": 2
+      }
+    },
+    {
+      "path": ".agents/skills/handoff/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/i-have-adhd/agents/gemini.toml",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "toml/padding-line-between-pairs": 1
+      }
+    },
+    {
+      "path": ".agents/skills/i-have-adhd/agents/openai.yaml",
+      "errors": 6,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 3,
+        "yaml/quotes": 3
+      }
+    },
+    {
+      "path": ".agents/skills/implement/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/improve-codebase-architecture/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/maintaining-writing-skills/agents/openai.yaml",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 1,
+        "yaml/quotes": 1
+      }
+    },
+    {
+      "path": ".agents/skills/managing-article-publication/agents/openai.yaml",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 1,
+        "yaml/quotes": 1
+      }
+    },
+    {
+      "path": ".agents/skills/managing-article-publication/references/local.md",
+      "errors": 8,
+      "warnings": 0,
+      "rules": {
+        "jsonc/object-curly-spacing": 8
+      }
+    },
+    {
+      "path": ".agents/skills/phoenix-writing/agents/openai.yaml",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 1,
+        "yaml/quotes": 1
+      }
+    },
+    {
+      "path": ".agents/skills/prototype/UI.md",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 2,
+        "style/comma-spacing": 2
+      }
+    },
+    {
+      "path": ".agents/skills/prototype/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/research/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/resolving-merge-conflicts/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/security-review/references/upstream-security-review.md",
+      "errors": 6,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 1,
+        "style/no-trailing-spaces": 4,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": ".agents/skills/setup-matt-pocock-skills/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/tdd/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/tdd/mocking.md",
+      "errors": 8,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 5,
+        "style/arrow-parens": 3
+      }
+    },
+    {
+      "path": ".agents/skills/tdd/tests.md",
+      "errors": 35,
+      "warnings": 0,
+      "rules": {
+        "style/quotes": 12,
+        "style/semi": 23
+      }
+    },
+    {
+      "path": ".agents/skills/teach/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/to-questionnaire/SKILL.md",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": ".agents/skills/to-questionnaire/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/to-spec/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/to-tickets/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/wait-what/agents/openai.yaml",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 1,
+        "yaml/quotes": 1
+      }
+    },
+    {
+      "path": ".agents/skills/wayfinder/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/wizard/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".agents/skills/writing-for-agents/agents/openai.yaml",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "yaml/plain-scalar": 2,
+        "yaml/quotes": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/bin/archify.mjs",
+      "errors": 907,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 669,
+        "node/prefer-global/process": 22,
+        "antfu/if-newline": 53,
+        "antfu/curly": 10,
+        "style/brace-style": 68,
+        "style/multiline-ternary": 8,
+        "no-console": 36,
+        "prefer-const": 2,
+        "style/arrow-parens": 24,
+        "node/prefer-global/buffer": 1,
+        "style/indent": 6,
+        "antfu/no-top-level-await": 8
+      }
+    },
+    {
+      "path": ".claude/skills/archify/bin/open-artifact.mjs",
+      "errors": 29,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 22,
+        "style/arrow-parens": 2,
+        "node/prefer-global/process": 1,
+        "style/brace-style": 2,
+        "antfu/if-newline": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/bin/preview.mjs",
+      "errors": 372,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 296,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 21,
+        "style/arrow-parens": 3,
+        "antfu/if-newline": 22,
+        "node/prefer-global/process": 12,
+        "style/max-statements-per-line": 9,
+        "node/prefer-global/buffer": 2,
+        "style/quotes": 1,
+        "no-console": 5
+      }
+    },
+    {
+      "path": ".claude/skills/archify/bin/visual-check.mjs",
+      "errors": 323,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 261,
+        "style/arrow-parens": 16,
+        "antfu/consistent-list-newline": 4,
+        "style/quotes": 1,
+        "style/brace-style": 10,
+        "node/prefer-global/process": 10,
+        "antfu/if-newline": 19,
+        "no-cond-assign": 1,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/delta/architecture-delta.mjs",
+      "errors": 456,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 334,
+        "style/arrow-parens": 35,
+        "antfu/if-newline": 55,
+        "no-use-before-define": 1,
+        "unicorn/escape-case": 1,
+        "antfu/curly": 2,
+        "style/quotes": 1,
+        "style/quote-props": 5,
+        "regexp/no-super-linear-backtracking": 6,
+        "regexp/optimal-quantifier-concatenation": 6,
+        "no-cond-assign": 2,
+        "style/brace-style": 5,
+        "regexp/no-contradiction-with-assertion": 1,
+        "style/multiline-ternary": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/migrations/workflow-v2.mjs",
+      "errors": 67,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 58,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 2,
+        "style/arrow-parens": 4,
+        "antfu/if-newline": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/package.json",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "jsonc/sort-keys": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/recipes/scenarios.mjs",
+      "errors": 112,
+      "warnings": 0,
+      "rules": {
+        "antfu/consistent-list-newline": 60,
+        "style/semi": 37,
+        "style/arrow-parens": 9,
+        "style/multiline-ternary": 4,
+        "unicorn/escape-case": 1,
+        "antfu/if-newline": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/architecture/grid.mjs",
+      "errors": 35,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 26,
+        "antfu/if-newline": 4,
+        "unicorn/prefer-number-properties": 4,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/architecture/render-architecture.mjs",
+      "errors": 448,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 333,
+        "perfectionist/sort-imports": 4,
+        "perfectionist/sort-named-imports": 16,
+        "no-unused-vars": 1,
+        "unused-imports/no-unused-imports": 1,
+        "node/prefer-global/process": 3,
+        "style/arrow-parens": 41,
+        "antfu/no-top-level-await": 1,
+        "antfu/if-newline": 38,
+        "style/brace-style": 1,
+        "style/comma-dangle": 5,
+        "style/indent-binary-ops": 3,
+        "no-console": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/dataflow/render-dataflow.mjs",
+      "errors": 192,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 143,
+        "perfectionist/sort-imports": 3,
+        "perfectionist/sort-named-imports": 11,
+        "style/comma-dangle": 10,
+        "antfu/no-top-level-await": 1,
+        "style/arrow-parens": 7,
+        "antfu/if-newline": 17
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/lifecycle/render-lifecycle.mjs",
+      "errors": 230,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 166,
+        "perfectionist/sort-imports": 3,
+        "perfectionist/sort-named-imports": 10,
+        "style/comma-dangle": 13,
+        "antfu/no-top-level-await": 1,
+        "antfu/if-newline": 18,
+        "style/multiline-ternary": 2,
+        "style/operator-linebreak": 2,
+        "style/arrow-parens": 15
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/sequence/render-sequence.mjs",
+      "errors": 166,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 120,
+        "perfectionist/sort-imports": 3,
+        "perfectionist/sort-named-imports": 8,
+        "no-unused-vars": 1,
+        "unused-imports/no-unused-imports": 1,
+        "antfu/no-top-level-await": 1,
+        "style/comma-dangle": 13,
+        "antfu/if-newline": 12,
+        "style/arrow-parens": 7
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/brand-marks.mjs",
+      "errors": 331,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 247,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 31,
+        "style/brace-style": 6,
+        "style/arrow-parens": 10,
+        "antfu/curly": 1,
+        "node/prefer-global/process": 3,
+        "style/max-statements-per-line": 2,
+        "node/prefer-global/buffer": 6,
+        "style/indent-binary-ops": 3,
+        "unicorn/number-literal-case": 10,
+        "style/indent": 5,
+        "antfu/consistent-chaining": 2,
+        "style/multiline-ternary": 4
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/cli.mjs",
+      "errors": 102,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 83,
+        "perfectionist/sort-named-imports": 1,
+        "perfectionist/sort-imports": 3,
+        "node/prefer-global/process": 4,
+        "antfu/if-newline": 6,
+        "style/arrow-parens": 3,
+        "antfu/consistent-chaining": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/desktop-readability.mjs",
+      "errors": 9,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 9
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/diagnostics.mjs",
+      "errors": 64,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 39,
+        "node/prefer-global/process": 6,
+        "antfu/if-newline": 4,
+        "style/arrow-parens": 4,
+        "style/multiline-ternary": 2,
+        "style/brace-style": 2,
+        "style/indent": 7
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/engineering-profiles.mjs",
+      "errors": 56,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 39,
+        "style/arrow-parens": 8,
+        "antfu/if-newline": 8,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/generated-brand-marks.mjs",
+      "errors": 4192,
+      "warnings": 0,
+      "rules": {
+        "style/quote-props": 1367,
+        "style/quotes": 2458,
+        "style/comma-dangle": 366,
+        "style/semi": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/generated-validators.mjs",
+      "errors": 53937,
+      "warnings": 0,
+      "rules": {
+        "style/quotes": 8534,
+        "style/semi-spacing": 1802,
+        "style/max-statements-per-line": 2,
+        "style/object-curly-spacing": 5348,
+        "style/quote-props": 1076,
+        "style/key-spacing": 6556,
+        "style/comma-spacing": 5216,
+        "no-unused-vars": 7,
+        "unused-imports/no-unused-vars": 41,
+        "antfu/top-level-function": 1,
+        "style/semi": 3389,
+        "unicorn/number-literal-case": 4,
+        "antfu/if-newline": 1,
+        "antfu/curly": 1,
+        "prefer-regex-literals": 5,
+        "regexp/prefer-w": 1,
+        "style/space-infix-ops": 2086,
+        "style/block-spacing": 8672,
+        "style/space-before-blocks": 2895,
+        "style/keyword-spacing": 5141,
+        "style/brace-style": 1441,
+        "prefer-const": 418,
+        "prefer-template": 1058,
+        "style/spaced-comment": 5,
+        "yoda": 9,
+        "unicorn/prefer-number-properties": 177,
+        "vars-on-top": 20,
+        "no-var": 20,
+        "no-redeclare": 10,
+        "regexp/use-ignore-case": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/geometry.mjs",
+      "errors": 673,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 505,
+        "style/arrow-parens": 29,
+        "style/operator-linebreak": 9,
+        "style/comma-dangle": 10,
+        "antfu/if-newline": 111,
+        "antfu/curly": 5,
+        "node/prefer-global/process": 1,
+        "style/indent-binary-ops": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/i18n.mjs",
+      "errors": 24,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 18,
+        "style/quotes": 1,
+        "style/arrow-parens": 2,
+        "regexp/prefer-w": 2,
+        "regexp/use-ignore-case": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/layout-report.mjs",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/legend.mjs",
+      "errors": 95,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 77,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 8,
+        "antfu/if-newline": 8,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/output-path.mjs",
+      "errors": 137,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 114,
+        "style/brace-style": 11,
+        "antfu/if-newline": 9,
+        "node/prefer-global/process": 2,
+        "unicorn/escape-case": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/repository-evidence.mjs",
+      "errors": 94,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 71,
+        "no-control-regex": 1,
+        "unicorn/escape-case": 1,
+        "antfu/if-newline": 10,
+        "antfu/curly": 5,
+        "style/arrow-parens": 2,
+        "regexp/prefer-w": 2,
+        "regexp/use-ignore-case": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/repository-location.mjs",
+      "errors": 58,
+      "warnings": 0,
+      "rules": {
+        "antfu/if-newline": 10,
+        "style/semi": 38,
+        "no-control-regex": 2,
+        "unicorn/escape-case": 2,
+        "style/arrow-parens": 1,
+        "style/max-statements-per-line": 1,
+        "style/brace-style": 1,
+        "style/multiline-ternary": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/text-fit.mjs",
+      "errors": 8,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 8
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/utils.mjs",
+      "errors": 68,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 47,
+        "style/arrow-parens": 2,
+        "no-regex-spaces": 2,
+        "regexp/no-useless-range": 10,
+        "unicorn/number-literal-case": 4,
+        "antfu/if-newline": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/shared/validator.mjs",
+      "errors": 31,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 26,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 3,
+        "prefer-template": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/workflow/README.md",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "null": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/workflow/render-workflow.mjs",
+      "errors": 22,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 13,
+        "antfu/no-top-level-await": 1,
+        "style/comma-dangle": 1,
+        "node/prefer-global/process": 4,
+        "antfu/if-newline": 1,
+        "style/brace-style": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/workflow/workflow-compiler.mjs",
+      "errors": 4880,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 1445,
+        "perfectionist/sort-imports": 4,
+        "perfectionist/sort-named-imports": 12,
+        "style/comma-dangle": 7,
+        "antfu/if-newline": 186,
+        "antfu/curly": 14,
+        "style/arrow-parens": 94,
+        "style/brace-style": 14,
+        "style/multiline-ternary": 12,
+        "style/indent": 3063,
+        "antfu/consistent-chaining": 2,
+        "style/indent-binary-ops": 5,
+        "antfu/consistent-list-newline": 17,
+        "no-use-before-define": 2,
+        "style/quote-props": 2,
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/renderers/workflow/workflow-migration-geometry.mjs",
+      "errors": 57,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 48,
+        "antfu/if-newline": 7,
+        "style/arrow-parens": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/schemas/README.md",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "null": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/scripts/check-render-output.mjs",
+      "errors": 405,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 301,
+        "perfectionist/sort-imports": 1,
+        "node/prefer-global/process": 4,
+        "style/brace-style": 2,
+        "style/arrow-parens": 40,
+        "style/multiline-ternary": 2,
+        "antfu/if-newline": 52,
+        "regexp/no-contradiction-with-assertion": 2,
+        "regexp/use-ignore-case": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/scripts/check-update.mjs",
+      "errors": 806,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 622,
+        "perfectionist/sort-named-imports": 1,
+        "style/arrow-parens": 16,
+        "antfu/consistent-list-newline": 3,
+        "antfu/if-newline": 78,
+        "antfu/curly": 8,
+        "style/brace-style": 60,
+        "node/prefer-global/buffer": 5,
+        "node/prefer-global/process": 13
+      }
+    },
+    {
+      "path": ".claude/skills/archify/scripts/generate-brand-marks.mjs",
+      "errors": 68,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 52,
+        "style/arrow-parens": 4,
+        "antfu/if-newline": 5,
+        "node/prefer-global/process": 4,
+        "style/brace-style": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/scripts/generate-validators.mjs",
+      "errors": 35,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 31,
+        "node/prefer-global/process": 3,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/scripts/render-examples.mjs",
+      "errors": 10,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 8,
+        "node/prefer-global/process": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/scripts/update-contract.mjs",
+      "errors": 93,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 61,
+        "no-control-regex": 1,
+        "unicorn/escape-case": 1,
+        "regexp/use-ignore-case": 1,
+        "antfu/if-newline": 12,
+        "style/arrow-parens": 1,
+        "style/brace-style": 1,
+        "antfu/consistent-list-newline": 13,
+        "style/indent-binary-ops": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/adaptive-reader-layout.test.mjs",
+      "errors": 64,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 62,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/animation.test.mjs",
+      "errors": 127,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 117,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 3,
+        "no-regex-spaces": 1,
+        "style/arrow-parens": 4
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/architecture-delta.test.mjs",
+      "errors": 397,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 349,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 1,
+        "style/arrow-parens": 35,
+        "regexp/no-super-linear-backtracking": 2,
+        "regexp/optimal-quantifier-concatenation": 2,
+        "antfu/consistent-list-newline": 6
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/artifact-receipt-flush.test.mjs",
+      "errors": 78,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 66,
+        "test/no-import-node-test": 1,
+        "style/brace-style": 3,
+        "node/prefer-global/buffer": 4,
+        "style/arrow-parens": 2,
+        "style/multiline-ternary": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/authored-reachability.test.mjs",
+      "errors": 58,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 55,
+        "perfectionist/sort-imports": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/authoring-safety-contract.test.mjs",
+      "errors": 38,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 36,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/automatic-port-spread.test.mjs",
+      "errors": 111,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 100,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 1,
+        "style/arrow-parens": 1,
+        "antfu/consistent-list-newline": 6,
+        "regexp/no-dupe-disjunctions": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/base-input-compatibility.test.mjs",
+      "errors": 18,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 17,
+        "test/no-import-node-test": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/brand-marks.test.mjs",
+      "errors": 478,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 397,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "style/arrow-parens": 35,
+        "regexp/strict": 1,
+        "style/max-statements-per-line": 4,
+        "antfu/if-newline": 6,
+        "regexp/use-ignore-case": 1,
+        "node/prefer-global/buffer": 11,
+        "style/brace-style": 13,
+        "regexp/no-dupe-disjunctions": 2,
+        "unicorn/number-literal-case": 5
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/chapter-delta-preview.test.mjs",
+      "errors": 95,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 88,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 3,
+        "regexp/no-dupe-disjunctions": 1,
+        "antfu/if-newline": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/chapter-handoff.test.mjs",
+      "errors": 68,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 66,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/chapter-rail.test.mjs",
+      "errors": 59,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 57,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/checkout-line-endings.test.mjs",
+      "errors": 55,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 39,
+        "perfectionist/sort-imports": 1,
+        "antfu/consistent-list-newline": 3,
+        "node/prefer-global/buffer": 6,
+        "unicorn/number-literal-case": 4,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/clean-skill-staging.test.mjs",
+      "errors": 263,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 238,
+        "test/no-import-node-test": 1,
+        "antfu/if-newline": 3,
+        "style/brace-style": 19,
+        "antfu/consistent-list-newline": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/cli-output-types.test.mjs",
+      "errors": 174,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 136,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "style/arrow-parens": 10,
+        "antfu/if-newline": 3,
+        "style/brace-style": 1,
+        "style/max-statements-per-line": 9,
+        "antfu/consistent-list-newline": 12
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/cli.test.mjs",
+      "errors": 537,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 522,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1,
+        "style/max-statements-per-line": 2,
+        "antfu/if-newline": 2,
+        "style/arrow-parens": 8
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/community-proof-intake.test.mjs",
+      "errors": 45,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 44,
+        "test/no-import-node-test": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/cursor-onboarding.test.mjs",
+      "errors": 50,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 47,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/degraded.test.mjs",
+      "errors": 87,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 79,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 2,
+        "antfu/consistent-list-newline": 2,
+        "style/brace-style": 1,
+        "style/max-statements-per-line": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/delivery-contract.test.mjs",
+      "errors": 42,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 39,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/desktop-reader-browser.test.mjs",
+      "errors": 47,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 41,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 2,
+        "style/brace-style": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/diagram-guide.test.mjs",
+      "errors": 65,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 63,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/engineering-profile.test.mjs",
+      "errors": 172,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 126,
+        "perfectionist/sort-imports": 1,
+        "style/max-statements-per-line": 1,
+        "style/arrow-parens": 24,
+        "style/operator-linebreak": 2,
+        "style/brace-style": 2,
+        "node/prefer-global/buffer": 1,
+        "antfu/consistent-list-newline": 14
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/export-browser.test.mjs",
+      "errors": 372,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 186,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 7,
+        "style/max-statements-per-line": 19,
+        "prefer-template": 15,
+        "style/comma-spacing": 57,
+        "style/semi-spacing": 28,
+        "node/prefer-global/buffer": 2,
+        "style/arrow-spacing": 20,
+        "antfu/curly": 1,
+        "style/space-infix-ops": 19,
+        "style/brace-style": 1,
+        "style/object-curly-spacing": 6,
+        "style/key-spacing": 4,
+        "style/keyword-spacing": 1,
+        "style/block-spacing": 2,
+        "style/space-before-blocks": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/export-cleanup-browser.test.mjs",
+      "errors": 122,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 103,
+        "perfectionist/sort-imports": 2,
+        "antfu/consistent-list-newline": 6,
+        "antfu/if-newline": 5,
+        "prefer-template": 2,
+        "style/brace-style": 1,
+        "node/prefer-global/buffer": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/finder-browser.test.mjs",
+      "errors": 244,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 176,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 2,
+        "prefer-template": 10,
+        "antfu/consistent-list-newline": 5,
+        "style/max-statements-per-line": 47,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/finder.test.mjs",
+      "errors": 75,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 73,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/fixtures/fail-migration-cleanup.mjs",
+      "errors": 12,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 12
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/focus-browser.test.mjs",
+      "errors": 982,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 149,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 2,
+        "style/max-statements-per-line": 68,
+        "prefer-template": 14,
+        "style/comma-spacing": 285,
+        "style/arrow-spacing": 40,
+        "style/space-infix-ops": 93,
+        "style/object-curly-spacing": 70,
+        "style/key-spacing": 61,
+        "style/semi-spacing": 169,
+        "style/space-before-function-paren": 12,
+        "style/keyword-spacing": 9,
+        "style/block-spacing": 4,
+        "style/space-before-blocks": 2,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/gallery.test.mjs",
+      "errors": 101,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 83,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 11,
+        "antfu/consistent-list-newline": 5
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/generate-validators.test.mjs",
+      "errors": 29,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 26,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/generate-viewer.test.mjs",
+      "errors": 124,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 112,
+        "perfectionist/sort-imports": 2,
+        "antfu/consistent-list-newline": 2,
+        "antfu/if-newline": 6,
+        "unicorn/escape-case": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/generated-artifact-xml.test.mjs",
+      "errors": 45,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 40,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 1,
+        "antfu/if-newline": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/geometry.test.mjs",
+      "errors": 367,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 322,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 13,
+        "style/comma-dangle": 4,
+        "style/max-statements-per-line": 1,
+        "style/arrow-parens": 7,
+        "unicorn/prefer-number-properties": 1,
+        "antfu/consistent-list-newline": 17
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/golden.mjs",
+      "errors": 153,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 103,
+        "no-console": 6,
+        "style/brace-style": 7,
+        "antfu/if-newline": 1,
+        "style/max-statements-per-line": 1,
+        "antfu/consistent-list-newline": 26,
+        "style/arrow-parens": 8,
+        "node/prefer-global/process": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/grid.test.mjs",
+      "errors": 28,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 24,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/guide-page.test.mjs",
+      "errors": 46,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 39,
+        "perfectionist/sort-imports": 2,
+        "style/brace-style": 1,
+        "style/arrow-parens": 2,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/guide.test.mjs",
+      "errors": 44,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 38,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 1,
+        "style/arrow-parens": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/guided-views-browser.test.mjs",
+      "errors": 1061,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 262,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 6,
+        "prefer-template": 21,
+        "antfu/consistent-list-newline": 5,
+        "style/max-statements-per-line": 106,
+        "style/comma-spacing": 318,
+        "style/object-curly-spacing": 100,
+        "style/space-infix-ops": 90,
+        "style/key-spacing": 80,
+        "style/arrow-spacing": 8,
+        "style/semi-spacing": 28,
+        "prefer-const": 1,
+        "style/keyword-spacing": 19,
+        "style/space-before-blocks": 4,
+        "style/quotes": 2,
+        "style/no-multiple-empty-lines": 1,
+        "style/quote-props": 2,
+        "style/block-spacing": 2,
+        "node/prefer-global/buffer": 1,
+        "style/operator-linebreak": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/guided-views.test.mjs",
+      "errors": 106,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 100,
+        "perfectionist/sort-imports": 1,
+        "antfu/consistent-list-newline": 2,
+        "style/arrow-parens": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/helpers/desktop-browser.mjs",
+      "errors": 17,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 12,
+        "antfu/consistent-list-newline": 4,
+        "node/prefer-global/process": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/helpers/offline-fonts.mjs",
+      "errors": 61,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 44,
+        "style/arrow-parens": 5,
+        "regexp/no-dupe-characters-character-class": 1,
+        "node/prefer-global/buffer": 1,
+        "style/max-statements-per-line": 1,
+        "antfu/if-newline": 6,
+        "antfu/curly": 2,
+        "regexp/no-unused-capturing-group": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/helpers/viewer-click.mjs",
+      "errors": 48,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 38,
+        "style/arrow-parens": 3,
+        "antfu/consistent-list-newline": 4,
+        "antfu/if-newline": 1,
+        "no-undef": 1,
+        "prefer-template": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/helpers/xml.mjs",
+      "errors": 20,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 17,
+        "antfu/if-newline": 2,
+        "style/arrow-parens": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/i18n.test.mjs",
+      "errors": 212,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 173,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 1,
+        "antfu/if-newline": 3,
+        "style/brace-style": 4,
+        "style/arrow-parens": 8,
+        "regexp/no-contradiction-with-assertion": 4,
+        "unicorn/escape-case": 4,
+        "prefer-regex-literals": 1,
+        "style/quote-props": 2,
+        "regexp/prefer-w": 3,
+        "regexp/use-ignore-case": 1,
+        "style/padded-blocks": 1,
+        "style/quotes": 5
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/intent-trace-browser.test.mjs",
+      "errors": 198,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 146,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 2,
+        "prefer-template": 9,
+        "antfu/consistent-list-newline": 3,
+        "style/max-statements-per-line": 34,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/intent-trace.test.mjs",
+      "errors": 76,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 74,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/landing.test.mjs",
+      "errors": 88,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 71,
+        "perfectionist/sort-imports": 1,
+        "antfu/consistent-list-newline": 15
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/layout-rules.test.mjs",
+      "errors": 691,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 615,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 2,
+        "style/arrow-parens": 11,
+        "antfu/if-newline": 3,
+        "antfu/consistent-list-newline": 53,
+        "regexp/no-useless-escape": 2,
+        "regexp/strict": 2,
+        "prefer-regex-literals": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/legend-contract.test.mjs",
+      "errors": 187,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 161,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 1,
+        "style/arrow-parens": 17,
+        "style/brace-style": 1,
+        "antfu/consistent-list-newline": 4,
+        "regexp/no-contradiction-with-assertion": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/motion-governor-browser.test.mjs",
+      "errors": 267,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 171,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 4,
+        "prefer-template": 15,
+        "antfu/consistent-list-newline": 3,
+        "style/quotes": 1,
+        "node/prefer-global/buffer": 1,
+        "style/max-statements-per-line": 9,
+        "style/comma-spacing": 28,
+        "style/key-spacing": 23,
+        "style/object-curly-spacing": 8,
+        "style/padded-blocks": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/motion-governor.test.mjs",
+      "errors": 85,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 82,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/offline-font-browser.test.mjs",
+      "errors": 132,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 113,
+        "perfectionist/sort-imports": 1,
+        "no-cond-assign": 1,
+        "antfu/if-newline": 4,
+        "antfu/curly": 2,
+        "unicorn/new-for-builtins": 3,
+        "style/brace-style": 4,
+        "style/max-statements-per-line": 2,
+        "prefer-template": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/offline-self-containment.test.mjs",
+      "errors": 63,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 52,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 4,
+        "style/quotes": 2,
+        "prefer-template": 1,
+        "style/brace-style": 1,
+        "antfu/consistent-chaining": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/open-artifact.test.mjs",
+      "errors": 59,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 47,
+        "perfectionist/sort-imports": 1,
+        "style/quotes": 2,
+        "style/no-multiple-empty-lines": 1,
+        "style/max-statements-per-line": 1,
+        "antfu/consistent-list-newline": 6
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/ordinary-model-floor.test.mjs",
+      "errors": 435,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 350,
+        "test/no-import-node-test": 1,
+        "style/arrow-parens": 48,
+        "antfu/consistent-list-newline": 36
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/output-path.test.mjs",
+      "errors": 384,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 342,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "style/brace-style": 2,
+        "antfu/if-newline": 1,
+        "unicorn/escape-case": 2,
+        "antfu/consistent-list-newline": 23,
+        "node/prefer-global/buffer": 2,
+        "style/max-statements-per-line": 4,
+        "style/arrow-parens": 5
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/presentation.test.mjs",
+      "errors": 46,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 44,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/preset-tryon.test.mjs",
+      "errors": 82,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 75,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 1,
+        "no-regex-spaces": 2,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/preview-contract.test.mjs",
+      "errors": 36,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 31,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "no-unused-vars": 1,
+        "unused-imports/no-unused-vars": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/preview.test.mjs",
+      "errors": 331,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 281,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 1,
+        "style/arrow-parens": 33,
+        "style/max-statements-per-line": 3,
+        "no-regex-spaces": 1,
+        "style/brace-style": 8,
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/proof-aperture.test.mjs",
+      "errors": 63,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 60,
+        "perfectionist/sort-imports": 1,
+        "regexp/no-super-linear-backtracking": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/reach-share-card.test.mjs",
+      "errors": 113,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 110,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/reader-layout-browser.test.mjs",
+      "errors": 198,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 167,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 16,
+        "style/brace-style": 2,
+        "antfu/consistent-list-newline": 1,
+        "prefer-template": 1,
+        "regexp/no-contradiction-with-assertion": 4,
+        "node/prefer-global/buffer": 1,
+        "style/quotes": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/readme-showcase.test.mjs",
+      "errors": 199,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 186,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 3,
+        "unicorn/number-literal-case": 3,
+        "style/brace-style": 2,
+        "node/prefer-global/buffer": 1,
+        "style/arrow-parens": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/real-repository-proof.test.mjs",
+      "errors": 115,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 104,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 3,
+        "antfu/if-newline": 1,
+        "style/brace-style": 4,
+        "style/padded-blocks": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/relationship-direct-explorer.test.mjs",
+      "errors": 86,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 84,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/relationship-lens.test.mjs",
+      "errors": 89,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 85,
+        "perfectionist/sort-imports": 1,
+        "style/quotes": 1,
+        "style/arrow-parens": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/relationship-permalink.test.mjs",
+      "errors": 93,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 86,
+        "perfectionist/sort-imports": 1,
+        "antfu/consistent-list-newline": 2,
+        "regexp/no-contradiction-with-assertion": 1,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/relationship-pulse.test.mjs",
+      "errors": 91,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 89,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/release-identity.test.mjs",
+      "errors": 186,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 164,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "style/brace-style": 17,
+        "style/quotes": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/release-package-gates.test.mjs",
+      "errors": 472,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 437,
+        "perfectionist/sort-imports": 1,
+        "antfu/top-level-function": 1,
+        "antfu/if-newline": 4,
+        "no-regex-spaces": 1,
+        "antfu/consistent-list-newline": 6,
+        "style/brace-style": 14,
+        "antfu/curly": 1,
+        "node/prefer-global/buffer": 2,
+        "unicorn/number-literal-case": 2,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/render-output-checks.test.mjs",
+      "errors": 247,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 225,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 3,
+        "style/arrow-parens": 17
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/repair-receipt.test.mjs",
+      "errors": 116,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 108,
+        "test/no-import-node-test": 1,
+        "style/arrow-parens": 7
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/repository-evidence.test.mjs",
+      "errors": 389,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 370,
+        "test/no-import-node-test": 1,
+        "style/arrow-parens": 10,
+        "style/brace-style": 5,
+        "antfu/consistent-list-newline": 1,
+        "antfu/if-newline": 1,
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/repository-language-metadata.test.mjs",
+      "errors": 13,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 11,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/route-journey.test.mjs",
+      "errors": 95,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 92,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/route-probe-browser.test.mjs",
+      "errors": 369,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 221,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 4,
+        "prefer-template": 11,
+        "antfu/consistent-list-newline": 7,
+        "style/max-statements-per-line": 85,
+        "style/arrow-spacing": 4,
+        "style/comma-spacing": 20,
+        "style/space-infix-ops": 7,
+        "style/quotes": 2,
+        "style/object-curly-spacing": 2,
+        "style/key-spacing": 1,
+        "style/semi-spacing": 1,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/route-probe.test.mjs",
+      "errors": 85,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 83,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/route-share-card.test.mjs",
+      "errors": 129,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 121,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 5,
+        "style/padded-blocks": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/semantic-camera.test.mjs",
+      "errors": 61,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 59,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/semantic-flow.test.mjs",
+      "errors": 63,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 61,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/semantic-legend-gateway.test.mjs",
+      "errors": 121,
+      "warnings": 1,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 99,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 1,
+        "antfu/consistent-list-newline": 19,
+        "regexp/no-useless-flag": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/semantic-lens-browser.test.mjs",
+      "errors": 326,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 235,
+        "perfectionist/sort-imports": 2,
+        "antfu/if-newline": 6,
+        "prefer-template": 13,
+        "antfu/consistent-list-newline": 3,
+        "style/max-statements-per-line": 62,
+        "prefer-const": 1,
+        "style/quotes": 2,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/semantic-lens.test.mjs",
+      "errors": 74,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 72,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/semantic-passport.test.mjs",
+      "errors": 71,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 69,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/semantic-radar.test.mjs",
+      "errors": 257,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 240,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 1,
+        "style/brace-style": 7,
+        "unused-imports/no-unused-vars": 1,
+        "antfu/consistent-list-newline": 4,
+        "prefer-template": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/semantic-zoom.test.mjs",
+      "errors": 59,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 57,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/sequence-column-fit.test.mjs",
+      "errors": 85,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 74,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 2,
+        "style/arrow-parens": 1,
+        "antfu/if-newline": 1,
+        "style/comma-dangle": 3,
+        "antfu/consistent-list-newline": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/settled-flow.test.mjs",
+      "errors": 71,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 69,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/share-card-export.test.mjs",
+      "errors": 95,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 92,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/site-language-continuity.test.mjs",
+      "errors": 263,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 234,
+        "perfectionist/sort-imports": 3,
+        "perfectionist/sort-named-imports": 1,
+        "antfu/if-newline": 4,
+        "style/multiline-ternary": 3,
+        "style/brace-style": 3,
+        "unused-imports/no-unused-vars": 1,
+        "style/arrow-parens": 3,
+        "regexp/no-contradiction-with-assertion": 1,
+        "style/quotes": 1,
+        "antfu/consistent-list-newline": 8
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/site-language-integration.mjs",
+      "errors": 8,
+      "warnings": 0,
+      "rules": {
+        "node/prefer-global/process": 4,
+        "style/semi": 3,
+        "antfu/no-top-level-await": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/skill-metadata.test.mjs",
+      "errors": 65,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 57,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-imports": 2,
+        "regexp/no-super-linear-backtracking": 1,
+        "node/prefer-global/buffer": 1,
+        "style/arrow-parens": 2,
+        "regexp/no-useless-escape": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/stable-update-manifest.test.mjs",
+      "errors": 104,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 86,
+        "perfectionist/sort-imports": 1,
+        "test/no-import-node-test": 1,
+        "antfu/consistent-list-newline": 13,
+        "node/prefer-global/buffer": 1,
+        "unicorn/escape-case": 1,
+        "style/brace-style": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/start-page.test.mjs",
+      "errors": 211,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 177,
+        "perfectionist/sort-imports": 2,
+        "no-regex-spaces": 2,
+        "antfu/consistent-list-newline": 10,
+        "style/arrow-parens": 10,
+        "antfu/if-newline": 5,
+        "style/max-statements-per-line": 1,
+        "style/brace-style": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/story-beat-navigator.test.mjs",
+      "errors": 78,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 75,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/story-carrier.test.mjs",
+      "errors": 61,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 59,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/story-director-strip.test.mjs",
+      "errors": 61,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 58,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/story-follow-camera.test.mjs",
+      "errors": 74,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 72,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/story-horizon.test.mjs",
+      "errors": 66,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 63,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/story-moment-link.test.mjs",
+      "errors": 65,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 62,
+        "perfectionist/sort-imports": 1,
+        "no-regex-spaces": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/story-shelf.test.mjs",
+      "errors": 53,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 51,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/story-trail.test.mjs",
+      "errors": 60,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 58,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/toolbar-polish.test.mjs",
+      "errors": 48,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 46,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/update-contract.test.mjs",
+      "errors": 40,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 37,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-named-imports": 1,
+        "unicorn/escape-case": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/update-notifier.test.mjs",
+      "errors": 1903,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 1763,
+        "perfectionist/sort-imports": 1,
+        "test/no-import-node-test": 1,
+        "perfectionist/sort-named-imports": 1,
+        "antfu/if-newline": 13,
+        "style/arrow-parens": 30,
+        "style/brace-style": 24,
+        "style/max-statements-per-line": 30,
+        "style/indent-binary-ops": 1,
+        "antfu/consistent-list-newline": 7,
+        "node/prefer-global/buffer": 14,
+        "style/indent": 12,
+        "no-use-before-define": 1,
+        "antfu/curly": 3,
+        "regexp/no-useless-non-capturing-group": 1,
+        "unicorn/number-literal-case": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/v1-compatibility.test.mjs",
+      "errors": 107,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 100,
+        "perfectionist/sort-imports": 1,
+        "style/brace-style": 3,
+        "style/arrow-parens": 2
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/vertical-edge.test.mjs",
+      "errors": 40,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 37,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/viewer-camera-browser.test.mjs",
+      "errors": 171,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 152,
+        "perfectionist/sort-imports": 2,
+        "antfu/consistent-list-newline": 5,
+        "antfu/if-newline": 5,
+        "prefer-template": 2,
+        "node/prefer-global/buffer": 1,
+        "style/max-statements-per-line": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/viewer-chrome-layout.test.mjs",
+      "errors": 430,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 392,
+        "perfectionist/sort-imports": 1,
+        "antfu/if-newline": 9,
+        "style/arrow-parens": 3,
+        "style/brace-style": 17,
+        "prefer-template": 2,
+        "style/no-multiple-empty-lines": 1,
+        "antfu/consistent-list-newline": 1,
+        "antfu/curly": 2,
+        "node/prefer-global/buffer": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/visual-check.test.mjs",
+      "errors": 225,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 202,
+        "perfectionist/sort-imports": 1,
+        "perfectionist/sort-named-imports": 1,
+        "no-unused-vars": 1,
+        "unused-imports/no-unused-vars": 1,
+        "node/prefer-global/buffer": 1,
+        "antfu/if-newline": 1,
+        "style/arrow-parens": 16
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/webm-artifact.smoke.mjs",
+      "errors": 614,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 498,
+        "perfectionist/sort-named-imports": 1,
+        "node/prefer-global/process": 14,
+        "antfu/if-newline": 17,
+        "style/brace-style": 5,
+        "unused-imports/no-unused-vars": 2,
+        "style/arrow-parens": 9,
+        "antfu/no-top-level-await": 36,
+        "no-console": 11,
+        "node/prefer-global/buffer": 5,
+        "antfu/consistent-list-newline": 16
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/workflow-compiler-hard-contract.test.mjs",
+      "errors": 847,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 707,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 12,
+        "antfu/consistent-list-newline": 111,
+        "antfu/if-newline": 2,
+        "style/max-statements-per-line": 1,
+        "style/indent": 7,
+        "style/brace-style": 4,
+        "unicorn/prefer-string-starts-ends-with": 1
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/workflow-compiler.test.mjs",
+      "errors": 489,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 413,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 13,
+        "antfu/consistent-list-newline": 54,
+        "antfu/if-newline": 1,
+        "style/indent-binary-ops": 1,
+        "regexp/no-contradiction-with-assertion": 5
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/workflow-migration.test.mjs",
+      "errors": 313,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 304,
+        "perfectionist/sort-imports": 2,
+        "style/arrow-parens": 3,
+        "node/prefer-global/buffer": 3
+      }
+    },
+    {
+      "path": ".claude/skills/archify/test/workflow-semantic-contract.test.mjs",
+      "errors": 45,
+      "warnings": 0,
+      "rules": {
+        "test/no-import-node-test": 1,
+        "style/semi": 39,
+        "perfectionist/sort-imports": 1,
+        "style/arrow-parens": 4
+      }
+    },
+    {
+      "path": ".claude/skills/codebase-design/SKILL.md",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 2
+      }
+    },
+    {
+      "path": ".claude/skills/handoff/SKILL.md",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "style/no-multi-spaces": 2
+      }
+    },
+    {
+      "path": ".claude/skills/managing-article-publication/references/local.md",
+      "errors": 8,
+      "warnings": 0,
+      "rules": {
+        "jsonc/object-curly-spacing": 8
+      }
+    },
+    {
+      "path": ".claude/skills/prototype/UI.md",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 2,
+        "style/comma-spacing": 2
+      }
+    },
+    {
+      "path": ".claude/skills/security-review/references/upstream-security-review.md",
+      "errors": 6,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 1,
+        "style/no-trailing-spaces": 4,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": ".claude/skills/tdd/mocking.md",
+      "errors": 8,
+      "warnings": 0,
+      "rules": {
+        "style/semi": 5,
+        "style/arrow-parens": 3
+      }
+    },
+    {
+      "path": ".claude/skills/tdd/tests.md",
+      "errors": 35,
+      "warnings": 0,
+      "rules": {
+        "style/quotes": 12,
+        "style/semi": 23
+      }
+    },
+    {
+      "path": ".claude/skills/to-questionnaire/SKILL.md",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": ".proj.specs/0001-harness-adoption/review/code-T-0001.md",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": ".proj.specs/0001-harness-adoption/traceability.md",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 2
+      }
+    },
+    {
+      "path": ".proj.specs/_baseline/ee7fecf/phoenix-style-and-maintenance/spec.en.md",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 2,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": ".proj.specs/_baseline/ee7fecf/vitepress-post-scaffolding/spec.en.md",
+      "errors": 5,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 4,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "README.md",
+      "errors": 5,
+      "warnings": 0,
+      "rules": {
+        "antfu/consistent-list-newline": 2,
+        "style/arrow-parens": 2,
+        "perfectionist/sort-imports": 1
+      }
+    },
+    {
+      "path": "blog/about.md",
+      "errors": 4,
+      "warnings": 0,
+      "rules": {
+        "style/no-trailing-spaces": 3,
+        "style/no-multiple-empty-lines": 1
+      }
+    },
+    {
+      "path": "blog/index.md",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "style/no-trailing-spaces": 1,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "blog/post/course/cybersec/index.md",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "blog/post/course/cybersec/what-is-safety.md",
+      "errors": 5,
+      "warnings": 0,
+      "rules": {
+        "style/no-trailing-spaces": 4,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "blog/post/course/rm/index.md",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "blog/post/course/rm/why-we-need-rm.md",
+      "errors": 14,
+      "warnings": 0,
+      "rules": {
+        "style/no-trailing-spaces": 11,
+        "style/no-multiple-empty-lines": 3
+      }
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-particles-records.json",
+      "errors": 1,
+      "warnings": 0,
+      "rules": {
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-records.json",
+      "errors": 2,
+      "warnings": 0,
+      "rules": {
+        "no-irregular-whitespace": 1,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "maintenance/writing-skills/legacy/phoenix-writing/SKILL.md",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "no-irregular-whitespace": 3
+      }
+    },
+    {
+      "path": "openspec/specs/phoenix-style-and-maintenance/spec.md",
+      "errors": 3,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 2,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "openspec/specs/vitepress-post-scaffolding/spec.md",
+      "errors": 5,
+      "warnings": 0,
+      "rules": {
+        "style/no-multiple-empty-lines": 4,
+        "style/eol-last": 1
+      }
+    },
+    {
+      "path": "skills/managing-article-publication/references/local.md",
+      "errors": 8,
+      "warnings": 0,
+      "rules": {
+        "jsonc/object-curly-spacing": 8
+      }
+    }
+  ]
+}

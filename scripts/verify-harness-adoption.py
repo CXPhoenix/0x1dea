@@ -115,6 +115,10 @@ def check_preserved(root, baseline, exceptions):
         name = entry['path']
         if name in exceptions:
             expected = exceptions[name]
+            if expected.get('candidate', '').startswith('blog/') and name.startswith('docs/'):
+                if (root / name).exists() or (root / name).is_symlink():
+                    raise ValueError(f'old website path remains: {name}')
+                moves.append({'source': name, 'candidate': expected['candidate'], 'sha256': expected['sha256']})
             if expected.get('retired'):
                 if (root / name).exists() or (root / name).is_symlink():
                     raise ValueError(f'retired active entry remains: {name}')
@@ -124,7 +128,7 @@ def check_preserved(root, baseline, exceptions):
                     raise ValueError(f'generated package absent/linked: {name}')
                 continue
             else:
-                path = regular_path(root, name)
+                path = regular_path(root, expected.get('candidate', name))
             wanted = expected.get('sha256', entry['sha256'])
         else:
             mapped = 'blog/' + name[5:] if name.startswith('docs/') else name
@@ -143,8 +147,8 @@ def check_preserved(root, baseline, exceptions):
 
 
 def allowed_new(name):
-    prefixes = ('.proj.specs/', '.proj.tickets/', 'docs/agents/', 'docs/adr/', 'docs/security/', 'maintenance/harness-adoption/', 'maintenance/article-publication/', 'skills/managing-article-publication/', 'tests/article_publication/', '.agents/skills/', '.claude/skills/', '.claude/agents/', '.codex/')
-    exact = {'docs/README.md', 'docs/guide.md', 'scripts/verify-project.py', 'scripts/verify-harness-adoption.py', 'scripts/materialize-writing-skills.py', 'scripts/article-publication.py', 'skills-lock.json', 'THIRD_PARTY_NOTICES.md', 'CONTEXT.md', 'tests/harness_adoption/test_tracker.py', 'tests/harness_adoption/test_materializer.py', 'tests/harness_adoption/test_publication.py'}
+    prefixes = ('.proj.specs/', '.proj.tickets/', 'docs/agents/', 'docs/adr/', 'docs/security/', 'maintenance/harness-adoption/', 'maintenance/article-publication/', 'maintenance/lint-cleanup/', 'skills/managing-article-publication/', 'tests/article_publication/', '.agents/skills/', '.claude/skills/', '.claude/agents/', '.codex/')
+    exact = {'tests/lintCleanup.vitest.ts', 'uno.config.ts', 'docs/README.md', 'docs/guide.md', 'scripts/verify-project.py', 'scripts/verify-harness-adoption.py', 'scripts/materialize-writing-skills.py', 'scripts/article-publication.py', 'skills-lock.json', 'THIRD_PARTY_NOTICES.md', 'CONTEXT.md', 'tests/harness_adoption/test_tracker.py', 'tests/harness_adoption/test_materializer.py', 'tests/harness_adoption/test_publication.py'}
     return name in exact or name.startswith(prefixes)
 
 
@@ -323,7 +327,75 @@ def check_lint_dependency_delta(before, after):
         raise ValueError('unapproved lint dependency delta')
 
 
-def phase1_preserved_updates(root, exceptions):
+LINT_BASE = '8890d5250e22ec4ee0e0493c1e72bab89d16489b'
+LINT_COMMAND = 'eslint scripts tests blog/shared blog/.vitepress eslint.config.js vitest.config.ts uno.config.ts tsconfig.json package.json --max-warnings 0'
+LINT_UPDATE_NAMES = {
+    'blog/.vitepress/config.mts', 'blog/.vitepress/nav.yml', 'blog/.vitepress/sidebar.yml',
+    'blog/.vitepress/theme/Layout.vue', 'blog/.vitepress/theme/components/NewPost.vue',
+    'blog/.vitepress/theme/components/Particles.vue', 'blog/.vitepress/theme/components/PostBlock.vue',
+    'blog/.vitepress/theme/components/PostCard.vue', 'blog/.vitepress/theme/components/PostList.vue',
+    'blog/.vitepress/theme/components/__tests__/Particles.spec.ts',
+    'blog/.vitepress/theme/composables/usePostFilter.ts', 'blog/.vitepress/theme/composables/usePostSort.ts',
+    'blog/.vitepress/theme/index.ts', 'blog/shared/posts.data.ts', 'package.json', 'pnpm-lock.yaml',
+    'scripts/vpHelper.ts', 'tests/vpHelper.vitest.ts', 'vitest.config.ts',
+}
+
+
+def check_lint_cleanup_delta(before, after):
+    """Keep the earlier dependency addition contract intact; validate this follow-up separately."""
+    expected = json.loads(before)
+    current = json.loads(after)
+    expected['devDependencies']['eslint'] = '9.39.2'
+    expected['scripts']['lint'] = LINT_COMMAND
+    if current != expected:
+        raise ValueError('unapproved lint cleanup manifest delta')
+
+
+def check_lint_successor(root):
+    """Validate exact authorized paths/hashes against immutable predecessor Git objects."""
+    name = 'maintenance/lint-cleanup/source-boundary.json'
+    if not (root / name).exists():
+        return {}, {}
+    boundary = json.loads(regular_path(root, name).read_text())
+    if (set(boundary) != {'version', 'scope', 'base', 'preserved_updates', 'new_sources'}
+            or boundary['version'] != 1 or boundary['scope'] != '0X1DEA#11'
+            or boundary['base'] != LINT_BASE
+            or set(boundary['preserved_updates']) != LINT_UPDATE_NAMES
+            or set(boundary['new_sources']) != {'uno.config.ts', 'tests/lintCleanup.vitest.ts'}):
+        raise ValueError('unapproved lint cleanup source boundary')
+    check_adoption_ancestry(root, LINT_BASE)
+    predecessor = 'maintenance/article-publication/source-boundary.json'
+    pinned = subprocess.check_output(['git', 'show', LINT_BASE + ':' + predecessor], cwd=root)
+    if regular_path(root, predecessor).read_bytes() != pinned:
+        raise ValueError('changed historical publication boundary')
+    before_sources = {}
+    for path, record in boundary['preserved_updates'].items():
+        if set(record) != {'before_sha256', 'after_sha256'}:
+            raise ValueError('invalid lint successor hash fields')
+        before = subprocess.check_output(['git', 'show', LINT_BASE + ':' + path], cwd=root)
+        if (hashlib.sha256(before).hexdigest() != record['before_sha256']
+                or entry_sha(regular_path(root, path)) != record['after_sha256']):
+            raise ValueError('lint cleanup preserved source hash mismatch: ' + path)
+        before_sources[path] = before
+    for path, wanted in boundary['new_sources'].items():
+        if entry_sha(regular_path(root, path)) != wanted:
+            raise ValueError('lint cleanup new source hash mismatch: ' + path)
+    check_lint_cleanup_delta(before_sources['package.json'], regular_path(root, 'package.json').read_bytes())
+    return before_sources, boundary['preserved_updates']
+
+
+def apply_lint_successor(exceptions, updates, baseline):
+    result = {name: dict(value) for name, value in exceptions.items()}
+    baseline_names = {entry['path'] for entry in baseline}
+    for path, record in updates.items():
+        source = 'docs/' + path[5:] if path.startswith('blog/') else path
+        if source not in baseline_names:
+            raise ValueError('lint successor has no preserved predecessor: ' + path)
+        result.setdefault(source, {}).update(candidate=path, sha256=record['after_sha256'])
+    return result
+
+
+def phase1_preserved_updates(root, exceptions, successor=None):
     """Keep adoption evidence immutable; validate the reviewed successor projection."""
     name='maintenance/article-publication/source-boundary.json'
     if not (root/name).exists():
@@ -337,7 +409,7 @@ def phase1_preserved_updates(root, exceptions):
         raise ValueError('unapproved article publication source boundary')
     if 'package.json' in boundary['preserved_updates']:
         before=subprocess.check_output(['git','show',base+':package.json'],cwd=root)
-        check_lint_dependency_delta(before, regular_path(root,'package.json').read_bytes())
+        check_lint_dependency_delta(before, (successor or {}).get('package.json', regular_path(root,'package.json').read_bytes()))
     result={name:dict(value) for name,value in exceptions.items()}
     for name,record in boundary['preserved_updates'].items():
         if set(record)!={'before_sha256','after_sha256'}:
@@ -345,7 +417,7 @@ def phase1_preserved_updates(root, exceptions):
         before=subprocess.check_output(['git','show',base+':'+name],cwd=root)
         if (hashlib.sha256(before).hexdigest()!=record['before_sha256']
                 or (name in exceptions and record['before_sha256']!=exceptions[name]['sha256'])
-                or entry_sha(regular_path(root,name))!=record['after_sha256']):
+                or hashlib.sha256((successor or {}).get(name, regular_path(root,name).read_bytes())).hexdigest()!=record['after_sha256']):
             raise ValueError('article publication preserved source hash mismatch: '+name)
         result.setdefault(name, {})['sha256']=record['after_sha256']
     return result
@@ -364,7 +436,10 @@ def main():
     if set(delta['exceptions']) != approved_exception_names(baseline['files']):
         raise ValueError('unapproved/missing exception entry')
     check_adoption_ancestry(root, baseline['baseline'])
-    moves = check_preserved(root, baseline['files'], phase1_preserved_updates(root,delta['exceptions']))
+    successor, updates = check_lint_successor(root)
+    exceptions = phase1_preserved_updates(root, delta['exceptions'], successor)
+    exceptions = apply_lint_successor(exceptions, updates, baseline['files'])
+    moves = check_preserved(root, baseline['files'], exceptions)
     if len(moves) != 55: raise ValueError('site move count mismatch')
     baseline_names = {f['path'] for f in baseline['files']}
     moved = {m['candidate'] for m in moves}
@@ -377,7 +452,7 @@ def main():
         else:
             content = content.replace('docs', 'blog')
             if name == 'tests/vpHelper.vitest.ts': content = content.replace('expect(config.options.dir).toBe(DEFAULT_DIR);', "expect(config.options.dir).toBe('blog/post');")
-        actual = (root / name).read_text()
+        actual = successor[name].decode() if name in successor else (root / name).read_text()
         boundary_path=root/'maintenance/article-publication/source-boundary.json'
         lint_update=(name=='package.json' and boundary_path.exists()
                      and 'package.json' in json.loads(regular_path(root,str(boundary_path.relative_to(root))).read_text())['preserved_updates'])

@@ -29,3 +29,20 @@ The eight-seam table in the spec. Signatures do not prove secrecy or absence of 
 ## Coverage and review
 
 [Coverage and limits](../../.proj.specs/0002-article-publication/coverage-report.md), [code review](../../.proj.specs/0002-article-publication/review/code-T-0002.md) and [security review](../../.proj.specs/0002-article-publication/review/security-T-0002.md). Local implementation is reviewable. Native discovery and synthetic candidate OS-isolated build pass. ESLint now executes with existing failures; no suppressed checks or landing authority. The [authorized follow-up](../../.proj.specs/0002-article-publication/authorized-followup.md) records evidence and limits. Status remains review, never done.
+
+## Authorized lint cleanup and combined delivery follow-up
+
+The owner authorized the cleanup of 0X1DEA#11, commit/non-force push on this same
+branch and a combined draft PR to staging. This supersedes the earlier no-PR
+delivery step above. Merge, direct protected-branch push and additional deployment
+are not authorized. The external Notion index is maintained by the parent.
+
+[Cleanup scope and matrix](../../.proj.specs/0002-article-publication/lint-cleanup.md),
+[final validation](../../.proj.specs/0002-article-publication/evidence/lint-cleanup-validation.json),
+[clean installation](../../.proj.specs/0002-article-publication/evidence/lint-cleanup-clean-validation.json).
+Status remains review; draft creation does not mean landing or done.
+
+Final combined reviews: [Standards / Spec](../../.proj.specs/0002-article-publication/review/code-T-0002-lint-cleanup.md),
+[security / public information](../../.proj.specs/0002-article-publication/review/security-T-0002-lint-cleanup.md).
+Original language and public-path findings were resolved and independently rechecked;
+no residual finding remains. Browser input dispatch remains explicitly blocked.

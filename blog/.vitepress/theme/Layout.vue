@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import DefaultTheme from 'vitepress/theme'
 import { useData } from 'vitepress'
-import Particles from './components/Particles.vue'
+import DefaultTheme from 'vitepress/theme'
 import { computed } from 'vue'
+import Particles from './components/Particles.vue'
 
 const { Layout } = DefaultTheme
 const { frontmatter } = useData()
@@ -13,7 +13,7 @@ const showParticleBg = computed(() => frontmatter.value.layout === 'home' || fro
 <template>
   <Layout>
     <template #layout-top>
-      <div class="visual-effects-container fixed inset-0 z-0 pointer-events-none">
+      <div class="visual-effects-container pointer-events-none fixed inset-0 z-0">
         <Particles v-if="showParticleBg" />
       </div>
     </template>

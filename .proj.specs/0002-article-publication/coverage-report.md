@@ -40,7 +40,7 @@ build-isolation 仍 blocked：host transient no-network probe pass，但 read/wr
 
 先前 blocked 記錄保留作歷史證據。使用者已授權有界診斷與隔離副本安裝；[follow-up](authorized-followup.md) 記錄範圍與新增反例。
 
-- OS sentinel pass：內部可讀、外部讀／寫 denied、network denied。根目錄 literal `/` 是 kernel log 確认缺失的唯一新增讀取規則，不允許其子路徑。
+- OS sentinel pass：內部可讀、外部讀／寫 denied、network denied。根目錄 literal `/` 是 kernel log 確認缺失的唯一新增讀取規則，不允許其子路徑。
 - A-only 合成候選使用同一 OS profile build pass；原 candidate receipt verify pass；B 的 route／long prose 補充輸出檢查 supplementary-pass，publishable=false。
 - CLI 16/16、Vitest 11/11、可信網站 build、結構與 materializer 通過。新增依賴增量反例後 harness 51/51 與保存 checker 通過。
 - ESLint 已解除缺套件 blocked，結果為 existing-failure：未改 TS 檔案 355 errors；manifest 8 errors 與 HEAD baseline 訊息完全相同。沒有 lint 綠燈、沒有 autofix 或關閉規則。既有 ESLint 10 peer-range warnings 保留。
@@ -53,3 +53,19 @@ build-isolation 仍 blocked：host transient no-network probe pass，但 read/wr
 使用者已授權 commit 與 non-force push 工作分支，未授權這輪 PR／merge／部署。新的完整驗證紀錄在 [pre-push-validation.json](evidence/pre-push-validation.json)。Lint 仍為 existing-failure，355 個既有 TypeScript errors 加 8 個 manifest errors，沒有宣稱全過。
 
 公開證據的本機路徑已遮罩，log hashes 綁定公開副本；私人授權內容與 host-specific profiles 留在 repo 外。[Public evidence boundary](public-evidence.md) 說明呈現差異與可驗證範圍。
+
+## Lint cleanup final coverage
+
+| Check / surface | Final observed result | Evidence / limit |
+| --- | --- | --- |
+| First-party ESLint | 22 files, 0 errors / warnings, exit 0 | lint-cleanup-green.json; broad diagnostic is a separate existing failure |
+| CLI / harness / Vitest | 16 / 53 / 14 pass | lint-cleanup-validation.json; Vue regressions also pass on pre-cleanup sources |
+| Build / materializer / structure / preservation | All exit 0 | Final logs and separate pinned lint successor; historical manifests unchanged |
+| Fresh install / lint / Vitest / build | All exit 0 | Frozen lockfile, strict peers, official registry, installation scripts disabled |
+| Website / articles | 8 routes, normalized HTML / mapped CSS blocks equal; read-only bytes unchanged | lint-cleanup-build-comparison.json; not pixel identity |
+| Independent Standards / Spec | No residual findings | review/code-T-0002-lint-cleanup.md; language P2 resolved |
+| Security / public information | No HIGH/MEDIUM candidates; no residual public gate finding | review/security-T-0002-lint-cleanup.md; host paths sanitized and hashes rechecked |
+| Interactive browser / fresh candidate OS-isolated build | Blocked / not rerun | Chrome input timeout; earlier isolation is historical, scoped fixture evidence |
+
+Reports and evidence paths above resolve from this epic, with log/JSON files under
+`evidence/`. Commit/branch push/draft PR do not mean merge, deployment or done.

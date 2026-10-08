@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "base": "8890d5250e22ec4ee0e0493c1e72bab89d16489b",
+  "transform_cases": 8,
+  "cli_argument_cases": 9,
+  "asset_path_cases": 4,
+  "yaml_files": 2,
+  "limits": "Public-function and data equivalence; not a browser or sandbox escape audit."
+}

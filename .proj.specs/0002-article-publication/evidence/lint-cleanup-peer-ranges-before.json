@@ -1,0 +1,162 @@
+[
+  {
+    "name": "@antfu/eslint-config",
+    "version": "7.4.3",
+    "eslint": "^9.10.0 || ^10.0.0"
+  },
+  {
+    "name": "@eslint-community/eslint-plugin-eslint-comments",
+    "version": "4.6.0",
+    "eslint": "^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0"
+  },
+  {
+    "name": "@stylistic/eslint-plugin",
+    "version": "5.8.0",
+    "eslint": ">=9.0.0"
+  },
+  {
+    "name": "@typescript-eslint/eslint-plugin",
+    "version": "8.55.0",
+    "eslint": "^8.57.0 || ^9.0.0"
+  },
+  {
+    "name": "@typescript-eslint/parser",
+    "version": "8.55.0",
+    "eslint": "^8.57.0 || ^9.0.0"
+  },
+  {
+    "name": "@vitest/eslint-plugin",
+    "version": "1.6.7",
+    "eslint": ">=8.57.0"
+  },
+  {
+    "name": "eslint-config-flat-gitignore",
+    "version": "2.1.0",
+    "eslint": "^9.5.0"
+  },
+  {
+    "name": "eslint-merge-processors",
+    "version": "2.0.0",
+    "eslint": "*"
+  },
+  {
+    "name": "eslint-plugin-antfu",
+    "version": "3.2.2",
+    "eslint": "*"
+  },
+  {
+    "name": "eslint-plugin-command",
+    "version": "3.4.0",
+    "eslint": "*"
+  },
+  {
+    "name": "eslint-plugin-import-lite",
+    "version": "0.5.1",
+    "eslint": ">=9.0.0"
+  },
+  {
+    "name": "eslint-plugin-jsdoc",
+    "version": "62.5.4",
+    "eslint": "^7.0.0 || ^8.0.0 || ^9.0.0"
+  },
+  {
+    "name": "eslint-plugin-jsonc",
+    "version": "2.21.1",
+    "eslint": ">=6.0.0"
+  },
+  {
+    "name": "eslint-plugin-n",
+    "version": "17.23.2",
+    "eslint": ">=8.23.0"
+  },
+  {
+    "name": "eslint-plugin-perfectionist",
+    "version": "5.5.0",
+    "eslint": ">=8.45.0"
+  },
+  {
+    "name": "eslint-plugin-pnpm",
+    "version": "1.5.0",
+    "eslint": "^9.0.0"
+  },
+  {
+    "name": "eslint-plugin-regexp",
+    "version": "3.0.0",
+    "eslint": ">=9.38.0"
+  },
+  {
+    "name": "eslint-plugin-toml",
+    "version": "1.0.4",
+    "eslint": ">=9.38.0"
+  },
+  {
+    "name": "eslint-plugin-unicorn",
+    "version": "63.0.0",
+    "eslint": ">=9.38.0"
+  },
+  {
+    "name": "eslint-plugin-unused-imports",
+    "version": "4.4.1",
+    "eslint": "^10.0.0 || ^9.0.0 || ^8.0.0"
+  },
+  {
+    "name": "eslint-plugin-vue",
+    "version": "10.8.0",
+    "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0"
+  },
+  {
+    "name": "eslint-plugin-yml",
+    "version": "3.1.2",
+    "eslint": ">=9.38.0"
+  },
+  {
+    "name": "eslint-processor-vue-blocks",
+    "version": "2.0.0",
+    "eslint": ">=9.0.0"
+  },
+  {
+    "name": "vue-eslint-parser",
+    "version": "10.4.0",
+    "eslint": "^8.57.0 || ^9.0.0 || ^10.0.0"
+  },
+  {
+    "name": "@eslint/compat",
+    "version": "1.4.1",
+    "eslint": "^8.40 || 9"
+  },
+  {
+    "name": "@eslint-community/eslint-utils",
+    "version": "4.9.1",
+    "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0"
+  },
+  {
+    "name": "@typescript-eslint/type-utils",
+    "version": "8.55.0",
+    "eslint": "^8.57.0 || ^9.0.0"
+  },
+  {
+    "name": "@typescript-eslint/utils",
+    "version": "8.55.0",
+    "eslint": "^8.57.0 || ^9.0.0"
+  },
+  {
+    "name": "eslint-compat-utils",
+    "version": "0.5.1",
+    "eslint": ">=6.0.0"
+  },
+  {
+    "name": "eslint-compat-utils",
+    "version": "0.6.5",
+    "eslint": ">=6.0.0"
+  },
+  {
+    "name": "eslint-json-compat-utils",
+    "version": "0.2.1",
+    "eslint": "*"
+  },
+  {
+    "name": "eslint-plugin-es-x",
+    "version": "7.8.0",
+    "eslint": ">=8"
+  }
+]

@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { data as posts } from '../../../shared/posts.data'
-import PostBlock from './PostBlock.vue'
-import { usePostSort } from '../composables/usePostSort'
 import { usePostFilter } from '../composables/usePostFilter'
+import { usePostSort } from '../composables/usePostSort'
+import PostBlock from './PostBlock.vue'
 
 const props = withDefaults(defineProps<{
-  count?: number,
+  count?: number
   showCategory?: boolean
 }>(), {
   count: -1,
-  showCategory: false
+  showCategory: false,
 })
 
 const filterFn = usePostFilter()
