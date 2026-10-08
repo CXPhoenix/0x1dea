@@ -1,0 +1,6 @@
+{
+  "status": "pass",
+  "changed_text_files_scanned": 144,
+  "host_path_or_message_identifier_matches": [],
+  "limits": "Targeted pattern scan plus independent public-information review; not a comprehensive secret scanner. Existing synthetic fixture paths and public third-party contacts are not private host data."
+}

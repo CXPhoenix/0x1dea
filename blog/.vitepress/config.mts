@@ -1,17 +1,19 @@
-import { defineConfig } from 'vitepress'
+import type { DefaultTheme } from 'vitepress'
 import fs from 'node:fs'
 import path from 'node:path'
 import yaml from 'js-yaml'
 import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vitepress'
 
 // Helper function to load YAML
-const loadYaml = (file: string) => {
+function loadYaml(file: string): unknown {
   try {
     const filePath = path.resolve(path.dirname(new URL(import.meta.url).pathname), file)
     if (fs.existsSync(filePath)) {
       return yaml.load(fs.readFileSync(filePath, 'utf8'))
     }
-  } catch (e) {
+  }
+  catch (e) {
     console.error(`Error loading ${file}:`, e)
   }
   return []
@@ -19,33 +21,33 @@ const loadYaml = (file: string) => {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "0x1DEA",
-  description: "Overflow of Imagination - 魔法是想像力的領域・資安也是",
+  title: '0x1DEA',
+  description: 'Overflow of Imagination - 魔法是想像力的領域・資安也是',
   head: [
-    ['link', { rel: 'icon', type: "image/svg+xml", href: '/phoenixWithText.svg' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/phoenixWithText.svg' }],
     ['link', { rel: 'stylesheet', href: '/assets/fontawesome/fontawesome.min.css' }],
     ['link', { rel: 'stylesheet', href: '/assets/fontawesome/solid.min.css' }],
     ['link', { rel: 'stylesheet', href: '/assets/fontawesome/regular.min.css' }],
     ['link', { rel: 'stylesheet', href: '/assets/fontawesome/brands.min.css' }],
   ],
   themeConfig: {
-    logo: "/circleImage.svg",
-    nav: loadYaml('nav.yml') as any,
-    sidebar: loadYaml('sidebar.yml') as any,
-    
+    logo: '/circleImage.svg',
+    nav: loadYaml('nav.yml') as DefaultTheme.NavItem[],
+    sidebar: loadYaml('sidebar.yml') as DefaultTheme.Sidebar,
+
     footer: {
       message: '魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x',
-      copyright: `Copyright © ${new Date().getFullYear()} CXPh03n1x@FHSH.isip-hs.whoam!`
+      copyright: `Copyright © ${new Date().getFullYear()} CXPh03n1x@FHSH.isip-hs.whoam!`,
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/cxphoenix/0x1dea' } // TODO: Update to user's github
-    ]
+      { icon: 'github', link: 'https://github.com/cxphoenix/0x1dea' }, // TODO: Update to user's github
+    ],
   },
   vite: {
     plugins: [
-      UnoCSS()
-    ]
+      UnoCSS(),
+    ],
   },
   markdown: {
     math: true,

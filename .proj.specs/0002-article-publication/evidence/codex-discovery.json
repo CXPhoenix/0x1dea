@@ -1,0 +1,5 @@
+{
+  "runtime": "Codex app-server",
+  "status": "blocked",
+  "reason": "Native app-server exits: failed to initialize sqlite state runtime under [native-runtime-state]. No trust, settings or permissions changed."
+}

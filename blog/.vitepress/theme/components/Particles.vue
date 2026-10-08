@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useData } from 'vitepress'
+import { computed } from 'vue'
 
 const { isDark } = useData()
 
@@ -10,48 +10,48 @@ const linksColor = computed(() => isDark.value ? '#ffffff' : '#000000')
 const options = computed(() => ({
   fullScreen: {
     enable: true,
-    zIndex: 0
+    zIndex: 0,
   },
   background: {
     color: {
-      value: 'transparent'
-    }
+      value: 'transparent',
+    },
   },
   fpsLimit: 120,
   interactivity: {
     events: {
       onClick: {
         enable: false,
-        mode: 'push'
+        mode: 'push',
       },
       onHover: {
         enable: false,
-        mode: 'repulse'
+        mode: 'repulse',
       },
       resize: {
-        enable: true
-      }
+        enable: true,
+      },
     },
     modes: {
       push: {
-        quantity: 4
+        quantity: 4,
       },
       repulse: {
         distance: 200,
-        duration: 0.4
-      }
-    }
+        duration: 0.4,
+      },
+    },
   },
   particles: {
     color: {
-      value: color.value
+      value: color.value,
     },
     links: {
       color: linksColor.value,
       distance: 150,
       enable: true,
       opacity: 0.1,
-      width: 1
+      width: 1,
     },
     move: {
       direction: 'none',
@@ -59,27 +59,27 @@ const options = computed(() => ({
       outModes: 'bounce',
       random: false,
       speed: 1,
-      straight: false
+      straight: false,
     },
     number: {
       density: {
         enable: true,
         height: 800,
-        width: 800
+        width: 800,
       },
-      value: 80
+      value: 80,
     },
     opacity: {
-      value: 0.08
+      value: 0.08,
     },
     shape: {
-      type: 'circle'
+      type: 'circle',
     },
     size: {
-      value: { min: 1, max: 5 }
-    }
+      value: { min: 1, max: 5 },
+    },
   },
-  detectRetina: true
+  detectRetina: true,
 }))
 </script>
 
@@ -87,9 +87,9 @@ const options = computed(() => ({
   <ClientOnly>
     <vue-particles
       id="tsparticles"
-      :options="options"
       :key="isDark ? 'dark' : 'light'"
-      class="fixed inset-0 z-0 pointer-events-none opacity-60"
+      :options="options"
+      class="pointer-events-none fixed inset-0 z-0 opacity-60"
     />
   </ClientOnly>
 </template>

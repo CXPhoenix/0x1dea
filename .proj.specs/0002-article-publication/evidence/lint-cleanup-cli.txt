@@ -1,0 +1,21 @@
+test_baseline_management_alias_is_inventoried_but_not_followed (test_cli.PublicationTests.test_baseline_management_alias_is_inventoried_but_not_followed) ... ok
+test_build_output_scan_fails_on_unselected_index_content (test_cli.PublicationTests.test_build_output_scan_fails_on_unselected_index_content) ... ok
+test_candidate_symlink_even_same_bytes_is_rejected (test_cli.PublicationTests.test_candidate_symlink_even_same_bytes_is_rejected) ... ok
+test_conflicting_dependency_and_article_stops_without_output (test_cli.PublicationTests.test_conflicting_dependency_and_article_stops_without_output) ... ok
+test_dependency_cannot_smuggle_unselected_article_path (test_cli.PublicationTests.test_dependency_cannot_smuggle_unselected_article_path) ... ok
+test_escaping_include_is_rejected_before_build (test_cli.PublicationTests.test_escaping_include_is_rejected_before_build) ... ok
+test_fenced_code_and_malicious_article_text_remain_data (test_cli.PublicationTests.test_fenced_code_and_malicious_article_text_remain_data) ... ok
+test_full_receipt_tampering_is_rejected (test_cli.PublicationTests.test_full_receipt_tampering_is_rejected) ... ok
+test_main_article_dependency_and_output_drift (test_cli.PublicationTests.test_main_article_dependency_and_output_drift) ... ok
+test_no_signatures_fails_closed_and_remote_actions_are_absent (test_cli.PublicationTests.test_no_signatures_fails_closed_and_remote_actions_are_absent) ... ok
+test_output_cannot_mutate_source_repository (test_cli.PublicationTests.test_output_cannot_mutate_source_repository) ... ok
+test_preview_ab_prepare_a_and_preserve_source (test_cli.PublicationTests.test_preview_ab_prepare_a_and_preserve_source) ... ok
+test_reverted_other_article_ancestry_is_rejected (test_cli.PublicationTests.test_reverted_other_article_ancestry_is_rejected) ... ok
+test_shared_dependency_and_exclusive_unselected_assets (test_cli.PublicationTests.test_shared_dependency_and_exclusive_unselected_assets) ... ok
+test_staging_only_history_rejected_after_content_revert (test_cli.PublicationTests.test_staging_only_history_rejected_after_content_revert) ... ok
+test_strict_schema_and_path_rejection (test_cli.PublicationTests.test_strict_schema_and_path_rejection) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 15.090s
+
+OK

@@ -1,6 +1,6 @@
-import { inject } from 'vue'
 import type { InjectionKey } from 'vue'
 import type { Post } from '../../../shared/posts.data.ts'
+import { inject } from 'vue'
 
 export type PostFilterFn = (post: Post) => boolean
 

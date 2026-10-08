@@ -1,0 +1,148 @@
+{
+  "command": [
+    "pnpm",
+    "lint",
+    "--format",
+    "json"
+  ],
+  "exit_code": 0,
+  "eslint": "9.39.2",
+  "files": [
+    {
+      "path": "blog/.vitepress/config.mts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/nav.yml",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/sidebar.yml",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/Layout.vue",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/components/NewPost.vue",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/components/Particles.vue",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/components/PostBlock.vue",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/components/PostCard.vue",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/components/PostList.vue",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/components/__tests__/Particles.spec.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/composables/usePostFilter.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/composables/usePostSort.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/.vitepress/theme/index.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "blog/shared/posts.data.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "eslint.config.js",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "package.json",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "scripts/vpHelper.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "tests/lintCleanup.vitest.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "tests/vpHelper.vitest.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "tsconfig.json",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "uno.config.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    {
+      "path": "vitest.config.ts",
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  ],
+  "errors": 0,
+  "warnings": 0,
+  "rules_disabled": false,
+  "new_ignores": false
+}

@@ -1,0 +1,35 @@
+{
+  "checked_on": "2026-10-07",
+  "source_checkout": "[original-checkout]",
+  "source_status": "clean before and after read-only inspection",
+  "clone": "[isolated-repository]",
+  "origin": "https://github.com/CXPhoenix/0x1dea.git",
+  "head": "bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0",
+  "staging": "64799e6df56cc1fab6673ce387f78794938619cb",
+  "staging_is_main_ancestor": true,
+  "main_staging_file_diff": "empty",
+  "node": "24.13.0",
+  "pnpm": "10.28.0",
+  "python": "3.14.3",
+  "source_dependency_resolution": {
+    "vitest": "available",
+    "vitepress": "available",
+    "eslint": "available",
+    "@unocss/eslint-plugin": "MODULE_NOT_FOUND"
+  },
+  "checks_run": [
+    "Git refs/origin/status/ancestry/tree equality",
+    "git diff --check",
+    "four independent spec axes, two rounds",
+    "translation Git blob pin"
+  ],
+  "checks_not_run": [
+    "implementation tests",
+    "materializer/check/build",
+    "runtime native discovery",
+    "code/security review"
+  ],
+  "reason": "New test-plan/ticket gates and disposable fixture commit authorization unresolved; no implementation yet",
+  "official_source": "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+  "local_writing_skill": "writing-for-agents (local installation)"
+}

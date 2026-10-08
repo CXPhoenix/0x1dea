@@ -184,6 +184,19 @@
         "Project threat model overrides unsafe blanket exclusions.",
         "Taiwan report and local evidence output."
       ]
+    },
+    "managing-article-publication": {
+      "source": "skills/managing-article-publication",
+      "created_on": "2026-10-07",
+      "ownership": "canonical English product; deterministic generated .agents/.claude packages",
+      "guidance": [
+        "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra",
+        "local writing-for-agents main and SKILL-MECHANICS.md read on 2026-10-07"
+      ],
+      "adaptations": [
+        "Narrow description, task-conditional local/future references, observable completion; no cross-model efficacy claim."
+      ],
+      "invocation": "discoverable in both runtimes; no external-action authority"
     }
   },
   "local_adaptations": {

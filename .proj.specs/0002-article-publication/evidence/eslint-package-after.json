@@ -1,0 +1,88 @@
+[
+  {
+    "filePath": "package.json",
+    "errorCount": 8,
+    "warningCount": 0,
+    "fatalErrorCount": 0,
+    "messages": [
+      {
+        "ruleId": "jsonc/sort-keys",
+        "severity": 2,
+        "message": "Expected object keys to be in specified order. 'scripts' should be after 'license'.",
+        "line": 5,
+        "column": 3,
+        "messageId": "shouldBeAfter",
+        "endLine": 5,
+        "endColumn": 12
+      },
+      {
+        "ruleId": "jsonc/sort-keys",
+        "severity": 2,
+        "message": "Expected object keys to be in specified order. 'type' should be before 'version'.",
+        "line": 12,
+        "column": 3,
+        "messageId": "shouldBeBefore",
+        "endLine": 12,
+        "endColumn": 9
+      },
+      {
+        "ruleId": "jsonc/sort-keys",
+        "severity": 2,
+        "message": "Expected object keys to be in specified order. 'keywords' should be after 'license'.",
+        "line": 13,
+        "column": 3,
+        "messageId": "shouldBeAfter",
+        "endLine": 13,
+        "endColumn": 13
+      },
+      {
+        "ruleId": "jsonc/sort-keys",
+        "severity": 2,
+        "message": "Expected object keys to be in specified order. 'repository' should be after 'license'.",
+        "line": 31,
+        "column": 3,
+        "messageId": "shouldBeAfter",
+        "endLine": 31,
+        "endColumn": 15
+      },
+      {
+        "ruleId": "jsonc/sort-keys",
+        "severity": 2,
+        "message": "Expected object keys to be in specified order. 'bugs' should be after 'license'.",
+        "line": 35,
+        "column": 3,
+        "messageId": "shouldBeAfter",
+        "endLine": 35,
+        "endColumn": 9
+      },
+      {
+        "ruleId": "jsonc/sort-keys",
+        "severity": 2,
+        "message": "Expected object keys to be in specified order. 'homepage' should be after 'license'.",
+        "line": 38,
+        "column": 3,
+        "messageId": "shouldBeAfter",
+        "endLine": 38,
+        "endColumn": 13
+      },
+      {
+        "ruleId": "jsonc/sort-keys",
+        "severity": 2,
+        "message": "Expected object keys to be in specified order. 'packageManager' should be before 'description'.",
+        "line": 41,
+        "column": 3,
+        "messageId": "shouldBeBefore",
+        "endLine": 41,
+        "endColumn": 19
+      },
+      {
+        "ruleId": "style/eol-last",
+        "severity": 2,
+        "message": "Newline required at end of file but not found.",
+        "line": 65,
+        "column": 2,
+        "messageId": "missing"
+      }
+    ]
+  }
+]

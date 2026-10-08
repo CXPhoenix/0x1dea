@@ -1,0 +1,175 @@
+{
+  "status": "pass",
+  "base": "8890d5250e22ec4ee0e0493c1e72bab89d16489b",
+  "route_count": 8,
+  "normalized_html_equal": true,
+  "mapped_css_content_blocks_equal": true,
+  "scope_map": {
+    "data-v-511143ad": "data-v-1eda046f",
+    "data-v-1d82c9fe": "data-v-2925cec3",
+    "data-v-6e6edfc8": "data-v-da049271"
+  },
+  "readonly_site_files": [
+    {
+      "path": "blog/.vitepress/theme/style.css",
+      "sha256": "69b7789356647cf8c351869126e5157696b36f2ffe406683ff4887d997ca03a3"
+    },
+    {
+      "path": "blog/about.md",
+      "sha256": "59b83078d813a6a8cd9df3e13f964ff38d78cb6134a5f0187f6ea85c3e64af60"
+    },
+    {
+      "path": "blog/index.md",
+      "sha256": "9aef5c68033e63165730cf8538476ef3520e1e185bc65fad1b556307f51e17cb"
+    },
+    {
+      "path": "blog/post/course/cybersec/index.md",
+      "sha256": "5c0f5a0ee566725173f71d1e4c38068a39997c43439b49d3350c23dad6ada646"
+    },
+    {
+      "path": "blog/post/course/cybersec/what-is-safety.md",
+      "sha256": "e9764dff227339d09a4cd96fcf7fcd14c1e607672f25dc8937ede62c2c13a800"
+    },
+    {
+      "path": "blog/post/course/rm/index.md",
+      "sha256": "de58994a451013bf09060b52c708c6c448cb819c383eca02e674081e0336c888"
+    },
+    {
+      "path": "blog/post/course/rm/why-we-need-rm.md",
+      "sha256": "d609c056d66b471586462f2fc3ce9d8ca7da5d8cf303863aeb1ef6629dfcef93"
+    },
+    {
+      "path": "blog/posts.md",
+      "sha256": "c948c4f804ca59d6154c992cb9de76a907b75d48a985d5f2775b132d58bbae16"
+    },
+    {
+      "path": "blog/public/assets/.gitkeep",
+      "sha256": "a38cb199f645ee3fb12f6c2d11c7be2d19ab134d44264e19b4666c83319d1b3e"
+    },
+    {
+      "path": "blog/public/assets/fontawesome/css/brands.min.css",
+      "sha256": "9e2091a3026c87116c2ee1948fbad3bffbf1b1f733c2f89d351d3dc7aab082f9"
+    },
+    {
+      "path": "blog/public/assets/fontawesome/css/fontawesome.min.css",
+      "sha256": "b164a2d2905748e1d48512f1e985606b4282c9438bbc0ee2958e56f658695d2b"
+    },
+    {
+      "path": "blog/public/assets/fontawesome/css/regular.min.css",
+      "sha256": "d452ca86262c736cab4d172137e27176c2e4c7c141c8150c9154312f2aac3dae"
+    },
+    {
+      "path": "blog/public/assets/fontawesome/css/solid.min.css",
+      "sha256": "abb7189386e7601b342822b2a72812cf972daeb3442b796d7a785ea6f860f7e6"
+    },
+    {
+      "path": "blog/public/assets/fontawesome/webfonts/fa-brands-400.woff2",
+      "sha256": "70c632ba73c7ad942141bb2f56994b8eddf0a284c01aab9f21e0cd10021530c4"
+    },
+    {
+      "path": "blog/public/assets/fontawesome/webfonts/fa-regular-400.woff2",
+      "sha256": "81aaa8342d90df0a3c0b87655e2c31a71941f0dd351fb9fb1ca5d692e744f6d0"
+    },
+    {
+      "path": "blog/public/assets/fontawesome/webfonts/fa-solid-900.woff2",
+      "sha256": "ff58a6b0a01dbce082458f6e5a58719df4e80e0c2b50f744bb5871e21eca6878"
+    },
+    {
+      "path": "blog/public/assets/fontawesome/webfonts/fa-v4compatibility.woff2",
+      "sha256": "4bad0278281153ad5354855ccfbc0674279ec47eff29b3d262c213478311cc52"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/1772342178110.gif",
+      "sha256": "72b6d5565bd8fe64acdaa8095e28f5020fb53359889cdbb8e0c13ba6d983efa5"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260227005508.png",
+      "sha256": "5a3094e2ba747556333e1f34c1773784c20a24af8dd029e8d8035558d592baff"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260227014249.png",
+      "sha256": "aa52bbba7acf5b4302c16507814045f4e8d1e0621b52c205a27d1fe90932d1e8"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260228013411.png",
+      "sha256": "0e9c53cf7cd8c42a7141bf7d916155d7ea6f6da67a4a70779186f9a307d6f92f"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260228022122.png",
+      "sha256": "a219da123e747a5d0a18652b85698d3b812a1a29d32314493b41e8f08322d8e2"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260228114351.png",
+      "sha256": "051e7ccf7c2d3a43220c94bf53336acf3d475c914499bf70acf52007f72dbb31"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260228130720.png",
+      "sha256": "75ebfb75472dc51071f6da4366023583aab412ddfa46c0d14dd373d2b8373ebe"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260301114806.png",
+      "sha256": "097f9b35af2ce28ac061ae2305d5802619aa342cf7eb4b5158b213010043b74c"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260301120037.png",
+      "sha256": "6d43abc8662f574dd4b3f09839a914d2135e5574938874f8b12723f1d53f285d"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260301122300.png",
+      "sha256": "0b9be3df40d223d35d502e90d17d90f6956a5137cae43c6729ec75ae01cd3d1b"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260301125241.png",
+      "sha256": "a58a448b69ef4f7ffdd2a19f25e031d1a46e1cf890d248bb4abfc0166fd12c5c"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260301125313.png",
+      "sha256": "1ed6afeef7d65a1ed614fe6e55c7180d5ef6facea8913c72b2a85fa44d0a21bf"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260301125401.png",
+      "sha256": "db48f430928196d5945709e28fbb28269839b9df1cb0316ce3dbb15108efbf92"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260301125743.png",
+      "sha256": "4137ea91db759d18a1e25224fe4d17d9102a6c6c2b216aad82768b0935f0d2ed"
+    },
+    {
+      "path": "blog/public/assets/post_course_cybersec_what-is-safety/20260301132349.png",
+      "sha256": "72aec17ca978801f12beeb6cf12b070e9e6a490045333dfc8becbbec5573e8c3"
+    },
+    {
+      "path": "blog/public/assets/post_course_rm_why-we-need-rm/20260302005553.png",
+      "sha256": "3b84d129e2b7fe73f42901e60ce6dd21662346fade6fa2e548a1f3bca8bc847d"
+    },
+    {
+      "path": "blog/public/assets/post_course_rm_why-we-need-rm/20260302010537.png",
+      "sha256": "4505260ab07b1cee2bcf9b0bc82966abfa7684a8b8ba3197549408540a26544e"
+    },
+    {
+      "path": "blog/public/assets/post_course_rm_why-we-need-rm/20260302012511.png",
+      "sha256": "44143e87b3895b2ba1f54008976637a6551734ed773e6902d6d062aa47c06baa"
+    },
+    {
+      "path": "blog/public/assets/post_course_rm_why-we-need-rm/20260307155631.png",
+      "sha256": "0b71220f06823328675e12fec3000927466de017f943a4c1ccba5d3cac990524"
+    },
+    {
+      "path": "blog/public/assets/post_course_rm_why-we-need-rm/20260307160403.png",
+      "sha256": "29e9a12b93218489a6f02032373b8b9d68f5b645202b02098c5d17f4b5831b94"
+    },
+    {
+      "path": "blog/public/circleImage.svg",
+      "sha256": "0a165ae3fcfec248007e24f112c569387102ddc9b73ac88528c679011efce4e7"
+    },
+    {
+      "path": "blog/public/heroImageWithoutText.svg",
+      "sha256": "309d453f1463e7fc581055a758429062538943580280bd89cb0306f075612291"
+    },
+    {
+      "path": "blog/public/phoenixWithText.svg",
+      "sha256": "ba3bf36a716cd2b31ff1b245da9be0d22864b69dc88c50eee0fc40a788a537a8"
+    }
+  ],
+  "limits": "Normalizes generated asset/route hashes, corresponding component scope IDs and class order. CSS block order is reviewed separately; not pixel or browser-interaction equivalence."
+}

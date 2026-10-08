@@ -1,0 +1,19 @@
+{
+  "base": "bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0",
+  "preserved_updates": {
+    "AGENTS.md": {
+      "after_sha256": "77ad12cb3275f1ac5936bc9ae0bad4dfefc048d819e0274d38db4bf1d98bbf53",
+      "before_sha256": "4945ca47d488b6ca47fba930a1f7a7b22c8ed86f6a936f8d17b7cf3bd211fdc2"
+    },
+    "package.json": {
+      "after_sha256": "610af2dbf1bee5045e18f4abaa21f21aa36d6b65edc6fe9641fc6528cacc6375",
+      "before_sha256": "8065e26f21c718e66df7f525a3367ed92131167c4105dfbcb668a88a521271bb"
+    },
+    "pnpm-lock.yaml": {
+      "after_sha256": "8bd84d32f255d3173295d8bd525a5451a05ef296da7004f8822639d62997e792",
+      "before_sha256": "fbef52ab72fee1efbf3705903a9c5ecd961ea6a50a6a495e750a258b44593c66"
+    }
+  },
+  "ticket": "T-0002",
+  "version": 1
+}

@@ -139,7 +139,7 @@ host's native browser tools when the documented surface and evidence are equival
 
 ## Generated product writing packages
 
-The three product writing skills are the precise exception to independent runtime editing.
+Four canonical product skills are the precise exception to independent runtime editing: the three existing writing skills plus English `managing-article-publication`. The Chinese language exception remains exactly the original three trees.
 Edit only their canonical `skills/` sources, then use the deterministic materializer.
 Canonical aliases retain their original literal targets. The generator enumerates only
 approved regular backing files and never follows links to discover inputs. Both runtime

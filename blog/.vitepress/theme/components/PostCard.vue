@@ -17,23 +17,24 @@ const props = withDefaults(defineProps<{
   post: Post
   showCategory?: boolean
 }>(), {
-  showCategory: true
+  showCategory: true,
 })
 
 const formattedDate = computed(() => {
   let date: Date
   const rawTime = props.post.createdTime
-  
+
   if (typeof rawTime === 'object' && rawTime !== null && 'seconds' in rawTime) {
     date = new Date(rawTime.seconds * 1000)
-  } else {
+  }
+  else {
     date = new Date(rawTime as string | number | Date)
   }
-  
+
   return date.toLocaleDateString('zh-TW', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   })
 })
 </script>
@@ -42,7 +43,7 @@ const formattedDate = computed(() => {
   <a :href="post.url" class="post-card">
     <div class="card-content">
       <div v-if="post.thumbnail" class="thumbnail-wrapper">
-        <img :src="post.thumbnail" :alt="post.title" class="thumbnail" />
+        <img :src="post.thumbnail" :alt="post.title" class="thumbnail">
       </div>
       <div class="info">
         <h2 class="title">{{ post.title }}</h2>
@@ -64,7 +65,7 @@ const formattedDate = computed(() => {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 16px;
   overflow: hidden;
-  
+
   /* Liquid Glass Effect */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px);
@@ -145,7 +146,7 @@ const formattedDate = computed(() => {
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--vp-c-text-2, #666);
-  
+
   /* Line clamping for description */
   display: -webkit-box;
   -webkit-line-clamp: 3;
