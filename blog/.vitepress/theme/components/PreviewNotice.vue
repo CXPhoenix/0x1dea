@@ -28,4 +28,16 @@ const text = computed(() => (props.text ?? '').trim())
 .preview-notice p {
   white-space: pre-line;
 }
+
+.preview-notice h2 {
+  margin: 0 0 0.5rem;
+  border: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.preview-notice p {
+  margin: 0;
+}
 </style>

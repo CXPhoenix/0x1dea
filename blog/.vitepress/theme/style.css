@@ -293,3 +293,14 @@ body {
   font-weight: 900;
   font-size: 0.75em;
 }
+
+/**
+ * Electricity article images: preserve intrinsic size and aspect ratio.
+ * -------------------------------------------------------------------------- */
+
+.electricity-privacy-article .vp-doc img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}

@@ -1,0 +1,14 @@
+test_00_clean_pinned_staging_reaches_successful_readonly_full_cli (test_reconciliation.ReconciliationTests.test_00_clean_pinned_staging_reaches_successful_readonly_full_cli) ... ok
+test_byte_drift_of_config_theme_summary_banner_is_rejected (test_reconciliation.ReconciliationTests.test_byte_drift_of_config_theme_summary_banner_is_rejected) ... ok
+test_exact_reviewed_components_pass_full_cli (test_reconciliation.ReconciliationTests.test_exact_reviewed_components_pass_full_cli) ... ok
+test_ignored_unapproved_test_source_is_rejected (test_reconciliation.ReconciliationTests.test_ignored_unapproved_test_source_is_rejected) ... ok
+test_manifest_absence_is_fail_closed_rollback (test_reconciliation.ReconciliationTests.test_manifest_absence_is_fail_closed_rollback) ... ok
+test_missing_linked_and_executable_drift_are_rejected (test_reconciliation.ReconciliationTests.test_missing_linked_and_executable_drift_are_rejected) ... ok
+test_nonancestor_or_missing_pin_history_is_rejected (test_reconciliation.ReconciliationTests.test_nonancestor_or_missing_pin_history_is_rejected) ... ok
+test_pins_and_provenance_tampering_are_rejected (test_reconciliation.ReconciliationTests.test_pins_and_provenance_tampering_are_rejected) ... ok
+test_unknown_and_ignored_blog_markdown_are_rejected (test_reconciliation.ReconciliationTests.test_unknown_and_ignored_blog_markdown_are_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 32.209s
+
+OK
