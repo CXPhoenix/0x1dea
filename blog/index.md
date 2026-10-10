@@ -22,4 +22,12 @@ features:
     details: 現代的趨勢，然後...真的滿方便的！<br /><span class="block text-center pt-3 text-5">(≖＿≖)✧</span>
 ---
 
-<NewPost class="mt-8" count="5" :showCategory="true" />
+<div class="mt-8 p-4 rounded bg-gray-100 dark:bg-gray-800">
+
+## 六篇 staging 試稿預覽
+
+這六篇供 staging 預覽與審稿，尚未發佈到正式站。
+
+</div>
+
+<NewPost class="mt-8" :count="6" :showCategory="true" />
