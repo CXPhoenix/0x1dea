@@ -27,3 +27,9 @@
         link: /post/course/cybersec/
       - text: 研究方法備課系列
         link: /post/course/rm/
+
+/post/course/security-awareness/:
+  - text: 資安認知推廣備課系列
+    items:
+      - text: 電表沒拍到你，用電資料怎麼留下生活線索？
+        link: /post/course/security-awareness/electricity-privacy
