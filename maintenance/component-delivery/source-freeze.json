@@ -1,0 +1,42 @@
+{
+  "head": "32cd6a9d4ead636ddc4e5020fceb35ad9645cc7f",
+  "candidate_root": "<frozen-design-checkout>",
+  "component_writes_stopped": true,
+  "subworkers": 0,
+  "api": "ArticleSummary variant=note|cards|terminal; title=TL;DR; default Markdown slot; invalid variant -> note",
+  "files": [
+    {
+      "path": "blog/.vitepress/theme/components/ArticleSummary.vue",
+      "sha256": "f6ce99675b34406ce801830c2db6519b7e61ceb72ea37f77eceeec55d1eee638"
+    },
+    {
+      "path": "blog/.vitepress/theme/index.ts",
+      "sha256": "c90d04b6906f029e8da18ceea0c0751575501502a4a843b8b42e0b11ccd4f4b5"
+    },
+    {
+      "path": "tests/articleSummary.vitest.ts",
+      "sha256": "b942fbe5a7a4bd96cb02c64cdcfa4f47d44b19265612423c57153435da48070f"
+    },
+    {
+      "path": "tests/fixtures/article-summary.md",
+      "sha256": "f53bbd41d5974fdf8d0983da9eb440ec98d8738310e5838e5ad835a391704b8f"
+    },
+    {
+      "path": "docs/article-summary.md",
+      "sha256": "134b21020c5bd15137d4d91005ddbfb28fec9391897eb88f6a5c126b4bb7250d"
+    },
+    {
+      "path": "blog/post/course/security-awareness/electricity-privacy.md",
+      "sha256": "7d7df900fe0bb3da0dc8beb8e8e146dab9326cccdf57d12d0c25fcf2a708bcc0"
+    },
+    {
+      "path": "blog/.vitepress/theme/components/PreviewNotice.vue",
+      "sha256": "63f60ff832f674ead7bba540cdf396d9d541831aaf02970c80e8fc6641cd9196"
+    },
+    {
+      "path": "blog/.vitepress/theme/style.css",
+      "sha256": "0221c1a7b079eee06d79e65da3c1c3d65ca9ec13efb5f688c6049aa093662167"
+    }
+  ],
+  "notice_writes_stopped": true
+}

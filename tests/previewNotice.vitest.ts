@@ -1,5 +1,7 @@
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { createSSRApp, h } from 'vue'
+import { renderToString } from 'vue/server-renderer'
 import PreviewNotice from '../blog/.vitepress/theme/components/PreviewNotice.vue'
 
 const homepageCopy = { title: '六篇 staging 試稿預覽', text: '這六篇供 staging 預覽與審稿，尚未發佈到正式站。' }
@@ -113,5 +115,30 @@ describe('build-time preview notice with author props', () => {
     await wrapper.setProps({ title: '再顯示' })
     expect(wrapper.find('h2').text()).toBe('再顯示')
     wrapper.unmount()
+  })
+})
+
+describe('preview notice server-rendered environment matrix', () => {
+  afterEach(() => vi.unstubAllEnvs())
+  it.each([
+    ['true', 'staging', true],
+    ['true', 'main', true],
+    ['false', 'staging', false],
+    ['false', 'main', false],
+    [undefined, 'staging', true],
+    [undefined, 'main', false],
+    [undefined, undefined, false],
+    ['', 'staging', false],
+    ['TRUE', 'staging', false],
+    [' true ', 'staging', false],
+  ])('SSR flag %s and branch %s yields visible=%s', async (flag, branch, visible) => {
+    vi.stubEnv('VITE_SITE_NOTICE_ENABLED', flag)
+    vi.stubEnv('CF_PAGES_BRANCH', branch)
+    const html = await renderToString(createSSRApp({ render: () => h(PreviewNotice, { title: '審閱', text: '<script>literal</script>' }) }))
+    expect(html.includes('<aside')).toBe(visible)
+    if (visible) {
+      expect(html).toContain('&lt;script&gt;literal&lt;/script&gt;')
+      expect(html).not.toContain('<script>')
+    }
   })
 })

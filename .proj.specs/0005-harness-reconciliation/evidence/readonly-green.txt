@@ -1,0 +1,6 @@
+test_00_clean_pinned_staging_reaches_successful_readonly_full_cli (test_reconciliation.ReconciliationTests.test_00_clean_pinned_staging_reaches_successful_readonly_full_cli) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 13.276s
+
+OK

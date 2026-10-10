@@ -60,7 +60,8 @@ class TrackerTests(unittest.TestCase):
         for name in names:
             target = fixture / name
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(source / name, target)
+            # This fixture checks the immutable lint epoch, not later product evolutions.
+            target.write_bytes(subprocess.check_output(['git', 'show', '724ddad73f8411a33c77c68d75f95b41d3af2988:' + name], cwd=source))
         verifier.check_lint_successor(fixture)
         boundary_path = fixture / 'maintenance/lint-cleanup/source-boundary.json'
         original = boundary_path.read_bytes()
