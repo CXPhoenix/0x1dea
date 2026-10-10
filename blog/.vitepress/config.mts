@@ -1,6 +1,8 @@
 import type { DefaultTheme } from 'vitepress'
 import fs from 'node:fs'
 import path from 'node:path'
+import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 import yaml from 'js-yaml'
 import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vitepress'
@@ -45,6 +47,10 @@ export default defineConfig({
     ],
   },
   vite: {
+    envDir: fileURLToPath(new URL('../../', import.meta.url)),
+    define: {
+      'import.meta.env.CF_PAGES_BRANCH': JSON.stringify(process.env.CF_PAGES_BRANCH ?? ''),
+    },
     plugins: [
       UnoCSS(),
     ],
