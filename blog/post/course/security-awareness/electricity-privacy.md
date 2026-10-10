@@ -2,7 +2,7 @@
 title: "電表沒拍到你，用電資料怎麼留下生活線索？"
 description: "一天用了多少電，與何時、如何用電，是不同層次的資訊。從 NILM 與在家狀態研究，分清量測、估計和生活推論。"
 createdTime: 2026-10-09T00:32:47+08:00
-updatedTime: 2026-10-10T16:19:13+08:00
+updatedTime: 2026-10-10T10:18:35+00:00
 thumbnail: /assets/post_course_security-awareness_electricity-privacy/p-total.png
 category: 資安認知推廣備課系列
 draft: true
@@ -17,7 +17,7 @@ previewOnly: true
 
 假設兩個家庭，一天都用了十二度電。一家把較多用電集中在白天，另一家集中在晚上。只看一天的總量，你會得到兩個相同的數字；保留時間，就能區分這兩種分布。
 
-十二度是這個例子的設定，不是住戶量測或家庭平均用電。
+這裡的十二度只是方便比較的假設數字。
 
 ![兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。](/assets/post_course_security-awareness_electricity-privacy/p-total.png)
 
@@ -37,13 +37,13 @@ previewOnly: true
 
 有個轉述的故事：一位爸爸裝了能源管理系統（Energy Management System，EMS），某天發現半夜的電鍋用電和平常不同，先懷疑電鍋是不是壞了。
 
-這裡依這段轉述設計教學案例，沒有可核對的住戶量測，情節也不能當成研究證據。下面的圖與數字都是教學模擬：假設電鍋接在可獨立量測的智慧插座上，每五分鐘記錄一筆功率；家中其他設備合計維持 150 W，電鍋加熱時設為 600 W，接著短暫保溫 50 W，再關閉。這些是示範設定，不代表特定電鍋的額定功率或實際操作時間。
+為了看清楚這段變化，圖 1 用模擬資料畫出一個例子：假設電鍋接上能單獨量測功率的智慧插座，每五分鐘記錄一次。家中其他設備合計維持 150 W，電鍋先以 600 W 加熱，再以 50 W 保溫後關閉；功率與時間都是教學設定。
 
 ![模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。](/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg)
 
-圖 1：依轉述故事設計的虛構 EMS 曲線，每五分鐘一筆；電鍋線假設有智慧插座獨立量測，非研究或住戶實測。
+圖 1：模擬電鍋加熱與保溫時，家戶總功率的變化。
 
-這段加熱用電很醒目，卻沒有告訴你原因。是有人煮東西？設備故障？還是定時功能啟動？在這個模擬裡，我們知道「電鍋」是因為先假設了獨立量測；如果只有總表那條灰線，連設備名稱都還需要別的證據。（電表沒有附破案旁白啦……）
+這段加熱用電很醒目，卻沒有告訴你原因。是有人煮東西？設備故障？還是定時功能啟動？這裡能把綠線叫做「電鍋」，是因為假設智慧插座只量這台設備；如果只有總表那條灰線，連設備名稱都還需要別的證據。（電表沒有附破案旁白啦……）
 
 轉述故事的答案是：爸爸事後問了家人，才知道小孩半夜肚子餓，起來蒸饅頭，吃完又回去睡覺。**饅頭是問出來的，不是從 600 W 算出來的。**
 
@@ -51,17 +51,17 @@ previewOnly: true
 
 ## 從總用電，估計個別設備
 
-有一類研究叫做非侵入式負載監測（Non-intrusive Load Monitoring，NILM），也常稱為能源分解。它嘗試由整戶的聚合量測，估計個別電器的用電，而不必在分析時逐台讀取專用電表。[[1]](#ref-1)
+有一類研究叫做非侵入式負載監測（Non-intrusive Load Monitoring，NILM），也常稱為能源分解。它嘗試由整戶的聚合量測，估計個別電器的用電，而不必在分析時逐台讀取專用電表 [[1]](#ref-1)。
 
-![整戶量測送入能源分解模型，輸出個別設備用電估計；另行取得的設備量測真值用於評估估計結果。](/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg)
+![整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。](/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg)
 
-圖 2：整戶量測經 NILM 得到設備用電估計，另以量測真值評估（依 [[1, Sec. 2.5, Fig. 1]](#ref-1) 整理，非實測圖）。
+圖 2：NILM 從整戶用電估計個別設備用電的流程。
 
-可以把它想成聽一段合奏，嘗試辨認有哪些樂器。這個類比只說明「混合訊號裡可能保留各部分的特徵」；電器用電不是聲音，辨識方法和可靠程度也不能從樂器類比直接搬過來。
+圖 2 的估計要和各設備單獨量測的用電比較，才知道差多少。可以把分解想成聽合奏、辨認樂器：總訊號裡可能保留各部分的特徵。但電器的模式會改變，還會彼此重疊，不能憑這個類比就保證分得準。
 
 如果總功率突然上升一段時間，之後又降回去，就可以成為某個設備啟動的候選線索。但要判斷是哪個設備，你還需要設備模型、過去的變化模式，或其他有根據的資訊。
 
-如果同時有幾台設備運作，總和可能相近；同一台設備也可能切換模式。NILMTK 的論文便把資料缺口、前處理與評估指標當成實驗需要處理的部分。這些條件會影響你是否能比較不同方法。[[1]](#ref-1)
+如果同時有幾台設備運作，總和可能相近；同一台設備也可能切換模式。NILMTK 的論文便把資料缺口、前處理與評估指標當成實驗需要處理的部分。這些條件會影響你是否能比較不同方法 [[1]](#ref-1)。
 
 看到一個高峰，指著它說「微波爐」，你就替曲線配了旁白。那個名字可能猜對，還得拿設備模型與量測資料查證。
 
@@ -75,15 +75,17 @@ previewOnly: true
 
 ![四格銀河腦依序寫看到高峰、估計設備、推測有人在家、宣布全家都在家。](/assets/post_course_security-awareness_electricity-privacy/p-inference.png)
 
-研究也可以跳過「先猜電器」這一步，直接把在家狀態當成預測目標。Liang 與 Wang 使用 ECO 資料集，將電流、電壓與相位差取每小時平均，拿來訓練在家狀態模型。用來核對模型的標記則另外取得，經每小時多數決整理。這些標記用於研究的訓練與評估，不是模型日後每次預測都必須取得的輸入。[[2, Secs. II-A, IV-A–B]](#ref-2)
+研究也可以跳過「先猜電器」，直接估計有人在家嗎？圖 3 就是這種做法：Liang 與 Wang 使用 ECO 資料集，把電流、電壓與相位差取每小時平均，送入在家狀態模型 [[2]](#ref-2)。
 
-![電流、電壓與相位差取每小時平均後送入模型，輸出在家狀態估計；另外取得的在家標記僅用於研究的訓練與評估。](/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg)
+研究還需要一份可比對的在家紀錄。ECO 透過住戶在平板上回報或紅外線感測器取得這些紀錄；作者取一小時內最常出現的狀態，作為該小時的答案。它用來訓練模型、核對估計，並不是預測時要先提供的答案 [[2, Sec. IV]](#ref-2)。
 
-圖 3：每小時電表特徵可直接用於在家狀態估計，研究另以標記訓練及評估（依 Liang、Wang [[2, Secs. II-A, IV-A–B]](#ref-2) 整理，非實測圖；[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)）。
+![每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。](/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg)
 
-圖裡的輸入不是帳單上的總度數。該研究前處理後使用五戶、449 天資料，並描述十折交叉驗證；這些結果不能直接當成模型對任意新家庭的準確程度，原文也未交代是否把某些家庭整戶留作測試，讓它們完全不參與訓練。[[2, Sec. III-B and Secs. IV-A–B]](#ref-2)
+圖 3：從每小時電表資料估計在家狀態的流程。
 
-資料包含哪些欄位、標記怎麼取得、訓練與測試怎麼切分，都會限制你能從結果說到哪裡。
+圖裡的輸入不是帳單上的總度數。該研究前處理後使用五戶、449 天資料，並描述十折交叉驗證；這些結果不能直接當成模型對任意新家庭的準確程度，原文也未交代是否讓測試家庭完全不參與訓練 [[2]](#ref-2)。
+
+換到新的家庭，還需要另外驗證：電器、作息與住戶人數，都可能和研究資料不同。
 
 把時間間隔拉長，也不會自動得到「沒有隱私風險」的保證。上述研究本身就使用每小時的資料做預測。彙整可能減少某些細節，是否足以阻止你在意的推論，仍要針對那個目標檢查。
 
@@ -99,7 +101,7 @@ previewOnly: true
 
 ![著火房間裡的狗說姓名地址刪掉了，同一戶的曲線還連在一起。](/assets/post_course_security-awareness_electricity-privacy/p-link.png)
 
-這裡還沒有完成重新識別，也沒有足夠資訊判定某份資料是否合法；我們是在檢查刪除欄位後，哪些風險問題仍然存在。把「刪除欄位」「難以連結身分」「不洩漏生活資訊」分開問，才知道自己到底驗證了哪一件事。
+刪掉姓名地址，不代表曲線就無法連回住戶；即使連不回身分，也可能透露作息。要知道風險減少多少，得看剩下的資料能和什麼資訊串在一起。
 
 假如資料只是要用來估計一個社區的尖峰負載，為什麼一定要讓每位分析者取得每戶的完整長期曲線？如果只是要讓住戶找出耗電設備，是否可以讓較細的分析留在住戶端，另外提供所需的彙整結果？
 
@@ -119,12 +121,14 @@ previewOnly: true
 
 社區尖峰的問題仍在那裡：拿掉每戶代碼、改用彙整資料後，究竟哪一個必要分析會做不出來？這個答案，才有辦法說明為什麼還要多收。
 
+<small>圖源與製圖：圖 1 為本文教學模擬；圖 2 為依 NILMTK 的能源分解定義與評估流程重新繪製的示意圖 [[1, Sec. 2.5]](#ref-1)；圖 3 依 X. Liang 與 H. Wang 的資料前處理方法重繪 [[2, Sec. IV]](#ref-2)，將原文方法改以中文流程呈現，原作採 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授權。</small>
+
 ## 參考文獻
 
 <a id="ref-1"></a>
 
-[1] N. Batra et al., “NILMTK: An Open Source Toolkit for Non-intrusive Load Monitoring,” arXiv:1404.3878v1, 2014, doi: 10.48550/arXiv.1404.3878. [Online]. Available: https://arxiv.org/abs/1404.3878v1
+[1] N. Batra et al., “NILMTK: An open source toolkit for non-intrusive load monitoring,” 2014, arXiv:1404.3878v1. [Online]. Available: https://arxiv.org/abs/1404.3878v1
 
 <a id="ref-2"></a>
 
-[2] X. Liang and H. Wang, “Hybrid Transformer-RNN Architecture for Household Occupancy Detection Using Low-Resolution Smart Meter Data,” arXiv:2308.14114v1, 2023, doi: 10.48550/arXiv.2308.14114. [Online]. Available: https://arxiv.org/abs/2308.14114v1
+[2] X. Liang and H. Wang, “Hybrid transformer-RNN architecture for household occupancy detection using low-resolution smart meter data,” 2023, arXiv:2308.14114v1. [Online]. Available: https://arxiv.org/abs/2308.14114v1
