@@ -25,3 +25,12 @@ No metadata, historical guard, lockfile or installed dependency was changed to b
 ## Final check results
 
 Structure and materializer still reject the same task-entry `.DS_Store` files. Final adoption verification now first rejects `blog/.vitepress/config.mts`, an authorized new product delta, whereas task-entry verification first rejected prior `theme/index.ts` work. Both are immutable-history mismatches; this is recorded rather than relabeled as a pass. No historical verifier was modified. The final VitePress build passed in 13.76s after temporary fixture removal. Independent Standards/Spec review found zero actionable issues; security review found zero concrete HIGH/MEDIUM candidates.
+
+## Subsequent validation note — T-0009 (2026-10-11)
+
+The original observations above remain historical execution evidence. Later
+checkout changes exposed mutable historical fixtures and an incomplete source
+successor. T-0009 separates historical proof from current verification and retains
+the original manifests/article oracle. See the version-qualified results under
+`.proj.specs/0009-test-contract-repair/coverage-report.md`; no deployment or past
+authorization is inferred from this subsequent repair.

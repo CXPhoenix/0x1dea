@@ -19,8 +19,14 @@ REVISION_PATHS = {
     'blog/public/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png',
 }
 COMPONENT_PATHS = set(['blog/.vitepress/theme/components/ArticleSummary.vue', 'blog/.vitepress/theme/components/PreviewNotice.vue', 'blog/.vitepress/theme/index.ts', 'blog/.vitepress/theme/style.css', 'blog/post/course/security-awareness/electricity-privacy.md', 'blog/public/assets/post_course_security-awareness_electricity-privacy/article-banner.png', 'docs/article-summary.md', 'tests/articleSummary.vitest.ts', 'tests/fixtures/article-summary.md', 'tests/fixtures/component-acceptance.md', 'tests/previewNotice.vitest.ts', 'tests/previewNoticeArticle.vitest.ts'])
-RECORDS = {'maintenance/harness-reconciliation/staging.json', 'maintenance/harness-reconciliation/components.json', REVISION_RECORD}
-CODE = {'scripts/harness_reconciliation.py', 'tests/harness_adoption/test_reconciliation.py'}
+REPAIR_BASE = 'f93237b1ed538484f24ed103ef00c7e5ee2e1828'
+REPAIR_CAPTURE = '6e4eb804bcbda8504935be49fd6537d6327d5303'
+REPAIR_RECORD = 'maintenance/harness-reconciliation/test-contract-repair.json'
+REPAIR_DIGEST = 'd5d286235aaf60ac04389a1fc76ab396a3dde087270856be36d804c9e3937aeb'
+PRODUCT_PATHS = {'blog/.vitepress/theme/index.ts', 'docs/authoring/article-captions.md', 'tests/encoreTicket.vitest.ts', 'blog/.vitepress/markdown/articleCaptions.ts', 'tests/fixtures/article-caption-baseline.json', 'docs/components/encore-ticket.md', 'tests/articleCaptions.vitest.ts', 'skills/phoenix-writing/references/context-form.md', 'maintenance/writing-skills/VALIDATION.md', 'blog/.vitepress/config.mts', 'maintenance/writing-skills/SOURCES.md', 'blog/.vitepress/theme/components/EncoreTicket.vue', 'skills/phoenix-writing/SKILL.md', 'blog/post/course/security-awareness/electricity-privacy.md', 'blog/.vitepress/theme/style.css'}
+REPAIR_PATHS = {'tests/fixtures/article-caption-entry.md', 'tests/articleCaptions.vitest.ts', 'tests/fixtures/article-caption-provenance.json', 'tests/article_publication/__init__.py', 'README.md', 'tests/harness_adoption/__init__.py', 'tests/fixtures/article-caption-migrated.md', 'package.json'}
+RECORDS = {'maintenance/harness-reconciliation/staging.json', 'maintenance/harness-reconciliation/components.json', REVISION_RECORD, REPAIR_RECORD}
+CODE = {'tests/harness_adoption/test_test_runner.py', 'scripts/verify-harness-adoption.py', 'tests/harness_adoption/test_successor.py', 'tests/harness_adoption/test_reconciliation.py', 'scripts/harness_reconciliation.py', 'scripts/run-python-tests.py'}
 SUPPORT = {'maintenance/component-delivery/source-freeze.json', 'maintenance/component-delivery/TDD.md', 'maintenance/component-delivery/scope.md'}
 GENERATED = {'blog/.vitepress/dist', 'blog/.vitepress/cache', 'blog/.vitepress/.temp'}
 HISTORY = ('maintenance/harness-adoption/baseline-files.json', 'maintenance/harness-adoption/candidate-delta.json', 'maintenance/harness-adoption/framework-import-manifest.json', 'maintenance/article-publication/source-boundary.json', 'maintenance/lint-cleanup/source-boundary.json')
@@ -85,8 +91,53 @@ def source_inventory(root):
     return names
 
 
+def apply_repair(root, current, allowed_new, regular_path, ancestry):
+    """Validate a reviewed, exact successor; never derive approval from live bytes."""
+    raw = regular_path(root, REPAIR_RECORD).read_bytes()
+    if sha(raw) != REPAIR_DIGEST:
+        raise ValueError('changed test repair provenance')
+    record = json.loads(raw)
+    if (set(record) != {'version', 'predecessor', 'captured', 'product_delta', 'repair_delta'}
+            or record['version'] != 1 or record['predecessor'] != REPAIR_BASE
+            or record['captured'] != REPAIR_CAPTURE):
+        raise ValueError('unapproved test repair pins or fields')
+    ancestry(root, REPAIR_BASE); ancestry(root, REPAIR_CAPTURE)
+    if subprocess.run(['git', 'merge-base', '--is-ancestor', REPAIR_BASE, REPAIR_CAPTURE], cwd=root).returncode:
+        raise ValueError('invalid test repair predecessor ancestry')
+    before = git_tree(root, REPAIR_BASE); captured = git_tree(root, REPAIR_CAPTURE)
+    delta = {name for name in set(before) | set(captured)
+             if not allowed_new(name) and identity(before.get(name)) != identity(captured.get(name))}
+    if delta != PRODUCT_PATHS:
+        raise ValueError('incomplete protected test repair product scope')
+    for key, names in (('product_delta', PRODUCT_PATHS), ('repair_delta', REPAIR_PATHS)):
+        rows = record[key]
+        if len(rows) != len(names) or {row['path'] for row in rows} != names:
+            raise ValueError('unapproved test repair scope: ' + key)
+        for row in rows:
+            if set(row) != {'path', 'before', 'after'}:
+                raise ValueError('invalid test repair identity fields')
+            name = row['path']
+            predecessor = before if key == 'product_delta' else captured
+            if row['before'] != identity(predecessor.get(name)) or row['before'] != current.get(name):
+                raise ValueError('invalid test repair predecessor: ' + name)
+            after = row['after']
+            if (not isinstance(after, dict) or set(after) != {'mode', 'sha256'}
+                    or after['mode'] not in {'100644', '100755'}
+                    or not isinstance(after['sha256'], str) or len(after['sha256']) != 64
+                    or any(c not in '0123456789abcdef' for c in after['sha256'])):
+                raise ValueError('unsupported test repair source identity: ' + name)
+            if key == 'product_delta' and after != identity(captured.get(name)):
+                raise ValueError('invalid test repair captured source: ' + name)
+            current[name] = after
+
+
 def check(root, allowed_new, regular_path, ancestry):
     stage_path = root / 'maintenance/harness-reconciliation/staging.json'
+    repair_path = root / REPAIR_RECORD
+    has_repair = repair_path.exists() or repair_path.is_symlink()
+    if has_repair:
+        for name in ('maintenance/harness-reconciliation/staging.json', 'maintenance/harness-reconciliation/components.json', REVISION_RECORD):
+            regular_path(root, name)
     if not stage_path.exists():
         return {}, set()
     stage_raw = regular_path(root, stage_path.relative_to(root).as_posix()).read_bytes()
@@ -135,6 +186,11 @@ def check(root, allowed_new, regular_path, ancestry):
             if row['before'] != identity(predecessor.get(name)) or row['before'] != current.get(name):
                 raise ValueError('invalid article revision predecessor: ' + name)
             current[name] = row['after']
+    if has_repair:
+        # Reviewed code is a trust root, but must still be present and regular.
+        for name in sorted(CODE):
+            regular_path(root, name)
+        apply_repair(root, current, allowed_new, regular_path, ancestry)
     for name, expected in current.items():
         if expected['mode'] == '120000':
             path = root / name

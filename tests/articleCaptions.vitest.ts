@@ -5,6 +5,7 @@ import { createMarkdownRenderer } from 'vitepress'
 import { describe, expect, it } from 'vitest'
 import { articleCaptions } from '../blog/.vitepress/markdown/articleCaptions'
 import baseline from './fixtures/article-caption-baseline.json'
+import provenance from './fixtures/article-caption-provenance.json'
 
 const root = fileURLToPath(new NodeURL('../blog/', import.meta.url))
 const renderer = async () => createMarkdownRenderer(root, { config: articleCaptions })
@@ -124,8 +125,11 @@ describe('article captions through VitePress Markdown', () => {
     expect(() => md.render(`<span data-note='id="fig-ems"'>文字</span>\n\n<!-- <div id="fig-ems"> -->\n\n${figure('ems')}`)).not.toThrow()
   })
 
-  it('migrates only three knowledge figures and six references while preserving task-entry article bytes', async () => {
-    const source = readFileSync(`${root}/post/course/security-awareness/electricity-privacy.md`, 'utf8')
+  it('preserves the frozen task-entry migration and its independent inverse hash', async () => {
+    const source = readFileSync(fileURLToPath(new NodeURL('./fixtures/article-caption-migrated.md', import.meta.url)), 'utf8')
+    const entry = readFileSync(fileURLToPath(new NodeURL('./fixtures/article-caption-entry.md', import.meta.url)), 'utf8')
+    expect(createHash('sha256').update(entry).digest('hex')).toBe(baseline.sourceSha256)
+    expect(createHash('sha256').update(source).digest('hex')).toBe(provenance.migrated_sha256)
     const md = await renderer()
     const doc = parse(md.render(source))
     expect(doc.querySelectorAll('figure.article-figure')).toHaveLength(3)
@@ -139,9 +143,26 @@ describe('article captions through VitePress Markdown', () => {
       expect(source).toContain(block)
       original = original.replace(block, item.original).replaceAll(`@fig:${item.id}`, `圖 ${index + 1}`)
     }
+    expect(original).toBe(entry)
     expect(createHash('sha256').update(original).digest('hex')).toBe(baseline.sourceSha256)
     expect(doc.querySelector('#fig-nilm-process figcaption a')?.getAttribute('href')).toBe('#ref-1')
     expect(doc.querySelector('#fig-occupancy-process figcaption a')?.getAttribute('href')).toBe('#ref-4')
+  })
+
+  it('renders the current editorial article with preserved media and source-note citations', async () => {
+    const source = readFileSync(`${root}/post/course/security-awareness/electricity-privacy.md`, 'utf8')
+    const md = await renderer()
+    const doc = parse(md.render(source))
+    expect(createHash('sha256').update(source).digest('hex')).toBe('7d8f648692e2dd0c977473839ce7e83daaae92065e3851953c35524710b44e53')
+    expect(doc.querySelectorAll('figure.article-figure')).toHaveLength(3)
+    expect(doc.querySelectorAll('a.article-reference')).toHaveLength(6)
+    expect(Array.from(doc.querySelectorAll('img')).map(el => ({ src: el.getAttribute('src'), alt: el.getAttribute('alt') }))).toEqual(baseline.images)
+    expect(source.split('---', 3)[1]).toBe(baseline.frontmatter)
+    expect(source).not.toMatch(/圖 [123]/)
+    expect(source).toContain('@fig:nilm-process 是依 NILMTK 重新繪製的流程示意 [[1]](#ref-1)')
+    expect(source).toContain('@fig:occupancy-process 依 Liang 與 Wang 的方法重繪 [[4]](#ref-4)')
+    expect(doc.querySelector('a[href="#ref-1"]')).not.toBeNull()
+    expect(doc.querySelector('a[href="#ref-4"]')).not.toBeNull()
   })
 
   it('compiles the copyable author-guide examples through the public renderer', async () => {

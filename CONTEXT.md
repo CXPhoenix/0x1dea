@@ -13,10 +13,12 @@ Runtime framework skills are pinned initialized template copies. Product writing
 has one canonical source and deterministic complete physical packages. Editing a
 generated file creates drift and is rejected by the materializer's `--check`.
 
-Current branch: `tickets/T-0001/harness-adoption`. Baseline:
-`ee7fecfff72f47abc735d26ac7e9a943de04ebbf`. Adoption remains local and unlanded;
-later authorized landing targets staging. CF production points at main, with the
-owner's independently changed blog build setting. No deployment success is inferred.
+Resolve the actual branch and commit with `git branch --show-current` and
+`git rev-parse HEAD`; historical context is not a live Git status. Ticket landing
+requires its actual owner authorization receipt and commit containment in the
+configured `staging` target (ADR-0006). A local merge or cached remote ref alone
+cannot establish authorization or deployment. Current test entrypoints are
+`pnpm test` (Vitest plus both Python suites) and `pnpm test:python`.
 
 Read [AGENTS.md](AGENTS.md), [the adoption spec](.proj.specs/0001-harness-adoption/spec.en.md)
 and [approved receipts](maintenance/harness-adoption/APPROVALS.md) before relying on gates.

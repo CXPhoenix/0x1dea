@@ -1,0 +1,16 @@
+test_both_named_suites_run_with_positive_counts (test_test_runner.TestRunnerTests.test_both_named_suites_run_with_positive_counts) ... FAIL
+
+======================================================================
+FAIL: test_both_named_suites_run_with_positive_counts (test_test_runner.TestRunnerTests.test_both_named_suites_run_with_positive_counts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/phoenix/dev/online-notes/0x1DEA/tests/harness_adoption/test_test_runner.py", line 31, in test_both_named_suites_run_with_positive_counts
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/phoenix/dev/online-notes/0x1DEA/scripts/run-python-tests.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.032s
+
+FAILED (failures=1)

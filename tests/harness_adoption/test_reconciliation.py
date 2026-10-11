@@ -48,10 +48,7 @@ class ReconciliationTests(unittest.TestCase):
             for name in names:
                 target = self.root / name
                 target.parent.mkdir(parents=True, exist_ok=True)
-                if name == 'blog/post/course/security-awareness/electricity-privacy.md':
-                    target.write_bytes(subprocess.check_output(['git', 'show', '69ff85f5fe1baddb54102070a436dff9ac1c5b73:' + name], cwd=SOURCE))
-                else:
-                    shutil.copyfile(SOURCE / name, target)
+                target.write_bytes(subprocess.check_output(['git', 'show', '69ff85f5fe1baddb54102070a436dff9ac1c5b73:' + name], cwd=SOURCE))
             yield
         finally:
             for name, data in backups.items():
@@ -73,7 +70,7 @@ class ReconciliationTests(unittest.TestCase):
             for name in names:
                 target = self.root / name
                 target.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copyfile(SOURCE / name, target)
+                target.write_bytes(subprocess.check_output(['git', 'show', 'f93237b1ed538484f24ed103ef00c7e5ee2e1828:' + name], cwd=SOURCE))
             yield
         finally:
             for name, data in backups.items():

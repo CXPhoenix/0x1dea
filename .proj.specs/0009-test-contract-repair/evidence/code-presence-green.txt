@@ -1,0 +1,6 @@
+test_reviewed_code_requires_regular_existing_runner_and_guard_test (test_successor.SuccessorTests.test_reviewed_code_requires_regular_existing_runner_and_guard_test) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 13.513s
+
+OK

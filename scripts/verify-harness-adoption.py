@@ -103,7 +103,7 @@ def check_tickets(root):
         visited.add(ticket_id)
     for ticket_id in tickets: visit(ticket_id)
     blocked = {i: [d for d in t['blocked_by'] if tickets[d]['status'] != 'done'] for i, t in tickets.items()}
-    return {'tickets': tickets, 'next_id': f"T-{max((int(i[2:]) for i in tickets), default=0) + 1:04d}", 'frontier': [i for i, t in tickets.items() if t['status'] == 'todo' and not blocked[i]], 'blocked': {i: d for i, d in blocked.items() if d}, 'paused': [i for i, t in tickets.items() if t['status'] == 'pending']}
+    return {'tickets': tickets, 'next_id': f"T-{max((int(i[2:]) for i in tickets), default=0) + 1:04d}", 'frontier': [i for i, t in tickets.items() if t['status'] == 'todo' and not blocked[i]], 'blocked': {i: d for i, d in blocked.items() if d and tickets[i]['status'] == 'todo'}, 'unresolved_dependencies': {i: d for i, d in blocked.items() if d}, 'paused': [i for i, t in tickets.items() if t['status'] == 'pending']}
 
 
 def check_translation(path, root):
@@ -394,7 +394,7 @@ def check_lint_successor(root, historical=None):
     for path, wanted in boundary['new_sources'].items():
         if hashlib.sha256((historical or {}).get(path, regular_path(root, path).read_bytes())).hexdigest() != wanted:
             raise ValueError('lint cleanup new source hash mismatch: ' + path)
-    check_lint_cleanup_delta(before_sources['package.json'], regular_path(root, 'package.json').read_bytes())
+    check_lint_cleanup_delta(before_sources['package.json'], (historical or {}).get('package.json', regular_path(root, 'package.json').read_bytes()))
     return before_sources, boundary['preserved_updates']
 
 

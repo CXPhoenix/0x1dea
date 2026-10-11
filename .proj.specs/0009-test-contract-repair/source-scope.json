@@ -1,0 +1,51 @@
+{
+  "predecessor": "f93237b1ed538484f24ed103ef00c7e5ee2e1828",
+  "captured": "6e4eb804bcbda8504935be49fd6537d6327d5303",
+  "product_delta_paths": [
+    "blog/.vitepress/config.mts",
+    "blog/.vitepress/markdown/articleCaptions.ts",
+    "blog/.vitepress/theme/components/EncoreTicket.vue",
+    "blog/.vitepress/theme/index.ts",
+    "blog/.vitepress/theme/style.css",
+    "blog/post/course/security-awareness/electricity-privacy.md",
+    "docs/authoring/article-captions.md",
+    "docs/components/encore-ticket.md",
+    "maintenance/writing-skills/SOURCES.md",
+    "maintenance/writing-skills/VALIDATION.md",
+    "skills/phoenix-writing/SKILL.md",
+    "skills/phoenix-writing/references/context-form.md",
+    "tests/articleCaptions.vitest.ts",
+    "tests/encoreTicket.vitest.ts",
+    "tests/fixtures/article-caption-baseline.json"
+  ],
+  "repair_data_paths": [
+    "README.md",
+    "package.json",
+    "tests/articleCaptions.vitest.ts",
+    "tests/fixtures/article-caption-entry.md",
+    "tests/fixtures/article-caption-migrated.md",
+    "tests/fixtures/article-caption-provenance.json",
+    "tests/harness_adoption/__init__.py",
+    "tests/article_publication/__init__.py"
+  ],
+  "reviewed_guard_code": [
+    "scripts/verify-harness-adoption.py",
+    "scripts/harness_reconciliation.py",
+    "scripts/run-python-tests.py",
+    "tests/harness_adoption/test_reconciliation.py",
+    "tests/harness_adoption/test_test_runner.py",
+    "tests/harness_adoption/test_successor.py"
+  ],
+  "immutable_history": [
+    "maintenance/harness-adoption/baseline-files.json",
+    "maintenance/harness-adoption/candidate-delta.json",
+    "maintenance/harness-adoption/framework-import-manifest.json",
+    "maintenance/article-publication/source-boundary.json",
+    "maintenance/lint-cleanup/source-boundary.json",
+    "maintenance/harness-reconciliation/staging.json",
+    "maintenance/harness-reconciliation/components.json",
+    "maintenance/harness-reconciliation/article-electricity-revision.json",
+    "tests/fixtures/article-caption-baseline.json"
+  ],
+  "article_sha256": "7d8f648692e2dd0c977473839ce7e83daaae92065e3851953c35524710b44e53"
+}

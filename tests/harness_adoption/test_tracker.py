@@ -101,6 +101,17 @@ class TrackerTests(unittest.TestCase):
         self.ticket(2, blockers='[T-0001]')
         self.assertEqual(verifier.check_tickets(self.root)['blocked'], {'T-0002': ['T-0001']})
 
+    def test_only_todo_is_blocked_but_inflight_dependencies_remain_visible(self):
+        self.ticket(1, 'review')
+        self.ticket(2, 'todo', '[T-0001]')
+        self.ticket(3, 'processing', '[T-0001]')
+        self.ticket(4, 'review', '[T-0001]')
+        views = verifier.check_tickets(self.root)
+        self.assertEqual(views['blocked'], {'T-0002': ['T-0001']})
+        self.assertEqual(views['unresolved_dependencies'], {
+            'T-0002': ['T-0001'], 'T-0003': ['T-0001'], 'T-0004': ['T-0001']})
+        self.assertEqual(views['frontier'], [])
+
     def test_duplicate_id_across_epics_rejected(self):
         p = self.ticket()
         other = self.root / '.proj.tickets/0002-other/T-0001-other.md'

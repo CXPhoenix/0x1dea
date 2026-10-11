@@ -22,3 +22,12 @@ Task-entry snapshot is retained locally in the local frozen review-v1 packet. Fi
 ## Tool restoration before landing
 
 The owner explicitly authorized restoring missing tools and running the normal pre-commit hook. `pnpm install --frozen-lockfile` restored ESLint 9.39.2 and @unocss/eslint-plugin 66.6.0 from the existing lockfile; package.json and pnpm-lock.yaml remained unchanged. Full lint, 61/61 unit tests and VitePress build passed again after restoration. The hook uses an existing cached lint-staged 16.4.0 executable made available temporarily in node_modules/.bin; no hook bypass or package declaration change is involved. Structure/materializer and preservation limitations above remain.
+
+## Subsequent validation note — T-0009 (2026-10-11)
+
+The original observations above remain historical execution evidence. Later
+checkout changes exposed mutable historical fixtures and an incomplete source
+successor. T-0009 separates historical proof from current verification and retains
+the original manifests/article oracle. See the version-qualified results under
+`.proj.specs/0009-test-contract-repair/coverage-report.md`; no deployment or past
+authorization is inferred from this subsequent repair.

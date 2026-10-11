@@ -90,8 +90,8 @@ cd 0x1dea
 # 使用 pnpm 安裝 (建議)
 pnpm install
 
-# 執行測試 (確保環境正確)
-pnpm test:unit
+# 執行完整測試（需 Python 3.11+）
+pnpm test
 ```
 
 設定程式會自動：
@@ -313,3 +313,15 @@ provide(sortPostsKey, (a, b) =>
 ## 本地 Harness 協作
 
 網站原始碼在 blog；docs 是管理文件。從 [AGENTS.md](AGENTS.md)、[協作指南](docs/guide.md) 與 [.proj.specs](.proj.specs/0001-harness-adoption/spec.en.md) 進入。可執行進度只記錄在 .proj.specs／.proj.tickets；Notion 為外部索引。三個寫作技能只改 skills 下的來源，再產生實體 runtime 套件。範本 [MIT 授權](maintenance/harness-adoption/vendor/LICENSE) 與 [第三方聲明](THIRD_PARTY_NOTICES.md) 保留；產品原 LICENSE 不變。
+
+## 測試與本機驗證
+
+`pnpm test` 依序執行 Vitest 與兩套 Python 測試；也可使用 `pnpm test:unit`、
+`pnpm test:python` 分別執行。Python runner 分列每套的 `testsRun` 方法數與
+failure/error 紀錄，任何失敗、import error 或零測試都回傳非零結果。
+直接執行 `python3 -B -m unittest discover -s tests -v` 也會探索兩套測試。
+
+來源與產物檢查：`python3 -B scripts/verify-harness-adoption.py`、
+`python3 -B scripts/verify-project.py`、
+`python3 -B scripts/materialize-writing-skills.py --check`。
+這些指令驗證本機狀態，不代表已 commit、push 或部署。
