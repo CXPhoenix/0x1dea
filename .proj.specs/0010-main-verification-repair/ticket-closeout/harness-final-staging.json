@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/harness_adoption",
+    "-v"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-11T13:40:26.326342+00:00",
+  "ended_utc": "2026-10-11T13:49:05.764851+00:00",
+  "elapsed_seconds": 519.4232141249959,
+  "exit_code": 0,
+  "log": "harness-final-staging.txt",
+  "log_sha256": "9d00d2f000b81ed6796b1a30e889ea81e205c9a064181444263614e987f27305",
+  "raw_log_sha256": "9d00d2f000b81ed6796b1a30e889ea81e205c9a064181444263614e987f27305",
+  "projection": "Only exact owned checkout prefix replaced with {WORKSPACE}; exits and command retained."
+}

@@ -1,0 +1,6 @@
+test_ignored_unapproved_test_source_is_rejected (test_reconciliation.ReconciliationTests.test_ignored_unapproved_test_source_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.859s
+
+OK

@@ -1,0 +1,80 @@
+{
+  "checks": {
+    "main": {
+      "target": "main",
+      "base": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+      "blog_files_unchanged": 73,
+      "historical_and_dependency_and_dispatcher_delta": 0,
+      "existing_main_guard_assignments_unchanged": [
+        "BASE",
+        "CODE",
+        "EVIDENCE",
+        "EVIDENCE_NAMES",
+        "LISTING_AFTER",
+        "LISTING_BEFORE",
+        "LISTING_INDEX",
+        "MERGE",
+        "RELEASE",
+        "SCOPE",
+        "SCOPE_SHA256"
+      ],
+      "existing_test_assertions_byte_identical": true,
+      "new_code_paths": [
+        "scripts/main_publication_verification.py",
+        "tests/harness_adoption/test_main_release.py"
+      ],
+      "pending_files": 326,
+      "current_ticket_statuses": {
+        "T-0003": "review",
+        "T-0001": "done",
+        "T-0010": "done",
+        "T-0012": "review",
+        "T-0002": "review",
+        "T-0005": "done",
+        "T-0004": "review",
+        "T-0011": "done",
+        "T-0008": "review"
+      }
+    },
+    "staging": {
+      "target": "staging",
+      "base": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+      "blog_files_unchanged": 111,
+      "historical_and_dependency_and_dispatcher_delta": 0,
+      "existing_main_guard_assignments_unchanged": [
+        "BASE",
+        "CODE",
+        "EVIDENCE",
+        "EVIDENCE_NAMES",
+        "LISTING_AFTER",
+        "LISTING_BEFORE",
+        "LISTING_INDEX",
+        "MERGE",
+        "RELEASE",
+        "SCOPE",
+        "SCOPE_SHA256"
+      ],
+      "existing_test_assertions_byte_identical": true,
+      "new_code_paths": [
+        "scripts/main_publication_verification.py",
+        "tests/harness_adoption/test_main_release.py"
+      ],
+      "pending_files": 141,
+      "current_ticket_statuses": {
+        "T-0009": "done",
+        "T-0003": "review",
+        "T-0001": "done",
+        "T-0010": "done",
+        "T-0012": "review",
+        "T-0002": "review",
+        "T-0005": "done",
+        "T-0007": "review",
+        "T-0006": "review",
+        "T-0004": "review",
+        "T-0011": "done",
+        "T-0008": "review"
+      }
+    }
+  },
+  "diagnostic": "Initial audit attempted literal_eval on the existing EVIDENCE+name expression and failed as a diagnostic harness error; corrected to exact AST assignment comparison. No product source changed for that correction."
+}

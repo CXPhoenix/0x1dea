@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "scripts/verify-project.py"
+  ],
+  "exit": 0,
+  "seconds": 0.132,
+  "surface": "independent clone at observed staging c6efa7d with exact local closeout metadata overlay; no product/source change"
+}

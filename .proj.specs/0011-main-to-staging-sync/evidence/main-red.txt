@@ -1,0 +1,19 @@
+test_reviewed_main_with_listing_repair_is_accepted (harness_adoption.test_main_release.MainReleaseTests.test_reviewed_main_with_listing_repair_is_accepted) ... FAIL
+
+======================================================================
+FAIL: test_reviewed_main_with_listing_repair_is_accepted (harness_adoption.test_main_release.MainReleaseTests.test_reviewed_main_with_listing_repair_is_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/phoenix/.codex/worktrees/main-to-staging-sync/0x1DEA/tests/harness_adoption/test_main_release.py", line 46, in test_reviewed_main_with_listing_repair_is_accepted
+    self.accepted()
+    ~~~~~~~~~~~~~^^
+  File "/Users/phoenix/.codex/worktrees/main-to-staging-sync/0x1DEA/tests/harness_adoption/test_main_release.py", line 37, in accepted
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: lint cleanup preserved source hash mismatch: blog/.vitepress/config.mts
+
+
+----------------------------------------------------------------------
+Ran 1 test in 6.147s
+
+FAILED (failures=1)

@@ -1,0 +1,1879 @@
+{
+  "verified_at": "2026-10-11T13:25:17.758908+00:00",
+  "source_commit": "01b5d69bc1a006ef04d8c475b4e7df38712c9ca0",
+  "observed_staging": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+  "T1_manifest_count": 307,
+  "T1_manifest_checks": [
+    {
+      "path": "maintenance/harness-adoption/evidence/README.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-home.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-mobile-list.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-mobile.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-particles-light.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-restorable-build.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-restorable-build.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-search-empty.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-server-final.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-unit-resumed.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/baseline-unit-resumed.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/bilingual-full-structure-provenance.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/bilingual-full-structure-provenance.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-particles-records.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-final.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-final.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-key-corrected.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-key-corrected.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/browser-ui-records.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/build-routes-assets-data-parity.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/build-routes-assets-data-parity.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-first.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-first.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-article.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-build-initial.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-build-initial.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-cli-ipc-allowed.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-cli-ipc-allowed.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-cli.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-cli.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-dark.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-framework-verify-after-retired-empty-dir.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-framework-verify-after-retired-empty-dir.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-framework-verify.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-framework-verify.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-home.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-mobile-list.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-mobile.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-particles-light.png",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/candidate-server-final.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-main.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-main.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-materializer.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-materializer.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-project.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-project.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-reviewed-drift.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/closeout-reviewed-drift.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/copy-provenance.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/coverage-trace-verifier-before-review.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/coverage-trace-verifier-before-review.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-catalog-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-catalog-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-catalog-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-catalog-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-final-main.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-final-main.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-final-tests.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-final-tests.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-main-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-main-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-pins-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-pins-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-pins-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-pins-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-selfreview.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-selfreview.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-tree-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-tree-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-tree-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/framework-guard-tree-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/fresh-writing-mechanical-final.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/fresh-writing-mechanical-final.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-bilingual-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-browser-evidence-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-build-parity-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-cli-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-native-catalog-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-originals-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/check-writing-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/exercise-rollback-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/run-check-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/serve-preview-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/harness/verify-final-review-drift-resumed.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-figure30-with-publication-ledger.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-figure30-with-publication-ledger.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-figure30.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-figure30.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-mechanical31.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-mechanical31.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-regression62.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/historical-regression62.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-proof.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-proof.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-write.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-code-review-write.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-green-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-green-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-green-02.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-green-02.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-metadata-green-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-metadata-green-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-metadata-red-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-metadata-red-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-check-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-check-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-determinism-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-determinism-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-final-write.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-final-write.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-proof.py",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-repeat-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-repeat-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-write-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-project-write-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-final-proof.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-final-proof.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-final-write.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-final-write.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-02.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-02.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-03.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-red-03.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-routing-final-proof.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-routing-final-proof.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-routing-final-write.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-routing-final-write.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-selfreview-01.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-selfreview-01.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/materializer-summary.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-catalog-observation.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-catalog-observation.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-catalog-proof.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-cli-failed-sanitized.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/native-discovery-prompt.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-closeout.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-closeout.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-final.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-final.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-full-tracked-tree.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-full-tracked-tree.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-project-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-project-context.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-snapshot-digest-final.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/original-sources-dependencies-snapshot-digest-final.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/pinned-template-tests.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/pinned-template-tests.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-behavior-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-behavior-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-ancestry-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-build.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-build.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-eslint-all.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-eslint-all.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-eslint-ci-blocked.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-eslint-ci-blocked.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-main-whitelist-fixed.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-main-whitelist-fixed.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-main.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-main.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-preflight-audit.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-preflight-audit.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-project.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-project.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-projection.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-python-final.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-python-final.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-python-suite.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-python-suite.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-runtime-check.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-runtime-check.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-staged-main.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-staged-main.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-unit.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-unit.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-whitelist-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-whitelist-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-whitelist-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/publication-whitelist-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-edits.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-final.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-final.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-bilingual-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-main.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-main.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-materializer.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-materializer.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-project.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-project.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-tracker.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-final-tracker.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-post-translation-main.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-post-translation-main.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-readme-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-readme-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-readme-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-readme-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-behavior-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-behavior-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-staged-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-summary.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-trace-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-trace-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-trace-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/review-fixes-trace-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-manifest.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-security-report.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-spec-guide-report.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-spec-report.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-standards-guide-report.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/code-round-2-standards-report.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/commits.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/committed.diff",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/guide-addendum-manifest.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/publication-p2-closeout.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/publication-security-report.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/publication-spec-report.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/publication-standards-report.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/staged.diff",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/reviews/status.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-actual-adopt-restore.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-actual-adopt-restore.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-build.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-build.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-cli.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-cli.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-unit.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/rollback-restored-unit.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/site-default-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/site-default-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/site-default-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/site-default-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/source-evidence-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/source-evidence-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/source-evidence-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/source-evidence-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-behavior-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-behavior-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-first-red.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-first-red.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-green.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-green.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-trace-final-tests-corrected-fixture.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-trace-final-tests-corrected-fixture.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-trace-final-tests.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/tracker-trace-final-tests.log",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E1-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E2-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E3-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E4-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E5-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E6-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E7-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E8-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writer-E9-context.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E1/AGENTS.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E1/output.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E2/AGENTS.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E2/output.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E3/AGENTS.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E3/output.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E4/AGENTS.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E4/output.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E5/AGENTS.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E5/output.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E6/AGENTS.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E6/output.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E7/AGENTS.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E7/output.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E8/AGENTS.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E8/output.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E9/AGENTS.txt",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing/E9/output.md",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-1-provenance.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-1.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-2-provenance.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-2.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-3-provenance.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-judge-group-3.json",
+      "matches": true
+    },
+    {
+      "path": "maintenance/harness-adoption/evidence/writing-runtime-freeze.json",
+      "matches": true
+    }
+  ],
+  "T1_receipt_count": 111,
+  "T1_receipt_checks": [
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-final-project.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-final-project.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/tracker-behavior-red.json",
+      "log": "maintenance/harness-adoption/evidence/tracker-behavior-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-final-tracker.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-final-tracker.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/candidate-framework-verify-after-retired-empty-dir.json",
+      "log": "maintenance/harness-adoption/evidence/candidate-framework-verify-after-retired-empty-dir.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/coverage-trace-verifier-before-review.json",
+      "log": "maintenance/harness-adoption/evidence/coverage-trace-verifier-before-review.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-final-tests.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-final-tests.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/closeout-main.json",
+      "log": "maintenance/harness-adoption/evidence/closeout-main.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/original-sources-dependencies-closeout.json",
+      "log": "maintenance/harness-adoption/evidence/original-sources-dependencies-closeout.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-selfreview-01.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-selfreview-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-selfreview.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-selfreview.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-catalog-red.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-catalog-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-bilingual-green.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-bilingual-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-build.json",
+      "log": "maintenance/harness-adoption/evidence/publication-build.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-project-write-01.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-project-write-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-project-check-01.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-project-check-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-staged-behavior-red.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-staged-behavior-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/original-sources-dependencies-project-context.json",
+      "log": "maintenance/harness-adoption/evidence/original-sources-dependencies-project-context.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/tracker-green.json",
+      "log": "maintenance/harness-adoption/evidence/tracker-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-main-01.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-main-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-metadata-red-01.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-metadata-red-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-red.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/original-sources-dependencies-snapshot-digest-final.json",
+      "log": "maintenance/harness-adoption/evidence/original-sources-dependencies-snapshot-digest-final.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-final-main.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-final-main.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/candidate-framework-verify.json",
+      "log": "maintenance/harness-adoption/evidence/candidate-framework-verify.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-green.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-python-final.json",
+      "log": "maintenance/harness-adoption/evidence/publication-python-final.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-routing-final-write.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-routing-final-write.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-code-review-proof.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-code-review-proof.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/source-evidence-green.json",
+      "log": "maintenance/harness-adoption/evidence/source-evidence-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-red-03.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-red-03.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-eslint-all.json",
+      "log": "maintenance/harness-adoption/evidence/publication-eslint-all.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-final-main.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-final-main.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-key-corrected.json",
+      "log": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-key-corrected.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/historical-mechanical31.json",
+      "log": "maintenance/harness-adoption/evidence/historical-mechanical31.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-post-translation-main.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-post-translation-main.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/candidate-build-initial.json",
+      "log": "maintenance/harness-adoption/evidence/candidate-build-initial.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-final.json",
+      "log": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof-final.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/source-evidence-red.json",
+      "log": "maintenance/harness-adoption/evidence/source-evidence-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-quoted-final-proof.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-quoted-final-proof.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-ancestry-green.json",
+      "log": "maintenance/harness-adoption/evidence/publication-ancestry-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-ancestry-red.json",
+      "log": "maintenance/harness-adoption/evidence/publication-ancestry-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-metadata-green-01.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-metadata-green-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-green-01.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-green-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/baseline-unit-resumed.json",
+      "log": "maintenance/harness-adoption/evidence/baseline-unit-resumed.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-main.json",
+      "log": "maintenance/harness-adoption/evidence/publication-main.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-pins-red.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-pins-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/build-routes-assets-data-parity.json",
+      "log": "maintenance/harness-adoption/evidence/build-routes-assets-data-parity.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-project-determinism-01.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-project-determinism-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-ancestry-behavior-red.json",
+      "log": "maintenance/harness-adoption/evidence/publication-ancestry-behavior-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-whitelist-green.json",
+      "log": "maintenance/harness-adoption/evidence/publication-whitelist-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-bilingual-red.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-bilingual-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/candidate-cli-ipc-allowed.json",
+      "log": "maintenance/harness-adoption/evidence/candidate-cli-ipc-allowed.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-tree-red.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-tree-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/site-default-green.json",
+      "log": "maintenance/harness-adoption/evidence/site-default-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/tracker-trace-final-tests-corrected-fixture.json",
+      "log": "maintenance/harness-adoption/evidence/tracker-trace-final-tests-corrected-fixture.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-red-02.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-red-02.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/fresh-writing-mechanical-final.json",
+      "log": "maintenance/harness-adoption/evidence/fresh-writing-mechanical-final.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof.json",
+      "log": "maintenance/harness-adoption/evidence/browser-ui-equivalence-proof.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/candidate-cli.json",
+      "log": "maintenance/harness-adoption/evidence/candidate-cli.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-preflight-audit.json",
+      "log": "maintenance/harness-adoption/evidence/publication-preflight-audit.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/tracker-first-red.json",
+      "log": "maintenance/harness-adoption/evidence/tracker-first-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-main-whitelist-fixed.json",
+      "log": "maintenance/harness-adoption/evidence/publication-main-whitelist-fixed.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-red-01.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-red-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-python-suite.json",
+      "log": "maintenance/harness-adoption/evidence/publication-python-suite.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-quoted-final-write.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-quoted-final-write.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/historical-regression62.json",
+      "log": "maintenance/harness-adoption/evidence/historical-regression62.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-project-repeat-01.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-project-repeat-01.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/historical-figure30-with-publication-ledger.json",
+      "log": "maintenance/harness-adoption/evidence/historical-figure30-with-publication-ledger.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-eslint-ci-blocked.json",
+      "log": "maintenance/harness-adoption/evidence/publication-eslint-ci-blocked.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/closeout-materializer.json",
+      "log": "maintenance/harness-adoption/evidence/closeout-materializer.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-code-review-green.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-code-review-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-green.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-quoted-yaml-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-catalog-green.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-catalog-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-bilingual-final.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-bilingual-final.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-green-02.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-green-02.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/closeout-reviewed-drift.json",
+      "log": "maintenance/harness-adoption/evidence/closeout-reviewed-drift.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/original-sources-dependencies-full-tracked-tree.json",
+      "log": "maintenance/harness-adoption/evidence/original-sources-dependencies-full-tracked-tree.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-runtime-check.json",
+      "log": "maintenance/harness-adoption/evidence/publication-runtime-check.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-readme-red.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-readme-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-first.json",
+      "log": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-first.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/closeout-project.json",
+      "log": "maintenance/harness-adoption/evidence/closeout-project.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/native-catalog-observation.json",
+      "log": "maintenance/harness-adoption/evidence/native-catalog-observation.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-pins-green.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-pins-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/rollback-restored-unit.json",
+      "log": "maintenance/harness-adoption/evidence/rollback-restored-unit.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/historical-figure30.json",
+      "log": "maintenance/harness-adoption/evidence/historical-figure30.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-final-materializer.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-final-materializer.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/site-default-red.json",
+      "log": "maintenance/harness-adoption/evidence/site-default-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-project.json",
+      "log": "maintenance/harness-adoption/evidence/publication-project.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-readme-green.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-readme-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-green.json",
+      "log": "maintenance/harness-adoption/evidence/candidate-adoption-verifier-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/baseline-restorable-build.json",
+      "log": "maintenance/harness-adoption/evidence/baseline-restorable-build.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-staged-main.json",
+      "log": "maintenance/harness-adoption/evidence/publication-staged-main.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-whitelist-red.json",
+      "log": "maintenance/harness-adoption/evidence/publication-whitelist-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/rollback-actual-adopt-restore.json",
+      "log": "maintenance/harness-adoption/evidence/rollback-actual-adopt-restore.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/framework-guard-tree-green.json",
+      "log": "maintenance/harness-adoption/evidence/framework-guard-tree-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-red.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-log-visibility-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-staged-green.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-staged-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/bilingual-full-structure-provenance.json",
+      "log": "maintenance/harness-adoption/evidence/bilingual-full-structure-provenance.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/rollback-restored-build.json",
+      "log": "maintenance/harness-adoption/evidence/rollback-restored-build.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-code-review-red.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-code-review-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-trace-green.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-trace-green.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/pinned-template-tests.json",
+      "log": "maintenance/harness-adoption/evidence/pinned-template-tests.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-staged-red.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-staged-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/tracker-trace-final-tests.json",
+      "log": "maintenance/harness-adoption/evidence/tracker-trace-final-tests.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/original-sources-dependencies-final.json",
+      "log": "maintenance/harness-adoption/evidence/original-sources-dependencies-final.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/rollback-restored-cli.json",
+      "log": "maintenance/harness-adoption/evidence/rollback-restored-cli.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-code-review-write.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-code-review-write.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-routing-final-proof.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-routing-final-proof.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/review-fixes-trace-red.json",
+      "log": "maintenance/harness-adoption/evidence/review-fixes-trace-red.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/materializer-project-final-write.json",
+      "log": "maintenance/harness-adoption/evidence/materializer-project-final-write.log",
+      "matches": true
+    },
+    {
+      "receipt": "maintenance/harness-adoption/evidence/publication-unit.json",
+      "log": "maintenance/harness-adoption/evidence/publication-unit.log",
+      "matches": true
+    }
+  ],
+  "component_identity": [
+    {
+      "path": "blog/.vitepress/theme/components/ArticleSummary.vue",
+      "pr16_matches": true
+    },
+    {
+      "path": "blog/.vitepress/theme/components/PreviewNotice.vue",
+      "pr16_matches": true
+    },
+    {
+      "path": "blog/.vitepress/theme/index.ts",
+      "pr16_matches": true
+    },
+    {
+      "path": "blog/.vitepress/theme/style.css",
+      "pr16_matches": true
+    },
+    {
+      "path": "blog/post/course/security-awareness/electricity-privacy.md",
+      "pr16_matches": true
+    },
+    {
+      "path": "blog/public/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+      "pr16_matches": true
+    },
+    {
+      "path": "docs/article-summary.md",
+      "pr16_matches": true
+    },
+    {
+      "path": "tests/articleSummary.vitest.ts",
+      "pr16_matches": true
+    },
+    {
+      "path": "tests/fixtures/article-summary.md",
+      "pr16_matches": true
+    },
+    {
+      "path": "tests/fixtures/component-acceptance.md",
+      "pr16_matches": true
+    },
+    {
+      "path": "tests/previewNotice.vitest.ts",
+      "pr16_matches": true
+    },
+    {
+      "path": "tests/previewNoticeArticle.vitest.ts",
+      "pr16_matches": true
+    }
+  ],
+  "landing_ancestry": {
+    "T1": {
+      "commit": "1ed1348e3e7cc00bed2e073fce07fa1325335d3d",
+      "ancestor_of_observed_staging": true
+    },
+    "T1privacy": {
+      "commit": "64799e6df56cc1fab6673ce387f78794938619cb",
+      "ancestor_of_observed_staging": true
+    },
+    "T2": {
+      "commit": "8987806a3c34653a236ca0c683a46bcc9632c27d",
+      "ancestor_of_observed_staging": true
+    },
+    "T3/T4": {
+      "commit": "69ff85f5fe1baddb54102070a436dff9ac1c5b73",
+      "ancestor_of_observed_staging": true
+    },
+    "T8": {
+      "commit": "6e4eb804bcbda8504935be49fd6537d6327d5303",
+      "ancestor_of_observed_staging": true
+    },
+    "T10main": {
+      "commit": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+      "ancestor_of_observed_staging": true
+    },
+    "T10/T11staging": {
+      "commit": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+      "ancestor_of_observed_staging": true
+    }
+  },
+  "missing_component_raw_roots": {
+    "evidence": true,
+    "output/playwright": true
+  },
+  "scope": "Current artifact/hash and actual Git-object checks; not fresh product/browser execution or original push stdout."
+}

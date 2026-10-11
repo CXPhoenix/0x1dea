@@ -9,6 +9,12 @@ import subprocess
 BASE = 'e457143e8be2f7d54f69bc3e9b80230375be49de'
 RELEASE = '604f8733ca47d67fc277ec127a9da743cefbc22e'
 MERGE = '88b9c53852f527ee636bcc4b4ca5e166f6ec10fd'
+ADOPTION_TICKET = '.proj.tickets/0001-harness-adoption/T-0001-harness-adoption.md'
+ADOPTION_DONE_SHA256 = '5465e347c083e87ac5146c65c7fef4a1d6a25c55ffde1acbd4130490493d3799'
+ADOPTION_LANDING = {
+    '.proj.specs/0001-harness-adoption/landing.json': 'b08e7e97a9ac61a81bd762018237ada0e9e821603720f668c6d980b032f0395b',
+    '.proj.specs/0001-harness-adoption/landing-approval.md': 'b7e332f00d749f628ddfdcaf22c544c97944418c5f43a6e21177f675deef5b28',
+}
 LISTING_INDEX = 'blog/post/course/security-awareness/index.md'
 LISTING_BEFORE = '7da24230dca20c0a475caef2d616b15a7f56f47443f97eb7e0f8de6963c1f174'
 LISTING_AFTER = '5c578e76cdbd84e0d316008e341d56daaa34a0f150237a53a9111bcd58c73d3a'
@@ -129,7 +135,15 @@ def check(root, allowed_new, regular_path):
         else:
             path = regular_path(root, name)
             mode = '100755' if path.stat().st_mode & stat.S_IXUSR else '100644'
-            if identity(expected) != {'mode': mode, 'sha256': sha(path.read_bytes())}:
+            current = {'mode': mode, 'sha256': sha(path.read_bytes())}
+            if name == ADOPTION_TICKET and current == {'mode': '100644', 'sha256': ADOPTION_DONE_SHA256}:
+                # Exact receipt and approval pins prevent substituting another valid ancestor.
+                for evidence, digest in ADOPTION_LANDING.items():
+                    receipt = regular_path(root, evidence)
+                    if receipt.stat().st_mode & stat.S_IXUSR or sha(receipt.read_bytes()) != digest:
+                        raise ValueError('changed adoption landing evidence: ' + evidence)
+                continue
+            if identity(expected) != current:
                 raise ValueError('changed publication source: ' + name)
     for name in source_inventory(root):
         if name and name not in released and name not in CODE and not allowed_new(name):

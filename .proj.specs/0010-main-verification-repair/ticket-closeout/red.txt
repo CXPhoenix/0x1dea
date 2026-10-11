@@ -1,0 +1,19 @@
+test_exact_adoption_closeout_with_real_landing_is_accepted (test_main_release.MainReleaseTests.test_exact_adoption_closeout_with_real_landing_is_accepted) ... FAIL
+
+======================================================================
+FAIL: test_exact_adoption_closeout_with_real_landing_is_accepted (test_main_release.MainReleaseTests.test_exact_adoption_closeout_with_real_landing_is_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-ticket-closeout/main/tests/harness_adoption/test_main_release.py", line 61, in test_exact_adoption_closeout_with_real_landing_is_accepted
+    self.accepted()
+    ~~~~~~~~~~~~~^^
+  File "/private/tmp/0x1dea-ticket-closeout/main/tests/harness_adoption/test_main_release.py", line 37, in accepted
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: changed publication source: .proj.tickets/0001-harness-adoption/T-0001-harness-adoption.md
+
+
+----------------------------------------------------------------------
+Ran 1 test in 12.237s
+
+FAILED (failures=1)

@@ -1,0 +1,11 @@
+{
+  "verified_at": "2026-10-11T13:03:18.437332+00:00",
+  "main": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+  "staging": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+  "reviewed_commit": "01b5d69bc1a006ef04d8c475b4e7df38712c9ca0",
+  "main_is_ancestor_of_staging": true,
+  "merged_tree_equals_reviewed_tree": true,
+  "blog_changes_from_previous_staging": 0,
+  "original_local_staging": "4005ee45f2f3267a8b53ce24fa97af7b49cfb144",
+  "original_checkouts_modified": false
+}

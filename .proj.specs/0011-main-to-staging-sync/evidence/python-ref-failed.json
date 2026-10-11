@@ -1,0 +1,9 @@
+{
+  "command": [
+    "pnpm",
+    "test:python"
+  ],
+  "cwd": ".",
+  "exit": 1,
+  "seconds": 303.987
+}

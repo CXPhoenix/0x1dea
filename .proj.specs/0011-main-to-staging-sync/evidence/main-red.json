@@ -1,0 +1,13 @@
+{
+  "cwd": "tests",
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "harness_adoption.test_main_release.MainReleaseTests.test_reviewed_main_with_listing_repair_is_accepted",
+    "-v"
+  ],
+  "exit": 1,
+  "earlier_attempt": "tests.harness_adoption package name was invalid; corrected before this actual behavior probe"
+}

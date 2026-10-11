@@ -1,0 +1,33 @@
+{
+  "target": "main",
+  "HEAD_unchanged": true,
+  "declared_existing_capture_changes": [
+    {
+      "path": ".proj.specs/0010-main-verification-repair/ticket-closeout/coverage-report.md",
+      "before_sha256": "063889a945bf77b57f1b2461f5ff09e73175010d1286c4d2af38b04cc844b8f2",
+      "after_sha256": "e69b2cac9f0944cafd4e146d0e14ea1f7c2ff5d4053ed69a6b9bc454fc30f196"
+    },
+    {
+      "path": ".proj.specs/0010-main-verification-repair/ticket-closeout/scope-audit.json",
+      "before_sha256": "a5081f74ee920c5ae7191ede72ee8ced5e643b81eaf3c847db1f34bcb1ce899d",
+      "after_sha256": "d6a6c99b5888b653fb6bbdf8dddcbad65ebba592902108bcffcf0f73247c3508"
+    },
+    {
+      "path": ".proj.specs/_discovery/publication-workflow/research.md",
+      "before_sha256": "a414bbc18b3ac52547bc85835d457d4218bc0c57bf9058b592a92ec1e64d481a",
+      "after_sha256": "914246e753423854ae7c711f93455e5444e535b14d65d249d4cb1d3a79020809"
+    },
+    {
+      "path": ".proj.tickets/0010-main-verification-repair/T-0012-ticket-evidence-closeout.md",
+      "before_sha256": "5d6f36f0267b01b3fd50a370285972c165e56386d3fd6526ecc885279004b9b7",
+      "after_sha256": "f88f492a58b25850007d138e73a8a128e43ab7e3c0ac767669f683ab044178d4"
+    },
+    {
+      "path": "tests/harness_adoption/test_main_release.py",
+      "before_sha256": "98d9f5bfa556720fb97494b057066e790caf9238ddd67993f19dfdeedf188387",
+      "after_sha256": "b79597cbba1513d772ca07dedd6f7ec046bda06e1544052487d649d43ba251c5"
+    }
+  ],
+  "executable_delta_after_initial_review": "Only fixture branch -f, independently supplementally reviewed; runtime guard unchanged",
+  "additional_files": "Append-only reproduction provenance, final native-check logs/receipts, review reports/manifests/drift summaries. Git index population is intentional; no other runtime change."
+}

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "ticket": "T-0001",
+  "authorized": true,
+  "landed": true,
+  "commit": "1ed1348e3e7cc00bed2e073fce07fa1325335d3d",
+  "target": "staging",
+  "approval_receipt": ".proj.specs/0001-harness-adoption/landing-approval.md",
+  "original_approval": "maintenance/harness-adoption/APPROVALS.md",
+  "privacy_successor": "64799e6df56cc1fab6673ce387f78794938619cb",
+  "observed_remote_staging": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+  "verified_at": "2026-10-11T13:22:36.679327+00:00",
+  "verification": "Current actual Git objects and remote staging ancestry; no original push execution time or original stdout is claimed."
+}

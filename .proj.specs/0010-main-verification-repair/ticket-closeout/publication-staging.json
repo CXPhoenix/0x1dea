@@ -1,0 +1,20 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/article_publication",
+    "-v"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-11T13:27:17.046007+00:00",
+  "ended_utc": "2026-10-11T13:27:56.636561+00:00",
+  "elapsed_seconds": 39.589095416999044,
+  "exit_code": 0,
+  "log": "publication-staging.txt",
+  "log_sha256": "d681629b9110cbb8e209398b6363332fb24cd6d0cb8c6c06d3af39db27f95e77",
+  "raw_log_sha256": "d681629b9110cbb8e209398b6363332fb24cd6d0cb8c6c06d3af39db27f95e77",
+  "projection": "Only exact owned checkout prefix replaced with {WORKSPACE}; exits and command retained."
+}

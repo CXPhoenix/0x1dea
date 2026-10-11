@@ -1,0 +1,17 @@
+test_done_uses_remote_staging_only_when_local_ref_is_absent (harness_adoption.test_tracker.TrackerTests.test_done_uses_remote_staging_only_when_local_ref_is_absent) ... ERROR
+
+======================================================================
+ERROR: test_done_uses_remote_staging_only_when_local_ref_is_absent (harness_adoption.test_tracker.TrackerTests.test_done_uses_remote_staging_only_when_local_ref_is_absent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/phoenix/.codex/worktrees/main-to-staging-sync/0x1DEA/tests/harness_adoption/test_tracker.py", line 166, in test_done_uses_remote_staging_only_when_local_ref_is_absent
+    self.assertEqual(verifier.check_tickets(fixture)['tickets']['T-0001']['status'], 'done')
+                     ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/phoenix/.codex/worktrees/main-to-staging-sync/0x1DEA/scripts/verify-harness-adoption.py", line 109, in check_tickets
+    raise ValueError(f'missing/invalid landing evidence: {path}') from None
+ValueError: missing/invalid landing evidence: /var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/tmpvten1php/landing/.proj.tickets/0001-demo/T-0001-demo.md
+
+----------------------------------------------------------------------
+Ran 1 test in 0.116s
+
+FAILED (errors=1)

@@ -1,0 +1,30 @@
+{
+  "source_target": "staging",
+  "source_branch": "staging",
+  "source_base": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+  "source_overlay": "Frozen initial staging review packet, then only helper branch -f correction",
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "test_main_release.MainReleaseTests.test_exact_adoption_closeout_with_real_landing_is_accepted",
+    "-v"
+  ],
+  "cwd": "{WORKSPACE}/tests/harness_adoption",
+  "red": {
+    "exit_code": 1,
+    "errors": 1,
+    "cause": "clone already created local staging; git branch staging pin returned128"
+  },
+  "green": {
+    "exit_code": 0,
+    "tests": 1,
+    "skips": 0,
+    "unittest_elapsed_seconds": 24.858
+  },
+  "diagnostic": "Initial dotted tests.harness_adoption module command failed import before executing test; corrected working directory and module name. That import failure is not counted as the regression red.",
+  "log_sha256": {
+    "red": "1e51748a3c6edc1208171754688dc0dd825def9e04753b3e66f48bc986e857a6",
+    "green": "8f01994ab68a17b409823e1b34ceff3a08bb862f46b46f98647c2befdb5b1251"
+  }
+}

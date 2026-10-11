@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "scripts/verify-project.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-11T13:36:49.532909+00:00",
+  "ended_utc": "2026-10-11T13:36:49.712987+00:00",
+  "elapsed_seconds": 0.17983291699783877,
+  "exit_code": 0,
+  "log": "structure-final-staging.txt",
+  "log_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+  "raw_log_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+  "projection": "Only exact owned checkout prefix replaced with {WORKSPACE}; exits and command retained."
+}

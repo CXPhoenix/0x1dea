@@ -1,0 +1,70 @@
+{
+  "status": "pass",
+  "framework": {
+    "pinned_files": 641,
+    "source_commit": "917e6025da0901a79dda016e1ce5bd89b6e6e19f",
+    "source_digest": "b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5",
+    "runtime_skill_counts": {
+      ".agents": 36,
+      ".claude": 36
+    }
+  },
+  "site_moves": 55,
+  "baseline_entries": 370,
+  "translations": 10,
+  "trace_rows": 113,
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0003": {
+        "id": "T-0003",
+        "title": "Native Markdown summaries with three appearances",
+        "epic": "0003-article-summary",
+        "status": "review",
+        "blocked_by": [
+          "T-0005"
+        ]
+      },
+      "T-0004": {
+        "id": "T-0004",
+        "title": "Shared preview notice on homepage and article",
+        "epic": "0004-shared-preview-notice",
+        "status": "review",
+        "blocked_by": [
+          "T-0005"
+        ]
+      },
+      "T-0005": {
+        "id": "T-0005",
+        "title": "Reconcile immutable history with exact approved product successors",
+        "epic": "0005-harness-reconciliation",
+        "status": "processing",
+        "blocked_by": []
+      }
+    },
+    "next_id": "T-0006",
+    "frontier": [],
+    "blocked": {
+      "T-0003": [
+        "T-0005"
+      ],
+      "T-0004": [
+        "T-0005"
+      ]
+    },
+    "paused": []
+  }
+}

@@ -1,0 +1,16 @@
+test_clean_pinned_staging_reaches_successful_full_cli (test_reconciliation.ReconciliationTests.test_clean_pinned_staging_reaches_successful_full_cli) ... FAIL
+
+======================================================================
+FAIL: test_clean_pinned_staging_reaches_successful_full_cli (test_reconciliation.ReconciliationTests.test_clean_pinned_staging_reaches_successful_full_cli)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<task-workspace>/harness-implementation/tests/harness_adoption/test_reconciliation.py", line 33, in test_clean_pinned_staging_reaches_successful_full_cli
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: lint cleanup preserved source hash mismatch: blog/.vitepress/config.mts
+
+
+----------------------------------------------------------------------
+Ran 1 test in 8.034s
+
+FAILED (failures=1)

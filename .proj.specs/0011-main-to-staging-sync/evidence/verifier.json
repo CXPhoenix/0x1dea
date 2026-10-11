@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "scripts/verify-harness-adoption.py"
+  ],
+  "cwd": ".",
+  "exit": 0,
+  "seconds": 9.229
+}
