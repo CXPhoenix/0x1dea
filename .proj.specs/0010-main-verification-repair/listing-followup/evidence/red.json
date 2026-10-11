@@ -1,0 +1,14 @@
+{
+  "browser_before": {
+    "post_block_count": 0,
+    "rendering": "static bullet without date"
+  },
+  "cli_red": {
+    "command": "python3 -m unittest discover -s tests/harness_adoption -p test_main_release.py -k listing_successor -v",
+    "exit": 1,
+    "tests": 1,
+    "seconds": 40.104,
+    "failure": "mutation=stale: expected rejection but public verifier returned status=pass",
+    "other_mutations": "bytes, mode, missing, symlink rejected as intended"
+  }
+}

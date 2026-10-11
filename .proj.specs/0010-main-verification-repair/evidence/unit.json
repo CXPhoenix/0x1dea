@@ -1,0 +1,1 @@
+{"command": ["pnpm", "test:unit"], "exit_code": 0, "seconds": 2.64}

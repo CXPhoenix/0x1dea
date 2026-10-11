@@ -1,0 +1,3 @@
+{"inside_read": true, "outside_read_denied": true, "outside_write_denied": true, "network_denied": true, "status": "pass"}
+python3: error: couldn't create cache file '/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/xcrun_db-lPL0njFM' (errno=Operation not permitted)
+python3: error: couldn't create cache file '/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/xcrun_db-t8oWUrZp' (errno=Operation not permitted)

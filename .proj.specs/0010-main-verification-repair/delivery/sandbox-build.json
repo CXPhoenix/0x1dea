@@ -1,0 +1,14 @@
+{
+  "command": [
+    "sandbox-exec",
+    "-f",
+    "/private/tmp/0x1dea-listing-repair/sandbox-build/build.sb",
+    "/Users/phoenix/.nvm/versions/node/v24.13.0/bin/node",
+    "/Users/phoenix/.cache/node/corepack/v1/pnpm/10.28.0/bin/pnpm.cjs",
+    "docs:build"
+  ],
+  "exit": 0,
+  "seconds": 7.896,
+  "projection_matches_current_source": true,
+  "probe_exit": 0
+}
