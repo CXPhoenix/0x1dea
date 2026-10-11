@@ -1,0 +1,21 @@
+
+> 0x1dea@1.4.0 test:unit /Users/phoenix/.codex/worktrees/main-to-staging-sync/0x1DEA
+> vitest run
+
+
+ RUN  v4.0.18 /Users/phoenix/.codex/worktrees/main-to-staging-sync/0x1DEA
+
+ ✓ tests/vpHelper.vitest.ts (9 tests) 16ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 31ms
+ ✓ tests/encoreTicket.vitest.ts (2 tests) 48ms
+ ✓ tests/previewNotice.vitest.ts (32 tests) 54ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 131ms
+ ✓ tests/articleCaptions.vitest.ts (26 tests) 297ms
+ ✓ tests/articleSummary.vitest.ts (12 tests) 303ms
+ ✓ tests/previewNoticeArticle.vitest.ts (1 test) 130ms
+
+ Test Files  8 passed (8)
+      Tests  87 passed (87)
+   Start at  20:19:50
+   Duration  2.87s (transform 1.85s, setup 0ms, import 6.12s, tests 1.01s, environment 6.85s)
+

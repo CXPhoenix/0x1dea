@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "scripts/verify-harness-adoption.py"
+  ],
+  "exit": 0,
+  "seconds": 7.76,
+  "verifier_sha256": "86b6f7ea72a3b0bc17d303db471a94c104860a810c73014ef16e152872cad3d2"
+}

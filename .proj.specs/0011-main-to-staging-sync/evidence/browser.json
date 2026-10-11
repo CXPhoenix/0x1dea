@@ -1,0 +1,54 @@
+{
+  "surface": "local isolated staging build, CF_PAGES_BRANCH=staging",
+  "keyboard": "locator press Enter, waitForURL confirmed article",
+  "routeFormat": "VitePress canonical article route uses generated .html suffix",
+  "checks": [
+    {
+      "cards": [
+        {
+          "href": "/post/course/security-awareness/electricity-privacy.html",
+          "text": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。2026年10月9日"
+        }
+      ],
+      "clientWidth": 1440,
+      "dark": false,
+      "heading": "資安認知推廣備課系列 ​",
+      "innerHeight": 900,
+      "innerWidth": 1440,
+      "phase": "desktop-light",
+      "scrollWidth": 1440,
+      "url": "http://127.0.0.1:8771/post/course/security-awareness/"
+    },
+    {
+      "clientWidth": 1440,
+      "dark": true,
+      "innerHeight": 900,
+      "innerWidth": 1440,
+      "phase": "desktop-dark",
+      "scrollWidth": 1440
+    },
+    {
+      "clientWidth": 375,
+      "dark": true,
+      "innerHeight": 844,
+      "innerWidth": 390,
+      "phase": "mobile-dark",
+      "scrollWidth": 375
+    },
+    {
+      "clientWidth": 375,
+      "dark": false,
+      "innerHeight": 844,
+      "innerWidth": 390,
+      "phase": "mobile-light",
+      "scrollWidth": 375,
+      "scrollY": 1
+    },
+    {
+      "heading": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？ ​",
+      "phase": "keyboard-navigation",
+      "previewNotice": "staging 修訂審閱稿這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+      "url": "http://127.0.0.1:8771/post/course/security-awareness/electricity-privacy.html"
+    }
+  ]
+}

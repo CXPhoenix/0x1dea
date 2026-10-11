@@ -1,0 +1,55 @@
+{
+  "head": "88b9c53852f527ee636bcc4b4ca5e166f6ec10fd",
+  "release_file_count": 1719,
+  "changed_existing_files": [
+    "scripts/verify-harness-adoption.py",
+    "tests/harness_adoption/test_tracker.py"
+  ],
+  "unchanged_existing_file_count": 1717,
+  "pinned_samples": {
+    "blog/post/course/security-awareness/electricity-privacy.md": {
+      "sha256": "8e6cc7a954ceaf4248ea8aa0f6d24ee343b8b5da4466f858b5440df95a0f68db",
+      "unchanged": true
+    },
+    "package.json": {
+      "sha256": "63b98e9c0c02ac1bc35d99a62f445bfe8849bb36e686064feb5d5fda8e5a6f06",
+      "unchanged": true
+    },
+    "pnpm-lock.yaml": {
+      "sha256": "a3fd09a4774cdf0f5c7260b2cac942fbc7d353f408138570339456a516b30842",
+      "unchanged": true
+    },
+    "maintenance/harness-adoption/baseline-files.json": {
+      "sha256": "a27eb6c95af35785f787e8abd12849f6b73653abb113b1c07511e955f19ac26b",
+      "unchanged": true
+    },
+    "maintenance/harness-adoption/candidate-delta.json": {
+      "sha256": "30c1e6448d81ace9768ee6481e7b8df5e57d25f491dd4e093b3f0813d832f57f",
+      "unchanged": true
+    },
+    "maintenance/article-publication/source-boundary.json": {
+      "sha256": "9b19137ccb03816d5c965bc5ee406cc7da6f97a0bee3a0c71d0ac35fa8c6187c",
+      "unchanged": true
+    },
+    "maintenance/lint-cleanup/source-boundary.json": {
+      "sha256": "22f7fa33ad55af3c04a180c41dae55416eff0a3e43ee6ee87f0d761e5a4ca0f3",
+      "unchanged": true
+    },
+    "tests/fixtures/article-caption-baseline.json": {
+      "sha256": "6baa4a586594b205359520c8d999d767c696524d1677be92132ded6fc5bb7149",
+      "unchanged": true
+    },
+    "tests/fixtures/article-caption-entry.md": {
+      "sha256": "9ee10b2b8afe41d6d201df259ed95c58e869bd5592bbaa4995d603f5823f265e",
+      "unchanged": true
+    },
+    "tests/fixtures/article-caption-migrated.md": {
+      "sha256": "a81a826ec72da2c1cb78a6f829773ad87687491d06399c307344a7879aef9506",
+      "unchanged": true
+    },
+    "tests/fixtures/article-caption-provenance.json": {
+      "sha256": "f7b1d31152a6b63e1e89da5993d43130504118d29e873e79942d41749ce65744",
+      "unchanged": true
+    }
+  }
+}

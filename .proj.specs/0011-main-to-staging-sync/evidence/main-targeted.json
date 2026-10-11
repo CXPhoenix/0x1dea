@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "harness_adoption.test_main_release",
+    "-v"
+  ],
+  "cwd": "tests",
+  "exit": 0,
+  "seconds": 177.62
+}

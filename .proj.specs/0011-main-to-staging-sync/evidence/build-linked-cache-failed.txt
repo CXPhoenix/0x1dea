@@ -1,0 +1,17 @@
+
+> 0x1dea@1.4.0 docs:build /private/tmp/0x1dea-staging-sync-build/candidate
+> vitepress build blog
+
+ ELIFECYCLE  Command failed with exit code 1.
+failed to load config from /private/tmp/0x1dea-staging-sync-build/candidate/blog/.vitepress/config.mts
+build error:
+EPERM: operation not permitted, open '/private/tmp/0x1dea-staging-sync-build/candidate/node_modules/.vite-temp/config.mts.timestamp-1791721079105-c457d489515568.mjs'
+Error: EPERM: operation not permitted, open '/private/tmp/0x1dea-staging-sync-build/candidate/node_modules/.vite-temp/config.mts.timestamp-1791721079105-c457d489515568.mjs'
+    at async open (node:internal/fs/promises:637:25)
+    at async Object.writeFile (node:internal/fs/promises:1239:14)
+    at async loadConfigFromBundledFile (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vite@7.3.1_@types+node@25.2.3_jiti@2.6.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:35907:3)
+    at async bundleAndLoadConfigFile (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vite@7.3.1_@types+node@25.2.3_jiti@2.6.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:35797:17)
+    at async loadConfigFromFile (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vite@7.3.1_@types+node@25.2.3_jiti@2.6.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:35764:42)
+    at async resolveUserConfig (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:17456:27)
+    at async resolveConfig (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:17347:48)
+    at async build (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:45430:22)

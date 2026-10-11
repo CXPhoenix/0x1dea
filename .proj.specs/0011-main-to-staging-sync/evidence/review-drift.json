@@ -1,0 +1,8 @@
+{
+  "packet_manifest_sha256": "b27c3993ad4550a73899b8e2095165bff2a73306adeecf25ab25d4a281b583ac",
+  "captured_files": 207,
+  "drift_before_reports": [],
+  "head": "4005ee45f2f3267a8b53ce24fa97af7b49cfb144",
+  "merge_head": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+  "post_review_changes": "Only reports and ticket/coverage/validation review-result metadata; implementation and raw execution evidence frozen."
+}

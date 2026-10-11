@@ -13,14 +13,32 @@ import sys
 
 from importlib.util import module_from_spec, spec_from_file_location
 
-_reconciliation_spec = spec_from_file_location('harness_reconciliation', Path(__file__).with_name('harness_reconciliation.py'))
-harness_reconciliation = module_from_spec(_reconciliation_spec)
-_previous_bytecode_policy = sys.dont_write_bytecode
-sys.dont_write_bytecode = True
-try:
-    _reconciliation_spec.loader.exec_module(harness_reconciliation)
-finally:
-    sys.dont_write_bytecode = _previous_bytecode_policy
+def check_current_source(root):
+    """Route existing exact contracts; validation failures never trigger fallback."""
+    records = ('staging.json', 'components.json', 'article-electricity-revision.json',
+               'test-contract-repair.json')
+    reconciliation = root / 'maintenance/harness-reconciliation'
+    has_reconciliation = any((reconciliation / name).exists() or
+                             (reconciliation / name).is_symlink() for name in records)
+    scope = '.proj.specs/0002-article-publication/electricity-release/scope.json'
+    path = root / scope
+    # A deleted scope must still reach the main guard's missing-input diagnostic.
+    has_main = path.exists() or path.is_symlink() or subprocess.run(
+        ['git', '--no-replace-objects', 'cat-file', '-e', 'HEAD:' + scope], cwd=root,
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
+    previous = sys.dont_write_bytecode
+    sys.dont_write_bytecode = True
+    try:
+        if not has_reconciliation and has_main:
+            from main_publication_verification import check
+            return check(root, allowed_new, regular_path)
+        spec = spec_from_file_location('harness_reconciliation',
+                                       Path(__file__).with_name('harness_reconciliation.py'))
+        module = module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module.check(root, allowed_new, regular_path, check_adoption_ancestry)
+    finally:
+        sys.dont_write_bytecode = previous
 
 
 def git_blob(content):
@@ -86,7 +104,14 @@ def check_tickets(root):
                     raise ValueError('incomplete landing record')
                 regular_path(root, landing['approval_receipt'])
                 subprocess.run(['git', 'cat-file', '-e', landing['commit'] + '^{commit}'], cwd=root, check=True, capture_output=True)
-                subprocess.run(['git', 'merge-base', '--is-ancestor', landing['commit'], 'staging'], cwd=root, check=True, capture_output=True)
+                staging_ref = 'refs/heads/staging'
+                resolved = subprocess.run(['git', 'show-ref', '--verify', '--quiet', staging_ref],
+                                          cwd=root, capture_output=True)
+                if resolved.returncode == 1:
+                    staging_ref = 'refs/remotes/origin/staging'
+                else:
+                    resolved.check_returncode()
+                subprocess.run(['git', 'merge-base', '--is-ancestor', landing['commit'], staging_ref], cwd=root, check=True, capture_output=True)
             except (ValueError, KeyError, subprocess.CalledProcessError):
                 raise ValueError(f'missing/invalid landing evidence: {path}') from None
         tickets[ticket_id] = data
@@ -442,7 +467,7 @@ def main():
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
     root = args.root.resolve()
-    historical, approved = harness_reconciliation.check(root, allowed_new, regular_path, check_adoption_ancestry)
+    historical, approved = check_current_source(root)
     baseline = json.loads((root / 'maintenance/harness-adoption/baseline-files.json').read_text())
     delta = json.loads((root / 'maintenance/harness-adoption/candidate-delta.json').read_text())
     check_baseline_manifest(root, baseline)

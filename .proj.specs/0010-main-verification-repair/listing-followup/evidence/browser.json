@@ -1,0 +1,52 @@
+{
+  "surface": "local sandbox-built VitePress website in Codex in-app browser",
+  "before": {
+    "cards": 0,
+    "rendering": "static bullet"
+  },
+  "cases": [
+    {
+      "cards": [
+        {
+          "href": "/post/course/security-awareness/electricity-privacy.html",
+          "text": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？\n\n從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。\n\n2026年10月9日"
+        }
+      ],
+      "case": "desktop-light",
+      "dark": false,
+      "height": 900,
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "case": "desktop-dark",
+      "dark": true,
+      "height": 900,
+      "scrollWidth": 1440,
+      "width": 1440
+    },
+    {
+      "cards": 1,
+      "case": "mobile-dark",
+      "dark": true,
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "cards": 1,
+      "case": "mobile-light",
+      "dark": false,
+      "height": 844,
+      "scrollWidth": 375,
+      "width": 390
+    }
+  ],
+  "keyboard": {
+    "focusIsArticle": true,
+    "href": "/post/course/security-awareness/electricity-privacy.html",
+    "destination": "http://127.0.0.1:4193/post/course/security-awareness/electricity-privacy.html"
+  },
+  "console": []
+}

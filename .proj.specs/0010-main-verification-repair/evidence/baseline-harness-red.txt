@@ -1,0 +1,17 @@
+test_lint_successor_rejects_source_scope_and_history_tampering (test_tracker.TrackerTests.test_lint_successor_rejects_source_scope_and_history_tampering) ... ERROR
+
+======================================================================
+ERROR: test_lint_successor_rejects_source_scope_and_history_tampering (test_tracker.TrackerTests.test_lint_successor_rejects_source_scope_and_history_tampering)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<baseline-checkout>/tests/harness_adoption/test_tracker.py", line 64, in test_lint_successor_rejects_source_scope_and_history_tampering
+    verifier.check_lint_successor(fixture)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "<baseline-checkout>/scripts/verify-harness-adoption.py", line 378, in check_lint_successor
+    raise ValueError('lint cleanup preserved source hash mismatch: ' + path)
+ValueError: lint cleanup preserved source hash mismatch: blog/.vitepress/config.mts
+
+----------------------------------------------------------------------
+Ran 1 test in 0.197s
+
+FAILED (errors=1)

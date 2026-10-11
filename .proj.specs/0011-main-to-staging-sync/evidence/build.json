@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/private/tmp/0x1dea-staging-sync-build/build.sb",
+    "/usr/bin/env",
+    "HOME=/private/tmp/0x1dea-staging-sync-build/home",
+    "TMPDIR=/private/tmp/0x1dea-staging-sync-build/tmp",
+    "CF_PAGES_BRANCH=staging",
+    "/Users/phoenix/.nvm/versions/node/v24.13.0/bin/node",
+    "/Users/phoenix/.cache/node/corepack/v1/pnpm/10.28.0/bin/pnpm.cjs",
+    "docs:build"
+  ],
+  "exit": 0,
+  "seconds": 12.184,
+  "surface": "isolated local staging build",
+  "installed_pnpm": "10.28.0 direct cached runtime; no installation",
+  "CF_PAGES_BRANCH": "staging",
+  "cache": "disposable local regular directories, no links"
+}

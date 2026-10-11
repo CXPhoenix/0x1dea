@@ -1,0 +1,16 @@
+{
+  "command": [
+    "pnpm",
+    "test:python"
+  ],
+  "exit": 0,
+  "seconds": 269.304,
+  "source_sha256": {
+    "scripts/verify-harness-adoption.py": "86b6f7ea72a3b0bc17d303db471a94c104860a810c73014ef16e152872cad3d2",
+    "scripts/harness_reconciliation.py": "79870a068da61d5c5fee584a86f39fca3092f45b77f57e4e8a3f5be1f0d90973",
+    "tests/harness_adoption/test_tracker.py": "c290af0f92e30dbd370a891ca44f9727c199e5a00b4da967bce7ea2174bded01",
+    "scripts/main_publication_verification.py": "6fe08fedc10407bdde8d19305664e4e989de97fd34882d19dba1caee049ec2c6",
+    "tests/harness_adoption/test_main_release.py": "85cd82f6c5bba7a9ae2d1253f6f22f763fb66fea3879847c17386161d9da7c7c"
+  },
+  "source_unchanged": true
+}

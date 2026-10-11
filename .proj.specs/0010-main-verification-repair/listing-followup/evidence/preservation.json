@@ -1,0 +1,14 @@
+{
+  "released_entries": 1719,
+  "unchanged_released_entries": 1716,
+  "changed_existing": [
+    "blog/post/course/security-awareness/index.md",
+    "scripts/verify-harness-adoption.py",
+    "tests/harness_adoption/test_tracker.py"
+  ],
+  "article_sha256": "8e6cc7a954ceaf4248ea8aa0f6d24ee343b8b5da4466f858b5440df95a0f68db",
+  "scope_sha256": "07a8241a373314efc31a08d1587fc984c56fe186bd96fc4578d7c233d9619e2d",
+  "build_projection_source_match": true,
+  "original_checkout_status": "",
+  "HEAD": "88b9c53852f527ee636bcc4b4ca5e166f6ec10fd"
+}

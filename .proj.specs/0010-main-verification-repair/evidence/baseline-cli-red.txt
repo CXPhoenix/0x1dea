@@ -1,0 +1,1 @@
+FAIL: lint cleanup preserved source hash mismatch: blog/.vitepress/config.mts
