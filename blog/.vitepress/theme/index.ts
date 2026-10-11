@@ -1,6 +1,7 @@
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import ArticleSummary from './components/ArticleSummary.vue'
+import EncoreTicket from './components/EncoreTicket.vue'
 import NewPost from './components/NewPost.vue'
 import PostBlock from './components/PostBlock.vue'
 import PostCard from './components/PostCard.vue'
@@ -20,6 +21,7 @@ export default {
     app.component('NewPost', NewPost)
     app.component('PreviewNotice', PreviewNotice)
     app.component('ArticleSummary', ArticleSummary)
+    app.component('EncoreTicket', EncoreTicket)
 
     if (!import.meta.env.SSR) {
       const Particles = (await import('@tsparticles/vue3')).default

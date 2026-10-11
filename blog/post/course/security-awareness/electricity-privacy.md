@@ -80,7 +80,11 @@ pageClass: electricity-privacy-article
 
 這故事是有點有趣沒錯，但重點是：這樣的紀錄，你可以觀察到「異常」！
 
-同場加映：[什麼是安全？能吃嗎？](/post/course/cybersec/what-is-safety)——如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？
+<EncoreTicket
+  title="什麼是安全？能吃嗎？"
+  href="/post/course/cybersec/what-is-safety"
+  description="如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？"
+/>
 
 ## 先知道平常，才知道哪裡怪怪的
 
