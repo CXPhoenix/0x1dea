@@ -1,0 +1,61 @@
+{
+  "sourceSha256": "9ee10b2b8afe41d6d201df259ed95c58e869bd5592bbaa4995d603f5823f265e",
+  "frontmatter": "\ntitle: \"用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？\"\ndescription: \"從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。\"\ncreatedTime: 2026-10-09T00:32:47+08:00\nupdatedTime: 2026-10-11T00:54:35+08:00\nthumbnail: /assets/post_course_security-awareness_electricity-privacy/p-total.png\ncategory: 資安認知推廣備課系列\ndraft: true\npreviewOnly: true\npageClass: electricity-privacy-article\n",
+  "images": [
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+      "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。"
+    },
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+      "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。"
+    },
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+      "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。"
+    },
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+      "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。"
+    },
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+      "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。"
+    },
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+      "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。"
+    },
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+      "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。"
+    },
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+      "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。"
+    }
+  ],
+  "figures": [
+    {
+      "id": "simulated-ems",
+      "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+      "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+      "caption": "模擬總功率",
+      "original": "<img src=\"/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg\" alt=\"模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。\" style=\"display: block; margin: 1.5rem auto; max-width: 100%; height: auto;\" />\n\n圖 1：模擬總功率"
+    },
+    {
+      "id": "nilm-process",
+      "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+      "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+      "caption": "由整戶用電估計設備用電，再以單獨量測評估差異；依 NILMTK 的定義與評估流程重繪 [[1]](#ref-1)。",
+      "original": "<img src=\"/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg\" alt=\"整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。\" style=\"display: block; margin: 1.5rem auto; max-width: 100%; height: auto;\" />\n\n圖 2：由整戶用電估計設備用電，再以單獨量測評估差異；依 NILMTK 的定義與評估流程重繪 [[1]](#ref-1)。"
+    },
+    {
+      "id": "occupancy-process",
+      "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+      "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+      "caption": "每小時電表資料用於估計在家狀態，另以在家紀錄訓練與核對；依 Liang 與 Wang 的方法重繪 [[4, Sec. IV]](#ref-4)。",
+      "original": "<img src=\"/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg\" alt=\"每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。\" style=\"display: block; margin: 1.5rem auto; max-width: 100%; height: auto;\" />\n\n圖 3：每小時電表資料用於估計在家狀態，另以在家紀錄訓練與核對；依 Liang 與 Wang 的方法重繪 [[4, Sec. IV]](#ref-4)。"
+    }
+  ]
+}
