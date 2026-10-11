@@ -232,7 +232,11 @@
     },
     {
       "path": "skills/phoenix-writing/SKILL.md",
-      "sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73"
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
+    },
+    {
+      "path": "skills/phoenix-writing/references/context-form.md",
+      "sha256": "ec4a9205411a835a28f4ba3a72b8f155a0d7378c48de99f354d57c2e575bd04e"
     },
     {
       "path": "skills/phoenix-writing/references/style-examples.md",

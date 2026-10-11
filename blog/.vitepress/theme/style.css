@@ -304,3 +304,54 @@ body {
   height: auto;
   margin-inline: auto;
 }
+
+/** Opt-in article captions and stable references. */
+.vp-doc .article-figure {
+  margin: 2rem 0;
+  scroll-margin-top: 6rem;
+}
+
+.vp-doc .article-figure > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-inline: auto;
+}
+
+.vp-doc .article-figure > figcaption,
+.vp-doc .article-table caption {
+  color: var(--vp-c-text-1);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  text-align: start;
+}
+
+.vp-doc .article-figure > figcaption {
+  margin-top: 0.75rem;
+}
+
+.vp-doc .article-table {
+  max-width: 100%;
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.vp-doc .article-table > table {
+  display: table;
+  width: 100%;
+  margin: 0;
+  scroll-margin-top: 6rem;
+}
+
+.vp-doc .article-table caption {
+  caption-side: top;
+  padding-bottom: 0.75rem;
+}
+
+.vp-doc .article-reference:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

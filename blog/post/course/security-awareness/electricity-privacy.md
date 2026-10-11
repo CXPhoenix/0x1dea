@@ -64,13 +64,13 @@ pageClass: electricity-privacy-article
 
 一位爸爸裝了能源管理系統（Energy Management System，EMS），某天發現半夜的電鍋用電和平常不同，先懷疑電鍋是不是壞了。
 
-為了讓大家更了解這段變化，我讓 LLM 協助畫出圖 1。這裡假設電鍋接上能單獨量測功率的智慧插座，每五分鐘記錄一次；家中其他設備合計維持 150 W，電鍋以 600 W 加熱，再以 50 W 保溫後關閉。這些都是教學設定，不是故事裡那戶人家的實測資料。
+為了讓大家更了解這段變化，我讓 LLM 協助畫出@fig:simulated-ems。這裡假設電鍋接上能單獨量測功率的智慧插座，每五分鐘記錄一次；家中其他設備合計維持 150 W，電鍋以 600 W 加熱，再以 50 W 保溫後關閉。這些都是教學設定，不是故事裡那戶人家的實測資料。
 
-<img src="/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg" alt="模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。" style="display: block; margin: 1.5rem auto; max-width: 100%; height: auto;" />
+::: figure simulated-ems
+![模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。](/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg "模擬總功率")
+:::
 
-圖 1：教學模擬的電鍋加熱與保溫，以及固定基載加上電鍋的家戶總功率；非住戶實測。
-
-從圖 1 中你會發現，這段加熱用電的狀況十分醒目，卻沒有告訴你原因：是有人煮東西？設備故障？還是定時功能啟動？
+從@fig:simulated-ems 中你會發現，這段加熱用電的狀況十分醒目，卻沒有告訴你原因：是有人煮東西？設備故障？還是定時功能啟動？
 
 這個爸爸只能東修修、西修修，差點以為是自家的 EMS 壞掉了 இдஇ
 
@@ -100,15 +100,15 @@ pageClass: electricity-privacy-article
 
 ## 從總用電，估計個別設備
 
-最直接的方法，是針對設備另外量測。前面的圖 1 就假設電鍋接上可量測功率的智慧插座，所以我們才有一條能叫做「電鍋」的線。只有家戶總功率時，不能直接把那段增加全算到電鍋頭上。
+最直接的方法，是針對設備另外量測。前面的@fig:simulated-ems 就假設電鍋接上可量測功率的智慧插座，所以我們才有一條能叫做「電鍋」的線。只有家戶總功率時，不能直接把那段增加全算到電鍋頭上。
 
 那如果沒有逐台量測呢？
 
 有一類研究叫做非侵入式負載監測（Non-intrusive Load Monitoring，NILM），也常稱為能源分解：試著從整戶合在一起的量測，估計個別電器的用電 [[1]](#ref-1)。
 
-<img src="/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg" alt="整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。" style="display: block; margin: 1.5rem auto; max-width: 100%; height: auto;" />
-
-圖 2：由整戶用電估計設備用電，再以單獨量測評估差異；依 NILMTK 的定義與評估流程重繪 [[1]](#ref-1)。
+::: figure nilm-process
+![整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。](/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg "由整戶用電估計設備用電，再以單獨量測評估差異")
+:::
 
 有點像聽一場合奏：所有樂器一起出聲，你還是可能認出鼓或小提琴。不過認得聲音，跟每一個音都能分對，是兩回事。電器也會同時運作、切換模式，幾種組合甚至可能產生相近的總功率。
 
@@ -154,11 +154,11 @@ pageClass: electricity-privacy-article
 
 研究也有人直接用電表資料估計在家狀態。Liang 與 Wang 使用 ECO 資料集，將電流、電壓與相位差整理成每小時平均，再送入模型 [[4]](#ref-4)。
 
-<img src="/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg" alt="每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。" style="display: block; margin: 1.5rem auto; max-width: 100%; height: auto;" />
+::: figure occupancy-process
+![每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。](/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg "每小時電表資料用於估計在家狀態")
+:::
 
-圖 3：每小時電表資料用於估計在家狀態，另以在家紀錄訓練與核對；依 Liang 與 Wang 的方法重繪 [[4, Sec. IV]](#ref-4)。
-
-用來核對的在家紀錄，來自住戶回報或紅外線感測器。研究前處理後使用五戶、共 449 天的資料，描述十折交叉驗證；原文未交代測試家庭是否完全不參與訓練，不能直接把結果當成對任意新家庭都適用的保證 [[4, Sec. IV]](#ref-4)。
+用來核對的在家紀錄，來自住戶回報或紅外線感測器。研究前處理後使用五戶、共 449 天的資料，描述十折交叉驗證；原文未交代測試家庭是否完全不參與訓練，不能直接把結果當成對任意新家庭都適用的保證 [[4]](#ref-4)。
 
 這裡也看得出來：每小時一筆，仍可能有資訊可供模型推測。資料少一點，不等於所有生活線索都消失了。
 
@@ -170,9 +170,19 @@ pageClass: electricity-privacy-article
 
 下次看到用電和平常不同，你可以先保留時段、持續時間與家裡正在運作的設備，再問問家人、檢查排程。能確認是哪台，就看它的狀態；如果出現不認得的程序、連線或登入，再把那些紀錄一起帶進調查。
 
-爸爸問出了半夜的饅頭，我們也可能查到忘了關的設備、故障，或未經同意的運算工作。電表不會替你寫完整的答案，但多留一點你看得懂的紀錄，就多了一個發現「今天哪裡不一樣」的機會。
+爸爸問出了半夜的饅頭，我們也可能查到忘了關的設備、故障，或未經同意的運算工作。
 
-<small>圖源與製圖：圖 1 是本文教學模擬，並非住戶實測或挖礦實驗；圖 2 是依 NILMTK 重新繪製的流程示意 [[1]](#ref-1)；圖 3 依 Liang 與 Wang 的方法重繪 [[4]](#ref-4)，原作採 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授權。</small>
+電表不會替你寫完整的答案，但多留一點你看得懂的紀錄，就多了一個發現「今天哪裡不一樣」的機會。
+
+> [!NOTE] Acknowledge
+> 
+> 1. 圖源與製圖：
+> 
+>     - @fig:simulated-ems 是本文教學模擬，並非住戶實測或挖礦實驗；
+>     - @fig:nilm-process 是依 NILMTK 重新繪製的流程示意 [[1]](#ref-1)；
+>     - @fig:occupancy-process 依 Liang 與 Wang 的方法重繪 [[4]](#ref-4)，原作採 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授權。
+> 
+> 2. 本篇文章為基於筆者之思考概念，由 Codex 主筆撰寫，人類審稿並校閱。
 
 ## 參考文獻
 

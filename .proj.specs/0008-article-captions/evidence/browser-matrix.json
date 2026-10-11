@@ -1,0 +1,482 @@
+[
+  {
+    "captions": [
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 1：模擬總功率",
+        "width": 624
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異；依 NILMTK 的定義與評估流程重繪 [1]。",
+        "width": 624
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 3：每小時電表資料用於估計在家狀態，另以在家紀錄訓練與核對；依 Liang 與 Wang 的方法重繪 [4, Sec. IV]。",
+        "width": 624
+      }
+    ],
+    "dark": false,
+    "figures": 3,
+    "literal": null,
+    "overflow": false,
+    "path": "/post/course/security-awareness/electricity-privacy",
+    "refs": [
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-nilm-process",
+        "text": "圖 2"
+      },
+      {
+        "exists": true,
+        "href": "#fig-occupancy-process",
+        "text": "圖 3"
+      }
+    ],
+    "tables": 0,
+    "width": 1280
+  },
+  {
+    "captions": [
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 1：模擬總功率",
+        "width": 624
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異；依 NILMTK 的定義與評估流程重繪 [1]。",
+        "width": 624
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 3：每小時電表資料用於估計在家狀態，另以在家紀錄訓練與核對；依 Liang 與 Wang 的方法重繪 [4, Sec. IV]。",
+        "width": 624
+      }
+    ],
+    "dark": true,
+    "figures": 3,
+    "literal": null,
+    "overflow": false,
+    "path": "/post/course/security-awareness/electricity-privacy",
+    "refs": [
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-nilm-process",
+        "text": "圖 2"
+      },
+      {
+        "exists": true,
+        "href": "#fig-occupancy-process",
+        "text": "圖 3"
+      }
+    ],
+    "tables": 0,
+    "width": 1280
+  },
+  {
+    "captions": [
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 1：模擬總功率",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異；依 NILMTK 的定義與評估流程重繪 [1]。",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 3：每小時電表資料用於估計在家狀態，另以在家紀錄訓練與核對；依 Liang 與 Wang 的方法重繪 [4, Sec. IV]。",
+        "width": 342
+      }
+    ],
+    "dark": false,
+    "figures": 3,
+    "literal": null,
+    "overflow": false,
+    "path": "/post/course/security-awareness/electricity-privacy",
+    "refs": [
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-nilm-process",
+        "text": "圖 2"
+      },
+      {
+        "exists": true,
+        "href": "#fig-occupancy-process",
+        "text": "圖 3"
+      }
+    ],
+    "tables": 0,
+    "width": 390
+  },
+  {
+    "captions": [
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 1：模擬總功率",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異；依 NILMTK 的定義與評估流程重繪 [1]。",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 3：每小時電表資料用於估計在家狀態，另以在家紀錄訓練與核對；依 Liang 與 Wang 的方法重繪 [4, Sec. IV]。",
+        "width": 342
+      }
+    ],
+    "dark": true,
+    "figures": 3,
+    "literal": null,
+    "overflow": false,
+    "path": "/post/course/security-awareness/electricity-privacy",
+    "refs": [
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-simulated-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-nilm-process",
+        "text": "圖 2"
+      },
+      {
+        "exists": true,
+        "href": "#fig-occupancy-process",
+        "text": "圖 3"
+      }
+    ],
+    "tables": 0,
+    "width": 390
+  },
+  {
+    "captions": [
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 1：模擬總功率；教學設定，非住戶實測。來源見 [1]。",
+        "width": 688
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "表 1：設備功率比較（教學設定）",
+        "width": 688
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 2：<b>原文</b> {{ value }} @fig:literal",
+        "width": 688
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "表 2：長表題測試：圖說只寫一次，表格很寬時可在容器內捲動，頁面本身不應溢出。",
+        "width": 688
+      }
+    ],
+    "dark": false,
+    "figures": 2,
+    "literal": "圖 2：<b>原文</b> {{ value }} @fig:literal",
+    "overflow": false,
+    "path": "/__caption-acceptance",
+    "refs": [
+      {
+        "exists": true,
+        "href": "#fig-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#tbl-power",
+        "text": "表 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-ems",
+        "text": "圖 1"
+      }
+    ],
+    "tables": 3,
+    "width": 1280
+  },
+  {
+    "captions": [
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 1：模擬總功率；教學設定，非住戶實測。來源見 [1]。",
+        "width": 688
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "表 1：設備功率比較（教學設定）",
+        "width": 688
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 2：<b>原文</b> {{ value }} @fig:literal",
+        "width": 688
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "表 2：長表題測試：圖說只寫一次，表格很寬時可在容器內捲動，頁面本身不應溢出。",
+        "width": 688
+      }
+    ],
+    "dark": true,
+    "figures": 2,
+    "literal": "圖 2：<b>原文</b> {{ value }} @fig:literal",
+    "overflow": false,
+    "path": "/__caption-acceptance",
+    "refs": [
+      {
+        "exists": true,
+        "href": "#fig-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#tbl-power",
+        "text": "表 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-ems",
+        "text": "圖 1"
+      }
+    ],
+    "tables": 3,
+    "width": 1280
+  },
+  {
+    "captions": [
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 1：模擬總功率；教學設定，非住戶實測。來源見 [1]。",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "表 1：設備功率比較（教學設定）",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "圖 2：<b>原文</b> {{ value }} @fig:literal",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 10.94,
+        "font": 17.5,
+        "text": "表 2：長表題測試：圖說只寫一次，表格很寬時可在容器內捲動，頁面本身不應溢出。",
+        "width": 342
+      }
+    ],
+    "dark": false,
+    "figures": 2,
+    "literal": "圖 2：<b>原文</b> {{ value }} @fig:literal",
+    "overflow": false,
+    "path": "/__caption-acceptance",
+    "refs": [
+      {
+        "exists": true,
+        "href": "#fig-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#tbl-power",
+        "text": "表 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-ems",
+        "text": "圖 1"
+      }
+    ],
+    "tables": 3,
+    "width": 390
+  },
+  {
+    "captions": [
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 1：模擬總功率；教學設定，非住戶實測。來源見 [1]。",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "表 1：設備功率比較（教學設定）",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "圖 2：<b>原文</b> {{ value }} @fig:literal",
+        "width": 342
+      },
+      {
+        "clipped": false,
+        "contrast": 12.81,
+        "font": 17.5,
+        "text": "表 2：長表題測試：圖說只寫一次，表格很寬時可在容器內捲動，頁面本身不應溢出。",
+        "width": 342
+      }
+    ],
+    "dark": true,
+    "figures": 2,
+    "literal": "圖 2：<b>原文</b> {{ value }} @fig:literal",
+    "overflow": false,
+    "path": "/__caption-acceptance",
+    "refs": [
+      {
+        "exists": true,
+        "href": "#fig-ems",
+        "text": "圖 1"
+      },
+      {
+        "exists": true,
+        "href": "#tbl-power",
+        "text": "表 1"
+      },
+      {
+        "exists": true,
+        "href": "#fig-ems",
+        "text": "圖 1"
+      }
+    ],
+    "tables": 3,
+    "width": 390
+  }
+]

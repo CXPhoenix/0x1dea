@@ -422,9 +422,9 @@
       "links": [],
       "logical_source": "skills/phoenix-writing/SKILL.md",
       "path": ".agents/skills/phoenix-writing/SKILL.md",
-      "sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73",
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea",
       "source": "skills/phoenix-writing/SKILL.md",
-      "source_sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73"
+      "source_sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
     },
     {
       "path": ".agents/skills/phoenix-writing/agents/openai.yaml",
@@ -502,6 +502,19 @@
       "sha256": "094e6b89e257c5406d99cb8d2f50544b3eb851eacb06881bfb2ba8f29ce41a36",
       "source": "maintenance/writing-skills/legacy/phoenix-writing/reference/visual-guide.md",
       "source_sha256": "094e6b89e257c5406d99cb8d2f50544b3eb851eacb06881bfb2ba8f29ce41a36"
+    },
+    {
+      "links": [
+        {
+          "from": "../../../maintenance/writing-skills/SOURCES.md",
+          "to": "../../../../maintenance/writing-skills/SOURCES.md"
+        }
+      ],
+      "logical_source": "skills/phoenix-writing/references/context-form.md",
+      "path": ".agents/skills/phoenix-writing/references/context-form.md",
+      "sha256": "99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9",
+      "source": "skills/phoenix-writing/references/context-form.md",
+      "source_sha256": "ec4a9205411a835a28f4ba3a72b8f155a0d7378c48de99f354d57c2e575bd04e"
     },
     {
       "links": [
@@ -1184,9 +1197,9 @@
       "links": [],
       "logical_source": "skills/phoenix-writing/SKILL.md",
       "path": ".claude/skills/phoenix-writing/SKILL.md",
-      "sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73",
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea",
       "source": "skills/phoenix-writing/SKILL.md",
-      "source_sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73"
+      "source_sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
     },
     {
       "links": [],
@@ -1259,6 +1272,19 @@
       "sha256": "094e6b89e257c5406d99cb8d2f50544b3eb851eacb06881bfb2ba8f29ce41a36",
       "source": "maintenance/writing-skills/legacy/phoenix-writing/reference/visual-guide.md",
       "source_sha256": "094e6b89e257c5406d99cb8d2f50544b3eb851eacb06881bfb2ba8f29ce41a36"
+    },
+    {
+      "links": [
+        {
+          "from": "../../../maintenance/writing-skills/SOURCES.md",
+          "to": "../../../../maintenance/writing-skills/SOURCES.md"
+        }
+      ],
+      "logical_source": "skills/phoenix-writing/references/context-form.md",
+      "path": ".claude/skills/phoenix-writing/references/context-form.md",
+      "sha256": "99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9",
+      "source": "skills/phoenix-writing/references/context-form.md",
+      "source_sha256": "ec4a9205411a835a28f4ba3a72b8f155a0d7378c48de99f354d57c2e575bd04e"
     },
     {
       "links": [
@@ -1543,5 +1569,5 @@
     "creating-vitepress-post",
     "managing-article-publication"
   ],
-  "source_policy_sha256": "7879465c123f916589ca4350b129e62f45b3350a66cfccba308ea546bfe7b864"
+  "source_policy_sha256": "a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb"
 }
