@@ -2,8 +2,9 @@
 id: T-0005
 title: Reconcile immutable history with exact approved product successors
 epic: 0005-harness-reconciliation
-status: review
+status: done
 blocked_by: []
+landing_evidence: .proj.specs/0005-harness-reconciliation/landing.json
 ---
 
 ## Context
@@ -16,10 +17,10 @@ A read-only required verifier accepts the exact known staging and approved compo
 
 ## Acceptance criteria
 
-- [ ] R1/R4: immutable epoch and provenance checks retain history and reject tampering.
-- [ ] R2/R3: known staging and exact components pass; unknown, ignored, missing, linked or stale sources fail.
-- [ ] R5: no product/env behavior or publication changes; honest reconciliation and rollback documented.
-- [ ] R6: full required checks and independent code/security review recorded before authorized landing.
+- [x] R1/R4: immutable epoch and provenance checks retain history and reject tampering.
+- [x] R2/R3: known staging and exact components pass; unknown, ignored, missing, linked or stale sources fail.
+- [x] R5: no product/env behavior or publication changes; honest reconciliation and rollback documented.
+- [x] R6: full required checks and independent code/security review recorded before authorized landing.
 
 ## 給使用者（zh-TW）
 
@@ -30,3 +31,14 @@ A read-only required verifier accepts the exact known staging and approved compo
 External index: 0X1DEA #19 (external index maintained privately), parent verified readback, external processing. Repository is authority.
 
 Blocked by: none. This single tracer bullet is owner-approved, not a framework rewrite. T-0003/T-0004 completion gates depend on resolving it. No commit/push/deploy or Library upload authorized. Approval and test-plan are under the epic.
+
+## Authorized staging landing — 2026-10-11T07:14:47.240742+00:00
+
+The owner explicitly requested T-0005 done, T-0009 done and push to staging.
+The earlier local-only comments above describe their original scope; this new
+receipt supersedes that restriction for the requested landing. Actual GitHub
+staging was read back at 6c315d9fbcdf38b21a979159504937be245f77a2, containing this ticket's commit 69ff85f5fe1baddb54102070a436dff9ac1c5b73.
+Status is now done; see .proj.specs/0005-harness-reconciliation/landing.json and landing-approval.md.
+Other tickets retain their own statuses and dependency edges. No main or separate
+deployment operation was performed. Epic close-out is recorded in review/chain-analysis.md,
+retrospective.md and reports/staging-closeout.html.

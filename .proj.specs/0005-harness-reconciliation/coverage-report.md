@@ -8,3 +8,11 @@
 | Original and corrected source boundaries | immutable manifests + corrected product hashes | original failure retained, no auto-refresh | R1,R2,R4 | historical missing approvals labeled present-day reconciliation |
 
 Evidence is under evidence/ in this epic. Code/security review and final CLI receipt follow. No landing; ticket remains review when local gates complete.
+
+## Authorized landing update
+
+The owner subsequently authorized done and staging push. Actual remote landing
+and current permission are recorded in landing.json and landing-approval.md.
+Earlier local-only observations remain historical; reports/staging-closeout.html
+and review/chain-analysis.md complete the epic close-out. No main or separate
+deployment operation was performed.

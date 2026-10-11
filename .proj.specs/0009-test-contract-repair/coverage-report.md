@@ -49,3 +49,11 @@ captured files and HEAD had no drift. These disposition outputs and ticket
 checkboxes were appended after review, without changing implementation.
 The actual local public CLI is the tooling end-to-end surface; no fresh browser,
 native skill discovery, CI or deployment claim is made.
+
+## Authorized landing update
+
+The owner subsequently authorized done and staging push. Actual remote landing
+and current permission are recorded in landing.json and landing-approval.md.
+Earlier local-only observations remain historical; reports/staging-closeout.html
+and review/chain-analysis.md complete the epic close-out. No main or separate
+deployment operation was performed.

@@ -2,8 +2,9 @@
 id: T-0009
 title: Restore deterministic tests and exact current-source verification
 epic: 0009-test-contract-repair
-status: review
+status: done
 blocked_by: []
+landing_evidence: .proj.specs/0009-test-contract-repair/landing.json
 ---
 
 ## Context
@@ -48,3 +49,14 @@ Final independent Standards/Spec/security review is complete with no remaining
 findings. Local CLI verification covers the actual tooling surface. No commit,
 push, landing or deployment was performed. Existing T-0005 evidence remains
 missing and its dependents retain their edges.
+
+## Authorized staging landing — 2026-10-11T07:14:47.240742+00:00
+
+The owner explicitly requested T-0005 done, T-0009 done and push to staging.
+The earlier local-only comments above describe their original scope; this new
+receipt supersedes that restriction for the requested landing. Actual GitHub
+staging was read back at 6c315d9fbcdf38b21a979159504937be245f77a2, containing this ticket's commit 6c315d9fbcdf38b21a979159504937be245f77a2.
+Status is now done; see .proj.specs/0009-test-contract-repair/landing.json and landing-approval.md.
+Other tickets retain their own statuses and dependency edges. No main or separate
+deployment operation was performed. Epic close-out is recorded in review/chain-analysis.md,
+retrospective.md and reports/staging-closeout.html.
