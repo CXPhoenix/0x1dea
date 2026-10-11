@@ -1,0 +1,8 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "scripts/verify-harness-adoption.py"
+  ],
+  "exit": 1
+}

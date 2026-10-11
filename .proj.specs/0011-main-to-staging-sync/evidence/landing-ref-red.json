@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "-m",
+    "unittest",
+    "harness_adoption.test_tracker.TrackerTests.test_done_uses_remote_staging_only_when_local_ref_is_absent",
+    "-v"
+  ],
+  "cwd": "tests",
+  "exit": 1
+}

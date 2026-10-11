@@ -1,0 +1,9 @@
+{
+  "command": [
+    "python3",
+    "scripts/materialize-writing-skills.py",
+    "--check"
+  ],
+  "exit": 0,
+  "seconds": 0.215
+}

@@ -1,0 +1,14 @@
+
+> 0x1dea@1.4.0 docs:build /private/tmp/0x1dea-listing-repair/sandbox-build/candidate
+> vitepress build blog
+
+
+  vitepress v2.0.0-alpha.16
+
+build complete in 6.86s.
+ WARN  Issue while reading "/Users/phoenix/.npmrc". EPERM: operation not permitted, open '/Users/phoenix/.npmrc'
+ WARN  Issue while reading "/Users/phoenix/Library/Preferences/pnpm/rc". EPERM: operation not permitted, open '/Users/phoenix/Library/Preferences/pnpm/rc'
+- building client + server bundles...
+[32m✓[0m building client + server bundles...
+- rendering pages...
+[32m✓[0m rendering pages...

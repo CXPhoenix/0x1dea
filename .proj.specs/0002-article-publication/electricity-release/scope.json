@@ -1,0 +1,153 @@
+{
+  "base": "e457143e8be2f7d54f69bc3e9b80230375be49de",
+  "article_source": "4005ee45f2f3267a8b53ce24fa97af7b49cfb144",
+  "content_and_dependency_files": {
+    "blog/.vitepress/config.mts": {
+      "mode": "100644",
+      "sha256": "f5541a15fb11812e9c55c8e1c78f3d4aa9c68858783389a11909984fed20552d"
+    },
+    "blog/.vitepress/markdown/articleCaptions.ts": {
+      "mode": "100644",
+      "sha256": "158d498ae46c898e73310310fcc6ae8421a1aa8ddc859bf50b58ce0c88201d81"
+    },
+    "blog/.vitepress/nav.yml": {
+      "mode": "100644",
+      "sha256": "53f5facf6673d5380409198203e27f9510806749aeb377daae7b08afbaa8dc07"
+    },
+    "blog/.vitepress/sidebar.yml": {
+      "mode": "100644",
+      "sha256": "f2b88cfa65b9af5e0b1e052b7cf2db35928ca30a3a47fa8ddf13f88a0c6c0c57"
+    },
+    "blog/.vitepress/theme/components/ArticleSummary.vue": {
+      "mode": "100644",
+      "sha256": "7a51dd370236fd3accfa609912eea5ebe7e53bf812bd6354aae97a609b526119"
+    },
+    "blog/.vitepress/theme/components/EncoreTicket.vue": {
+      "mode": "100644",
+      "sha256": "64b15c3d3ab6f3eeecfde0761fb800dbab441edc6caf2609bea04bb28e04f0b8"
+    },
+    "blog/.vitepress/theme/index.ts": {
+      "mode": "100644",
+      "sha256": "b29185a5ab14be63bbb783ac3ebe8489bef99f05c0e47c66737b32dc5405f9ec"
+    },
+    "blog/.vitepress/theme/style.css": {
+      "mode": "100644",
+      "sha256": "aa8b849436212db45fda7da072e04dbfec97440e6f610cadc1b09a635d5a46bd"
+    },
+    "blog/post/course/security-awareness/electricity-privacy.md": {
+      "mode": "100644",
+      "sha256": "8e6cc7a954ceaf4248ea8aa0f6d24ee343b8b5da4466f858b5440df95a0f68db"
+    },
+    "blog/post/course/security-awareness/index.md": {
+      "mode": "100644",
+      "sha256": "7da24230dca20c0a475caef2d616b15a7f56f47443f97eb7e0f8de6963c1f174"
+    },
+    "blog/public/_redirects": {
+      "mode": "100644",
+      "sha256": "67e4743f7e3aa14c61656d8167415e3f44e30df7e0569ced96b00ff6ba6bbb29"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/article-banner.png": {
+      "mode": "100644",
+      "sha256": "9fe833c76165ab1b446432280ff473c2d7e967042ac78af42c65e99d0d15204c"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg": {
+      "mode": "100644",
+      "sha256": "25766d5c5fe3c02e1946469e53d755660f3808ea940796eb65a8eb3b287b34da"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg": {
+      "mode": "100644",
+      "sha256": "ebd47e0575a73ef3557a6fc661a43a110dab713ee2e7e8ed30153ad9bb1aae19"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png": {
+      "mode": "100644",
+      "sha256": "8a841ead65839eb117ce054edf84402c2f76baaab77acb0e8e22946cc671f3a7"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-device.png": {
+      "mode": "100644",
+      "sha256": "a6ade6ebbdb800f6ca082a0e7d4cd1d0ed11da90f9d1b0bb5ceefa38d1643047"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-inference.png": {
+      "mode": "100644",
+      "sha256": "90040392c1b60e725be8d0d29a9898b06df225394fd3c27f8d5d743f91a3be30"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-link.png": {
+      "mode": "100644",
+      "sha256": "70ab801df17c0d84b058b0dd239476379956165fd18003851800313d1b62030b"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png": {
+      "mode": "100644",
+      "sha256": "99aead19c23b41ab372d1080e51fdc32ba5bf8f463e42d035794b29a4631441e"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-purpose.png": {
+      "mode": "100644",
+      "sha256": "d77f28698f677dc042fba95801cc7e4c89826748aaba788e4c57900a6f4766f0"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-total.png": {
+      "mode": "100644",
+      "sha256": "44169e071f9272fce9a641b2ce2b11c7eae71d1996011ee31b6a1537386168c0"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-units.png": {
+      "mode": "100644",
+      "sha256": "8bf7cbe695d6a632b9921f6c0ed1de4a0a17f0c413c482b40855494cf49841d5"
+    },
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg": {
+      "mode": "100644",
+      "sha256": "5e0dcad02b749e4eeecaccafb14aae4a7e75f6571f301750cda9402cbcc0f868"
+    },
+    "docs/article-summary.md": {
+      "mode": "100644",
+      "sha256": "8fe96b560303cdfa1568faf607e0e82907c51ca988d242317ec2a22b7e198639"
+    },
+    "docs/authoring/article-captions.md": {
+      "mode": "100644",
+      "sha256": "72d1b896d7fff74be08ddfc9560245361f89ba9aeb347e48c70c2deab370029c"
+    },
+    "docs/components/encore-ticket.md": {
+      "mode": "100644",
+      "sha256": "c009a6d4d3176ec981cca76684e08cbab4fb23ed8dff29f98a7a514e56616c2e"
+    },
+    "tests/articleCaptions.vitest.ts": {
+      "mode": "100644",
+      "sha256": "b81bd5ab2a89793eeca4f22805a9745ea2a7323436393700c7f0a89883575998"
+    },
+    "tests/articleSummary.vitest.ts": {
+      "mode": "100644",
+      "sha256": "cfe72616c7032278e3b4458d99166a6e9d523cd70809a6577b695580bf9ff473"
+    },
+    "tests/encoreTicket.vitest.ts": {
+      "mode": "100644",
+      "sha256": "fa5291052e2c3e572be2a28ca778e16f6f9368dd8a867264de59b1ff8ff388c0"
+    },
+    "tests/fixtures/article-caption-baseline.json": {
+      "mode": "100644",
+      "sha256": "6baa4a586594b205359520c8d999d767c696524d1677be92132ded6fc5bb7149"
+    },
+    "tests/fixtures/article-caption-entry.md": {
+      "mode": "100644",
+      "sha256": "9ee10b2b8afe41d6d201df259ed95c58e869bd5592bbaa4995d603f5823f265e"
+    },
+    "tests/fixtures/article-caption-migrated.md": {
+      "mode": "100644",
+      "sha256": "a81a826ec72da2c1cb78a6f829773ad87687491d06399c307344a7879aef9506"
+    },
+    "tests/fixtures/article-caption-provenance.json": {
+      "mode": "100644",
+      "sha256": "f7b1d31152a6b63e1e89da5993d43130504118d29e873e79942d41749ce65744"
+    },
+    "tests/fixtures/article-summary.md": {
+      "mode": "100644",
+      "sha256": "3f2d09ada736b3b7d1715cf955d88cf06490963ac99f79332b32210ac07aad56"
+    }
+  },
+  "management_directory": ".proj.specs/0002-article-publication/electricity-release",
+  "unchanged_package_and_lockfile": true,
+  "unselected_articles": [
+    "browser-lab",
+    "agent-experiment",
+    "idor",
+    "jwt",
+    "sqli"
+  ],
+  "merge_authorized": false,
+  "release_gate": "blocked-historical-adoption-hash"
+}

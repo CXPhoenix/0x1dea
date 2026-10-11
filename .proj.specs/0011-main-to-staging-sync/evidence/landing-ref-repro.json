@@ -1,0 +1,9 @@
+{
+  "local_staging": 128,
+  "origin_staging": 0,
+  "landing_commit": 0,
+  "receipt_exists": true,
+  "approval_exists": true,
+  "before": "missing/invalid landing evidence: /var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-ref-repro-flmi36lw/candidate/.proj.tickets/0005-harness-reconciliation/T-0005-harness-reconciliation.md",
+  "after_local_ref": "done"
+}

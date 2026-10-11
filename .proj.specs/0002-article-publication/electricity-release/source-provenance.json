@@ -1,0 +1,66 @@
+{
+  "main": "e457143e8be2f7d54f69bc3e9b80230375be49de",
+  "editorial_source": "4005ee45f2f3267a8b53ce24fa97af7b49cfb144",
+  "article": "blog/post/course/security-awareness/electricity-privacy.md",
+  "editorial_sha256": "7d8f648692e2dd0c977473839ce7e83daaae92065e3851953c35524710b44e53",
+  "production_sha256": "8e6cc7a954ceaf4248ea8aa0f6d24ee343b8b5da4466f858b5440df95a0f68db",
+  "allowed_article_changes": [
+    "remove draft: true",
+    "remove previewOnly: true",
+    "remove staging PreviewNotice only"
+  ],
+  "copied_from_staging": {
+    "blog/.vitepress/markdown/articleCaptions.ts": "158d498ae46c898e73310310fcc6ae8421a1aa8ddc859bf50b58ce0c88201d81",
+    "blog/.vitepress/theme/components/ArticleSummary.vue": "7a51dd370236fd3accfa609912eea5ebe7e53bf812bd6354aae97a609b526119",
+    "blog/.vitepress/theme/components/EncoreTicket.vue": "64b15c3d3ab6f3eeecfde0761fb800dbab441edc6caf2609bea04bb28e04f0b8",
+    "docs/authoring/article-captions.md": "72d1b896d7fff74be08ddfc9560245361f89ba9aeb347e48c70c2deab370029c",
+    "docs/article-summary.md": "8fe96b560303cdfa1568faf607e0e82907c51ca988d242317ec2a22b7e198639",
+    "docs/components/encore-ticket.md": "c009a6d4d3176ec981cca76684e08cbab4fb23ed8dff29f98a7a514e56616c2e",
+    "tests/articleSummary.vitest.ts": "cfe72616c7032278e3b4458d99166a6e9d523cd70809a6577b695580bf9ff473",
+    "tests/encoreTicket.vitest.ts": "fa5291052e2c3e572be2a28ca778e16f6f9368dd8a867264de59b1ff8ff388c0",
+    "tests/articleCaptions.vitest.ts": "81fd3247b289489577d77948fc29c94304567088d6c12b8a24c7bc513d6052ba",
+    "tests/fixtures/article-summary.md": "3f2d09ada736b3b7d1715cf955d88cf06490963ac99f79332b32210ac07aad56",
+    "tests/fixtures/article-caption-baseline.json": "6baa4a586594b205359520c8d999d767c696524d1677be92132ded6fc5bb7149",
+    "tests/fixtures/article-caption-entry.md": "9ee10b2b8afe41d6d201df259ed95c58e869bd5592bbaa4995d603f5823f265e",
+    "tests/fixtures/article-caption-migrated.md": "a81a826ec72da2c1cb78a6f829773ad87687491d06399c307344a7879aef9506",
+    "tests/fixtures/article-caption-provenance.json": "f7b1d31152a6b63e1e89da5993d43130504118d29e873e79942d41749ce65744",
+    "blog/.vitepress/nav.yml": "53f5facf6673d5380409198203e27f9510806749aeb377daae7b08afbaa8dc07",
+    "blog/.vitepress/sidebar.yml": "0e1da5cd7873e9923821e1f9863f67bc0fa378ed801ebabf963b552ccae50dd5",
+    "blog/.vitepress/theme/style.css": "aa8b849436212db45fda7da072e04dbfec97440e6f610cadc1b09a635d5a46bd",
+    "blog/public/_redirects": "67e4743f7e3aa14c61656d8167415e3f44e30df7e0569ced96b00ff6ba6bbb29",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/article-banner.png": "9fe833c76165ab1b446432280ff473c2d7e967042ac78af42c65e99d0d15204c",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg": "25766d5c5fe3c02e1946469e53d755660f3808ea940796eb65a8eb3b287b34da",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg": "ebd47e0575a73ef3557a6fc661a43a110dab713ee2e7e8ed30153ad9bb1aae19",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png": "8a841ead65839eb117ce054edf84402c2f76baaab77acb0e8e22946cc671f3a7",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-device.png": "a6ade6ebbdb800f6ca082a0e7d4cd1d0ed11da90f9d1b0bb5ceefa38d1643047",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-inference.png": "90040392c1b60e725be8d0d29a9898b06df225394fd3c27f8d5d743f91a3be30",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-link.png": "70ab801df17c0d84b058b0dd239476379956165fd18003851800313d1b62030b",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png": "99aead19c23b41ab372d1080e51fdc32ba5bf8f463e42d035794b29a4631441e",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-purpose.png": "d77f28698f677dc042fba95801cc7e4c89826748aaba788e4c57900a6f4766f0",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-total.png": "44169e071f9272fce9a641b2ce2b11c7eae71d1996011ee31b6a1537386168c0",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-units.png": "8bf7cbe695d6a632b9921f6c0ed1de4a0a17f0c413c482b40855494cf49841d5",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg": "5e0dcad02b749e4eeecaccafb14aae4a7e75f6571f301750cda9402cbcc0f868"
+  },
+  "excluded_articles": {
+    "browser-lab": {
+      "path": "blog/post/local-preview/browser-lab.md",
+      "assets": "blog/public/assets/post_local-preview_browser-lab"
+    },
+    "agent-experiment": {
+      "path": "blog/post/local-preview/agent-experiment.md",
+      "assets": "blog/public/assets/post_local-preview_agent-experiment"
+    },
+    "idor": {
+      "path": "blog/post/local-preview/idor.md",
+      "assets": "blog/public/assets/post_local-preview_idor"
+    },
+    "jwt": {
+      "path": "blog/post/local-preview/jwt.md",
+      "assets": "blog/public/assets/post_local-preview_jwt"
+    },
+    "sqli": {
+      "path": "blog/post/local-preview/sqli.md",
+      "assets": "blog/public/assets/post_local-preview_sqli"
+    }
+  }
+}

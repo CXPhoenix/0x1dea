@@ -1,0 +1,19 @@
+{
+  "exit": 0,
+  "build_seconds": 5.66,
+  "node": "24.13.0",
+  "pnpm": "10.28.0",
+  "network": "denied",
+  "writes": "disposable sandbox-build only",
+  "projection_source_match": true,
+  "earlier_attempts": [
+    {
+      "exit": 1,
+      "reason": "Corepack cache unreadable; network denied; no download installed"
+    },
+    {
+      "exit": 1,
+      "reason": "Vite temporary directory linked to read-only dependency tree; replaced only temporary projection symlink with local regular directory"
+    }
+  ]
+}

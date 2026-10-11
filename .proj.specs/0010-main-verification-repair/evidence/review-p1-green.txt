@@ -1,0 +1,6 @@
+test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 16.422s
+
+OK

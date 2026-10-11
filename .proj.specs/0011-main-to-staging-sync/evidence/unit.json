@@ -1,0 +1,9 @@
+{
+  "command": [
+    "pnpm",
+    "test:unit"
+  ],
+  "cwd": ".",
+  "exit": 0,
+  "seconds": 3.927
+}
