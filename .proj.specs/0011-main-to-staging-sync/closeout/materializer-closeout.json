@@ -1,0 +1,11 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "scripts/materialize-writing-skills.py",
+    "--check"
+  ],
+  "exit": 0,
+  "seconds": 1.231,
+  "surface": "independent clone at observed staging c6efa7d with exact local closeout metadata overlay; no product/source change"
+}

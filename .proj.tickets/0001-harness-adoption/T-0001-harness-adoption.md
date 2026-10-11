@@ -2,7 +2,8 @@
 id: T-0001
 title: Adopt Harness and relocate the existing website root
 epic: 0001-harness-adoption
-status: review
+status: done
+landing_evidence: .proj.specs/0001-harness-adoption/landing.json
 blocked_by: []
 ---
 

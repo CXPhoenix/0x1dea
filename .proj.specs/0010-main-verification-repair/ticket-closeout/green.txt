@@ -1,0 +1,6 @@
+test_exact_adoption_closeout_with_real_landing_is_accepted (test_main_release.MainReleaseTests.test_exact_adoption_closeout_with_real_landing_is_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 12.289s
+
+OK

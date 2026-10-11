@@ -1,0 +1,12 @@
+{
+  "HTML_structure_balanced": true,
+  "offline_CSP_declared": true,
+  "external_resource_references": [],
+  "claim_rows": 10,
+  "rendered_visual_check": "not performed: browser file URL policy denial; no workaround attempted",
+  "source_or_product_changes": 0,
+  "changes_limited_to_T0011_management": true,
+  "original_checkouts_clean": true,
+  "closeout_committed": false,
+  "closeout_pushed": false
+}

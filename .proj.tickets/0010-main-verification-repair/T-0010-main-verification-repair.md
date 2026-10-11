@@ -2,7 +2,8 @@
 id: T-0010
 title: Restore main verification after the selected electricity release
 epic: 0010-main-verification-repair
-status: review
+status: done
+landing_evidence: .proj.specs/0010-main-verification-repair/landing.json
 blocked_by: []
 ---
 
@@ -43,3 +44,7 @@ Fresh combined 83-file implementation packet: Standards0/0/0; Spec final unresol
 ## Explicit delivery authorization
 
 The owner now explicitly authorizes commit, non-force branch push and a PR to main for this T-0010 verifier/harness and listing repair, excluding all other candidates and prohibiting merge. This supersedes earlier local-only delivery limits, not the preserved historical validation scope. Fresh pre-commit checks:54 Vitest+66 harness+16 publication; all named commands and sandbox build exit0, Python skips0. See delivery/authorization.md, validation.md and scope-audit.json. All reviewed implementation hashes remain unchanged. Status stays review until actual authorized landing.
+
+## Present-day closeout follow-up
+
+Owner-authorized evidence audit marks T-0001/T-0010 done and retains T-0002/T-0003/T-0004/T-0008 review. T-0012 separately tracks the unmerged exact T1 receipt/identity guard integration and round-1 Red-team P1 counterexamples; this ticket is done only for the original M1-M5/L1-L4 scope already landed. See ticket-closeout/spec.en.md, traceability.md, review/round-1.md and audit.md. Earlier local-only/no-landing prose describes its historical time, not the current receipt.
