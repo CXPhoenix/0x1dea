@@ -10,8 +10,16 @@ EPOCH = '724ddad73f8411a33c77c68d75f95b41d3af2988'
 STAGING = '32cd6a9d4ead636ddc4e5020fceb35ad9645cc7f'
 STAGE_DIGEST = '96011a4f53031ffffa4ab029c0eaaf3c01d34f50145a3e6da77c9deb42c59195'
 COMPONENT_DIGEST = '5c72ce5d7a3b3dd370ddfe59bf595411adab5f618e738149034e1ea7505db377'
+REVISION_BASE = '69ff85f5fe1baddb54102070a436dff9ac1c5b73'
+REVISION_RECORD = 'maintenance/harness-reconciliation/article-electricity-revision.json'
+REVISION_DIGEST = 'a59ff8d81971f9ee85b92fa2eb940f6c7018d182454ded89169bbf27e8c125f9'
+REVISION_PATHS = {
+    'blog/post/course/security-awareness/electricity-privacy.md',
+    'blog/public/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png',
+    'blog/public/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png',
+}
 COMPONENT_PATHS = set(['blog/.vitepress/theme/components/ArticleSummary.vue', 'blog/.vitepress/theme/components/PreviewNotice.vue', 'blog/.vitepress/theme/index.ts', 'blog/.vitepress/theme/style.css', 'blog/post/course/security-awareness/electricity-privacy.md', 'blog/public/assets/post_course_security-awareness_electricity-privacy/article-banner.png', 'docs/article-summary.md', 'tests/articleSummary.vitest.ts', 'tests/fixtures/article-summary.md', 'tests/fixtures/component-acceptance.md', 'tests/previewNotice.vitest.ts', 'tests/previewNoticeArticle.vitest.ts'])
-RECORDS = {'maintenance/harness-reconciliation/staging.json', 'maintenance/harness-reconciliation/components.json'}
+RECORDS = {'maintenance/harness-reconciliation/staging.json', 'maintenance/harness-reconciliation/components.json', REVISION_RECORD}
 CODE = {'scripts/harness_reconciliation.py', 'tests/harness_adoption/test_reconciliation.py'}
 SUPPORT = {'maintenance/component-delivery/source-freeze.json', 'maintenance/component-delivery/TDD.md', 'maintenance/component-delivery/scope.md'}
 GENERATED = {'blog/.vitepress/dist', 'blog/.vitepress/cache', 'blog/.vitepress/.temp'}
@@ -109,6 +117,23 @@ def check(root, allowed_new, regular_path, ancestry):
             name = row['path']
             if row['before'] != identity(known.get(name)):
                 raise ValueError('invalid component predecessor: ' + name)
+            current[name] = row['after']
+    revision_path = root / REVISION_RECORD
+    if revision_path.exists() or revision_path.is_symlink():
+        if not component_path.exists():
+            raise ValueError('article revision requires component provenance')
+        raw = regular_path(root, REVISION_RECORD).read_bytes()
+        if sha(raw) != REVISION_DIGEST:
+            raise ValueError('changed article revision provenance')
+        revision = json.loads(raw)
+        if revision['base'] != REVISION_BASE or {row['path'] for row in revision['delta']} != REVISION_PATHS or len(revision['delta']) != len(REVISION_PATHS):
+            raise ValueError('unapproved article revision scope or pin')
+        ancestry(root, REVISION_BASE)
+        predecessor = git_tree(root, REVISION_BASE)
+        for row in revision['delta']:
+            name = row['path']
+            if row['before'] != identity(predecessor.get(name)) or row['before'] != current.get(name):
+                raise ValueError('invalid article revision predecessor: ' + name)
             current[name] = row['after']
     for name, expected in current.items():
         if expected['mode'] == '120000':

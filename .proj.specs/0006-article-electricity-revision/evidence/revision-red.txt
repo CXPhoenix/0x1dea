@@ -1,0 +1,16 @@
+test_exact_authorized_article_revision_passes_public_cli (test_reconciliation.ReconciliationTests.test_exact_authorized_article_revision_passes_public_cli) ... FAIL
+
+======================================================================
+FAIL: test_exact_authorized_article_revision_passes_public_cli (test_reconciliation.ReconciliationTests.test_exact_authorized_article_revision_passes_public_cli)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<checkout>", line 91, in test_exact_authorized_article_revision_passes_public_cli
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: changed current reconciliation source: blog/post/course/security-awareness/electricity-privacy.md
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.742s
+
+FAILED (failures=1)

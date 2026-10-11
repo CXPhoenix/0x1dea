@@ -1,0 +1,6 @@
+test_exact_authorized_article_revision_passes_public_cli (test_reconciliation.ReconciliationTests.test_exact_authorized_article_revision_passes_public_cli) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 8.045s
+
+OK

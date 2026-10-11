@@ -1,0 +1,1 @@
+Frozen prompt, four independent read-only axes: Completeness 0P0/0P1/1P2; Verifiability, Contract conflict, Red team 0P0/0P1/0P2. Completeness P2 asks explicit component-record absence and overlapping predecessor/overlay order cases at the already-approved CLI seam; adopted in the test plan. No new scope or seam. Spec gate: zero P0. No second round required.

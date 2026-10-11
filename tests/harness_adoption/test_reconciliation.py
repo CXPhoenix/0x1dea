@@ -16,6 +16,7 @@ class ReconciliationTests(unittest.TestCase):
         cls.temp = tempfile.TemporaryDirectory()
         cls.root = Path(cls.temp.name) / 'candidate'
         subprocess.run(['git', 'clone', '--no-hardlinks', str(SOURCE), str(cls.root)], check=True, capture_output=True)
+        subprocess.run(['git', 'checkout', '--detach', '69ff85f5fe1baddb54102070a436dff9ac1c5b73'], cwd=cls.root, check=True, capture_output=True)
         for name in ('scripts/verify-harness-adoption.py', 'scripts/harness_reconciliation.py', 'maintenance/harness-reconciliation/staging.json'):
             path = SOURCE / name
             if path.exists():
@@ -47,6 +48,31 @@ class ReconciliationTests(unittest.TestCase):
             for name in names:
                 target = self.root / name
                 target.parent.mkdir(parents=True, exist_ok=True)
+                if name == 'blog/post/course/security-awareness/electricity-privacy.md':
+                    target.write_bytes(subprocess.check_output(['git', 'show', '69ff85f5fe1baddb54102070a436dff9ac1c5b73:' + name], cwd=SOURCE))
+                else:
+                    shutil.copyfile(SOURCE / name, target)
+            yield
+        finally:
+            for name, data in backups.items():
+                path = self.root / name
+                if path.is_symlink():
+                    path.unlink()
+                if data is None:
+                    path.unlink(missing_ok=True)
+                else:
+                    path.write_bytes(data)
+
+    @contextmanager
+    def revision(self):
+        record_name = 'maintenance/harness-reconciliation/article-electricity-revision.json'
+        record = json.loads((SOURCE / record_name).read_text())
+        names = [row['path'] for row in record['delta']] + [record_name]
+        backups = {name: (self.root / name).read_bytes() if (self.root / name).exists() else None for name in names}
+        try:
+            for name in names:
+                target = self.root / name
+                target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(SOURCE / name, target)
             yield
         finally:
@@ -58,6 +84,111 @@ class ReconciliationTests(unittest.TestCase):
                     path.unlink(missing_ok=True)
                 else:
                     path.write_bytes(data)
+
+    def test_exact_authorized_article_revision_passes_public_cli(self):
+        with self.revision():
+            result = self.cli()
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+            self.assertIn('"status": "pass"', result.stdout)
+
+    def test_revision_rejects_source_bytes_mode_missing_and_links(self):
+        with self.revision():
+            record = json.loads((SOURCE / 'maintenance/harness-reconciliation/article-electricity-revision.json').read_text())
+            for row in record['delta']:
+                name = row['path']; path = self.root / name
+                original = path.read_bytes(); mode = path.stat().st_mode
+                for change in ('bytes', 'mode', 'missing', 'link'):
+                    with self.subTest(path=name, change=change):
+                        try:
+                            if change == 'bytes':
+                                path.write_bytes(original + b'tamper')
+                            elif change == 'mode':
+                                path.chmod(mode | 0o100)
+                            else:
+                                path.unlink()
+                                if change == 'link':
+                                    path.symlink_to(self.root / 'blog/.vitepress/config.mts')
+                            self.rejected(name)
+                        finally:
+                            if path.is_symlink():
+                                path.unlink()
+                            path.write_bytes(original); path.chmod(mode)
+
+    def test_revision_rejects_record_before_hash_and_pin_tampering(self):
+        with self.revision():
+            path = self.root / 'maintenance/harness-reconciliation/article-electricity-revision.json'
+            original = path.read_bytes()
+            for change in ('record', 'before', 'base', 'path'):
+                with self.subTest(change=change):
+                    try:
+                        record = json.loads(original)
+                        if change == 'before':
+                            record['delta'][0]['before']['sha256'] = '0' * 64
+                        elif change == 'base':
+                            record['base'] = '0' * 40
+                        elif change == 'path':
+                            record['delta'][0]['path'] = 'blog/post/not-approved.md'
+                        path.write_bytes(original + b' ' if change == 'record' else json.dumps(record).encode())
+                        self.rejected('article revision provenance')
+                    finally:
+                        path.write_bytes(original)
+
+    def test_revision_requires_both_records_and_preserves_history(self):
+        with self.revision():
+            for name, diagnostic in (
+                ('maintenance/harness-reconciliation/article-electricity-revision.json', 'current reconciliation source'),
+                ('maintenance/harness-reconciliation/components.json', 'requires component provenance'),
+                ('maintenance/harness-reconciliation/staging.json', 'preserved source'),
+            ):
+                with self.subTest(path=name):
+                    path = self.root / name; original = path.read_bytes()
+                    try:
+                        path.unlink(); self.rejected(diagnostic)
+                    finally:
+                        path.write_bytes(original)
+            path = self.root / 'maintenance/harness-adoption/candidate-delta.json'; original = path.read_bytes()
+            try:
+                path.write_bytes(original + b' '); self.rejected('changed historical reconciliation source')
+            finally:
+                path.write_bytes(original)
+
+    def test_revision_rejects_fourth_path_even_when_ignored(self):
+        with self.revision():
+            path = self.root / 'blog/public/assets/post_course_security-awareness_electricity-privacy/fourth.png'
+            exclude = self.root / '.git/info/exclude'; original = exclude.read_bytes()
+            try:
+                path.write_bytes(b'not approved')
+                self.rejected('fourth.png')
+                exclude.write_bytes(original + b'\nblog/public/assets/post_course_security-awareness_electricity-privacy/fourth.png\n')
+                self.rejected('fourth.png')
+            finally:
+                path.unlink(); exclude.write_bytes(original)
+
+    def test_revision_rejects_nonancestor_pin(self):
+        with self.revision():
+            original = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=self.root).decode().strip()
+            try:
+                subprocess.run(['git', 'update-ref', 'HEAD', '32cd6a9d4ead636ddc4e5020fceb35ad9645cc7f'], cwd=self.root, check=True)
+                self.rejected('ancestor')
+            finally:
+                subprocess.run(['git', 'update-ref', 'HEAD', original], cwd=self.root, check=True)
+
+    def test_revision_rejects_missing_predecessor_object(self):
+        with self.revision(), tempfile.TemporaryDirectory() as temp:
+            other = Path(temp) / 'old-history'; other.mkdir()
+            subprocess.run(['git', 'init', str(other)], check=True, capture_output=True)
+            subprocess.run(['git', 'fetch', '--no-tags', str(SOURCE), '32cd6a9d4ead636ddc4e5020fceb35ad9645cc7f'], cwd=other, check=True, capture_output=True)
+            subprocess.run(['git', 'checkout', '--detach', 'FETCH_HEAD'], cwd=other, check=True, capture_output=True)
+            original_git = Path(temp) / 'original-git'
+            (self.root / '.git').rename(original_git)
+            (other / '.git').rename(self.root / '.git')
+            try:
+                absent = subprocess.run(['git', 'cat-file', '-e', '69ff85f5fe1baddb54102070a436dff9ac1c5b73^{commit}'], cwd=self.root, capture_output=True)
+                self.assertNotEqual(absent.returncode, 0, 'fixture unexpectedly contains revision predecessor')
+                self.rejected('ancestor')
+            finally:
+                (self.root / '.git').rename(other / '.git')
+                original_git.rename(self.root / '.git')
 
     def rejected(self, diagnostic):
         before = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=self.root)
