@@ -4,6 +4,7 @@ import path from 'node:path'
 import yaml from 'js-yaml'
 import UnoCSS from 'unocss/vite'
 import { defineConfig } from 'vitepress'
+import { articleCaptions } from './markdown/articleCaptions'
 
 // Helper function to load YAML
 function loadYaml(file: string): unknown {
@@ -51,6 +52,7 @@ export default defineConfig({
   },
   markdown: {
     math: true,
+    config: articleCaptions,
   },
   transformPageData(pageData) {
     if (pageData.relativePath.endsWith('index.md') && pageData.relativePath !== 'index.md') {
