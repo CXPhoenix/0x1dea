@@ -1,13 +1,21 @@
 ---
 title: "資安認知推廣備課系列"
 isIndex: true
+count: -1
 category: "資安認知推廣備課系列"
 ---
 
-# 資安認知推廣備課系列
+<script setup>
+    import { filterPostsKey } from '../../../.vitepress/theme/composables/usePostFilter'
+    import { provide } from 'vue'
+    import { useData } from 'vitepress'
+
+    const { frontmatter } = useData()
+    provide(filterPostsKey, (post) => post.category === (frontmatter.value.category || '綜合'))
+</script>
+
+# {{ frontmatter.title }}
 
 從生活中的資料與使用情境，討論資安風險及判斷的依據。
 
-- [用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？](./electricity-privacy)
-
-  從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。
+<NewPost class="mt-8" />

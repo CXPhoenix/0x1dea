@@ -46,11 +46,9 @@ class TrackerTests(unittest.TestCase):
 
     def test_lint_successor_rejects_source_scope_and_history_tampering(self):
         import json
-        import shutil
         import subprocess
         source = MODULE.parents[1]
-        if not (source / 'maintenance/lint-cleanup/source-boundary.json').exists():
-            self.skipTest('lint successor is absent in this historical tree')
+        epoch = '724ddad73f8411a33c77c68d75f95b41d3af2988'
         fixture = self.root / 'successor'
         subprocess.run(['git', 'clone', '--shared', '--no-checkout', str(source), str(fixture)], check=True, capture_output=True)
         names = set(verifier.LINT_UPDATE_NAMES) | {
@@ -60,7 +58,8 @@ class TrackerTests(unittest.TestCase):
         for name in names:
             target = fixture / name
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(source / name, target)
+            # Accepted historical input comes from its epoch, never the live checkout.
+            target.write_bytes(subprocess.check_output(['git', '--no-replace-objects', 'show', epoch + ':' + name], cwd=source))
         verifier.check_lint_successor(fixture)
         boundary_path = fixture / 'maintenance/lint-cleanup/source-boundary.json'
         original = boundary_path.read_bytes()

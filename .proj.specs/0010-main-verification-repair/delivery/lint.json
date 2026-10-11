@@ -1,0 +1,8 @@
+{
+  "command": [
+    "pnpm",
+    "lint"
+  ],
+  "exit": 0,
+  "seconds": 7.925
+}

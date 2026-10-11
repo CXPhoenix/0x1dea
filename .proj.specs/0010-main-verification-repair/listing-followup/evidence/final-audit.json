@@ -1,0 +1,14 @@
+{
+  "reviewed_snapshot_files": 83,
+  "captured_implementation_unchanged": true,
+  "post_review_changed_captured_files": [
+    ".proj.specs/0010-main-verification-repair/listing-followup/coverage-report.md",
+    ".proj.tickets/0010-main-verification-repair/T-0010-main-verification-repair.md"
+  ],
+  "post_review_changes": "coverage evidence clarification and ticket review comments only; final reports/supplements are management additions",
+  "final_public_verifier_exit": 0,
+  "final_public_verifier_status": "pass",
+  "translations": 10,
+  "original_checkout_clean": true,
+  "commit_push_pr_merge_deploy_performed": false
+}

@@ -1,0 +1,7 @@
+{
+  "command": "python3 -m unittest discover -s tests/harness_adoption -p test_main_release.py -k listing_successor -v",
+  "exit": 0,
+  "tests": 1,
+  "seconds": 43.664,
+  "skips": 0
+}

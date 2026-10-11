@@ -1,0 +1,261 @@
+test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) ... 
+  test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) (path='scripts/article-publication.py') ... FAIL
+  test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) (path='scripts/materialize-writing-skills.py') ... FAIL
+  test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) (path='tests/article_publication/test_cli.py') ... FAIL
+  test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) (path='docs/agents/issue-tracker.md') ... FAIL
+test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) ... FAIL
+
+======================================================================
+FAIL: test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) (path='scripts/article-publication.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 165, in test_existing_allowed_sources_are_still_immutable
+    self.rejected('changed publication source: ' + name)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 41, in rejected
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "status": "pass",
+  "framework": {
+    "pinned_files": 641,
+    "source_commit": "917e6025da0901a79dda016e1ce5bd89b6e6e19f",
+    "source_digest": "b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5",
+    "runtime_skill_counts": {
+      ".agents": 36,
+      ".claude": 36
+    }
+  },
+  "site_moves": 55,
+  "baseline_entries": 370,
+  "translations": 8,
+  "trace_rows": 113,
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "review",
+        "blocked_by": []
+      }
+    },
+    "next_id": "T-0003",
+    "frontier": [],
+    "blocked": {},
+    "paused": []
+  }
+}
+
+
+======================================================================
+FAIL: test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) (path='scripts/materialize-writing-skills.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 165, in test_existing_allowed_sources_are_still_immutable
+    self.rejected('changed publication source: ' + name)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 41, in rejected
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "status": "pass",
+  "framework": {
+    "pinned_files": 641,
+    "source_commit": "917e6025da0901a79dda016e1ce5bd89b6e6e19f",
+    "source_digest": "b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5",
+    "runtime_skill_counts": {
+      ".agents": 36,
+      ".claude": 36
+    }
+  },
+  "site_moves": 55,
+  "baseline_entries": 370,
+  "translations": 8,
+  "trace_rows": 113,
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "review",
+        "blocked_by": []
+      }
+    },
+    "next_id": "T-0003",
+    "frontier": [],
+    "blocked": {},
+    "paused": []
+  }
+}
+
+
+======================================================================
+FAIL: test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) (path='tests/article_publication/test_cli.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 165, in test_existing_allowed_sources_are_still_immutable
+    self.rejected('changed publication source: ' + name)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 41, in rejected
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "status": "pass",
+  "framework": {
+    "pinned_files": 641,
+    "source_commit": "917e6025da0901a79dda016e1ce5bd89b6e6e19f",
+    "source_digest": "b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5",
+    "runtime_skill_counts": {
+      ".agents": 36,
+      ".claude": 36
+    }
+  },
+  "site_moves": 55,
+  "baseline_entries": 370,
+  "translations": 8,
+  "trace_rows": 113,
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "review",
+        "blocked_by": []
+      }
+    },
+    "next_id": "T-0003",
+    "frontier": [],
+    "blocked": {},
+    "paused": []
+  }
+}
+
+
+======================================================================
+FAIL: test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) (path='docs/agents/issue-tracker.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 165, in test_existing_allowed_sources_are_still_immutable
+    self.rejected('changed publication source: ' + name)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 41, in rejected
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "status": "pass",
+  "framework": {
+    "pinned_files": 641,
+    "source_commit": "917e6025da0901a79dda016e1ce5bd89b6e6e19f",
+    "source_digest": "b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5",
+    "runtime_skill_counts": {
+      ".agents": 36,
+      ".claude": 36
+    }
+  },
+  "site_moves": 55,
+  "baseline_entries": 370,
+  "translations": 8,
+  "trace_rows": 113,
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "review",
+        "blocked_by": []
+      }
+    },
+    "next_id": "T-0003",
+    "frontier": [],
+    "blocked": {},
+    "paused": []
+  }
+}
+
+
+======================================================================
+FAIL: test_existing_allowed_sources_are_still_immutable (test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 169, in test_existing_allowed_sources_are_still_immutable
+    self.rejected('missing evidence/source path: ' + name)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<repair-worktree>/tests/harness_adoption/test_main_release.py", line 41, in rejected
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "status": "pass",
+  "framework": {
+    "pinned_files": 641,
+    "source_commit": "917e6025da0901a79dda016e1ce5bd89b6e6e19f",
+    "source_digest": "b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5",
+    "runtime_skill_counts": {
+      ".agents": 36,
+      ".claude": 36
+    }
+  },
+  "site_moves": 55,
+  "baseline_entries": 370,
+  "translations": 8,
+  "trace_rows": 113,
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "review",
+        "blocked_by": []
+      }
+    },
+    "next_id": "T-0003",
+    "frontier": [],
+    "blocked": {},
+    "paused": []
+  }
+}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 47.506s
+
+FAILED (failures=5)

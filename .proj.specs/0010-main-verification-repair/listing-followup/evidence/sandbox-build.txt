@@ -1,0 +1,9 @@
+Observed command: sandbox-exec -f build.sb node /Users/phoenix/.cache/node/corepack/v1/pnpm/10.28.0/bin/pnpm.cjs docs:build (TMPDIR/XDG_CACHE_HOME inside sandbox, COREPACK_ENABLE_NETWORK=0)
+Exit: 0
+Warnings: user npmrc and pnpm rc read denied by sandbox.
+> 0x1dea@1.4.0 docs:build
+> vitepress build blog
+vitepress v2.0.0-alpha.16
+✓ building client + server bundles...
+✓ rendering pages...
+build complete in 5.66s.

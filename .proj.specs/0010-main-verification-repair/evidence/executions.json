@@ -1,0 +1,77 @@
+{
+  "unit": {
+    "command": [
+      "pnpm",
+      "test:unit"
+    ],
+    "exit_code": 0,
+    "seconds": 2.64
+  },
+  "harness": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/harness_adoption",
+      "-v"
+    ],
+    "exit_code": 0,
+    "seconds": 105.99
+  },
+  "publication": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/article_publication",
+      "-v"
+    ],
+    "exit_code": 0,
+    "seconds": 15.99
+  },
+  "lint": {
+    "command": [
+      "pnpm",
+      "lint"
+    ],
+    "exit_code": 0,
+    "seconds": 11.56
+  },
+  "build": {
+    "command": [
+      "pnpm",
+      "docs:build"
+    ],
+    "exit_code": 0,
+    "seconds": 6.03
+  },
+  "verifier": {
+    "command": [
+      "python3",
+      "scripts/verify-harness-adoption.py"
+    ],
+    "exit_code": 0,
+    "seconds": 7.09
+  },
+  "structure": {
+    "command": [
+      "python3",
+      "scripts/verify-project.py"
+    ],
+    "exit_code": 0,
+    "seconds": 0.11
+  },
+  "materializer": {
+    "command": [
+      "python3",
+      "scripts/materialize-writing-skills.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "seconds": 0.24
+  }
+}

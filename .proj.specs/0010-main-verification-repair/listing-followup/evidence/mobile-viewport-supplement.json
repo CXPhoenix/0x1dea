@@ -1,0 +1,71 @@
+{
+  "api": "CUA readonly Playwright DOM evaluation; no viewport numbers injected into evaluation",
+  "results": [
+    {
+      "cards": [
+        {
+          "box": {
+            "height": 195.59375,
+            "width": 327,
+            "x": 24,
+            "y": 399.78125
+          },
+          "href": "/post/course/security-awareness/electricity-privacy.html",
+          "text": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？\n\n從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。\n\n2026年10月9日"
+        }
+      ],
+      "case": "mobile-light",
+      "dark": false,
+      "document": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "measurement": "live DOM evaluation",
+      "visualViewport": {
+        "height": 844,
+        "scale": 1,
+        "width": 375
+      },
+      "window": {
+        "devicePixelRatio": 1,
+        "innerHeight": 844,
+        "innerWidth": 390,
+        "outerHeight": 1170,
+        "outerWidth": 1920
+      }
+    },
+    {
+      "cards": [
+        {
+          "box": {
+            "height": 195.59375,
+            "width": 327,
+            "x": 24,
+            "y": 399.78125
+          },
+          "href": "/post/course/security-awareness/electricity-privacy.html",
+          "text": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？\n\n從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。\n\n2026年10月9日"
+        }
+      ],
+      "case": "mobile-dark",
+      "dark": true,
+      "document": {
+        "clientHeight": 844,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      },
+      "measurement": "live DOM evaluation",
+      "visualViewport": {
+        "height": 844,
+        "scale": 1,
+        "width": 375
+      },
+      "window": {
+        "devicePixelRatio": 1,
+        "innerHeight": 844,
+        "innerWidth": 390
+      }
+    }
+  ]
+}

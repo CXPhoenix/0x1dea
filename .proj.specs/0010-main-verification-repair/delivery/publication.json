@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/article_publication",
+    "-v"
+  ],
+  "exit": 0,
+  "seconds": 17.2
+}

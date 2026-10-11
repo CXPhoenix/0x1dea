@@ -109,7 +109,7 @@ def entry_sha(path):
     return hashlib.sha256(data).hexdigest()
 
 
-def check_preserved(root, baseline, exceptions):
+def check_preserved(root, baseline, exceptions, historical=None):
     moves = []
     for entry in baseline:
         name = entry['path']
@@ -141,7 +141,9 @@ def check_preserved(root, baseline, exceptions):
             expected_link = entry['type'] == 'symlink'
             if path.is_symlink() != expected_link or (not path.is_symlink() and not path.is_file()):
                 raise ValueError(f'changed entry type/missing file: {mapped}')
-        if entry_sha(path) != wanted:
+        content = (historical or {}).get(path.relative_to(root).as_posix())
+        actual = hashlib.sha256(content).hexdigest() if content is not None else entry_sha(path)
+        if actual != wanted:
             raise ValueError(f'changed preserved source: {name}')
     return moves
 
@@ -152,10 +154,10 @@ def allowed_new(name):
     return name in exact or name.startswith(prefixes)
 
 
-def check_added_paths(root, baseline_names, moved):
+def check_added_paths(root, baseline_names, moved, approved=None):
     names = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=root).decode().split('\0')
     for name in names:
-        if name and name not in baseline_names and name not in moved and not allowed_new(name):
+        if name and name not in baseline_names and name not in moved and name not in (approved or set()) and not allowed_new(name):
             raise ValueError(f'unknown added product file: {name}')
 
 
@@ -351,7 +353,7 @@ def check_lint_cleanup_delta(before, after):
         raise ValueError('unapproved lint cleanup manifest delta')
 
 
-def check_lint_successor(root):
+def check_lint_successor(root, historical=None):
     """Validate exact authorized paths/hashes against immutable predecessor Git objects."""
     name = 'maintenance/lint-cleanup/source-boundary.json'
     if not (root / name).exists():
@@ -374,13 +376,13 @@ def check_lint_successor(root):
             raise ValueError('invalid lint successor hash fields')
         before = subprocess.check_output(['git', 'show', LINT_BASE + ':' + path], cwd=root)
         if (hashlib.sha256(before).hexdigest() != record['before_sha256']
-                or entry_sha(regular_path(root, path)) != record['after_sha256']):
+                or hashlib.sha256((historical or {}).get(path, regular_path(root, path).read_bytes())).hexdigest() != record['after_sha256']):
             raise ValueError('lint cleanup preserved source hash mismatch: ' + path)
         before_sources[path] = before
     for path, wanted in boundary['new_sources'].items():
-        if entry_sha(regular_path(root, path)) != wanted:
+        if hashlib.sha256((historical or {}).get(path, regular_path(root, path).read_bytes())).hexdigest() != wanted:
             raise ValueError('lint cleanup new source hash mismatch: ' + path)
-    check_lint_cleanup_delta(before_sources['package.json'], regular_path(root, 'package.json').read_bytes())
+    check_lint_cleanup_delta(before_sources['package.json'], (historical or {}).get('package.json', regular_path(root, 'package.json').read_bytes()))
     return before_sources, boundary['preserved_updates']
 
 
@@ -428,6 +430,8 @@ def main():
     parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
     root = args.root.resolve()
+    from main_publication_verification import check
+    historical, approved = check(root, allowed_new, regular_path)
     baseline = json.loads((root / 'maintenance/harness-adoption/baseline-files.json').read_text())
     delta = json.loads((root / 'maintenance/harness-adoption/candidate-delta.json').read_text())
     check_baseline_manifest(root, baseline)
@@ -436,14 +440,14 @@ def main():
     if set(delta['exceptions']) != approved_exception_names(baseline['files']):
         raise ValueError('unapproved/missing exception entry')
     check_adoption_ancestry(root, baseline['baseline'])
-    successor, updates = check_lint_successor(root)
+    successor, updates = check_lint_successor(root, historical)
     exceptions = phase1_preserved_updates(root, delta['exceptions'], successor)
     exceptions = apply_lint_successor(exceptions, updates, baseline['files'])
-    moves = check_preserved(root, baseline['files'], exceptions)
+    moves = check_preserved(root, baseline['files'], exceptions, historical)
     if len(moves) != 55: raise ValueError('site move count mismatch')
     baseline_names = {f['path'] for f in baseline['files']}
     moved = {m['candidate'] for m in moves}
-    check_added_paths(root, baseline_names, moved)
+    check_added_paths(root, baseline_names, moved, approved)
     for name, expected in delta['literal_adapters'].items():
         content = subprocess.check_output(['git', 'show', baseline['baseline'] + ':' + name], cwd=root).decode()
         if name == 'package.json':
