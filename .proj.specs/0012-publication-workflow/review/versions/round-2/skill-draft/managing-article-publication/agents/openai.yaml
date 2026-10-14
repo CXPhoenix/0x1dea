@@ -1,0 +1,6 @@
+interface:
+  display_name: "0x1DEA Publication Workflow"
+  short_description: "Plan shared previews, sync and selected publication"
+  default_prompt: "Use $managing-article-publication to prepare a reviewed plan for this publication or synchronization request."
+policy:
+  allow_implicit_invocation: true

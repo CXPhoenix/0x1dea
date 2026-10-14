@@ -1,0 +1,40 @@
+{
+  "request": "先把共同工程基底整理成可以審查的 main PR 草案，保留 staging 候選與歷史契約，不要動部署設定，也先不要 push。",
+  "capabilities": {
+    "v2": false,
+    "remote_workflow": false
+  },
+  "differences": [
+    {
+      "path": "scripts/run-python-tests.py",
+      "kind": "engineering change"
+    },
+    {
+      "path": "blog/post/electricity-privacy.md",
+      "kind": "different from published main revision; no article approval"
+    },
+    {
+      "path": "blog/post/local-preview/B.md",
+      "kind": "pending article"
+    },
+    {
+      "path": "blog/public/assets/B/figure.png",
+      "kind": "exclusive B asset"
+    },
+    {
+      "path": "blog/.vitepress/sidebar.yml",
+      "kind": "shared path containing B listing and engineering navigation changes"
+    },
+    {
+      "path": "tests/historical.json",
+      "kind": "immutable historical assertion snapshot"
+    }
+  ],
+  "prerequisites": [
+    {
+      "number": 20,
+      "state": "OPEN"
+    }
+  ],
+  "authorization": "inspection and reviewable draft only; no push or deployment settings changes"
+}

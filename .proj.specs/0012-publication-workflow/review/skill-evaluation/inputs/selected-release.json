@@ -1,0 +1,17 @@
+{
+  "request": "staging 的 A 確認好了，請只把 A commit、push，開 PR 到 main，先不要 merge。B 還在改。",
+  "capabilities": {
+    "publication_cli_version": 1,
+    "commands": [
+      "preview",
+      "prepare",
+      "verify"
+    ],
+    "v2": false,
+    "remote_workflow": false
+  },
+  "sources": "A and B topics independently descend from pinned main, then both were merged into staging with separate integration commits. A has not merged staging back.",
+  "preview": "The author viewed the pinned staging deployment, identity recorded.",
+  "registry": "No approved M0/v2 registry exists.",
+  "authorization": "Only A commit/push/PR; no merge."
+}

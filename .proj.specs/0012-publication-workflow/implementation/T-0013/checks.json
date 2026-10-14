@@ -1,0 +1,30 @@
+{
+  "structure": {
+    "command": [
+      "python3",
+      "scripts/verify-project.py"
+    ],
+    "returncode": 0,
+    "stdout": "PASS: shared instructions, 36 skills across Claude/Codex trees, invocation policies, helper assets and native role configs\nStatic/offline checks only; confirm discovery in fresh Claude Code and Codex sessions.\n",
+    "stderr": ""
+  },
+  "materializer": {
+    "command": [
+      "python3",
+      "scripts/materialize-writing-skills.py",
+      "--check"
+    ],
+    "returncode": 0,
+    "stdout": "{\"generated_files\": 176, \"mode\": \"check\", \"source_files\": 55, \"source_policy_sha256\": \"7879465c123f916589ca4350b129e62f45b3350a66cfccba308ea546bfe7b864\", \"status\": \"pass\"}\n",
+    "stderr": ""
+  },
+  "adoption": {
+    "command": [
+      "python3",
+      "scripts/verify-harness-adoption.py"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "FAIL: unknown publication source: scripts/publication-baseline.py\n"
+  }
+}

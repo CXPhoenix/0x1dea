@@ -1,0 +1,28 @@
+{
+  "observed_date": "2026-10-14 Asia/Taipei",
+  "repository": "https://github.com/CXPhoenix/0x1dea.git",
+  "refs": {
+    "main": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+    "staging": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7"
+  },
+  "prs": [
+    {
+      "number": 20,
+      "state": "OPEN",
+      "target": "main",
+      "head": "e6e7a04da7a1e4d9819fa6f8aaadb72a0611e20c",
+      "mergedAt": null,
+      "mergeCommit": null
+    },
+    {
+      "number": 21,
+      "state": "OPEN",
+      "target": "staging",
+      "head": "a67b8de69f70f794a9e062e3ac50a957688ffa9a",
+      "mergedAt": null,
+      "mergeCommit": null
+    }
+  ],
+  "authority": "Owner authorized T-0013 commit, non-force topic push and main PR only; no merge or deployment changes.",
+  "binding": "M0 pins unchanged; existing behavior review and full-suite evidence retained. Final exact checks repeated after this record."
+}
