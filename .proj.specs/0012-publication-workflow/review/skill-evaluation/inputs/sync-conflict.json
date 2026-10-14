@@ -1,0 +1,19 @@
+{
+  "request": "main 有新的工程修正，請依 workflow 準備同步到 staging；可以 push 並更新同步 PR，先不要 merge。",
+  "capabilities": {
+    "v2": true,
+    "sync_plan": true,
+    "sync_pr_adapter": true
+  },
+  "policy": "Approved operation policy with one ticket-owned sync branch.",
+  "merge_result": {
+    "status": "conflict",
+    "paths": [
+      "blog/.vitepress/sidebar.yml"
+    ]
+  },
+  "branch": "tickets/T-0090/main-to-staging-sync",
+  "target": "staging",
+  "existing_pr": "open owned PR, validated on older pins",
+  "authorization": "prepare, push and update owned PR; no merge"
+}

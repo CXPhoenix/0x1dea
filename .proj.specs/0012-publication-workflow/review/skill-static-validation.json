@@ -1,0 +1,13 @@
+{
+  "local.md": {
+    "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be",
+    "byte_identical_to_canonical": true
+  },
+  "future-actions.md": {
+    "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5",
+    "byte_identical_to_canonical": true
+  },
+  "new_reference_links": "all resolve within draft",
+  "legacy_cli_link": "resolves under canonical target root; preserved review-copy reference unchanged",
+  "active_package_files_changed": false
+}

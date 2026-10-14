@@ -1,0 +1,19 @@
+{
+  "request": "請在本機準備 A 與 B 的合併預覽，保留來源，不要 commit 或做遠端操作。",
+  "capabilities": {
+    "publication_cli_version": 1,
+    "commands": [
+      "preview",
+      "prepare",
+      "verify"
+    ],
+    "v2": false,
+    "remote_workflow": false
+  },
+  "articles": [
+    "A",
+    "B"
+  ],
+  "sources": "A and B are independently based on pinned main; neither is integrated into staging. Exact paths and full source pins are available; no source edits authorized.",
+  "toolchain": "Existing runtime only; build isolation not yet inspected."
+}
