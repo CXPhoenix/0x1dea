@@ -1,0 +1,1576 @@
+{
+  "schema_version": 1,
+  "main": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+  "staging": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+  "classifications": {
+    ".agents/skills/phoenix-writing/SKILL.md": {
+      "category": "engineering",
+      "owner": "common",
+      "shared": true
+    },
+    ".agents/skills/phoenix-writing/references/context-form.md": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    ".claude/skills/phoenix-writing/SKILL.md": {
+      "category": "engineering",
+      "owner": "common",
+      "shared": true
+    },
+    ".claude/skills/phoenix-writing/references/context-form.md": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    ".env.example": {
+      "category": "target-role",
+      "owner": "preview-integration"
+    },
+    ".gitignore": {
+      "category": "engineering",
+      "owner": "common",
+      "shared": true
+    },
+    ".proj.specs/0003-article-summary/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/coverage-report.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/code-T-0003.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/round-1.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/round-2.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/security-T-0003.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/terminal-prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/terminal-review.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/terminal-v1/article-summary/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/terminal-v1/article-summary/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/terminal-v1/article-summary/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/terminal-v1/preview-notice/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/terminal-v1/preview-notice/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/terminal-v1/preview-notice/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v1/article-summary/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v1/article-summary/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v1/article-summary/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v1/manifest.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v1/preview-notice/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v1/preview-notice/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v1/preview-notice/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v2/article-summary/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v2/article-summary/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v2/article-summary/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v2/manifest.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v2/preview-notice/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v2/preview-notice/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/review/v2/preview-notice/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/spec.zh-TW.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0003-article-summary/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/coverage-report.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/retrospective.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/code-T-0004.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/round-1.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/round-2.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/security-T-0004.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/terminal-prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/terminal-review.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v1/article-summary/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v1/article-summary/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v1/article-summary/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v1/manifest.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v1/preview-notice/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v1/preview-notice/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v1/preview-notice/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v2/article-summary/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v2/article-summary/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v2/article-summary/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v2/manifest.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v2/preview-notice/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v2/preview-notice/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/v2/preview-notice/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/spec.zh-TW.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0004-shared-preview-notice/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/TDD.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/coverage-report.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/build.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/cli-baseline-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/current-cli.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/harness-final.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/harness-full.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/ignored-test-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/ignored-test-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/lint.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/materializer.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/positive-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/positive-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/public-cli.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/public-reconciliation.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/publication.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/readonly-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/readonly-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/reconciliation-final.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/structure.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/support-metadata-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/evidence/unit.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/implementation-notes.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/landing-approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/landing.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/reports/staging-closeout.html": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/retrospective.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/chain-analysis.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/code-T0005.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/round-1.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/round-2.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/security-T0005.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/v1/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/v1/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/v1/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/v1/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/v2/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/v2/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/v2/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/review/v2/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/spec.zh-TW.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0005-harness-reconciliation/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/coverage-report.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/evidence/final-build.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/evidence/final-harness.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/evidence/final-lint.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/evidence/final-materializer.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/evidence/final-publication.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/evidence/final-structure.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/evidence/final-unit.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/evidence/revision-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/evidence/revision-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/review/code.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/review/prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/review/round-1.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/spec.zh-TW.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0006-article-electricity-revision/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/browser-evidence.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/coverage-report.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/review/code-review-T-0007.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/review/prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/review/round-1.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/review/round-2.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/review/security-T-0007.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/spec.zh-TW.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0007-encore-ticket/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/browser-evidence.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/coverage-report.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/evidence/browser-matrix.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/review/code-T-0008.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/review/prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/review/round-1.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/review/round-2.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/review/security-T-0008.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/spec.zh-TW.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0008-article-captions/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/coverage-report.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/diagnosis.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/article-history-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/article-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/build.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/closeout-validation.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/code-presence-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/code-presence-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/done-guard.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/environment.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/fixture-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/full-test-before-review-fix.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/full-test-final.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/guard-complete.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/guard-final.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/guard.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/lint.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/materializer-final.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/materializer.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/preservation.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/reconciliation-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/results.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/review-manifest.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/rollback.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/runner-discovery-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/runner-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/runner-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/runner-success-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/runner-zero-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/runner-zero-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/structure-final.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/structure.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/successor-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/tracker-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/evidence/tracker-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/finder-evidence.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/landing-approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/landing-evidence.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/landing.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/reports/staging-closeout.html": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/retrospective.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/chain-analysis.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/code-T-0009-initial.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/code-T-0009.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/round-1-approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/round-1-source-scope.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/round-1-spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/round-1-test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/round-1-traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/round-1.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/round-2.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/review/security-T-0009.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/rollback.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/source-scope.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/spec.zh-TW.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/tdd.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0009-test-contract-repair/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/approval.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/coverage-report.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/article-preview.jpg": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/browser.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/build-corepack-failed.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/build-corepack-failed.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/build-isolation.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/build-linked-cache-failed.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/build-linked-cache-failed.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/build.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/build.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/desktop-dark.jpg": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/desktop-light.jpg": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/invalid-ref-green.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/invalid-ref-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/invalid-ref-probe.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/invalid-ref-red.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/invalid-ref-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/landing-ref-green.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/landing-ref-green.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/landing-ref-red.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/landing-ref-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/landing-ref-repro.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/lint.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/lint.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/main-red.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/main-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/main-targeted.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/main-targeted.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/materializer.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/materializer.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/mobile-dark.jpg": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/mobile-light.jpg": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/python-interrupted.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/python-ref-failed.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/python-ref-failed.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/python.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/python.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/review-drift.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/scope-audit.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/screenshot-dimensions.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/staging-red.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/staging-red.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/structure.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/structure.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/unit.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/unit.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/verifier-final.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/verifier-final.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/verifier.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/evidence/verifier.txt": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/implementation-notes.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/review/code-T-0011.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/review/prompt.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/review/round-1.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/review/round-2.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/review/security-T-0011.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/spec.en.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/spec.zh-TW.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/test-plan.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/traceability.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/0011-main-to-staging-sync/validation.zh-TW.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/_discovery/test-contract-repair/map.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.specs/_discovery/test-contract-repair/ticket-proposal.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    ".proj.tickets/0003-article-summary/T-0003-article-summary.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    ".proj.tickets/0004-shared-preview-notice/T-0004-shared-preview-notice.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    ".proj.tickets/0005-harness-reconciliation/T-0005-harness-reconciliation.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    ".proj.tickets/0006-article-electricity-revision/T-0006-article-electricity-revision.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    ".proj.tickets/0007-encore-ticket/T-0007-encore-ticket.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    ".proj.tickets/0008-article-captions/T-0008-article-captions.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    ".proj.tickets/0009-test-contract-repair/T-0009-test-contract-repair.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    ".proj.tickets/0011-main-to-staging-sync/T-0011-main-to-staging-sync.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    "CONTEXT.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    "README.md": {
+      "category": "engineering",
+      "owner": "common",
+      "shared": true
+    },
+    "blog/.vitepress/config.mts": {
+      "category": "target-role",
+      "owner": "preview-integration",
+      "shared": true
+    },
+    "blog/.vitepress/sidebar.yml": {
+      "category": "target-role",
+      "owner": "preview-integration",
+      "shared": true
+    },
+    "blog/.vitepress/theme/components/PreviewNotice.vue": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "blog/.vitepress/theme/index.ts": {
+      "category": "target-role",
+      "owner": "preview-integration",
+      "shared": true
+    },
+    "blog/index.md": {
+      "category": "target-role",
+      "owner": "preview-integration",
+      "shared": true
+    },
+    "blog/post/course/security-awareness/electricity-privacy.md": {
+      "category": "candidate",
+      "owner": "electricity-privacy-revision"
+    },
+    "blog/post/local-preview/agent-experiment.md": {
+      "category": "candidate",
+      "owner": "agent-experiment"
+    },
+    "blog/post/local-preview/browser-lab.md": {
+      "category": "candidate",
+      "owner": "browser-lab"
+    },
+    "blog/post/local-preview/idor.md": {
+      "category": "candidate",
+      "owner": "idor"
+    },
+    "blog/post/local-preview/jwt.md": {
+      "category": "candidate",
+      "owner": "jwt"
+    },
+    "blog/post/local-preview/sqli.md": {
+      "category": "candidate",
+      "owner": "sqli"
+    },
+    "blog/public/assets/post_local-preview_agent-experiment/a-cache.png": {
+      "category": "candidate",
+      "owner": "agent-experiment"
+    },
+    "blog/public/assets/post_local-preview_agent-experiment/a-cause.png": {
+      "category": "candidate",
+      "owner": "agent-experiment"
+    },
+    "blog/public/assets/post_local-preview_agent-experiment/a-exposure.png": {
+      "category": "candidate",
+      "owner": "agent-experiment"
+    },
+    "blog/public/assets/post_local-preview_agent-experiment/a-log.png": {
+      "category": "candidate",
+      "owner": "agent-experiment"
+    },
+    "blog/public/assets/post_local-preview_agent-experiment/a-reliability.png": {
+      "category": "candidate",
+      "owner": "agent-experiment"
+    },
+    "blog/public/assets/post_local-preview_agent-experiment/a-task.png": {
+      "category": "candidate",
+      "owner": "agent-experiment"
+    },
+    "blog/public/assets/post_local-preview_browser-lab/b-action.png": {
+      "category": "candidate",
+      "owner": "browser-lab"
+    },
+    "blog/public/assets/post_local-preview_browser-lab/b-flag.png": {
+      "category": "candidate",
+      "owner": "browser-lab"
+    },
+    "blog/public/assets/post_local-preview_browser-lab/b-origin.png": {
+      "category": "candidate",
+      "owner": "browser-lab"
+    },
+    "blog/public/assets/post_local-preview_browser-lab/b-response.png": {
+      "category": "candidate",
+      "owner": "browser-lab"
+    },
+    "blog/public/assets/post_local-preview_browser-lab/b-transfer.png": {
+      "category": "candidate",
+      "owner": "browser-lab"
+    },
+    "blog/public/assets/post_local-preview_browser-lab/b-trust.png": {
+      "category": "candidate",
+      "owner": "browser-lab"
+    },
+    "blog/public/assets/post_local-preview_idor/idor-denied-side-effect.png": {
+      "category": "candidate",
+      "owner": "idor"
+    },
+    "blog/public/assets/post_local-preview_idor/idor-knowing-id.png": {
+      "category": "candidate",
+      "owner": "idor"
+    },
+    "blog/public/assets/post_local-preview_idor/idor-login-is-not-access.png": {
+      "category": "candidate",
+      "owner": "idor"
+    },
+    "blog/public/assets/post_local-preview_idor/idor-scanner-needs-policy.png": {
+      "category": "candidate",
+      "owner": "idor"
+    },
+    "blog/public/assets/post_local-preview_idor/idor-shared-read-only.png": {
+      "category": "candidate",
+      "owner": "idor"
+    },
+    "blog/public/assets/post_local-preview_idor/idor-test-known-objects.png": {
+      "category": "candidate",
+      "owner": "idor"
+    },
+    "blog/public/assets/post_local-preview_idor/idor-uuid-is-not-policy.png": {
+      "category": "candidate",
+      "owner": "idor"
+    },
+    "blog/public/assets/post_local-preview_jwt/jwt-claims-have-rules.png": {
+      "category": "candidate",
+      "owner": "jwt"
+    },
+    "blog/public/assets/post_local-preview_jwt/jwt-parse-is-not-verify.png": {
+      "category": "candidate",
+      "owner": "jwt"
+    },
+    "blog/public/assets/post_local-preview_jwt/jwt-test-rejects-too.png": {
+      "category": "candidate",
+      "owner": "jwt"
+    },
+    "blog/public/assets/post_local-preview_jwt/jwt-token-picks-rules.png": {
+      "category": "candidate",
+      "owner": "jwt"
+    },
+    "blog/public/assets/post_local-preview_jwt/jwt-verified-not-owner.png": {
+      "category": "candidate",
+      "owner": "jwt"
+    },
+    "blog/public/assets/post_local-preview_jwt/jwt-wrong-audience.png": {
+      "category": "candidate",
+      "owner": "jwt"
+    },
+    "blog/public/assets/post_local-preview_sqli/sqli-bound-value.png": {
+      "category": "candidate",
+      "owner": "sqli"
+    },
+    "blog/public/assets/post_local-preview_sqli/sqli-data-captain.png": {
+      "category": "candidate",
+      "owner": "sqli"
+    },
+    "blog/public/assets/post_local-preview_sqli/sqli-identifier-value.png": {
+      "category": "candidate",
+      "owner": "sqli"
+    },
+    "blog/public/assets/post_local-preview_sqli/sqli-like-wildcard.png": {
+      "category": "candidate",
+      "owner": "sqli"
+    },
+    "blog/public/assets/post_local-preview_sqli/sqli-orm-raw-sql.png": {
+      "category": "candidate",
+      "owner": "sqli"
+    },
+    "blog/public/assets/post_local-preview_sqli/sqli-query-authorization.png": {
+      "category": "candidate",
+      "owner": "sqli"
+    },
+    "blog/public/assets/post_local-preview_sqli/sqli-sort-allowlist.png": {
+      "category": "candidate",
+      "owner": "sqli"
+    },
+    "docs/agents/issue-tracker.md": {
+      "category": "current-management",
+      "owner": "tracker"
+    },
+    "docs/preview-notice.md": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "maintenance/component-delivery/TDD.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/component-delivery/scope.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/component-delivery/source-freeze.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/harness-adoption/generated-writing-manifest.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/harness-adoption/runtime-source-policy.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/harness-reconciliation/article-electricity-revision.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/harness-reconciliation/components.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/harness-reconciliation/staging.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/harness-reconciliation/test-contract-repair.json": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/writing-skills/SOURCES.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "maintenance/writing-skills/VALIDATION.md": {
+      "category": "historical-management",
+      "owner": "historical-evidence"
+    },
+    "package.json": {
+      "category": "engineering",
+      "owner": "common",
+      "shared": true
+    },
+    "scripts/harness_reconciliation.py": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "scripts/run-python-tests.py": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "scripts/verify-harness-adoption.py": {
+      "category": "engineering",
+      "owner": "common",
+      "shared": true
+    },
+    "skills/phoenix-writing/SKILL.md": {
+      "category": "engineering",
+      "owner": "common",
+      "shared": true
+    },
+    "skills/phoenix-writing/references/context-form.md": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "tests/articleCaptions.vitest.ts": {
+      "category": "engineering",
+      "owner": "common",
+      "shared": true
+    },
+    "tests/article_publication/__init__.py": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "tests/fixtures/component-acceptance.md": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "tests/harness_adoption/__init__.py": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "tests/harness_adoption/test_reconciliation.py": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "tests/harness_adoption/test_successor.py": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "tests/harness_adoption/test_test_runner.py": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "tests/harness_adoption/test_tracker.py": {
+      "category": "engineering",
+      "owner": "common",
+      "shared": true
+    },
+    "tests/previewNotice.vitest.ts": {
+      "category": "engineering",
+      "owner": "common"
+    },
+    "tests/previewNoticeArticle.vitest.ts": {
+      "category": "engineering",
+      "owner": "common"
+    }
+  },
+  "candidates": [
+    {
+      "id": "agent-experiment",
+      "paths": [
+        "blog/post/local-preview/agent-experiment.md",
+        "blog/public/assets/post_local-preview_agent-experiment/a-cache.png",
+        "blog/public/assets/post_local-preview_agent-experiment/a-cause.png",
+        "blog/public/assets/post_local-preview_agent-experiment/a-exposure.png",
+        "blog/public/assets/post_local-preview_agent-experiment/a-log.png",
+        "blog/public/assets/post_local-preview_agent-experiment/a-reliability.png",
+        "blog/public/assets/post_local-preview_agent-experiment/a-task.png"
+      ],
+      "provenance": "legacy-requires-migration"
+    },
+    {
+      "id": "browser-lab",
+      "paths": [
+        "blog/post/local-preview/browser-lab.md",
+        "blog/public/assets/post_local-preview_browser-lab/b-action.png",
+        "blog/public/assets/post_local-preview_browser-lab/b-flag.png",
+        "blog/public/assets/post_local-preview_browser-lab/b-origin.png",
+        "blog/public/assets/post_local-preview_browser-lab/b-response.png",
+        "blog/public/assets/post_local-preview_browser-lab/b-transfer.png",
+        "blog/public/assets/post_local-preview_browser-lab/b-trust.png"
+      ],
+      "provenance": "legacy-requires-migration"
+    },
+    {
+      "id": "idor",
+      "paths": [
+        "blog/post/local-preview/idor.md",
+        "blog/public/assets/post_local-preview_idor/idor-denied-side-effect.png",
+        "blog/public/assets/post_local-preview_idor/idor-knowing-id.png",
+        "blog/public/assets/post_local-preview_idor/idor-login-is-not-access.png",
+        "blog/public/assets/post_local-preview_idor/idor-scanner-needs-policy.png",
+        "blog/public/assets/post_local-preview_idor/idor-shared-read-only.png",
+        "blog/public/assets/post_local-preview_idor/idor-test-known-objects.png",
+        "blog/public/assets/post_local-preview_idor/idor-uuid-is-not-policy.png"
+      ],
+      "provenance": "legacy-requires-migration"
+    },
+    {
+      "id": "jwt",
+      "paths": [
+        "blog/post/local-preview/jwt.md",
+        "blog/public/assets/post_local-preview_jwt/jwt-claims-have-rules.png",
+        "blog/public/assets/post_local-preview_jwt/jwt-parse-is-not-verify.png",
+        "blog/public/assets/post_local-preview_jwt/jwt-test-rejects-too.png",
+        "blog/public/assets/post_local-preview_jwt/jwt-token-picks-rules.png",
+        "blog/public/assets/post_local-preview_jwt/jwt-verified-not-owner.png",
+        "blog/public/assets/post_local-preview_jwt/jwt-wrong-audience.png"
+      ],
+      "provenance": "legacy-requires-migration"
+    },
+    {
+      "id": "sqli",
+      "paths": [
+        "blog/post/local-preview/sqli.md",
+        "blog/public/assets/post_local-preview_sqli/sqli-bound-value.png",
+        "blog/public/assets/post_local-preview_sqli/sqli-data-captain.png",
+        "blog/public/assets/post_local-preview_sqli/sqli-identifier-value.png",
+        "blog/public/assets/post_local-preview_sqli/sqli-like-wildcard.png",
+        "blog/public/assets/post_local-preview_sqli/sqli-orm-raw-sql.png",
+        "blog/public/assets/post_local-preview_sqli/sqli-query-authorization.png",
+        "blog/public/assets/post_local-preview_sqli/sqli-sort-allowlist.png"
+      ],
+      "provenance": "legacy-requires-migration"
+    },
+    {
+      "id": "electricity-privacy-revision",
+      "paths": [
+        "blog/post/course/security-awareness/electricity-privacy.md",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/p-link.png",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/p-purpose.png",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/p-units.png",
+        "blog/public/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg"
+      ],
+      "provenance": "legacy-requires-migration"
+    }
+  ],
+  "prerequisites": [
+    {
+      "pr": 20,
+      "state": "OPEN",
+      "target": "main",
+      "merge_commit": null,
+      "head": "e6e7a04da7a1e4d9819fa6f8aaadb72a0611e20c"
+    },
+    {
+      "pr": 21,
+      "state": "OPEN",
+      "target": "staging",
+      "merge_commit": null,
+      "head": "a67b8de69f70f794a9e062e3ac50a957688ffa9a"
+    }
+  ]
+}

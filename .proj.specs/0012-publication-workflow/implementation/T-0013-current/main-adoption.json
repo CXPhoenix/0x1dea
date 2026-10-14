@@ -1,0 +1,108 @@
+{
+  "status": "pass",
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0010": {
+        "id": "T-0010",
+        "title": "Restore main verification after the selected electricity release",
+        "epic": "0010-main-verification-repair",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0013": {
+        "id": "T-0013",
+        "title": "Establish the common engineering baseline and M0 inventory",
+        "epic": "0012-publication-workflow",
+        "status": "processing",
+        "blocked_by": []
+      },
+      "T-0014": {
+        "id": "T-0014",
+        "title": "Prepare and verify one article through the explicit v2 contract",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0013"
+        ]
+      },
+      "T-0015": {
+        "id": "T-0015",
+        "title": "Prepare a verified main-to-staging synchronization locally",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0013"
+        ]
+      },
+      "T-0016": {
+        "id": "T-0016",
+        "title": "Turn main changes into one trusted staging synchronization PR",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0015"
+        ]
+      },
+      "T-0017": {
+        "id": "T-0017",
+        "title": "Deliver only the approved article and record publication/recovery states",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0014",
+          "T-0016"
+        ]
+      },
+      "T-0018": {
+        "id": "T-0018",
+        "title": "Install and demonstrate the project workflow skill in both runtimes",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0017"
+        ]
+      }
+    },
+    "next_id": "T-0019",
+    "frontier": [],
+    "blocked": {
+      "T-0014": [
+        "T-0013"
+      ],
+      "T-0015": [
+        "T-0013"
+      ],
+      "T-0016": [
+        "T-0015"
+      ],
+      "T-0017": [
+        "T-0014",
+        "T-0016"
+      ],
+      "T-0018": [
+        "T-0017"
+      ]
+    },
+    "paused": []
+  },
+  "target_role": "main",
+  "target_base": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+  "candidate_head": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+  "source_paths": 1958,
+  "publishable": false,
+  "candidate_paths_preserved": 0
+}
