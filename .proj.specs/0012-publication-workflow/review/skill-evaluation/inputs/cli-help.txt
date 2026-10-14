@@ -1,0 +1,17 @@
+usage: article-publication.py [-h] --plan PLAN --output OUTPUT
+                              [--build-output BUILD_OUTPUT]
+                              {preview,prepare,verify}
+
+Reconstruct local article candidates; this command grants no publication
+authority.
+
+positional arguments:
+  {preview,prepare,verify}
+
+options:
+  -h, --help            show this help message and exit
+  --plan PLAN
+  --output OUTPUT
+  --build-output BUILD_OUTPUT
+                        Supplementary output scan in verify mode; never
+                        publication authority

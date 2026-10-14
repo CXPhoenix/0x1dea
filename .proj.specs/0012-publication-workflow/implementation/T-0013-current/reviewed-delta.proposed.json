@@ -1,0 +1,1417 @@
+[
+  {
+    "path": ".proj.specs/0012-publication-workflow/README.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "6facee4210038988a256ed0111cc748e26fc30536e44f80ac90f5054ad7c051a"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/adr-proposal.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "195cb03b34a35bc5e05bd5446ad64bc85c5464806a4d50f6e3d92c7265e2521f"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/approval.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1cf43746829402d95159193775fe1a8c3dc17e3472d38bb47065082568dad272"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/M0-classification.proposed.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "71e88f0f2187505145701fd13145f9e156692d0e40d1bba7852b7c5290e03b49"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.proposed.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/M0-review.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "e7fe0233a08fcbff63397d04277895d08a0ad19dec68bc6fba079c66b40adaa8"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/README.en.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "965b1e7bc7dfdada5274fc3fab4193d5572e3087be3a488dc10ae874509c52c0"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/README.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "e0f5e28f2cf61e27c34d691ac148c55d0c713b919d1d5e50008a213000bb07a7"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/baseline-harness.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "a19d40478b916420b5c17f9d9028cb3daa6d306cb85e0fa1ded2c137376080f8"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/baseline-publication.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "42af98a189f2159bd49938c15e75847ee429c01a7446918ed769204f3be982f4"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/build.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "ee85f42021d51d9beb48d500006dfaea6a40eeaa2a3415c61c96ffc90303dca1"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/checks.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "d0fc6e981776343c57a6ca1e93f733628be814cfd7110aad79e8925894bbf1cf"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/coverage.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "2110e16967084bfe432c18ead04316905833eee2ad2341b53aeea2bc5450c763"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/harness.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "43b071c1790de05445a8b0404e2f76767b0ddb8f670ede711401e9fae215f658"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/implementation-source.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "ada39134c1b8e85b18c1f63c55b9ade54e45a4b1fe1adc8db2e9d8d0eeca65ca"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/publication.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "6933a5f734c5d5ca47a28028a6b81d0d72f8169d972eca0010d63b2a9ac08adc"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/source.patch",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "294dcc8c2ed17dc66061cc4fac5546e7ee66505fa0a03668c2a309bf5de68448"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/implementation/T-0013/vitest.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "5fd3a16ebee2367172b3daf87b9ebdeecf17c220e5467b10c5a837cac371b72a"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/capture-context.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "ff911e690ae38b6e9deba8a294b3e3249c65acfc0caef47378ba34a3c6c9507e"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/code-T-0013-inventory.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "e64ba48e219231d9dab5d400bbf174c5373da28c854df2cafddf2747cbd05c08"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/document-invariants.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "2e0161d56c236100e51d85e390bbdc2722e8568fa37811776eb0629026316131"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/logs/adoption.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "c82dc189f5b8db75d20f8331334a50ccc5f4b757e468dc91bcfbab81d038f5d2"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/logs/docs.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "c7580f31f79d6af4e2e6b0dc07bacfd44ede4e37322555105d568dd06df45b94"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/logs/materializer.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "18410bdc823a5ad7e681cd6e325ac1c2ed5de044823c9639b5df302898d79404"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/logs/skill.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "25b981bc1e93801aa85b48208d883a5b358f998117fc19b28da7b6f7a7bcf1b4"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/logs/structure.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1965943899019dfb7a66e858c32e73bbe9c34c86e2b136b41ffeee9437173cfa"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/pre-round-2-self-check.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "6908c71b1cc41ea4a87eb1d68384d3dd5a3d8ad26457f07c0b2de0c74e5d6f33"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/prompt.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "aa59f979c01171f27e5e19c43801478299a2c49a76577d80504fbe4b9481f307"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/round-1-new-files.patch",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "14f0320f2d0c7ded3a517af4d2cff3377db896639f2643c6e66719ca8439b6d6"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/round-1.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "ef574f4787347822b9023eecd298aeca22c195cba9d61de7ce37485c69bfff86"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/round-2-changes.patch",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "f654c7d06fda5fbb425149017d5fd3fb659f96ce3086bb0e2a74699da8434b1a"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/round-2.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "3211945df22e4a3395a5f41196b7175c6bb3aa7998ee035081c72a674c8234c4"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/security-T-0013.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "9989049cd0a523556839684a4e4e58637b22b99c2b93eaae286b44c40eedc606"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/skill-evaluation/inputs-manifest.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1babae7536e3e1b3f0dc7c83b86ae96791f30230c06b71f6b452a924b5b02921"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/skill-evaluation/inputs/baseline.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "d7700620d9826d21dfbcbe3c31bc0e77b7a151ea1afe776e267a755a30ef6474"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/skill-evaluation/inputs/cli-help.txt",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "83830955892c528fe7701489d8b3d216dc89e78986a5be8847315752a1e21219"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/skill-evaluation/inputs/local-preview.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1ba95c274160154be4776916b551e7a7b53aa9129a0edf0ccffce3fe84d53ebf"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/skill-evaluation/inputs/selected-release.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "6469bf5b6b56798db56ed0f90fe8bbf5d2ccf405924305c8ceb174dfb9c27943"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/skill-evaluation/inputs/sync-conflict.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "e2d7fbc133237db945ff73313037bfde6773e541cd7b83686bea7edcaba2b164"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/skill-evaluation/report.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "5b99ad2b0a3f8aec6e146cbf6ec6845972ae27e77495d9c2d3958f3ce17a8589"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/skill-static-validation.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "bf66f7e1eacf301d5e7b8ccfbaaf441903b368f824e32627524412198656b018"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/validation.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "68a0509e1b0c4014ae05783b157b1519e266c83be614d13eae53fd57654f6254"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/adr-proposal.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "195cb03b34a35bc5e05bd5446ad64bc85c5464806a4d50f6e3d92c7265e2521f"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/context.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "afea4b786e34c44d1c253ec2cb10835e5a3727f2513465beff0efdc6ea1f0247"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/.proj.specs/0009-test-contract-repair/spec.en.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "10c29e06fdac9fb949f1c315b14b21a1064ca695a16841caf46dc5894b498282"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/AGENTS.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "77ad12cb3275f1ac5936bc9ae0bad4dfefc048d819e0274d38db4bf1d98bbf53"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/CONTEXT.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "6a6b92efa597b39d24669606a753d5f4ba7751d7f01058c5ea152ff0e0c8fd28"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/docs/adr/0006-local-tracker-and-authorized-landing.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "0e55737594a1c73005f80749c963369c805c38b274ffa21b1483006c20d8f96e"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/docs/agents/issue-tracker.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "fafad4d4469f996c0a1196dccfeaab28b60ac7c8b17fc5709cb20acdee8856b6"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/docs/agents/language.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "dad4936776742214eca797c9bba88036c5798cbcc4e7397d6803966fe3c5b382"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/docs/agents/review.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/docs/agents/runtime.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "4a862c86b8a84581a8ec26eb058c626bc4b36181a6cfa7baaf5482333b079fcf"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/docs/agents/workflow.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "f827f005b59cccf7416e5ebb8c64ecba689d99047cb3b90b05ed0541294f98a1"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/scripts/article-publication.py",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "69ad7a645f06bb4de3186f698e356bbd09caedc77ba45b597b4b5833317c6a71"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/skills/managing-article-publication/SKILL.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/skills/managing-article-publication/references/future-actions.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/contracts/skills/managing-article-publication/references/local.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/manifest.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1b6cf9e185d7b1de5df7c5776ea618d3739b6b69fc36c8e6d16714a96ca981a4"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/skill-draft/README.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "77a9e83c4ce8230dd2f87fa3b643d77b5b6f43f93650dce5c9a2e313dcbce8a8"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/skill-draft/managing-article-publication/SKILL.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "cc728a0b3c7facf9b26d67286a5743b28203583f3499c04dc02c6296a3bc3839"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/skill-draft/managing-article-publication/agents/openai.yaml",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "c178d4b0a57f439e490a970c4e4f1b92a311439243b831a921aca8c4f8ab7a2b"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/skill-draft/managing-article-publication/references/future-actions.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/skill-draft/managing-article-publication/references/local.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/skill-draft/managing-article-publication/references/workflow.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "e98121c6105d6a64bf1fece514f6e76cbf11d91fcf58eab34e0d0568aa0b78ac"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/source-evidence.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "eedf49f348c1db062fd50c81101653126e0d1edd81c5e86309a382c68985f826"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/spec.en.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "ff2836523b57051775d52a179bb6bcb33f27388b0baee3fc66b551f3ddd4981f"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/test-plan.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "702d4e379c07105138f3b7df0cb619b81eaa12b5ad6891099879f81b9142a7a4"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-1/traceability.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "c6d7efd543ece2a8fda1b6c390763e3f4ed4a1ed4a318aa1b624874884a5615d"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/adr-proposal.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "195cb03b34a35bc5e05bd5446ad64bc85c5464806a4d50f6e3d92c7265e2521f"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/context.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "afea4b786e34c44d1c253ec2cb10835e5a3727f2513465beff0efdc6ea1f0247"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/.proj.specs/0009-test-contract-repair/spec.en.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "10c29e06fdac9fb949f1c315b14b21a1064ca695a16841caf46dc5894b498282"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/AGENTS.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "77ad12cb3275f1ac5936bc9ae0bad4dfefc048d819e0274d38db4bf1d98bbf53"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/CONTEXT.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "6a6b92efa597b39d24669606a753d5f4ba7751d7f01058c5ea152ff0e0c8fd28"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/docs/adr/0006-local-tracker-and-authorized-landing.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "0e55737594a1c73005f80749c963369c805c38b274ffa21b1483006c20d8f96e"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/docs/agents/issue-tracker.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "fafad4d4469f996c0a1196dccfeaab28b60ac7c8b17fc5709cb20acdee8856b6"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/docs/agents/language.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "dad4936776742214eca797c9bba88036c5798cbcc4e7397d6803966fe3c5b382"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/docs/agents/review.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/docs/agents/runtime.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "4a862c86b8a84581a8ec26eb058c626bc4b36181a6cfa7baaf5482333b079fcf"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/docs/agents/workflow.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "f827f005b59cccf7416e5ebb8c64ecba689d99047cb3b90b05ed0541294f98a1"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/scripts/article-publication.py",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "69ad7a645f06bb4de3186f698e356bbd09caedc77ba45b597b4b5833317c6a71"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/skills/managing-article-publication/SKILL.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/skills/managing-article-publication/references/future-actions.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/contracts/skills/managing-article-publication/references/local.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/manifest.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "c4d971b6d334c44f49e16851e836eb5909dffd15037553c3efdc918f20f526c9"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/skill-draft/README.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "77a9e83c4ce8230dd2f87fa3b643d77b5b6f43f93650dce5c9a2e313dcbce8a8"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/skill-draft/managing-article-publication/SKILL.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "cc728a0b3c7facf9b26d67286a5743b28203583f3499c04dc02c6296a3bc3839"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/skill-draft/managing-article-publication/agents/openai.yaml",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "c178d4b0a57f439e490a970c4e4f1b92a311439243b831a921aca8c4f8ab7a2b"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/skill-draft/managing-article-publication/references/future-actions.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/skill-draft/managing-article-publication/references/local.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/skill-draft/managing-article-publication/references/workflow.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "479462e46fc2f81ea9a7ee7e8475b2343beba0d2b4f87f1bc2fec97631468747"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/source-evidence.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "eedf49f348c1db062fd50c81101653126e0d1edd81c5e86309a382c68985f826"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/spec.en.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "ab7b8b6e83e92b18c52a04b046888cf399f29065d7caa891a77d6241adf1cb8a"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/test-plan.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "836dd8e284813af5ca66f3f7281eb59b48d8fbf6a6b5775535c1fed6c307576c"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/review/versions/round-2/traceability.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "a1f38ae83f41774ab254ef74c5e14316745a2281a55e384b691ca1ce058be75a"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/skill-draft/README.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "77a9e83c4ce8230dd2f87fa3b643d77b5b6f43f93650dce5c9a2e313dcbce8a8"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/skill-draft/managing-article-publication/SKILL.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "cc728a0b3c7facf9b26d67286a5743b28203583f3499c04dc02c6296a3bc3839"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/skill-draft/managing-article-publication/agents/openai.yaml",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "c178d4b0a57f439e490a970c4e4f1b92a311439243b831a921aca8c4f8ab7a2b"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/skill-draft/managing-article-publication/references/future-actions.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/skill-draft/managing-article-publication/references/local.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/skill-draft/managing-article-publication/references/workflow.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "479462e46fc2f81ea9a7ee7e8475b2343beba0d2b4f87f1bc2fec97631468747"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/source-evidence.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "eedf49f348c1db062fd50c81101653126e0d1edd81c5e86309a382c68985f826"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/spec.en.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "ab7b8b6e83e92b18c52a04b046888cf399f29065d7caa891a77d6241adf1cb8a"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/spec.zh-TW.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "4c599f1ac11a53dda1fbda533db7a1395aba42775a1dba7e43313cc191485537"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/test-plan.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "836dd8e284813af5ca66f3f7281eb59b48d8fbf6a6b5775535c1fed6c307576c"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/ticket-allocation.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "27fc196a5cf4c1bcc62bcce2ff4504ae4da3b626e9343483ea9ad3764a390b87"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/ticket-breakdown.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1b7b9f5255c0e21de2c0053778120c30b6aad7c9f0ff73ebd4e6d11fd635384b"
+    }
+  },
+  {
+    "path": ".proj.specs/0012-publication-workflow/traceability.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "a1f38ae83f41774ab254ef74c5e14316745a2281a55e384b691ca1ce058be75a"
+    }
+  },
+  {
+    "path": ".proj.tickets/0012-publication-workflow/T-0013-common-engineering-baseline.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "1e3769d21499c95d35a698c09561c926a9b4fb887475c094a51e639418940227"
+    }
+  },
+  {
+    "path": ".proj.tickets/0012-publication-workflow/T-0014-v2-selected-candidate.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "51374001ee260def6cbedfa76f14d6ef005ad66ec017c897bb8f72ab978c8e0d"
+    }
+  },
+  {
+    "path": ".proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "e11ec2bca74a799fd808731695b49c97a94140e6e9e50f60d134f7c370c53e36"
+    }
+  },
+  {
+    "path": ".proj.tickets/0012-publication-workflow/T-0016-main-to-staging-sync.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "54c7e606000a676a215fd3a609b4ef408f7f529077f23d47669843fe7770c471"
+    }
+  },
+  {
+    "path": ".proj.tickets/0012-publication-workflow/T-0017-selected-article-delivery.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "cd047334d56fbb843642d737b263813fe58227dc0ce2e41e1196d096278f9386"
+    }
+  },
+  {
+    "path": ".proj.tickets/0012-publication-workflow/T-0018-publication-workflow-skill.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "ac07433f49aeb6f66dda8ea2cb0d41b785cd224f2f340ac4a30d5cd0dd4e106f"
+    }
+  },
+  {
+    "path": "docs/adr/0008-main-first-engineering-and-shared-staging.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "a0d9ba031d6e9f26db766c969aad5daa87b6b14b5dc9d1b329653c0dc8641237"
+    }
+  },
+  {
+    "path": "docs/publication-baseline.md",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "eb4c484434863ed1d044d2cc23022e639f9d9043f4d1d33a62d83466f0f7bedc"
+    }
+  },
+  {
+    "path": "maintenance/publication-workflow/M0-approval.json",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "c3175bfed200886d4dddc1955fda678307a836fee632ce0205ab9c382725024e"
+    }
+  },
+  {
+    "path": "maintenance/publication-workflow/history/main-verifier.py",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "cf0019f96aa56a60ae4fff325f1487a239df5df4eeb4fb1f905cdc6063de5c46"
+    }
+  },
+  {
+    "path": "maintenance/publication-workflow/history/staging-verifier.py",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "86b6f7ea72a3b0bc17d303db471a94c104860a810c73014ef16e152872cad3d2"
+    }
+  },
+  {
+    "path": "scripts/harness_reconciliation.py",
+    "before": {
+      "main": null,
+      "staging": {
+        "mode": "100644",
+        "blob": "42fc35c2cc041ca45e6a4c3549488f0c30224ff3"
+      }
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "79870a068da61d5c5fee584a86f39fca3092f45b77f57e4e8a3f5be1f0d90973"
+    }
+  },
+  {
+    "path": "scripts/publication-baseline.py",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "3c8967942bca400125f0f99340c3be5d647f6e909cb66057556b14ff53451ead"
+    }
+  },
+  {
+    "path": "scripts/publication_current.py",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "b7851d7e7583f25d0a8841eb19f5947543281a691e31c26543c6b710a71cf5c5"
+    }
+  },
+  {
+    "path": "scripts/run-python-tests.py",
+    "before": {
+      "main": null,
+      "staging": {
+        "mode": "100644",
+        "blob": "f449e500c02937b4e9f3835b0ce7fc1eef331496"
+      }
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "8cf28cbd401b265fb3a142a6978aa1203e713f29f20dc79b2b49f4e2e08e405f"
+    }
+  },
+  {
+    "path": "scripts/verify-harness-adoption.py",
+    "before": {
+      "main": {
+        "mode": "100644",
+        "blob": "19004c95d9f8b92e7c4c139eb950f9bfce172ba3"
+      },
+      "staging": {
+        "mode": "100644",
+        "blob": "e882d7d2cfd3855ea30ae7d325b40cd755a91266"
+      }
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "7b67c4291569c5d4436c0c3bbf11df78a1daaf4d0550c55b2184f40163aaf5a7"
+    }
+  },
+  {
+    "path": "tests/article_publication/__init__.py",
+    "before": {
+      "main": null,
+      "staging": {
+        "mode": "100644",
+        "blob": "8380dd164d7719417e2867dfa0c5fc910e1a0c7a"
+      }
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "ca4700c2df368d7c7b33ece27a657732283786bb5063e4d1119a6c525ae0c0a3"
+    }
+  },
+  {
+    "path": "tests/article_publication/test_baseline_inventory.py",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "f269a313ca11133f36672c53f13988cdaa5d2b00a9d1d56d08df47de6c2402be"
+    }
+  },
+  {
+    "path": "tests/article_publication/test_current_baseline.py",
+    "before": {
+      "main": null,
+      "staging": null
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "e803dfedc7ba8867ccbc089024154371c710ea4810b4b5489c0a81b091072cda"
+    }
+  },
+  {
+    "path": "tests/harness_adoption/__init__.py",
+    "before": {
+      "main": null,
+      "staging": {
+        "mode": "100644",
+        "blob": "4ace6b713ad2b2b9267acf4d1ef5ed63f5747f04"
+      }
+    },
+    "after": {
+      "mode": "100644",
+      "sha256": "a0a9cab31657f958cfd8762a4082f4233aa180dd24d14d1f29623e9d01676cc5"
+    }
+  }
+]

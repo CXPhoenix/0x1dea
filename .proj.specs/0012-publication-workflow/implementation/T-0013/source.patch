@@ -1,0 +1,416 @@
+diff --git a/scripts/publication-baseline.py b/scripts/publication-baseline.py
+new file mode 100644
+index 0000000..3323902
+--- /dev/null
++++ b/scripts/publication-baseline.py
+@@ -0,0 +1,169 @@
++#!/usr/bin/env python3
++"""Read-only, proposal-only M0 inventory. This CLI never grants policy trust."""
++import argparse
++import json
++from pathlib import Path
++import re
++import subprocess
++import sys
++
++
++def git(root, *args):
++    return subprocess.check_output(
++        ['git', '--no-replace-objects', '--literal-pathspecs', '-C', str(root), *args], stderr=subprocess.PIPE,
++    )
++
++
++def tree(root, commit):
++    result = {}
++    for entry in git(root, 'ls-tree', '-rz', '--full-tree', commit).split(b'\0'):
++        if entry:
++            header, path = entry.split(b'\t', 1)
++            mode, kind, blob = header.decode().split()
++            result[path.decode()] = {'mode': mode, 'type': kind, 'blob': blob}
++    return result
++
++
++CATEGORIES = {'published', 'candidate', 'engineering', 'historical-management',
++              'current-management', 'target-role'}
++
++
++def full_commit(root, value):
++    if not isinstance(value, str) or not re.fullmatch(r'[0-9a-f]{40}', value):
++        raise ValueError('pins must be full commit ids')
++    if git(root, 'cat-file', '-t', value).strip() != b'commit':
++        raise ValueError('pin is not a commit')
++
++
++def validate(root, plan):
++    if git(root, 'for-each-ref', '--format=%(refname)', 'refs/replace').strip():
++        raise ValueError('replacement refs are not allowed')
++    grafts = Path(git(root, 'rev-parse', '--path-format=absolute', '--git-path', 'info/grafts').decode().strip())
++    if grafts.exists() and grafts.read_bytes().strip():
++        raise ValueError('history grafts are not allowed')
++    if git(root, 'rev-parse', '--is-shallow-repository').strip() != b'false':
++        raise ValueError('complete Git history is required')
++    if not isinstance(plan, dict) or set(plan) != {
++        'schema_version', 'main', 'staging', 'classifications', 'candidates', 'prerequisites',
++    } or type(plan['schema_version']) is not int or plan['schema_version'] != 1:
++        raise ValueError('unsupported classification schema; trust/role input is not accepted')
++    full_commit(root, plan['main'])
++    full_commit(root, plan['staging'])
++    if not isinstance(plan['classifications'], dict):
++        raise ValueError('classification must be an exact path map')
++    for path, item in plan['classifications'].items():
++        if not isinstance(item, dict) or not {'category', 'owner'} <= item.keys() <= {
++            'category', 'owner', 'shared',
++        } or item['category'] not in CATEGORIES or not isinstance(item['owner'], str) or not item['owner']:
++            raise ValueError(f'invalid classification: {path}')
++        if 'shared' in item and type(item['shared']) is not bool:
++            raise ValueError(f'invalid shared classification: {path}')
++    if not isinstance(plan['candidates'], list) or not isinstance(plan['prerequisites'], list):
++        raise ValueError('candidate and prerequisite registries must be lists')
++    for item in plan['candidates']:
++        if not isinstance(item, dict) or set(item) != {'id', 'paths', 'provenance'} or not isinstance(item['id'], str) or not item['id']:
++            raise ValueError('invalid candidate ownership record')
++        if not isinstance(item['paths'], list) or not all(isinstance(p, str) for p in item['paths']):
++            raise ValueError('invalid candidate ownership paths')
++        if item['provenance'] != 'legacy-requires-migration':
++            raise ValueError('this proposal does not admit clean candidate provenance')
++    for item in plan['prerequisites']:
++        if not isinstance(item, dict) or set(item) != {'pr', 'state', 'target', 'merge_commit', 'head'}:
++            raise ValueError('invalid prerequisite observation')
++        if type(item['pr']) is not int or item['pr'] <= 0 or item['state'] not in {'OPEN', 'CLOSED', 'MERGED'} or item['target'] not in {'main', 'staging'}:
++            raise ValueError('invalid prerequisite observation values')
++        full_commit(root, item['head'])
++        if item['merge_commit'] is not None:
++            full_commit(root, item['merge_commit'])
++
++
++def unique_object(pairs):
++    result = {}
++    for key, value in pairs:
++        if key in result:
++            raise ValueError(f'duplicate JSON key: {key}')
++        result[key] = value
++    return result
++
++
++def inventory(root, plan):
++    validate(root, plan)
++    main, stage = plan['main'], plan['staging']
++    trees = {'main': tree(root, main), 'staging': tree(root, stage)}
++    changed = {p for p in trees['main'].keys() | trees['staging'].keys()
++               if trees['main'].get(p) != trees['staging'].get(p)}
++    if set(plan['classifications']) != changed:
++        raise ValueError('classification must account for exactly every changed path')
++    owners = {}
++    ids = set()
++    for candidate in plan['candidates']:
++        if candidate['id'] in ids or not candidate['paths']:
++            raise ValueError('candidate ownership needs unique ids and nonempty paths')
++        ids.add(candidate['id'])
++        for path in candidate['paths']:
++            if path in owners or path not in trees['main'].keys() | trees['staging'].keys():
++                raise ValueError(f'ambiguous or missing candidate ownership: {path}')
++            owners[path] = candidate['id']
++    for path in changed:
++        item = plan['classifications'][path]
++        if item['category'] == 'candidate':
++            if owners.get(path) != item['owner']:
++                raise ValueError(f'incomplete candidate ownership: {path}')
++        elif path in owners:
++            raise ValueError(f'candidate ownership contradicts classification: {path}')
++    delta = []
++    for path in sorted(trees['main'].keys() | trees['staging'].keys()):
++        before, after = trees['main'].get(path), trees['staging'].get(path)
++        if before == after:
++            continue
++        classification = plan['classifications'][path]
++        candidate = classification['category'] == 'candidate'
++        patch = None
++        if classification.get('shared'):
++            patch = git(root, 'diff', '--no-ext-diff', '--no-textconv', '--no-renames',
++                        '--binary', '--full-index', main, stage, '--', path).decode()
++        delta.append({
++            'path': path, **classification, 'main': before, 'staging': after, 'patch': patch,
++            'main_action': 'retain-published' if candidate else 'pending-exact-review',
++            'staging_action': 'preserve-exact',
++        })
++    prerequisites = []
++    for item in plan['prerequisites']:
++        merge = item['merge_commit']
++        landed = False
++        if item['state'] == 'MERGED' and merge:
++            target = {'main': main, 'staging': stage}[item['target']]
++            status = subprocess.run(
++                ['git', '--no-replace-objects', '-C', str(root),
++                 'merge-base', '--is-ancestor', merge, target], capture_output=True,
++            ).returncode
++            if status not in (0, 1):
++                raise ValueError('unavailable prerequisite ancestry')
++            landed = status == 0
++        prerequisites.append({**item, 'landed_by_observation_and_ancestry': landed})
++    return {
++        'schema_version': 1, 'status': 'proposal-only', 'trusted_policy': False,
++        'repository': git(root, 'config', '--get', 'remote.origin.url').decode().strip(),
++        'pins': {'main': main, 'staging': stage}, 'trees': trees, 'delta': delta,
++        'candidates': plan['candidates'], 'prerequisites': prerequisites,
++    }
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    commands = parser.add_subparsers(dest='command', required=True)
++    command = commands.add_parser('inventory', help='Print a complete proposed M0 as JSON')
++    command.add_argument('--repo', type=Path, required=True)
++    command.add_argument('--classification', type=Path, required=True)
++    args = parser.parse_args()
++    try:
++        plan = json.loads(args.classification.read_text(), object_pairs_hook=unique_object)
++        print(json.dumps(inventory(args.repo, plan), ensure_ascii=False, indent=2))
++        return 0
++    except (ValueError, KeyError, TypeError, OSError, subprocess.CalledProcessError) as error:
++        print(f'Blocked inventory: {error}', file=sys.stderr)
++        return 1
++
++
++if __name__ == '__main__':
++    sys.exit(main())
+diff --git a/tests/article_publication/test_baseline_inventory.py b/tests/article_publication/test_baseline_inventory.py
+new file mode 100644
+index 0000000..412262f
+--- /dev/null
++++ b/tests/article_publication/test_baseline_inventory.py
+@@ -0,0 +1,192 @@
++"""Public, read-only Git inventory seam for the proposed M0 boundary."""
++import json
++from pathlib import Path
++import subprocess
++import tempfile
++import unittest
++
++CLI = Path(__file__).resolve().parents[2] / 'scripts/publication-baseline.py'
++
++
++class BaselineInventoryTests(unittest.TestCase):
++    def setUp(self):
++        self.tmp = tempfile.TemporaryDirectory()
++        self.addCleanup(self.tmp.cleanup)
++        self.root = Path(self.tmp.name)
++        self.git('init', '-q')
++        self.git('config', 'user.email', 'fixture@example.invalid')
++        self.git('config', 'user.name', 'Fixture')
++        self.git('remote', 'add', 'origin', 'https://example.invalid/site.git')
++        (self.root / 'published.md').write_text('published\n')
++        self.commit()
++        self.main = self.git('rev-parse', 'HEAD').strip()
++        (self.root / 'published.md').write_text('unapproved revision\n')
++        (self.root / 'A.md').write_text('candidate A\n')
++        (self.root / 'engine.py').write_text('print("engineering")\n')
++        self.commit()
++        self.stage = self.git('rev-parse', 'HEAD').strip()
++        self.plan = {
++            'schema_version': 1, 'main': self.main, 'staging': self.stage,
++            'classifications': {
++                'published.md': {'category': 'candidate', 'owner': 'revision'},
++                'A.md': {'category': 'candidate', 'owner': 'A'},
++                'engine.py': {'category': 'engineering', 'owner': 'common'},
++            },
++            'candidates': [
++                {'id': 'A', 'paths': ['A.md'], 'provenance': 'legacy-requires-migration'},
++                {'id': 'revision', 'paths': ['published.md'], 'provenance': 'legacy-requires-migration'},
++            ],
++            'prerequisites': [],
++        }
++
++    def git(self, *args):
++        return subprocess.check_output(['git', '-C', str(self.root), *args], text=True)
++
++    def commit(self):
++        self.git('add', '.')
++        self.git('commit', '-qm', 'fixture')
++
++    def invoke(self):
++        policy = self.root.parent / (self.root.name + '-classification.json')
++        policy.write_text(json.dumps(self.plan))
++        self.addCleanup(policy.unlink, missing_ok=True)
++        return subprocess.run(
++            ['python3', str(CLI), 'inventory', '--repo', str(self.root),
++             '--classification', str(policy)], text=True, capture_output=True,
++        )
++
++    def test_complete_proposal_preserves_revision_and_records_both_trees(self):
++        before = self.git('status', '--porcelain=v1', '--untracked-files=all')
++        result = self.invoke()
++        self.assertEqual(result.returncode, 0, result.stderr)
++        report = json.loads(result.stdout)
++        self.assertEqual(report['status'], 'proposal-only')
++        self.assertFalse(report['trusted_policy'])
++        self.assertEqual(len(report['trees']['main']), 1)
++        self.assertEqual(len(report['trees']['staging']), 3)
++        revision = next(r for r in report['delta'] if r['path'] == 'published.md')
++        self.assertEqual(revision['category'], 'candidate')
++        self.assertEqual(revision['main']['blob'], self.git('rev-parse', self.main + ':published.md').strip())
++        self.assertEqual(revision['staging']['blob'], self.git('rev-parse', self.stage + ':published.md').strip())
++        self.assertEqual(revision['main']['mode'], '100644')
++        self.assertEqual(revision['main_action'], 'retain-published')
++        self.assertEqual(revision['staging_action'], 'preserve-exact')
++        self.assertEqual(before, self.git('status', '--porcelain=v1', '--untracked-files=all'))
++
++    def test_unknown_delta_or_stale_classification_blocks_without_partial_output(self):
++        original = json.loads(json.dumps(self.plan))
++        for mutation in ('unknown', 'stale'):
++            with self.subTest(mutation=mutation):
++                self.plan = json.loads(json.dumps(original))
++                if mutation == 'unknown':
++                    (self.root / 'unknown.txt').write_text('unclassified\n')
++                    self.commit()
++                    self.plan['staging'] = self.git('rev-parse', 'HEAD').strip()
++                else:
++                    self.plan['classifications']['absent.md'] = {'category': 'engineering', 'owner': 'common'}
++                result = self.invoke()
++                self.assertNotEqual(result.returncode, 0)
++                self.assertEqual(result.stdout, '')
++                self.assertIn('classification', result.stderr.lower())
++                self.plan = original
++
++    def test_overlapping_or_incomplete_candidate_ownership_blocks(self):
++        original = json.loads(json.dumps(self.plan))
++        for mutation in ('overlap', 'missing', 'masquerade'):
++            with self.subTest(mutation=mutation):
++                self.plan = json.loads(json.dumps(original))
++                if mutation == 'overlap':
++                    self.plan['candidates'][1]['paths'].append('A.md')
++                elif mutation == 'missing':
++                    self.plan['candidates'][0]['paths'] = []
++                else:
++                    self.plan['classifications']['A.md'] = {'category': 'engineering', 'owner': 'common'}
++                result = self.invoke()
++                self.assertNotEqual(result.returncode, 0)
++                self.assertEqual(result.stdout, '')
++                self.assertIn('ownership', result.stderr.lower())
++
++    def test_open_pr_is_not_landed_and_shared_patch_is_exact(self):
++        self.plan['classifications']['engine.py']['shared'] = True
++        self.plan['prerequisites'] = [
++            {'pr': 20, 'state': 'OPEN', 'target': 'main', 'merge_commit': None,
++             'head': self.stage},
++            {'pr': 21, 'state': 'MERGED', 'target': 'staging', 'merge_commit': self.stage,
++             'head': self.stage},
++        ]
++        result = self.invoke()
++        self.assertEqual(result.returncode, 0, result.stderr)
++        report = json.loads(result.stdout)
++        self.assertEqual([p['landed_by_observation_and_ancestry'] for p in report['prerequisites']], [False, True])
++        engine = next(r for r in report['delta'] if r['path'] == 'engine.py')
++        self.assertIn('+print("engineering")', engine['patch'])
++        self.assertIn('new file mode 100644', engine['patch'])
++
++    def test_unpinned_or_self_asserted_trust_input_is_rejected(self):
++        original = json.loads(json.dumps(self.plan))
++        for mutation in ('short-pin', 'branch-pin', 'trusted', 'role', 'category', 'duplicate-json'):
++            with self.subTest(mutation=mutation):
++                self.plan = json.loads(json.dumps(original))
++                if mutation == 'short-pin':
++                    self.plan['main'] = self.main[:8]
++                elif mutation == 'branch-pin':
++                    self.plan['main'] = 'HEAD'
++                elif mutation == 'trusted':
++                    self.plan['trusted_policy'] = True
++                elif mutation == 'role':
++                    self.plan['target_role'] = 'permissive'
++                elif mutation == 'category':
++                    self.plan['classifications']['engine.py']['category'] = 'anything'
++                else:
++                    policy = self.root.parent / (self.root.name + '-duplicate.json')
++                    self.addCleanup(policy.unlink, missing_ok=True)
++                    policy.write_text(json.dumps(self.plan)[:-1] + ', "main": "HEAD"}')
++                    result = subprocess.run(['python3', str(CLI), 'inventory', '--repo', str(self.root),
++                                             '--classification', str(policy)], text=True, capture_output=True)
++                if mutation != 'duplicate-json':
++                    result = self.invoke()
++                self.assertNotEqual(result.returncode, 0)
++                self.assertEqual(result.stdout, '')
++
++    def test_history_overlays_and_incomplete_history_are_rejected(self):
++        self.git('replace', self.main, self.stage)
++        result = self.invoke()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++        self.git('replace', '-d', self.main)
++        (self.root / '.git/info/grafts').write_text(self.stage + '\n')
++        result = self.invoke()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++        (self.root / '.git/info/grafts').unlink()
++        (self.root / '.git/shallow').write_text(self.stage + '\n')
++        result = self.invoke()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++
++    def test_candidate_deletion_retains_published_main_and_records_absence(self):
++        (self.root / 'published.md').unlink()
++        self.commit()
++        self.plan['staging'] = self.git('rev-parse', 'HEAD').strip()
++        result = self.invoke()
++        self.assertEqual(result.returncode, 0, result.stderr)
++        revision = next(r for r in json.loads(result.stdout)['delta'] if r['path'] == 'published.md')
++        self.assertIsNone(revision['staging'])
++        self.assertEqual(revision['main_action'], 'retain-published')
++        self.assertEqual(revision['main']['blob'], self.git('rev-parse', self.main + ':published.md').strip())
++
++    def test_shared_patch_treats_git_metacharacters_as_literal_paths(self):
++        for path, content in [('engine*.py', 'literal-only'), ('engineZ.py', 'other-path')]:
++            (self.root / path).write_text(content + '\n')
++            self.plan['classifications'][path] = {'category': 'engineering', 'owner': 'common', 'shared': True}
++        self.commit()
++        self.plan['staging'] = self.git('rev-parse', 'HEAD').strip()
++        result = self.invoke()
++        self.assertEqual(result.returncode, 0, result.stderr)
++        patch = next(r['patch'] for r in json.loads(result.stdout)['delta'] if r['path'] == 'engine*.py')
++        self.assertIn('+literal-only', patch)
++        self.assertNotIn('+other-path', patch)
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/docs/adr/0008-main-first-engineering-and-shared-staging.md b/docs/adr/0008-main-first-engineering-and-shared-staging.md
+new file mode 100644
+index 0000000..a3d5318
+--- /dev/null
++++ b/docs/adr/0008-main-first-engineering-and-shared-staging.md
+@@ -0,0 +1,37 @@
++# ADR-0008: Main-first engineering with shared staging preview
++
++Status: accepted design; operational activation pending epic 0012 acceptance.
++Date: 2026-10-11
++Authority: owner-approved epic 0012 spec and six-ticket allocation; see that epic's
++approval.md. This ADR grants no merge, deployment or remote-write authority.
++
++## Decision
++
++Engineering ticket branches start from main. An authorized main PR lands the engineering
++change first. The same commits reach staging through a separately validated sync PR;
++there is no second implementation of the engineering fix. Main contains only approved,
++published articles. Staging adds all retained public candidate articles and revisions at
++one shared preview alias. An existing published path can contain a candidate revision.
++
++Staging remains the configured tracker landing target under ADR-0006. Done requires all
++acceptance criteria, actual authorized staging ancestry and approval receipts, plus main
++landing where required. A main-only landing, open sync PR or successful checks cannot
++close the ticket. ADR-0006 and its historical receipts remain unchanged.
++
++Routine sync uses the permanent ticket-owned branch
++`tickets/T-0016/main-to-staging-sync`. Its repeated operational PRs do not allocate or reuse
++that ticket id for new development. Retain the branch after merge; deletion or ownership
++drift blocks activation until identity is checked. New development and conflict repairs
++use separate tickets, branches and approved test plans.
++
++## Consequences and gates
++
++The owner retains separate authority for publication and merges. There is no automatic
++merge. M0 must account for every pinned main/staging difference and receive concrete
++owner approval before policy use. Unknown or overlapping ownership, incomplete ancestry,
++changed candidates and unreviewed successor boundaries block affected preparation.
++
++Historical validator assertions, immutable receipts, published URLs and candidate bytes
++remain protected. A shared current validator selects its role from trusted target/base
++context, never from candidate input. Deployment settings remain unchanged under this epic's
++present authorization; real automation activation requires the separately specified gates.

@@ -1,0 +1,168 @@
+--- round-1/skill-draft/managing-article-publication/references/workflow.md
++++ round-2/skill-draft/managing-article-publication/references/workflow.md
+@@ -3,6 +3,15 @@
+ Apply only the repository's approved version of epic 0012. This draft is not that approval.
+ Use real CLI help/API capabilities; the proposed v2/automation interfaces are not implemented
+ by this document. Existing v1 local behavior remains in local.md, including ancestry refusals.
++Discover the installed interface from repository package scripts, the approved implementation
++record and actual CLI help/version/schema documentation; inspect those read-only. A statement
++that an adapter exists is not a command contract. If an entry point/schema cannot be located,
++report capability-discovery blocked and do not guess arguments. The implementation must
++publish these entry points before this skill can execute the new operations.
++
++Without v2, baseline/sync/publication fallback is inventory and a written plan/PR-description
++draft only, not a constructed workflow-verified patch. Existing independent engineering work
++can still use its own approved implementation process; do not claim this workflow verified it.
+ 
+ ## Shared engineering baseline
+ 
+@@ -23,7 +32,9 @@
+ Start sources from pinned main. Integrate clean topics into staging with explicit merge
+ commits; author feedback goes back to the source topic. Do not merge staging into a source
+ or rewrite a topic already integrated. A topic reachable from staging is not automatically
+-contaminated in v2; its history must still pass the approved admission policy.
++contaminated in v2; its history must still pass the approved admission policy. V1 nevertheless
++rejects a topic already integrated into staging while absent from main: the topic's own commit
++is a staging-only ancestor. Preserve that exact legacy refusal; v2 changes admission explicitly.
+ 
+ V2 requires owner-reviewed M0/registry policy accounting for every candidate/revision, assets
+ and exact dependencies. Examine all non-main commits and shared-content patches. Reject
+@@ -34,13 +45,18 @@
+ 
+ For shared preview, observe the existing alias and deployed commit reviewed by the author.
+ Do not change deployment settings or create per-article deployments as part of this workflow.
+-Without actual served identity, report preview evidence missing; a branch tip is insufficient.
++At that same alias, verify listing/navigation and every registered candidate page/revision
++actually renders the pinned content. Missing/wrong candidate content fails website verification.
++Without actual served identity or website access, report the check blocked; a branch tip is insufficient.
+ 
+ ## Main-to-staging sync
+ 
+ Read current refs, not event payload alone. Main already contained in staging means no-op.
+ Otherwise compute an independent merge in disposable storage, validate staging role, and
+-preserve every pending candidate. Exact conflict/check failures stop without target mutation.
++preserve every pending candidate. Compare all pending modes/blobs/metadata against the pinned
++registry; any change blocks readiness even if Git merged without conflict. Update source and
++registry explicitly and renew affected author approval before retrying. Exact conflict/check
++failures stop without target mutation.
+ 
+ Use the designated permanent ticket-owned operational branch and at most one owned open
+ sync PR. Verify branch/PR identity before updates; no force push, unrelated branch reuse or
+@@ -63,12 +79,17 @@
+ registry/policy, reconstructed tree and the actual preview deployment reviewed. Rebuild from
+ current main plus that article and exact reviewed dependencies; never promote all of staging.
+ Shared listing/config paths need content review, not folder/path permission alone. Exclude
+-every unselected body/revision, route, listing/search/RSS entry and exclusive public asset.
++every unapproved addition/revision relative to pinned main, including routes, listing/search/RSS
++entries and exclusive public assets. Preserve the baseline published versions of unselected
++articles, including their existing routes/listings/assets.
+ 
+ Independently verify complete source modes/hashes/diff, then use the existing reviewed
+ toolchain under an enforced no-network build boundary. Missing isolation/runtime stays
+ blocked. Record the actual build separately from output scanning; signatures are only
+-supplementary, and missing signatures mean exclusion-unverified. Preserve permitted immutable
++supplementary, and missing signatures mean exclusion-unverified. V2 PR-ready requires all
++source/admission/approval/build/output checks to pass; failed, missing, blocked or exclusion-unverified
++required checks block readiness, with no implicit override. A scan pass alone is insufficient.
++Preserve permitted immutable
+ baseline aliases as data; reject new links, submodules and escaping/executable includes.
+ 
+ Drift of source/main/dependencies/policy/tree or reviewed deployment binding expires approval
+--- round-1/spec.en.md
++++ round-2/spec.en.md
+@@ -81,7 +81,9 @@
+ 
+ - Keep the version-1 CLI schema, semantics and historical fixtures unchanged. Add an explicit
+   version-2 plan/admission interface; unsupported versions fail. It must not reinterpret a
+-  version-1 success or change its intentional local-only publication flag.
++  version-1 success or change its intentional local-only publication flag. Publish supported
++  operation entry points, version/help and schema documentation before skill execution;
++  missing interface discovery blocks execution rather than inviting guessed commands.
+ - A trusted registry inventories **all** unapproved staging articles/revisions and their
+   exclusive assets, exact source commits and shared dependencies. It binds full commit ids,
+   per-path modes/blob hashes and reviewed content patches for shared paths. Registry input
+@@ -111,6 +113,10 @@
+   Otherwise compute an independent merge of those pins in disposable storage and validate
+   it as staging. Conflict or verification failure leaves target refs unchanged and reports
+   exact paths/checks. Never choose ours/theirs automatically.
++  Compare every unapproved candidate mode/blob/metadata in the proposed result to the pinned
++  registry, including revisions on published paths. A difference blocks readiness even when
++  Git reports a clean merge and the independent merge tree matches. First explicitly update
++  the source and reviewed registry, renew affected author approval, then prepare on new pins.
+ - After the ticket breakdown is approved, designate one permanent ticket branch for routine
+   synchronization. Reuse that exact branch for operational runs, never for unrelated feature
+   work; implementation and conflict repairs use their own ticket branches. This preserves
+@@ -169,6 +175,13 @@
+   inventory separately. Scan every output file for unselected routes/listing/search/RSS
+   references and exclusive assets. Source reconstruction and reviewed build are primary;
+   signature scans are supplementary, and missing signatures mean exclusion-unverified.
++  Baseline published routes/listings/assets remain allowed: exclusion concerns only content
++  newly introduced by an unselected candidate relative to pinned main, including revisions.
++  V2 PR-ready requires successful source/admission/approval checks, an actual isolated build,
++  and an output scan pass with no detected exclusion and no exclusion-unverified result.
++  Any failed, blocked, missing or exclusion-unverified required check blocks PR-ready; a
++  successful supplementary scan alone is never sufficient. This conservative v2 gate can
++  block short revisions without detectable signatures; there is no implicit manual override.
+   A missing runtime or enforced boundary blocks that check, never grants a pass.
+ - Final ref/candidate drift invalidates preparation and readiness. Changes to any approval
+   binding require renewed approval for the new exact publication candidate. Commit, push
+@@ -206,11 +219,11 @@
+ | AC-02 | Baseline main diff contains only individually approved engineering/management changes; no unapproved body/revision, listing or exclusive asset enters main. Staging preserves every inventoried unapproved blob/mode/metadata except separately approved edits. |
+ | AC-03 | Every historical fixture/assertion still yields its original result, including v1 ancestry rejection; shared current validation uses trusted target roles and only exact reviewed successor boundaries. |
+ | AC-04 | V2 accepts clean registered A already merged into staging; it rejects staging integration ancestors, B history even after revert, unknown/omitted candidates, invalid ownership, stale pins and unapproved legacy reconstruction. A reviewed legacy migration preserves old evidence. |
+-| AC-05 | Clean sync produces the independently computed validated tree in one owned staging PR; already-synced input is no-op. Conflicts, branch mismatch, drift, failed checks and three exhausted retries produce no target mutation or duplicate PR. |
++| AC-05 | Clean sync produces the independently computed validated tree in one owned staging PR; already-synced input is no-op. Conflicts, candidate blob/mode/metadata changes (even conflict-free), branch mismatch, drift, failed checks and three exhausted retries produce no readiness, target mutation or duplicate PR. |
+ | AC-06 | Concurrency/coalescing and ambiguous API outcomes are exercised; latest pins are re-read, unrelated branches/PRs remain untouched, and no run merges, force-pushes or changes deployment settings. |
+ | AC-07 | Validation readiness requires an actual trusted successful run for exact base/head/tree/policy. Suppressed triggers, missing/denied/stale runs, writer-token exposure or absent activation prerequisites cannot produce readiness. |
+-| AC-08 | Selecting A reconstructs main plus approved A/dependencies only. B's unpublished revision, routes, listing/search/RSS entries and exclusive public assets are excluded at source and checked at output; protected URLs/bytes remain. Tampering or missing build isolation/evidence blocks the corresponding readiness check. |
+-| AC-09 | Approval and readiness expire on binding drift. PR, main landing and deployed/served verification have distinct receipts. Sync preserves remaining candidates; rollback/re-publication preserve unrelated publications and require fresh authority. |
++| AC-08 | Selecting A reconstructs main plus approved A/dependencies only. Baseline B published content/routes/listings/assets remain allowed; only B's unapproved additions/revision output are excluded. PR-ready requires every source/admission/approval/build/output check to pass; failed, blocked, missing or exclusion-unverified results block it. A scan pass alone is insufficient. |
++| AC-09 | Approval and readiness expire on binding drift. One existing staging alias exposes all registered candidate pages and revisions with correct listing/navigation and rendered pinned content, or website verification is blocked. PR, main landing and deployed/served verification have distinct receipts. Sync preserves remaining candidates; rollback/re-publication preserve unrelated publications and require fresh authority. |
+ | AC-10 | The draft skill chooses existing v1 local preparation or proposed workflow correctly, refuses unavailable/unauthorized remote actions and survives representative forward evaluation. Future installation preserves four product packages and both runtimes. No ticket reaches done solely from main landing or PR readiness. |
+ 
+ ## Testing Decisions
+--- round-1/test-plan.md
++++ round-2/test-plan.md
+@@ -19,19 +19,19 @@
+ | P06 | E,N | Refresh main, source main-merge, explicit dependency and conflict-resolution variants; truncate history or introduce unknown merge | Valid reviewed main refresh works with new pins; stale/unknown/incomplete/unreviewed merge fails | 04 |
+ | P07 | E,N | Omit B or B asset/revision; overlap ownership; put B text in a permitted shared index patch | Inventory/ownership mismatch fails; shared path permission cannot admit undeclared B content | 01,04,08 |
+ | P08 | E,N | Legacy mixed source; reconstruction with/without exact original/new pin and owner migration approval | Unapproved reconstruction blocked; approved provenance accepts only reviewed bytes; old fixture unchanged | 03,04 |
+-| P09 | E,N | Clean main→staging merge, already-synced graph, content conflict and validator failure | Independent result tree equals sync tree; no-op creates no PR; failures preserve both target refs | 05 |
++| P09 | E,N | Clean merge, already-synced graph, conflict/check failure, and main/B-candidate edits to different paragraphs of one published article | Valid tree equals independent merge; no-op creates no PR; even conflict-free changes to registered candidate modes/blobs/metadata block readiness and preserve targets | 05 |
+ | P10 | N,A | Repeat same event, coalesce main events, advance stage during validation; wrong owned branch and closed/open PR variants | Latest pins read; one owned open PR maximum; stale result reruns; no force/unrelated mutation | 05,06 |
+ | P11 | N,A | Concurrent preview/publication/sync writers and manual drift; simulate accepted-but-lost API response, 403, timeout | Participating writers serialized; readback before retry; at most three retries; no duplicate or target mutation | 05,06 |
+ | P12 | A | Suppressed push check, dispatch acknowledgment only, stale/failed/missing run; candidate shell payload/policy edit/token access | Exact trusted run required; no readiness for these failures; no shell execution or writer-token exposure | 03,07 |
+ | P13 | R | Separately authorize test-repository exercise of token scope, dispatch/run identity and protected latest-base checks; race base/head | Actual remote receipts prove conditions, or activation blocked; no main/staging merge in production | 07,09 |
+ | P14 | E,N | Select A; B is both a new article and an unpublished change to an existing article; include exact dependency | Whole candidate manifest equals main plus only approved A/dependency changes; B body/assets absent, published state retained | 02,08 |
+-| P15 | E,N | Build fixtures containing unauthorized B listing, custom route, search/RSS data and exclusive public assets | Source mismatch or supplemental output detection fails; no exclusion claim from homepage-only inspection | 08 |
++| P15 | E,N | Pair valid baseline B published routes/listings/assets with B revision additions; include unauthorized listing, custom route, search/RSS data and exclusive public assets | Baseline B output allowed; unapproved additions fail source or supplemental output checks; homepage-only inspection insufficient | 08 |
+ | P16 | E,N | Tamper receipt/blob/mode, add symlink/submodule, escaping include or executable import; fail enforced isolation sentinel | Verify/build readiness fails; no external read/write/network; source checkout and dirty files preserved | 07,08 |
+-| P17 | E,N | Reviewed isolated real VitePress build; absent runtime/isolation, missing output signatures, forged inventory | Separate actual build and scan receipts; failures blocked or exclusion-unverified; no installation | 08 |
++| P17 | E,N | Reviewed isolated real VitePress build; absent runtime/isolation, missing output signatures, forged inventory | Separate actual build and scan receipts; failed/missing/blocked/exclusion-unverified required result blocks PR-ready; scan alone insufficient; no installation | 08 |
+ | P18 | E,N,A | Approve exact served preview and candidate; advance source/dependency/main/policy/head/tree; model head-only merge guard and observed tree mismatch | Binding changes expire approval/readiness; latest base enforced before activation; observed mismatch incident, no landing success claim | 09 |
+-| P19 | W | Observe existing staging alias and served SHA, later authorized production SHA/URL/listing after landing | Actual HTTP/browser evidence identifies deployed version; branch tip, local build or stale alias cannot substitute | 09 |
++| P19 | W | At one existing staging alias, open A/B candidate pages, the candidate revision at a published path, listing and navigation; later inspect authorized production | Actual HTTP/browser evidence matches pinned rendered revisions and served SHA; missing candidate/listing/wrong revision fails; unavailable website blocks; branch tip/local build cannot substitute | 09 |
+ | P20 | E,N | Land A in fixture graph, sync staging with B; introduce new A revision; reviewed revert/re-publication with unrelated published C | Only landed A identity retired; B/new A remain; revert/re-publication use current pins and preserve C | 09 |
+-| P21 | S | Independently exercise draft skill on local preview, A-only PR request, sync conflict and missing-v2 workflow | Correct scope and mode; preserved local path; unavailable/unauthorized actions stop without fabricated commands or receipts | 10 |
++| P21 | S | Independently exercise draft skill on local preview, A-only PR request, sync conflict and missing-v2/interface workflow | Correct scope and mode; preserved local path; inventory-only fallback stated; unavailable/unauthorized actions stop without fabricated commands or receipts | 10 |
+ | P22 | E,S | Validate draft; compare retained references; after authorized implementation materialize both runtimes and inspect discovery | Draft frontmatter/references valid; old references identical; future four-package catalog and invocation policy preserved | 03,10 |
+ | P23 | E,N | Main-only landing, sync PR-ready, actual stage ancestor+approval, article preview-only states | Done refused until actual authorized staging ancestry and all ticket ACs; additional publication/main receipts as specified | 10 |
+ | P24 | E,S | Diff/status audit of this planning round and future dry-run refusal cases | Only new epic planning/draft artifacts; no tickets, deployment/active skills/config, implementation, commits or remote writes | 06,10 |
+--- round-1/traceability.md
++++ round-2/traceability.md
+@@ -19,6 +19,7 @@
+ | Registry | all articles/revisions, assets, shared paths | inventory → admission | unknown/omitted/overlapping entries block | 01,04,08 | P01,P07 |
+ | Legacy | old/new source, paths/hashes, approval | contaminated history → migrated source | explicit new provenance; old rejection remains | 03,04 | P08 |
+ | Sync | current pins and expected tree | main event → disposable merge | compute/validate independently; ignore stale event pins | 05,06 | P09,P10 |
++| Sync | conflict-free change to a pending revision | independent merge → staging candidate inventory | any mode/blob/metadata difference blocks; explicit source/registry/approval update first | 05 | P09 |
+ | Sync | ancestry no-op, conflict and failed check | merge → operation result | no-op or exact failure; target unchanged | 05 | P09 |
+ | Sync | ticket branch ownership, non-force updates | operation → branch/PR | one owned branch and one open PR; unrelated objects untouched | 05,06 | P10,P11 |
+ | Sync | coalescing, drift, concurrency | simultaneous operations → writer | serialize participants; re-read latest refs, expire stale result | 06 | P10,P11 |
+@@ -33,6 +34,7 @@
+ | Output | route/search/RSS/prose/public asset | output → exclusion claim | complete scan; signatures supplementary, missing evidence unverified | 08 | P15,P17 |
+ | Approval | source/base/tree/policy/deployed SHA | owner preview → PR readiness | exact binding; drift renews approval | 09 | P18 |
+ | Landing | head/base guards, actual tree | PR → main | readiness distinct from observed landing; mismatch incident | 07,09 | P13,P18 |
++| Website | all candidate/revision listing, route and rendered content | staging integration → shared alias | all registered candidates visible with correct pinned revisions; absent evidence blocked | 09 | P19 |
+ | Website | staging/production served identity | Git/build → browser/HTTP | observed deployed commit only; URL/tip alone insufficient | 09 | P19 |
+ | Lifecycle | selected identity, new revision, remaining B | main landing → staging/registry | preserve article/B; retire only landed revision | 09 | P20 |
+ | Recovery | revert and re-publication | current main → new PR | new pins/authority, preserve unrelated publications | 09 | P20 |
