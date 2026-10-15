@@ -1,0 +1,127 @@
+{
+  "tests": 221,
+  "suite_counts": [
+    95,
+    116,
+    10
+  ],
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "exit_code": 0,
+  "source_common_checkpoint": 878,
+  "unit": 87,
+  "unit_files": 8,
+  "lint": "pass-zero-warnings",
+  "native": "pass-staging-50candidate",
+  "structure": "pass",
+  "materializer": {
+    "generated": 178,
+    "sources": 56
+  },
+  "actual_staging_build": {
+    "status": "pass",
+    "output_files": 143,
+    "isolation": {
+      "inside": true,
+      "outside_read": "denied",
+      "outside_write": "denied",
+      "network": "denied"
+    }
+  },
+  "T0016": "review",
+  "P13": "unverified",
+  "surface": "Actual local CLI and enforced build only; no real CI/dispatch/production claim",
+  "projections": [
+    [
+      "/private/tmp/0x1dea-T0016-stage-sync",
+      "<staging-sync-checkout>"
+    ],
+    [
+      "/private/tmp/T16-stage-sync-build.py",
+      "<local-build-driver>"
+    ],
+    [
+      "/Users/phoenix/dev/online-notes/0x1DEA",
+      "<existing-product-checkout>"
+    ],
+    [
+      "/Users/phoenix/.nvm/versions/node/v24.13.0",
+      "<existing-node-24.13.0>"
+    ]
+  ],
+  "artifacts": {
+    "full-python.txt": {
+      "original_sha256": "b7a9f5a818d252bad2d6be5795e271a9f8d9af98c01c254b0d58688b09516b3f",
+      "published_sha256": "b7a9f5a818d252bad2d6be5795e271a9f8d9af98c01c254b0d58688b09516b3f",
+      "bytes": 40363,
+      "observed_result": "pass"
+    },
+    "unit.txt": {
+      "original_sha256": "02df26c6dd5618c3301a0c2cd486a0912374849de0665faab19071ac75bc4d1c",
+      "published_sha256": "0ee8a9cc7965c9fa548f35295f1da0f23f0576356cbe628382c86eac579bf125",
+      "bytes": 715,
+      "observed_result": "pass"
+    },
+    "lint.txt": {
+      "original_sha256": "313be717f7eb2f4db01aea3591e3c51d01d461f4f425a74a56d5a860434ec867",
+      "published_sha256": "d5df5b4cdc0c1880d818f3fb97baedb942baf69b66562778300eaaa7a1a6f3a2",
+      "bytes": 189,
+      "observed_result": "pass"
+    },
+    "native-checkpoint.json": {
+      "original_sha256": "d6f28944e572a2f2789a4dd4de3f1b62fc2a264fed377bc9c3201bc37e14b9a7",
+      "published_sha256": "d6f28944e572a2f2789a4dd4de3f1b62fc2a264fed377bc9c3201bc37e14b9a7",
+      "bytes": 5971,
+      "observed_result": "pass"
+    },
+    "structure.txt": {
+      "original_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "published_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "bytes": 210,
+      "observed_result": "pass"
+    },
+    "materializer.txt": {
+      "original_sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382",
+      "published_sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382",
+      "bytes": 172,
+      "observed_result": "pass"
+    },
+    "build.json": {
+      "original_sha256": "2b2dddf0ae3a40e66183cce6371a0d317ad5d2ce8bd8ab98447e66759c0a3b13",
+      "published_sha256": "ba119b12002fd6a28ae60b63f510821949fd363acc683249c770619c59a38919",
+      "bytes": 25695,
+      "observed_result": "pass"
+    },
+    "build.txt": {
+      "original_sha256": "a4a19ffcd691aec22267cab293a6e165ff42e9abd4cae9e0344c9f25aacb606d",
+      "published_sha256": "a4a19ffcd691aec22267cab293a6e165ff42e9abd4cae9e0344c9f25aacb606d",
+      "bytes": 195,
+      "observed_result": "pass"
+    },
+    "trusted-validation-build.json": {
+      "original_sha256": "c0dc888ee876e8f5acc50167ad27e6df7542d7aabcf91e9e524518f7ae6a061c",
+      "published_sha256": "158ca1de5397609c4ff48c50ba5ce8d3bc285ae8771638d2df594dfe5ef15372",
+      "bytes": 33886,
+      "observed_result": "pass"
+    },
+    "source-audit.json": {
+      "original_sha256": "c88844f662e30a0186f7e31e0d55d93fd19d86a841df7ce7291a2f5c52671d73",
+      "published_sha256": "c88844f662e30a0186f7e31e0d55d93fd19d86a841df7ce7291a2f5c52671d73",
+      "bytes": 934,
+      "observed_result": "verified-source-audit"
+    },
+    "attempts/outer-sandbox-build-blocked.txt": {
+      "original_sha256": "4f5a4d4bc0372e91c4b9f2569e8dd1f73de94d0dcd404b7be5b3f8451a565aff",
+      "published_sha256": "98599d532c04c4433856a4d0359b0379b716054cd9ed21cb27e6396527f3b302",
+      "bytes": 727,
+      "observed_result": "blocked-exit1"
+    },
+    "attempts/python-interrupted.txt": {
+      "original_sha256": "a9ed03f1826d6c5aa29fda786aaa13cbcf61f5a36bf60d01f85d0a81060d19c1",
+      "published_sha256": "08ab8dbed52bab2874e4079f62ce07506f9ff1c0e8ed4e7772c6761b59ba5d16",
+      "bytes": 5735,
+      "observed_result": "interrupted-exit130"
+    }
+  }
+}

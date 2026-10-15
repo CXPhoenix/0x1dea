@@ -2,7 +2,8 @@
 id: T-0014
 title: Prepare and verify one article through the explicit v2 contract
 epic: 0012-publication-workflow
-status: review
+status: done
+landing_evidence: .proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0014-landing.json
 blocked_by: [T-0013]
 ---
 
@@ -86,3 +87,7 @@ Evidence: implementation/T-0014/main-refresh-20261015 in the epic spec directory
 additional code/security main-refresh reports retain separate review axes. Six actual
 candidates/50 owned paths remain unchanged; synthetic preview approvals are not HTTP
 or real publication evidence. Status remains review; no new landing is claimed.
+
+## 2026-10-16 actual dual-target closeout
+
+The owner conditionally authorized this closure after manually merging PR21. Primary GitHub readbacks and real Git ancestry establish the main landing and staging61292484 landing, whose tree equals reviewed head dbb17ad8. The current acceptance audit and exact receipt are under `.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/`. Prior review/unlanded notes above remain historical checkpoints. Done refers to this ticket's approved engineering acceptance and actual landing, not deployment, remote automation activation or publication. Candidate bytes and immutable contracts remain preserved.

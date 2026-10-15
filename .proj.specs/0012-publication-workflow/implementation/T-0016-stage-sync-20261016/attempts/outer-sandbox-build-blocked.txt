@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<local-build-driver>", line 13, in <module>
+    receipt=boundary.execute(v2.old,{'surface':'current staging sync candidate; not remote CI or deployment','source_paths':len(files)},files,runtime,hashlib.sha256(v2.old.canonical(runtime)).hexdigest(),output,v2.export,v2.physical,lambda files,signatures:{'status':'staging-build-only','scope':'No publication output exclusion claim'},None,staging=True)
+  File "<staging-sync-checkout>/scripts/publication_build_v2.py", line 57, in execute
+    listener = socket.socket(); listener.bind(('127.0.0.1', 0)); listener.listen()
+                                ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted

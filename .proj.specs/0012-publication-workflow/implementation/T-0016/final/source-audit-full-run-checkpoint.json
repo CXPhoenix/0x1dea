@@ -1,0 +1,16 @@
+{
+  "main": "5e6c889c808e7ef4cb83493bf06f8a70dd055b41",
+  "staging": "612924848ca13663bb2af64e32638fbabedb1685",
+  "main_blog_paths": 73,
+  "staging_blog_paths": 111,
+  "candidate_paths": 50,
+  "protected_history_paths": 376,
+  "common_paths": 849,
+  "unchanged_v1_helpers_and_original_assertions": true,
+  "live_fixture_assertions_preserved": {
+    "tests/article_publication/test_closed_baseline.py": 11,
+    "tests/article_publication/test_closeout_successor.py": 17
+  },
+  "new_stage_candidate_or_deployment_delta": false,
+  "scope": "Physical current source at full-run checkpoint; policy digest/count is a checkpoint, not a self-referential final map."
+}

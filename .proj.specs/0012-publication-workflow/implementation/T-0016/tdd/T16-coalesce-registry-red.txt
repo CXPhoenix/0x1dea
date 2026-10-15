@@ -1,0 +1,32 @@
+test_accepted_but_lost_response_is_read_back_without_duplicate (test_remote_sync.RemoteSyncTests.test_accepted_but_lost_response_is_read_back_without_duplicate) ... ok
+test_contained_main_noop_does_not_create_branch_or_pull (test_remote_sync.RemoteSyncTests.test_contained_main_noop_does_not_create_branch_or_pull) ... ok
+test_denied_or_unobserved_outcome_never_creates_duplicate (test_remote_sync.RemoteSyncTests.test_denied_or_unobserved_outcome_never_creates_duplicate) ... ok
+test_drift_coalesces_latest_pins_and_is_bounded (test_remote_sync.RemoteSyncTests.test_drift_coalesces_latest_pins_and_is_bounded) ... ok
+test_github_branch_update_is_only_owned_nonforce_ref (test_remote_sync.RemoteSyncTests.test_github_branch_update_is_only_owned_nonforce_ref) ... ok
+test_github_dispatch_treats_all_inputs_as_json_data (test_remote_sync.RemoteSyncTests.test_github_dispatch_treats_all_inputs_as_json_data) ... ok
+test_github_resources_bind_existing_commit_run_and_pull (test_remote_sync.RemoteSyncTests.test_github_resources_bind_existing_commit_run_and_pull) ... ok
+test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) ... ok
+test_only_exact_observed_trusted_success_satisfies_validation (test_remote_sync.RemoteSyncTests.test_only_exact_observed_trusted_success_satisfies_validation) ... ok
+test_real_local_preparation_builds_only_independent_tree_without_source_writes (test_remote_sync.RemoteSyncTests.test_real_local_preparation_builds_only_independent_tree_without_source_writes) ... FAIL
+test_repeat_event_updates_at_most_one_owned_pull (test_remote_sync.RemoteSyncTests.test_repeat_event_updates_at_most_one_owned_pull) ... ok
+test_shared_lock_serializes_sync_and_other_participating_writer (test_remote_sync.RemoteSyncTests.test_shared_lock_serializes_sync_and_other_participating_writer) ... ok
+test_supported_cli_schema_and_inert_run_need_no_credentials (test_remote_sync.RemoteSyncTests.test_supported_cli_schema_and_inert_run_need_no_credentials) ... ok
+test_transport_keeps_payload_out_of_shell_and_filters_credentials (test_remote_sync.RemoteSyncTests.test_transport_keeps_payload_out_of_shell_and_filters_credentials) ... ok
+test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) ... ok
+
+======================================================================
+FAIL: test_real_local_preparation_builds_only_independent_tree_without_source_writes (test_remote_sync.RemoteSyncTests.test_real_local_preparation_builds_only_independent_tree_without_source_writes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 190, in test_real_local_preparation_builds_only_independent_tree_without_source_writes
+    self.assertEqual(refreshed['status'],'ready')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'stale' != 'ready'
+- stale
++ ready
+
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.671s
+
+FAILED (failures=1)

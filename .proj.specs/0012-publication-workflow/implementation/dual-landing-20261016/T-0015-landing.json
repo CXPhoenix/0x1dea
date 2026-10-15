@@ -1,0 +1,14 @@
+{
+  "ticket": "T-0015",
+  "authorized": true,
+  "landed": true,
+  "target": "staging",
+  "commit": "612924848ca13663bb2af64e32638fbabedb1685",
+  "main_commit": "87740186f2a1b57f8c1df89f36647cbe3663f428",
+  "approval_receipt": ".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/approval.md",
+  "main_pr": 26,
+  "staging_pr": 21,
+  "main_mergedAt": "2026-10-15T15:00:46Z",
+  "staging_mergedAt": "2026-10-15T16:35:52Z",
+  "scope": "Actual reviewed engineering/management landing only; no deployment or real article publication claim"
+}

@@ -1,0 +1,6 @@
+test_actual_dual_target_closeout_is_accepted (test_landed_closeout.LandedCloseoutTests.test_actual_dual_target_closeout_is_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 13.911s
+
+OK

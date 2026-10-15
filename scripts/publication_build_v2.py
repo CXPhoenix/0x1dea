@@ -8,7 +8,7 @@ import subprocess
 import tempfile
 
 
-def execute(old, verified, files, runtime, runtime_digest, output, export, physical, scan, signature_values):
+def execute(old, verified, files, runtime, runtime_digest, output, export, physical, scan, signature_values, *, staging=False):
     old.exact(runtime, ('version', 'node', 'node_version', 'dependencies'))
     if runtime['version'] != 1 or runtime['node_version'] != 'v24.13.0':
         raise old.Invalid('reviewed Node 24.13.0 runtime required; no installation')
@@ -16,6 +16,10 @@ def execute(old, verified, files, runtime, runtime_digest, output, export, physi
     if not node.is_file() or not dependencies.is_dir():
         raise old.Invalid('reviewed runtime unavailable')
     clean = {'PATH': str(node.parent) + ':/usr/bin:/bin', 'LANG': 'en_US.UTF-8'}
+    if type(staging) is not bool:
+        raise old.Invalid('trusted staging mode must be boolean')
+    if staging:
+        clean['CF_PAGES_BRANCH'] = 'staging'
     version = subprocess.run([str(node), '--version'], capture_output=True, text=True, env=clean)
     if version.returncode or version.stdout.strip() != runtime['node_version']:
         raise old.Invalid('reviewed runtime identity/version mismatch')

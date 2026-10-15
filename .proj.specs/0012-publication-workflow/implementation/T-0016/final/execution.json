@@ -1,0 +1,141 @@
+{
+  "full_python": {
+    "main": {
+      "suite_counts": [
+        66,
+        116,
+        10
+      ],
+      "tests": 192,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "source_checkpoint_common_paths": 849
+    },
+    "stage": {
+      "suite_counts": [
+        95,
+        116,
+        10
+      ],
+      "tests": 221,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "source_checkpoint_common_paths": 849
+    }
+  },
+  "unit": {
+    "main": 54,
+    "staging": 87
+  },
+  "lint": {
+    "main": "pass-zero-warnings",
+    "staging": "pass-zero-warnings"
+  },
+  "surface": "local public CLI, native validation, enforced VitePress CLI builds; no actual CI/HTTP/production evidence",
+  "full_run_checkpoint_common_paths": 849,
+  "final_changes_after_full_runs": "Evidence, README language and T16 review status only; executable and original test sources unchanged.",
+  "raw_projections": [
+    [
+      "/private/tmp/0x1dea-T0016-stage-verification",
+      "<staging-verification>"
+    ],
+    [
+      "/private/tmp/0x1dea-T0016",
+      "<main-implementation>"
+    ],
+    [
+      "/Users/phoenix/dev/online-notes/0x1DEA",
+      "<existing-product-checkout>"
+    ],
+    [
+      "/Users/phoenix/.nvm/versions/node/v24.13.0",
+      "<existing-node-24.13.0>"
+    ]
+  ],
+  "artifacts": {
+    "full-main.txt": {
+      "original_sha256": "e955aa0e4ae3707eea1bd2a0d333af4e490f7a06007a103e6a43aa7aa95019ef",
+      "published_sha256": "e955aa0e4ae3707eea1bd2a0d333af4e490f7a06007a103e6a43aa7aa95019ef",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "full-staging.txt": {
+      "original_sha256": "a48483bd99e6d8db36cda2b11c9a9d1cd0ac5ba800ec5c445abfd750ec31d8d9",
+      "published_sha256": "a48483bd99e6d8db36cda2b11c9a9d1cd0ac5ba800ec5c445abfd750ec31d8d9",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "unit-main.txt": {
+      "original_sha256": "731fc33315951f9a369a7518609f098b64b6361cef61d0120abeab32f0cfd738",
+      "published_sha256": "168a4b1ddbe67f9e98587246791d225500f40414c16b4f08b7b74ed764924449",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "unit-staging.txt": {
+      "original_sha256": "782cdf41f96907869d42784dbe0064a59093cc99010dffd63dee8b3b79286815",
+      "published_sha256": "c6677c4d1cb7805a59a8d99b03260f818e804a26e1d02f4c2856895267aa2859",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "lint-main.txt": {
+      "original_sha256": "eae75c6bffc04b5e80301f23dae96d4126e86681188ab7057a83a040437395ea",
+      "published_sha256": "9709b6f088e7fad4e50e4cb1008407044c3871f16e2cf76ac5d31508d8c51d23",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "lint-staging.txt": {
+      "original_sha256": "0e34364945003ddafae6597788eb01bd639186a165063d17846ef4e1c662990a",
+      "published_sha256": "77467e32c8764d66ccb00ea389b4b9aa858fa29bf4892c50ec0a268001340478",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "structure-main-checkpoint.txt": {
+      "original_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "published_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "structure-staging-checkpoint.txt": {
+      "original_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "published_sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "materializer-main-checkpoint.txt": {
+      "original_sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+      "published_sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "materializer-staging-checkpoint.txt": {
+      "original_sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382",
+      "published_sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "native-main-checkpoint.json": {
+      "original_sha256": "f57cead3ea8c61a9b7e56b3571d65a86e3f3d2541ffc1c5dd127499acfba6262",
+      "published_sha256": "f57cead3ea8c61a9b7e56b3571d65a86e3f3d2541ffc1c5dd127499acfba6262",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "native-staging-checkpoint.json": {
+      "original_sha256": "2c4586461cd80d80a97ce33693308bd5074fad3fd688f883379bc60d39eb6f51",
+      "published_sha256": "2c4586461cd80d80a97ce33693308bd5074fad3fd688f883379bc60d39eb6f51",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "source-audit-full-run-checkpoint.json": {
+      "original_sha256": "57a6b76fa8898dd25bd91ba1ec2794b4d0e1a076db3970b26cf744ffef5beaeb",
+      "published_sha256": "57a6b76fa8898dd25bd91ba1ec2794b4d0e1a076db3970b26cf744ffef5beaeb",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "main-isolated-build-checkpoint.json": {
+      "original_sha256": "31099cc0aabd92600d46cfb26b0a87527029bcb0af3136584c95039e8ce31f9f",
+      "published_sha256": "3daeda781793f6d3bc6cec41f1793ba664667aa859929719dc04d7d3eec4418e",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "trusted-full-main-build.json": {
+      "original_sha256": "4efe3d7024888f64ba98bb1b1f5d1676934e6749965b90b3b4584f4ddae786bf",
+      "published_sha256": "10e47e570f92778f79e7c1dcdf4815abff1cc68573723004e98c703f9ddc04b7",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    },
+    "trusted-full-staging-build.json": {
+      "original_sha256": "37b7c328d37510f9a74aad1ed0ff3e4dfff7c3dd6001655d800b4b8774f92148",
+      "published_sha256": "ec4c41c42c9342ace782703c3561d172deb481d3e40c72d58462e72f954e9e1f",
+      "projection": "Only listed literal checkout/runtime paths replaced; all other bytes retained."
+    }
+  }
+}

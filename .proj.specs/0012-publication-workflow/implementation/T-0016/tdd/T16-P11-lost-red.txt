@@ -1,0 +1,71 @@
+test_accepted_but_lost_response_is_read_back_without_duplicate (test_remote_sync.RemoteSyncTests.test_accepted_but_lost_response_is_read_back_without_duplicate) ... 
+  test_accepted_but_lost_response_is_read_back_without_duplicate (test_remote_sync.RemoteSyncTests.test_accepted_but_lost_response_is_read_back_without_duplicate) (method='advance') ... ERROR
+  test_accepted_but_lost_response_is_read_back_without_duplicate (test_remote_sync.RemoteSyncTests.test_accepted_but_lost_response_is_read_back_without_duplicate) (method='dispatch') ... ERROR
+  test_accepted_but_lost_response_is_read_back_without_duplicate (test_remote_sync.RemoteSyncTests.test_accepted_but_lost_response_is_read_back_without_duplicate) (method='create_pull') ... ERROR
+test_contained_main_noop_does_not_create_branch_or_pull (test_remote_sync.RemoteSyncTests.test_contained_main_noop_does_not_create_branch_or_pull) ... ok
+test_drift_coalesces_latest_pins_and_is_bounded (test_remote_sync.RemoteSyncTests.test_drift_coalesces_latest_pins_and_is_bounded) ... ok
+test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) ... ok
+test_repeat_event_updates_at_most_one_owned_pull (test_remote_sync.RemoteSyncTests.test_repeat_event_updates_at_most_one_owned_pull) ... ok
+test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) ... ok
+
+======================================================================
+ERROR: test_accepted_but_lost_response_is_read_back_without_duplicate (test_remote_sync.RemoteSyncTests.test_accepted_but_lost_response_is_read_back_without_duplicate) (method='advance')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 102, in test_accepted_but_lost_response_is_read_back_without_duplicate
+    result = self.run_sync()
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 90, in run_sync
+    return module.run_sync(self.api, prepare, **options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[T16_CHECKOUT]/scripts/publication_remote.py", line 43, in run_sync
+    result = _run_once(api, prepare, repository, policy, activation, authorized)
+  File "[T16_CHECKOUT]/scripts/publication_remote.py", line 90, in _run_once
+    api.advance(head, refs['branch'])
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 100, in lost
+    raise module.RemoteError('transport timeout', uncertain=True)
+          ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publication_remote' has no attribute 'RemoteError'
+
+======================================================================
+ERROR: test_accepted_but_lost_response_is_read_back_without_duplicate (test_remote_sync.RemoteSyncTests.test_accepted_but_lost_response_is_read_back_without_duplicate) (method='dispatch')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 102, in test_accepted_but_lost_response_is_read_back_without_duplicate
+    result = self.run_sync()
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 90, in run_sync
+    return module.run_sync(self.api, prepare, **options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[T16_CHECKOUT]/scripts/publication_remote.py", line 43, in run_sync
+    result = _run_once(api, prepare, repository, policy, activation, authorized)
+  File "[T16_CHECKOUT]/scripts/publication_remote.py", line 96, in _run_once
+    api.dispatch(operation, head)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 100, in lost
+    raise module.RemoteError('transport timeout', uncertain=True)
+          ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publication_remote' has no attribute 'RemoteError'
+
+======================================================================
+ERROR: test_accepted_but_lost_response_is_read_back_without_duplicate (test_remote_sync.RemoteSyncTests.test_accepted_but_lost_response_is_read_back_without_duplicate) (method='create_pull')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 102, in test_accepted_but_lost_response_is_read_back_without_duplicate
+    result = self.run_sync()
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 90, in run_sync
+    return module.run_sync(self.api, prepare, **options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "[T16_CHECKOUT]/scripts/publication_remote.py", line 43, in run_sync
+    result = _run_once(api, prepare, repository, policy, activation, authorized)
+  File "[T16_CHECKOUT]/scripts/publication_remote.py", line 103, in _run_once
+    api.create_pull(operation, head)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 100, in lost
+    raise module.RemoteError('transport timeout', uncertain=True)
+          ^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publication_remote' has no attribute 'RemoteError'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.044s
+
+FAILED (errors=3)
