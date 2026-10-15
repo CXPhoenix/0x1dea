@@ -1,0 +1,19 @@
+test_shared_listing_permission_does_not_admit_unselected_route_or_prose (article_publication.test_v2.V2Tests.test_shared_listing_permission_does_not_admit_unselected_route_or_prose) ... FAIL
+
+======================================================================
+FAIL: test_shared_listing_permission_does_not_admit_unselected_route_or_prose (article_publication.test_v2.V2Tests.test_shared_listing_permission_does_not_admit_unselected_route_or_prose)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 192, in test_shared_listing_permission_does_not_admit_unselected_route_or_prose
+    self.reject(self.v2('prepare', self.root / 'shared-B'), 'unselected')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "ad99cf7c4e8d0def3b6d4c9e55eeb8cccbd7c14e", "files": {"blog/index.md": {"mode": "100644", "sha256": "f96b921e9143b11dfef7d0b3765710c18fdab426d64d98b4cc03893592f28c07"}, "blog/post/A.md": {"mode": "100644", "sha256": "eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737"}}, "mode": "prepare", "plan_sha256": "85c61a293cb30f3b283ff86067cc8d568281f991cac4b26a5e65ef2db3c7b958", "pr_ready": false, "publishable": false, "registry_sha256": "e4c9a2b8aa867620a7c4df6049d48501f8d8bb1ed16126268bf248bb86453813", "version": 2}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.934s
+
+FAILED (failures=1)

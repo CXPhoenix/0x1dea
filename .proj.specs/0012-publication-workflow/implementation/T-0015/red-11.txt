@@ -1,0 +1,56 @@
+test_already_contained_main_returns_noop_without_pr_readiness (test_staging_sync.StagingSyncTests.test_already_contained_main_returns_noop_without_pr_readiness) ... ok
+test_candidate_source_pin_must_own_the_registered_full_identity (test_staging_sync.StagingSyncTests.test_candidate_source_pin_must_own_the_registered_full_identity) ... ok
+test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source (test_staging_sync.StagingSyncTests.test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source) ... ok
+test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob (test_staging_sync.StagingSyncTests.test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob) ... ok
+test_conflict_reports_exact_paths_and_never_materializes_readiness (test_staging_sync.StagingSyncTests.test_conflict_reports_exact_paths_and_never_materializes_readiness) ... ok
+test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected (test_staging_sync.StagingSyncTests.test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected) ... ok
+test_local_pin_advance_expires_receipt_for_main_staging_and_candidate_source (test_staging_sync.StagingSyncTests.test_local_pin_advance_expires_receipt_for_main_staging_and_candidate_source) ... ok
+test_protected_history_check_cannot_be_omitted_or_use_wrong_expected_identity (test_staging_sync.StagingSyncTests.test_protected_history_check_cannot_be_omitted_or_use_wrong_expected_identity) ... ok
+test_registry_requires_complete_unique_candidates_fixed_role_and_strict_schema (test_staging_sync.StagingSyncTests.test_registry_requires_complete_unique_candidates_fixed_role_and_strict_schema) ... ok
+test_schema_and_help_expose_supported_local_operations_without_role_selector (test_staging_sync.StagingSyncTests.test_schema_and_help_expose_supported_local_operations_without_role_selector) ... ok
+test_symlinked_output_parent_cannot_redirect_writes (test_staging_sync.StagingSyncTests.test_symlinked_output_parent_cannot_redirect_writes) ... FAIL
+
+======================================================================
+FAIL: test_symlinked_output_parent_cannot_redirect_writes (test_staging_sync.StagingSyncTests.test_symlinked_output_parent_cannot_redirect_writes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 265, in test_symlinked_output_parent_cannot_redirect_writes
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "checks": [
+    "pinned-source-trees",
+    "independent-git-tree",
+    "full-candidate-identities",
+    "protected-identities",
+    "local-ref-pins"
+  ],
+  "local_ready": true,
+  "main": {
+    "ref": "main",
+    "sha": "57befae24135240a8d88a25c2220896be99a9b56"
+  },
+  "publishable": false,
+  "registry_sha256": "595efccb23b022ef4358ee72ed1ab76f266074e742eab2c1ee92cf150ecbe7b6",
+  "repository": "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-sync-jlps742v/source",
+  "result_tree": "8b70acb0983fbe8938d2a2857813286f0326ad1b",
+  "sources": [
+    {
+      "ref": "candidate/B",
+      "sha": "8d65bfdff106711562a5a4c6871cb59e32132953"
+    }
+  ],
+  "staging": {
+    "ref": "staging",
+    "sha": "8d65bfdff106711562a5a4c6871cb59e32132953"
+  },
+  "status": "ready",
+  "target": "staging",
+  "version": 1
+}
+
+
+----------------------------------------------------------------------
+Ran 11 tests in 6.828s
+
+FAILED (failures=1)

@@ -1,0 +1,55 @@
+{
+  "main": "5e6c889c808e7ef4cb83493bf06f8a70dd055b41",
+  "staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "original_pr21": "a67b8de69f70f794a9e062e3ac50a957688ffa9a",
+  "decisions": [
+    {
+      "path": ".proj.specs/0001-harness-adoption/reports/evidence-closeout-2026-10-11.html",
+      "kind": "merge-conflict",
+      "old_pr21_sha256": "fd55a64bde459a36dec06ba23f6054b72ac0426b54ab71322df51996ee7cd34d",
+      "approved_main_sha256": "1dd711839ebc33dbfca213859ffc91f59bc66868df9e358cd04c0fa4e8bda426",
+      "resolution": "Exact approved current main bytes. Old topic version remains in preserved Git ancestry.",
+      "reason": "Current reviewed canonical historical report/ticket, superseded delivery interpretation remains in old topic history."
+    },
+    {
+      "path": ".proj.specs/0010-main-verification-repair/reports/evidence-closeout-2026-10-11.html",
+      "kind": "merge-conflict",
+      "old_pr21_sha256": "ef2773cc70b7903c589e2cdca15131b2ab3c9c455f4eb1a189879527a22ea618",
+      "approved_main_sha256": "92325fd07e41cebbb3f8e4b43a0f286700d32819cf552c14b48b91e2bcc4dcfe",
+      "resolution": "Exact approved current main bytes. Old topic version remains in preserved Git ancestry.",
+      "reason": "Current reviewed canonical historical report/ticket, superseded delivery interpretation remains in old topic history."
+    },
+    {
+      "path": ".proj.tickets/0010-main-verification-repair/T-0012-ticket-evidence-closeout.md",
+      "kind": "merge-conflict",
+      "old_pr21_sha256": "f88f492a58b25850007d138e73a8a128e43ab7e3c0ac767669f683ab044178d4",
+      "approved_main_sha256": "a1012bcba430ac057747f8245d1d44d85ad1877e5ca00157b81819a045e1f4ec",
+      "resolution": "Exact approved current main bytes. Old topic version remains in preserved Git ancestry.",
+      "reason": "Current reviewed canonical historical report/ticket, superseded delivery interpretation remains in old topic history."
+    },
+    {
+      "path": "scripts/verify-harness-adoption.py",
+      "kind": "merge-conflict",
+      "old_pr21_sha256": "86b6f7ea72a3b0bc17d303db471a94c104860a810c73014ef16e152872cad3d2",
+      "approved_main_sha256": "7b67c4291569c5d4436c0c3bbf11df78a1daaf4d0550c55b2184f40163aaf5a7",
+      "resolution": "Exact approved current main bytes. Old topic version remains in preserved Git ancestry.",
+      "reason": "Current reviewed shared dispatcher and immutable helper/assertions"
+    },
+    {
+      "path": "scripts/main_publication_verification.py",
+      "kind": "obsolete-auto-merged-patch",
+      "old_pr21_sha256": "6586bce95c5484f090a4455c0a2e733636aeb430be5f9022ab7085dba0ce41a6",
+      "approved_main_sha256": "6fe08fedc10407bdde8d19305664e4e989de97fd34882d19dba1caee049ec2c6",
+      "resolution": "Exact approved current main bytes. Old topic version remains in preserved Git ancestry.",
+      "reason": "Current reviewed shared dispatcher and immutable helper/assertions"
+    },
+    {
+      "path": "tests/harness_adoption/test_main_release.py",
+      "kind": "obsolete-auto-merged-patch",
+      "old_pr21_sha256": "b79597cbba1513d772ca07dedd6f7ec046bda06e1544052487d649d43ba251c5",
+      "approved_main_sha256": "85cd82f6c5bba7a9ae2d1253f6f22f763fb66fea3879847c17386161d9da7c7c",
+      "resolution": "Exact approved current main bytes. Old topic version remains in preserved Git ancestry.",
+      "reason": "Current reviewed shared dispatcher and immutable helper/assertions"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "path": "blog/index.md",
+    "operation": "verify already prepared bundle",
+    "exit": 1,
+    "stderr": "ARTICLE-PUBLICATION-V2: source blob object identity mismatch",
+    "refs_unchanged": true
+  },
+  {
+    "path": "blog/post/A.md",
+    "operation": "verify already prepared bundle",
+    "exit": 1,
+    "stderr": "ARTICLE-PUBLICATION-V2: source blob object identity mismatch",
+    "refs_unchanged": true
+  },
+  {
+    "path": "blog/post/B.md",
+    "operation": "verify already prepared bundle",
+    "exit": 1,
+    "stderr": "ARTICLE-PUBLICATION-V2: source blob object identity mismatch",
+    "refs_unchanged": true
+  }
+]

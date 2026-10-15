@@ -1,0 +1,6 @@
+test_exact_declared_dependency_is_included_and_undeclared_dependency_refused (article_publication.test_v2.V2Tests.test_exact_declared_dependency_is_included_and_undeclared_dependency_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.482s
+
+OK

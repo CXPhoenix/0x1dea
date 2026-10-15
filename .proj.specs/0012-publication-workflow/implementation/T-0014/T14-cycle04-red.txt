@@ -1,0 +1,19 @@
+test_omitting_B_from_trusted_registry_blocks_full_staging_inventory (article_publication.test_v2.V2Tests.test_omitting_B_from_trusted_registry_blocks_full_staging_inventory) ... FAIL
+
+======================================================================
+FAIL: test_omitting_B_from_trusted_registry_blocks_full_staging_inventory (article_publication.test_v2.V2Tests.test_omitting_B_from_trusted_registry_blocks_full_staging_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 93, in test_omitting_B_from_trusted_registry_blocks_full_staging_inventory
+    self.reject(self.v2('prepare', out), 'registry ownership')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "8dbcb02b3a5ea08c61bd924beb697196e0436274", "files": {"blog/index.md": {"mode": "100644", "sha256": "5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368"}, "blog/post/A.md": {"mode": "100644", "sha256": "eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737"}}, "mode": "prepare", "plan_sha256": "ef9806fefc980ecc1eeb5400991ce06eac951b65a6d26597c64dfa41d31d5d28", "pr_ready": false, "publishable": false, "registry_sha256": "7a0400a8f110352d4ae09134ae676a2e5d540aba5576f3416ac0c34453f2a91b", "version": 2}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.573s
+
+FAILED (failures=1)

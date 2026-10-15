@@ -1,0 +1,6 @@
+test_canonical_alias_cannot_be_newly_added_by_article_source (article_publication.test_v2.V2Tests.test_canonical_alias_cannot_be_newly_added_by_article_source) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.445s
+
+OK

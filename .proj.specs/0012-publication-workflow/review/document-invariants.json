@@ -1,0 +1,19 @@
+{
+  "kind": "planning/document invariants only",
+  "english_blob": "a3f0c03754c389d40ca9fb97d8bb7c1ae992651b",
+  "translation_binding": "match",
+  "acceptance_criteria": 10,
+  "planned_test_rows": 24,
+  "trace_rows": 36,
+  "review_snapshots": {
+    "round-1": 25,
+    "round-2": 25
+  },
+  "frozen_prompt": "unchanged",
+  "reviewed_current_normative_bytes": "match round-2",
+  "retained_skill_references": "byte-identical",
+  "tracked_and_staged_diff": "empty",
+  "untracked_scope": "new epic only",
+  "current_head": "4005ee45f2f3267a8b53ce24fa97af7b49cfb144",
+  "current_branch": "staging"
+}

@@ -1,0 +1,7 @@
+test_current_guard_still_rejects_m0_as_implementation_landing (test_closed_baseline.ClosedBaselineTests.test_current_guard_still_rejects_m0_as_implementation_landing) ... ok
+test_real_closed_t13_landing_does_not_require_future_ticket_scripts (test_closed_baseline.ClosedBaselineTests.test_real_closed_t13_landing_does_not_require_future_ticket_scripts) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 10.033s
+
+OK

@@ -1,0 +1,327 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:0x1dea:article-publication:v2",
+  "title": "Explicit article publication v2 control contracts",
+  "description": "Structural documentation only. The public CLI additionally validates Git history, exclusive ownership, exact bindings and isolation. Control digests come from a reviewed caller; article metadata cannot authorize them.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/plan"
+    },
+    {
+      "$ref": "#/$defs/registry"
+    }
+  ],
+  "$defs": {
+    "pin": {
+      "type": "object",
+      "properties": {
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      },
+      "required": [
+        "ref",
+        "sha"
+      ],
+      "additionalProperties": false
+    },
+    "identity": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "100644",
+            "100755",
+            "120000"
+          ]
+        },
+        "blob": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        }
+      },
+      "required": [
+        "mode",
+        "blob"
+      ],
+      "additionalProperties": false
+    },
+    "plan": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "main": {
+          "$ref": "#/$defs/pin"
+        },
+        "staging": {
+          "$ref": "#/$defs/pin"
+        },
+        "selected": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true,
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "version",
+        "repository",
+        "main",
+        "staging",
+        "selected",
+        "dependencies"
+      ],
+      "additionalProperties": false
+    },
+    "registry": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "main": {
+          "$ref": "#/$defs/pin"
+        },
+        "staging": {
+          "$ref": "#/$defs/pin"
+        },
+        "anchor": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{40}$"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$"
+              },
+              "ref": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{40}$"
+              },
+              "paths": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true,
+                "minItems": 1
+              },
+              "kind": {
+                "enum": [
+                  "article",
+                  "dependency"
+                ]
+              },
+              "shared_patches": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "object",
+                    "properties": {
+                      "before": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/$defs/identity"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "after": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/$defs/identity"
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "before",
+                      "after"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "requires": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              },
+              "provenance": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "const": "clean"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "const": "legacy"
+                      },
+                      "migration": {
+                        "type": "object",
+                        "properties": {
+                          "original": {
+                            "type": "string",
+                            "pattern": "^[0-9a-f]{40}$"
+                          },
+                          "reconstructed": {
+                            "type": "string",
+                            "pattern": "^[0-9a-f]{40}$"
+                          },
+                          "extracted": {
+                            "type": "object",
+                            "additionalProperties": {
+                              "anyOf": [
+                                {
+                                  "$ref": "#/$defs/identity"
+                                },
+                                {
+                                  "type": "null"
+                                }
+                              ]
+                            }
+                          },
+                          "owner_approval": {
+                            "type": "object",
+                            "properties": {
+                              "record_id": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "binding_sha256": {
+                                "type": "string",
+                                "pattern": "^[0-9a-f]{64}$"
+                              }
+                            },
+                            "required": [
+                              "record_id",
+                              "binding_sha256"
+                            ],
+                            "additionalProperties": false
+                          }
+                        },
+                        "required": [
+                          "original",
+                          "reconstructed",
+                          "extracted",
+                          "owner_approval"
+                        ],
+                        "additionalProperties": false
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "migration"
+                    ],
+                    "additionalProperties": false
+                  }
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "ref",
+              "sha",
+              "paths",
+              "kind",
+              "shared_patches",
+              "requires",
+              "provenance"
+            ],
+            "additionalProperties": false
+          },
+          "uniqueItems": true
+        },
+        "integrations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          },
+          "uniqueItems": true
+        },
+        "retained": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/identity"
+          }
+        },
+        "staging_inventory": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/$defs/identity"
+          }
+        },
+        "resolutions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$"
+          }
+        }
+      },
+      "required": [
+        "version",
+        "main",
+        "staging",
+        "anchor",
+        "sources",
+        "integrations",
+        "retained",
+        "staging_inventory"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

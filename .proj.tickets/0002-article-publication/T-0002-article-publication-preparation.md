@@ -2,8 +2,9 @@
 id: T-0002
 title: Prepare local article preview and selected candidates
 epic: 0002-article-publication
-status: review
+status: done
 blocked_by: []
+landing_evidence: .proj.specs/0010-main-verification-repair/ticket-closeout/current-main/T-0002-landing.json
 ---
 
 ## Context
@@ -46,3 +47,7 @@ Final combined reviews: [Standards / Spec](../../.proj.specs/0002-article-public
 [security / public information](../../.proj.specs/0002-article-publication/review/security-T-0002-lint-cleanup.md).
 Original language and public-path findings were resolved and independently rechecked;
 no residual finding remains. Browser input dispatch remains explicitly blocked.
+
+## Current closeout after PR #26
+
+The earlier review/delivery statements above describe their historical checkpoints. The current per-criterion audit confirms AP-01–09, all six approved lint-cleanup gates and actual PR #14 landing in staging. The browser-input limitation remains recorded and is not an unfulfilled gate in either approved table. The owner authorized conditional closeout; status is now done, with the exact landing receipt in frontmatter. See the [current audit](../../.proj.specs/0010-main-verification-repair/ticket-closeout/current-main/audit.md). No publication or agent merge is inferred.

@@ -1,0 +1,18 @@
+test_isolated_real_build_and_separate_evidence_required_for_readiness (article_publication.test_v2.V2Tests.test_isolated_real_build_and_separate_evidence_required_for_readiness) ... FAIL
+
+======================================================================
+FAIL: test_isolated_real_build_and_separate_evidence_required_for_readiness (article_publication.test_v2.V2Tests.test_isolated_real_build_and_separate_evidence_required_for_readiness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 306, in test_isolated_real_build_and_separate_evidence_required_for_readiness
+    self.reject(self.v2('ready', bundle), 'required')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 64, in reject
+    self.assertIn(word,r.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: 'required' not found in "usage: article-publication-v2.py [-h] --plan PLAN --registry REGISTRY\n                                 --registry-sha256 REGISTRY_SHA256\n                                 --output OUTPUT\n                                 {prepare,verify}\narticle-publication-v2.py: error: argument mode: invalid choice: 'ready' (choose from prepare, verify)\n"
+
+----------------------------------------------------------------------
+Ran 1 test in 2.541s
+
+FAILED (failures=1)

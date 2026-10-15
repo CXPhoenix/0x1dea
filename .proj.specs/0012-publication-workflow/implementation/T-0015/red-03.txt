@@ -1,0 +1,24 @@
+test_already_contained_main_returns_noop_without_pr_readiness (test_staging_sync.StagingSyncTests.test_already_contained_main_returns_noop_without_pr_readiness) ... ok
+test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source (test_staging_sync.StagingSyncTests.test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source) ... ok
+test_conflict_reports_exact_paths_and_never_materializes_readiness (test_staging_sync.StagingSyncTests.test_conflict_reports_exact_paths_and_never_materializes_readiness) ... ERROR
+
+======================================================================
+ERROR: test_conflict_reports_exact_paths_and_never_materializes_readiness (test_staging_sync.StagingSyncTests.test_conflict_reports_exact_paths_and_never_materializes_readiness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 135, in test_conflict_reports_exact_paths_and_never_materializes_readiness
+    report = json.loads(result.stdout)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.641s
+
+FAILED (errors=1)

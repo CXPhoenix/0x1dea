@@ -1,0 +1,21 @@
+
+> 0x1dea@1.4.0 test:unit /private/tmp/T13-landing-audit/staging-node
+> vitest run
+
+
+ RUN  v4.0.18 /private/tmp/T13-landing-audit/staging-node
+
+ ✓ tests/encoreTicket.vitest.ts (2 tests) 44ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 36ms
+ ✓ tests/previewNotice.vitest.ts (32 tests) 68ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 89ms
+ ✓ tests/previewNoticeArticle.vitest.ts (1 test) 186ms
+ ✓ tests/articleCaptions.vitest.ts (26 tests) 228ms
+ ✓ tests/vpHelper.vitest.ts (9 tests) 5ms
+ ✓ tests/articleSummary.vitest.ts (12 tests) 190ms
+
+ Test Files  8 passed (8)
+      Tests  87 passed (87)
+   Start at  00:19:01
+   Duration  2.19s (transform 1.28s, setup 0ms, import 4.90s, tests 845ms, environment 4.88s)
+

@@ -1,0 +1,18 @@
+{
+  "ticket": "T-0013",
+  "authorized": true,
+  "landed": true,
+  "target": "staging",
+  "commit": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "main_commit": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "approval_receipt": ".proj.specs/0012-publication-workflow/approval.md",
+  "main_pr": 22,
+  "staging_pr": 23,
+  "main_mergedAt": "2026-10-14T15:41:31Z",
+  "staging_mergedAt": "2026-10-14T16:14:42Z",
+  "prerequisites": {
+    "20": "OPEN",
+    "21": "OPEN"
+  },
+  "scope": "T-0013 engineering only; historical tickets remain unchanged; no deployment/production claim"
+}

@@ -1,0 +1,51 @@
+{
+  "checks": [
+    "pinned-source-trees",
+    "independent-git-tree",
+    "full-candidate-identities",
+    "protected-identities",
+    "local-ref-pins"
+  ],
+  "local_ready": false,
+  "main": {
+    "ref": "main",
+    "sha": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb"
+  },
+  "publishable": false,
+  "registry_sha256": "cb768e13d29b37be5ac458d94b570731d4f99fdac9c09a4d26b5ed2e3f947df5",
+  "repository": "/private/tmp/0x1dea-T0015",
+  "result_tree": "a3c0f92567452640a3aeb1943dd2b25ba582de55",
+  "sources": [
+    {
+      "ref": "staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    }
+  ],
+  "staging": {
+    "ref": "staging",
+    "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+  },
+  "status": "no-op",
+  "target": "staging",
+  "version": 1
+}

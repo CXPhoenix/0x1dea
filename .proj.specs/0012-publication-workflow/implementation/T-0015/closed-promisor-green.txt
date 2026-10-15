@@ -1,0 +1,8 @@
+test_current_guard_rejects_partial_promisor_candidate_without_fetch (test_closed_baseline.ClosedBaselineTests.test_current_guard_rejects_partial_promisor_candidate_without_fetch) ... ok
+test_current_guard_still_rejects_m0_as_implementation_landing (test_closed_baseline.ClosedBaselineTests.test_current_guard_still_rejects_m0_as_implementation_landing) ... ok
+test_real_closed_t13_landing_does_not_require_future_ticket_scripts (test_closed_baseline.ClosedBaselineTests.test_real_closed_t13_landing_does_not_require_future_ticket_scripts) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 11.525s
+
+OK

@@ -1,0 +1,51 @@
+{
+  "checks": [
+    "pinned-source-trees",
+    "independent-git-tree",
+    "full-candidate-identities",
+    "protected-identities",
+    "local-ref-pins"
+  ],
+  "local_ready": true,
+  "main": {
+    "ref": "refs/remotes/origin/main",
+    "sha": "b84321dfeb23e155de923e6fdf799f261e3cd1c9"
+  },
+  "publishable": false,
+  "registry_sha256": "0e49db40fdf95c115b1f0941dbfd9aba3d56a7766381696feeae2987e91d59f5",
+  "repository": "/private/tmp/0x1dea-T0015",
+  "result_tree": "5bf030793ba2eea97fe09457df0793c48f6bcd67",
+  "sources": [
+    {
+      "ref": "refs/remotes/origin/staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "refs/remotes/origin/staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "refs/remotes/origin/staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "refs/remotes/origin/staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "refs/remotes/origin/staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    {
+      "ref": "refs/remotes/origin/staging",
+      "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+    }
+  ],
+  "staging": {
+    "ref": "refs/remotes/origin/staging",
+    "sha": "035783590895a426ee395045829ebc9d50e2b9cf"
+  },
+  "status": "ready",
+  "target": "staging",
+  "version": 1
+}

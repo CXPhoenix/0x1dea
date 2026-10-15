@@ -1,0 +1,2747 @@
+diff --git a/scripts/verify-harness-adoption.py b/scripts/verify-harness-adoption.py
+index 19004c95d9f8b92e7c4c139eb950f9bfce172ba3..8e7a52722f0147d8c2b1982c26ffcba1df9c8fbb 100644
+--- a/scripts/verify-harness-adoption.py
++++ b/scripts/verify-harness-adoption.py
+@@ -1,479 +1,66 @@
+ #!/usr/bin/env python3
+-"""Validate local Harness tracker, provenance and approved product boundaries."""
++"""Route immutable historical contracts and the reviewed current M0 successor."""
+ import argparse
+-from datetime import date
+ import hashlib
+ import json
+ from pathlib import Path
+-import re
+-import os
+-import stat
+ import subprocess
+-
+-
+-def git_blob(content):
+-    return hashlib.sha1(b'blob ' + str(len(content)).encode() + b'\0' + content).hexdigest()
+-
+-
+-def frontmatter(path):
+-    text = path.read_text()
+-    if not text.startswith('---\n') or '\n---\n' not in text[4:]:
+-        raise ValueError(f'missing frontmatter: {path}')
+-    data = {}
+-    for line in text.split('\n---\n', 1)[0][4:].splitlines():
+-        match = re.fullmatch(r'([a-z_]+):\s*(.*)', line)
+-        if not match or match[1] in data:
+-            raise ValueError(f'unsupported or duplicate frontmatter: {path}: {line}')
+-        data[match[1]] = match[2].strip().strip('"').strip("'")
+-    return data
+-
+-
+-def regular_path(root, name):
+-    path = Path(name)
+-    if path.is_absolute() or '..' in path.parts or not name:
+-        raise ValueError(f'unsafe evidence/source path: {name}')
+-    current = root
+-    for part in path.parts:
+-        current = current / part
+-        if current.is_symlink():
+-            raise ValueError(f'linked evidence/source path: {name}')
+-    if not current.is_file():
+-        raise ValueError(f'missing evidence/source path: {name}')
+-    return current
+-
+-
+-def check_tickets(root):
+-    tickets = {}
+-    for path in sorted((root / '.proj.tickets').glob('**/T-*.md')):
+-        data = frontmatter(path)
+-        ticket_id = data.get('id', '')
+-        if not re.fullmatch(r'T-\d{4}', ticket_id) or not path.name.startswith(ticket_id + '-'):
+-            raise ValueError(f'invalid ticket id/path: {path}')
+-        if ticket_id in tickets:
+-            raise ValueError(f'duplicate ticket id: {ticket_id}')
+-        if data.get('epic') != path.parent.name or not data.get('title'):
+-            raise ValueError(f'invalid epic/title: {path}')
+-        if data.get('status') not in {'todo', 'processing', 'review', 'done', 'pending'}:
+-            raise ValueError(f'invalid stored status: {path}')
+-        raw = data.get('blocked_by', '')
+-        if not re.fullmatch(r'\[(?:\s*T-\d{4}\s*(?:,\s*T-\d{4}\s*)*)?\]', raw):
+-            raise ValueError(f'invalid blocked_by list: {path}')
+-        data['blocked_by'] = re.findall(r'T-\d{4}', raw)
+-        if len(set(data['blocked_by'])) != len(data['blocked_by']):
+-            raise ValueError(f'duplicate dependency: {path}')
+-        if data['status'] == 'pending':
+-            for key in ('pending_reason', 'pending_evidence', 'pending_on', 'revisit_when'):
+-                if not data.get(key): raise ValueError(f'pending missing {key}: {path}')
+-            try: date.fromisoformat(data['pending_on'])
+-            except ValueError: raise ValueError(f'invalid pending date: {path}') from None
+-            regular_path(root, data['pending_evidence'].split('#', 1)[0])
+-        if data['status'] == 'done':
+-            try:
+-                landing = json.loads(regular_path(root, data.get('landing_evidence', '')).read_text())
+-                if landing.get('ticket') != ticket_id or landing.get('authorized') is not True or landing.get('landed') is not True or not re.fullmatch(r'[a-f0-9]{40}', landing.get('commit', '')) or not landing.get('approval_receipt') or landing.get('target') != 'staging':
+-                    raise ValueError('incomplete landing record')
+-                regular_path(root, landing['approval_receipt'])
+-                subprocess.run(['git', 'cat-file', '-e', landing['commit'] + '^{commit}'], cwd=root, check=True, capture_output=True)
+-                subprocess.run(['git', 'merge-base', '--is-ancestor', landing['commit'], 'staging'], cwd=root, check=True, capture_output=True)
+-            except (ValueError, KeyError, subprocess.CalledProcessError):
+-                raise ValueError(f'missing/invalid landing evidence: {path}') from None
+-        tickets[ticket_id] = data
+-    visiting, visited = set(), set()
+-    def visit(ticket_id):
+-        if ticket_id in visiting: raise ValueError(f'dependency cycle: {ticket_id}')
+-        if ticket_id in visited: return
+-        visiting.add(ticket_id)
+-        for dependency in tickets[ticket_id]['blocked_by']:
+-            if dependency == ticket_id: raise ValueError(f'self dependency: {ticket_id}')
+-            if dependency not in tickets: raise ValueError(f'missing dependency: {dependency}')
+-            visit(dependency)
+-        visiting.remove(ticket_id)
+-        visited.add(ticket_id)
+-    for ticket_id in tickets: visit(ticket_id)
+-    blocked = {i: [d for d in t['blocked_by'] if tickets[d]['status'] != 'done'] for i, t in tickets.items()}
+-    return {'tickets': tickets, 'next_id': f"T-{max((int(i[2:]) for i in tickets), default=0) + 1:04d}", 'frontier': [i for i, t in tickets.items() if t['status'] == 'todo' and not blocked[i]], 'blocked': {i: d for i, d in blocked.items() if d}, 'paused': [i for i, t in tickets.items() if t['status'] == 'pending']}
+-
+-
+-def check_translation(path, root):
+-    data = frontmatter(path)
+-    name = data.get('synced_from', '')
+-    source_name = str((path.parent / name).relative_to(root)) if name else ''
+-    source = regular_path(root, source_name)
+-    if git_blob(source.read_bytes()) != data.get('synced_from_sha'):
+-        raise ValueError(f'stale translation: {path}')
+-    return source_name
+-
+-
+-def entry_sha(path):
+-    data = os.readlink(path).encode() if path.is_symlink() else path.read_bytes()
+-    return hashlib.sha256(data).hexdigest()
+-
+-
+-def check_preserved(root, baseline, exceptions, historical=None):
+-    moves = []
+-    for entry in baseline:
+-        name = entry['path']
+-        if name in exceptions:
+-            expected = exceptions[name]
+-            if expected.get('candidate', '').startswith('blog/') and name.startswith('docs/'):
+-                if (root / name).exists() or (root / name).is_symlink():
+-                    raise ValueError(f'old website path remains: {name}')
+-                moves.append({'source': name, 'candidate': expected['candidate'], 'sha256': expected['sha256']})
+-            if expected.get('retired'):
+-                if (root / name).exists() or (root / name).is_symlink():
+-                    raise ValueError(f'retired active entry remains: {name}')
+-                path = regular_path(root, expected['archive'])
+-            elif expected.get('generated'):
+-                if (root / name).is_symlink() or not (root / name).is_dir():
+-                    raise ValueError(f'generated package absent/linked: {name}')
+-                continue
+-            else:
+-                path = regular_path(root, expected.get('candidate', name))
+-            wanted = expected.get('sha256', entry['sha256'])
+-        else:
+-            mapped = 'blog/' + name[5:] if name.startswith('docs/') else name
+-            path = root / mapped
+-            if name.startswith('docs/'):
+-                if (root / name).exists() or (root / name).is_symlink():
+-                    raise ValueError(f'old website path remains: {name}')
+-                moves.append({'source': name, 'candidate': mapped, 'sha256': entry['sha256']})
+-            wanted = entry['sha256']
+-            expected_link = entry['type'] == 'symlink'
+-            if path.is_symlink() != expected_link or (not path.is_symlink() and not path.is_file()):
+-                raise ValueError(f'changed entry type/missing file: {mapped}')
+-        content = (historical or {}).get(path.relative_to(root).as_posix())
+-        actual = hashlib.sha256(content).hexdigest() if content is not None else entry_sha(path)
+-        if actual != wanted:
+-            raise ValueError(f'changed preserved source: {name}')
+-    return moves
+-
+-
+-def allowed_new(name):
+-    prefixes = ('.proj.specs/', '.proj.tickets/', 'docs/agents/', 'docs/adr/', 'docs/security/', 'maintenance/harness-adoption/', 'maintenance/article-publication/', 'maintenance/lint-cleanup/', 'skills/managing-article-publication/', 'tests/article_publication/', '.agents/skills/', '.claude/skills/', '.claude/agents/', '.codex/')
+-    exact = {'tests/lintCleanup.vitest.ts', 'uno.config.ts', 'docs/README.md', 'docs/guide.md', 'scripts/verify-project.py', 'scripts/verify-harness-adoption.py', 'scripts/materialize-writing-skills.py', 'scripts/article-publication.py', 'skills-lock.json', 'THIRD_PARTY_NOTICES.md', 'CONTEXT.md', 'tests/harness_adoption/test_tracker.py', 'tests/harness_adoption/test_materializer.py', 'tests/harness_adoption/test_publication.py'}
+-    return name in exact or name.startswith(prefixes)
+-
+-
+-def check_added_paths(root, baseline_names, moved, approved=None):
+-    names = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=root).decode().split('\0')
+-    for name in names:
+-        if name and name not in baseline_names and name not in moved and name not in (approved or set()) and not allowed_new(name):
+-            raise ValueError(f'unknown added product file: {name}')
+-
+-
+-def check_readme_scripts(root):
+-    scripts = json.loads(regular_path(root, 'package.json').read_text())['scripts']
+-    readme = regular_path(root, 'README.md').read_text()
+-    commands = set(re.findall(r'\bpnpm\s+(?:run\s+)?([A-Za-z0-9_.-]+:[A-Za-z0-9_.:-]+)\b', readme))
+-    for command in sorted(commands):
+-        if command not in scripts:
+-            raise ValueError(f'README names an unknown package script: {command}')
+-    return sorted(commands)
+-
+-
+-EVIDENCE_STATUSES = {'pass', 'existing-failure', 'new-regression', 'blocked', 'not-run', 'expected-red'}
+-
+-
+-def check_evidence(root, record):
+-    if record.get('status') not in EVIDENCE_STATUSES:
+-        raise ValueError('invalid evidence status')
+-    if record['status'] == 'pass':
+-        if record.get('exit_code') != 0 or not record.get('log_sha256'):
+-            raise ValueError('passed evidence lacks successful execution')
+-        log = regular_path(root, record.get('log', ''))
+-        if entry_sha(log) != record['log_sha256']:
+-            raise ValueError('evidence log hash mismatch')
+-
+-
+-def check_trace(root, tickets):
+-    path = root / '.proj.specs/0001-harness-adoption/candidate-traceability.json'
+-    rows = json.loads(path.read_text())
+-    baseline = json.loads((path.parent / 'baseline-traceability.json').read_text())
+-    if len(rows) != 113 or len({r['row_id'] for r in rows}) != 113:
+-        raise ValueError('historical trace row count/id mismatch')
+-    by_id = {r['row_id']: r for r in baseline}
+-    for row in rows:
+-        original = by_id[row['row_id']]
+-        for key in ('source_path', 'source_sha256', 'source_git_blob', 'expected_behavior', 'heading'):
+-            if row[key] != original[key]: raise ValueError(f'changed baseline trace {key}: {row["row_id"]}')
+-        source = regular_path(root, row['source_path'])
+-        if entry_sha(source) != row['source_sha256'] or git_blob(source.read_bytes()) != row['source_git_blob']:
+-            raise ValueError(f'dangling/changed trace source: {row["row_id"]}')
+-        if row.get('ticket') not in tickets: raise ValueError(f'dangling trace ticket: {row["row_id"]}')
+-        criterion = row.get('AC', '')
+-        values = criterion if isinstance(criterion, list) else [criterion]
+-        if not values or any(not re.fullmatch(r'HA-0[1-9]|HA-10', v) for v in values): raise ValueError('dangling AC')
+-        status = row.get('evidence_status', 'not-run')
+-        if status not in EVIDENCE_STATUSES: raise ValueError('invalid trace evidence status')
+-        if status == 'pass' and not row.get('actual_evidence'): raise ValueError('false passed trace')
+-        for name in row.get('actual_evidence', []):
+-            record = json.loads(regular_path(root, name).read_text())
+-            check_evidence(root, record)
+-            if status == 'pass' and record['status'] != 'pass':
+-                raise ValueError(f'passed trace references nonpass evidence: {row["row_id"]}: {name}')
+-    return len(rows)
+-
+-
+-def check_baseline_manifest(root, baseline):
+-    expected_commit = 'ee7fecfff72f47abc735d26ac7e9a943de04ebbf'
+-    if baseline.get('baseline') != expected_commit: raise ValueError('unapproved baseline')
+-    actual = []
+-    for raw in subprocess.check_output(['git', 'ls-tree', '-r', '-z', expected_commit], cwd=root).split(b'\0'):
+-        if not raw: continue
+-        metadata, name = raw.split(b'\t', 1)
+-        mode, kind, blob = metadata.decode().split()
+-        content = subprocess.check_output(['git', 'cat-file', 'blob', blob], cwd=root)
+-        actual.append({'path': name.decode(), 'type': 'symlink' if mode == '120000' else 'regular', 'sha256': hashlib.sha256(content).hexdigest()})
+-    if actual != baseline.get('files'): raise ValueError('baseline manifest differs from actual pinned Git tree')
+-
+-
+-def check_framework(root):
+-    """Verify the immutable initialized framework import, including its provenance."""
+-    manifest = regular_path(root, 'maintenance/harness-adoption/framework-import-manifest.json')
+-    raw = manifest.read_bytes()
+-    data = json.loads(raw)
+-    if data.get('source_commit') != '917e6025da0901a79dda016e1ce5bd89b6e6e19f':
+-        raise ValueError('unapproved framework template commit')
+-    if data.get('source_digest') != 'b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5':
+-        raise ValueError('unapproved framework template digest')
+-    # Pin the approved manifest itself: deleting or repinning one of its entries
+-    # must not turn a modified framework into an apparently verified import.
+-    if hashlib.sha256(raw).hexdigest() != 'b0fb7cf39924c3371be420bce8f3c8c6f1356fcd0f2dc5a24f538e9192718d7e':
+-        raise ValueError('framework import manifest differs from approved pins')
+-    files = data['initialized_snapshot_files']
+-    if len(files) != 641 or data.get('new_tuning_executed') is not False:
+-        raise ValueError('framework import count/tuning provenance mismatch')
+-    for name, expected in files.items():
+-        path = regular_path(root, name)
+-        if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
+-            raise ValueError(f'framework source SHA mismatch: {name}')
+-    product = {'phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post', 'managing-article-publication'}
+-    catalogs = {}
+-    for runtime in ('.agents', '.claude'):
+-        prefix = runtime + '/skills/'
+-        framework = {name[len(prefix):].split('/', 1)[0] for name in files if name.startswith(prefix)}
+-        if len(framework) != 32 or framework & product:
+-            raise ValueError('framework runtime catalog provenance mismatch')
+-        base = root / runtime / 'skills'
+-        actual = set()
+-        for entry in os.scandir(base):
+-            if entry.is_symlink() or not entry.is_dir(follow_symlinks=False):
+-                raise ValueError(f'nonphysical runtime skill root: {entry.path}')
+-            actual.add(entry.name)
+-        if actual != framework | product:
+-            raise ValueError(f'unknown/missing runtime skill roots: {runtime}')
+-        for name in actual:
+-            regular_path(root, prefix + name + '/SKILL.md')
+-        # scandir errors propagate: a partially unreadable tree must not be
+-        # reported as fully verified. Never follow a directory symlink.
+-        pending = [base]
+-        while pending:
+-            with os.scandir(pending.pop()) as entries:
+-                for entry in entries:
+-                    path = Path(entry.path)
+-                    mode = entry.stat(follow_symlinks=False).st_mode
+-                    if stat.S_ISLNK(mode):
+-                        raise ValueError(f'runtime symlink rejected: {path.relative_to(root)}')
+-                    if stat.S_ISDIR(mode):
+-                        pending.append(path)
+-                    elif stat.S_ISREG(mode):
+-                        name = path.relative_to(root).as_posix()
+-                        skill = name[len(prefix):].split('/', 1)[0]
+-                        if skill in framework and name not in files:
+-                            raise ValueError(f'unpinned framework file: {name}')
+-                    else:
+-                        raise ValueError(f'nonregular runtime entry: {path.relative_to(root)}')
+-        catalogs[runtime] = len(actual)
+-    return {'pinned_files': len(files), 'source_commit': data['source_commit'],
+-            'source_digest': data['source_digest'], 'runtime_skill_counts': catalogs}
+-
+-
+-EXCEPTION_NAMES = {
+-    'AGENTS.md', 'CLAUDE.md', 'GEMINI.md', '.gitignore', 'README.md', 'package.json',
+-    'scripts/vpHelper.ts', 'tests/vpHelper.vitest.ts', 'tsconfig.json',
+-    'skills/creating-vitepress-post/SKILL.md', 'skills/phoenix-writing/AGENTS.md',
+-    'skills/maintaining-writing-skills/SKILL.md',
+-    'skills/maintaining-writing-skills/references/spectra-codex.md',
+-    'skills/maintaining-writing-skills/references/skill-maintenance.md',
+-}
+-
+-
+-def approved_exception_names(entries):
+-    names = set(EXCEPTION_NAMES)
+-    for entry in entries:
+-        name = entry['path']
+-        if (name.startswith(('.claude/', '.gemini/', '.github/')) and 'spectra-' in name) or name.startswith('.gemini/commands/spectra/'):
+-            names.add(name)
+-        if name.startswith(('.agents/skills/', '.claude/skills/')) and entry['type'] == 'symlink':
+-            names.add(name)
+-    return names
+-
+-
+-def check_adoption_ancestry(root, baseline_commit):
+-    head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root).decode().strip()
+-    result = subprocess.run(['git', 'merge-base', '--is-ancestor', baseline_commit, head], cwd=root, capture_output=True)
+-    if result.returncode != 0:
+-        raise ValueError('pinned baseline is not an ancestor of HEAD')
+-    return head
+-
+-
+-def check_lint_dependency_delta(before, after):
+-    """Permit only the owner's bounded follow-up dependency addition."""
+-    expected = json.loads(before)
+-    current = json.loads(after)
+-    dependencies = expected['devDependencies']
+-    if '@unocss/eslint-plugin' in dependencies:
+-        raise ValueError('lint dependency already present in baseline')
+-    dependencies['@unocss/eslint-plugin'] = '66.6.0'
+-    if current != expected:
+-        raise ValueError('unapproved lint dependency delta')
+-
+-
+-LINT_BASE = '8890d5250e22ec4ee0e0493c1e72bab89d16489b'
+-LINT_COMMAND = 'eslint scripts tests blog/shared blog/.vitepress eslint.config.js vitest.config.ts uno.config.ts tsconfig.json package.json --max-warnings 0'
+-LINT_UPDATE_NAMES = {
+-    'blog/.vitepress/config.mts', 'blog/.vitepress/nav.yml', 'blog/.vitepress/sidebar.yml',
+-    'blog/.vitepress/theme/Layout.vue', 'blog/.vitepress/theme/components/NewPost.vue',
+-    'blog/.vitepress/theme/components/Particles.vue', 'blog/.vitepress/theme/components/PostBlock.vue',
+-    'blog/.vitepress/theme/components/PostCard.vue', 'blog/.vitepress/theme/components/PostList.vue',
+-    'blog/.vitepress/theme/components/__tests__/Particles.spec.ts',
+-    'blog/.vitepress/theme/composables/usePostFilter.ts', 'blog/.vitepress/theme/composables/usePostSort.ts',
+-    'blog/.vitepress/theme/index.ts', 'blog/shared/posts.data.ts', 'package.json', 'pnpm-lock.yaml',
+-    'scripts/vpHelper.ts', 'tests/vpHelper.vitest.ts', 'vitest.config.ts',
+-}
+-
+-
+-def check_lint_cleanup_delta(before, after):
+-    """Keep the earlier dependency addition contract intact; validate this follow-up separately."""
+-    expected = json.loads(before)
+-    current = json.loads(after)
+-    expected['devDependencies']['eslint'] = '9.39.2'
+-    expected['scripts']['lint'] = LINT_COMMAND
+-    if current != expected:
+-        raise ValueError('unapproved lint cleanup manifest delta')
+-
+-
+-def check_lint_successor(root, historical=None):
+-    """Validate exact authorized paths/hashes against immutable predecessor Git objects."""
+-    name = 'maintenance/lint-cleanup/source-boundary.json'
+-    if not (root / name).exists():
+-        return {}, {}
+-    boundary = json.loads(regular_path(root, name).read_text())
+-    if (set(boundary) != {'version', 'scope', 'base', 'preserved_updates', 'new_sources'}
+-            or boundary['version'] != 1 or boundary['scope'] != '0X1DEA#11'
+-            or boundary['base'] != LINT_BASE
+-            or set(boundary['preserved_updates']) != LINT_UPDATE_NAMES
+-            or set(boundary['new_sources']) != {'uno.config.ts', 'tests/lintCleanup.vitest.ts'}):
+-        raise ValueError('unapproved lint cleanup source boundary')
+-    check_adoption_ancestry(root, LINT_BASE)
+-    predecessor = 'maintenance/article-publication/source-boundary.json'
+-    pinned = subprocess.check_output(['git', 'show', LINT_BASE + ':' + predecessor], cwd=root)
+-    if regular_path(root, predecessor).read_bytes() != pinned:
+-        raise ValueError('changed historical publication boundary')
+-    before_sources = {}
+-    for path, record in boundary['preserved_updates'].items():
+-        if set(record) != {'before_sha256', 'after_sha256'}:
+-            raise ValueError('invalid lint successor hash fields')
+-        before = subprocess.check_output(['git', 'show', LINT_BASE + ':' + path], cwd=root)
+-        if (hashlib.sha256(before).hexdigest() != record['before_sha256']
+-                or hashlib.sha256((historical or {}).get(path, regular_path(root, path).read_bytes())).hexdigest() != record['after_sha256']):
+-            raise ValueError('lint cleanup preserved source hash mismatch: ' + path)
+-        before_sources[path] = before
+-    for path, wanted in boundary['new_sources'].items():
+-        if hashlib.sha256((historical or {}).get(path, regular_path(root, path).read_bytes())).hexdigest() != wanted:
+-            raise ValueError('lint cleanup new source hash mismatch: ' + path)
+-    check_lint_cleanup_delta(before_sources['package.json'], (historical or {}).get('package.json', regular_path(root, 'package.json').read_bytes()))
+-    return before_sources, boundary['preserved_updates']
+-
+-
+-def apply_lint_successor(exceptions, updates, baseline):
+-    result = {name: dict(value) for name, value in exceptions.items()}
+-    baseline_names = {entry['path'] for entry in baseline}
+-    for path, record in updates.items():
+-        source = 'docs/' + path[5:] if path.startswith('blog/') else path
+-        if source not in baseline_names:
+-            raise ValueError('lint successor has no preserved predecessor: ' + path)
+-        result.setdefault(source, {}).update(candidate=path, sha256=record['after_sha256'])
+-    return result
+-
+-
+-def phase1_preserved_updates(root, exceptions, successor=None):
+-    """Keep adoption evidence immutable; validate the reviewed successor projection."""
+-    name='maintenance/article-publication/source-boundary.json'
+-    if not (root/name).exists():
+-        return exceptions
+-    boundary=json.loads(regular_path(root,name).read_text())
+-    base='bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0'
+-    if (set(boundary)!={'version','ticket','base','preserved_updates'} or boundary['version']!=1
+-            or boundary['ticket']!='T-0002' or boundary['base']!=base
+-            or set(boundary['preserved_updates']) not in (
+-                {'AGENTS.md'}, {'AGENTS.md', 'package.json', 'pnpm-lock.yaml'})):
+-        raise ValueError('unapproved article publication source boundary')
+-    if 'package.json' in boundary['preserved_updates']:
+-        before=subprocess.check_output(['git','show',base+':package.json'],cwd=root)
+-        check_lint_dependency_delta(before, (successor or {}).get('package.json', regular_path(root,'package.json').read_bytes()))
+-    result={name:dict(value) for name,value in exceptions.items()}
+-    for name,record in boundary['preserved_updates'].items():
+-        if set(record)!={'before_sha256','after_sha256'}:
+-            raise ValueError('invalid successor hash fields')
+-        before=subprocess.check_output(['git','show',base+':'+name],cwd=root)
+-        if (hashlib.sha256(before).hexdigest()!=record['before_sha256']
+-                or (name in exceptions and record['before_sha256']!=exceptions[name]['sha256'])
+-                or hashlib.sha256((successor or {}).get(name, regular_path(root,name).read_bytes())).hexdigest()!=record['after_sha256']):
+-            raise ValueError('article publication preserved source hash mismatch: '+name)
+-        result.setdefault(name, {})['sha256']=record['after_sha256']
+-    return result
++import sys
++import types
++
++sys.dont_write_bytecode = True
++CONTROL = Path(__file__).resolve().parents[1]
++BASES = {'main': 'eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a',
++         'staging': 'c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7'}
++LEGACY_DIGESTS = {'main': 'cf0019f96aa56a60ae4fff325f1487a239df5df4eeb4fb1f905cdc6063de5c46',
++                  'staging': '86b6f7ea72a3b0bc17d303db471a94c104860a810c73014ef16e152872cad3d2'}
++
++
++def legacy_module(role):
++    """Only hash-pinned historical Git code is loaded; candidate files are never imported."""
++    try:
++        raw = subprocess.check_output(['git', '--no-replace-objects', '-C', str(CONTROL),
++                                       'show', BASES[role] + ':scripts/verify-harness-adoption.py'],
++                                      stderr=subprocess.PIPE)
++    except subprocess.CalledProcessError as error:
++        raise ValueError('historical verifier ancestor is unavailable') from error
++    if hashlib.sha256(raw).hexdigest() != LEGACY_DIGESTS[role]:
++        raise ValueError('changed immutable historical verifier')
++    module = types.ModuleType('historical_' + role)
++    module.__file__ = __file__
++    exec(compile(raw, __file__, 'exec'), module.__dict__)
++    return module
++
++
++# Keep the original public test/tracker helpers and assertions available without edits.
++_CONTROL_STAGE = subprocess.run(['git', '--no-replace-objects', '-C', str(CONTROL), 'merge-base',
++                                 '--is-ancestor', BASES['staging'], 'HEAD'], capture_output=True)
++_HISTORICAL_API = legacy_module('staging' if _CONTROL_STAGE.returncode == 0 else 'main')
++for _name, _value in vars(_HISTORICAL_API).items():
++    if not _name.startswith('_') and _name != 'main':
++        globals()[_name] = _value
+ 
+ 
+ def main():
+     parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
++    parser.add_argument('--root', type=Path, default=CONTROL)
+     args = parser.parse_args()
+     root = args.root.resolve()
+-    from main_publication_verification import check
+-    historical, approved = check(root, allowed_new, regular_path)
+-    baseline = json.loads((root / 'maintenance/harness-adoption/baseline-files.json').read_text())
+-    delta = json.loads((root / 'maintenance/harness-adoption/candidate-delta.json').read_text())
+-    check_baseline_manifest(root, baseline)
+-    framework = check_framework(root)
+-    check_readme_scripts(root)
+-    if set(delta['exceptions']) != approved_exception_names(baseline['files']):
+-        raise ValueError('unapproved/missing exception entry')
+-    check_adoption_ancestry(root, baseline['baseline'])
+-    successor, updates = check_lint_successor(root, historical)
+-    exceptions = phase1_preserved_updates(root, delta['exceptions'], successor)
+-    exceptions = apply_lint_successor(exceptions, updates, baseline['files'])
+-    moves = check_preserved(root, baseline['files'], exceptions, historical)
+-    if len(moves) != 55: raise ValueError('site move count mismatch')
+-    baseline_names = {f['path'] for f in baseline['files']}
+-    moved = {m['candidate'] for m in moves}
+-    check_added_paths(root, baseline_names, moved, approved)
+-    for name, expected in delta['literal_adapters'].items():
+-        content = subprocess.check_output(['git', 'show', baseline['baseline'] + ':' + name], cwd=root).decode()
+-        if name == 'package.json':
+-            for verb in ('dev', 'build', 'preview'): content = content.replace(f'vitepress {verb} docs', f'vitepress {verb} blog')
+-        elif name == 'tsconfig.json': content = content.replace('"docs/', '"blog/')
+-        else:
+-            content = content.replace('docs', 'blog')
+-            if name == 'tests/vpHelper.vitest.ts': content = content.replace('expect(config.options.dir).toBe(DEFAULT_DIR);', "expect(config.options.dir).toBe('blog/post');")
+-        actual = successor[name].decode() if name in successor else (root / name).read_text()
+-        boundary_path=root/'maintenance/article-publication/source-boundary.json'
+-        lint_update=(name=='package.json' and boundary_path.exists()
+-                     and 'package.json' in json.loads(regular_path(root,str(boundary_path.relative_to(root))).read_text())['preserved_updates'])
+-        if lint_update:
+-            check_lint_dependency_delta(content, actual)
+-        elif actual != content:
+-            raise ValueError(f'nonliteral adapter change: {name}')
+-    state = check_tickets(root)
+-    translations = list((root / '.proj.specs').glob('**/spec.zh-TW.md'))
+-    historical=[p for p in translations if p.is_relative_to(root/'.proj.specs/_baseline') or p.parent.name=='0001-harness-adoption']
+-    if len(historical)!=7: raise ValueError('six baseline + one adoption translations required')
+-    for path in translations: check_translation(path, root)
+-    trace_count = check_trace(root, state['tickets'])
+-    print(json.dumps({'status': 'pass', 'framework': framework, 'site_moves': len(moves), 'baseline_entries': len(baseline['files']), 'translations': len(translations), 'trace_rows': trace_count, 'tracker': state}, indent=2))
++    current = root / 'maintenance/publication-workflow/engineering-v1.json'
++    ancestry = subprocess.run(['git', '--no-replace-objects', '-C', str(root), 'merge-base',
++                               '--is-ancestor', BASES['main'], 'HEAD'], capture_output=True)
++    if current.exists() or current.is_symlink() or ancestry.returncode == 0:
++        from publication_current import verify
++        print(json.dumps(verify(CONTROL, root), indent=2))
++        return
++    # Historical fixture routing is retained; failure never selects another contract.
++    records = root / 'maintenance/harness-reconciliation'
++    role = 'staging' if any(records.glob('*.json')) else 'main'
++    legacy_module(role).main()
+ 
+ 
+ if __name__ == '__main__':
+-    try: main()
+-    except (ValueError, OSError, KeyError, json.JSONDecodeError) as error:
++    try:
++        main()
++    except (ValueError, OSError, KeyError, subprocess.CalledProcessError) as error:
+         raise SystemExit(f'FAIL: {error}')
+diff --git a/scripts/publication-baseline.py b/scripts/publication-baseline.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..6508746ee9ccfef1c1ff0954db6d0a767dd9bac0
+--- /dev/null
++++ b/scripts/publication-baseline.py
+@@ -0,0 +1,181 @@
++#!/usr/bin/env python3
++"""M0 inventory, local engineering projections and exact verification; no publication authority."""
++import argparse
++import json
++from pathlib import Path
++import re
++import subprocess
++import sys
++
++
++def git(root, *args):
++    return subprocess.check_output(
++        ['git', '--no-replace-objects', '--literal-pathspecs', '-C', str(root), *args], stderr=subprocess.PIPE,
++    )
++
++
++def tree(root, commit):
++    result = {}
++    for entry in git(root, 'ls-tree', '-rz', '--full-tree', commit).split(b'\0'):
++        if entry:
++            header, path = entry.split(b'\t', 1)
++            mode, kind, blob = header.decode().split()
++            result[path.decode()] = {'mode': mode, 'type': kind, 'blob': blob}
++    return result
++
++
++CATEGORIES = {'published', 'candidate', 'engineering', 'historical-management',
++              'current-management', 'target-role'}
++
++
++def full_commit(root, value):
++    if not isinstance(value, str) or not re.fullmatch(r'[0-9a-f]{40}', value):
++        raise ValueError('pins must be full commit ids')
++    if git(root, 'cat-file', '-t', value).strip() != b'commit':
++        raise ValueError('pin is not a commit')
++
++
++def validate(root, plan):
++    if git(root, 'for-each-ref', '--format=%(refname)', 'refs/replace').strip():
++        raise ValueError('replacement refs are not allowed')
++    grafts = Path(git(root, 'rev-parse', '--path-format=absolute', '--git-path', 'info/grafts').decode().strip())
++    if grafts.exists() and grafts.read_bytes().strip():
++        raise ValueError('history grafts are not allowed')
++    if git(root, 'rev-parse', '--is-shallow-repository').strip() != b'false':
++        raise ValueError('complete Git history is required')
++    if not isinstance(plan, dict) or set(plan) != {
++        'schema_version', 'main', 'staging', 'classifications', 'candidates', 'prerequisites',
++    } or type(plan['schema_version']) is not int or plan['schema_version'] != 1:
++        raise ValueError('unsupported classification schema; trust/role input is not accepted')
++    full_commit(root, plan['main'])
++    full_commit(root, plan['staging'])
++    if not isinstance(plan['classifications'], dict):
++        raise ValueError('classification must be an exact path map')
++    for path, item in plan['classifications'].items():
++        if not isinstance(item, dict) or not {'category', 'owner'} <= item.keys() <= {
++            'category', 'owner', 'shared',
++        } or item['category'] not in CATEGORIES or not isinstance(item['owner'], str) or not item['owner']:
++            raise ValueError(f'invalid classification: {path}')
++        if 'shared' in item and type(item['shared']) is not bool:
++            raise ValueError(f'invalid shared classification: {path}')
++    if not isinstance(plan['candidates'], list) or not isinstance(plan['prerequisites'], list):
++        raise ValueError('candidate and prerequisite registries must be lists')
++    for item in plan['candidates']:
++        if not isinstance(item, dict) or set(item) != {'id', 'paths', 'provenance'} or not isinstance(item['id'], str) or not item['id']:
++            raise ValueError('invalid candidate ownership record')
++        if not isinstance(item['paths'], list) or not all(isinstance(p, str) for p in item['paths']):
++            raise ValueError('invalid candidate ownership paths')
++        if item['provenance'] != 'legacy-requires-migration':
++            raise ValueError('this proposal does not admit clean candidate provenance')
++    for item in plan['prerequisites']:
++        if not isinstance(item, dict) or set(item) != {'pr', 'state', 'target', 'merge_commit', 'head'}:
++            raise ValueError('invalid prerequisite observation')
++        if type(item['pr']) is not int or item['pr'] <= 0 or item['state'] not in {'OPEN', 'CLOSED', 'MERGED'} or item['target'] not in {'main', 'staging'}:
++            raise ValueError('invalid prerequisite observation values')
++        full_commit(root, item['head'])
++        if item['merge_commit'] is not None:
++            full_commit(root, item['merge_commit'])
++
++
++def unique_object(pairs):
++    result = {}
++    for key, value in pairs:
++        if key in result:
++            raise ValueError(f'duplicate JSON key: {key}')
++        result[key] = value
++    return result
++
++
++def inventory(root, plan):
++    validate(root, plan)
++    main, stage = plan['main'], plan['staging']
++    trees = {'main': tree(root, main), 'staging': tree(root, stage)}
++    changed = {p for p in trees['main'].keys() | trees['staging'].keys()
++               if trees['main'].get(p) != trees['staging'].get(p)}
++    if set(plan['classifications']) != changed:
++        raise ValueError('classification must account for exactly every changed path')
++    owners = {}
++    ids = set()
++    for candidate in plan['candidates']:
++        if candidate['id'] in ids or not candidate['paths']:
++            raise ValueError('candidate ownership needs unique ids and nonempty paths')
++        ids.add(candidate['id'])
++        for path in candidate['paths']:
++            if path in owners or path not in trees['main'].keys() | trees['staging'].keys():
++                raise ValueError(f'ambiguous or missing candidate ownership: {path}')
++            owners[path] = candidate['id']
++    for path in changed:
++        item = plan['classifications'][path]
++        if item['category'] == 'candidate':
++            if owners.get(path) != item['owner']:
++                raise ValueError(f'incomplete candidate ownership: {path}')
++        elif path in owners:
++            raise ValueError(f'candidate ownership contradicts classification: {path}')
++    delta = []
++    for path in sorted(trees['main'].keys() | trees['staging'].keys()):
++        before, after = trees['main'].get(path), trees['staging'].get(path)
++        if before == after:
++            continue
++        classification = plan['classifications'][path]
++        candidate = classification['category'] == 'candidate'
++        patch = None
++        if classification.get('shared'):
++            patch = git(root, 'diff', '--no-ext-diff', '--no-textconv', '--no-renames',
++                        '--binary', '--full-index', main, stage, '--', path).decode()
++        delta.append({
++            'path': path, **classification, 'main': before, 'staging': after, 'patch': patch,
++            'main_action': 'retain-published' if candidate else 'pending-exact-review',
++            'staging_action': 'preserve-exact',
++        })
++    prerequisites = []
++    for item in plan['prerequisites']:
++        merge = item['merge_commit']
++        landed = False
++        if item['state'] == 'MERGED' and merge:
++            target = {'main': main, 'staging': stage}[item['target']]
++            status = subprocess.run(
++                ['git', '--no-replace-objects', '-C', str(root),
++                 'merge-base', '--is-ancestor', merge, target], capture_output=True,
++            ).returncode
++            if status not in (0, 1):
++                raise ValueError('unavailable prerequisite ancestry')
++            landed = status == 0
++        prerequisites.append({**item, 'landed_by_observation_and_ancestry': landed})
++    return {
++        'schema_version': 1, 'status': 'proposal-only', 'trusted_policy': False,
++        'repository': git(root, 'config', '--get', 'remote.origin.url').decode().strip(),
++        'pins': {'main': main, 'staging': stage}, 'trees': trees, 'delta': delta,
++        'candidates': plan['candidates'], 'prerequisites': prerequisites,
++    }
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    commands = parser.add_subparsers(dest='command', required=True)
++    command = commands.add_parser('inventory', help='Print a complete proposed M0 as JSON')
++    command.add_argument('--repo', type=Path, required=True)
++    command.add_argument('--classification', type=Path, required=True)
++    prepare_parser = commands.add_parser('prepare', help='Prepare local engineering-only main/staging projections')
++    prepare_parser.add_argument('--output', type=Path, required=True)
++    verify_parser = commands.add_parser('verify', help='Verify candidate using the executing trusted target checkout')
++    verify_parser.add_argument('--repo', type=Path, required=True)
++    args = parser.parse_args()
++    try:
++        if args.command == 'verify':
++            from publication_current import verify
++            print(json.dumps(verify(Path(__file__).resolve().parents[1], args.repo.resolve()), indent=2))
++            return 0
++        if args.command == 'prepare':
++            from publication_current import prepare
++            print(json.dumps(prepare(Path(__file__).resolve().parents[1], args.output), indent=2))
++            return 0
++        plan = json.loads(args.classification.read_text(), object_pairs_hook=unique_object)
++        print(json.dumps(inventory(args.repo, plan), ensure_ascii=False, indent=2))
++        return 0
++    except (ValueError, KeyError, TypeError, OSError, subprocess.CalledProcessError) as error:
++        print(f'Blocked inventory: {error}', file=sys.stderr)
++        return 1
++
++
++if __name__ == '__main__':
++    sys.exit(main())
+diff --git a/scripts/publication_current.py b/scripts/publication_current.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..cb1ed464f9bc6f9f9744ee9175dd469c6966a04a
+--- /dev/null
++++ b/scripts/publication_current.py
+@@ -0,0 +1,223 @@
++"""Shared, exact M0 successor; callers execute this from the trusted control checkout."""
++import hashlib
++from importlib.util import module_from_spec, spec_from_file_location
++import json
++import os
++from pathlib import Path
++import shutil
++import subprocess
++
++MAIN = 'eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a'
++STAGING = 'c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7'
++BASES = {'main': MAIN, 'staging': STAGING}
++POLICY = 'maintenance/publication-workflow/engineering-v1.json'
++M0 = '.proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.proposed.json'
++M0_SHA = '6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a'
++
++
++def git(root, *args):
++    return subprocess.check_output(['git', '--no-replace-objects', '--literal-pathspecs', '-C', str(root), *args], stderr=subprocess.PIPE)
++
++
++def digest(data):
++    return hashlib.sha256(data).hexdigest()
++
++
++def regular(root, name):
++    path = Path(name)
++    if path.is_absolute() or '..' in path.parts or not name or path.as_posix() != name:
++        raise ValueError('unsafe successor path: ' + name)
++    current = root
++    for part in path.parts:
++        current /= part
++        if current.is_symlink():
++            raise ValueError('linked successor path: ' + name)
++    if not current.is_file():
++        raise ValueError('missing successor path: ' + name)
++    return current
++
++
++def policy(control):
++    data = json.loads(regular(control, POLICY).read_text())
++    if set(data) != {'version', 'bases', 'm0_sha256', 'scope', 'common'} or type(data['version']) is not int or data['version'] != 1 or data['bases'] != BASES or data['m0_sha256'] != M0_SHA:
++        raise ValueError('unapproved M0 successor pins')
++    raw = regular(control, M0).read_bytes()
++    if digest(raw) != M0_SHA:
++        raise ValueError('changed approved M0 inventory')
++    inventory = json.loads(raw)
++    protected_history = {'maintenance/harness-adoption/baseline-files.json',
++                         'maintenance/harness-adoption/candidate-delta.json',
++                         'maintenance/harness-adoption/framework-import-manifest.json',
++                         'maintenance/article-publication/source-boundary.json',
++                         'maintenance/lint-cleanup/source-boundary.json'}
++    owned = {p for c in inventory['candidates'] for p in c['paths']}
++    if not isinstance(data['common'], dict):
++        raise ValueError('exact common successor must be a path map')
++    writing = ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post')
++    for name, expected in data['common'].items():
++        regular(control, name)
++        if name in owned or name in protected_history or name.startswith(('blog/', '.github/')) or any(name.startswith(prefix + package + '/') for prefix in ('skills/', '.agents/skills/', '.claude/skills/') for package in writing):
++            raise ValueError('protected content/history in common successor: ' + name)
++        if set(expected) != {'mode', 'sha256'} or expected['mode'] not in {'100644', '100755'} or not isinstance(expected['sha256'], str) or len(expected['sha256']) != 64 or any(c not in '0123456789abcdef' for c in expected['sha256']):
++            raise ValueError('invalid exact common identity: ' + name)
++        if name != 'scripts/verify-harness-adoption.py':
++            for entries in inventory['trees'].values():
++                previous = entries.get(name)
++                if previous and expected != {'mode': previous['mode'], 'sha256': digest(git(control, 'cat-file', 'blob', previous['blob']))}:
++                    raise ValueError('unapproved existing engineering replacement: ' + name)
++    return data, inventory
++
++
++def prepare(control, output):
++    data, inventory = policy(control)
++    output = output.absolute()
++    if output.exists() or output.is_symlink() or output.resolve().is_relative_to(control.resolve()):
++        raise ValueError('output must be new and outside the control checkout')
++    for parent in output.parents:
++        if parent.is_symlink() and (parent.as_posix(), parent.readlink().as_posix()) not in {('/var', 'private/var'), ('/tmp', 'private/tmp')}:
++            raise ValueError('linked projection output parent')
++    output = output.resolve()
++    owned = {p for c in inventory['candidates'] for p in c['paths']}
++    for name, expected in data['common'].items():
++        if name in owned or name.startswith(('blog/', '.github/')):
++            raise ValueError('candidate/deployment path in engineering projection: ' + name)
++        path = regular(control, name)
++        mode = '100755' if path.stat().st_mode & 0o100 else '100644'
++        if {'mode': mode, 'sha256': digest(path.read_bytes())} != expected:
++            raise ValueError('changed exact engineering successor: ' + name)
++    output.mkdir(parents=True)
++    try:
++        for role, base in BASES.items():
++            target = output / role
++            subprocess.run(['git', 'clone', '--shared', '--no-checkout', str(control), str(target)], check=True, capture_output=True)
++            git(target, 'checkout', '--detach', base)
++            for target_role_name, target_pin in BASES.items():
++                git(target, 'update-ref', 'refs/heads/' + target_role_name, target_pin)
++            for name in data['common']:
++                target_path = target / name
++                target_path.parent.mkdir(parents=True, exist_ok=True)
++                regular(control, name)  # Input has been checked against the exact record.
++                if target_path.is_symlink():
++                    raise ValueError('linked projection replacement: ' + name)
++                shutil.copyfile(control / name, target_path)
++                target_path.chmod(0o755 if data['common'][name]['mode'] == '100755' else 0o644)
++            target_path = target / POLICY
++            target_path.parent.mkdir(parents=True, exist_ok=True)
++            target_path.write_bytes(regular(control, POLICY).read_bytes())
++        return {'status': 'prepared-local', 'publishable': False, 'bases': BASES,
++                'output': str(output), 'common_paths': sorted(data['common'])}
++    except Exception:
++        shutil.rmtree(output)
++        raise
++
++
++def target_role(control):
++    # The executing reviewed control checkout supplies the context, never root/candidate.
++    for role in ('staging', 'main'):
++        result = subprocess.run(['git', '--no-replace-objects', '-C', str(control),
++                                 'merge-base', '--is-ancestor', BASES[role], 'HEAD'], capture_output=True)
++        if result.returncode == 0:
++            return role
++    raise ValueError('trusted target ancestor context is unavailable')
++
++
++def check_history(root):
++    if git(root, 'for-each-ref', '--format=%(refname)', 'refs/replace').strip():
++        raise ValueError('replacement history is not allowed')
++    grafts = Path(git(root, 'rev-parse', '--path-format=absolute', '--git-path', 'info/grafts').decode().strip())
++    if grafts.exists() or grafts.is_symlink() or git(root, 'rev-parse', '--is-shallow-repository').strip() != b'false':
++        raise ValueError('complete, unmodified history is required')
++
++
++def source_names(root):
++    """Include ignored sources, except named local dependency/build/cache outputs."""
++    names = set()
++    pending = [root]
++    while pending:
++        directory = pending.pop()
++        for path in directory.iterdir():
++            name = path.relative_to(root).as_posix()
++            excluded = name in {'.git', 'node_modules', 'blog/.vitepress/dist',
++                                'blog/.vitepress/cache', 'blog/.vitepress/.temp'}
++            excluded |= path.name == '__pycache__' and name.startswith(('scripts/', 'tests/'))
++            if excluded:
++                if not path.is_dir() or path.is_symlink():
++                    raise ValueError('linked/non-directory local output: ' + name)
++                continue
++            if path.is_symlink() or path.is_file():
++                names.add(name)
++            elif path.is_dir():
++                pending.append(path)
++            else:
++                raise ValueError('nonregular source: ' + name)
++    return names
++
++
++def current_identity(root, name, expected):
++    path = root / name
++    for parent in path.parents:
++        if parent == root:
++            break
++        if parent.is_symlink():
++            raise ValueError('linked current source parent: ' + name)
++    if expected['mode'] == '120000':
++        if not path.is_symlink():
++            raise ValueError('changed current alias: ' + name)
++        raw = os.readlink(path).encode()
++        mode = '120000'
++    else:
++        path = regular(root, name)
++        raw = path.read_bytes()
++        mode = '100755' if path.stat().st_mode & 0o100 else '100644'
++    return {'mode': mode, 'sha256': digest(raw)}
++
++
++def verify(control, root):
++    from main_publication_verification import tree, identity
++    check_history(control)
++    check_history(root)
++    role = target_role(control)
++    data, inventory = policy(control)
++    git(root, 'merge-base', '--is-ancestor', BASES[role], 'HEAD')
++    expected = {p: identity(e) for p, e in tree(control, BASES[role]).items()}
++    expected.update(data['common'])
++    expected[POLICY] = {'mode': '100644', 'sha256': digest(regular(control, POLICY).read_bytes())}
++    actual = source_names(root)
++    if actual != set(expected):
++        raise ValueError('current reconciliation source inventory mismatch: ' + ', '.join(sorted(actual ^ set(expected))[:8]))
++    for name, entry in expected.items():
++        if current_identity(root, name, entry) != entry:
++            raise ValueError(('changed test repair provenance: ' if name == 'maintenance/harness-reconciliation/test-contract-repair.json' else 'changed current reconciliation source: ') + name)
++    spec = spec_from_file_location('trusted_current_tracker', control / 'scripts/verify-harness-adoption.py')
++    tracker = module_from_spec(spec)
++    spec.loader.exec_module(tracker)
++    state = tracker.check_tickets(root)
++    check_t13_landing(control, root, state, data)
++    return {'status': 'pass', 'tracker': state, 'target_role': role, 'target_base': BASES[role],
++            'candidate_head': git(root, 'rev-parse', 'HEAD').decode().strip(),
++            'source_paths': len(expected), 'publishable': False,
++            'candidate_paths_preserved': sum(len(c['paths']) for c in inventory['candidates']) if role == 'staging' else 0}
++
++
++def check_t13_landing(control, root, state, data):
++    ticket = state['tickets'].get('T-0013')
++    if not ticket or ticket['status'] != 'done':
++        return
++    receipt = json.loads(regular(root, ticket.get('landing_evidence', '')).read_text())
++    from main_publication_verification import tree, identity
++    engineering = {p: entry for p, entry in data['common'].items()
++                   if p.startswith('scripts/') or p == 'docs/adr/0008-main-first-engineering-and-shared-staging.md'}
++    for key, role in [('main_commit', 'main'), ('commit', 'staging')]:
++        commit = receipt.get(key, '')
++        if not isinstance(commit, str) or len(commit) != 40 or any(c not in '0123456789abcdef' for c in commit):
++            raise ValueError('T-0013 requires actual main and staging landing commits')
++        target = 'refs/heads/' + role
++        if subprocess.run(['git', '-C', str(control), 'show-ref', '--verify', '--quiet', target], capture_output=True).returncode:
++            target = 'refs/remotes/origin/' + role
++        try:
++            git(control, 'merge-base', '--is-ancestor', commit, target)
++            landed = tree(root, commit)
++        except subprocess.CalledProcessError as error:
++            raise ValueError('T-0013 landing is not in the trusted target history') from error
++        if any(identity(landed.get(p)) != expected for p, expected in engineering.items()):
++            raise ValueError('T-0013 engineering successor is not actually landed')
+diff --git a/scripts/harness_reconciliation.py b/scripts/harness_reconciliation.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..42fc35c2cc041ca45e6a4c3549488f0c30224ff3
+--- /dev/null
++++ b/scripts/harness_reconciliation.py
+@@ -0,0 +1,215 @@
++"""Pinned historical epochs plus a separately enforced current source boundary."""
++import hashlib
++import json
++import os
++from pathlib import Path
++import stat
++import subprocess
++
++EPOCH = '724ddad73f8411a33c77c68d75f95b41d3af2988'
++STAGING = '32cd6a9d4ead636ddc4e5020fceb35ad9645cc7f'
++STAGE_DIGEST = '96011a4f53031ffffa4ab029c0eaaf3c01d34f50145a3e6da77c9deb42c59195'
++COMPONENT_DIGEST = '5c72ce5d7a3b3dd370ddfe59bf595411adab5f618e738149034e1ea7505db377'
++REVISION_BASE = '69ff85f5fe1baddb54102070a436dff9ac1c5b73'
++REVISION_RECORD = 'maintenance/harness-reconciliation/article-electricity-revision.json'
++REVISION_DIGEST = 'a59ff8d81971f9ee85b92fa2eb940f6c7018d182454ded89169bbf27e8c125f9'
++REVISION_PATHS = {
++    'blog/post/course/security-awareness/electricity-privacy.md',
++    'blog/public/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png',
++    'blog/public/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png',
++}
++COMPONENT_PATHS = set(['blog/.vitepress/theme/components/ArticleSummary.vue', 'blog/.vitepress/theme/components/PreviewNotice.vue', 'blog/.vitepress/theme/index.ts', 'blog/.vitepress/theme/style.css', 'blog/post/course/security-awareness/electricity-privacy.md', 'blog/public/assets/post_course_security-awareness_electricity-privacy/article-banner.png', 'docs/article-summary.md', 'tests/articleSummary.vitest.ts', 'tests/fixtures/article-summary.md', 'tests/fixtures/component-acceptance.md', 'tests/previewNotice.vitest.ts', 'tests/previewNoticeArticle.vitest.ts'])
++REPAIR_BASE = 'f93237b1ed538484f24ed103ef00c7e5ee2e1828'
++REPAIR_CAPTURE = '6e4eb804bcbda8504935be49fd6537d6327d5303'
++REPAIR_RECORD = 'maintenance/harness-reconciliation/test-contract-repair.json'
++REPAIR_DIGEST = 'd5d286235aaf60ac04389a1fc76ab396a3dde087270856be36d804c9e3937aeb'
++PRODUCT_PATHS = {'blog/.vitepress/theme/index.ts', 'docs/authoring/article-captions.md', 'tests/encoreTicket.vitest.ts', 'blog/.vitepress/markdown/articleCaptions.ts', 'tests/fixtures/article-caption-baseline.json', 'docs/components/encore-ticket.md', 'tests/articleCaptions.vitest.ts', 'skills/phoenix-writing/references/context-form.md', 'maintenance/writing-skills/VALIDATION.md', 'blog/.vitepress/config.mts', 'maintenance/writing-skills/SOURCES.md', 'blog/.vitepress/theme/components/EncoreTicket.vue', 'skills/phoenix-writing/SKILL.md', 'blog/post/course/security-awareness/electricity-privacy.md', 'blog/.vitepress/theme/style.css'}
++REPAIR_PATHS = {'tests/fixtures/article-caption-entry.md', 'tests/articleCaptions.vitest.ts', 'tests/fixtures/article-caption-provenance.json', 'tests/article_publication/__init__.py', 'README.md', 'tests/harness_adoption/__init__.py', 'tests/fixtures/article-caption-migrated.md', 'package.json'}
++RECORDS = {'maintenance/harness-reconciliation/staging.json', 'maintenance/harness-reconciliation/components.json', REVISION_RECORD, REPAIR_RECORD}
++CODE = {'scripts/main_publication_verification.py', 'tests/harness_adoption/test_main_release.py', 'tests/harness_adoption/test_test_runner.py', 'scripts/verify-harness-adoption.py', 'tests/harness_adoption/test_successor.py', 'tests/harness_adoption/test_reconciliation.py', 'scripts/harness_reconciliation.py', 'scripts/run-python-tests.py'}
++SUPPORT = {'maintenance/component-delivery/source-freeze.json', 'maintenance/component-delivery/TDD.md', 'maintenance/component-delivery/scope.md'}
++GENERATED = {'blog/.vitepress/dist', 'blog/.vitepress/cache', 'blog/.vitepress/.temp'}
++HISTORY = ('maintenance/harness-adoption/baseline-files.json', 'maintenance/harness-adoption/candidate-delta.json', 'maintenance/harness-adoption/framework-import-manifest.json', 'maintenance/article-publication/source-boundary.json', 'maintenance/lint-cleanup/source-boundary.json')
++
++
++def sha(data):
++    return hashlib.sha256(data).hexdigest()
++
++
++def git_tree(root, ref):
++    rows = subprocess.check_output(['git', 'ls-tree', '-r', '-z', ref], cwd=root).split(b'\0')
++    entries = []
++    for row in rows:
++        if row:
++            meta, name = row.split(b'\t', 1)
++            mode, kind, blob = meta.decode().split()
++            if kind != 'blob':
++                raise ValueError('unsupported pinned Git entry: ' + name.decode())
++            entries.append((name.decode(), mode, blob))
++    blobs = list(dict.fromkeys(v[2] for v in entries))
++    raw = subprocess.check_output(['git', 'cat-file', '--batch'], input=('\n'.join(blobs) + '\n').encode(), cwd=root)
++    contents = {}
++    offset = 0
++    for blob in blobs:
++        end = raw.index(b'\n', offset)
++        header = raw[offset:end].decode().split()
++        if header[:2] != [blob, 'blob']:
++            raise ValueError('invalid pinned Git blob')
++        size = int(header[2]); offset = end + 1
++        contents[blob] = raw[offset:offset + size]; offset += size + 1
++    return {name: {'mode': mode, 'sha256': sha(contents[blob]), 'bytes': contents[blob]} for name, mode, blob in entries}
++
++
++def identity(record):
++    return None if record is None else {key: record[key] for key in ('mode', 'sha256')}
++
++
++def source_inventory(root):
++    names = set(filter(None, subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=root).decode().split('\0')))
++    # Ignore rules must not hide compilable input. Runtime outputs are explicitly outside source scope.
++    pending = [root / name for name in ('blog', 'tests', 'docs')]
++    while pending:
++        directory = pending.pop()
++        if directory.is_symlink():
++            raise ValueError('linked current source: ' + directory.relative_to(root).as_posix())
++        with os.scandir(directory) as items:
++            for entry in items:
++                path = Path(entry.path); name = path.relative_to(root).as_posix()
++                mode = entry.stat(follow_symlinks=False).st_mode
++                if name in GENERATED or (name.startswith('tests/') and entry.name == '__pycache__'):
++                    if stat.S_ISLNK(mode):
++                        raise ValueError('linked generated directory: ' + name)
++                    continue
++                if stat.S_ISLNK(mode):
++                    raise ValueError('linked current source: ' + name)
++                if stat.S_ISDIR(mode):
++                    pending.append(path)
++                elif stat.S_ISREG(mode):
++                    names.add(name)
++                else:
++                    raise ValueError('nonregular current source: ' + name)
++    return names
++
++
++def apply_repair(root, current, allowed_new, regular_path, ancestry):
++    """Validate a reviewed, exact successor; never derive approval from live bytes."""
++    raw = regular_path(root, REPAIR_RECORD).read_bytes()
++    if sha(raw) != REPAIR_DIGEST:
++        raise ValueError('changed test repair provenance')
++    record = json.loads(raw)
++    if (set(record) != {'version', 'predecessor', 'captured', 'product_delta', 'repair_delta'}
++            or record['version'] != 1 or record['predecessor'] != REPAIR_BASE
++            or record['captured'] != REPAIR_CAPTURE):
++        raise ValueError('unapproved test repair pins or fields')
++    ancestry(root, REPAIR_BASE); ancestry(root, REPAIR_CAPTURE)
++    if subprocess.run(['git', 'merge-base', '--is-ancestor', REPAIR_BASE, REPAIR_CAPTURE], cwd=root).returncode:
++        raise ValueError('invalid test repair predecessor ancestry')
++    before = git_tree(root, REPAIR_BASE); captured = git_tree(root, REPAIR_CAPTURE)
++    delta = {name for name in set(before) | set(captured)
++             if not allowed_new(name) and identity(before.get(name)) != identity(captured.get(name))}
++    if delta != PRODUCT_PATHS:
++        raise ValueError('incomplete protected test repair product scope')
++    for key, names in (('product_delta', PRODUCT_PATHS), ('repair_delta', REPAIR_PATHS)):
++        rows = record[key]
++        if len(rows) != len(names) or {row['path'] for row in rows} != names:
++            raise ValueError('unapproved test repair scope: ' + key)
++        for row in rows:
++            if set(row) != {'path', 'before', 'after'}:
++                raise ValueError('invalid test repair identity fields')
++            name = row['path']
++            predecessor = before if key == 'product_delta' else captured
++            if row['before'] != identity(predecessor.get(name)) or row['before'] != current.get(name):
++                raise ValueError('invalid test repair predecessor: ' + name)
++            after = row['after']
++            if (not isinstance(after, dict) or set(after) != {'mode', 'sha256'}
++                    or after['mode'] not in {'100644', '100755'}
++                    or not isinstance(after['sha256'], str) or len(after['sha256']) != 64
++                    or any(c not in '0123456789abcdef' for c in after['sha256'])):
++                raise ValueError('unsupported test repair source identity: ' + name)
++            if key == 'product_delta' and after != identity(captured.get(name)):
++                raise ValueError('invalid test repair captured source: ' + name)
++            current[name] = after
++
++
++def check(root, allowed_new, regular_path, ancestry):
++    stage_path = root / 'maintenance/harness-reconciliation/staging.json'
++    repair_path = root / REPAIR_RECORD
++    has_repair = repair_path.exists() or repair_path.is_symlink()
++    if has_repair:
++        for name in ('maintenance/harness-reconciliation/staging.json', 'maintenance/harness-reconciliation/components.json', REVISION_RECORD):
++            regular_path(root, name)
++    if not stage_path.exists():
++        return {}, set()
++    stage_raw = regular_path(root, stage_path.relative_to(root).as_posix()).read_bytes()
++    if sha(stage_raw) != STAGE_DIGEST:
++        raise ValueError('changed reconciliation staging provenance')
++    stage = json.loads(stage_raw)
++    if stage['epoch'] != EPOCH or stage['staging'] != STAGING:
++        raise ValueError('unapproved reconciliation pins')
++    ancestry(root, EPOCH); ancestry(root, STAGING)
++    old = git_tree(root, EPOCH); known = git_tree(root, STAGING)
++    expected_delta = {name: (identity(old.get(name)), identity(known.get(name))) for name in set(old) | set(known) if identity(old.get(name)) != identity(known.get(name))}
++    received = {row['path']: (row['before'], row['after']) for row in stage['historical_delta']}
++    if received != expected_delta or len(received) != len(stage['historical_delta']):
++        raise ValueError('invalid historical reconciliation delta')
++    for name in HISTORY:
++        if regular_path(root, name).read_bytes() != old[name]['bytes']:
++            raise ValueError('changed historical reconciliation source: ' + name)
++    current = {name: identity(value) for name, value in known.items() if not allowed_new(name)}
++    component_path = root / 'maintenance/harness-reconciliation/components.json'
++    if component_path.exists():
++        raw = regular_path(root, component_path.relative_to(root).as_posix()).read_bytes()
++        if sha(raw) != COMPONENT_DIGEST:
++            raise ValueError('changed reconciliation component provenance')
++        component = json.loads(raw)
++        if component['base'] != STAGING or {row['path'] for row in component['delta']} != COMPONENT_PATHS or len(component['delta']) != len(COMPONENT_PATHS):
++            raise ValueError('unapproved reconciliation component scope')
++        for row in component['delta']:
++            name = row['path']
++            if row['before'] != identity(known.get(name)):
++                raise ValueError('invalid component predecessor: ' + name)
++            current[name] = row['after']
++    revision_path = root / REVISION_RECORD
++    if revision_path.exists() or revision_path.is_symlink():
++        if not component_path.exists():
++            raise ValueError('article revision requires component provenance')
++        raw = regular_path(root, REVISION_RECORD).read_bytes()
++        if sha(raw) != REVISION_DIGEST:
++            raise ValueError('changed article revision provenance')
++        revision = json.loads(raw)
++        if revision['base'] != REVISION_BASE or {row['path'] for row in revision['delta']} != REVISION_PATHS or len(revision['delta']) != len(REVISION_PATHS):
++            raise ValueError('unapproved article revision scope or pin')
++        ancestry(root, REVISION_BASE)
++        predecessor = git_tree(root, REVISION_BASE)
++        for row in revision['delta']:
++            name = row['path']
++            if row['before'] != identity(predecessor.get(name)) or row['before'] != current.get(name):
++                raise ValueError('invalid article revision predecessor: ' + name)
++            current[name] = row['after']
++    if has_repair:
++        # Reviewed code is a trust root, but must still be present and regular.
++        for name in sorted(CODE):
++            regular_path(root, name)
++        apply_repair(root, current, allowed_new, regular_path, ancestry)
++    for name, expected in current.items():
++        if expected['mode'] == '120000':
++            path = root / name
++            for parent in path.parents:
++                if parent == root:
++                    break
++                if parent.is_symlink():
++                    raise ValueError('linked current source parent: ' + name)
++            if not path.is_symlink() or sha(os.readlink(path).encode()) != expected['sha256']:
++                raise ValueError('changed current reconciliation symlink: ' + name)
++            continue
++        path = regular_path(root, name)
++        mode = '100755' if path.stat().st_mode & stat.S_IXUSR else '100644'
++        if {'mode': mode, 'sha256': sha(path.read_bytes())} != expected:
++            raise ValueError('changed current reconciliation source: ' + name)
++    for name in SUPPORT:
++        if (root / name).exists() or (root / name).is_symlink():
++            regular_path(root, name)
++    for name in source_inventory(root):
++        if name not in current and not allowed_new(name) and name not in RECORDS | CODE | SUPPORT:
++            raise ValueError('unknown current reconciliation source: ' + name)
++    return {name: entry['bytes'] for name, entry in old.items() if entry['mode'] != '120000'}, set(current) | RECORDS | CODE | SUPPORT
+diff --git a/scripts/run-python-tests.py b/scripts/run-python-tests.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..f449e500c02937b4e9f3835b0ce7fc1eef331496
+--- /dev/null
++++ b/scripts/run-python-tests.py
+@@ -0,0 +1,33 @@
++#!/usr/bin/env python3
++"""Run both product Python suites; empty discovery is a failure."""
++import argparse
++import os
++from pathlib import Path
++import sys
++import unittest
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--tests-root', type=Path, default=Path(__file__).resolve().parents[1] / 'tests')
++    args = parser.parse_args()
++    sys.dont_write_bytecode = True
++    os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
++    root = args.tests_root.resolve()
++    success = True
++    for name in ('harness_adoption', 'article_publication'):
++        loader = unittest.TestLoader()
++        try:
++            suite = loader.discover(str(root / name), top_level_dir=str(root))
++        except (ImportError, OSError) as error:
++            print(f'{name}: testsRun=0 failures=0 errors=1 discovery_error={error}', flush=True)
++            success = False
++            continue
++        result = unittest.TextTestRunner(verbosity=2).run(suite)
++        print(f'{name}: testsRun={result.testsRun} failures={len(result.failures)} errors={len(result.errors)}', flush=True)
++        success = result.testsRun > 0 and result.wasSuccessful() and success
++    return 0 if success else 1
++
++
++if __name__ == '__main__':
++    sys.exit(main())
+diff --git a/tests/article_publication/__init__.py b/tests/article_publication/__init__.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..8380dd164d7719417e2867dfa0c5fc910e1a0c7a
+--- /dev/null
++++ b/tests/article_publication/__init__.py
+@@ -0,0 +1 @@
++"""Article publication preparation regression suite."""
+diff --git a/tests/harness_adoption/__init__.py b/tests/harness_adoption/__init__.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..4ace6b713ad2b2b9267acf4d1ef5ed63f5747f04
+--- /dev/null
++++ b/tests/harness_adoption/__init__.py
+@@ -0,0 +1 @@
++"""Harness adoption and verification regression suite."""
+diff --git a/tests/article_publication/test_baseline_inventory.py b/tests/article_publication/test_baseline_inventory.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..412262fe563752672c3e0a1395091d89d3d1027a
+--- /dev/null
++++ b/tests/article_publication/test_baseline_inventory.py
+@@ -0,0 +1,192 @@
++"""Public, read-only Git inventory seam for the proposed M0 boundary."""
++import json
++from pathlib import Path
++import subprocess
++import tempfile
++import unittest
++
++CLI = Path(__file__).resolve().parents[2] / 'scripts/publication-baseline.py'
++
++
++class BaselineInventoryTests(unittest.TestCase):
++    def setUp(self):
++        self.tmp = tempfile.TemporaryDirectory()
++        self.addCleanup(self.tmp.cleanup)
++        self.root = Path(self.tmp.name)
++        self.git('init', '-q')
++        self.git('config', 'user.email', 'fixture@example.invalid')
++        self.git('config', 'user.name', 'Fixture')
++        self.git('remote', 'add', 'origin', 'https://example.invalid/site.git')
++        (self.root / 'published.md').write_text('published\n')
++        self.commit()
++        self.main = self.git('rev-parse', 'HEAD').strip()
++        (self.root / 'published.md').write_text('unapproved revision\n')
++        (self.root / 'A.md').write_text('candidate A\n')
++        (self.root / 'engine.py').write_text('print("engineering")\n')
++        self.commit()
++        self.stage = self.git('rev-parse', 'HEAD').strip()
++        self.plan = {
++            'schema_version': 1, 'main': self.main, 'staging': self.stage,
++            'classifications': {
++                'published.md': {'category': 'candidate', 'owner': 'revision'},
++                'A.md': {'category': 'candidate', 'owner': 'A'},
++                'engine.py': {'category': 'engineering', 'owner': 'common'},
++            },
++            'candidates': [
++                {'id': 'A', 'paths': ['A.md'], 'provenance': 'legacy-requires-migration'},
++                {'id': 'revision', 'paths': ['published.md'], 'provenance': 'legacy-requires-migration'},
++            ],
++            'prerequisites': [],
++        }
++
++    def git(self, *args):
++        return subprocess.check_output(['git', '-C', str(self.root), *args], text=True)
++
++    def commit(self):
++        self.git('add', '.')
++        self.git('commit', '-qm', 'fixture')
++
++    def invoke(self):
++        policy = self.root.parent / (self.root.name + '-classification.json')
++        policy.write_text(json.dumps(self.plan))
++        self.addCleanup(policy.unlink, missing_ok=True)
++        return subprocess.run(
++            ['python3', str(CLI), 'inventory', '--repo', str(self.root),
++             '--classification', str(policy)], text=True, capture_output=True,
++        )
++
++    def test_complete_proposal_preserves_revision_and_records_both_trees(self):
++        before = self.git('status', '--porcelain=v1', '--untracked-files=all')
++        result = self.invoke()
++        self.assertEqual(result.returncode, 0, result.stderr)
++        report = json.loads(result.stdout)
++        self.assertEqual(report['status'], 'proposal-only')
++        self.assertFalse(report['trusted_policy'])
++        self.assertEqual(len(report['trees']['main']), 1)
++        self.assertEqual(len(report['trees']['staging']), 3)
++        revision = next(r for r in report['delta'] if r['path'] == 'published.md')
++        self.assertEqual(revision['category'], 'candidate')
++        self.assertEqual(revision['main']['blob'], self.git('rev-parse', self.main + ':published.md').strip())
++        self.assertEqual(revision['staging']['blob'], self.git('rev-parse', self.stage + ':published.md').strip())
++        self.assertEqual(revision['main']['mode'], '100644')
++        self.assertEqual(revision['main_action'], 'retain-published')
++        self.assertEqual(revision['staging_action'], 'preserve-exact')
++        self.assertEqual(before, self.git('status', '--porcelain=v1', '--untracked-files=all'))
++
++    def test_unknown_delta_or_stale_classification_blocks_without_partial_output(self):
++        original = json.loads(json.dumps(self.plan))
++        for mutation in ('unknown', 'stale'):
++            with self.subTest(mutation=mutation):
++                self.plan = json.loads(json.dumps(original))
++                if mutation == 'unknown':
++                    (self.root / 'unknown.txt').write_text('unclassified\n')
++                    self.commit()
++                    self.plan['staging'] = self.git('rev-parse', 'HEAD').strip()
++                else:
++                    self.plan['classifications']['absent.md'] = {'category': 'engineering', 'owner': 'common'}
++                result = self.invoke()
++                self.assertNotEqual(result.returncode, 0)
++                self.assertEqual(result.stdout, '')
++                self.assertIn('classification', result.stderr.lower())
++                self.plan = original
++
++    def test_overlapping_or_incomplete_candidate_ownership_blocks(self):
++        original = json.loads(json.dumps(self.plan))
++        for mutation in ('overlap', 'missing', 'masquerade'):
++            with self.subTest(mutation=mutation):
++                self.plan = json.loads(json.dumps(original))
++                if mutation == 'overlap':
++                    self.plan['candidates'][1]['paths'].append('A.md')
++                elif mutation == 'missing':
++                    self.plan['candidates'][0]['paths'] = []
++                else:
++                    self.plan['classifications']['A.md'] = {'category': 'engineering', 'owner': 'common'}
++                result = self.invoke()
++                self.assertNotEqual(result.returncode, 0)
++                self.assertEqual(result.stdout, '')
++                self.assertIn('ownership', result.stderr.lower())
++
++    def test_open_pr_is_not_landed_and_shared_patch_is_exact(self):
++        self.plan['classifications']['engine.py']['shared'] = True
++        self.plan['prerequisites'] = [
++            {'pr': 20, 'state': 'OPEN', 'target': 'main', 'merge_commit': None,
++             'head': self.stage},
++            {'pr': 21, 'state': 'MERGED', 'target': 'staging', 'merge_commit': self.stage,
++             'head': self.stage},
++        ]
++        result = self.invoke()
++        self.assertEqual(result.returncode, 0, result.stderr)
++        report = json.loads(result.stdout)
++        self.assertEqual([p['landed_by_observation_and_ancestry'] for p in report['prerequisites']], [False, True])
++        engine = next(r for r in report['delta'] if r['path'] == 'engine.py')
++        self.assertIn('+print("engineering")', engine['patch'])
++        self.assertIn('new file mode 100644', engine['patch'])
++
++    def test_unpinned_or_self_asserted_trust_input_is_rejected(self):
++        original = json.loads(json.dumps(self.plan))
++        for mutation in ('short-pin', 'branch-pin', 'trusted', 'role', 'category', 'duplicate-json'):
++            with self.subTest(mutation=mutation):
++                self.plan = json.loads(json.dumps(original))
++                if mutation == 'short-pin':
++                    self.plan['main'] = self.main[:8]
++                elif mutation == 'branch-pin':
++                    self.plan['main'] = 'HEAD'
++                elif mutation == 'trusted':
++                    self.plan['trusted_policy'] = True
++                elif mutation == 'role':
++                    self.plan['target_role'] = 'permissive'
++                elif mutation == 'category':
++                    self.plan['classifications']['engine.py']['category'] = 'anything'
++                else:
++                    policy = self.root.parent / (self.root.name + '-duplicate.json')
++                    self.addCleanup(policy.unlink, missing_ok=True)
++                    policy.write_text(json.dumps(self.plan)[:-1] + ', "main": "HEAD"}')
++                    result = subprocess.run(['python3', str(CLI), 'inventory', '--repo', str(self.root),
++                                             '--classification', str(policy)], text=True, capture_output=True)
++                if mutation != 'duplicate-json':
++                    result = self.invoke()
++                self.assertNotEqual(result.returncode, 0)
++                self.assertEqual(result.stdout, '')
++
++    def test_history_overlays_and_incomplete_history_are_rejected(self):
++        self.git('replace', self.main, self.stage)
++        result = self.invoke()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++        self.git('replace', '-d', self.main)
++        (self.root / '.git/info/grafts').write_text(self.stage + '\n')
++        result = self.invoke()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++        (self.root / '.git/info/grafts').unlink()
++        (self.root / '.git/shallow').write_text(self.stage + '\n')
++        result = self.invoke()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++
++    def test_candidate_deletion_retains_published_main_and_records_absence(self):
++        (self.root / 'published.md').unlink()
++        self.commit()
++        self.plan['staging'] = self.git('rev-parse', 'HEAD').strip()
++        result = self.invoke()
++        self.assertEqual(result.returncode, 0, result.stderr)
++        revision = next(r for r in json.loads(result.stdout)['delta'] if r['path'] == 'published.md')
++        self.assertIsNone(revision['staging'])
++        self.assertEqual(revision['main_action'], 'retain-published')
++        self.assertEqual(revision['main']['blob'], self.git('rev-parse', self.main + ':published.md').strip())
++
++    def test_shared_patch_treats_git_metacharacters_as_literal_paths(self):
++        for path, content in [('engine*.py', 'literal-only'), ('engineZ.py', 'other-path')]:
++            (self.root / path).write_text(content + '\n')
++            self.plan['classifications'][path] = {'category': 'engineering', 'owner': 'common', 'shared': True}
++        self.commit()
++        self.plan['staging'] = self.git('rev-parse', 'HEAD').strip()
++        result = self.invoke()
++        self.assertEqual(result.returncode, 0, result.stderr)
++        patch = next(r['patch'] for r in json.loads(result.stdout)['delta'] if r['path'] == 'engine*.py')
++        self.assertIn('+literal-only', patch)
++        self.assertNotIn('+other-path', patch)
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/tests/article_publication/test_current_baseline.py b/tests/article_publication/test_current_baseline.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..bec6ed9505e7aaf4075f7911423b49adaa331841
+--- /dev/null
++++ b/tests/article_publication/test_current_baseline.py
+@@ -0,0 +1,194 @@
++"""Approved P02/P03/P23 tests at the real Git/native CLI boundary."""
++import json
++from pathlib import Path
++import shutil
++import subprocess
++import tempfile
++import unittest
++
++SOURCE = Path(__file__).resolve().parents[2]
++CLI = SOURCE / 'scripts/publication-baseline.py'
++MAIN = 'eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a'
++STAGING = 'c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7'
++ARTICLE = 'blog/post/course/security-awareness/electricity-privacy.md'
++
++
++class CurrentBaselineTests(unittest.TestCase):
++    def setUp(self):
++        self.tmp = tempfile.TemporaryDirectory(prefix='current-baseline-')
++        self.addCleanup(self.tmp.cleanup)
++        self.out = Path(self.tmp.name) / 'projection'
++
++    def run_cli(self, *args):
++        return subprocess.run(['python3', str(CLI), *args], capture_output=True, text=True)
++
++    def prepare(self):
++        result = self.run_cli('prepare', '--output', str(self.out))
++        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
++        return json.loads(result.stdout)
++
++    def test_engineering_projection_preserves_published_main_and_all_staging_candidates(self):
++        result = self.prepare()
++        self.assertFalse(result['publishable'])
++        self.assertEqual((self.out / 'main' / ARTICLE).read_bytes(), subprocess.check_output(['git', 'show', MAIN + ':' + ARTICLE], cwd=SOURCE))
++        inventory = json.loads((SOURCE / '.proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.proposed.json').read_text())
++        for candidate in inventory['candidates']:
++            for name in candidate['paths']:
++                self.assertEqual((self.out / 'staging' / name).read_bytes(), subprocess.check_output(['git', 'show', STAGING + ':' + name], cwd=SOURCE), name)
++        self.assertFalse((self.out / 'main/blog/post/local-preview').exists())
++        self.assertEqual((self.out / 'main/scripts/publication_current.py').read_bytes(), (self.out / 'staging/scripts/publication_current.py').read_bytes())
++        self.assertEqual(subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=self.out / 'main').decode().strip(), MAIN)
++        self.assertEqual(subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=self.out / 'staging').decode().strip(), STAGING)
++
++    def test_same_engine_validates_both_trusted_targets_and_refuses_cross_role_candidates(self):
++        self.prepare()
++        for role in ('main', 'staging'):
++            controller = self.out / role
++            result = subprocess.run(['python3', str(controller / 'scripts/publication-baseline.py'),
++                                     'verify', '--repo', str(controller)], text=True, capture_output=True)
++            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
++            report = json.loads(result.stdout)
++            self.assertEqual(report['target_role'], role)
++            self.assertFalse(report['publishable'])
++        result = subprocess.run(['python3', str(self.out / 'main/scripts/publication-baseline.py'), 'verify', '--repo', str(self.out / 'staging')], text=True, capture_output=True)
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++        result = self.run_cli('verify', '--repo', str(self.out / 'main'), '--role', 'staging')
++        self.assertNotEqual(result.returncode, 0)
++
++    def test_native_adoption_command_uses_exact_current_successor_on_both_projections(self):
++        self.prepare()
++        for role in ('main', 'staging'):
++            controller = self.out / role
++            result = subprocess.run(['python3', str(controller / 'scripts/verify-harness-adoption.py')], text=True, capture_output=True)
++            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
++            self.assertEqual(json.loads(result.stdout)['target_role'], role)
++
++    def test_candidate_policy_management_and_protected_bytes_cannot_weaken_target_checks(self):
++        self.prepare()
++        controller = self.out / 'main'
++        root = self.out / 'candidate'
++        shutil.copytree(controller, root, symlinks=True)
++        mutations = [
++            ('maintenance/publication-workflow/engineering-v1.json', b'{}'),
++            ('blog/post/course/security-awareness/electricity-privacy.md', b'candidate revision'),
++            ('maintenance/harness-adoption/baseline-files.json', b'{}'),
++            ('.proj.specs/unreviewed/waiver.json', b'{"allow_management":true}'),
++        ]
++        for name, raw in mutations:
++            with self.subTest(path=name):
++                path = root / name
++                original = path.read_bytes() if path.exists() else None
++                path.parent.mkdir(parents=True, exist_ok=True)
++                path.write_bytes(raw)
++                result = subprocess.run(['python3', str(controller / 'scripts/publication-baseline.py'), 'verify', '--repo', str(root)], text=True, capture_output=True)
++                self.assertNotEqual(result.returncode, 0)
++                self.assertEqual(result.stdout, '')
++                if original is None:
++                    path.unlink()
++                else:
++                    path.write_bytes(original)
++
++    def test_exact_tracker_update_cannot_close_t13_without_actual_authorized_landing(self):
++        self.prepare()
++        controller = self.out / 'main'
++        ticket = '.proj.tickets/0012-publication-workflow/T-0013-common-engineering-baseline.md'
++        path = controller / ticket
++        path.write_text(path.read_text().replace('status: processing', 'status: done', 1).replace('status: review', 'status: done', 1))
++        import hashlib
++        policy_path = controller / 'maintenance/publication-workflow/engineering-v1.json'
++        record = json.loads(policy_path.read_text())
++        record['common'][ticket]['sha256'] = hashlib.sha256(path.read_bytes()).hexdigest()
++        policy_path.write_text(json.dumps(record, indent=2) + '\n')
++        result = subprocess.run(['python3', str(controller / 'scripts/publication-baseline.py'),
++                                 'verify', '--repo', str(controller)], text=True, capture_output=True)
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++        self.assertIn('landing', result.stderr)
++
++    def test_m0_ancestor_with_generic_receipt_is_not_t13_implementation_landing(self):
++        self.prepare()
++        controller = self.out / 'main'
++        ticket = '.proj.tickets/0012-publication-workflow/T-0013-common-engineering-baseline.md'
++        receipt = '.proj.specs/0012-publication-workflow/fake-landing.json'
++        path = controller / ticket
++        path.write_text(path.read_text().replace('status: processing', 'status: done', 1).replace('status: review', 'status: done', 1).replace('status: done', 'status: done\nlanding_evidence: ' + receipt, 1))
++        (controller / receipt).write_text(json.dumps({'ticket': 'T-0013', 'authorized': True,
++                         'landed': True, 'commit': MAIN, 'main_commit': MAIN, 'target': 'staging',
++                         'approval_receipt': 'maintenance/publication-workflow/M0-approval.json'}))
++        subprocess.run(['git', 'update-ref', 'refs/heads/staging', STAGING], cwd=controller, check=True)
++        import hashlib
++        policy_path = controller / 'maintenance/publication-workflow/engineering-v1.json'
++        record = json.loads(policy_path.read_text())
++        for name in (ticket, receipt):
++            record['common'][name] = {'mode': '100644', 'sha256': hashlib.sha256((controller / name).read_bytes()).hexdigest()}
++        policy_path.write_text(json.dumps(record, indent=2) + '\n')
++        result = subprocess.run(['python3', str(controller / 'scripts/publication-baseline.py'),
++                                 'verify', '--repo', str(controller)], text=True, capture_output=True)
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++        self.assertIn('T-0013', result.stderr)
++
++    def test_reviewed_main_based_control_topic_keeps_main_role_after_commit(self):
++        self.prepare()
++        controller = self.out / 'main'
++        tree = subprocess.check_output(['git', 'rev-parse', 'HEAD^{tree}'], cwd=controller).decode().strip()
++        commit = subprocess.check_output(['git', '-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid',
++                                          'commit-tree', tree, '-p', MAIN, '-m', 'fixture control commit'], cwd=controller).decode().strip()
++        subprocess.run(['git', 'update-ref', 'HEAD', commit], cwd=controller, check=True)
++        result = subprocess.run(['python3', str(controller / 'scripts/publication-baseline.py'),
++                                 'verify', '--repo', str(controller)], text=True, capture_output=True)
++        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
++        self.assertEqual(json.loads(result.stdout)['target_role'], 'main')
++
++    def test_common_record_cannot_waive_candidate_or_historical_ownership(self):
++        self.prepare()
++        controller = self.out / 'main'
++        policy_path = controller / 'maintenance/publication-workflow/engineering-v1.json'
++        original = policy_path.read_bytes()
++        import hashlib
++        for mutation in ('candidate-overlay', 'historical-overlay', 'broad-waiver'):
++            with self.subTest(mutation=mutation):
++                record = json.loads(original)
++                if mutation == 'broad-waiver':
++                    record['allow_management_prefixes'] = ['.proj.specs/']
++                else:
++                    name = ARTICLE if mutation == 'candidate-overlay' else 'maintenance/harness-adoption/baseline-files.json'
++                    record['common'][name] = {'mode': '100644', 'sha256': hashlib.sha256((controller / name).read_bytes()).hexdigest()}
++                policy_path.write_text(json.dumps(record, indent=2) + '\n')
++                result = subprocess.run(['python3', str(controller / 'scripts/publication-baseline.py'),
++                                         'verify', '--repo', str(controller)], text=True, capture_output=True)
++                self.assertNotEqual(result.returncode, 0)
++                self.assertEqual(result.stdout, '')
++        policy_path.write_bytes(original)
++
++    def test_literal_alias_bytes_are_protected_even_when_target_is_equivalent(self):
++        self.prepare()
++        controller = self.out / 'main'
++        root = self.out / 'candidate'
++        shutil.copytree(controller, root, symlinks=True)
++        inventory = json.loads((SOURCE / '.proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.proposed.json').read_text())
++        name = next(p for p, entry in inventory['trees']['main'].items() if entry['mode'] == '120000')
++        import os
++        path = root / name
++        target = os.readlink(path)
++        path.unlink()
++        path.symlink_to('./' + target)
++        result = subprocess.run(['python3', str(controller / 'scripts/publication-baseline.py'),
++                                 'verify', '--repo', str(root)], text=True, capture_output=True)
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(result.stdout, '')
++        self.assertIn(name, result.stderr)
++
++    def test_projection_preserves_target_refs_needed_by_unchanged_landing_fixtures(self):
++        self.prepare()
++        for role in ('main', 'staging'):
++            for ref, expected in [('main', MAIN), ('staging', STAGING)]:
++                result = subprocess.run(['git', 'rev-parse', '--verify', 'refs/heads/' + ref],
++                                         cwd=self.out / role, text=True, capture_output=True)
++                self.assertEqual(result.returncode, 0, result.stderr)
++                self.assertEqual(result.stdout.strip(), expected)
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/docs/adr/0008-main-first-engineering-and-shared-staging.md b/docs/adr/0008-main-first-engineering-and-shared-staging.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..a3d5318d359ddea7d3d31e25d6cd6b5a102c24e3
+--- /dev/null
++++ b/docs/adr/0008-main-first-engineering-and-shared-staging.md
+@@ -0,0 +1,37 @@
++# ADR-0008: Main-first engineering with shared staging preview
++
++Status: accepted design; operational activation pending epic 0012 acceptance.
++Date: 2026-10-11
++Authority: owner-approved epic 0012 spec and six-ticket allocation; see that epic's
++approval.md. This ADR grants no merge, deployment or remote-write authority.
++
++## Decision
++
++Engineering ticket branches start from main. An authorized main PR lands the engineering
++change first. The same commits reach staging through a separately validated sync PR;
++there is no second implementation of the engineering fix. Main contains only approved,
++published articles. Staging adds all retained public candidate articles and revisions at
++one shared preview alias. An existing published path can contain a candidate revision.
++
++Staging remains the configured tracker landing target under ADR-0006. Done requires all
++acceptance criteria, actual authorized staging ancestry and approval receipts, plus main
++landing where required. A main-only landing, open sync PR or successful checks cannot
++close the ticket. ADR-0006 and its historical receipts remain unchanged.
++
++Routine sync uses the permanent ticket-owned branch
++`tickets/T-0016/main-to-staging-sync`. Its repeated operational PRs do not allocate or reuse
++that ticket id for new development. Retain the branch after merge; deletion or ownership
++drift blocks activation until identity is checked. New development and conflict repairs
++use separate tickets, branches and approved test plans.
++
++## Consequences and gates
++
++The owner retains separate authority for publication and merges. There is no automatic
++merge. M0 must account for every pinned main/staging difference and receive concrete
++owner approval before policy use. Unknown or overlapping ownership, incomplete ancestry,
++changed candidates and unreviewed successor boundaries block affected preparation.
++
++Historical validator assertions, immutable receipts, published URLs and candidate bytes
++remain protected. A shared current validator selects its role from trusted target/base
++context, never from candidate input. Deployment settings remain unchanged under this epic's
++present authorization; real automation activation requires the separately specified gates.
+diff --git a/docs/publication-baseline.md b/docs/publication-baseline.md
+new file mode 100644
+index 0000000000000000000000000000000000000000..b5b44af438edb3b7b69d9a8f0bcea526ac715b96
+--- /dev/null
++++ b/docs/publication-baseline.md
+@@ -0,0 +1,56 @@
++# 共同工程基底與 current successor
++
++T-0013 在已核准 M0 上建立一份工程變更，供 main 與 staging 共用。main 只保留已發布文章；
++staging 保留候選文章、既有網址上的未發布修訂、圖片與原始 frontmatter。這個工具不發布
++文章，也不執行 merge 或修改部署設定。
++
++## 可信執行位置
++
++從**已審查的控制 checkout** 執行工具，將受驗 checkout 傳給 `--repo`／`--root`。
++控制 checkout 的 M0 ancestry 決定 main／staging 角色；受驗目錄、候選政策及 CLI role
++旗標不能改變角色。若控制 checkout 含 staging 的固定 ancestor，結果明載為 staging；
++消費驗證結果的流程必須比對自己的目標角色及 base。不能把 staging 結果當成 main 驗證。
++
++不要執行未審查候選內的 validator 來證明候選安全。執行中的程式碼、M0 原始盤點與精確
++engineering-v1.json 是控制平面的可信輸入；受驗 checkout 只提供 Git metadata 與檔案。
++工具不宣稱能抵抗控制平面本身遭竄改。後續 CI 必須從可信目標取出工具，不能從 PR head
++執行政策或程式碼。現階段沒有啟用 CI、自動同步或部署設定。
++
++## 本機指令
++
++```sh
++python3 scripts/publication-baseline.py --help
++python3 scripts/publication-baseline.py prepare --output /absolute/new/output
++python3 scripts/publication-baseline.py verify --repo /absolute/candidate
++python3 scripts/verify-harness-adoption.py --root /absolute/candidate
++python3 scripts/run-python-tests.py
++```
++
++`prepare` 只接受新的外部輸出位置，建立兩個獨立 clone，固定 HEAD 與供歷史 landing
++fixtures 使用的 main／staging refs，再套用逐檔列出的共同工程變更。既有輸出與原始
++checkout 不覆寫。不使用 Git merge；兩個目標分支也不前進。
++
++`verify` 比對完整來源清單、mode 與 SHA-256，包含被 Git ignore 的文章與管理檔案。
++只有明列的 dependency／build／bytecode 產物資料夾略過，且不能是 symlink。沒有管理
++資料夾的整體豁免。精確政策不得加入候選、blog、部署、三套既有寫作技能或歷史契約的
++overlay；既有工程檔案只有新版 entrypoint 可以更換，其原版本另行封存。
++
++輸出固定 `publishable: false`，包含角色、M0 base、受驗 HEAD、路徑數與 tracker 狀態。
++本機 pass 不是 main／staging 落地、文章發布、遠端 CI 或實際網站驗證。
++
++## 歷史契約與新契約
++
++main／staging 的原始 verifier 完整保留於 `maintenance/publication-workflow/history/`，
++轉接層只載入 M0 固定 Git commit 中、SHA-256 符合的歷史程式碼；不載入候選程式碼。
++舊 fixture 仍用原契約判定，既有 assertions 不改。current 路徑則執行共用的精確 successor，
++不把歷史 snapshot 當成可變 tracker 的 oracle。
++
++工程邊界的 authoring 是維護者審查工作，不是 validator 的自動修復功能。工具不會從
++目前檔案自動重設預期 hash，也不提供自行核准、role override 或整體豁免指令。新增或
++變更共同工程路徑必須先建立明確邊界，再完成同等審查。
++
++## 結案
++
++T-0013 的 done 除既有核准收據與 staging ancestry 外，還要求 main／staging 的實際
++landing commit 包含本次工程程式碼。拿 M0 ancestor 或 PR-ready 收據不能結案。歷史
++ADR-0006 保留；main-first 設計見 ADR-0008。未 merge 的本機驗證樹不提供落地證據。
+diff --git a/maintenance/publication-workflow/M0-approval.json b/maintenance/publication-workflow/M0-approval.json
+new file mode 100644
+index 0000000000000000000000000000000000000000..93e3e9726ca66a99eed7300ccbc6990357795909
+--- /dev/null
++++ b/maintenance/publication-workflow/M0-approval.json
+@@ -0,0 +1,8 @@
++{
++  "version": 1,
++  "approved_on": "2026-10-14",
++  "approval_source": ".proj.specs/0012-publication-workflow/approval.md",
++  "classification_sha256": "71e88f0f2187505145701fd13145f9e156692d0e40d1bba7852b7c5290e03b49",
++  "inventory_sha256": "6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a",
++  "scope": "local T-0013 baseline implementation; no merge/deployment/publication"
++}
+diff --git a/maintenance/publication-workflow/history/main-verifier.py b/maintenance/publication-workflow/history/main-verifier.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..19004c95d9f8b92e7c4c139eb950f9bfce172ba3
+--- /dev/null
++++ b/maintenance/publication-workflow/history/main-verifier.py
+@@ -0,0 +1,479 @@
++#!/usr/bin/env python3
++"""Validate local Harness tracker, provenance and approved product boundaries."""
++import argparse
++from datetime import date
++import hashlib
++import json
++from pathlib import Path
++import re
++import os
++import stat
++import subprocess
++
++
++def git_blob(content):
++    return hashlib.sha1(b'blob ' + str(len(content)).encode() + b'\0' + content).hexdigest()
++
++
++def frontmatter(path):
++    text = path.read_text()
++    if not text.startswith('---\n') or '\n---\n' not in text[4:]:
++        raise ValueError(f'missing frontmatter: {path}')
++    data = {}
++    for line in text.split('\n---\n', 1)[0][4:].splitlines():
++        match = re.fullmatch(r'([a-z_]+):\s*(.*)', line)
++        if not match or match[1] in data:
++            raise ValueError(f'unsupported or duplicate frontmatter: {path}: {line}')
++        data[match[1]] = match[2].strip().strip('"').strip("'")
++    return data
++
++
++def regular_path(root, name):
++    path = Path(name)
++    if path.is_absolute() or '..' in path.parts or not name:
++        raise ValueError(f'unsafe evidence/source path: {name}')
++    current = root
++    for part in path.parts:
++        current = current / part
++        if current.is_symlink():
++            raise ValueError(f'linked evidence/source path: {name}')
++    if not current.is_file():
++        raise ValueError(f'missing evidence/source path: {name}')
++    return current
++
++
++def check_tickets(root):
++    tickets = {}
++    for path in sorted((root / '.proj.tickets').glob('**/T-*.md')):
++        data = frontmatter(path)
++        ticket_id = data.get('id', '')
++        if not re.fullmatch(r'T-\d{4}', ticket_id) or not path.name.startswith(ticket_id + '-'):
++            raise ValueError(f'invalid ticket id/path: {path}')
++        if ticket_id in tickets:
++            raise ValueError(f'duplicate ticket id: {ticket_id}')
++        if data.get('epic') != path.parent.name or not data.get('title'):
++            raise ValueError(f'invalid epic/title: {path}')
++        if data.get('status') not in {'todo', 'processing', 'review', 'done', 'pending'}:
++            raise ValueError(f'invalid stored status: {path}')
++        raw = data.get('blocked_by', '')
++        if not re.fullmatch(r'\[(?:\s*T-\d{4}\s*(?:,\s*T-\d{4}\s*)*)?\]', raw):
++            raise ValueError(f'invalid blocked_by list: {path}')
++        data['blocked_by'] = re.findall(r'T-\d{4}', raw)
++        if len(set(data['blocked_by'])) != len(data['blocked_by']):
++            raise ValueError(f'duplicate dependency: {path}')
++        if data['status'] == 'pending':
++            for key in ('pending_reason', 'pending_evidence', 'pending_on', 'revisit_when'):
++                if not data.get(key): raise ValueError(f'pending missing {key}: {path}')
++            try: date.fromisoformat(data['pending_on'])
++            except ValueError: raise ValueError(f'invalid pending date: {path}') from None
++            regular_path(root, data['pending_evidence'].split('#', 1)[0])
++        if data['status'] == 'done':
++            try:
++                landing = json.loads(regular_path(root, data.get('landing_evidence', '')).read_text())
++                if landing.get('ticket') != ticket_id or landing.get('authorized') is not True or landing.get('landed') is not True or not re.fullmatch(r'[a-f0-9]{40}', landing.get('commit', '')) or not landing.get('approval_receipt') or landing.get('target') != 'staging':
++                    raise ValueError('incomplete landing record')
++                regular_path(root, landing['approval_receipt'])
++                subprocess.run(['git', 'cat-file', '-e', landing['commit'] + '^{commit}'], cwd=root, check=True, capture_output=True)
++                subprocess.run(['git', 'merge-base', '--is-ancestor', landing['commit'], 'staging'], cwd=root, check=True, capture_output=True)
++            except (ValueError, KeyError, subprocess.CalledProcessError):
++                raise ValueError(f'missing/invalid landing evidence: {path}') from None
++        tickets[ticket_id] = data
++    visiting, visited = set(), set()
++    def visit(ticket_id):
++        if ticket_id in visiting: raise ValueError(f'dependency cycle: {ticket_id}')
++        if ticket_id in visited: return
++        visiting.add(ticket_id)
++        for dependency in tickets[ticket_id]['blocked_by']:
++            if dependency == ticket_id: raise ValueError(f'self dependency: {ticket_id}')
++            if dependency not in tickets: raise ValueError(f'missing dependency: {dependency}')
++            visit(dependency)
++        visiting.remove(ticket_id)
++        visited.add(ticket_id)
++    for ticket_id in tickets: visit(ticket_id)
++    blocked = {i: [d for d in t['blocked_by'] if tickets[d]['status'] != 'done'] for i, t in tickets.items()}
++    return {'tickets': tickets, 'next_id': f"T-{max((int(i[2:]) for i in tickets), default=0) + 1:04d}", 'frontier': [i for i, t in tickets.items() if t['status'] == 'todo' and not blocked[i]], 'blocked': {i: d for i, d in blocked.items() if d}, 'paused': [i for i, t in tickets.items() if t['status'] == 'pending']}
++
++
++def check_translation(path, root):
++    data = frontmatter(path)
++    name = data.get('synced_from', '')
++    source_name = str((path.parent / name).relative_to(root)) if name else ''
++    source = regular_path(root, source_name)
++    if git_blob(source.read_bytes()) != data.get('synced_from_sha'):
++        raise ValueError(f'stale translation: {path}')
++    return source_name
++
++
++def entry_sha(path):
++    data = os.readlink(path).encode() if path.is_symlink() else path.read_bytes()
++    return hashlib.sha256(data).hexdigest()
++
++
++def check_preserved(root, baseline, exceptions, historical=None):
++    moves = []
++    for entry in baseline:
++        name = entry['path']
++        if name in exceptions:
++            expected = exceptions[name]
++            if expected.get('candidate', '').startswith('blog/') and name.startswith('docs/'):
++                if (root / name).exists() or (root / name).is_symlink():
++                    raise ValueError(f'old website path remains: {name}')
++                moves.append({'source': name, 'candidate': expected['candidate'], 'sha256': expected['sha256']})
++            if expected.get('retired'):
++                if (root / name).exists() or (root / name).is_symlink():
++                    raise ValueError(f'retired active entry remains: {name}')
++                path = regular_path(root, expected['archive'])
++            elif expected.get('generated'):
++                if (root / name).is_symlink() or not (root / name).is_dir():
++                    raise ValueError(f'generated package absent/linked: {name}')
++                continue
++            else:
++                path = regular_path(root, expected.get('candidate', name))
++            wanted = expected.get('sha256', entry['sha256'])
++        else:
++            mapped = 'blog/' + name[5:] if name.startswith('docs/') else name
++            path = root / mapped
++            if name.startswith('docs/'):
++                if (root / name).exists() or (root / name).is_symlink():
++                    raise ValueError(f'old website path remains: {name}')
++                moves.append({'source': name, 'candidate': mapped, 'sha256': entry['sha256']})
++            wanted = entry['sha256']
++            expected_link = entry['type'] == 'symlink'
++            if path.is_symlink() != expected_link or (not path.is_symlink() and not path.is_file()):
++                raise ValueError(f'changed entry type/missing file: {mapped}')
++        content = (historical or {}).get(path.relative_to(root).as_posix())
++        actual = hashlib.sha256(content).hexdigest() if content is not None else entry_sha(path)
++        if actual != wanted:
++            raise ValueError(f'changed preserved source: {name}')
++    return moves
++
++
++def allowed_new(name):
++    prefixes = ('.proj.specs/', '.proj.tickets/', 'docs/agents/', 'docs/adr/', 'docs/security/', 'maintenance/harness-adoption/', 'maintenance/article-publication/', 'maintenance/lint-cleanup/', 'skills/managing-article-publication/', 'tests/article_publication/', '.agents/skills/', '.claude/skills/', '.claude/agents/', '.codex/')
++    exact = {'tests/lintCleanup.vitest.ts', 'uno.config.ts', 'docs/README.md', 'docs/guide.md', 'scripts/verify-project.py', 'scripts/verify-harness-adoption.py', 'scripts/materialize-writing-skills.py', 'scripts/article-publication.py', 'skills-lock.json', 'THIRD_PARTY_NOTICES.md', 'CONTEXT.md', 'tests/harness_adoption/test_tracker.py', 'tests/harness_adoption/test_materializer.py', 'tests/harness_adoption/test_publication.py'}
++    return name in exact or name.startswith(prefixes)
++
++
++def check_added_paths(root, baseline_names, moved, approved=None):
++    names = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=root).decode().split('\0')
++    for name in names:
++        if name and name not in baseline_names and name not in moved and name not in (approved or set()) and not allowed_new(name):
++            raise ValueError(f'unknown added product file: {name}')
++
++
++def check_readme_scripts(root):
++    scripts = json.loads(regular_path(root, 'package.json').read_text())['scripts']
++    readme = regular_path(root, 'README.md').read_text()
++    commands = set(re.findall(r'\bpnpm\s+(?:run\s+)?([A-Za-z0-9_.-]+:[A-Za-z0-9_.:-]+)\b', readme))
++    for command in sorted(commands):
++        if command not in scripts:
++            raise ValueError(f'README names an unknown package script: {command}')
++    return sorted(commands)
++
++
++EVIDENCE_STATUSES = {'pass', 'existing-failure', 'new-regression', 'blocked', 'not-run', 'expected-red'}
++
++
++def check_evidence(root, record):
++    if record.get('status') not in EVIDENCE_STATUSES:
++        raise ValueError('invalid evidence status')
++    if record['status'] == 'pass':
++        if record.get('exit_code') != 0 or not record.get('log_sha256'):
++            raise ValueError('passed evidence lacks successful execution')
++        log = regular_path(root, record.get('log', ''))
++        if entry_sha(log) != record['log_sha256']:
++            raise ValueError('evidence log hash mismatch')
++
++
++def check_trace(root, tickets):
++    path = root / '.proj.specs/0001-harness-adoption/candidate-traceability.json'
++    rows = json.loads(path.read_text())
++    baseline = json.loads((path.parent / 'baseline-traceability.json').read_text())
++    if len(rows) != 113 or len({r['row_id'] for r in rows}) != 113:
++        raise ValueError('historical trace row count/id mismatch')
++    by_id = {r['row_id']: r for r in baseline}
++    for row in rows:
++        original = by_id[row['row_id']]
++        for key in ('source_path', 'source_sha256', 'source_git_blob', 'expected_behavior', 'heading'):
++            if row[key] != original[key]: raise ValueError(f'changed baseline trace {key}: {row["row_id"]}')
++        source = regular_path(root, row['source_path'])
++        if entry_sha(source) != row['source_sha256'] or git_blob(source.read_bytes()) != row['source_git_blob']:
++            raise ValueError(f'dangling/changed trace source: {row["row_id"]}')
++        if row.get('ticket') not in tickets: raise ValueError(f'dangling trace ticket: {row["row_id"]}')
++        criterion = row.get('AC', '')
++        values = criterion if isinstance(criterion, list) else [criterion]
++        if not values or any(not re.fullmatch(r'HA-0[1-9]|HA-10', v) for v in values): raise ValueError('dangling AC')
++        status = row.get('evidence_status', 'not-run')
++        if status not in EVIDENCE_STATUSES: raise ValueError('invalid trace evidence status')
++        if status == 'pass' and not row.get('actual_evidence'): raise ValueError('false passed trace')
++        for name in row.get('actual_evidence', []):
++            record = json.loads(regular_path(root, name).read_text())
++            check_evidence(root, record)
++            if status == 'pass' and record['status'] != 'pass':
++                raise ValueError(f'passed trace references nonpass evidence: {row["row_id"]}: {name}')
++    return len(rows)
++
++
++def check_baseline_manifest(root, baseline):
++    expected_commit = 'ee7fecfff72f47abc735d26ac7e9a943de04ebbf'
++    if baseline.get('baseline') != expected_commit: raise ValueError('unapproved baseline')
++    actual = []
++    for raw in subprocess.check_output(['git', 'ls-tree', '-r', '-z', expected_commit], cwd=root).split(b'\0'):
++        if not raw: continue
++        metadata, name = raw.split(b'\t', 1)
++        mode, kind, blob = metadata.decode().split()
++        content = subprocess.check_output(['git', 'cat-file', 'blob', blob], cwd=root)
++        actual.append({'path': name.decode(), 'type': 'symlink' if mode == '120000' else 'regular', 'sha256': hashlib.sha256(content).hexdigest()})
++    if actual != baseline.get('files'): raise ValueError('baseline manifest differs from actual pinned Git tree')
++
++
++def check_framework(root):
++    """Verify the immutable initialized framework import, including its provenance."""
++    manifest = regular_path(root, 'maintenance/harness-adoption/framework-import-manifest.json')
++    raw = manifest.read_bytes()
++    data = json.loads(raw)
++    if data.get('source_commit') != '917e6025da0901a79dda016e1ce5bd89b6e6e19f':
++        raise ValueError('unapproved framework template commit')
++    if data.get('source_digest') != 'b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5':
++        raise ValueError('unapproved framework template digest')
++    # Pin the approved manifest itself: deleting or repinning one of its entries
++    # must not turn a modified framework into an apparently verified import.
++    if hashlib.sha256(raw).hexdigest() != 'b0fb7cf39924c3371be420bce8f3c8c6f1356fcd0f2dc5a24f538e9192718d7e':
++        raise ValueError('framework import manifest differs from approved pins')
++    files = data['initialized_snapshot_files']
++    if len(files) != 641 or data.get('new_tuning_executed') is not False:
++        raise ValueError('framework import count/tuning provenance mismatch')
++    for name, expected in files.items():
++        path = regular_path(root, name)
++        if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
++            raise ValueError(f'framework source SHA mismatch: {name}')
++    product = {'phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post', 'managing-article-publication'}
++    catalogs = {}
++    for runtime in ('.agents', '.claude'):
++        prefix = runtime + '/skills/'
++        framework = {name[len(prefix):].split('/', 1)[0] for name in files if name.startswith(prefix)}
++        if len(framework) != 32 or framework & product:
++            raise ValueError('framework runtime catalog provenance mismatch')
++        base = root / runtime / 'skills'
++        actual = set()
++        for entry in os.scandir(base):
++            if entry.is_symlink() or not entry.is_dir(follow_symlinks=False):
++                raise ValueError(f'nonphysical runtime skill root: {entry.path}')
++            actual.add(entry.name)
++        if actual != framework | product:
++            raise ValueError(f'unknown/missing runtime skill roots: {runtime}')
++        for name in actual:
++            regular_path(root, prefix + name + '/SKILL.md')
++        # scandir errors propagate: a partially unreadable tree must not be
++        # reported as fully verified. Never follow a directory symlink.
++        pending = [base]
++        while pending:
++            with os.scandir(pending.pop()) as entries:
++                for entry in entries:
++                    path = Path(entry.path)
++                    mode = entry.stat(follow_symlinks=False).st_mode
++                    if stat.S_ISLNK(mode):
++                        raise ValueError(f'runtime symlink rejected: {path.relative_to(root)}')
++                    if stat.S_ISDIR(mode):
++                        pending.append(path)
++                    elif stat.S_ISREG(mode):
++                        name = path.relative_to(root).as_posix()
++                        skill = name[len(prefix):].split('/', 1)[0]
++                        if skill in framework and name not in files:
++                            raise ValueError(f'unpinned framework file: {name}')
++                    else:
++                        raise ValueError(f'nonregular runtime entry: {path.relative_to(root)}')
++        catalogs[runtime] = len(actual)
++    return {'pinned_files': len(files), 'source_commit': data['source_commit'],
++            'source_digest': data['source_digest'], 'runtime_skill_counts': catalogs}
++
++
++EXCEPTION_NAMES = {
++    'AGENTS.md', 'CLAUDE.md', 'GEMINI.md', '.gitignore', 'README.md', 'package.json',
++    'scripts/vpHelper.ts', 'tests/vpHelper.vitest.ts', 'tsconfig.json',
++    'skills/creating-vitepress-post/SKILL.md', 'skills/phoenix-writing/AGENTS.md',
++    'skills/maintaining-writing-skills/SKILL.md',
++    'skills/maintaining-writing-skills/references/spectra-codex.md',
++    'skills/maintaining-writing-skills/references/skill-maintenance.md',
++}
++
++
++def approved_exception_names(entries):
++    names = set(EXCEPTION_NAMES)
++    for entry in entries:
++        name = entry['path']
++        if (name.startswith(('.claude/', '.gemini/', '.github/')) and 'spectra-' in name) or name.startswith('.gemini/commands/spectra/'):
++            names.add(name)
++        if name.startswith(('.agents/skills/', '.claude/skills/')) and entry['type'] == 'symlink':
++            names.add(name)
++    return names
++
++
++def check_adoption_ancestry(root, baseline_commit):
++    head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root).decode().strip()
++    result = subprocess.run(['git', 'merge-base', '--is-ancestor', baseline_commit, head], cwd=root, capture_output=True)
++    if result.returncode != 0:
++        raise ValueError('pinned baseline is not an ancestor of HEAD')
++    return head
++
++
++def check_lint_dependency_delta(before, after):
++    """Permit only the owner's bounded follow-up dependency addition."""
++    expected = json.loads(before)
++    current = json.loads(after)
++    dependencies = expected['devDependencies']
++    if '@unocss/eslint-plugin' in dependencies:
++        raise ValueError('lint dependency already present in baseline')
++    dependencies['@unocss/eslint-plugin'] = '66.6.0'
++    if current != expected:
++        raise ValueError('unapproved lint dependency delta')
++
++
++LINT_BASE = '8890d5250e22ec4ee0e0493c1e72bab89d16489b'
++LINT_COMMAND = 'eslint scripts tests blog/shared blog/.vitepress eslint.config.js vitest.config.ts uno.config.ts tsconfig.json package.json --max-warnings 0'
++LINT_UPDATE_NAMES = {
++    'blog/.vitepress/config.mts', 'blog/.vitepress/nav.yml', 'blog/.vitepress/sidebar.yml',
++    'blog/.vitepress/theme/Layout.vue', 'blog/.vitepress/theme/components/NewPost.vue',
++    'blog/.vitepress/theme/components/Particles.vue', 'blog/.vitepress/theme/components/PostBlock.vue',
++    'blog/.vitepress/theme/components/PostCard.vue', 'blog/.vitepress/theme/components/PostList.vue',
++    'blog/.vitepress/theme/components/__tests__/Particles.spec.ts',
++    'blog/.vitepress/theme/composables/usePostFilter.ts', 'blog/.vitepress/theme/composables/usePostSort.ts',
++    'blog/.vitepress/theme/index.ts', 'blog/shared/posts.data.ts', 'package.json', 'pnpm-lock.yaml',
++    'scripts/vpHelper.ts', 'tests/vpHelper.vitest.ts', 'vitest.config.ts',
++}
++
++
++def check_lint_cleanup_delta(before, after):
++    """Keep the earlier dependency addition contract intact; validate this follow-up separately."""
++    expected = json.loads(before)
++    current = json.loads(after)
++    expected['devDependencies']['eslint'] = '9.39.2'
++    expected['scripts']['lint'] = LINT_COMMAND
++    if current != expected:
++        raise ValueError('unapproved lint cleanup manifest delta')
++
++
++def check_lint_successor(root, historical=None):
++    """Validate exact authorized paths/hashes against immutable predecessor Git objects."""
++    name = 'maintenance/lint-cleanup/source-boundary.json'
++    if not (root / name).exists():
++        return {}, {}
++    boundary = json.loads(regular_path(root, name).read_text())
++    if (set(boundary) != {'version', 'scope', 'base', 'preserved_updates', 'new_sources'}
++            or boundary['version'] != 1 or boundary['scope'] != '0X1DEA#11'
++            or boundary['base'] != LINT_BASE
++            or set(boundary['preserved_updates']) != LINT_UPDATE_NAMES
++            or set(boundary['new_sources']) != {'uno.config.ts', 'tests/lintCleanup.vitest.ts'}):
++        raise ValueError('unapproved lint cleanup source boundary')
++    check_adoption_ancestry(root, LINT_BASE)
++    predecessor = 'maintenance/article-publication/source-boundary.json'
++    pinned = subprocess.check_output(['git', 'show', LINT_BASE + ':' + predecessor], cwd=root)
++    if regular_path(root, predecessor).read_bytes() != pinned:
++        raise ValueError('changed historical publication boundary')
++    before_sources = {}
++    for path, record in boundary['preserved_updates'].items():
++        if set(record) != {'before_sha256', 'after_sha256'}:
++            raise ValueError('invalid lint successor hash fields')
++        before = subprocess.check_output(['git', 'show', LINT_BASE + ':' + path], cwd=root)
++        if (hashlib.sha256(before).hexdigest() != record['before_sha256']
++                or hashlib.sha256((historical or {}).get(path, regular_path(root, path).read_bytes())).hexdigest() != record['after_sha256']):
++            raise ValueError('lint cleanup preserved source hash mismatch: ' + path)
++        before_sources[path] = before
++    for path, wanted in boundary['new_sources'].items():
++        if hashlib.sha256((historical or {}).get(path, regular_path(root, path).read_bytes())).hexdigest() != wanted:
++            raise ValueError('lint cleanup new source hash mismatch: ' + path)
++    check_lint_cleanup_delta(before_sources['package.json'], (historical or {}).get('package.json', regular_path(root, 'package.json').read_bytes()))
++    return before_sources, boundary['preserved_updates']
++
++
++def apply_lint_successor(exceptions, updates, baseline):
++    result = {name: dict(value) for name, value in exceptions.items()}
++    baseline_names = {entry['path'] for entry in baseline}
++    for path, record in updates.items():
++        source = 'docs/' + path[5:] if path.startswith('blog/') else path
++        if source not in baseline_names:
++            raise ValueError('lint successor has no preserved predecessor: ' + path)
++        result.setdefault(source, {}).update(candidate=path, sha256=record['after_sha256'])
++    return result
++
++
++def phase1_preserved_updates(root, exceptions, successor=None):
++    """Keep adoption evidence immutable; validate the reviewed successor projection."""
++    name='maintenance/article-publication/source-boundary.json'
++    if not (root/name).exists():
++        return exceptions
++    boundary=json.loads(regular_path(root,name).read_text())
++    base='bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0'
++    if (set(boundary)!={'version','ticket','base','preserved_updates'} or boundary['version']!=1
++            or boundary['ticket']!='T-0002' or boundary['base']!=base
++            or set(boundary['preserved_updates']) not in (
++                {'AGENTS.md'}, {'AGENTS.md', 'package.json', 'pnpm-lock.yaml'})):
++        raise ValueError('unapproved article publication source boundary')
++    if 'package.json' in boundary['preserved_updates']:
++        before=subprocess.check_output(['git','show',base+':package.json'],cwd=root)
++        check_lint_dependency_delta(before, (successor or {}).get('package.json', regular_path(root,'package.json').read_bytes()))
++    result={name:dict(value) for name,value in exceptions.items()}
++    for name,record in boundary['preserved_updates'].items():
++        if set(record)!={'before_sha256','after_sha256'}:
++            raise ValueError('invalid successor hash fields')
++        before=subprocess.check_output(['git','show',base+':'+name],cwd=root)
++        if (hashlib.sha256(before).hexdigest()!=record['before_sha256']
++                or (name in exceptions and record['before_sha256']!=exceptions[name]['sha256'])
++                or hashlib.sha256((successor or {}).get(name, regular_path(root,name).read_bytes())).hexdigest()!=record['after_sha256']):
++            raise ValueError('article publication preserved source hash mismatch: '+name)
++        result.setdefault(name, {})['sha256']=record['after_sha256']
++    return result
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
++    args = parser.parse_args()
++    root = args.root.resolve()
++    from main_publication_verification import check
++    historical, approved = check(root, allowed_new, regular_path)
++    baseline = json.loads((root / 'maintenance/harness-adoption/baseline-files.json').read_text())
++    delta = json.loads((root / 'maintenance/harness-adoption/candidate-delta.json').read_text())
++    check_baseline_manifest(root, baseline)
++    framework = check_framework(root)
++    check_readme_scripts(root)
++    if set(delta['exceptions']) != approved_exception_names(baseline['files']):
++        raise ValueError('unapproved/missing exception entry')
++    check_adoption_ancestry(root, baseline['baseline'])
++    successor, updates = check_lint_successor(root, historical)
++    exceptions = phase1_preserved_updates(root, delta['exceptions'], successor)
++    exceptions = apply_lint_successor(exceptions, updates, baseline['files'])
++    moves = check_preserved(root, baseline['files'], exceptions, historical)
++    if len(moves) != 55: raise ValueError('site move count mismatch')
++    baseline_names = {f['path'] for f in baseline['files']}
++    moved = {m['candidate'] for m in moves}
++    check_added_paths(root, baseline_names, moved, approved)
++    for name, expected in delta['literal_adapters'].items():
++        content = subprocess.check_output(['git', 'show', baseline['baseline'] + ':' + name], cwd=root).decode()
++        if name == 'package.json':
++            for verb in ('dev', 'build', 'preview'): content = content.replace(f'vitepress {verb} docs', f'vitepress {verb} blog')
++        elif name == 'tsconfig.json': content = content.replace('"docs/', '"blog/')
++        else:
++            content = content.replace('docs', 'blog')
++            if name == 'tests/vpHelper.vitest.ts': content = content.replace('expect(config.options.dir).toBe(DEFAULT_DIR);', "expect(config.options.dir).toBe('blog/post');")
++        actual = successor[name].decode() if name in successor else (root / name).read_text()
++        boundary_path=root/'maintenance/article-publication/source-boundary.json'
++        lint_update=(name=='package.json' and boundary_path.exists()
++                     and 'package.json' in json.loads(regular_path(root,str(boundary_path.relative_to(root))).read_text())['preserved_updates'])
++        if lint_update:
++            check_lint_dependency_delta(content, actual)
++        elif actual != content:
++            raise ValueError(f'nonliteral adapter change: {name}')
++    state = check_tickets(root)
++    translations = list((root / '.proj.specs').glob('**/spec.zh-TW.md'))
++    historical=[p for p in translations if p.is_relative_to(root/'.proj.specs/_baseline') or p.parent.name=='0001-harness-adoption']
++    if len(historical)!=7: raise ValueError('six baseline + one adoption translations required')
++    for path in translations: check_translation(path, root)
++    trace_count = check_trace(root, state['tickets'])
++    print(json.dumps({'status': 'pass', 'framework': framework, 'site_moves': len(moves), 'baseline_entries': len(baseline['files']), 'translations': len(translations), 'trace_rows': trace_count, 'tracker': state}, indent=2))
++
++
++if __name__ == '__main__':
++    try: main()
++    except (ValueError, OSError, KeyError, json.JSONDecodeError) as error:
++        raise SystemExit(f'FAIL: {error}')
+diff --git a/maintenance/publication-workflow/history/staging-verifier.py b/maintenance/publication-workflow/history/staging-verifier.py
+new file mode 100644
+index 0000000000000000000000000000000000000000..e882d7d2cfd3855ea30ae7d325b40cd755a91266
+--- /dev/null
++++ b/maintenance/publication-workflow/history/staging-verifier.py
+@@ -0,0 +1,515 @@
++#!/usr/bin/env python3
++"""Validate local Harness tracker, provenance and approved product boundaries."""
++import argparse
++from datetime import date
++import hashlib
++import json
++from pathlib import Path
++import re
++import os
++import stat
++import subprocess
++import sys
++
++from importlib.util import module_from_spec, spec_from_file_location
++
++def check_current_source(root):
++    """Route existing exact contracts; validation failures never trigger fallback."""
++    records = ('staging.json', 'components.json', 'article-electricity-revision.json',
++               'test-contract-repair.json')
++    reconciliation = root / 'maintenance/harness-reconciliation'
++    has_reconciliation = any((reconciliation / name).exists() or
++                             (reconciliation / name).is_symlink() for name in records)
++    scope = '.proj.specs/0002-article-publication/electricity-release/scope.json'
++    path = root / scope
++    # A deleted scope must still reach the main guard's missing-input diagnostic.
++    has_main = path.exists() or path.is_symlink() or subprocess.run(
++        ['git', '--no-replace-objects', 'cat-file', '-e', 'HEAD:' + scope], cwd=root,
++        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0
++    previous = sys.dont_write_bytecode
++    sys.dont_write_bytecode = True
++    try:
++        if not has_reconciliation and has_main:
++            from main_publication_verification import check
++            return check(root, allowed_new, regular_path)
++        spec = spec_from_file_location('harness_reconciliation',
++                                       Path(__file__).with_name('harness_reconciliation.py'))
++        module = module_from_spec(spec)
++        spec.loader.exec_module(module)
++        return module.check(root, allowed_new, regular_path, check_adoption_ancestry)
++    finally:
++        sys.dont_write_bytecode = previous
++
++
++def git_blob(content):
++    return hashlib.sha1(b'blob ' + str(len(content)).encode() + b'\0' + content).hexdigest()
++
++
++def frontmatter(path):
++    text = path.read_text()
++    if not text.startswith('---\n') or '\n---\n' not in text[4:]:
++        raise ValueError(f'missing frontmatter: {path}')
++    data = {}
++    for line in text.split('\n---\n', 1)[0][4:].splitlines():
++        match = re.fullmatch(r'([a-z_]+):\s*(.*)', line)
++        if not match or match[1] in data:
++            raise ValueError(f'unsupported or duplicate frontmatter: {path}: {line}')
++        data[match[1]] = match[2].strip().strip('"').strip("'")
++    return data
++
++
++def regular_path(root, name):
++    path = Path(name)
++    if path.is_absolute() or '..' in path.parts or not name:
++        raise ValueError(f'unsafe evidence/source path: {name}')
++    current = root
++    for part in path.parts:
++        current = current / part
++        if current.is_symlink():
++            raise ValueError(f'linked evidence/source path: {name}')
++    if not current.is_file():
++        raise ValueError(f'missing evidence/source path: {name}')
++    return current
++
++
++def check_tickets(root):
++    tickets = {}
++    for path in sorted((root / '.proj.tickets').glob('**/T-*.md')):
++        data = frontmatter(path)
++        ticket_id = data.get('id', '')
++        if not re.fullmatch(r'T-\d{4}', ticket_id) or not path.name.startswith(ticket_id + '-'):
++            raise ValueError(f'invalid ticket id/path: {path}')
++        if ticket_id in tickets:
++            raise ValueError(f'duplicate ticket id: {ticket_id}')
++        if data.get('epic') != path.parent.name or not data.get('title'):
++            raise ValueError(f'invalid epic/title: {path}')
++        if data.get('status') not in {'todo', 'processing', 'review', 'done', 'pending'}:
++            raise ValueError(f'invalid stored status: {path}')
++        raw = data.get('blocked_by', '')
++        if not re.fullmatch(r'\[(?:\s*T-\d{4}\s*(?:,\s*T-\d{4}\s*)*)?\]', raw):
++            raise ValueError(f'invalid blocked_by list: {path}')
++        data['blocked_by'] = re.findall(r'T-\d{4}', raw)
++        if len(set(data['blocked_by'])) != len(data['blocked_by']):
++            raise ValueError(f'duplicate dependency: {path}')
++        if data['status'] == 'pending':
++            for key in ('pending_reason', 'pending_evidence', 'pending_on', 'revisit_when'):
++                if not data.get(key): raise ValueError(f'pending missing {key}: {path}')
++            try: date.fromisoformat(data['pending_on'])
++            except ValueError: raise ValueError(f'invalid pending date: {path}') from None
++            regular_path(root, data['pending_evidence'].split('#', 1)[0])
++        if data['status'] == 'done':
++            try:
++                landing = json.loads(regular_path(root, data.get('landing_evidence', '')).read_text())
++                if landing.get('ticket') != ticket_id or landing.get('authorized') is not True or landing.get('landed') is not True or not re.fullmatch(r'[a-f0-9]{40}', landing.get('commit', '')) or not landing.get('approval_receipt') or landing.get('target') != 'staging':
++                    raise ValueError('incomplete landing record')
++                regular_path(root, landing['approval_receipt'])
++                subprocess.run(['git', 'cat-file', '-e', landing['commit'] + '^{commit}'], cwd=root, check=True, capture_output=True)
++                staging_ref = 'refs/heads/staging'
++                resolved = subprocess.run(['git', 'show-ref', '--verify', '--quiet', staging_ref],
++                                          cwd=root, capture_output=True)
++                if resolved.returncode == 1:
++                    staging_ref = 'refs/remotes/origin/staging'
++                else:
++                    resolved.check_returncode()
++                subprocess.run(['git', 'merge-base', '--is-ancestor', landing['commit'], staging_ref], cwd=root, check=True, capture_output=True)
++            except (ValueError, KeyError, subprocess.CalledProcessError):
++                raise ValueError(f'missing/invalid landing evidence: {path}') from None
++        tickets[ticket_id] = data
++    visiting, visited = set(), set()
++    def visit(ticket_id):
++        if ticket_id in visiting: raise ValueError(f'dependency cycle: {ticket_id}')
++        if ticket_id in visited: return
++        visiting.add(ticket_id)
++        for dependency in tickets[ticket_id]['blocked_by']:
++            if dependency == ticket_id: raise ValueError(f'self dependency: {ticket_id}')
++            if dependency not in tickets: raise ValueError(f'missing dependency: {dependency}')
++            visit(dependency)
++        visiting.remove(ticket_id)
++        visited.add(ticket_id)
++    for ticket_id in tickets: visit(ticket_id)
++    blocked = {i: [d for d in t['blocked_by'] if tickets[d]['status'] != 'done'] for i, t in tickets.items()}
++    return {'tickets': tickets, 'next_id': f"T-{max((int(i[2:]) for i in tickets), default=0) + 1:04d}", 'frontier': [i for i, t in tickets.items() if t['status'] == 'todo' and not blocked[i]], 'blocked': {i: d for i, d in blocked.items() if d and tickets[i]['status'] == 'todo'}, 'unresolved_dependencies': {i: d for i, d in blocked.items() if d}, 'paused': [i for i, t in tickets.items() if t['status'] == 'pending']}
++
++
++def check_translation(path, root):
++    data = frontmatter(path)
++    name = data.get('synced_from', '')
++    source_name = str((path.parent / name).relative_to(root)) if name else ''
++    source = regular_path(root, source_name)
++    if git_blob(source.read_bytes()) != data.get('synced_from_sha'):
++        raise ValueError(f'stale translation: {path}')
++    return source_name
++
++
++def entry_sha(path):
++    data = os.readlink(path).encode() if path.is_symlink() else path.read_bytes()
++    return hashlib.sha256(data).hexdigest()
++
++
++def check_preserved(root, baseline, exceptions, historical=None):
++    moves = []
++    for entry in baseline:
++        name = entry['path']
++        if name in exceptions:
++            expected = exceptions[name]
++            if expected.get('candidate', '').startswith('blog/') and name.startswith('docs/'):
++                if (root / name).exists() or (root / name).is_symlink():
++                    raise ValueError(f'old website path remains: {name}')
++                moves.append({'source': name, 'candidate': expected['candidate'], 'sha256': expected['sha256']})
++            if expected.get('retired'):
++                if (root / name).exists() or (root / name).is_symlink():
++                    raise ValueError(f'retired active entry remains: {name}')
++                path = regular_path(root, expected['archive'])
++            elif expected.get('generated'):
++                if (root / name).is_symlink() or not (root / name).is_dir():
++                    raise ValueError(f'generated package absent/linked: {name}')
++                continue
++            else:
++                path = regular_path(root, expected.get('candidate', name))
++            wanted = expected.get('sha256', entry['sha256'])
++        else:
++            mapped = 'blog/' + name[5:] if name.startswith('docs/') else name
++            path = root / mapped
++            if name.startswith('docs/'):
++                if (root / name).exists() or (root / name).is_symlink():
++                    raise ValueError(f'old website path remains: {name}')
++                moves.append({'source': name, 'candidate': mapped, 'sha256': entry['sha256']})
++            wanted = entry['sha256']
++            expected_link = entry['type'] == 'symlink'
++            if path.is_symlink() != expected_link or (not path.is_symlink() and not path.is_file()):
++                raise ValueError(f'changed entry type/missing file: {mapped}')
++        content = (historical or {}).get(path.relative_to(root).as_posix())
++        actual_sha = hashlib.sha256(content).hexdigest() if content is not None else entry_sha(path)
++        if actual_sha != wanted:
++            raise ValueError(f'changed preserved source: {name}')
++    return moves
++
++
++def allowed_new(name):
++    prefixes = ('.proj.specs/', '.proj.tickets/', 'docs/agents/', 'docs/adr/', 'docs/security/', 'maintenance/harness-adoption/', 'maintenance/article-publication/', 'maintenance/lint-cleanup/', 'skills/managing-article-publication/', 'tests/article_publication/', '.agents/skills/', '.claude/skills/', '.claude/agents/', '.codex/')
++    exact = {'tests/lintCleanup.vitest.ts', 'uno.config.ts', 'docs/README.md', 'docs/guide.md', 'scripts/verify-project.py', 'scripts/verify-harness-adoption.py', 'scripts/materialize-writing-skills.py', 'scripts/article-publication.py', 'skills-lock.json', 'THIRD_PARTY_NOTICES.md', 'CONTEXT.md', 'tests/harness_adoption/test_tracker.py', 'tests/harness_adoption/test_materializer.py', 'tests/harness_adoption/test_publication.py'}
++    return name in exact or name.startswith(prefixes)
++
++
++def check_added_paths(root, baseline_names, moved, approved=None):
++    names = subprocess.check_output(['git', 'ls-files', '--cached', '--others', '--exclude-standard', '-z'], cwd=root).decode().split('\0')
++    for name in names:
++        if name and name not in baseline_names and name not in moved and not allowed_new(name) and name not in (approved or set()):
++            raise ValueError(f'unknown added product file: {name}')
++
++
++def check_readme_scripts(root):
++    scripts = json.loads(regular_path(root, 'package.json').read_text())['scripts']
++    readme = regular_path(root, 'README.md').read_text()
++    commands = set(re.findall(r'\bpnpm\s+(?:run\s+)?([A-Za-z0-9_.-]+:[A-Za-z0-9_.:-]+)\b', readme))
++    for command in sorted(commands):
++        if command not in scripts:
++            raise ValueError(f'README names an unknown package script: {command}')
++    return sorted(commands)
++
++
++EVIDENCE_STATUSES = {'pass', 'existing-failure', 'new-regression', 'blocked', 'not-run', 'expected-red'}
++
++
++def check_evidence(root, record):
++    if record.get('status') not in EVIDENCE_STATUSES:
++        raise ValueError('invalid evidence status')
++    if record['status'] == 'pass':
++        if record.get('exit_code') != 0 or not record.get('log_sha256'):
++            raise ValueError('passed evidence lacks successful execution')
++        log = regular_path(root, record.get('log', ''))
++        if entry_sha(log) != record['log_sha256']:
++            raise ValueError('evidence log hash mismatch')
++
++
++def check_trace(root, tickets):
++    path = root / '.proj.specs/0001-harness-adoption/candidate-traceability.json'
++    rows = json.loads(path.read_text())
++    baseline = json.loads((path.parent / 'baseline-traceability.json').read_text())
++    if len(rows) != 113 or len({r['row_id'] for r in rows}) != 113:
++        raise ValueError('historical trace row count/id mismatch')
++    by_id = {r['row_id']: r for r in baseline}
++    for row in rows:
++        original = by_id[row['row_id']]
++        for key in ('source_path', 'source_sha256', 'source_git_blob', 'expected_behavior', 'heading'):
++            if row[key] != original[key]: raise ValueError(f'changed baseline trace {key}: {row["row_id"]}')
++        source = regular_path(root, row['source_path'])
++        if entry_sha(source) != row['source_sha256'] or git_blob(source.read_bytes()) != row['source_git_blob']:
++            raise ValueError(f'dangling/changed trace source: {row["row_id"]}')
++        if row.get('ticket') not in tickets: raise ValueError(f'dangling trace ticket: {row["row_id"]}')
++        criterion = row.get('AC', '')
++        values = criterion if isinstance(criterion, list) else [criterion]
++        if not values or any(not re.fullmatch(r'HA-0[1-9]|HA-10', v) for v in values): raise ValueError('dangling AC')
++        status = row.get('evidence_status', 'not-run')
++        if status not in EVIDENCE_STATUSES: raise ValueError('invalid trace evidence status')
++        if status == 'pass' and not row.get('actual_evidence'): raise ValueError('false passed trace')
++        for name in row.get('actual_evidence', []):
++            record = json.loads(regular_path(root, name).read_text())
++            check_evidence(root, record)
++            if status == 'pass' and record['status'] != 'pass':
++                raise ValueError(f'passed trace references nonpass evidence: {row["row_id"]}: {name}')
++    return len(rows)
++
++
++def check_baseline_manifest(root, baseline):
++    expected_commit = 'ee7fecfff72f47abc735d26ac7e9a943de04ebbf'
++    if baseline.get('baseline') != expected_commit: raise ValueError('unapproved baseline')
++    actual = []
++    for raw in subprocess.check_output(['git', 'ls-tree', '-r', '-z', expected_commit], cwd=root).split(b'\0'):
++        if not raw: continue
++        metadata, name = raw.split(b'\t', 1)
++        mode, kind, blob = metadata.decode().split()
++        content = subprocess.check_output(['git', 'cat-file', 'blob', blob], cwd=root)
++        actual.append({'path': name.decode(), 'type': 'symlink' if mode == '120000' else 'regular', 'sha256': hashlib.sha256(content).hexdigest()})
++    if actual != baseline.get('files'): raise ValueError('baseline manifest differs from actual pinned Git tree')
++
++
++def check_framework(root):
++    """Verify the immutable initialized framework import, including its provenance."""
++    manifest = regular_path(root, 'maintenance/harness-adoption/framework-import-manifest.json')
++    raw = manifest.read_bytes()
++    data = json.loads(raw)
++    if data.get('source_commit') != '917e6025da0901a79dda016e1ce5bd89b6e6e19f':
++        raise ValueError('unapproved framework template commit')
++    if data.get('source_digest') != 'b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5':
++        raise ValueError('unapproved framework template digest')
++    # Pin the approved manifest itself: deleting or repinning one of its entries
++    # must not turn a modified framework into an apparently verified import.
++    if hashlib.sha256(raw).hexdigest() != 'b0fb7cf39924c3371be420bce8f3c8c6f1356fcd0f2dc5a24f538e9192718d7e':
++        raise ValueError('framework import manifest differs from approved pins')
++    files = data['initialized_snapshot_files']
++    if len(files) != 641 or data.get('new_tuning_executed') is not False:
++        raise ValueError('framework import count/tuning provenance mismatch')
++    for name, expected in files.items():
++        path = regular_path(root, name)
++        if hashlib.sha256(path.read_bytes()).hexdigest() != expected:
++            raise ValueError(f'framework source SHA mismatch: {name}')
++    product = {'phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post', 'managing-article-publication'}
++    catalogs = {}
++    for runtime in ('.agents', '.claude'):
++        prefix = runtime + '/skills/'
++        framework = {name[len(prefix):].split('/', 1)[0] for name in files if name.startswith(prefix)}
++        if len(framework) != 32 or framework & product:
++            raise ValueError('framework runtime catalog provenance mismatch')
++        base = root / runtime / 'skills'
++        actual = set()
++        for entry in os.scandir(base):
++            if entry.is_symlink() or not entry.is_dir(follow_symlinks=False):
++                raise ValueError(f'nonphysical runtime skill root: {entry.path}')
++            actual.add(entry.name)
++        if actual != framework | product:
++            raise ValueError(f'unknown/missing runtime skill roots: {runtime}')
++        for name in actual:
++            regular_path(root, prefix + name + '/SKILL.md')
++        # scandir errors propagate: a partially unreadable tree must not be
++        # reported as fully verified. Never follow a directory symlink.
++        pending = [base]
++        while pending:
++            with os.scandir(pending.pop()) as entries:
++                for entry in entries:
++                    path = Path(entry.path)
++                    mode = entry.stat(follow_symlinks=False).st_mode
++                    if stat.S_ISLNK(mode):
++                        raise ValueError(f'runtime symlink rejected: {path.relative_to(root)}')
++                    if stat.S_ISDIR(mode):
++                        pending.append(path)
++                    elif stat.S_ISREG(mode):
++                        name = path.relative_to(root).as_posix()
++                        skill = name[len(prefix):].split('/', 1)[0]
++                        if skill in framework and name not in files:
++                            raise ValueError(f'unpinned framework file: {name}')
++                    else:
++                        raise ValueError(f'nonregular runtime entry: {path.relative_to(root)}')
++        catalogs[runtime] = len(actual)
++    return {'pinned_files': len(files), 'source_commit': data['source_commit'],
++            'source_digest': data['source_digest'], 'runtime_skill_counts': catalogs}
++
++
++EXCEPTION_NAMES = {
++    'AGENTS.md', 'CLAUDE.md', 'GEMINI.md', '.gitignore', 'README.md', 'package.json',
++    'scripts/vpHelper.ts', 'tests/vpHelper.vitest.ts', 'tsconfig.json',
++    'skills/creating-vitepress-post/SKILL.md', 'skills/phoenix-writing/AGENTS.md',
++    'skills/maintaining-writing-skills/SKILL.md',
++    'skills/maintaining-writing-skills/references/spectra-codex.md',
++    'skills/maintaining-writing-skills/references/skill-maintenance.md',
++}
++
++
++def approved_exception_names(entries):
++    names = set(EXCEPTION_NAMES)
++    for entry in entries:
++        name = entry['path']
++        if (name.startswith(('.claude/', '.gemini/', '.github/')) and 'spectra-' in name) or name.startswith('.gemini/commands/spectra/'):
++            names.add(name)
++        if name.startswith(('.agents/skills/', '.claude/skills/')) and entry['type'] == 'symlink':
++            names.add(name)
++    return names
++
++
++def check_adoption_ancestry(root, baseline_commit):
++    head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root).decode().strip()
++    result = subprocess.run(['git', 'merge-base', '--is-ancestor', baseline_commit, head], cwd=root, capture_output=True)
++    if result.returncode != 0:
++        raise ValueError('pinned baseline is not an ancestor of HEAD')
++    return head
++
++
++def check_lint_dependency_delta(before, after):
++    """Permit only the owner's bounded follow-up dependency addition."""
++    expected = json.loads(before)
++    current = json.loads(after)
++    dependencies = expected['devDependencies']
++    if '@unocss/eslint-plugin' in dependencies:
++        raise ValueError('lint dependency already present in baseline')
++    dependencies['@unocss/eslint-plugin'] = '66.6.0'
++    if current != expected:
++        raise ValueError('unapproved lint dependency delta')
++
++
++LINT_BASE = '8890d5250e22ec4ee0e0493c1e72bab89d16489b'
++LINT_COMMAND = 'eslint scripts tests blog/shared blog/.vitepress eslint.config.js vitest.config.ts uno.config.ts tsconfig.json package.json --max-warnings 0'
++LINT_UPDATE_NAMES = {
++    'blog/.vitepress/config.mts', 'blog/.vitepress/nav.yml', 'blog/.vitepress/sidebar.yml',
++    'blog/.vitepress/theme/Layout.vue', 'blog/.vitepress/theme/components/NewPost.vue',
++    'blog/.vitepress/theme/components/Particles.vue', 'blog/.vitepress/theme/components/PostBlock.vue',
++    'blog/.vitepress/theme/components/PostCard.vue', 'blog/.vitepress/theme/components/PostList.vue',
++    'blog/.vitepress/theme/components/__tests__/Particles.spec.ts',
++    'blog/.vitepress/theme/composables/usePostFilter.ts', 'blog/.vitepress/theme/composables/usePostSort.ts',
++    'blog/.vitepress/theme/index.ts', 'blog/shared/posts.data.ts', 'package.json', 'pnpm-lock.yaml',
++    'scripts/vpHelper.ts', 'tests/vpHelper.vitest.ts', 'vitest.config.ts',
++}
++
++
++def check_lint_cleanup_delta(before, after):
++    """Keep the earlier dependency addition contract intact; validate this follow-up separately."""
++    expected = json.loads(before)
++    current = json.loads(after)
++    expected['devDependencies']['eslint'] = '9.39.2'
++    expected['scripts']['lint'] = LINT_COMMAND
++    if current != expected:
++        raise ValueError('unapproved lint cleanup manifest delta')
++
++
++def check_lint_successor(root, historical=None):
++    """Validate exact authorized paths/hashes against immutable predecessor Git objects."""
++    name = 'maintenance/lint-cleanup/source-boundary.json'
++    if not (root / name).exists():
++        return {}, {}
++    boundary = json.loads(regular_path(root, name).read_text())
++    if (set(boundary) != {'version', 'scope', 'base', 'preserved_updates', 'new_sources'}
++            or boundary['version'] != 1 or boundary['scope'] != '0X1DEA#11'
++            or boundary['base'] != LINT_BASE
++            or set(boundary['preserved_updates']) != LINT_UPDATE_NAMES
++            or set(boundary['new_sources']) != {'uno.config.ts', 'tests/lintCleanup.vitest.ts'}):
++        raise ValueError('unapproved lint cleanup source boundary')
++    check_adoption_ancestry(root, LINT_BASE)
++    predecessor = 'maintenance/article-publication/source-boundary.json'
++    pinned = subprocess.check_output(['git', 'show', LINT_BASE + ':' + predecessor], cwd=root)
++    if regular_path(root, predecessor).read_bytes() != pinned:
++        raise ValueError('changed historical publication boundary')
++    before_sources = {}
++    for path, record in boundary['preserved_updates'].items():
++        if set(record) != {'before_sha256', 'after_sha256'}:
++            raise ValueError('invalid lint successor hash fields')
++        before = subprocess.check_output(['git', 'show', LINT_BASE + ':' + path], cwd=root)
++        if (hashlib.sha256(before).hexdigest() != record['before_sha256']
++                or hashlib.sha256((historical or {}).get(path, regular_path(root, path).read_bytes())).hexdigest() != record['after_sha256']):
++            raise ValueError('lint cleanup preserved source hash mismatch: ' + path)
++        before_sources[path] = before
++    for path, wanted in boundary['new_sources'].items():
++        if hashlib.sha256((historical or {}).get(path, regular_path(root, path).read_bytes())).hexdigest() != wanted:
++            raise ValueError('lint cleanup new source hash mismatch: ' + path)
++    check_lint_cleanup_delta(before_sources['package.json'], (historical or {}).get('package.json', regular_path(root, 'package.json').read_bytes()))
++    return before_sources, boundary['preserved_updates']
++
++
++def apply_lint_successor(exceptions, updates, baseline):
++    result = {name: dict(value) for name, value in exceptions.items()}
++    baseline_names = {entry['path'] for entry in baseline}
++    for path, record in updates.items():
++        source = 'docs/' + path[5:] if path.startswith('blog/') else path
++        if source not in baseline_names:
++            raise ValueError('lint successor has no preserved predecessor: ' + path)
++        result.setdefault(source, {}).update(candidate=path, sha256=record['after_sha256'])
++    return result
++
++
++def phase1_preserved_updates(root, exceptions, successor=None):
++    """Keep adoption evidence immutable; validate the reviewed successor projection."""
++    name='maintenance/article-publication/source-boundary.json'
++    if not (root/name).exists():
++        return exceptions
++    boundary=json.loads(regular_path(root,name).read_text())
++    base='bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0'
++    if (set(boundary)!={'version','ticket','base','preserved_updates'} or boundary['version']!=1
++            or boundary['ticket']!='T-0002' or boundary['base']!=base
++            or set(boundary['preserved_updates']) not in (
++                {'AGENTS.md'}, {'AGENTS.md', 'package.json', 'pnpm-lock.yaml'})):
++        raise ValueError('unapproved article publication source boundary')
++    if 'package.json' in boundary['preserved_updates']:
++        before=subprocess.check_output(['git','show',base+':package.json'],cwd=root)
++        check_lint_dependency_delta(before, (successor or {}).get('package.json', regular_path(root,'package.json').read_bytes()))
++    result={name:dict(value) for name,value in exceptions.items()}
++    for name,record in boundary['preserved_updates'].items():
++        if set(record)!={'before_sha256','after_sha256'}:
++            raise ValueError('invalid successor hash fields')
++        before=subprocess.check_output(['git','show',base+':'+name],cwd=root)
++        if (hashlib.sha256(before).hexdigest()!=record['before_sha256']
++                or (name in exceptions and record['before_sha256']!=exceptions[name]['sha256'])
++                or hashlib.sha256((successor or {}).get(name, regular_path(root,name).read_bytes())).hexdigest()!=record['after_sha256']):
++            raise ValueError('article publication preserved source hash mismatch: '+name)
++        result.setdefault(name, {})['sha256']=record['after_sha256']
++    return result
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[1])
++    args = parser.parse_args()
++    root = args.root.resolve()
++    historical, approved = check_current_source(root)
++    baseline = json.loads((root / 'maintenance/harness-adoption/baseline-files.json').read_text())
++    delta = json.loads((root / 'maintenance/harness-adoption/candidate-delta.json').read_text())
++    check_baseline_manifest(root, baseline)
++    framework = check_framework(root)
++    check_readme_scripts(root)
++    if set(delta['exceptions']) != approved_exception_names(baseline['files']):
++        raise ValueError('unapproved/missing exception entry')
++    check_adoption_ancestry(root, baseline['baseline'])
++    successor, updates = check_lint_successor(root, historical)
++    exceptions = phase1_preserved_updates(root, delta['exceptions'], successor)
++    exceptions = apply_lint_successor(exceptions, updates, baseline['files'])
++    moves = check_preserved(root, baseline['files'], exceptions, historical)
++    if len(moves) != 55: raise ValueError('site move count mismatch')
++    baseline_names = {f['path'] for f in baseline['files']}
++    moved = {m['candidate'] for m in moves}
++    check_added_paths(root, baseline_names, moved, approved)
++    for name, expected in delta['literal_adapters'].items():
++        content = subprocess.check_output(['git', 'show', baseline['baseline'] + ':' + name], cwd=root).decode()
++        if name == 'package.json':
++            for verb in ('dev', 'build', 'preview'): content = content.replace(f'vitepress {verb} docs', f'vitepress {verb} blog')
++        elif name == 'tsconfig.json': content = content.replace('"docs/', '"blog/')
++        else:
++            content = content.replace('docs', 'blog')
++            if name == 'tests/vpHelper.vitest.ts': content = content.replace('expect(config.options.dir).toBe(DEFAULT_DIR);', "expect(config.options.dir).toBe('blog/post');")
++        actual = successor[name].decode() if name in successor else (root / name).read_text()
++        boundary_path=root/'maintenance/article-publication/source-boundary.json'
++        lint_update=(name=='package.json' and boundary_path.exists()
++                     and 'package.json' in json.loads(regular_path(root,str(boundary_path.relative_to(root))).read_text())['preserved_updates'])
++        if lint_update:
++            check_lint_dependency_delta(content, actual)
++        elif actual != content:
++            raise ValueError(f'nonliteral adapter change: {name}')
++    state = check_tickets(root)
++    translations = list((root / '.proj.specs').glob('**/spec.zh-TW.md'))
++    historical=[p for p in translations if p.is_relative_to(root/'.proj.specs/_baseline') or p.parent.name=='0001-harness-adoption']
++    if len(historical)!=7: raise ValueError('six baseline + one adoption translations required')
++    for path in translations: check_translation(path, root)
++    trace_count = check_trace(root, state['tickets'])
++    print(json.dumps({'status': 'pass', 'framework': framework, 'site_moves': len(moves), 'baseline_entries': len(baseline['files']), 'translations': len(translations), 'trace_rows': trace_count, 'tracker': state}, indent=2))
++
++
++if __name__ == '__main__':
++    try: main()
++    except (ValueError, OSError, KeyError, json.JSONDecodeError) as error:
++        raise SystemExit(f'FAIL: {error}')

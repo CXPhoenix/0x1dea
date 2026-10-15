@@ -1,0 +1,11 @@
+{
+  "status": "incomplete",
+  "step": "real Enter followed by CLI wait --url **/electricity-privacy.html",
+  "error": "Wait timed out after 25000ms",
+  "observed_after_timeout": {
+    "url": "http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html",
+    "heading": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？",
+    "previewNotice": "staging 修訂審閱稿"
+  },
+  "interpretation": "Expected destination and content observed afterward. This does not identify whether delay or CLI glob matching caused the timeout. Retain attempt and repeat exact pathname/content conditions with DOM wait; do not change application source."
+}

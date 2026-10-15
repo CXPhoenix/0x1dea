@@ -1,0 +1,19 @@
+{
+  "observed": "local static HTTP server logged 404 for /assets/fontawesome/regular.min.css",
+  "reference_config": "blog/.vitepress/config.mts",
+  "config_byte_identical_to_staging": true,
+  "tracked_staging_fontawesome_paths": [
+    "blog/public/assets/fontawesome/css/brands.min.css",
+    "blog/public/assets/fontawesome/css/fontawesome.min.css",
+    "blog/public/assets/fontawesome/css/regular.min.css",
+    "blog/public/assets/fontawesome/css/solid.min.css",
+    "blog/public/assets/fontawesome/webfonts/fa-brands-400.woff2",
+    "blog/public/assets/fontawesome/webfonts/fa-regular-400.woff2",
+    "blog/public/assets/fontawesome/webfonts/fa-solid-900.woff2",
+    "blog/public/assets/fontawesome/webfonts/fa-v4compatibility.woff2"
+  ],
+  "built_regular_stylesheet_exists": false,
+  "classification": "Pre-existing fixed staging config path mismatch: reference omits /css/. Actual assets remain present and byte-preserved. S4 listing/card/keyboard/notice checks pass; no HTTP-clean or Production claim and no unrelated source/deploy edit.",
+  "built_stylesheet_actual_path": "assets/fontawesome/css/regular.min.css",
+  "built_actual_stylesheet_exists": true
+}

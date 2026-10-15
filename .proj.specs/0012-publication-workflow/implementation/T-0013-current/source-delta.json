@@ -1,0 +1,187 @@
+{
+  "scope": "engineering source only; no delivery commit",
+  "bases": {
+    "main": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+    "staging": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7"
+  },
+  "paths": [
+    {
+      "path": "scripts/verify-harness-adoption.py",
+      "before": {
+        "main": {
+          "mode": "100644",
+          "type": "blob",
+          "blob": "19004c95d9f8b92e7c4c139eb950f9bfce172ba3"
+        },
+        "staging": {
+          "mode": "100644",
+          "type": "blob",
+          "blob": "e882d7d2cfd3855ea30ae7d325b40cd755a91266"
+        }
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "7b67c4291569c5d4436c0c3bbf11df78a1daaf4d0550c55b2184f40163aaf5a7"
+      }
+    },
+    {
+      "path": "scripts/publication-baseline.py",
+      "before": {
+        "main": null,
+        "staging": null
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "9202999cb7cad478f611489cba9962cbe9dc11992fb50b94c793cbac63a56a18"
+      }
+    },
+    {
+      "path": "scripts/publication_current.py",
+      "before": {
+        "main": null,
+        "staging": null
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "b7851d7e7583f25d0a8841eb19f5947543281a691e31c26543c6b710a71cf5c5"
+      }
+    },
+    {
+      "path": "scripts/harness_reconciliation.py",
+      "before": {
+        "main": null,
+        "staging": {
+          "mode": "100644",
+          "type": "blob",
+          "blob": "42fc35c2cc041ca45e6a4c3549488f0c30224ff3"
+        }
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "79870a068da61d5c5fee584a86f39fca3092f45b77f57e4e8a3f5be1f0d90973"
+      }
+    },
+    {
+      "path": "scripts/run-python-tests.py",
+      "before": {
+        "main": null,
+        "staging": {
+          "mode": "100644",
+          "type": "blob",
+          "blob": "f449e500c02937b4e9f3835b0ce7fc1eef331496"
+        }
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "8cf28cbd401b265fb3a142a6978aa1203e713f29f20dc79b2b49f4e2e08e405f"
+      }
+    },
+    {
+      "path": "tests/article_publication/__init__.py",
+      "before": {
+        "main": null,
+        "staging": {
+          "mode": "100644",
+          "type": "blob",
+          "blob": "8380dd164d7719417e2867dfa0c5fc910e1a0c7a"
+        }
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "ca4700c2df368d7c7b33ece27a657732283786bb5063e4d1119a6c525ae0c0a3"
+      }
+    },
+    {
+      "path": "tests/harness_adoption/__init__.py",
+      "before": {
+        "main": null,
+        "staging": {
+          "mode": "100644",
+          "type": "blob",
+          "blob": "4ace6b713ad2b2b9267acf4d1ef5ed63f5747f04"
+        }
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "a0a9cab31657f958cfd8762a4082f4233aa180dd24d14d1f29623e9d01676cc5"
+      }
+    },
+    {
+      "path": "tests/article_publication/test_baseline_inventory.py",
+      "before": {
+        "main": null,
+        "staging": null
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "f269a313ca11133f36672c53f13988cdaa5d2b00a9d1d56d08df47de6c2402be"
+      }
+    },
+    {
+      "path": "tests/article_publication/test_current_baseline.py",
+      "before": {
+        "main": null,
+        "staging": null
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "3236c23abdfbb26543721f4bb4d0e7f0567a19baf324696e84f26d2d1de9af33"
+      }
+    },
+    {
+      "path": "docs/adr/0008-main-first-engineering-and-shared-staging.md",
+      "before": {
+        "main": null,
+        "staging": null
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "a0d9ba031d6e9f26db766c969aad5daa87b6b14b5dc9d1b329653c0dc8641237"
+      }
+    },
+    {
+      "path": "docs/publication-baseline.md",
+      "before": {
+        "main": null,
+        "staging": null
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "eb4c484434863ed1d044d2cc23022e639f9d9043f4d1d33a62d83466f0f7bedc"
+      }
+    },
+    {
+      "path": "maintenance/publication-workflow/M0-approval.json",
+      "before": {
+        "main": null,
+        "staging": null
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "c3175bfed200886d4dddc1955fda678307a836fee632ce0205ab9c382725024e"
+      }
+    },
+    {
+      "path": "maintenance/publication-workflow/history/main-verifier.py",
+      "before": {
+        "main": null,
+        "staging": null
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "cf0019f96aa56a60ae4fff325f1487a239df5df4eeb4fb1f905cdc6063de5c46"
+      }
+    },
+    {
+      "path": "maintenance/publication-workflow/history/staging-verifier.py",
+      "before": {
+        "main": null,
+        "staging": null
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "86b6f7ea72a3b0bc17d303db471a94c104860a810c73014ef16e152872cad3d2"
+      }
+    }
+  ]
+}

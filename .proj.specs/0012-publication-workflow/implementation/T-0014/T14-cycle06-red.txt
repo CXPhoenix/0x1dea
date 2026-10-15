@@ -1,0 +1,19 @@
+test_advancing_source_ref_invalidates_the_old_registry_pin (article_publication.test_v2.V2Tests.test_advancing_source_ref_invalidates_the_old_registry_pin) ... FAIL
+
+======================================================================
+FAIL: test_advancing_source_ref_invalidates_the_old_registry_pin (article_publication.test_v2.V2Tests.test_advancing_source_ref_invalidates_the_old_registry_pin)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 107, in test_advancing_source_ref_invalidates_the_old_registry_pin
+    self.reject(self.v2('prepare', out), 'ref/head drift')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "8dbcb02b3a5ea08c61bd924beb697196e0436274", "files": {"blog/index.md": {"mode": "100644", "sha256": "5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368"}, "blog/post/A.md": {"mode": "100644", "sha256": "eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737"}}, "mode": "prepare", "plan_sha256": "cbcb6784e65364b615a7578755eb61967c9ad9c78a6f84ddcc2e0d4d1692d11a", "pr_ready": false, "publishable": false, "registry_sha256": "ac8893cde701e2a41e096d63310f2fb6994b1fab1986c9fe5b0432b95597b5e4", "version": 2}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.710s
+
+FAILED (failures=1)

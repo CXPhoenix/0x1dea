@@ -1,0 +1,122 @@
+test_current_guard_rejects_partial_promisor_candidate_without_fetch (test_closed_baseline.ClosedBaselineTests.test_current_guard_rejects_partial_promisor_candidate_without_fetch) ... FAIL
+test_current_guard_still_rejects_m0_as_implementation_landing (test_closed_baseline.ClosedBaselineTests.test_current_guard_still_rejects_m0_as_implementation_landing) ... ok
+test_real_closed_t13_landing_does_not_require_future_ticket_scripts (test_closed_baseline.ClosedBaselineTests.test_real_closed_t13_landing_does_not_require_future_ticket_scripts) ... ok
+
+======================================================================
+FAIL: test_current_guard_rejects_partial_promisor_candidate_without_fetch (test_closed_baseline.ClosedBaselineTests.test_current_guard_rejects_partial_promisor_candidate_without_fetch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_closed_baseline.py", line 61, in test_current_guard_rejects_partial_promisor_candidate_without_fetch
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "status": "pass",
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0010": {
+        "id": "T-0010",
+        "title": "Restore main verification after the selected electricity release",
+        "epic": "0010-main-verification-repair",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0013": {
+        "id": "T-0013",
+        "title": "Establish the common engineering baseline and M0 inventory",
+        "epic": "0012-publication-workflow",
+        "status": "done",
+        "landing_evidence": ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/landing.json",
+        "blocked_by": []
+      },
+      "T-0014": {
+        "id": "T-0014",
+        "title": "Prepare and verify one article through the explicit v2 contract",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0013"
+        ]
+      },
+      "T-0015": {
+        "id": "T-0015",
+        "title": "Prepare a verified main-to-staging synchronization locally",
+        "epic": "0012-publication-workflow",
+        "status": "review",
+        "blocked_by": [
+          "T-0013"
+        ]
+      },
+      "T-0016": {
+        "id": "T-0016",
+        "title": "Turn main changes into one trusted staging synchronization PR",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0015"
+        ]
+      },
+      "T-0017": {
+        "id": "T-0017",
+        "title": "Deliver only the approved article and record publication/recovery states",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0014",
+          "T-0016"
+        ]
+      },
+      "T-0018": {
+        "id": "T-0018",
+        "title": "Install and demonstrate the project workflow skill in both runtimes",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0017"
+        ]
+      }
+    },
+    "next_id": "T-0019",
+    "frontier": [
+      "T-0014"
+    ],
+    "blocked": {
+      "T-0016": [
+        "T-0015"
+      ],
+      "T-0017": [
+        "T-0014",
+        "T-0016"
+      ],
+      "T-0018": [
+        "T-0017"
+      ]
+    },
+    "paused": []
+  },
+  "target_role": "main",
+  "target_base": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+  "candidate_head": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "source_paths": 2038,
+  "publishable": false,
+  "candidate_paths_preserved": 0
+}
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 12.565s
+
+FAILED (failures=1)
