@@ -1,0 +1,33 @@
+test_already_contained_main_returns_noop_without_pr_readiness (test_staging_sync.StagingSyncTests.test_already_contained_main_returns_noop_without_pr_readiness) ... ok
+test_candidate_source_pin_must_own_the_registered_full_identity (test_staging_sync.StagingSyncTests.test_candidate_source_pin_must_own_the_registered_full_identity) ... ok
+test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source (test_staging_sync.StagingSyncTests.test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source) ... ok
+test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob (test_staging_sync.StagingSyncTests.test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob) ... ok
+test_conflict_reports_exact_paths_and_never_materializes_readiness (test_staging_sync.StagingSyncTests.test_conflict_reports_exact_paths_and_never_materializes_readiness) ... ok
+test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected (test_staging_sync.StagingSyncTests.test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected) ... FAIL
+test_registry_requires_complete_unique_candidates_fixed_role_and_strict_schema (test_staging_sync.StagingSyncTests.test_registry_requires_complete_unique_candidates_fixed_role_and_strict_schema) ... ok
+
+======================================================================
+FAIL: test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected (test_staging_sync.StagingSyncTests.test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 199, in test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected
+    report = self.ok(self.run_cli())
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 89, in ok
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : {
+  "error": "unsafe tree entry: skills/phoenix-writing/reference",
+  "local_ready": false,
+  "paths": [],
+  "publishable": false,
+  "status": "failure",
+  "target": "staging",
+  "version": 1
+}
+unsafe tree entry: skills/phoenix-writing/reference
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 3.490s
+
+FAILED (failures=1)

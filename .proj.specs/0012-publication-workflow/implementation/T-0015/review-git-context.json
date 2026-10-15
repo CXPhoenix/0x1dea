@@ -1,0 +1,15 @@
+{
+  "root": "/private/tmp/0x1dea-T0015",
+  "base": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "HEAD": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "merge_base": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "branch": "tickets/T-0015/local-staging-sync",
+  "files": {
+    "committed.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "staged.diff": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pending.diff": "e73e32e7a840466e9a3e438ce4a0d9c55bf377d780daa1141cd9500df202073f",
+    "status.txt": "82f748785111073d7318e44ef99ba79b302d39597144f54fbf1acde449d95f4b",
+    "commits.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "untracked.txt": "53fcc2b13b2c1b25b4d6ca08f97ade9b39a20a896148271c8ef75221dc4d1b85"
+  }
+}

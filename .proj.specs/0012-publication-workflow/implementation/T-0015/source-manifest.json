@@ -1,0 +1,16 @@
+{
+  "branch": "tickets/T-0015/local-staging-sync",
+  "base": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "source_sha256": {
+    "scripts/staging-sync.py": "257901190d218bcb55c0dcf6dbc4a5c45b9474107cc2c1e32a225508810c534c",
+    "tests/article_publication/test_staging_sync.py": "71c712d1ca9b3d8cc27abc78bb64664aaff9edf71f1b498028695e2a6664064b",
+    "docs/staging-sync.md": "1cb88ef963e966c1e3be170af383a8f49ff62ab4cafa5090a80c242960b71d50",
+    "scripts/publication_current.py": "5ac0f4a35a1085ed99abb5ff42c19c832655f56fd19196cc59be760c0b63dfd7",
+    "scripts/run-current-python-tests.py": "4ff65f3718fa340b2a3d91d8b639a675b6551ca6d317e3a280a95547056019f0",
+    "tests/article_publication/test_closed_baseline.py": "7edfacf5b89c2f479a7ea4e6a975f2aa21fad93120034586039acc32eaab3627",
+    "tests/article_publication/test_current_runner.py": "4cb9c25c00d45af3d216de872244979157b27189909cd2d367ec657382748a15"
+  },
+  "status": "local-review-checkpoint",
+  "commit": null,
+  "remote": false
+}

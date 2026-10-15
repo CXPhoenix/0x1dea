@@ -1,0 +1,105 @@
+test_already_contained_main_returns_noop_without_pr_readiness (test_staging_sync.StagingSyncTests.test_already_contained_main_returns_noop_without_pr_readiness) ... ok
+test_candidate_metadata_mode_and_receipt_tampering_block_readiness (test_staging_sync.StagingSyncTests.test_candidate_metadata_mode_and_receipt_tampering_block_readiness) ... ok
+test_candidate_source_pin_must_own_the_registered_full_identity (test_staging_sync.StagingSyncTests.test_candidate_source_pin_must_own_the_registered_full_identity) ... ok
+test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source (test_staging_sync.StagingSyncTests.test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source) ... ok
+test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob (test_staging_sync.StagingSyncTests.test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob) ... ok
+test_conflict_reports_exact_paths_and_never_materializes_readiness (test_staging_sync.StagingSyncTests.test_conflict_reports_exact_paths_and_never_materializes_readiness) ... ok
+test_explicit_preview_ui_engineering_is_allowed_without_article_waiver (test_staging_sync.StagingSyncTests.test_explicit_preview_ui_engineering_is_allowed_without_article_waiver) ... ok
+test_final_pin_reread_blocks_a_native_merge_race (test_staging_sync.StagingSyncTests.test_final_pin_reread_blocks_a_native_merge_race) ... ok
+test_included_promisor_configuration_cannot_hide_partial_history (test_staging_sync.StagingSyncTests.test_included_promisor_configuration_cannot_hide_partial_history) ... FAIL
+test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected (test_staging_sync.StagingSyncTests.test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected) ... ok
+test_local_pin_advance_expires_receipt_for_main_staging_and_candidate_source (test_staging_sync.StagingSyncTests.test_local_pin_advance_expires_receipt_for_main_staging_and_candidate_source) ... ok
+test_main_ref_cannot_be_labeled_as_staging_even_with_self_consistent_registry (test_staging_sync.StagingSyncTests.test_main_ref_cannot_be_labeled_as_staging_even_with_self_consistent_registry) ... ok
+test_missing_candidate_asset_blob_blocks_noop_without_source_object_writes (test_staging_sync.StagingSyncTests.test_missing_candidate_asset_blob_blocks_noop_without_source_object_writes) ... FAIL
+test_partial_promisor_source_configuration_is_rejected_without_fetch (test_staging_sync.StagingSyncTests.test_partial_promisor_source_configuration_is_rejected_without_fetch) ... ok
+test_protected_history_check_cannot_be_omitted_or_use_wrong_expected_identity (test_staging_sync.StagingSyncTests.test_protected_history_check_cannot_be_omitted_or_use_wrong_expected_identity) ... ok
+test_registry_requires_complete_unique_candidates_fixed_role_and_strict_schema (test_staging_sync.StagingSyncTests.test_registry_requires_complete_unique_candidates_fixed_role_and_strict_schema) ... ok
+test_schema_and_help_expose_supported_local_operations_without_role_selector (test_staging_sync.StagingSyncTests.test_schema_and_help_expose_supported_local_operations_without_role_selector) ... ok
+test_source_custom_shell_merge_driver_is_not_executed (test_staging_sync.StagingSyncTests.test_source_custom_shell_merge_driver_is_not_executed) ... ok
+test_source_git_template_cannot_install_an_external_merge_driver (test_staging_sync.StagingSyncTests.test_source_git_template_cannot_install_an_external_merge_driver) ... ok
+test_symlinked_output_parent_cannot_redirect_writes (test_staging_sync.StagingSyncTests.test_symlinked_output_parent_cannot_redirect_writes) ... ok
+
+======================================================================
+FAIL: test_included_promisor_configuration_cannot_hide_partial_history (test_staging_sync.StagingSyncTests.test_included_promisor_configuration_cannot_hide_partial_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 399, in test_included_promisor_configuration_cannot_hide_partial_history
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "checks": [
+    "pinned-source-trees",
+    "independent-git-tree",
+    "full-candidate-identities",
+    "protected-identities",
+    "local-ref-pins"
+  ],
+  "local_ready": true,
+  "main": {
+    "ref": "main",
+    "sha": "cb3aa3d61f4d9fa15052e3e4ac9195cdccc381ae"
+  },
+  "publishable": false,
+  "registry_sha256": "e0df0369b6df6b20be72b1aeb5570928c80c84d015b268c1c9ad89c1d1c42578",
+  "repository": "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-sync-kodj0gcb/source",
+  "result_tree": "8b70acb0983fbe8938d2a2857813286f0326ad1b",
+  "sources": [
+    {
+      "ref": "candidate/B",
+      "sha": "1c45bb0f2db7283130aebb6701103205fb579f4e"
+    }
+  ],
+  "staging": {
+    "ref": "staging",
+    "sha": "1c45bb0f2db7283130aebb6701103205fb579f4e"
+  },
+  "status": "ready",
+  "target": "staging",
+  "version": 1
+}
+
+
+======================================================================
+FAIL: test_missing_candidate_asset_blob_blocks_noop_without_source_object_writes (test_staging_sync.StagingSyncTests.test_missing_candidate_asset_blob_blocks_noop_without_source_object_writes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 412, in test_missing_candidate_asset_blob_blocks_noop_without_source_object_writes
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "checks": [
+    "pinned-source-trees",
+    "independent-git-tree",
+    "full-candidate-identities",
+    "protected-identities",
+    "local-ref-pins"
+  ],
+  "local_ready": false,
+  "main": {
+    "ref": "main",
+    "sha": "3bb4679e7f16e43e16abd849352a013eab5e15dd"
+  },
+  "publishable": false,
+  "registry_sha256": "668a94f22c644e3ad712dc970ebab2a7e1a4587b4ecb65ac75067812c611e4ef",
+  "repository": "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-sync-tughtjyz/source",
+  "result_tree": "5e9128f5bc677ea3ebc543e10525bc268f35be50",
+  "sources": [
+    {
+      "ref": "candidate/B",
+      "sha": "87ad10dc5deea88932340e4fa0453d9a01fb3587"
+    }
+  ],
+  "staging": {
+    "ref": "staging",
+    "sha": "87ad10dc5deea88932340e4fa0453d9a01fb3587"
+  },
+  "status": "no-op",
+  "target": "staging",
+  "version": 1
+}
+
+
+----------------------------------------------------------------------
+Ran 20 tests in 13.188s
+
+FAILED (failures=2)

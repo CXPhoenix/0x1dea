@@ -2,7 +2,7 @@
 id: T-0015
 title: Prepare a verified main-to-staging synchronization locally
 epic: 0012-publication-workflow
-status: todo
+status: review
 blocked_by: [T-0013]
 ---
 
@@ -55,3 +55,12 @@ No real article publication, credential installation or live automation activati
 ## Comments
 
 Owner-approved breakdown/test allocation; implementation evidence will be appended here.
+
+Implementation checkpoint 2026-10-15: supported prepare/verify/schema CLI, fixed staging role, complete registry identities, independent bare Git merge, full candidate checks, exact conflict/check/stale reports. Local P09/P10 suite: 23 cases. No remote delivery or merge; pending independent reviews and real authorized landings. Evidence: `.proj.specs/0012-publication-workflow/implementation/T-0015/`.
+
+Final local verification 2026-10-15:66 live harness +51 live publication (24 retained live,
+23sync,3closed,1runnerpreflight) +10 immutable #22 historical=127, allpass/failures0/errors0.
+Independent Standards/Spec/Security final unresolved counts0. Actual unchanged main001b26f
+ancestor staging0357835; finite reviewed all6/50 registryprepare/verify no-op, preserved.
+Full test raw/coverage and actual reports in evidence directory; reviews in epic review/.
+No real authorized T15 main/staging landings, so retain review, not done.
