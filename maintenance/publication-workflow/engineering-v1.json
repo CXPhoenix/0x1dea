@@ -5,7 +5,7 @@
     "staging": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7"
   },
   "m0_sha256": "6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a",
-  "scope": "local T-0013 exact successor; no landing/publication authority",
+  "scope": "reviewed exact engineering and management successor; no merge or publication authority",
   "common": {
     ".proj.specs/0012-publication-workflow/README.md": {
       "mode": "100644",
@@ -17,7 +17,7 @@
     },
     ".proj.specs/0012-publication-workflow/approval.md": {
       "mode": "100644",
-      "sha256": "032271683b380752b97aea96c6170d2018d2556d398f06925471de5a87544780"
+      "sha256": "28e5b9ca38b5df503ee88fb77ea518100971a684f6032f1fabfbc9395f665e09"
     },
     ".proj.specs/0012-publication-workflow/implementation/T-0013-current/README.md": {
       "mode": "100644",
@@ -91,6 +91,118 @@
       "mode": "100644",
       "sha256": "68267d5e19fafb791f1fd17d5e259c9ad333d816f30f751fd26673841e739a8f"
     },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/README.md": {
+      "mode": "100644",
+      "sha256": "e4008fc8889131a81d3e101376ab92de0d6b2d09e64b560e76dc6b8c56defa77"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/coverage.md": {
+      "mode": "100644",
+      "sha256": "e7daf7f86a7a47a0870448a28cc4ba50ebb7be3fbf04c871c9f0bb15193d3f6b"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/current-successor-reviewed-manifest.json": {
+      "mode": "100644",
+      "sha256": "2f121c60bb09503579c244175ba64ab97630debf546deaf6cb448235a3ebe9d7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/current-successor.md": {
+      "mode": "100644",
+      "sha256": "d0606b8e9896a9744f21ba4e28e693c55afc1c2e9619eccdc52c49b908baf1af"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/delivery-authority.md": {
+      "mode": "100644",
+      "sha256": "5ce26a6cd8f5851a7621d0f6206d3a3f969e802f12d597fc3acff1cbaa82c406"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/delivery-current-python.txt": {
+      "mode": "100644",
+      "sha256": "0caceb04258fa0d537bc80e69034e97141118dcba36323859fdcca282f88965a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/delivery-review-capture.json": {
+      "mode": "100644",
+      "sha256": "f51879e734b4533effa85b7777f344edcfe89ffe6201d00c4520409ddbdc962a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/delivery-verification.md": {
+      "mode": "100644",
+      "sha256": "8e80cb4981e2b9e19d4ed54222c165a1526f22ab6558c8a2cc86833ca457b412"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/delivery-website-build.txt": {
+      "mode": "100644",
+      "sha256": "ba546d9351a98b395347593ddecc2e20b906726fe8ecd7feee0fc06a31f5e321"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/delivery-website-lint.txt": {
+      "mode": "100644",
+      "sha256": "8deeaf9cc6c8b2c51372956acdd1ea311d479c4f0f01b23529cf587c25994b60"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/delivery-website-unit.txt": {
+      "mode": "100644",
+      "sha256": "b1f6900f063c6ead30d325df10ba7aabbebc6b2662d405570586849345e9135c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/landing-identities.json": {
+      "mode": "100644",
+      "sha256": "876d3ee1c9ffee4cf387593aa0d580f2964e667b1aa2fdb9b9c70200ca8645d7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/landing.json": {
+      "mode": "100644",
+      "sha256": "5a6d0d7e589f670ed7edc64e672285083a6fe7835e8ea5fceb55b7b9c532a3c4"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/local-closeout-validation.json": {
+      "mode": "100644",
+      "sha256": "ba5ebf1700349c6997428b57083fd37ae84d4a56b413a0f482d7006d5821da15"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/main-adoption.json": {
+      "mode": "100644",
+      "sha256": "f3b64d9b09ced1f8e1ab3257a43b2f8b169b781bb8ceae6705600add74116c10"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/main-build.txt": {
+      "mode": "100644",
+      "sha256": "5ef9e3744e174422b8df65dbe776e90cf509f774c223e9aadc00f410f8bef0a5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/main-lint.txt": {
+      "mode": "100644",
+      "sha256": "c07487cd0a698ee891ddde8d375536b89994565baffe25e8b432b539b579376c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/main-materializer.txt": {
+      "mode": "100644",
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/main-python.txt": {
+      "mode": "100644",
+      "sha256": "8dcfba854811b718f93621c9d34f472def762710f6476022a48609b215408985"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/main-structure.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/main-vitest.txt": {
+      "mode": "100644",
+      "sha256": "cd12619fe6920c40ed860cadfb34c1178016b75fe73ee190041cb872f1e5c969"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/staging-adoption.json": {
+      "mode": "100644",
+      "sha256": "87a5e03125570dcaaca5338f8b6c06442aaad03927505e6fc83939420476c119"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/staging-build.txt": {
+      "mode": "100644",
+      "sha256": "bd2cbc11745a35f9bbf683bef3598c947cb1f8408a84d640ece33d711609e46f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/staging-lint.txt": {
+      "mode": "100644",
+      "sha256": "4cd5b02fb9353f2f3239b7615477ab439e6dfc62a7d0e278f78595279addeb0e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/staging-materializer.txt": {
+      "mode": "100644",
+      "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/staging-python.txt": {
+      "mode": "100644",
+      "sha256": "b7c5162610e22a8d5634363de9d596dff608858892a0f110b0fa2c71710ae0bb"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/staging-structure.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/staging-vitest.txt": {
+      "mode": "100644",
+      "sha256": "4dd9b04c854f45bca4788f189bb5549658b53e8150c3b13e028016a87e40d1df"
+    },
     ".proj.specs/0012-publication-workflow/implementation/T-0013/M0-classification.proposed.json": {
       "mode": "100644",
       "sha256": "71e88f0f2187505145701fd13145f9e156692d0e40d1bba7852b7c5290e03b49"
@@ -155,6 +267,14 @@
       "mode": "100644",
       "sha256": "ff911e690ae38b6e9deba8a294b3e3249c65acfc0caef47378ba34a3c6c9507e"
     },
+    ".proj.specs/0012-publication-workflow/review/code-T-0013-15-delivery.md": {
+      "mode": "100644",
+      "sha256": "f37c0262c1ec2628fd205e2a8308d87c1fb1ef31bd3a4cb1a91059f1777ba237"
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0013-current-successor.md": {
+      "mode": "100644",
+      "sha256": "b9e6472fd3bf356138145dccc96c60bee863d6de86a9db90d403b8d4f19e2baa"
+    },
     ".proj.specs/0012-publication-workflow/review/code-T-0013-current.md": {
       "mode": "100644",
       "sha256": "1f9e8aacc511a95d75b062bdfcfad2b9785768165bcf70c209d13e22d757dc6b"
@@ -162,6 +282,10 @@
     ".proj.specs/0012-publication-workflow/review/code-T-0013-inventory.md": {
       "mode": "100644",
       "sha256": "e64ba48e219231d9dab5d400bbf174c5373da28c854df2cafddf2747cbd05c08"
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0013-landing.md": {
+      "mode": "100644",
+      "sha256": "69760a79954f58629954a5c976b8474fada27bfbc5dcf6a065f4b7b2d513f83a"
     },
     ".proj.specs/0012-publication-workflow/review/document-invariants.json": {
       "mode": "100644",
@@ -210,6 +334,14 @@
     ".proj.specs/0012-publication-workflow/review/round-2.md": {
       "mode": "100644",
       "sha256": "3211945df22e4a3395a5f41196b7175c6bb3aa7998ee035081c72a674c8234c4"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0013-15-delivery.md": {
+      "mode": "100644",
+      "sha256": "7178d4f517f2e6d74d71126c3b6b32c3194e00b8b2a0746fe2f5df3a044383ca"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0013-current-successor.md": {
+      "mode": "100644",
+      "sha256": "8006083b7750c44a5a9cab9539d399d3001fe06dc0fff04a6aa57b63de3c3db0"
     },
     ".proj.specs/0012-publication-workflow/review/security-T-0013-current.md": {
       "mode": "100644",
@@ -517,7 +649,7 @@
     },
     ".proj.tickets/0012-publication-workflow/T-0013-common-engineering-baseline.md": {
       "mode": "100644",
-      "sha256": "d0394acb52fc3d263b9c6b09f6dd6be72525f3dc59ddf57e8ba9932f8a5fd1a4"
+      "sha256": "7e9085940c20dbb1779d30e2f00bbd2038410e44b033b2b6851e36f146e8b701"
     },
     ".proj.tickets/0012-publication-workflow/T-0014-v2-selected-candidate.md": {
       "mode": "100644",
@@ -569,7 +701,11 @@
     },
     "scripts/publication_current.py": {
       "mode": "100644",
-      "sha256": "b7851d7e7583f25d0a8841eb19f5947543281a691e31c26543c6b710a71cf5c5"
+      "sha256": "5ac0f4a35a1085ed99abb5ff42c19c832655f56fd19196cc59be760c0b63dfd7"
+    },
+    "scripts/run-current-python-tests.py": {
+      "mode": "100644",
+      "sha256": "4ff65f3718fa340b2a3d91d8b639a675b6551ca6d317e3a280a95547056019f0"
     },
     "scripts/run-python-tests.py": {
       "mode": "100644",
@@ -587,9 +723,17 @@
       "mode": "100644",
       "sha256": "f269a313ca11133f36672c53f13988cdaa5d2b00a9d1d56d08df47de6c2402be"
     },
+    "tests/article_publication/test_closed_baseline.py": {
+      "mode": "100644",
+      "sha256": "7edfacf5b89c2f479a7ea4e6a975f2aa21fad93120034586039acc32eaab3627"
+    },
     "tests/article_publication/test_current_baseline.py": {
       "mode": "100644",
       "sha256": "3236c23abdfbb26543721f4bb4d0e7f0567a19baf324696e84f26d2d1de9af33"
+    },
+    "tests/article_publication/test_current_runner.py": {
+      "mode": "100644",
+      "sha256": "4cb9c25c00d45af3d216de872244979157b27189909cd2d367ec657382748a15"
     },
     "tests/harness_adoption/__init__.py": {
       "mode": "100644",

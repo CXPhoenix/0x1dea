@@ -15,8 +15,17 @@ M0 = '.proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.p
 M0_SHA = '6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a'
 
 
+def git_environment(*, local_clone=False):
+    env = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
+    env.update({'GIT_CONFIG_NOSYSTEM': '1', 'GIT_CONFIG_GLOBAL': os.devnull,
+                'GIT_NO_REPLACE_OBJECTS': '1', 'GIT_NO_LAZY_FETCH': '1',
+                'GIT_ALLOW_PROTOCOL': 'file' if local_clone else '', 'GIT_TERMINAL_PROMPT': '0'})
+    return env
+
+
 def git(root, *args):
-    return subprocess.check_output(['git', '--no-replace-objects', '--literal-pathspecs', '-C', str(root), *args], stderr=subprocess.PIPE)
+    return subprocess.check_output(['git', '--no-replace-objects', '--literal-pathspecs', '-C', str(root), *args],
+                                   stderr=subprocess.PIPE, env=git_environment())
 
 
 def digest(data):
@@ -69,6 +78,7 @@ def policy(control):
 
 
 def prepare(control, output):
+    check_history(control)
     data, inventory = policy(control)
     output = output.absolute()
     if output.exists() or output.is_symlink() or output.resolve().is_relative_to(control.resolve()):
@@ -89,7 +99,8 @@ def prepare(control, output):
     try:
         for role, base in BASES.items():
             target = output / role
-            subprocess.run(['git', 'clone', '--shared', '--no-checkout', str(control), str(target)], check=True, capture_output=True)
+            subprocess.run(['git', 'clone', '--shared', '--no-checkout', '--template=', str(control), str(target)],
+                           check=True, capture_output=True, env=git_environment(local_clone=True))
             git(target, 'checkout', '--detach', base)
             for target_role_name, target_pin in BASES.items():
                 git(target, 'update-ref', 'refs/heads/' + target_role_name, target_pin)
@@ -115,13 +126,20 @@ def target_role(control):
     # The executing reviewed control checkout supplies the context, never root/candidate.
     for role in ('staging', 'main'):
         result = subprocess.run(['git', '--no-replace-objects', '-C', str(control),
-                                 'merge-base', '--is-ancestor', BASES[role], 'HEAD'], capture_output=True)
+                                 'merge-base', '--is-ancestor', BASES[role], 'HEAD'], capture_output=True, env=git_environment())
         if result.returncode == 0:
             return role
     raise ValueError('trusted target ancestor context is unavailable')
 
 
 def check_history(root):
+    partial = subprocess.run(['git', '-C', str(root), 'config', '--local', '--includes', '--get-regexp',
+                              r'^(extensions\.partialclone|remote\..*\.(promisor|partialclonefilter))$'],
+                             capture_output=True, env=git_environment())
+    if partial.returncode not in (0, 1):
+        raise ValueError('source configuration check failed')
+    if partial.stdout.strip():
+        raise ValueError('complete history required: partial/promisor configuration is not allowed')
     if git(root, 'for-each-ref', '--format=%(refname)', 'refs/replace').strip():
         raise ValueError('replacement history is not allowed')
     grafts = Path(git(root, 'rev-parse', '--path-format=absolute', '--git-path', 'info/grafts').decode().strip())
@@ -205,18 +223,35 @@ def check_t13_landing(control, root, state, data):
         return
     receipt = json.loads(regular(root, ticket.get('landing_evidence', '')).read_text())
     from main_publication_verification import tree, identity
-    engineering = {p: entry for p, entry in data['common'].items()
+    # A completed ticket is bound to its actual main landing policy, not future
+    # T-0014/T-0015 additions in the live engineering control map.
+    main_commit = receipt.get('main_commit', '')
+    if not isinstance(main_commit, str) or len(main_commit) != 40 or any(c not in '0123456789abcdef' for c in main_commit):
+        raise ValueError('T-0013 requires actual main and staging landing commits')
+    try:
+        frozen = json.loads(git(control, 'show', main_commit + ':' + POLICY))
+    except (subprocess.CalledProcessError, ValueError) as error:
+        raise ValueError('T-0013 landing policy is unavailable') from error
+    if (set(frozen) != {'version', 'bases', 'm0_sha256', 'scope', 'common'}
+            or frozen['version'] != 1 or frozen['bases'] != BASES or frozen['m0_sha256'] != M0_SHA
+            or not isinstance(frozen['common'], dict)):
+        raise ValueError('T-0013 landing policy has an invalid contract')
+    engineering = {p: entry for p, entry in frozen['common'].items()
                    if p.startswith('scripts/') or p == 'docs/adr/0008-main-first-engineering-and-shared-staging.md'}
+    required = {'scripts/publication_current.py', 'scripts/publication-baseline.py',
+                'scripts/verify-harness-adoption.py', 'docs/adr/0008-main-first-engineering-and-shared-staging.md'}
+    if not required <= set(engineering):
+        raise ValueError('T-0013 landing policy is missing the engineering successor')
     for key, role in [('main_commit', 'main'), ('commit', 'staging')]:
         commit = receipt.get(key, '')
         if not isinstance(commit, str) or len(commit) != 40 or any(c not in '0123456789abcdef' for c in commit):
             raise ValueError('T-0013 requires actual main and staging landing commits')
         target = 'refs/heads/' + role
-        if subprocess.run(['git', '-C', str(control), 'show-ref', '--verify', '--quiet', target], capture_output=True).returncode:
+        if subprocess.run(['git', '-C', str(control), 'show-ref', '--verify', '--quiet', target], capture_output=True, env=git_environment()).returncode:
             target = 'refs/remotes/origin/' + role
         try:
             git(control, 'merge-base', '--is-ancestor', commit, target)
-            landed = tree(root, commit)
+            landed = tree(control, commit)
         except subprocess.CalledProcessError as error:
             raise ValueError('T-0013 landing is not in the trusted target history') from error
         if any(identity(landed.get(p)) != expected for p, expected in engineering.items()):
