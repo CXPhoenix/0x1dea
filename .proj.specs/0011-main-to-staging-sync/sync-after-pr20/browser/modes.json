@@ -1,0 +1,74 @@
+[
+  {
+    "cards": [
+      {
+        "date": "2026年10月9日",
+        "description": "從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。",
+        "href": "/post/course/security-awareness/electricity-privacy.html",
+        "title": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？"
+      }
+    ],
+    "clientWidth": 1440,
+    "dark": false,
+    "heading": "資安認知推廣備課系列\n​",
+    "innerHeight": 900,
+    "innerWidth": 1440,
+    "scrollWidth": 1440,
+    "url": "http://127.0.0.1:8879/post/course/security-awareness/",
+    "phase": "desktop-light"
+  },
+  {
+    "cards": [
+      {
+        "date": "2026年10月9日",
+        "description": "從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。",
+        "href": "/post/course/security-awareness/electricity-privacy.html",
+        "title": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？"
+      }
+    ],
+    "clientWidth": 1440,
+    "dark": true,
+    "heading": "資安認知推廣備課系列\n​",
+    "innerHeight": 900,
+    "innerWidth": 1440,
+    "scrollWidth": 1440,
+    "url": "http://127.0.0.1:8879/post/course/security-awareness/",
+    "phase": "desktop-dark"
+  },
+  {
+    "cards": [
+      {
+        "date": "2026年10月9日",
+        "description": "從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。",
+        "href": "/post/course/security-awareness/electricity-privacy.html",
+        "title": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？"
+      }
+    ],
+    "clientWidth": 390,
+    "dark": true,
+    "heading": "資安認知推廣備課系列\n​",
+    "innerHeight": 844,
+    "innerWidth": 390,
+    "scrollWidth": 390,
+    "url": "http://127.0.0.1:8879/post/course/security-awareness/",
+    "phase": "mobile-dark"
+  },
+  {
+    "cards": [
+      {
+        "date": "2026年10月9日",
+        "description": "從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。",
+        "href": "/post/course/security-awareness/electricity-privacy.html",
+        "title": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？"
+      }
+    ],
+    "clientWidth": 390,
+    "dark": false,
+    "heading": "資安認知推廣備課系列\n​",
+    "innerHeight": 844,
+    "innerWidth": 390,
+    "scrollWidth": 390,
+    "url": "http://127.0.0.1:8879/post/course/security-awareness/",
+    "phase": "mobile-light"
+  }
+]

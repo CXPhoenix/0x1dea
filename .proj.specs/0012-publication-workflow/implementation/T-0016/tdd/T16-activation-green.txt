@@ -1,0 +1,8 @@
+test_contained_main_noop_does_not_create_branch_or_pull (test_remote_sync.RemoteSyncTests.test_contained_main_noop_does_not_create_branch_or_pull) ... ok
+test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) ... ok
+test_repeat_event_updates_at_most_one_owned_pull (test_remote_sync.RemoteSyncTests.test_repeat_event_updates_at_most_one_owned_pull) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.009s
+
+OK

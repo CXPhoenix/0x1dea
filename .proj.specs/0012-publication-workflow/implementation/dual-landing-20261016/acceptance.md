@@ -1,0 +1,22 @@
+# Conditional closeout acceptance audit
+
+Actual pins: main5e6c889c808e7ef4cb83493bf06f8a70dd055b41; staging612924848ca13663bb2af64e32638fbabedb1685. Owner requested conditional closure after manually merging PR21 on 2026-10-16 Asia/Taipei. Source-and-landing.json and primary PR JSONs prove actual ancestry/tree, not CI or deployment.
+
+| Ticket / criterion | Evidence and disposition |
+|---|---|
+| T12 C1 truthful old-ticket audit | ticket-closeout/current-main/audit.md covers every original AC and exact landings; current approved interpretation corrects T2 to done, retains T3/T4/T8 gaps. Earlier planning/source status text stays historical. |
+| T12 C2 exact successors and receipts | current-main red/green and six public native CLI cases; finite approved successor/receipt pins in publication_current, original helper/test_main_release and historical validators preserved. This closure adds separately pinned actual T12 receipt, never backdates T10. |
+| T12 C3 target verification/preservation | Actual main PR20 and staging PR21 contain reviewed guard and tests, 164 main /193 staging prior Python executions recorded separately. New metadata verification/full suites will be appended; source-and-landing.json confirms 111blog/50candidate/376history unchanged against prior stage. Current live fixture target refs advance to actual main/staging; all original assertion ASTs and historical oracles remain identical, no new frozen-module exclusion or skip. |
+| T12 C4 reviews and delivery | Current-main independent Standards/Spec/security plus PR21 sync final reviews clear. Primary PR20/21 JSONs prove owner merges, reviewed PR21 head/tree equality. Old C4 request to leave PRs open governed agent delivery; later owner merges supply actual landing without agent merge authority. |
+| T14 v2 interface / schema and v1 preservation | docs/article-publication-v2.md:3-5,35-45 and independent code-T-0014-main-refresh report confirm current entrypoints, strict source admission and original v1 behavior. |
+| T14 provenance / inventory / migration | Approved P04-P08 and P14-P17, implementation/T-0014/main-refresh-20261015 README and complete native tests confirm ancestry, full ownership, legacy approval gate and exact reconstruction. Six real legacy candidates were not migrated or published. |
+| T14 isolation/build/ready | 135-test main-refresh record, blob-admission red/green, actual enforced build/output receipts and final reviews confirm local required boundary; synthetic approvals do not claim actual HTTP publication. |
+| T15 independent fixed-target preparation | docs/staging-sync.md and implementation/T-0015/main-refresh-20261015 confirm actual CLI/schema, full candidate checks, no-op/conflict/failure/drift and immutable aliases. |
+| T15 result integrity | 24 public sync cases, independent merge and output-blob regression red/green, 159-test main-refresh execution and final code/security reports confirm approved P09 and local P10. |
+| T14/T15 actual dual-target landing | PR25 b84321dfeb23e155de923e6fdf799f261e3cd1c9 /PR26 87740186f2a1b57f8c1df89f36647cbe3663f428 are main and stage ancestors. Stage PR21 tree equals reviewed dbb17ad. Shared implementation/schema/docs/test blob+mode identities are identical across actual main/stage. Independent current criterion audit found no remaining gate. |
+
+All three approved implementation scopes and authorized dual-target landing conditions hold; exact receipts reference the real main merges and staging61292484. Done is local tracker state pending later authorized delivery of these new records. It does not complete T16 remote exercise/activation, other old tickets, CI, production or publication. Fresh validation and independent final reviews of the new closeout metadata remain part of this implementation session.
+
+## Fresh execution supplement
+
+Current complete main192 (66+116+10) and staging221 (95+116+10) Python executions exit0 with zero failures/errors/skips. New actual-closeout receipt negatives and positive native staging data validation run in both full suites. Product unit main54/staging87 and zero-warning lint pass; both native/structure/materializer checkpoints pass. Full records and checkpoint limits: ../T-0016/final/execution.json and coverage.md. Final evidence review is recorded in ../../review/code-T-0016.md and security-T-0016.md. These observations validate local new metadata; actual PR20/21/25/26 remain the primary landing evidence.

@@ -2,7 +2,7 @@
 id: T-0016
 title: Turn main changes into one trusted staging synchronization PR
 epic: 0012-publication-workflow
-status: todo
+status: review
 blocked_by: [T-0015]
 ---
 
@@ -61,3 +61,17 @@ No real article publication, credential installation or live automation activati
 ## Comments
 
 Owner-approved breakdown/test allocation; implementation evidence will be appended here.
+
+## Current local implementation — 2026-10-16
+
+Owner confirmed PR21 merged and authorized conditional T12/T14/T15 closure plus T16 work. Actual main5e6c889c/staging61292484 and unchanged candidate/history bytes were verified; exact dual-target receipts permit the three local done states. Their original records are retained.
+
+T16 local controller/adapter/CLI and inactive templates are implemented on the canonical main-based ticket branch. Approved P10–P12 run at public local seams with real disposable Git/native/enforced builds and fake GitHub; P13 is not passed. Complete main192/staging221 Python, main54/staging87 unit and zero-warning lint succeed. Independent source review resolved the bootstrap P1, shared-builder P2 and token preparation boundary; final metadata review is linked below.
+
+Evidence: implementation/T-0016/coverage.md, final/execution.json, tdd-evidence.json; review/code-T-0016.md and security-T-0016.md. Status is review: actual separately authorized disposable GitHub exercise, later reviewed main/staging landing and activation gates remain unmet. No live workflow/repository-rule/deployment modification, token installation or merge occurred. Local metadata and code are uncommitted/unpushed; this does not claim remote tracker delivery or ticket done.
+
+## Authorized main PR delivery — 2026-10-16
+
+After the successful local implementation/reviews, the owner authorized commit, non-force push and one implementation PR to main for T12/T14/T15 closure plus this ticket's approved engineering/management scope. The new authorization supersedes only the earlier local-only delivery checkpoint; no historical evidence is rewritten. See implementation/T-0016-main-delivery-20261016/.
+
+T16 remains review; P13 is unverified and activation blocked. No merge, live automation, deployment-setting or repository-rule/credential change. Actual T16 main/staging landings and the separately authorized disposable remote exercise are still required before done.

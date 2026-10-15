@@ -1,0 +1,72 @@
+{
+  "main": "5e6c889c808e7ef4cb83493bf06f8a70dd055b41",
+  "staging": "612924848ca13663bb2af64e32638fbabedb1685",
+  "reviewed_pr21_head": "dbb17ad89eb9f7b0012d389dd8e95b45828c3b28",
+  "stage_tree_equals_reviewed_head": true,
+  "actual_main_and_staging_ancestors": [
+    20,
+    25,
+    26
+  ],
+  "blog_paths_unchanged": 111,
+  "candidate_paths_unchanged": 50,
+  "protected_history_paths_unchanged": 376,
+  "landed_shared_source_identities": {
+    "scripts/article-publication-v2.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "aef9fbbfb9283bef57ac89b2ee5b958f10ddd831"
+    },
+    "scripts/publication_build_v2.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "84bda6a2ced8d679a3de7661f0881c48934dd080"
+    },
+    "scripts/staging-sync.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "00b1f3577c689db78d812dc4dcf54e1d72ed0852"
+    },
+    "scripts/run-current-python-tests.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "df9b233f393af9fe928530e7af5656f83b967184"
+    },
+    "scripts/publication_current.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "2350ded1bf7ea27173f40e1708e855937e98e3ec"
+    },
+    "scripts/verify-harness-adoption.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "8e7a52722f0147d8c2b1982c26ffcba1df9c8fbb"
+    },
+    "scripts/main_publication_verification.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "8bd34dd4e04e17327db4ce6eb89abc052bb8b486"
+    },
+    "tests/harness_adoption/test_main_release.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "9b541c479b15d4ce1aac5dd82070c0bc21aa4047"
+    },
+    "tests/article_publication/test_v2.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "bdd07d7c086e49ad57728e8d4cc1f714feefc039"
+    },
+    "tests/article_publication/test_staging_sync.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "28002db5e22eaa2c61984dc4739c3eb41bcb23db"
+    },
+    "tests/article_publication/test_closeout_successor.py": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "78053702236fb436ba9ba9c3a56c56a09507ebdb"
+    }
+  },
+  "scope": "Actual immutable remote Git trees and primary merge readbacks; test execution/CI/HTTP are separate."
+}

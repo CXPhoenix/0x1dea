@@ -1,0 +1,40 @@
+# INACTIVE reference only: never receives PUBLICATION_WRITER_TOKEN.
+name: Trusted staging synchronization validation
+run-name: staging-sync:${{ inputs.operation }}:${{ inputs.head }}
+on:
+  workflow_dispatch:
+    inputs:
+      operation: {required: true, type: string}
+      main: {required: true, type: string}
+      staging: {required: true, type: string}
+      head: {required: true, type: string}
+      tree: {required: true, type: string}
+      policy: {required: true, type: string}
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          path: control
+      - name: Validate exact inputs with trusted main code and isolated build
+        env:
+          INPUTS_JSON: ${{ toJSON(inputs) }}
+          REPOSITORY: ${{ github.repository }}
+          CONFIG: ${{ vars.PUBLICATION_CONFIG_DIR }}
+          REGISTRY_SHA: ${{ vars.PUBLICATION_REGISTRY_SHA256 }}
+          RUNTIME_SHA: ${{ vars.PUBLICATION_RUNTIME_SHA256 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$CONFIG"
+          python3 control/scripts/staging-sync-remote.py validate \
+            --dispatch-inputs-env INPUTS_JSON --repository "$REPOSITORY" \
+            --registry "$CONFIG/registry.json" --registry-sha256 "$REGISTRY_SHA" \
+            --runtime "$CONFIG/runtime.json" --runtime-sha256 "$RUNTIME_SHA" \
+            --build-output "$RUNNER_TEMP/sync-build"

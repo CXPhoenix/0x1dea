@@ -22,7 +22,7 @@ class CloseoutSuccessorTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         for role in ('main', 'staging'):
             controller = self.output/role
-            for name, pin in (('main', MAIN), ('staging', STAGING)):
+            for name, pin in (('main', '5e6c889c808e7ef4cb83493bf06f8a70dd055b41'), ('staging', '612924848ca13663bb2af64e32638fbabedb1685')):
                 subprocess.run(['git', '-C', str(controller), 'update-ref', 'refs/heads/'+name, pin], check=True)
             subprocess.run(['git', '-C', str(controller), 'update-ref', 'HEAD', MAIN if role == 'main' else STAGING], check=True)
 

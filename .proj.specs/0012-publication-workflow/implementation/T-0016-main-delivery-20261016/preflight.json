@@ -1,0 +1,83 @@
+{
+  "recorded_at": "2026-10-15T17:33:15.760765+00:00",
+  "source_branch": "tickets/T-0016/main-to-staging-sync",
+  "local_head": "5e6c889c808e7ef4cb83493bf06f8a70dd055b41",
+  "target": "main",
+  "remote_main": "5e6c889c808e7ef4cb83493bf06f8a70dd055b41",
+  "remote_staging": "612924848ca13663bb2af64e32638fbabedb1685",
+  "remote_ticket_branch_exists": false,
+  "existing_ticket_prs": [],
+  "source_continuity": "Previously reviewed executable/test/inactive-template bytes unchanged; this increment adds only delivery metadata.",
+  "prior_full_python": {
+    "main": {
+      "suite_counts": [
+        66,
+        116,
+        10
+      ],
+      "tests": 192,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "source_checkpoint_common_paths": 849
+    },
+    "stage": {
+      "suite_counts": [
+        95,
+        116,
+        10
+      ],
+      "tests": 221,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "exit_code": 0,
+      "source_checkpoint_common_paths": 849
+    }
+  },
+  "validated_existing_evidence_bindings": 95,
+  "prior_reviews": {
+    "Standards_P0_P1_P2": [
+      0,
+      0,
+      0
+    ],
+    "Spec_P0_P1_P2": [
+      0,
+      0,
+      0
+    ],
+    "Security_HIGH_MEDIUM": [
+      0,
+      0
+    ]
+  },
+  "T0016_status": "review",
+  "P13": "unverified; separate owner-designated disposable-repository exercise required",
+  "candidate_paths_preserved": 50,
+  "protected_history_paths_preserved": 376,
+  "merge": false,
+  "activate": false,
+  "deployment_settings_changed": false,
+  "scope": "Read-only preflight plus owner delivery authority; not a commit, push, PR or target-landing receipt.",
+  "whitespace_check": {
+    "full_exit": 2,
+    "source_and_management_exit": 0,
+    "exact_raw_terminal_log_exceptions": [
+      ".proj.specs/0011-main-to-staging-sync/sync-after-pr20/lint.txt",
+      ".proj.specs/0011-main-to-staging-sync/sync-after-pr20/unit.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/final/lint-main.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/final/lint-staging.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/final/unit-main.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/final/unit-staging.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/tdd/T16-P10-ownership-red.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/tdd/T16-P11-lost-red.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/tdd/T16-P12-red.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/tdd/T16-activation-red.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/tdd/T16-bootstrap-P1-red.txt",
+      ".proj.specs/0012-publication-workflow/implementation/T-0016/tdd/T16-commit-readback-red.txt"
+    ],
+    "reason": "Literal raw terminal whitespace retained for history/evidence SHA bindings. No source/management whitespace finding; no broad ignore or log rewrite."
+  }
+}

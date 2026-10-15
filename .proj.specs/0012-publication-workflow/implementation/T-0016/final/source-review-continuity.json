@@ -1,0 +1,17 @@
+{
+  "fixes_packet": "T16-review-fixes",
+  "fixed_packet_files": 142,
+  "executable_test_templates_unchanged_since_independent_source_review": true,
+  "only_changed_existing_packet_files": [
+    ".proj.specs/0012-publication-workflow/implementation/T-0016/README.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016/attempts/README.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016/coverage.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016/remote-preflight/README.md",
+    ".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/acceptance.md",
+    ".proj.specs/0012-publication-workflow/review/code-T-0016.md",
+    ".proj.specs/0012-publication-workflow/review/security-T-0016.md",
+    ".proj.tickets/0012-publication-workflow/T-0016-main-to-staging-sync.md",
+    "maintenance/publication-workflow/engineering-v1.json"
+  ],
+  "note": "New files are measured raw execution outputs and final evidence records, not executable additions. Final packet inventories every new file separately."
+}

@@ -1,0 +1,362 @@
+{
+  "T16-CLI-green.txt": {
+    "original_sha256": "e7f44671b491cbdbffe79ed3cd2d9989fcd5ecb71a994674653d7ca6edb09bc6",
+    "published_sha256": "e7f44671b491cbdbffe79ed3cd2d9989fcd5ecb71a994674653d7ca6edb09bc6",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-CLI-red.txt": {
+    "original_sha256": "05d39ecf8be20519a5cac1bd9dec3beb1932a50a1b0f4164e4e2cb3b746b22cc",
+    "published_sha256": "8b6bb9d41a1024f0a60e2ea190901c1e570ed781d38f76e28e3bdf886101e50f",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-GitHub-green.txt": {
+    "original_sha256": "5b2d88006576b5357c90ac99d7ad1a80a7f521f247a83bfd002ed097f57aa188",
+    "published_sha256": "5b2d88006576b5357c90ac99d7ad1a80a7f521f247a83bfd002ed097f57aa188",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-GitHub-red.txt": {
+    "original_sha256": "ddffe4c1f745a3998e5f428ff43e50de2ab283ed6c7dd0d1e1ab6019d970e7f9",
+    "published_sha256": "4cc618c2b01c11f939ab87445da7444de3702f91b9a839c31b47f011e1d859b6",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-GitHub-ref-green.txt": {
+    "original_sha256": "244ce11e41bf893780f444c27c5bdc298ebe25f4301d52f252cb0b5fe03b75ae",
+    "published_sha256": "244ce11e41bf893780f444c27c5bdc298ebe25f4301d52f252cb0b5fe03b75ae",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-GitHub-ref-red.txt": {
+    "original_sha256": "930e8697ed220836ee9ecc82bdfaa299a82cb54dc9dc86f8f26a9e4aae25a356",
+    "published_sha256": "ee0329a1ab32a41be228453525ae5eea29c2b563346320fba7be36ab2b5660f3",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-GitHub-resources-green.txt": {
+    "original_sha256": "0e605849ba0ad1b856ec9edc7ffbcff5f833c3c368803066ffc497a0891fd53c",
+    "published_sha256": "0e605849ba0ad1b856ec9edc7ffbcff5f833c3c368803066ffc497a0891fd53c",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-GitHub-resources-red.txt": {
+    "original_sha256": "4e8a8987c31bfaf345bd64b402dc9704ab7b861dce325c7bd4188822e3a91acd",
+    "published_sha256": "20027da1c286fd647f0267995f2ce068374f25a6a28456f38b0dc4babdde2815",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P10-P12-focused.txt": {
+    "original_sha256": "1259ca4ba3fd5c60ae95c8fb346992f9c61676437adf276ace37bcdf7cc7a972",
+    "published_sha256": "1259ca4ba3fd5c60ae95c8fb346992f9c61676437adf276ace37bcdf7cc7a972",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P10-green.txt": {
+    "original_sha256": "c97e81b27297a844853aaf3621939e0da3e3a9da3bfb2428c36b4a6c1ec705d3",
+    "published_sha256": "c97e81b27297a844853aaf3621939e0da3e3a9da3bfb2428c36b4a6c1ec705d3",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P10-noop-green.txt": {
+    "original_sha256": "74dcbb86b6b86d08e146505ef3c3ebf57443dc93b7f3236e6e803fbd151c5069",
+    "published_sha256": "74dcbb86b6b86d08e146505ef3c3ebf57443dc93b7f3236e6e803fbd151c5069",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P10-noop-red.txt": {
+    "original_sha256": "2f1c456d773affb4b003149e5c23c265e0fea7ef49d9086017ac7aab6b89d39f",
+    "published_sha256": "512761c0a103e7dba765f9ffdce44d0030e958c3b870cd1289084a9f7b70a172",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P10-ownership-green.txt": {
+    "original_sha256": "e0d0a49cd531487b5fe00a23b4eda617f612e98efe27d164317d3544e0d0cb95",
+    "published_sha256": "e0d0a49cd531487b5fe00a23b4eda617f612e98efe27d164317d3544e0d0cb95",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P10-ownership-red.txt": {
+    "original_sha256": "4e553a37b117927c6d620843051e117b1dc4d776d99d7a74d3ce9a1a844a1237",
+    "published_sha256": "319167c8180e32650ea4e6a8506251285af08300523c948947d6a1e83b9c6ae3",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P10-red.txt": {
+    "original_sha256": "ea1683e3b7936229aa6f0a560f447d24f7cc3cd5a538581595f406685f7f6a9a",
+    "published_sha256": "0c8c35d21baf69aa16c3d696a23a012beb0956856035f3bc0eacc0e1319a3060",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P11-drift-green.txt": {
+    "original_sha256": "9a1465e88115f8d67e1b84101ae1cea4a0e3c91b892026d1c8b3c793e393e7ec",
+    "published_sha256": "9a1465e88115f8d67e1b84101ae1cea4a0e3c91b892026d1c8b3c793e393e7ec",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P11-drift-red.txt": {
+    "original_sha256": "f7a22f776739f4302fac8a5058f679df285a0bba30fa494ae7b89d1b7c8d220e",
+    "published_sha256": "c2213079df8f3b732dcb2fadf9698b8e9c6f6741d378f89ec16eaf8906c52f6c",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P11-lost-green.txt": {
+    "original_sha256": "2e4549c70a518e15edbd80b45b9c65aef3ea147d6d9dfbeb311551fadae9b9d0",
+    "published_sha256": "2e4549c70a518e15edbd80b45b9c65aef3ea147d6d9dfbeb311551fadae9b9d0",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P11-lost-red.txt": {
+    "original_sha256": "f34710eabfe39dc7282d4a2e23fab40c5b9237bbd8164184b2ec6bb18065e2e4",
+    "published_sha256": "66b97d1ff0b73c6ab3fedae7be8590c93f9527273f2e413ac4c5b92ee123513e",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P12-green.txt": {
+    "original_sha256": "f3d42464fce7cbf2739a0683d7321d8c3cb7d0029e17701e014ef635e53db4d7",
+    "published_sha256": "f3d42464fce7cbf2739a0683d7321d8c3cb7d0029e17701e014ef635e53db4d7",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-P12-red.txt": {
+    "original_sha256": "95b50dd7491137d1261e10d40202e88bcacef2de34be2954f4ff7c9a22461fe1",
+    "published_sha256": "b24f9c6873a255632d76c324c579ee425c6a6e8113762db02d20deb8dc86e92f",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-activation-green.txt": {
+    "original_sha256": "baf696786f3b42ab69a9c259b718e696ea81cf87b544de13027236b9fb9ad0ba",
+    "published_sha256": "baf696786f3b42ab69a9c259b718e696ea81cf87b544de13027236b9fb9ad0ba",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-activation-red.txt": {
+    "original_sha256": "8071b19b18da0893b4aaa933a0f45de6638ad1d9a946d7a70793bcca33f9b2fe",
+    "published_sha256": "8e332481efd8f29e3f338c4059a850f6c36b471c2f71be9fafaaa05cd9c34f1a",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-bootstrap-P1-green.txt": {
+    "original_sha256": "cc1c68fb883e019f36b572187b6bff3ec4c245650294f204e2db9f0852d4cdef",
+    "published_sha256": "cc1c68fb883e019f36b572187b6bff3ec4c245650294f204e2db9f0852d4cdef",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-bootstrap-P1-red.txt": {
+    "original_sha256": "438deab54097ccfa452bc003b9189a58c29faed1b452acb6aa6735dbe43bd88f",
+    "published_sha256": "aa5963dbd28a943feafd117aa0b1274369938abd02f3c033a974f0193266c931",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-bootstrap-pr-green.txt": {
+    "original_sha256": "da970edbfb1a98c9e00b395c378450f16dd4f9c597734735398491b25046802a",
+    "published_sha256": "da970edbfb1a98c9e00b395c378450f16dd4f9c597734735398491b25046802a",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-bootstrap-pr-red.txt": {
+    "original_sha256": "d17a4ca17a66eac630d88118afac747d079a0c36314701771dfa6f630cf7da32",
+    "published_sha256": "2754e2a0dbb138f191d4bde5e9b1f1399b91d5fb44d417a57b6e580f53695395",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-branch-seed-green.txt": {
+    "original_sha256": "ba006b737364887cb842e136c85a8a64ca1064db338bfc4c66b1467eb8818696",
+    "published_sha256": "ba006b737364887cb842e136c85a8a64ca1064db338bfc4c66b1467eb8818696",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-branch-seed-red.txt": {
+    "original_sha256": "35cbd5f59ac826b2f9d5964a632d7e54d334d5ccf7dc7ed54ffe2f1e2dbe453e",
+    "published_sha256": "2271c4c7f231bd6b02f786d1f7913e1fb3253da183135a029850ec7a29798233",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-builder-P2-final-green.txt": {
+    "original_sha256": "49dd6cebdf5ab4789b47f7aedf1768365e70dcb0ca4c5d877a9bb1ef0b92d16f",
+    "published_sha256": "49dd6cebdf5ab4789b47f7aedf1768365e70dcb0ca4c5d877a9bb1ef0b92d16f",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-builder-P2-green.txt": {
+    "original_sha256": "55ebf1482b80e95a547670af58511cf7680a7fcd549f503d50f726667807719e",
+    "published_sha256": "6af041386d7bb97a1eb068b392646d89df762abf96fbe7ac684cc7fdff43be4f",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-closed-context.txt": {
+    "original_sha256": "8cf546a56e84e62b6a2e75ddcb37f9c3de75fc4368a5b329d76fa53dc7c93ff1",
+    "published_sha256": "8cf546a56e84e62b6a2e75ddcb37f9c3de75fc4368a5b329d76fa53dc7c93ff1",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-closeout-green.txt": {
+    "original_sha256": "cf4ab59c574654d45e84e52aae86f22a9f740911bcec4a428072ad6be4a1a313",
+    "published_sha256": "cf4ab59c574654d45e84e52aae86f22a9f740911bcec4a428072ad6be4a1a313",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-closeout-red.txt": {
+    "original_sha256": "e6f2d0ef88140cd78ffc3836d4aa46f9248f25213478fd554a8d43dbcd912a3e",
+    "published_sha256": "7ed37c8862ebf4ba9999aa5b9466ed7e4f2b08f36c6595fee6b402d5058f3c54",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-coalesce-registry-green.txt": {
+    "original_sha256": "2583ebc3d75494cec07c1304aa5f42c45a2729f3774178aff60a163d8fbd362f",
+    "published_sha256": "2583ebc3d75494cec07c1304aa5f42c45a2729f3774178aff60a163d8fbd362f",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-coalesce-registry-red.txt": {
+    "original_sha256": "fc58663b780962b0bb866cd4ab38cc62f76abc96af5e000be3f2ac6d7a1ff4fe",
+    "published_sha256": "ea264a3855371c730e5483bb44c2c3f021a92cff4141c2cd1b1e8f2b8e0f4c55",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-commit-readback-green.txt": {
+    "original_sha256": "d05c2beff6136d97ca7137a38ed59191bd194483ddfc3d874c6ab2b156ce8d62",
+    "published_sha256": "d05c2beff6136d97ca7137a38ed59191bd194483ddfc3d874c6ab2b156ce8d62",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-commit-readback-red.txt": {
+    "original_sha256": "7e3364d54723d9230f190ddf205fc21656f8017dee8a8c8855fcfb5c36e6e539",
+    "published_sha256": "a5499522b0a6b074e5c06c565f48dfc99f73a92ba4c9bd91f4caa151cd2a6aa3",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-conflict-report-green.txt": {
+    "original_sha256": "25e57cf8834b92fda4155def8064166e3da7affe6a18d2d24514ee3e1a1c2143",
+    "published_sha256": "25e57cf8834b92fda4155def8064166e3da7affe6a18d2d24514ee3e1a1c2143",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-conflict-report-red.txt": {
+    "original_sha256": "4df757e935f61b8e437e1c13197d0ca4e6c2f787286fb438ecb5eceef541ab64",
+    "published_sha256": "f440aa022784b51251dadadcd675bb7dd9fb52d21bf0314cb82d4dc471b198a1",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-current-focused.txt": {
+    "original_sha256": "9125ff5a8ee6f5eac3f2c85302f0239f843cca9550bf21fc6d17b95c4d349baa",
+    "published_sha256": "9125ff5a8ee6f5eac3f2c85302f0239f843cca9550bf21fc6d17b95c4d349baa",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-dispatch-ref-green.txt": {
+    "original_sha256": "cc8ce23a471b7a3ddc958bfaf579c4acb67b16a6604d02a983c9719bee7942f1",
+    "published_sha256": "cc8ce23a471b7a3ddc958bfaf579c4acb67b16a6604d02a983c9719bee7942f1",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-dispatch-ref-red.txt": {
+    "original_sha256": "ebe6cdbc97b087193b33d6b94427df82c490726949825dd278dc0cb9a7c0534d",
+    "published_sha256": "15203004e2e4f4d9e6a4c239583eaccadc0edb259a3d3ffc60641601bdb59c8f",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-fixed-native-green.txt": {
+    "original_sha256": "3ec9eb6d92b0838dc5b6f0930c29200c4637466dafd422a5e8a73eba070b9034",
+    "published_sha256": "3ec9eb6d92b0838dc5b6f0930c29200c4637466dafd422a5e8a73eba070b9034",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-fixed-native-red.txt": {
+    "original_sha256": "020acdbe57e2534e5ddd52b1437aa08b456192bb83c9477e3d61db213e621f03",
+    "published_sha256": "abdb0546c4d93d6edb38d2ec9e212b076482003268c7fe48e40891d02d247555",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-focused-after-cli.txt": {
+    "original_sha256": "5cdf4356bfcdbfaacfe0d8f7fb9aa9ce14c0345f787c1e5b4fe1df6f98c8a19b",
+    "published_sha256": "5cdf4356bfcdbfaacfe0d8f7fb9aa9ce14c0345f787c1e5b4fe1df6f98c8a19b",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-journal-green.txt": {
+    "original_sha256": "d808fb22b94fa2af417d17ca496d8e7f4c3e29279b15d6b83814844786f9ef9a",
+    "published_sha256": "d808fb22b94fa2af417d17ca496d8e7f4c3e29279b15d6b83814844786f9ef9a",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-journal-red.txt": {
+    "original_sha256": "ea57d07887960ea292d5dee5e6a089677b27e1c776fe8e0fe733c90952c4529f",
+    "published_sha256": "67d12bc594204499a2308926c9018f25dfa766c1d2ad6376bfc86fd710f76ab2",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-local-preparation-green.txt": {
+    "original_sha256": "c2a950005974d8e199bdd8300318f40d5ddb0b8b480896062095962a75278699",
+    "published_sha256": "c2a950005974d8e199bdd8300318f40d5ddb0b8b480896062095962a75278699",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-local-preparation-red.txt": {
+    "original_sha256": "334a2883043010b1d5e4ff8737835c16735f72848e1b7bd7bbc9c33b39964c5e",
+    "published_sha256": "dd1e9f0352cdbe456591496ee5e399d42314336aa441e6c4abde54e28872a5b1",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-pull-drift-green.txt": {
+    "original_sha256": "c225a10805aeb11ed40f36f73eb473ba5be8956d7cfe4275055409571de8d6be",
+    "published_sha256": "c225a10805aeb11ed40f36f73eb473ba5be8956d7cfe4275055409571de8d6be",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-pull-drift-red.txt": {
+    "original_sha256": "25130f99ad077b18ffaa132c5513ee6cd20f29f7e1da3080bb7a4fcd842e0cae",
+    "published_sha256": "42e3c1c3c06c680f1161bde3c0b41265473ecaf1d14e5728af26308948dbce52",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-real-conflict-green.txt": {
+    "original_sha256": "50c5d43bd83d577d1608190379e8c8f77ed57f00c0502638db697084f3f8c7c6",
+    "published_sha256": "50c5d43bd83d577d1608190379e8c8f77ed57f00c0502638db697084f3f8c7c6",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-real-conflict-red.txt": {
+    "original_sha256": "6ec768e0a9201c51af713999b515ba95dde0e3783fde84cf175988e884f9bba1",
+    "published_sha256": "6c0f8c73d75a62fc4cf3c99dbfb3a7a8c38d4b6d82cf6790ef1a5c47191f1fd5",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-token-boundary-green.txt": {
+    "original_sha256": "38179fc7c67a9f90c79d6d577ab2c3da1bb65f9d5131b10a7c41ff8c4070742e",
+    "published_sha256": "38179fc7c67a9f90c79d6d577ab2c3da1bb65f9d5131b10a7c41ff8c4070742e",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-token-boundary-red.txt": {
+    "original_sha256": "dc8f617b760512f9925098f8b29f9fda124485d06a8ca98bef32feeda0f7fdc1",
+    "published_sha256": "0abf22372106182c116ff2260665dc4bd9b5dad421a581a9496dd4bc61f8e69d",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-transport-green.txt": {
+    "original_sha256": "1194915d04f779dab07701308bca99883dc09f5a0498960ddcafbaa7e5197503",
+    "published_sha256": "1194915d04f779dab07701308bca99883dc09f5a0498960ddcafbaa7e5197503",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-transport-red.txt": {
+    "original_sha256": "1ec320122e171b4adad7ec04261500fdcfa31ee838fd48842378ad93d6b0158a",
+    "published_sha256": "7b9d308bbe615f37c7fd6d79d3438ddc5dcd1603acf59f9a43ea7cf8b1b9597e",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-upload-green.txt": {
+    "original_sha256": "11e185631518780b904001c90e3ad5c248694704bbcfb7bcf8f78b0742778780",
+    "published_sha256": "11e185631518780b904001c90e3ad5c248694704bbcfb7bcf8f78b0742778780",
+    "observed_result": "pass",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  },
+  "T16-upload-red.txt": {
+    "original_sha256": "32073680b6fc2596ea1dc5eec4e95eb4a9f30a8395589b2220ea63cc1dae545e",
+    "published_sha256": "9ee65d87eee615da4b79f981d62c1496bca37afeacdb42c9b7231191bbca755d",
+    "observed_result": "failed attempt",
+    "projection": "Named checkout label only; original raw retained outside Git"
+  }
+}

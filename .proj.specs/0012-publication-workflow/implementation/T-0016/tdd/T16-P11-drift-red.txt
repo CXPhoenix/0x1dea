@@ -1,0 +1,22 @@
+test_contained_main_noop_does_not_create_branch_or_pull (test_remote_sync.RemoteSyncTests.test_contained_main_noop_does_not_create_branch_or_pull) ... ok
+test_drift_coalesces_latest_pins_and_is_bounded (test_remote_sync.RemoteSyncTests.test_drift_coalesces_latest_pins_and_is_bounded) ... FAIL
+test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) ... ok
+test_repeat_event_updates_at_most_one_owned_pull (test_remote_sync.RemoteSyncTests.test_repeat_event_updates_at_most_one_owned_pull) ... ok
+test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) ... ok
+
+======================================================================
+FAIL: test_drift_coalesces_latest_pins_and_is_bounded (test_remote_sync.RemoteSyncTests.test_drift_coalesces_latest_pins_and_is_bounded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 102, in test_drift_coalesces_latest_pins_and_is_bounded
+    self.assertEqual(result['status'], 'stale')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'stale'
+- ready
++ stale
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.047s
+
+FAILED (failures=1)
