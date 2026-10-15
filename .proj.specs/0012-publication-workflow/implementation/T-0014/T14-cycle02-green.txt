@@ -1,0 +1,7 @@
+test_explicit_v2_accepts_registered_clean_A_already_previewed_and_v1_still_rejects (article_publication.test_v2.V2Tests.test_explicit_v2_accepts_registered_clean_A_already_previewed_and_v1_still_rejects) ... ok
+test_source_with_staging_integration_ancestry_is_rejected_before_export (article_publication.test_v2.V2Tests.test_source_with_staging_integration_ancestry_is_rejected_before_export) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.231s
+
+OK
