@@ -263,6 +263,282 @@
       "mode": "100644",
       "sha256": "5fd3a16ebee2367172b3daf87b9ebdeecf17c220e5467b10c5a837cac371b72a"
     },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/README.md": {
+      "mode": "100644",
+      "sha256": "725f117823a860d40a4e4806aadaed1ec6a767667905e3936e31548d4aeae4c1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-alias-delete-regression.txt": {
+      "mode": "100644",
+      "sha256": "dc41781bc5cdbdf3e96ad40312ab7f3bfdcfc45e02ba4c0dae3296d04dcc41b3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-build.txt": {
+      "mode": "100644",
+      "sha256": "e4491ab9aa72feffa3868465c7d56e034f358c66604f3a043e0d6cca30ce53a2"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-closed-final.txt": {
+      "mode": "100644",
+      "sha256": "b86163512c28fc484d92ee510cc17099c70e64229f877c23bd80daac2743dfcb"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle01-green.txt": {
+      "mode": "100644",
+      "sha256": "4c9f5efdb84f6a145bacdbaa56b39d8c3aafd9fa7c6107593d8ecb371bc10959"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle01-red.txt": {
+      "mode": "100644",
+      "sha256": "56b7a582a43237736f58c566f7bfa4c5991ab29f94fa649399a25ad38ee6dfa2"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle02-green.txt": {
+      "mode": "100644",
+      "sha256": "47fac9fc2f7b1362825e9c56d3bff04f03e0edf99ab86395a85d2bc177804764"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle02-red.txt": {
+      "mode": "100644",
+      "sha256": "90cae465120e56be41af5097ec927c9e2eff41dab4795ebb474153a0354876f8"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle03-green.txt": {
+      "mode": "100644",
+      "sha256": "4a685464d5c038b61cfd4105a654bae604d0abcdf1625fdc54e8cde97b36ffb0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle03-red.txt": {
+      "mode": "100644",
+      "sha256": "dda86c9ee8f2c99478fff6f70ad1f94cca4004706f6334069d83cb70c404ae86"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle04-green.txt": {
+      "mode": "100644",
+      "sha256": "a54eff1e96b381efe0f990ec3a98ac252ca92faa1c0f7464530644681f25c38f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle04-red.txt": {
+      "mode": "100644",
+      "sha256": "0d557d5c9ffb4d25a0b0105876d0e94215fc84611d997eec6ed3e009d2402288"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle05-green.txt": {
+      "mode": "100644",
+      "sha256": "f1fd30b751805d0e4c9a6a437602f5b061a1bded6dfe59de814a38870b072fff"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle05-red.txt": {
+      "mode": "100644",
+      "sha256": "06b8875ccbc8923fe543f12ee404af70a3cfcbbc9f821814cef4b8b0ff15b6db"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle06-green.txt": {
+      "mode": "100644",
+      "sha256": "8ec32aef152e55611d8ca30a23c7537219f43931d5d2e97b1b9eb94f8578c65e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle06-red.txt": {
+      "mode": "100644",
+      "sha256": "24550cfe92d4736db1bb1ff0926ead89578d40e1e0241e1d6950b6bc1ba0c7d9"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle07-green.txt": {
+      "mode": "100644",
+      "sha256": "577e3545366186e002081e96211257aed1994742507e1b64fb545e1a58eee7db"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle07-red.txt": {
+      "mode": "100644",
+      "sha256": "ee3cba7638e11363e77af243cf6a5e83c3b22a4943dbe361bc4db47963f677d3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle08-green.txt": {
+      "mode": "100644",
+      "sha256": "f6bb038a165647ac27e73d99019e5619b34bee6393e6a4f418bf5590c493f45d"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle08-red.txt": {
+      "mode": "100644",
+      "sha256": "2b8212fb69878158545eb3dbf32a9d1b437a0cd9ac58cbd21df10f5b71848d9c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle09-green.txt": {
+      "mode": "100644",
+      "sha256": "d80428bd3e3ac9599d51354bc7db498cd9220113e5c47fba3fa67cbd00fe887e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle09-red.txt": {
+      "mode": "100644",
+      "sha256": "646adc49bf3ea5e51f23081e8e193a211e93a16b8d425e80e382771b0b9debbe"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle10-green.txt": {
+      "mode": "100644",
+      "sha256": "a8b3f68ef1ad199175854a59fdb7ebff38a700f3548c28ea119902e21fa35a9f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle10-red.txt": {
+      "mode": "100644",
+      "sha256": "984c17bf8ff054c2ff31eab3209204c52163fb29ffcc901d9d0f60119d4ed11a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle11-green.txt": {
+      "mode": "100644",
+      "sha256": "55644f11b6942b380bdc3db097fa3c918f56b28897ca5cec18a87a979c16985a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle11-red.txt": {
+      "mode": "100644",
+      "sha256": "052104328fd76db4213474cf08c49cd16cf1aaa61b3bf2e3c029d87ac7c083b3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle12-green.txt": {
+      "mode": "100644",
+      "sha256": "d69e598dbfb0452cde6bb20c05b76a8b7a9aeb75efa95bf9625bd6dba04255c7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle12-red.txt": {
+      "mode": "100644",
+      "sha256": "c94580b46c124b30a1f9a6c638defa2fcc8f121351b8b5d3a12e382c2d81fd76"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle13-green.txt": {
+      "mode": "100644",
+      "sha256": "f8fa0b365a76bcca5f50670e64cf04cc2988db9562fa8eaf6773bb90fdd61cdf"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle13-red.txt": {
+      "mode": "100644",
+      "sha256": "8ae4702e21aea180e47bea31fd58c260a005499ceb133ad8e5d28378df4d2e06"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle14-green.txt": {
+      "mode": "100644",
+      "sha256": "13908fe4c0582b5b51effe2bc9f77b38e912983e54c2f4285c130bb333c02514"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle14-red.txt": {
+      "mode": "100644",
+      "sha256": "6ba6797b4a728c5dd24981a2996184cfed9ae8ebbaab9eb450b927213880dd81"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle15-green.txt": {
+      "mode": "100644",
+      "sha256": "ade4aa28919f33c4cc40e663f9bef698125ec698d1fd5e1d174c178510651165"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle15-red.txt": {
+      "mode": "100644",
+      "sha256": "8d5a646e349a840ccef73b293fadb6eece63a063052ecdb5e6e604f610452d54"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle16-green.txt": {
+      "mode": "100644",
+      "sha256": "2cff0d812b0e398d9e6ac4bb3e391571982c01425c058aeea95ad3dbd0a9daa0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle16-red.txt": {
+      "mode": "100644",
+      "sha256": "9a5c73f014a4843a84b82c9b72d3c280e193c1102600fb790f6f7e5e5212e258"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle17-green.txt": {
+      "mode": "100644",
+      "sha256": "0bc88d7dadc9444a1c79deb1834f113cea4217943b5b2c8852edeff0822f572e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle17-red.txt": {
+      "mode": "100644",
+      "sha256": "e03eb259c59c6ef164dce3f144bffcc310078549aa2f7f698fdbd8ba9f97670d"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle18-green-attempt1.txt": {
+      "mode": "100644",
+      "sha256": "2348a6af5ae7c240f815742f9ec9b6195f40e1b4217957fb60f45ab327df63e9"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle18-green-attempt2.txt": {
+      "mode": "100644",
+      "sha256": "674a34668ea1e479c58d45ec8ed503e81c25f7b290fdbe887328ce428a290c9f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-cycle18-red.txt": {
+      "mode": "100644",
+      "sha256": "b0cd84cb06caf97fa37c7bd7fa505ca32a141b3ae75b99eeed98fc3bcac962f6"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-focused-reviewed.txt": {
+      "mode": "100644",
+      "sha256": "e679cf7c5e9f72ae633f64e58dc63e405bcfcf0e4ad7690d073cbaafd9cd1cc9"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-git-version.txt": {
+      "mode": "100644",
+      "sha256": "fff575d3fa43a92d932e4eb8bc03394140ce40699f9c8a97c3126016a244dfb8"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-lint.txt": {
+      "mode": "100644",
+      "sha256": "6ef74c0fe18b9d13d4338048dc009e4725db82f757bfd52e13e5874c3fd55fd3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-materializer.txt": {
+      "mode": "100644",
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-native-adoption.json": {
+      "mode": "100644",
+      "sha256": "ee2209fc6e52d18b5b43b0c502fcc1f73fc580c65aeaf1b5ea20ed3d8f3b1301"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-native-current-final.json": {
+      "mode": "100644",
+      "sha256": "b9f81bb941ad83f825a49e6b8528af28624621abf53a6ae817c80305b1de7384"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-review-alias-green.txt": {
+      "mode": "100644",
+      "sha256": "a4b49d5849f31a411f77c95af355f577df94c7d6824903edc5eabedc87b1abe1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-review-alias-red.txt": {
+      "mode": "100644",
+      "sha256": "d8224478dd75b0f7fd414cb04b55050e2c99476c9b3556d838c2c790a12826c4"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-review-empty-ancestor-green.txt": {
+      "mode": "100644",
+      "sha256": "6c11edfb5ff25d38c4d23383c2606e79f1cf6ff0ea0bd4aee478a75e4eec633f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-review-empty-ancestor-red.txt": {
+      "mode": "100644",
+      "sha256": "cf67f2887aa1aa521687d08b3f903d38c2830798fc2027e355794dd7b7e83a4c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-review-promisor-green.txt": {
+      "mode": "100644",
+      "sha256": "2c269a006e17e302bad845a601be24b719e4a4f62ca1c4f1fee4bbd4969ba425"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-review-promisor-red.txt": {
+      "mode": "100644",
+      "sha256": "e7f4eb8148a319f613e9e39643af630e82e5870d69d9c41fdf2a4b2001802fd8"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-runner-final.txt": {
+      "mode": "100644",
+      "sha256": "c8d0f345ce449e8e60b3231a0a8e057314f11165f4be41e31b76e812b97f1cba"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-security-regression.txt": {
+      "mode": "100644",
+      "sha256": "96f6475f0296052ccacf6cef4e874f534a8f3cc1c992b7fdccd8471a412c688e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-short-revision-regression.txt": {
+      "mode": "100644",
+      "sha256": "6b594ef1e209444bfde25969a10e23428452622ad7ffa9c4bb50dc5bc5012c5f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-structure.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/T14-vitest.txt": {
+      "mode": "100644",
+      "sha256": "e010414c872b782c897ee55df044f7d96f9a3de36fd638699c93b5dd0373f9af"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/actual-build-receipt.json": {
+      "mode": "100644",
+      "sha256": "34dae3d191b4377397cf8727efdde3ed10b3263e0cb0fcbfa2cd085f16234647"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/build-stderr.txt": {
+      "mode": "100644",
+      "sha256": "fc7c6405aac8fbf4c47ba4c22feb0b41275820b184b493e71c8b989328869cf8"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/build-stdout.txt": {
+      "mode": "100644",
+      "sha256": "b26298a5983f7efc28f8ac2f611e43ed4e4a79258b3a214c81070b848c3bc508"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/coverage.md": {
+      "mode": "100644",
+      "sha256": "920083b5b1a7a03d8fd4f1a8a5f3a90d1bec40a49857df96ca4bfb0bba51a4d7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/delivery-T14-v2.txt": {
+      "mode": "100644",
+      "sha256": "5fa09d7d65f0f327e83f9b9f987d368ebe4b33981edf9fda550bc6657057eb80"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/local-ready.json": {
+      "mode": "100644",
+      "sha256": "6ba6cae7979953aaefefbe78c2d4ba06de2504e5e1f1a86bb84eb2d4de34a8a9"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/python-current-final.txt": {
+      "mode": "100644",
+      "sha256": "74ba4b225e5eeebd1eb838c7e338ca8318cc3e0aee16585bb5fb7e5faf45a7d0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/review-capture.json": {
+      "mode": "100644",
+      "sha256": "4b0c2389afc92583615454f2b1256a487ad77e23a3f7dcd87bad91c375afe6f4"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/shared-review-git-context.json": {
+      "mode": "100644",
+      "sha256": "c03805f0d6082f642ba065233d8a71018cc1e453b64c429b24459072e46bb0f1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/shared-review-manifest.json": {
+      "mode": "100644",
+      "sha256": "2f121c60bb09503579c244175ba64ab97630debf546deaf6cb448235a3ebe9d7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/source.patch": {
+      "mode": "100644",
+      "sha256": "0ccc5653182a440c1d177ab15d2cb460c9328266a298619ec58bc43c00db334e"
+    },
     ".proj.specs/0012-publication-workflow/review/capture-context.json": {
       "mode": "100644",
       "sha256": "ff911e690ae38b6e9deba8a294b3e3249c65acfc0caef47378ba34a3c6c9507e"
@@ -286,6 +562,10 @@
     ".proj.specs/0012-publication-workflow/review/code-T-0013-landing.md": {
       "mode": "100644",
       "sha256": "69760a79954f58629954a5c976b8474fada27bfbc5dcf6a065f4b7b2d513f83a"
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0014.md": {
+      "mode": "100644",
+      "sha256": "1d8c01fafdeae0bb312f82795102ce755b70939b36d95f3f6dc09a5d33c3a7a5"
     },
     ".proj.specs/0012-publication-workflow/review/document-invariants.json": {
       "mode": "100644",
@@ -350,6 +630,10 @@
     ".proj.specs/0012-publication-workflow/review/security-T-0013.md": {
       "mode": "100644",
       "sha256": "9989049cd0a523556839684a4e4e58637b22b99c2b93eaae286b44c40eedc606"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0014.md": {
+      "mode": "100644",
+      "sha256": "1b96e5c5bf83296725fc4d084d4b823f5e501f732e6e260da1e1d3fc7f70a07d"
     },
     ".proj.specs/0012-publication-workflow/review/skill-evaluation/inputs-manifest.json": {
       "mode": "100644",
@@ -653,7 +937,7 @@
     },
     ".proj.tickets/0012-publication-workflow/T-0014-v2-selected-candidate.md": {
       "mode": "100644",
-      "sha256": "51374001ee260def6cbedfa76f14d6ef005ad66ec017c897bb8f72ab978c8e0d"
+      "sha256": "9d3dc9e80bcf1519da051087759ced412f74eec7593fc104911ca3fddbde4ae6"
     },
     ".proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md": {
       "mode": "100644",
@@ -675,6 +959,14 @@
       "mode": "100644",
       "sha256": "a0d9ba031d6e9f26db766c969aad5daa87b6b14b5dc9d1b329653c0dc8641237"
     },
+    "docs/article-publication-v2.md": {
+      "mode": "100644",
+      "sha256": "97fc98eafccd9696a993b183a635dc2a594b7e53e13f9b4176035ca1ac610390"
+    },
+    "docs/article-publication-v2.schema.json": {
+      "mode": "100644",
+      "sha256": "6fe19448bdea5145e9704969d308622bf3688cc3b7f863e4f367c14d99329e83"
+    },
     "docs/publication-baseline.md": {
       "mode": "100644",
       "sha256": "eb4c484434863ed1d044d2cc23022e639f9d9043f4d1d33a62d83466f0f7bedc"
@@ -691,6 +983,10 @@
       "mode": "100644",
       "sha256": "86b6f7ea72a3b0bc17d303db471a94c104860a810c73014ef16e152872cad3d2"
     },
+    "scripts/article-publication-v2.py": {
+      "mode": "100644",
+      "sha256": "8ef565cddd4ee8b06032f51e37bb2e8466eca7c77ac8ce9f11c014f79dabdce3"
+    },
     "scripts/harness_reconciliation.py": {
       "mode": "100644",
       "sha256": "79870a068da61d5c5fee584a86f39fca3092f45b77f57e4e8a3f5be1f0d90973"
@@ -698,6 +994,10 @@
     "scripts/publication-baseline.py": {
       "mode": "100644",
       "sha256": "9202999cb7cad478f611489cba9962cbe9dc11992fb50b94c793cbac63a56a18"
+    },
+    "scripts/publication_build_v2.py": {
+      "mode": "100644",
+      "sha256": "a833995d0d4d1deeb16cfbf23b4f4487030ef128c61ce7804cbbd7217c3452e1"
     },
     "scripts/publication_current.py": {
       "mode": "100644",
@@ -735,9 +1035,105 @@
       "mode": "100644",
       "sha256": "4cb9c25c00d45af3d216de872244979157b27189909cd2d367ec657382748a15"
     },
+    "tests/article_publication/test_v2.py": {
+      "mode": "100644",
+      "sha256": "9763b93f1a886161192de0f9f52c72df28bb8c239df200fa9119b3dee600e174"
+    },
     "tests/harness_adoption/__init__.py": {
       "mode": "100644",
       "sha256": "a0a9cab31657f958cfd8762a4082f4233aa180dd24d14d1f29623e9d01676cc5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/fixed-code-review-scope.json": {
+      "mode": "100644",
+      "sha256": "06de5a6b3fd4da7c4d70c60616a37191f3264c3e426878fe67518f36c81a4681"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/materializer.txt": {
+      "mode": "100644",
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/unit.txt": {
+      "mode": "100644",
+      "sha256": "16e2286bd9a2011a251286a5aab4e76e72156fbbb5291c02b07521c9ccf94169"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/pre-fix-python.txt": {
+      "mode": "100644",
+      "sha256": "ed58cd4faebb15417de1dfc8f91a9a2ae09233359f8b852b6b634f07aa75d161"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/blob-green.txt": {
+      "mode": "100644",
+      "sha256": "be1fb786c84e5c0a19f791692f96ad30a82ebe4b345aca6401c6bc21201f5661"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/initial-review-scope.json": {
+      "mode": "100644",
+      "sha256": "acaf1b7d1df1932e21fae7259af2384231fc5d08f2178fa8fa5a76bf33f7e3ec"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/build-stdout.txt": {
+      "mode": "100644",
+      "sha256": "0f8234c83b1ed807454cebcb4c212f69241ca1d3dfd51e92e1ff08e978a2b8c5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/preservation.json": {
+      "mode": "100644",
+      "sha256": "b5fe2cf136eaa20cb5a005ccc55c085f7815f1adfc691a9698db2ac45a4af3fe"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/native-preflight.json": {
+      "mode": "100644",
+      "sha256": "d8709ed4cb7bc8792072c62d86105f8cfbfbbeb364153d8cb301ec6e76410837"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/discovery.json": {
+      "mode": "100644",
+      "sha256": "6dff5319177b7eb2a584659925a2d04d87eded31cb19a0f046080d431436817f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/blob-reproduction.json": {
+      "mode": "100644",
+      "sha256": "ef399cf51e510edc08851674eb57ea7abd02d0e50146f3b85c9f0009d270e0a5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/blob-verify.json": {
+      "mode": "100644",
+      "sha256": "fdcb7c7d3ad18fc4cc16da07c44449adb0f98f214295696570d8438130a4d1db"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/README.md": {
+      "mode": "100644",
+      "sha256": "382569efb8a87571ccc3ded6dcced26f68f88b51cc5043894692f3f30acad2a7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/actual-build-receipt.json": {
+      "mode": "100644",
+      "sha256": "0b07355fa2f2046e7d8b61bbbb16c2a5afe7c49dd7ec5cc4bc917b5c5e6c07c1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/python-current.txt": {
+      "mode": "100644",
+      "sha256": "cc2a30b3a01ea3635029ed0788f3ba6528ca2ce5f9c751346d8282d0832d141e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/blob-red.txt": {
+      "mode": "100644",
+      "sha256": "f9e35c8097544cd4e4ecee48434ee30365db9c36efa92ad5405c530547848458"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/lint.txt": {
+      "mode": "100644",
+      "sha256": "6ef74c0fe18b9d13d4338048dc009e4725db82f757bfd52e13e5874c3fd55fd3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/structure.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/build-stderr.txt": {
+      "mode": "100644",
+      "sha256": "fc7c6405aac8fbf4c47ba4c22feb0b41275820b184b493e71c8b989328869cf8"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/website-build.txt": {
+      "mode": "100644",
+      "sha256": "f9f001d63c75c36b3fb1e874df6728d8f187d64992996d18b229e7a83ebd46a0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/local-ready.json": {
+      "mode": "100644",
+      "sha256": "569ca6e7d94c9a34cc62c2d98b94b6642a42f4e65d24a6d588e51dc676463a05"
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0014-main-refresh.md": {
+      "mode": "100644",
+      "sha256": "884e48142875b35f1a9411a4c1ece42b9c089ec1a032a923efc8611e295b0f41"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0014-main-refresh.md": {
+      "mode": "100644",
+      "sha256": "df7b4b384821e3a4407d0fd4e9d1ea579e77c5fa67618d1f712b0945b5d6d301"
     }
   }
 }

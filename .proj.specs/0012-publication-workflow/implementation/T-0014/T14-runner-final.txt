@@ -1,0 +1,6 @@
+test_changed_historical_fixture_file_is_rejected_before_loading_tests (article_publication.test_current_runner.CurrentRunnerTests.test_changed_historical_fixture_file_is_rejected_before_loading_tests) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.087s
+
+OK

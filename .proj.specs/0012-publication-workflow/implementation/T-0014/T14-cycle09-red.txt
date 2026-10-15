@@ -1,0 +1,18 @@
+test_reviewed_legacy_extraction_admits_only_bound_original_and_new_bytes (article_publication.test_v2.V2Tests.test_reviewed_legacy_extraction_admits_only_bound_original_and_new_bytes) ... FAIL
+
+======================================================================
+FAIL: test_reviewed_legacy_extraction_admits_only_bound_original_and_new_bytes (article_publication.test_v2.V2Tests.test_reviewed_legacy_extraction_admits_only_bound_original_and_new_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 133, in test_reviewed_legacy_extraction_admits_only_bound_original_and_new_bytes
+    report = self.ok(self.v2('prepare', self.root / 'approved-extraction'))
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 59, in ok
+    self.assertEqual(r.returncode,0,r.stdout+r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : ARTICLE-PUBLICATION-V2: legacy migration requires explicit owner-reviewed original/new extraction record
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.709s
+
+FAILED (failures=1)

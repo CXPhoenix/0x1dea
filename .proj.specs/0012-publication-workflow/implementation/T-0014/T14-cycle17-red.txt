@@ -1,0 +1,15 @@
+test_verify_checks_full_receipt_blob_mode_and_literal_aliases (article_publication.test_v2.V2Tests.test_verify_checks_full_receipt_blob_mode_and_literal_aliases) ... FAIL
+
+======================================================================
+FAIL: test_verify_checks_full_receipt_blob_mode_and_literal_aliases (article_publication.test_v2.V2Tests.test_verify_checks_full_receipt_blob_mode_and_literal_aliases)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 271, in test_verify_checks_full_receipt_blob_mode_and_literal_aliases
+    self.assertTrue((bundle / 'candidate/skills/phoenix-writing/reference').is_symlink())
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 1.704s
+
+FAILED (failures=1)

@@ -1,0 +1,39 @@
+{
+  "root": "/private/tmp/0x1dea-T0014",
+  "base": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "HEAD": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "merge_base": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "branch": "tickets/T-0014/v2-selected-candidate",
+  "layers": {
+    "committed": "empty main-based WIP",
+    "untracked": [
+      "scripts/article-publication-v2.py",
+      "scripts/publication_build_v2.py",
+      "tests/article_publication/test_v2.py",
+      "docs/article-publication-v2.md",
+      "docs/article-publication-v2.schema.json"
+    ]
+  },
+  "excluded": "T13 metadata already independently reviewed; finite evidence map and shared current guard will be independently validated/reviewed after worker repair; no source articles or deployment settings changed",
+  "files": {
+    "scripts/article-publication-v2.py": "7227439038030fa53fe24a695afe00259954f3457819781c17d2d07161f8f4f6",
+    "scripts/publication_build_v2.py": "a833995d0d4d1deeb16cfbf23b4f4487030ef128c61ce7804cbbd7217c3452e1",
+    "tests/article_publication/test_v2.py": "773ac893ef3af353694659bfb487364433c4dd5253814a774872644ca4a33cf6",
+    "docs/article-publication-v2.md": "b6249f8a8729c9c9e4741f147baea45a3f5015d36293b960e843f344be691a0f",
+    "docs/article-publication-v2.schema.json": "6fe19448bdea5145e9704969d308622bf3688cc3b7f863e4f367c14d99329e83",
+    "AGENTS.md": "77ad12cb3275f1ac5936bc9ae0bad4dfefc048d819e0274d38db4bf1d98bbf53",
+    "docs/agents/runtime.md": "4a862c86b8a84581a8ec26eb058c626bc4b36181a6cfa7baaf5482333b079fcf",
+    "docs/agents/workflow.md": "f827f005b59cccf7416e5ebb8c64ecba689d99047cb3b90b05ed0541294f98a1",
+    "docs/agents/review.md": "59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e",
+    ".agents/skills/code-review/references/smell-baseline.md": "e30141db30d50f41113abcf29baec544fabaf4f743dc69f0a1943bccae2bd213",
+    ".agents/skills/security-review/references/upstream-security-review.md": "dd1d451f909dbb8798f4a4de010c35e7dd9152f02bb2f7988442cdd138f29e39",
+    ".proj.specs/0012-publication-workflow/spec.en.md": "ab7b8b6e83e92b18c52a04b046888cf399f29065d7caa891a77d6241adf1cb8a",
+    ".proj.specs/0012-publication-workflow/traceability.md": "a1f38ae83f41774ab254ef74c5e14316745a2281a55e384b691ca1ce058be75a",
+    ".proj.specs/0012-publication-workflow/test-plan.md": "836dd8e284813af5ca66f3f7281eb59b48d8fbf6a6b5775535c1fed6c307576c",
+    ".proj.specs/0012-publication-workflow/approval.md": "add47a55143e99d80578f53ce8a2306a9ab35d246bad87c018e95e1d3f6aae95",
+    ".proj.tickets/0012-publication-workflow/T-0014-v2-selected-candidate.md": "d7230a5851b80949e40799ec7fea0594d1e72d34a0690dd75395dd21f5489233",
+    "scripts/article-publication.py": "69ad7a645f06bb4de3186f698e356bbd09caedc77ba45b597b4b5833317c6a71"
+  },
+  "previous_packet": "/private/tmp/T14-code-review",
+  "scope": "Full current contents of same five v2 files; resolves StandardsP2 and SpecP1x2/SecurityconfirmedHIGH. Sharedguard independently reviewed separately."
+}

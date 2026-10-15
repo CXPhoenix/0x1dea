@@ -1,0 +1,18 @@
+test_explicit_v2_accepts_registered_clean_A_already_previewed_and_v1_still_rejects (article_publication.test_v2.V2Tests.test_explicit_v2_accepts_registered_clean_A_already_previewed_and_v1_still_rejects) ... FAIL
+
+======================================================================
+FAIL: test_explicit_v2_accepts_registered_clean_A_already_previewed_and_v1_still_rejects (article_publication.test_v2.V2Tests.test_explicit_v2_accepts_registered_clean_A_already_previewed_and_v1_still_rejects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 57, in test_explicit_v2_accepts_registered_clean_A_already_previewed_and_v1_still_rejects
+    report = self.ok(self.v2('prepare', prepared))
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 59, in ok
+    self.assertEqual(r.returncode,0,r.stdout+r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/private/tmp/0x1dea-T0014/scripts/article-publication-v2.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.524s
+
+FAILED (failures=1)

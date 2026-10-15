@@ -1,0 +1,18 @@
+test_isolated_real_build_and_separate_evidence_required_for_readiness (article_publication.test_v2.V2Tests.test_isolated_real_build_and_separate_evidence_required_for_readiness) ... FAIL
+
+======================================================================
+FAIL: test_isolated_real_build_and_separate_evidence_required_for_readiness (article_publication.test_v2.V2Tests.test_isolated_real_build_and_separate_evidence_required_for_readiness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 313, in test_isolated_real_build_and_separate_evidence_required_for_readiness
+    built = self.ok(self.v2('build', bundle, '--runtime', str(runtime_path), '--runtime-sha256', hashlib.sha256(raw).hexdigest(), '--build-output', str(build)))
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 59, in ok
+    self.assertEqual(r.returncode,0,r.stdout+r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : ARTICLE-PUBLICATION-V2: [Errno 1] Operation not permitted
+
+
+----------------------------------------------------------------------
+Ran 1 test in 5.215s
+
+FAILED (failures=1)
