@@ -1,0 +1,7 @@
+test_actual_dual_target_closeout_is_accepted (test_landed_closeout.LandedCloseoutTests.test_actual_dual_target_closeout_is_accepted) ... ok
+test_trusted_main_validates_staging_without_executing_candidate_code (test_landed_closeout.LandedCloseoutTests.test_trusted_main_validates_staging_without_executing_candidate_code) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 26.243s
+
+OK

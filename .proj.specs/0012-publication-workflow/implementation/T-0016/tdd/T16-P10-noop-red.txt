@@ -1,0 +1,20 @@
+test_contained_main_noop_does_not_create_branch_or_pull (test_remote_sync.RemoteSyncTests.test_contained_main_noop_does_not_create_branch_or_pull) ... ERROR
+test_repeat_event_updates_at_most_one_owned_pull (test_remote_sync.RemoteSyncTests.test_repeat_event_updates_at_most_one_owned_pull) ... ok
+
+======================================================================
+ERROR: test_contained_main_noop_does_not_create_branch_or_pull (test_remote_sync.RemoteSyncTests.test_contained_main_noop_does_not_create_branch_or_pull)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 94, in test_contained_main_noop_does_not_create_branch_or_pull
+    result = module.run_sync(self.api, lambda refs: {'status': 'no-op'},
+        repository='owner/example', policy='b'*64, state_dir=Path(self.tmp.name),
+        activation=activation(), authorized=True)
+  File "[T16_CHECKOUT]/scripts/publication_remote.py", line 18, in run_sync
+    'staging': refs['staging'], 'policy': policy, 'tree': prepared['tree']}
+                                                          ~~~~~~~~^^^^^^^^
+KeyError: 'tree'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.025s
+
+FAILED (errors=1)

@@ -1,0 +1,74 @@
+test_contained_main_noop_does_not_create_branch_or_pull (test_remote_sync.RemoteSyncTests.test_contained_main_noop_does_not_create_branch_or_pull) ... ok
+test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) ... ok
+test_repeat_event_updates_at_most_one_owned_pull (test_remote_sync.RemoteSyncTests.test_repeat_event_updates_at_most_one_owned_pull) ... ok
+test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) ... 
+  test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='owner') ... FAIL
+  test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='base') ... FAIL
+  test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='duplicate') ... FAIL
+  test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='closed') ... FAIL
+  test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='branch') ... FAIL
+
+======================================================================
+FAIL: test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='owner')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 108, in test_wrong_branch_or_pull_ownership_and_closed_operation_stop
+    self.assertEqual(result['status'], 'blocked')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+
+
+======================================================================
+FAIL: test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='base')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 108, in test_wrong_branch_or_pull_ownership_and_closed_operation_stop
+    self.assertEqual(result['status'], 'blocked')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+
+
+======================================================================
+FAIL: test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='duplicate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 108, in test_wrong_branch_or_pull_ownership_and_closed_operation_stop
+    self.assertEqual(result['status'], 'blocked')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+
+
+======================================================================
+FAIL: test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='closed')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 108, in test_wrong_branch_or_pull_ownership_and_closed_operation_stop
+    self.assertEqual(result['status'], 'blocked')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+
+
+======================================================================
+FAIL: test_wrong_branch_or_pull_ownership_and_closed_operation_stop (test_remote_sync.RemoteSyncTests.test_wrong_branch_or_pull_ownership_and_closed_operation_stop) (mutation='branch')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 108, in test_wrong_branch_or_pull_ownership_and_closed_operation_stop
+    self.assertEqual(result['status'], 'blocked')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.028s
+
+FAILED (failures=5)

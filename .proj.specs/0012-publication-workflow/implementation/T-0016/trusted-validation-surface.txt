@@ -1,0 +1,12 @@
+test_dispatch_payload_is_data_and_cannot_execute_shell (test_remote_validation.TrustedRemoteValidationTests.test_dispatch_payload_is_data_and_cannot_execute_shell) ... ok
+test_real_trusted_main_validation_and_isolated_staging_build (test_remote_validation.TrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build) ... From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-t0v4r50s/projections/staging
+ * branch            c9672090b1e9364e3adcc1a2a5fe50fc57dcb72e -> FETCH_HEAD
+From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-t0v4r50s/prepared/sync-03dkpsfa/result
+ * branch            8e7fff45245ad1d46bb8b333195abe5ac8bbcc24 -> FETCH_HEAD
+ok
+test_validation_refuses_writer_credentials_before_candidate_execution (test_remote_validation.TrustedRemoteValidationTests.test_validation_refuses_writer_credentials_before_candidate_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 58.212s
+
+OK

@@ -1,0 +1,89 @@
+{
+  "main": "5e6c889c808e7ef4cb83493bf06f8a70dd055b41",
+  "staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "original_pr21": "a67b8de69f70f794a9e062e3ac50a957688ffa9a",
+  "recorded_at": "2026-10-15T16:04:07.485821+00:00",
+  "python": {
+    "harness": 95,
+    "publication": 88,
+    "historical": 10,
+    "total": 193,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "exit_code": 0
+  },
+  "unit": {
+    "files": 8,
+    "tests": 87,
+    "exit_code": 0
+  },
+  "lint": {
+    "exit_code": 0,
+    "max_warnings": 0
+  },
+  "build": {
+    "exit_code": 0,
+    "environment": "CF_PAGES_BRANCH=staging",
+    "isolation": {
+      "inside": true,
+      "outside_read": "denied",
+      "outside_write": "denied",
+      "network": "denied"
+    }
+  },
+  "browser": {
+    "status": "pass",
+    "four_modes": true,
+    "real_keyboard_enter": true,
+    "initial_attempt": "incomplete timeout retained"
+  },
+  "published_file_sha256": {
+    "README.md": "80e42b43d479ae0819bd89c0ee1d205e0cf13fc31a3ac9ec216dd6d948558e24",
+    "authority-and-tests.md": "449e1651c51b033250b658b51c1dfa13d1aceaaa595d1939f304dec0d8cfe37e",
+    "browser/article-notice.png": "5c893dc453314982d422fa19d0b3174f0b9534842f8724125c8a4b024a41bd07",
+    "browser/article-snapshot.json": "78961509f08c503d3cf0d9bfb223763f7b27de1f63388b2e35a349bf93a29467",
+    "browser/browser.json": "7c734eddbb66f1926a43108413ce39c16d031d4db81321f80b2b825d70b3dba0",
+    "browser/desktop-dark-snapshot.json": "c45192e2d090ab3c2479c9583f67fc1f8385860a5c70ee97eac9008b579cf22f",
+    "browser/desktop-dark.png": "a7f44491753d71f6e71def917bf6d3e6e301d8b09facce3968b481c66aaa139d",
+    "browser/desktop-light-snapshot.json": "3681bc1da210106c3fd2115e8d9555c80db8279c03ed051311a6ca3218d3ca8e",
+    "browser/desktop-light.png": "5bce5fd067a5f444afad5234d45bf9905de1dafb324112bc4cdff3fab2272a3c",
+    "browser/mobile-dark-snapshot.json": "c6c9dff54a6f5fe58efba1092216851e55ae2ec2dd9e5bd222781690bc3392bd",
+    "browser/mobile-dark.png": "4bc2dd45b0d69b83c1043d56d83da84a6df4d8fbcdedcefac040444210b82ccd",
+    "browser/mobile-light-snapshot.json": "c6c9dff54a6f5fe58efba1092216851e55ae2ec2dd9e5bd222781690bc3392bd",
+    "browser/mobile-light.png": "dc28d526eef4f802547b7247cb86975221423ba2dc0558fc76a9492e4f736964",
+    "browser/modes.json": "94deea574c7fcc31e8da3fd115a3aa4b64f758e8ccf276f924cd755bf8e0344b",
+    "browser-incomplete-attempt/after-enter-snapshot.txt": "7ab417a83b254daf3587dda34cd3460aacf8e82616563a45a1d7ff93b25e26c4",
+    "browser-incomplete-attempt/attempt.json": "c3e4d6faba709921c5f5802550333d6fdec7dff38bda6e5b037d8e7839fabeee",
+    "browser-incomplete-attempt/setup-followup.md": "e939b4b62fd444ff19d71560d7275c15af8704cceec2bef80b8fd4980490748a",
+    "build-profile.projection.txt": "4a1ee132a9a956b8fe06f830ff3e97fa11ddbe1bb3a45fb8fb23d90223f9019c",
+    "build.json": "ccd2c6d060c0ccd3ef1204730c80e20ca076612cce619b9bb28aa6ee24a4367d",
+    "build.txt": "07e882abb6436c6d2620269b61570f3d7c832a87594600a343935a1932c63fca",
+    "code-review.md": "24243434cf51aade52b4f58bc56dd2b211974a3d291db963a3cdeb3b68d92dc3",
+    "conflict-decisions.json": "887fc8d37b38614bb2512033ad2b38c739ed10a042221e2cc6e2263174260805",
+    "coverage.md": "fb9c302c97639a2dc6086b80fb8f5a40a32ebb8da4d601046c8446526abecc2f",
+    "independent-merge.json": "2c97b6e62b6217dc2cd3b5951b6e070fd594665c57aa66ea8cbbae0850f81c67",
+    "lint.txt": "bfd832a043ead522709eed3882e2923e5e94129103e01085f9c7376fffae4ff9",
+    "materializer.txt": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382",
+    "native-checkpoint.json": "5cffbef1677999d15ebc44a6081ee6ad50e90d9065f64ffb97fe043f1c90ba80",
+    "pr-20-merged.json": "00f5b16bf3161ed0d07e315bda207a7a65f30f36913106a1a570ba653a6b6c9d",
+    "python.txt": "affa6701c6c01b2b341793cd40a6636eef6ab652eadad232c76d6394a7f254db",
+    "security-review.md": "d2db24ee5a6958d7657d32d110f574ab72fbdc2c87da80ca4d516899ccf2d4bc",
+    "source-audit.json": "727067e13768cbde59da10af174bb71a2329d248d57b196f68d109769f887226",
+    "static-asset-limit.json": "c7b7e3df4a0032114e73fabcce8a4e5c13df5765f7c9b1e80202cc21c85ada5d",
+    "structure.txt": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+    "unit.txt": "c302aeb3f86b8a08c32c78ac32f62993ef88152686ac91d36294d9ac54127612"
+  },
+  "hash_scope": "Published path-projected bytes; original private raw retained. Review/coverage textual supplements may be updated after independent review; operational evidence file hashes stay bound.",
+  "final_metadata_checkpoint": {
+    "native": {
+      "exit_code": 0,
+      "role": "staging",
+      "source_paths": 2731,
+      "candidate_paths_preserved": 50
+    },
+    "structure_exit_code": 0,
+    "materializer_exit_code": 0,
+    "scope": "Before final textual review supplements and source-identical local history join; final operational readback remains outside this record."
+  }
+}

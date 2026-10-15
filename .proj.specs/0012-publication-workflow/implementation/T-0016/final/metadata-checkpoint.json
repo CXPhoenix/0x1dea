@@ -1,0 +1,37 @@
+{
+  "scope": "After final evidence/README/status edits, before recording this artifact; later record-only metadata does not change executable source.",
+  "policy_sha256": "bc32c280017e1ea34203bfd815b6652d1b54a9b5e98a1c6f6fe543e3625fb300",
+  "common_paths": 867,
+  "main": {
+    "native_exit": 0,
+    "native_status": "pass",
+    "source_paths": 2695,
+    "candidate_paths_preserved": 0,
+    "target_role": "main",
+    "structure_exit": 0,
+    "materializer_exit": 0,
+    "generated_files": 176,
+    "source_files": 55
+  },
+  "staging": {
+    "native_exit": 0,
+    "native_status": "pass",
+    "source_paths": 2847,
+    "candidate_paths_preserved": 50,
+    "target_role": "staging",
+    "structure_exit": 0,
+    "materializer_exit": 0,
+    "generated_files": 178,
+    "source_files": 56
+  },
+  "commands": [
+    "python3 scripts/verify-harness-adoption.py",
+    "python3 scripts/verify-project.py",
+    "python3 scripts/materialize-writing-skills.py --check"
+  ],
+  "current_remote_refs": {
+    "main": "5e6c889c808e7ef4cb83493bf06f8a70dd055b41",
+    "staging": "612924848ca13663bb2af64e32638fbabedb1685"
+  },
+  "original_checkout_tracked_clean": true
+}

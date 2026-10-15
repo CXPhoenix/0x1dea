@@ -1,0 +1,21 @@
+test_actual_dual_target_closeout_is_accepted (test_landed_closeout.LandedCloseoutTests.test_actual_dual_target_closeout_is_accepted) ... ok
+test_trusted_main_validates_staging_without_executing_candidate_code (test_landed_closeout.LandedCloseoutTests.test_trusted_main_validates_staging_without_executing_candidate_code) ... FAIL
+
+======================================================================
+FAIL: test_trusted_main_validates_staging_without_executing_candidate_code (test_landed_closeout.LandedCloseoutTests.test_trusted_main_validates_staging_without_executing_candidate_code)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_landed_closeout.py", line 29, in test_trusted_main_validates_staging_without_executing_candidate_code
+    self.assertEqual(result.returncode,0,result.stdout+result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import sys,json;from pathlib import Path;sys.path.insert(0,sys.argv[1]+"/scripts");from publication_current import verify_staging_sync;print(json.dumps(verify_staging_sync(Path(sys.argv[1]),Path(sys.argv[2]))))
+                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ImportError: cannot import name 'verify_staging_sync' from 'publication_current' ([T16_CHECKOUT]/scripts/publication_current.py)
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 16.790s
+
+FAILED (failures=1)

@@ -1,0 +1,33 @@
+{
+  "main": "5e6c889c808e7ef4cb83493bf06f8a70dd055b41",
+  "staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "exit_code": 1,
+  "stdout": "4d489d1f1581c8b9310930876f032cf7a38daa8c\n100644 8c26d0aa02148c16de194db2ceb76edf4a7ed1b4 2\t.proj.specs/0011-main-to-staging-sync/coverage-report.md\n100644 5f5ffe0556856baf98246f67d8f7ca46709ed7ac 3\t.proj.specs/0011-main-to-staging-sync/coverage-report.md\n100644 f235884c509f2ed18a16724a1febd661738bdb65 2\t.proj.tickets/0011-main-to-staging-sync/T-0011-main-to-staging-sync.md\n100644 cbf7f15b375322fc73de3d8b6dcc760d5bf5cb29 3\t.proj.tickets/0011-main-to-staging-sync/T-0011-main-to-staging-sync.md\n\nAuto-merging .proj.specs/0011-main-to-staging-sync/coverage-report.md\nCONFLICT (add/add): Merge conflict in .proj.specs/0011-main-to-staging-sync/coverage-report.md\nAuto-merging .proj.tickets/0011-main-to-staging-sync/T-0011-main-to-staging-sync.md\nCONFLICT (add/add): Merge conflict in .proj.tickets/0011-main-to-staging-sync/T-0011-main-to-staging-sync.md\n",
+  "stderr": "",
+  "scope": "independent actual target merge in isolated complete Git storage; target refs unchanged",
+  "approved_metadata_conflicts": [
+    {
+      "path": ".proj.specs/0011-main-to-staging-sync/coverage-report.md",
+      "resolution": "exact approved main metadata successor",
+      "mode": "100644",
+      "blob": "5f5ffe0556856baf98246f67d8f7ca46709ed7ac"
+    },
+    {
+      "path": ".proj.tickets/0011-main-to-staging-sync/T-0011-main-to-staging-sync.md",
+      "resolution": "exact approved main metadata successor",
+      "mode": "100644",
+      "blob": "cbf7f15b375322fc73de3d8b6dcc760d5bf5cb29"
+    }
+  ],
+  "resolved_tree": "82570216ca00e91467f782deb5cfbf7354aab9ab",
+  "worktree_diff_against_independent_resolved_tree": [
+    "maintenance/publication-workflow/engineering-v1.json"
+  ],
+  "additional_untracked_management": [
+    ".proj.specs/0011-main-to-staging-sync/sync-after-pr20/conflict-decisions.json",
+    ".proj.specs/0011-main-to-staging-sync/sync-after-pr20/pr-20-merged.json",
+    ".proj.specs/0011-main-to-staging-sync/sync-after-pr20/authority-and-tests.md",
+    ".proj.specs/0011-main-to-staging-sync/sync-after-pr20/README.md"
+  ],
+  "result": "All independent merged sources match; only exact map extension and four new sync notes differ. No candidate/behavior difference."
+}
