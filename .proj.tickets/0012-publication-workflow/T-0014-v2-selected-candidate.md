@@ -72,3 +72,17 @@ Original v1/assertions/history remain unchanged. Six actual candidates stay lega
 source migration, article content or deployment changes. Local synthetic approval/build
 evidence does not prove real served preview or authorize publication/remote delivery.
 Status review only: no new main/staging landing receipts; done remains prohibited.
+
+### 2026-10-15 PR25 current-main revalidation
+
+Owner authorized scoped PR25 update against actual main PR24 landing `c1dd3bb`, with
+no merge or deployment change. Independent review confirmed and fixed MEDIUM corrupt
+source-blob admission: the v2-only Git wrapper verifies blob bytes against Git OIDs;
+v1/history remain unchanged. Approved P16 public seam: one new red-green regression
+with baseline/A/B subtests, plus subsequent public verify rejection. Fresh full run135
+(66 live harness +59 live publication +10 immutable PR22), website54/build/lint and
+native/structure/materializer pass. Actual isolated build denies outside read/write/net.
+Evidence: implementation/T-0014/main-refresh-20261015 in the epic spec directory;
+additional code/security main-refresh reports retain separate review axes. Six actual
+candidates/50 owned paths remain unchanged; synthetic preview approvals are not HTTP
+or real publication evidence. Status remains review; no new landing is claimed.

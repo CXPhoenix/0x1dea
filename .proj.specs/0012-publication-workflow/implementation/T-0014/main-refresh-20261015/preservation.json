@@ -1,0 +1,27 @@
+{
+  "main": "c1dd3bbde1b9522bf88692014866fbc18aaf1173",
+  "staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "initial_head": "f737e36601795bd6a5ea9e3f6cf61467b31d0a52",
+  "candidate_count": 6,
+  "candidate_owned_paths": 50,
+  "candidate_mode_blob_mismatches": [],
+  "unchanged_protected_files": {
+    "scripts/article-publication.py": true,
+    "scripts/main_publication_verification.py": true,
+    "scripts/run-python-tests.py": true,
+    "tests/article_publication/test_current_baseline.py": true,
+    "tests/harness_adoption/test_main_release.py": true
+  },
+  "protected_path_diffs": {
+    "maintenance/harness-adoption/": "",
+    "maintenance/article-publication/": "",
+    "maintenance/lint-cleanup/": "",
+    ".proj.specs/0012-publication-workflow/implementation/T-0013/": "",
+    "blog/": "",
+    ".github/": "",
+    "skills/": "",
+    ".agents/": "",
+    ".claude/": ""
+  },
+  "surface": "trusted local Git trees and current bytes; no HTTP/deployment evidence"
+}

@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 import sys
 import unittest
+import zlib
 from article_publication import test_cli as fixtures
 
 SCRIPT = Path(__file__).resolve().parents[2] / 'scripts/article-publication-v2.py'
@@ -77,6 +78,25 @@ class V2Tests(unittest.TestCase):
         out = self.root / 'rejected'
         self.reject(self.v2('prepare', out), 'source ancestry')
         self.assertFalse(out.exists())
+
+    def test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids(self):
+        refs = self.git('show-ref')
+        for name in ('blog/index.md', 'blog/post/A.md', 'blog/post/B.md'):
+            with self.subTest(path=name):
+                oid = self.registry['staging_inventory'][name]['blob']
+                blob = self.repo / '.git/objects' / oid[:2] / oid[2:]
+                original = blob.read_bytes()
+                payload = b'# Unapproved bytes under an unchanged reviewed object id\n'
+                blob.chmod(0o600)
+                blob.write_bytes(zlib.compress(b'blob ' + str(len(payload)).encode() + b'\0' + payload))
+                output = self.root / ('corrupt-' + Path(name).stem)
+                try:
+                    self.assertEqual(self.git('cat-file', 'blob', oid).encode(), payload)
+                    self.reject(self.v2('prepare', output), 'blob object identity')
+                    self.assertFalse(output.exists())
+                    self.assertEqual(self.git('show-ref'), refs)
+                finally:
+                    blob.write_bytes(original)
 
     def test_B_add_then_revert_in_A_is_rejected_even_when_final_tree_is_only_A(self):
         self.git('switch', '-q', 'post/A')

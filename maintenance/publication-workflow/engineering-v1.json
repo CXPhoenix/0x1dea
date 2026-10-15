@@ -937,7 +937,7 @@
     },
     ".proj.tickets/0012-publication-workflow/T-0014-v2-selected-candidate.md": {
       "mode": "100644",
-      "sha256": "f81c1a947f9b91bf296e06453ed62f3239ba99b47288766e66863861fa688ca8"
+      "sha256": "9d3dc9e80bcf1519da051087759ced412f74eec7593fc104911ca3fddbde4ae6"
     },
     ".proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md": {
       "mode": "100644",
@@ -961,7 +961,7 @@
     },
     "docs/article-publication-v2.md": {
       "mode": "100644",
-      "sha256": "b6249f8a8729c9c9e4741f147baea45a3f5015d36293b960e843f344be691a0f"
+      "sha256": "97fc98eafccd9696a993b183a635dc2a594b7e53e13f9b4176035ca1ac610390"
     },
     "docs/article-publication-v2.schema.json": {
       "mode": "100644",
@@ -985,7 +985,7 @@
     },
     "scripts/article-publication-v2.py": {
       "mode": "100644",
-      "sha256": "7227439038030fa53fe24a695afe00259954f3457819781c17d2d07161f8f4f6"
+      "sha256": "8ef565cddd4ee8b06032f51e37bb2e8466eca7c77ac8ce9f11c014f79dabdce3"
     },
     "scripts/harness_reconciliation.py": {
       "mode": "100644",
@@ -1037,11 +1037,103 @@
     },
     "tests/article_publication/test_v2.py": {
       "mode": "100644",
-      "sha256": "773ac893ef3af353694659bfb487364433c4dd5253814a774872644ca4a33cf6"
+      "sha256": "9763b93f1a886161192de0f9f52c72df28bb8c239df200fa9119b3dee600e174"
     },
     "tests/harness_adoption/__init__.py": {
       "mode": "100644",
       "sha256": "a0a9cab31657f958cfd8762a4082f4233aa180dd24d14d1f29623e9d01676cc5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/fixed-code-review-scope.json": {
+      "mode": "100644",
+      "sha256": "06de5a6b3fd4da7c4d70c60616a37191f3264c3e426878fe67518f36c81a4681"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/materializer.txt": {
+      "mode": "100644",
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/unit.txt": {
+      "mode": "100644",
+      "sha256": "16e2286bd9a2011a251286a5aab4e76e72156fbbb5291c02b07521c9ccf94169"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/pre-fix-python.txt": {
+      "mode": "100644",
+      "sha256": "ed58cd4faebb15417de1dfc8f91a9a2ae09233359f8b852b6b634f07aa75d161"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/blob-green.txt": {
+      "mode": "100644",
+      "sha256": "be1fb786c84e5c0a19f791692f96ad30a82ebe4b345aca6401c6bc21201f5661"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/initial-review-scope.json": {
+      "mode": "100644",
+      "sha256": "acaf1b7d1df1932e21fae7259af2384231fc5d08f2178fa8fa5a76bf33f7e3ec"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/build-stdout.txt": {
+      "mode": "100644",
+      "sha256": "0f8234c83b1ed807454cebcb4c212f69241ca1d3dfd51e92e1ff08e978a2b8c5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/preservation.json": {
+      "mode": "100644",
+      "sha256": "b5fe2cf136eaa20cb5a005ccc55c085f7815f1adfc691a9698db2ac45a4af3fe"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/native-preflight.json": {
+      "mode": "100644",
+      "sha256": "d8709ed4cb7bc8792072c62d86105f8cfbfbbeb364153d8cb301ec6e76410837"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/discovery.json": {
+      "mode": "100644",
+      "sha256": "6dff5319177b7eb2a584659925a2d04d87eded31cb19a0f046080d431436817f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/blob-reproduction.json": {
+      "mode": "100644",
+      "sha256": "ef399cf51e510edc08851674eb57ea7abd02d0e50146f3b85c9f0009d270e0a5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/blob-verify.json": {
+      "mode": "100644",
+      "sha256": "fdcb7c7d3ad18fc4cc16da07c44449adb0f98f214295696570d8438130a4d1db"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/README.md": {
+      "mode": "100644",
+      "sha256": "382569efb8a87571ccc3ded6dcced26f68f88b51cc5043894692f3f30acad2a7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/actual-build-receipt.json": {
+      "mode": "100644",
+      "sha256": "0b07355fa2f2046e7d8b61bbbb16c2a5afe7c49dd7ec5cc4bc917b5c5e6c07c1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/python-current.txt": {
+      "mode": "100644",
+      "sha256": "cc2a30b3a01ea3635029ed0788f3ba6528ca2ce5f9c751346d8282d0832d141e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/blob-red.txt": {
+      "mode": "100644",
+      "sha256": "f9e35c8097544cd4e4ecee48434ee30365db9c36efa92ad5405c530547848458"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/lint.txt": {
+      "mode": "100644",
+      "sha256": "6ef74c0fe18b9d13d4338048dc009e4725db82f757bfd52e13e5874c3fd55fd3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/structure.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/build-stderr.txt": {
+      "mode": "100644",
+      "sha256": "fc7c6405aac8fbf4c47ba4c22feb0b41275820b184b493e71c8b989328869cf8"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/website-build.txt": {
+      "mode": "100644",
+      "sha256": "f9f001d63c75c36b3fb1e874df6728d8f187d64992996d18b229e7a83ebd46a0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0014/main-refresh-20261015/local-ready.json": {
+      "mode": "100644",
+      "sha256": "569ca6e7d94c9a34cc62c2d98b94b6642a42f4e65d24a6d588e51dc676463a05"
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0014-main-refresh.md": {
+      "mode": "100644",
+      "sha256": "884e48142875b35f1a9411a4c1ece42b9c089ec1a032a923efc8611e295b0f41"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0014-main-refresh.md": {
+      "mode": "100644",
+      "sha256": "df7b4b384821e3a4407d0fd4e9d1ea579e77c5fa67618d1f712b0945b5d6d301"
     }
   }
 }

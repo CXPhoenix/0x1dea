@@ -25,7 +25,14 @@ _preserved_git = old.git
 
 def offline_git(repo, *args, data=None, env=None):
     protected = {**(env or {}), 'GIT_NO_LAZY_FETCH': '1', 'GIT_ALLOW_PROTOCOL': ''}
-    return _preserved_git(repo, *args, data=data, env=protected)
+    result = _preserved_git(repo, *args, data=data, env=protected)
+    # cat-file can read a corrupt loose object without checking its content hash.
+    # Bind every v2 tree read (baseline, staging and sources) back to its Git OID.
+    if len(args) == 3 and args[:2] == ('cat-file', 'blob'):
+        actual = hashlib.sha1(b'blob ' + str(len(result)).encode() + b'\0' + result).hexdigest()
+        if actual != args[2]:
+            raise old.Invalid('source blob object identity mismatch')
+    return result
 
 old.git = offline_git
 

@@ -19,6 +19,9 @@ mode/blob，不是整個資料夾豁免。retained 必須是精確 staging ident
 
 clean source 必須源於目前 pinned main。已整合進 staging 的 source 本身仍可使用；
 所有 v2 Git 讀取明確禁止 lazy fetch 與 remote transport，拒絕 partial/promisor 設定。
+讀取 baseline、staging 與來源 blob 時，也會重新計算 Git blob OID，拒絕內容與已核准
+OID 不符的 object；`cat-file` 成功本身不代表內容雜湊已驗證。這項檢查限於 v2，
+原 v1 helper 與歷史 assertions 保持原樣。
 source 不能包含 staging integration、另一篇候選或未申報的歷史 commit，包含加入後
 還原的內容。main refresh merge 以獨立 bare repository 重算；衝突須在 registry 的
 resolutions 明確綁定完整 commit/tree，無衝突的結果不能被該欄位覆寫。

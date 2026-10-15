@@ -1,0 +1,48 @@
+test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids (article_publication.test_v2.V2Tests.test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids) ... 
+  test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids (article_publication.test_v2.V2Tests.test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids) (path='blog/index.md') ... FAIL
+  test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids (article_publication.test_v2.V2Tests.test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids) (path='blog/post/A.md') ... FAIL
+  test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids (article_publication.test_v2.V2Tests.test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids) (path='blog/post/B.md') ... FAIL
+
+======================================================================
+FAIL: test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids (article_publication.test_v2.V2Tests.test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids) (path='blog/index.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 95, in test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids
+    self.reject(self.v2('prepare', output), 'blob object identity')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "f53c3fc228c5c58dd1f7f08c3921cc2e352f6f9b", "files": {"blog/index.md": {"mode": "100644", "sha256": "68c6eb61e8398268f1a71ea2299646b8e7c6be9d71728739152302719ac14644"}, "blog/post/A.md": {"mode": "100644", "sha256": "eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737"}}, "mode": "prepare", "plan_sha256": "616522eb5c036f95e4589a94cce7d06a433dde24d01b25b66321417331634359", "pr_ready": false, "publishable": false, "registry_sha256": "ea6f850beaedde93662e86edea702493c721fb71e6cf2e0417d8e866930585d7", "source_scan": {"asset_signature_count": 0, "forbidden_routes": ["/post/B", "/post/B.html", "/post/B.md"], "limits": "Supplementary signatures; exact source admission and candidate tree remain primary.", "prose_signature_count": 1, "status": "supplementary-pass", "unverified_sources": []}, "version": 2}
+
+
+======================================================================
+FAIL: test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids (article_publication.test_v2.V2Tests.test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids) (path='blog/post/A.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 95, in test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids
+    self.reject(self.v2('prepare', output), 'blob object identity')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "1cb7111a6252003b39cb2c424f8951a72c7eb1c8", "files": {"blog/index.md": {"mode": "100644", "sha256": "5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368"}, "blog/post/A.md": {"mode": "100644", "sha256": "68c6eb61e8398268f1a71ea2299646b8e7c6be9d71728739152302719ac14644"}}, "mode": "prepare", "plan_sha256": "616522eb5c036f95e4589a94cce7d06a433dde24d01b25b66321417331634359", "pr_ready": false, "publishable": false, "registry_sha256": "ea6f850beaedde93662e86edea702493c721fb71e6cf2e0417d8e866930585d7", "source_scan": {"asset_signature_count": 0, "forbidden_routes": ["/post/B", "/post/B.html", "/post/B.md"], "limits": "Supplementary signatures; exact source admission and candidate tree remain primary.", "prose_signature_count": 1, "status": "supplementary-pass", "unverified_sources": []}, "version": 2}
+
+
+======================================================================
+FAIL: test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids (article_publication.test_v2.V2Tests.test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids) (path='blog/post/B.md')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 95, in test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids
+    self.reject(self.v2('prepare', output), 'blob object identity')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "8dbcb02b3a5ea08c61bd924beb697196e0436274", "files": {"blog/index.md": {"mode": "100644", "sha256": "5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368"}, "blog/post/A.md": {"mode": "100644", "sha256": "eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737"}}, "mode": "prepare", "plan_sha256": "616522eb5c036f95e4589a94cce7d06a433dde24d01b25b66321417331634359", "pr_ready": false, "publishable": false, "registry_sha256": "ea6f850beaedde93662e86edea702493c721fb71e6cf2e0417d8e866930585d7", "source_scan": {"asset_signature_count": 0, "forbidden_routes": ["/post/B", "/post/B.html", "/post/B.md"], "limits": "Supplementary signatures; exact source admission and candidate tree remain primary.", "prose_signature_count": 0, "status": "supplementary-pass", "unverified_sources": []}, "version": 2}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 2.805s
+
+FAILED (failures=3)
