@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "ticket": "T-0005",
+  "authorized": true,
+  "landed": true,
+  "commit": "69ff85f5fe1baddb54102070a436dff9ac1c5b73",
+  "target": "staging",
+  "approval_receipt": ".proj.specs/0005-harness-reconciliation/landing-approval.md",
+  "remote": "https://github.com/CXPhoenix/0x1dea.git",
+  "observed_remote_staging": "6c315d9fbcdf38b21a979159504937be245f77a2",
+  "verified_at": "2026-10-11T07:14:47.240742+00:00",
+  "verification": "non-force git push succeeded; git ls-remote origin refs/heads/staging returned observed_remote_staging; commit is ancestor of that SHA",
+  "authorization_scope": "Present-day owner authorization to close this ticket and push staging; not a claim of original historical permission."
+}

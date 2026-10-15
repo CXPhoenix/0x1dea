@@ -1,0 +1,10 @@
+{
+  "commit": "01b5d69bc1a006ef04d8c475b4e7df38712c9ca0",
+  "parents": [
+    "4005ee45f2f3267a8b53ce24fa97af7b49cfb144",
+    "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a"
+  ],
+  "clean": true,
+  "captured_staged_files_exact": 189,
+  "blog_changes": 0
+}

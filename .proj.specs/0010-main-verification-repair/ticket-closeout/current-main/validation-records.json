@@ -1,0 +1,61 @@
+{
+  "base_main": "87740186f2a1b57f8c1df89f36647cbe3663f428",
+  "base_staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "original_pr20_head": "e6e7a04da7a1e4d9819fa6f8aaadb72a0611e20c",
+  "runs": {
+    "main": {
+      "harness": 66,
+      "publication": 88,
+      "historical": 10,
+      "total": 164,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    "staging_projection": {
+      "harness": 95,
+      "publication": 88,
+      "historical": 10,
+      "total": 193,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  },
+  "code_sha256": {
+    "scripts/publication_current.py": "801fbf500d627ff1971c759d9778ac5a87088e3af6251783a760e19b01388923",
+    "tests/article_publication/test_closeout_successor.py": "5fbc844a6236d584a4faf13fa2954a7f4dfc47acb57e1661742e3c7d4fce15e6",
+    "scripts/run-current-python-tests.py": "4ff65f3718fa340b2a3d91d8b639a675b6551ca6d317e3a280a95547056019f0",
+    "scripts/main_publication_verification.py": "6fe08fedc10407bdde8d19305664e4e989de97fd34882d19dba1caee049ec2c6",
+    "tests/harness_adoption/test_main_release.py": "85cd82f6c5bba7a9ae2d1253f6f22f763fb66fea3879847c17386161d9da7c7c"
+  },
+  "public_log_sha256": {
+    "T12-cycle1-green.txt": "3fbe4c08ad8cacd634c3a74d8afb2030ae405a05eab9e4ad45eeb395a2cdf945",
+    "T12-cycle1-red.txt": "5b7e290dbacea6771d2c502276c64628ade200edf50910f56e8d763157a64e02",
+    "T12-cycle2-green.txt": "ac6d54021a8ef81ef0238e7aa5d9c376c9fead804e0891e2c2b11fbb5aff167b",
+    "T12-cycle2-red.txt": "3b65858956b4ee3a02d16b0f01ae85b81d5403604e8e0cc8ed145219bb7aeb54",
+    "focused.txt": "be9736e97bc272f17a1b995752ec79d8ac9f034bc69d33e39d28c4c79490842e",
+    "main-materializer.txt": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+    "main-python.txt": "f3fd06424f607c58bb4d7d5697cb95f48f45b2b5813916cdcc56a53242a32255",
+    "main-structure.txt": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+    "staging-materializer.txt": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382",
+    "staging-python.txt": "7b585ae58fe8454e5caaccf341aa2c6e2f00165e9317c312a5e76c7478d2e8f4",
+    "staging-structure.txt": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+  },
+  "projection": "Published log hashes cover explicit path-label projections; historical evidence bytes unchanged.",
+  "final_precommit_projection_checks": {
+    "main": {
+      "native": "pass",
+      "structure": "pass",
+      "materializer": "pass",
+      "source_paths": 2544
+    },
+    "staging": {
+      "native": "pass",
+      "structure": "pass",
+      "materializer": "pass",
+      "source_paths": 2696,
+      "candidate_paths_preserved": 50
+    }
+  }
+}

@@ -15,6 +15,21 @@ M0 = '.proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.p
 M0_SHA = '6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a'
 
 
+# Finite, reviewed metadata successors; historical M0 blobs remain immutable.
+CLOSEOUT_SUCCESSORS = {'.proj.specs/0011-main-to-staging-sync/coverage-report.md': 'd610282c67b42bad42d78e4e3d6857c0311fc364c69f41239309c03e06997121',
+ '.proj.tickets/0001-harness-adoption/T-0001-harness-adoption.md': '5465e347c083e87ac5146c65c7fef4a1d6a25c55ffde1acbd4130490493d3799',
+ '.proj.tickets/0002-article-publication/T-0002-article-publication-preparation.md': '9edef29e54074191f930cd4619b4becdc843ae345dc3d68780615a89cea71b3f',
+ '.proj.tickets/0010-main-verification-repair/T-0010-main-verification-repair.md': '9e7d02cdea898061f5e1e91dd66392e81813623eab4531c7069306942e4eeaf4',
+ '.proj.tickets/0011-main-to-staging-sync/T-0011-main-to-staging-sync.md': '21ceaea9edad9a52874d8d1b3112dd8afc37d2d1a1fce0c55c5d6419cc3a7125'}
+CLOSEOUT_RECEIPTS = {'.proj.specs/0001-harness-adoption/landing-approval.md': 'b7e332f00d749f628ddfdcaf22c544c97944418c5f43a6e21177f675deef5b28',
+ '.proj.specs/0001-harness-adoption/landing.json': 'b08e7e97a9ac61a81bd762018237ada0e9e821603720f668c6d980b032f0395b',
+ '.proj.specs/0010-main-verification-repair/landing-approval.md': '8245a7aa22aa30c12f2dd1f6a55e1a18323bee98573b385e93f11cef8a2b05a8',
+ '.proj.specs/0010-main-verification-repair/landing.json': '192e4976b96fc496767eaa7f43ce4b271211b89b0155a5eef5aded7273ce956a',
+ '.proj.specs/0010-main-verification-repair/ticket-closeout/current-main/T-0002-landing-approval.md': '8150d99bf9c9b320ea4511c66176725eed6ff351a374e1ba7e8f5167ce24b444',
+ '.proj.specs/0010-main-verification-repair/ticket-closeout/current-main/T-0002-landing.json': '26733b306005a09a713b7a0a6865fb4bf57400605ee34273512f936392b002a9',
+ '.proj.specs/0011-main-to-staging-sync/landing-approval.md': 'e4c721dcbb228a18bab5728276ebe2b5f2fac660381944ee9725d8b14d754ac0',
+ '.proj.specs/0011-main-to-staging-sync/landing.json': '57d798306754b5b6ec250274f87455d983e176e442defbd75ec3b32192a598ac'}
+
 def git_environment(*, local_clone=False):
     env = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
     env.update({'GIT_CONFIG_NOSYSTEM': '1', 'GIT_CONFIG_GLOBAL': os.devnull,
@@ -62,6 +77,12 @@ def policy(control):
     owned = {p for c in inventory['candidates'] for p in c['paths']}
     if not isinstance(data['common'], dict):
         raise ValueError('exact common successor must be a path map')
+    for name, sha256 in (CLOSEOUT_SUCCESSORS | CLOSEOUT_RECEIPTS).items():
+        if data['common'].get(name) != {'mode': '100644', 'sha256': sha256}:
+            raise ValueError('unapproved exact closeout identity: ' + name)
+        path = regular(control, name)
+        if path.stat().st_mode & 0o111 or digest(path.read_bytes()) != sha256:
+            raise ValueError('changed exact closeout identity: ' + name)
     writing = ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post')
     for name, expected in data['common'].items():
         regular(control, name)
@@ -69,7 +90,7 @@ def policy(control):
             raise ValueError('protected content/history in common successor: ' + name)
         if set(expected) != {'mode', 'sha256'} or expected['mode'] not in {'100644', '100755'} or not isinstance(expected['sha256'], str) or len(expected['sha256']) != 64 or any(c not in '0123456789abcdef' for c in expected['sha256']):
             raise ValueError('invalid exact common identity: ' + name)
-        if name != 'scripts/verify-harness-adoption.py':
+        if name != 'scripts/verify-harness-adoption.py' and name not in CLOSEOUT_SUCCESSORS:
             for entries in inventory['trees'].values():
                 previous = entries.get(name)
                 if previous and expected != {'mode': previous['mode'], 'sha256': digest(git(control, 'cat-file', 'blob', previous['blob']))}:

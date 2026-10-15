@@ -1,0 +1,37 @@
+[
+  {
+    "file": "article-preview.jpg",
+    "metadata": [
+      "  pixelWidth: 375",
+      "  pixelHeight: 812"
+    ]
+  },
+  {
+    "file": "desktop-dark.jpg",
+    "metadata": [
+      "  pixelWidth: 1440",
+      "  pixelHeight: 900"
+    ]
+  },
+  {
+    "file": "desktop-light.jpg",
+    "metadata": [
+      "  pixelWidth: 1440",
+      "  pixelHeight: 900"
+    ]
+  },
+  {
+    "file": "mobile-dark.jpg",
+    "metadata": [
+      "  pixelWidth: 375",
+      "  pixelHeight: 812"
+    ]
+  },
+  {
+    "file": "mobile-light.jpg",
+    "metadata": [
+      "  pixelWidth: 375",
+      "  pixelHeight: 812"
+    ]
+  }
+]

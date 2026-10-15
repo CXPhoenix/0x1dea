@@ -1,0 +1,17 @@
+{
+  "current_reports": [
+    {
+      "path": ".proj.specs/0001-harness-adoption/reports/evidence-closeout-2026-10-11.html",
+      "parser": "pass",
+      "external_resource_references": 0,
+      "rendered_visual": "not-run: browser file URL policy; no workaround"
+    },
+    {
+      "path": ".proj.specs/0010-main-verification-repair/reports/evidence-closeout-2026-10-11.html",
+      "parser": "pass",
+      "external_resource_references": 0,
+      "rendered_visual": "not-run: browser file URL policy; no workaround"
+    }
+  ],
+  "diagnostic": "First static script also selected a historical T5 HTML without CSP and correctly failed its overbroad assertion. Scope corrected to the two newly generated reports; historical HTML unchanged."
+}

@@ -1,0 +1,18 @@
+test_existing_allowed_sources_are_still_immutable (harness_adoption.test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) ... ok
+test_generated_output_symlink_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_generated_output_symlink_is_rejected) ... ok
+test_git_history_overlays_are_rejected (harness_adoption.test_main_release.MainReleaseTests.test_git_history_overlays_are_rejected) ... ok
+test_ignored_compilable_source_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_ignored_compilable_source_is_rejected) ... ok
+test_listing_successor_is_exact_and_required (harness_adoption.test_main_release.MainReleaseTests.test_listing_successor_is_exact_and_required) ... ok
+test_missing_pinned_objects_are_rejected (harness_adoption.test_main_release.MainReleaseTests.test_missing_pinned_objects_are_rejected) ... ok
+test_nonancestor_head_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_nonancestor_head_is_rejected) ... ok
+test_product_and_historical_bytes_cannot_drift (harness_adoption.test_main_release.MainReleaseTests.test_product_and_historical_bytes_cannot_drift) ... ok
+test_release_scope_cannot_be_refreshed_or_deleted (harness_adoption.test_main_release.MainReleaseTests.test_release_scope_cannot_be_refreshed_or_deleted) ... ok
+test_required_repair_sources_cannot_be_removed_or_linked (harness_adoption.test_main_release.MainReleaseTests.test_required_repair_sources_cannot_be_removed_or_linked) ... ok
+test_reviewed_main_with_listing_repair_is_accepted (harness_adoption.test_main_release.MainReleaseTests.test_reviewed_main_with_listing_repair_is_accepted) ... ok
+test_source_existence_type_mode_and_parent_are_enforced (harness_adoption.test_main_release.MainReleaseTests.test_source_existence_type_mode_and_parent_are_enforced) ... ok
+test_unknown_tracked_and_untracked_product_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_unknown_tracked_and_untracked_product_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 177.466s
+
+OK

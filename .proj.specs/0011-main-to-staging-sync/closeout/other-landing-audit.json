@@ -1,0 +1,29 @@
+{
+  "scope": "Ancestry only; not automatic acceptance or done authority for another ticket.",
+  "checks": {
+    "T-0001 PR13": {
+      "commit": "bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0",
+      "ancestor_of_staging": true
+    },
+    "T-0002 PR14": {
+      "commit": "8987806a3c34653a236ca0c683a46bcc9632c27d",
+      "ancestor_of_staging": true
+    },
+    "T-0003/T-0004 PR16": {
+      "commit": "69ff85f5fe1baddb54102070a436dff9ac1c5b73",
+      "ancestor_of_staging": true
+    },
+    "T-0007 branch": {
+      "commit": "f3eee3db6c9056b1bfd308756e2790c46513b174",
+      "ancestor_of_staging": true
+    },
+    "T-0008 branch": {
+      "commit": "6e4eb804bcbda8504935be49fd6537d6327d5303",
+      "ancestor_of_staging": true
+    },
+    "T-0010 PR18": {
+      "commit": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+      "ancestor_of_staging": true
+    }
+  }
+}

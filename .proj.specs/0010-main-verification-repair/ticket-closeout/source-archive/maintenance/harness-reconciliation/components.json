@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "tickets": [
+    "T-0003",
+    "T-0004"
+  ],
+  "base": "32cd6a9d4ead636ddc4e5020fceb35ad9645cc7f",
+  "oracle_sha256": "8d29af326616c8811cc4b9526417d7a0b1864e33564acee335723175cfdfd1dc",
+  "delta": [
+    {
+      "path": "blog/.vitepress/theme/components/ArticleSummary.vue",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "7a51dd370236fd3accfa609912eea5ebe7e53bf812bd6354aae97a609b526119"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0003"
+    },
+    {
+      "path": "blog/.vitepress/theme/components/PreviewNotice.vue",
+      "before": {
+        "mode": "100644",
+        "sha256": "4a481e80dbfc644b7207af23442621e8e657c584cc2decf6c8a82a2e5161c016"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "63f60ff832f674ead7bba540cdf396d9d541831aaf02970c80e8fc6641cd9196"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0004"
+    },
+    {
+      "path": "blog/.vitepress/theme/index.ts",
+      "before": {
+        "mode": "100644",
+        "sha256": "11b8557a284fa04e3a4c51667cc45c9e6f0924f8db2369b93ec4dcb33a836cea"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "eb1dbb229d27cc0932b252c1ee9fcfde783d319c3ef8997cb8faf070c141af68"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0003"
+    },
+    {
+      "path": "blog/.vitepress/theme/style.css",
+      "before": {
+        "mode": "100644",
+        "sha256": "69b7789356647cf8c351869126e5157696b36f2ffe406683ff4887d997ca03a3"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "0221c1a7b079eee06d79e65da3c1c3d65ca9ec13efb5f688c6049aa093662167"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0003"
+    },
+    {
+      "path": "blog/post/course/security-awareness/electricity-privacy.md",
+      "before": {
+        "mode": "100644",
+        "sha256": "c66d2351e52329f03f329836c35c5175b0e955d1b6d91283fd25064fac31a880"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "7d7df900fe0bb3da0dc8beb8e8e146dab9326cccdf57d12d0c25fcf2a708bcc0"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0003"
+    },
+    {
+      "path": "blog/public/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "9fe833c76165ab1b446432280ff473c2d7e967042ac78af42c65e99d0d15204c"
+      },
+      "source": "accepted banner; component-delivery scope",
+      "ticket": "T-0003"
+    },
+    {
+      "path": "docs/article-summary.md",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "8fe96b560303cdfa1568faf607e0e82907c51ca988d242317ec2a22b7e198639"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0003"
+    },
+    {
+      "path": "tests/articleSummary.vitest.ts",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "cfe72616c7032278e3b4458d99166a6e9d523cd70809a6577b695580bf9ff473"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0003"
+    },
+    {
+      "path": "tests/fixtures/article-summary.md",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "3f2d09ada736b3b7d1715cf955d88cf06490963ac99f79332b32210ac07aad56"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0003"
+    },
+    {
+      "path": "tests/fixtures/component-acceptance.md",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "9a45e4b08178f8dc0f3b22ed5c884fe7e48770f832de4aa9d6a0ed528c6a101b"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0003"
+    },
+    {
+      "path": "tests/previewNotice.vitest.ts",
+      "before": {
+        "mode": "100644",
+        "sha256": "118ad75ff432fc00515c7e7ca14fb65dd707808518f2d2020e9b4afed2499f15"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "0f41ef7e8a62df422730169ab5b8e85a7fd829de158a817f6f4426ad330584ee"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0004"
+    },
+    {
+      "path": "tests/previewNoticeArticle.vitest.ts",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "52e3fb3fa2942c864b8b93eee7576e9037e7124e7338a2f7fcafda52e7a30620"
+      },
+      "source": "corrected component review packet",
+      "ticket": "T-0004"
+    }
+  ]
+}

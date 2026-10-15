@@ -1,0 +1,6 @@
+test_adoption_receipt_cannot_use_another_valid_ancestor (test_main_release.MainReleaseTests.test_adoption_receipt_cannot_use_another_valid_ancestor) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 7.179s
+
+OK

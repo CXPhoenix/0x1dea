@@ -1,0 +1,56 @@
+test_ignored_unapproved_test_source_is_rejected (test_reconciliation.ReconciliationTests.test_ignored_unapproved_test_source_is_rejected) ... FAIL
+
+======================================================================
+FAIL: test_ignored_unapproved_test_source_is_rejected (test_reconciliation.ReconciliationTests.test_ignored_unapproved_test_source_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<task-workspace>/harness-implementation/tests/harness_adoption/test_reconciliation.py", line 100, in test_ignored_unapproved_test_source_is_rejected
+    self.rejected('tests/unknown_review.py')
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<task-workspace>/harness-implementation/tests/harness_adoption/test_reconciliation.py", line 62, in rejected
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "status": "pass",
+  "framework": {
+    "pinned_files": 641,
+    "source_commit": "917e6025da0901a79dda016e1ce5bd89b6e6e19f",
+    "source_digest": "b7782890459cf3c546395ac5546f22dc074f13d4166688751a9c1e08d4216bf5",
+    "runtime_skill_counts": {
+      ".agents": 36,
+      ".claude": 36
+    }
+  },
+  "site_moves": 55,
+  "baseline_entries": 370,
+  "translations": 8,
+  "trace_rows": 113,
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "review",
+        "blocked_by": []
+      }
+    },
+    "next_id": "T-0003",
+    "frontier": [],
+    "blocked": {},
+    "paused": []
+  }
+}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 9.343s
+
+FAILED (failures=1)

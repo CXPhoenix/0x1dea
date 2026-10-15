@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "kind": "reconstruction on 2026-10-11, not a recovered historical execution snapshot",
+  "base": "f3eee3db6c9056b1bfd308756e2790c46513b174",
+  "entry_adjustment": "Replace only the original figure-1 explanatory caption with 圖 1：模擬總功率 to match the independently recorded task-entry SHA.",
+  "entry_sha256": "9ee10b2b8afe41d6d201df259ed95c58e869bd5592bbaa4995d603f5823f265e",
+  "migrated_sha256": "a81a826ec72da2c1cb78a6f829773ad87687491d06399c307344a7879aef9506",
+  "migration": "Replace the three baseline original blocks; then replace the six remaining 圖 N references with @fig:id.",
+  "independent_oracle": "article-caption-baseline.json is unchanged."
+}

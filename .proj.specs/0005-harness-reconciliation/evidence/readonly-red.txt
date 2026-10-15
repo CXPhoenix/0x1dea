@@ -1,0 +1,17 @@
+test_00_clean_pinned_staging_reaches_successful_readonly_full_cli (test_reconciliation.ReconciliationTests.test_00_clean_pinned_staging_reaches_successful_readonly_full_cli) ... FAIL
+
+======================================================================
+FAIL: test_00_clean_pinned_staging_reaches_successful_readonly_full_cli (test_reconciliation.ReconciliationTests.test_00_clean_pinned_staging_reaches_successful_readonly_full_cli)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<task-workspace>/harness-implementation/tests/harness_adoption/test_reconciliation.py", line 39, in test_00_clean_pinned_staging_reaches_successful_readonly_full_cli
+    self.assertEqual(after, before, 'read-only CLI created source-tree artifacts')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the first set but not the second:
+'scripts/__pycache__/harness_reconciliation.cpython-314.pyc'
+'scripts/__pycache__' : read-only CLI created source-tree artifacts
+
+----------------------------------------------------------------------
+Ran 1 test in 9.956s
+
+FAILED (failures=1)

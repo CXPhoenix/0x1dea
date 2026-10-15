@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/usr/bin/sandbox-exec",
+    "-f",
+    "/private/tmp/0x1dea-staging-sync-build/build.sb",
+    "/usr/bin/env",
+    "HOME=/private/tmp/0x1dea-staging-sync-build/home",
+    "TMPDIR=/private/tmp/0x1dea-staging-sync-build/tmp",
+    "CF_PAGES_BRANCH=staging",
+    "/Users/phoenix/.nvm/versions/node/v24.13.0/bin/pnpm",
+    "docs:build"
+  ],
+  "cwd": "isolated source projection",
+  "exit": 1,
+  "seconds": 0.469,
+  "surface": "local staging build, CF_PAGES_BRANCH=staging; network denied; outside read/write denied; installed dependencies read only"
+}

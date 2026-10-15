@@ -1,0 +1,7 @@
+{
+  "command": [
+    "pnpm",
+    "test:python"
+  ],
+  "reason": "Stopped before final result to correct an actually reproduced invalid-local-ref fallback and include its negative assertion; no pass claimed."
+}
