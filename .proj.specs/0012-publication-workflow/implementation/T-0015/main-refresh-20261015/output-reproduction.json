@@ -1,0 +1,39 @@
+{
+  "scenario": "Only output bare objectDB modified after prepare; source/registry/receipt/refs unchanged",
+  "source_unchanged": true,
+  "receipt_unchanged": true,
+  "output_cat_file_has_unapproved_bytes": true,
+  "verify_exit": 0,
+  "verify_stdout": {
+    "checks": [
+      "pinned-source-trees",
+      "independent-git-tree",
+      "full-candidate-identities",
+      "protected-identities",
+      "local-ref-pins"
+    ],
+    "local_ready": true,
+    "main": {
+      "ref": "main",
+      "sha": "db3c795640ce7104760474537662b74f3552e8dc"
+    },
+    "publishable": false,
+    "registry_sha256": "8aa8967829f356519eafba7b48ea9d57c351330032d554ccbd8fa69c33d44bc9",
+    "repository": "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-sync-cs7aa_lm/source",
+    "result_tree": "672650ec18bd4d0aed2a6fc7bd148c1ec9fbb8aa",
+    "sources": [
+      {
+        "ref": "candidate/B",
+        "sha": "775d0bb7dcdbc541dd32b0d49718757885dd9b73"
+      }
+    ],
+    "staging": {
+      "ref": "staging",
+      "sha": "775d0bb7dcdbc541dd32b0d49718757885dd9b73"
+    },
+    "status": "ready",
+    "target": "staging",
+    "version": 1
+  },
+  "verify_stderr": ""
+}

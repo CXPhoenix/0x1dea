@@ -1,0 +1,19 @@
+test_conflicting_main_refresh_requires_exact_reviewed_resolution_tree (article_publication.test_v2.V2Tests.test_conflicting_main_refresh_requires_exact_reviewed_resolution_tree) ... FAIL
+
+======================================================================
+FAIL: test_conflicting_main_refresh_requires_exact_reviewed_resolution_tree (article_publication.test_v2.V2Tests.test_conflicting_main_refresh_requires_exact_reviewed_resolution_tree)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 255, in test_conflicting_main_refresh_requires_exact_reviewed_resolution_tree
+    self.ok(self.v2('prepare', self.root / 'reviewed-resolution'))
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 59, in ok
+    self.assertEqual(r.returncode,0,r.stdout+r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : ARTICLE-PUBLICATION-V2: schema: unknown or missing fields
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.378s
+
+FAILED (failures=1)

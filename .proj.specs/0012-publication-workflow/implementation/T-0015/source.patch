@@ -1,0 +1,1192 @@
+diff --git a/scripts/publication_current.py b/scripts/publication_current.py
+index cb1ed46..a6ad8fd 100644
+--- a/scripts/publication_current.py
++++ b/scripts/publication_current.py
+@@ -15,8 +15,17 @@ M0 = '.proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.p
+ M0_SHA = '6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a'
+ 
+ 
++def git_environment(*, local_clone=False):
++    env = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
++    env.update({'GIT_CONFIG_NOSYSTEM': '1', 'GIT_CONFIG_GLOBAL': os.devnull,
++                'GIT_NO_REPLACE_OBJECTS': '1', 'GIT_NO_LAZY_FETCH': '1',
++                'GIT_ALLOW_PROTOCOL': 'file' if local_clone else '', 'GIT_TERMINAL_PROMPT': '0'})
++    return env
++
++
+ def git(root, *args):
+-    return subprocess.check_output(['git', '--no-replace-objects', '--literal-pathspecs', '-C', str(root), *args], stderr=subprocess.PIPE)
++    return subprocess.check_output(['git', '--no-replace-objects', '--literal-pathspecs', '-C', str(root), *args],
++                                   stderr=subprocess.PIPE, env=git_environment())
+ 
+ 
+ def digest(data):
+@@ -69,6 +78,7 @@ def policy(control):
+ 
+ 
+ def prepare(control, output):
++    check_history(control)
+     data, inventory = policy(control)
+     output = output.absolute()
+     if output.exists() or output.is_symlink() or output.resolve().is_relative_to(control.resolve()):
+@@ -89,7 +99,8 @@ def prepare(control, output):
+     try:
+         for role, base in BASES.items():
+             target = output / role
+-            subprocess.run(['git', 'clone', '--shared', '--no-checkout', str(control), str(target)], check=True, capture_output=True)
++            subprocess.run(['git', 'clone', '--shared', '--no-checkout', '--template=', str(control), str(target)],
++                           check=True, capture_output=True, env=git_environment(local_clone=True))
+             git(target, 'checkout', '--detach', base)
+             for target_role_name, target_pin in BASES.items():
+                 git(target, 'update-ref', 'refs/heads/' + target_role_name, target_pin)
+@@ -115,13 +126,20 @@ def target_role(control):
+     # The executing reviewed control checkout supplies the context, never root/candidate.
+     for role in ('staging', 'main'):
+         result = subprocess.run(['git', '--no-replace-objects', '-C', str(control),
+-                                 'merge-base', '--is-ancestor', BASES[role], 'HEAD'], capture_output=True)
++                                 'merge-base', '--is-ancestor', BASES[role], 'HEAD'], capture_output=True, env=git_environment())
+         if result.returncode == 0:
+             return role
+     raise ValueError('trusted target ancestor context is unavailable')
+ 
+ 
+ def check_history(root):
++    partial = subprocess.run(['git', '-C', str(root), 'config', '--local', '--includes', '--get-regexp',
++                              r'^(extensions\.partialclone|remote\..*\.(promisor|partialclonefilter))$'],
++                             capture_output=True, env=git_environment())
++    if partial.returncode not in (0, 1):
++        raise ValueError('source configuration check failed')
++    if partial.stdout.strip():
++        raise ValueError('complete history required: partial/promisor configuration is not allowed')
+     if git(root, 'for-each-ref', '--format=%(refname)', 'refs/replace').strip():
+         raise ValueError('replacement history is not allowed')
+     grafts = Path(git(root, 'rev-parse', '--path-format=absolute', '--git-path', 'info/grafts').decode().strip())
+@@ -205,18 +223,35 @@ def check_t13_landing(control, root, state, data):
+         return
+     receipt = json.loads(regular(root, ticket.get('landing_evidence', '')).read_text())
+     from main_publication_verification import tree, identity
+-    engineering = {p: entry for p, entry in data['common'].items()
++    # A completed ticket is bound to its actual main landing policy, not future
++    # T-0014/T-0015 additions in the live engineering control map.
++    main_commit = receipt.get('main_commit', '')
++    if not isinstance(main_commit, str) or len(main_commit) != 40 or any(c not in '0123456789abcdef' for c in main_commit):
++        raise ValueError('T-0013 requires actual main and staging landing commits')
++    try:
++        frozen = json.loads(git(control, 'show', main_commit + ':' + POLICY))
++    except (subprocess.CalledProcessError, ValueError) as error:
++        raise ValueError('T-0013 landing policy is unavailable') from error
++    if (set(frozen) != {'version', 'bases', 'm0_sha256', 'scope', 'common'}
++            or frozen['version'] != 1 or frozen['bases'] != BASES or frozen['m0_sha256'] != M0_SHA
++            or not isinstance(frozen['common'], dict)):
++        raise ValueError('T-0013 landing policy has an invalid contract')
++    engineering = {p: entry for p, entry in frozen['common'].items()
+                    if p.startswith('scripts/') or p == 'docs/adr/0008-main-first-engineering-and-shared-staging.md'}
++    required = {'scripts/publication_current.py', 'scripts/publication-baseline.py',
++                'scripts/verify-harness-adoption.py', 'docs/adr/0008-main-first-engineering-and-shared-staging.md'}
++    if not required <= set(engineering):
++        raise ValueError('T-0013 landing policy is missing the engineering successor')
+     for key, role in [('main_commit', 'main'), ('commit', 'staging')]:
+         commit = receipt.get(key, '')
+         if not isinstance(commit, str) or len(commit) != 40 or any(c not in '0123456789abcdef' for c in commit):
+             raise ValueError('T-0013 requires actual main and staging landing commits')
+         target = 'refs/heads/' + role
+-        if subprocess.run(['git', '-C', str(control), 'show-ref', '--verify', '--quiet', target], capture_output=True).returncode:
++        if subprocess.run(['git', '-C', str(control), 'show-ref', '--verify', '--quiet', target], capture_output=True, env=git_environment()).returncode:
+             target = 'refs/remotes/origin/' + role
+         try:
+             git(control, 'merge-base', '--is-ancestor', commit, target)
+-            landed = tree(root, commit)
++            landed = tree(control, commit)
+         except subprocess.CalledProcessError as error:
+             raise ValueError('T-0013 landing is not in the trusted target history') from error
+         if any(identity(landed.get(p)) != expected for p, expected in engineering.items()):
+diff --git a/scripts/run-current-python-tests.py b/scripts/run-current-python-tests.py
+new file mode 100644
+index 0000000..df9b233
+--- /dev/null
++++ b/scripts/run-current-python-tests.py
+@@ -0,0 +1,73 @@
++#!/usr/bin/env python3
++"""Run live Python suites plus the explicit immutable #22 T13 fixture contract."""
++import argparse
++from pathlib import Path
++import os
++import subprocess
++import sys
++import tempfile
++import unittest
++
++ROOT = Path(__file__).resolve().parents[1]
++T13_MAIN_LANDING = '001b26f8e931e0cf1e62373c5aa088a1b5ed09eb'
++HISTORICAL_MODULE = 'article_publication.test_current_baseline'
++
++
++def live_only(suite):
++    """Exclude exactly one versioned historical module, never current/new modules."""
++    result = unittest.TestSuite()
++    for item in suite:
++        if isinstance(item, unittest.TestSuite):
++            result.addTest(live_only(item))
++        elif item.__class__.__module__ != HISTORICAL_MODULE:
++            result.addTest(item)
++    return result
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--tests-root', type=Path, default=ROOT / 'tests')
++    args = parser.parse_args()
++    sys.dont_write_bytecode = True
++    os.environ['PYTHONDONTWRITEBYTECODE'] = '1'
++    historical = args.tests_root.resolve() / 'article_publication/test_current_baseline.py'
++    frozen = subprocess.run(['git', '--no-replace-objects', '-C', str(ROOT), 'show',
++                             T13_MAIN_LANDING + ':tests/article_publication/test_current_baseline.py'],
++                            capture_output=True)
++    if frozen.returncode or historical.is_symlink() or not historical.is_file() or historical.read_bytes() != frozen.stdout:
++        print('changed historical T13 test contract; #22 fixture cannot hide current test edits', file=sys.stderr)
++        return 1
++    success = True
++    for name in ('harness_adoption', 'article_publication'):
++        loader = unittest.TestLoader()
++        try:
++            suite = loader.discover(str(args.tests_root.resolve()/name), top_level_dir=str(args.tests_root.resolve()))
++            if name == 'article_publication':
++                suite = live_only(suite)
++        except (ImportError, OSError) as error:
++            print(f'{name}: testsRun=0 failures=0 errors=1 discovery_error={error}', flush=True)
++            success = False
++            continue
++        result = unittest.TextTestRunner(verbosity=2).run(suite)
++        print(f'{name} (live): testsRun={result.testsRun} failures={len(result.failures)} errors={len(result.errors)}', flush=True)
++        success = result.testsRun > 0 and result.wasSuccessful() and success
++    # Explicitly choose the historical context before execution. There is no
++    # failure-dependent retry/fallback and no copying live tests into this fixture.
++    with tempfile.TemporaryDirectory(prefix='t13-pr22-contract-') as tmp:
++        fixture = Path(tmp)/'fixture'
++        for command in (['git', 'clone', '--shared', '--no-checkout', str(ROOT), str(fixture)],
++                        ['git', '-C', str(fixture), 'checkout', '--detach', T13_MAIN_LANDING]):
++            result = subprocess.run(command, capture_output=True, text=True)
++            if result.returncode:
++                print('T13 #22 frozen fixture unavailable: ' + result.stderr, file=sys.stderr)
++                return 1
++        result = subprocess.run([sys.executable, '-m', 'unittest', 'discover', '-s',
++                                 str(fixture/'tests/article_publication'), '-p', 'test_current_baseline.py', '-v'],
++                                cwd=fixture)
++        print('T13 #22 frozen fixture: commit=' + T13_MAIN_LANDING + ' exit=' + str(result.returncode), flush=True)
++        success = result.returncode == 0 and success
++    return 0 if success else 1
++
++
++if __name__ == '__main__':
++    sys.exit(main())
+diff --git a/tests/article_publication/test_closed_baseline.py b/tests/article_publication/test_closed_baseline.py
+new file mode 100644
+index 0000000..de49377
+--- /dev/null
++++ b/tests/article_publication/test_closed_baseline.py
+@@ -0,0 +1,68 @@
++"""P23 current closed tracker is checked independently of the frozen #22 fixtures."""
++import json
++import hashlib
++from pathlib import Path
++import subprocess
++import sys
++import tempfile
++import unittest
++
++SOURCE = Path(__file__).resolve().parents[2]
++MAIN = '001b26f8e931e0cf1e62373c5aa088a1b5ed09eb'
++STAGING = '035783590895a426ee395045829ebc9d50e2b9cf'
++
++
++class ClosedBaselineTests(unittest.TestCase):
++    def setUp(self):
++        self.tmp = tempfile.TemporaryDirectory(prefix='closed-baseline-')
++        self.addCleanup(self.tmp.cleanup)
++        self.output = Path(self.tmp.name) / 'projection'
++        result = subprocess.run([sys.executable, str(SOURCE/'scripts/publication-baseline.py'),
++                                 'prepare', '--output', str(self.output)], capture_output=True, text=True)
++        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
++        for role in ('main', 'staging'):
++            controller = self.output / role
++            for name, pin in (('main', MAIN), ('staging', STAGING)):
++                subprocess.run(['git', '-C', str(controller), 'update-ref', 'refs/heads/' + name, pin], check=True)
++            subprocess.run(['git', '-C', str(controller), 'update-ref', 'HEAD', MAIN if role == 'main' else STAGING], check=True)
++
++    def test_real_closed_t13_landing_does_not_require_future_ticket_scripts(self):
++        for role in ('main', 'staging'):
++            controller = self.output / role
++            result = subprocess.run([sys.executable, str(controller/'scripts/verify-harness-adoption.py')],
++                                     capture_output=True, text=True)
++            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
++            report = json.loads(result.stdout)
++            self.assertEqual(report['tracker']['tickets']['T-0013']['status'], 'done')
++            self.assertEqual(report['target_role'], role)
++            self.assertFalse(report['publishable'])
++    def test_current_guard_still_rejects_m0_as_implementation_landing(self):
++        controller = self.output / 'main'
++        receipt_path = controller / '.proj.specs/0012-publication-workflow/implementation/T-0013-landing/landing.json'
++        receipt = json.loads(receipt_path.read_bytes())
++        receipt['main_commit'] = 'eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a'
++        receipt['commit'] = 'c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7'
++        receipt_path.write_text(json.dumps(receipt))
++        policy_path = controller / 'maintenance/publication-workflow/engineering-v1.json'
++        policy = json.loads(policy_path.read_bytes())
++        policy['common'][receipt_path.relative_to(controller).as_posix()]['sha256'] = hashlib.sha256(receipt_path.read_bytes()).hexdigest()
++        policy_path.write_text(json.dumps(policy))
++        result = subprocess.run([sys.executable, str(controller/'scripts/verify-harness-adoption.py')],
++                                 capture_output=True, text=True)
++        self.assertNotEqual(result.returncode, 0)
++        self.assertIn('T-0013 landing', result.stderr)
++        self.assertEqual(result.stdout, '')
++
++    def test_current_guard_rejects_partial_promisor_candidate_without_fetch(self):
++        controller = self.output / 'main'
++        subprocess.run(['git', '-C', str(controller), 'config', 'remote.fixture.promisor', 'true'], check=True)
++        result = subprocess.run([sys.executable, str(controller/'scripts/verify-harness-adoption.py')],
++                                 capture_output=True, text=True)
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        self.assertIn('partial/promisor', result.stderr)
++        self.assertEqual(result.stdout, '')
++
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/tests/article_publication/test_current_runner.py b/tests/article_publication/test_current_runner.py
+new file mode 100644
+index 0000000..2d50cdb
+--- /dev/null
++++ b/tests/article_publication/test_current_runner.py
+@@ -0,0 +1,28 @@
++"""The explicit historical runner must not hide changes to its live historical test file."""
++from pathlib import Path
++import subprocess
++import sys
++import tempfile
++import unittest
++
++SOURCE = Path(__file__).resolve().parents[2]
++
++
++class CurrentRunnerTests(unittest.TestCase):
++    def test_changed_historical_fixture_file_is_rejected_before_loading_tests(self):
++        with tempfile.TemporaryDirectory(prefix='runner-contract-') as tmp:
++            root = Path(tmp) / 'tests'
++            folder = root / 'article_publication'
++            folder.mkdir(parents=True)
++            (folder / '__init__.py').write_bytes(b'')
++            historical = 'test_current_baseline.py'
++            (folder / historical).write_bytes((SOURCE/'tests/article_publication'/historical).read_bytes() + b'\n# unreviewed assertion contract change\n')
++            result = subprocess.run([sys.executable, str(SOURCE/'scripts/run-current-python-tests.py'),
++                                     '--tests-root', str(root)], text=True, capture_output=True)
++            self.assertNotEqual(result.returncode, 0)
++            self.assertIn('changed historical T13 test contract', result.stderr)
++            self.assertNotIn('T13 #22 frozen fixture: commit=', result.stdout)
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/scripts/staging-sync.py b/scripts/staging-sync.py
+new file mode 100644
+index 0000000..521b2cb
+--- /dev/null
++++ b/scripts/staging-sync.py
+@@ -0,0 +1,384 @@
++#!/usr/bin/env python3
++"""Compute a local fixed-staging sync; never grants remote/publication authority."""
++import argparse
++import hashlib
++import json
++import os
++import re
++from pathlib import Path
++import shutil
++import subprocess
++import sys
++import tempfile
++
++sys.dont_write_bytecode = True
++BASELINE_ALIASES = {
++    'skills/phoenix-writing/reference': b'../../maintenance/writing-skills/legacy/phoenix-writing/reference',
++    'skills/phoenix-writing/scripts': b'../maintaining-writing-skills/legacy-validator',
++    '.gemini/skills/creating-vitepress-post': b'../../skills/creating-vitepress-post',
++}
++
++PROTECTED_HISTORY = {
++    'maintenance/article-publication/source-boundary.json',
++    'maintenance/lint-cleanup/source-boundary.json',
++    'maintenance/writing-skills/original-manifest.json',
++    'maintenance/writing-skills/publication-manifest.json',
++    'maintenance/writing-skills/skills-mcp-manifest.json',
++    'maintenance/harness-reconciliation/staging.json',
++    'maintenance/harness-reconciliation/components.json',
++    'maintenance/harness-reconciliation/article-electricity-revision.json',
++    'maintenance/harness-reconciliation/test-contract-repair.json',
++    'maintenance/publication-workflow/history/main-verifier.py',
++    'maintenance/publication-workflow/history/staging-verifier.py',
++    '.proj.specs/0002-article-publication/electricity-release/scope.json',
++}
++
++
++class Invalid(ValueError):
++    def __init__(self, message, *, status='failure', paths=()):
++        super().__init__(message)
++        self.status = status
++        self.paths = list(paths)
++
++
++def canonical(value):
++    return (json.dumps(value, sort_keys=True, indent=2) + '\n').encode()
++
++
++def git(repo, *args, check=True, data=None):
++    env = {k: v for k, v in os.environ.items() if not k.startswith('GIT_')}
++    env.update(GIT_CONFIG_NOSYSTEM='1', GIT_CONFIG_GLOBAL=os.devnull,
++               GIT_NO_REPLACE_OBJECTS='1', GIT_TERMINAL_PROMPT='0',
++               GIT_NO_LAZY_FETCH='1', GIT_ALLOW_PROTOCOL='')
++    result = subprocess.run(['git', '--no-optional-locks', '-C', str(repo), *args],
++                            capture_output=True, env=env, input=data)
++    if check and result.returncode:
++        raise Invalid('Git check failed: ' + result.stderr.decode('utf-8', 'replace').strip())
++    return result
++
++
++def exact(value, fields):
++    if not isinstance(value, dict) or set(value) != set(fields):
++        raise Invalid('schema: unknown or missing fields')
++
++
++def safe_path(value):
++    if (not isinstance(value, str) or not value or value.startswith('/')
++            or any(c in value for c in ('\\', '\0', '\n', '\r', '\t'))
++            or any(c in ('', '.', '..', '.git') for c in value.split('/'))):
++        raise Invalid('schema: unsafe path')
++    return value
++
++
++def pin_schema(value):
++    exact(value, ('ref', 'sha'))
++    if (not isinstance(value['sha'], str) or not re.fullmatch('[0-9a-f]{40}', value['sha'])
++            or not isinstance(value['ref'], str) or not re.fullmatch('[A-Za-z0-9][A-Za-z0-9._/-]*', value['ref'])
++            or any(c in value['ref'] for c in ('..', '//')) or value['ref'].endswith('/')):
++        raise Invalid('schema: unsafe pin')
++
++
++def identity_map(value):
++    if not isinstance(value, dict):
++        raise Invalid('schema: path identity map required')
++    for path, identity in value.items():
++        safe_path(path)
++        exact(identity, ('mode', 'blob'))
++        if (identity['mode'] not in ('100644', '100755', '120000')
++                or not isinstance(identity['blob'], str) or not re.fullmatch('[0-9a-f]{40}', identity['blob'])):
++            raise Invalid('schema: invalid path identity: ' + path, paths=[path])
++
++
++def validate(registry):
++    exact(registry, ('version', 'target', 'repository', 'main', 'staging', 'trees', 'candidates', 'engineering', 'checks'))
++    if type(registry['version']) is not int or registry['version'] != 1 or registry['target'] != 'staging':
++        raise Invalid('schema: version 1 fixed staging target required')
++    if (not isinstance(registry['repository'], str) or not Path(registry['repository']).is_absolute()
++            or any(c in registry['repository'] for c in ('\0', '\n', '\r'))):
++        raise Invalid('schema: absolute source repository required')
++    pin_schema(registry['main'])
++    pin_schema(registry['staging'])
++    for role in ('main', 'staging'):
++        if registry[role]['ref'] not in (role, 'refs/heads/' + role, 'refs/remotes/origin/' + role):
++            raise Invalid('schema: fixed target ref required: ' + role)
++    exact(registry['trees'], ('main', 'staging'))
++    for role in ('main', 'staging'):
++        identity_map(registry['trees'][role])
++    identity_map(registry['checks'])
++    if not isinstance(registry['candidates'], list) or not isinstance(registry['engineering'], list):
++        raise Invalid('schema: lists required')
++    owned, ids = set(), set()
++    for candidate in registry['candidates']:
++        exact(candidate, ('id', 'source', 'paths'))
++        if (not isinstance(candidate['id'], str) or not re.fullmatch('[A-Za-z0-9][A-Za-z0-9._-]{0,63}', candidate['id'])
++                or candidate['id'] in ids):
++            raise Invalid('schema: duplicate or invalid candidate id')
++        ids.add(candidate['id'])
++        pin_schema(candidate['source'])
++        identity_map(candidate['paths'])
++        if not candidate['paths'] or not any(p.startswith('blog/') and p.endswith('.md') for p in candidate['paths']):
++            raise Invalid('schema: candidate article paths required')
++        for name, expected in candidate['paths'].items():
++            if name in owned or not name.startswith('blog/') or registry['trees']['staging'].get(name) != expected:
++                raise Invalid('schema: candidate overlap or staging identity mismatch: ' + name, paths=[name])
++            owned.add(name)
++    main, stage = registry['trees']['main'], registry['trees']['staging']
++    historical = {p for p in stage if p.startswith('maintenance/harness-adoption/') or p in PROTECTED_HISTORY}
++    omitted = historical - set(registry['checks'])
++    if omitted:
++        raise Invalid('schema: protected history checks missing', paths=sorted(omitted))
++    delta = {p for p in set(main) | set(stage) if main.get(p) != stage.get(p)}
++    engineering = set()
++    for name in registry['engineering']:
++        safe_path(name)
++        blog_engineering = name == 'blog/index.md' or name.startswith(('blog/.vitepress/', 'blog/shared/'))
++        if name in engineering or name in owned or (name.startswith('blog/') and not blog_engineering):
++            raise Invalid('schema: engineering ownership overlap or article path: ' + name, paths=[name])
++        engineering.add(name)
++    missing = delta - owned - engineering
++    extra = engineering - delta
++    if missing or extra:
++        raise Invalid('schema: incomplete or extra delta classification', paths=sorted(missing | extra))
++    return registry
++
++
++def load_registry(raw):
++    def unique(pairs):
++        found = {}
++        for key, value in pairs:
++            if key in found:
++                raise Invalid('schema: duplicate JSON key')
++            found[key] = value
++        return found
++    return validate(json.loads(raw, object_pairs_hook=unique))
++
++
++def pins(registry):
++    return [registry['main'], registry['staging']] + [c['source'] for c in registry['candidates']]
++
++
++def check_refs(registry):
++    for pin in pins(registry):
++        actual = git(registry['repository'], 'rev-parse', '--verify', '--end-of-options',
++                     pin['ref'] + '^{commit}').stdout.decode().strip()
++        if actual != pin['sha']:
++            raise Invalid('ref drift: ' + pin['ref'], status='stale')
++
++
++def identities(repo, ref):
++    found = {}
++    for row in git(repo, 'ls-tree', '-rz', '--full-tree', ref).stdout.split(b'\0'):
++        if not row:
++            continue
++        meta, name = row.split(b'\t', 1)
++        mode, kind, blob = meta.decode().split()
++        path = safe_path(name.decode())
++        if kind != 'blob' or mode not in ('100644', '100755', '120000'):
++            raise Invalid('unsafe tree entry: ' + path, paths=[path])
++        if mode == '120000' and (path not in BASELINE_ALIASES or git(repo, 'cat-file', 'blob', blob).stdout != BASELINE_ALIASES[path]):
++            raise Invalid('unsafe symlink: ' + path, paths=[path])
++        if path in found:
++            raise Invalid('duplicate source tree path: ' + path, paths=[path])
++        found[path] = {'mode': mode, 'blob': blob}
++    return found
++
++
++def check_source_blobs(source, registry):
++    names = {}
++    for entries in registry['trees'].values():
++        for path, identity in entries.items():
++            names.setdefault(identity['blob'], set()).add(path)
++    order = sorted(names)
++    if not order:
++        return
++    raw = git(source, 'cat-file', '--batch', data=('\n'.join(order) + '\n').encode()).stdout
++    cursor = 0
++    for blob in order:
++        end = raw.find(b'\n', cursor)
++        header = raw[cursor:end].split()
++        paths = sorted(names[blob])
++        if end < cursor or len(header) != 3 or header[:2] != [blob.encode(), b'blob'] or not header[2].isdigit():
++            raise Invalid('missing or invalid source blob', paths=paths)
++        size = int(header[2])
++        content = raw[end+1:end+1+size]
++        if (len(content) != size or raw[end+1+size:end+2+size] != b'\n'
++                or hashlib.sha1(b'blob ' + str(size).encode() + b'\0' + content).hexdigest() != blob):
++            raise Invalid('source blob identity mismatch', paths=paths)
++        cursor = end + size + 2
++    if cursor != len(raw):
++        raise Invalid('unexpected source blob batch output')
++
++
++def compute(registry, store):
++    source = Path(registry['repository'])
++    partial = git(source, 'config', '--local', '--includes', '--get-regexp',
++                  r'^(extensions\.partialclone|remote\..*\.(promisor|partialclonefilter))$', check=False)
++    if partial.returncode not in (0, 1):
++        raise Invalid('source configuration check failed')
++    if partial.stdout.strip():
++        raise Invalid('complete source required: partial/promisor configuration is not allowed')
++    if git(source, 'rev-parse', '--is-shallow-repository').stdout.strip() != b'false':
++        raise Invalid('complete source required: shallow history is not allowed')
++    if git(source, 'for-each-ref', '--format=%(refname)', 'refs/replace').stdout.strip():
++        raise Invalid('unmodified source history required: replacement refs are not allowed')
++    grafts = Path(git(source, 'rev-parse', '--path-format=absolute', '--git-path', 'info/grafts').stdout.decode().strip())
++    if grafts.exists() or grafts.is_symlink():
++        raise Invalid('unmodified source history required: grafts are not allowed')
++    check_refs(registry)
++    for role in ('main', 'staging'):
++        actual = identities(source, registry[role]['sha'])
++        expected = registry['trees'][role]
++        if actual != expected:
++            raise Invalid('trusted source tree mismatch: ' + role,
++                          paths=sorted(p for p in set(actual) | set(expected) if actual.get(p) != expected.get(p)))
++    main_aliases = {p: identity for p, identity in registry['trees']['main'].items() if identity['mode'] == '120000'}
++    stage_aliases = {p: identity for p, identity in registry['trees']['staging'].items() if identity['mode'] == '120000'}
++    alias_delta = sorted(p for p in set(main_aliases) | set(stage_aliases) if main_aliases.get(p) != stage_aliases.get(p))
++    if alias_delta:
++        raise Invalid('immutable alias delta is not allowed', paths=alias_delta)
++    check_source_blobs(source, registry)
++    for candidate in registry['candidates']:
++        source_tree = identities(source, candidate['source']['sha'])
++        bad = [p for p, expected in candidate['paths'].items() if source_tree.get(p) != expected]
++        if bad:
++            raise Invalid('candidate source identity mismatch', paths=sorted(bad))
++    git(source, 'init', '--bare', '--template=', '-q', str(store))
++    object_path = Path(git(source, 'rev-parse', '--git-path', 'objects').stdout.decode().strip())
++    if not object_path.is_absolute():
++        object_path = source / object_path
++    (store/'objects/info/alternates').write_text(str(object_path.resolve()) + '\n')
++    contained = git(store, 'merge-base', '--is-ancestor', registry['main']['sha'], registry['staging']['sha'], check=False).returncode == 0
++    merged = git(store, 'merge-tree', '--write-tree', '--name-only', '-z',
++                 registry['staging']['sha'], registry['main']['sha'], check=False)
++    if merged.returncode:
++        if merged.returncode == 1:
++            names = merged.stdout.split(b'\0')[1:]
++            paths = []
++            for name in names:
++                if not name:
++                    break
++                paths.append(name.decode())
++            raise Invalid('Git merge conflict', status='conflict', paths=sorted(set(paths)))
++        raise Invalid('Git merge failed: ' + merged.stderr.decode('utf-8', 'replace').strip())
++    tree = merged.stdout.split(b'\0', 1)[0].decode()
++    result = identities(store, tree)
++    result_aliases = {p: identity for p, identity in result.items() if identity['mode'] == '120000'}
++    if result_aliases != stage_aliases:
++        raise Invalid('immutable alias result changed',
++                      paths=sorted(p for p in set(result_aliases) | set(stage_aliases) if result_aliases.get(p) != stage_aliases.get(p)))
++    for candidate in registry['candidates']:
++        for name, expected in candidate['paths'].items():
++            if result.get(name) != expected:
++                raise Invalid('candidate identity changed: ' + name, paths=[name])
++    for name, expected in registry['checks'].items():
++        if result.get(name) != expected:
++            raise Invalid('protected identity check failed: ' + name, paths=[name])
++    check_refs(registry)
++    return {'version': 1, 'status': 'no-op' if contained else 'ready', 'target': 'staging', 'local_ready': not contained,
++            'publishable': False, 'repository': str(source), 'main': registry['main'],
++            'staging': registry['staging'], 'sources': [c['source'] for c in registry['candidates']],
++            'result_tree': tree, 'checks': ['pinned-source-trees', 'independent-git-tree',
++                                         'full-candidate-identities', 'protected-identities', 'local-ref-pins']}
++
++
++def safe_output(path, repository):
++    if not path.is_absolute():
++        raise Invalid('output must be absolute')
++    for parent in (path, *path.parents):
++        if parent.is_symlink() and str(parent) not in ('/tmp', '/var'):
++            raise Invalid('output symlink or symlinked parent')
++    output = path.resolve()
++    if output.is_relative_to(Path(repository).resolve()):
++        raise Invalid('output must be external to source repository')
++    common = Path(git(repository, 'rev-parse', '--git-common-dir').stdout.decode().strip())
++    if not common.is_absolute():
++        common = Path(repository) / common
++    if output.is_relative_to(common.resolve()):
++        raise Invalid('output must be external to source Git storage')
++    return output
++
++
++def public_schema():
++    pin = {'type': 'object', 'additionalProperties': False, 'required': ['ref', 'sha'],
++           'properties': {'ref': {'type': 'string'}, 'sha': {'type': 'string', 'pattern': '^[0-9a-f]{40}$'}}}
++    identity = {'type': 'object', 'additionalProperties': False, 'required': ['mode', 'blob'],
++                'properties': {'mode': {'enum': ['100644', '100755', '120000']},
++                               'blob': {'type': 'string', 'pattern': '^[0-9a-f]{40}$'}}}
++    paths = {'type': 'object', 'additionalProperties': identity}
++    properties = {'version': {'const': 1}, 'target': {'const': 'staging'},
++                  'repository': {'type': 'string', 'description': 'Absolute trusted source repository'},
++                  'main': pin, 'staging': pin,
++                  'trees': {'type': 'object', 'additionalProperties': False, 'required': ['main', 'staging'],
++                            'properties': {'main': paths, 'staging': paths}},
++                  'candidates': {'type': 'array', 'items': {'type': 'object', 'additionalProperties': False,
++                                 'required': ['id', 'source', 'paths'], 'properties': {
++                                     'id': {'type': 'string'}, 'source': pin, 'paths': paths}}},
++                  'engineering': {'type': 'array', 'uniqueItems': True, 'items': {'type': 'string'}},
++                  'checks': paths}
++    return {'version': 1, 'target': 'staging', 'operations': ['prepare', 'verify', 'schema'],
++            'registry': {'type': 'object', 'additionalProperties': False,
++                         'required': list(properties), 'properties': properties},
++            'receipt': {'version': 1, 'statuses': ['ready', 'no-op', 'conflict', 'failure', 'stale'],
++                        'authority': 'local CLI source checks only; no remote/native/browser/CI authority',
++                        'success_fields': ['version', 'status', 'target', 'local_ready', 'publishable',
++                                           'repository', 'main', 'staging', 'sources', 'result_tree',
++                                           'checks', 'registry_sha256'],
++                        'failure_fields': ['version', 'status', 'target', 'local_ready', 'publishable', 'paths', 'error']},
++            'constraints': ['Full source tree inventory and exact delta ownership required',
++                            'Candidate full bytes include all metadata; sources and staging must match',
++                            'Only fixed historical literal aliases are allowed; never followed',
++                            'Reviewed caller supplies external registry digest; no automatic registry approval']}
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('operation', choices=('prepare', 'verify', 'schema'))
++    parser.add_argument('--registry', type=Path)
++    parser.add_argument('--registry-sha256', help='Reviewed external digest, not derived from candidate input')
++    parser.add_argument('--output', type=Path, help='New external directory for prepare; existing result for verify')
++    args = parser.parse_args()
++    if args.operation == 'schema':
++        print(canonical(public_schema()).decode(), end='')
++        return 0
++    if args.registry is None or args.registry_sha256 is None or args.output is None:
++        parser.error('prepare/verify require --registry, --registry-sha256 and --output')
++    created = None
++    try:
++        raw = args.registry.read_bytes()
++        if hashlib.sha256(raw).hexdigest() != args.registry_sha256:
++            raise Invalid('trusted registry digest mismatch')
++        registry = load_registry(raw)
++        output = safe_output(args.output, registry['repository'])
++        if args.operation == 'prepare':
++            if output.exists() or output.is_relative_to(Path(registry['repository']).resolve()):
++                raise Invalid('output must be a new external directory')
++            with tempfile.TemporaryDirectory(prefix='staging-sync-compute-') as tmp:
++                store = Path(tmp) / 'result.git'
++                report = compute(registry, store)
++                report['registry_sha256'] = args.registry_sha256
++                output.mkdir()
++                created = output
++                shutil.copytree(store, output/'result.git')
++                (output/'receipt.json').write_bytes(canonical(report))
++        else:
++            receipt = json.loads((output/'receipt.json').read_bytes())
++            with tempfile.TemporaryDirectory(prefix='staging-sync-verify-') as tmp:
++                report = compute(registry, Path(tmp)/'result.git')
++                report['registry_sha256'] = args.registry_sha256
++                if report != receipt or identities(output/'result.git', report['result_tree']) != identities(Path(tmp)/'result.git', report['result_tree']):
++                    raise Invalid('receipt or result tree mismatch')
++        check_refs(registry)
++        print(canonical(report).decode(), end='')
++        return 0
++    except (Invalid, OSError, ValueError, KeyError, TypeError) as error:
++        if created is not None:
++            shutil.rmtree(created)
++        print(canonical({'version': 1, 'status': getattr(error, 'status', 'failure'),
++                         'target': 'staging', 'local_ready': False, 'publishable': False,
++                         'paths': getattr(error, 'paths', []), 'error': str(error)}).decode(), end='')
++        print(str(error), file=sys.stderr)
++        return 2
++
++
++if __name__ == '__main__':
++    sys.exit(main())
+diff --git a/tests/article_publication/test_staging_sync.py b/tests/article_publication/test_staging_sync.py
+new file mode 100644
+index 0000000..7987aa9
+--- /dev/null
++++ b/tests/article_publication/test_staging_sync.py
+@@ -0,0 +1,463 @@
++"""P09/P10 at public CLI + disposable real Git boundary; no remote mutations."""
++import hashlib
++import json
++import os
++import shutil
++from pathlib import Path
++import subprocess
++import sys
++import tempfile
++import unittest
++import zlib
++
++CLI = Path(__file__).resolve().parents[2] / 'scripts/staging-sync.py'
++ARTICLE = 'blog/post/B.md'
++
++
++class StagingSyncTests(unittest.TestCase):
++    def setUp(self):
++        self.tmp = tempfile.TemporaryDirectory(prefix='staging-sync-')
++        self.addCleanup(self.tmp.cleanup)
++        self.root = Path(self.tmp.name).resolve()
++        self.repo = self.root / 'source'
++        self.repo.mkdir()
++        self.git('init', '-q', '-b', 'main')
++        self.git('config', 'user.name', 'Fixture')
++        self.git('config', 'user.email', 'fixture@example.invalid')
++        self.put('engineering.txt', b'base\n')
++        self.put('maintenance/harness-adoption/history.json', b'{"contract": "unchanged"}\n')
++        self.put(ARTICLE, b'---\ntitle: B\n---\n\nfirst published paragraph\n\nseparator\n\nlast published paragraph\n')
++        alias = self.repo / 'skills/phoenix-writing/reference'
++        alias.parent.mkdir(parents=True, exist_ok=True)
++        alias.symlink_to('../../maintenance/writing-skills/legacy/phoenix-writing/reference')
++        self.base = self.commit()
++        self.git('switch', '-q', '-c', 'staging')
++        self.put(ARTICLE, b'---\ntitle: B\n---\n\nfirst published paragraph\n\nseparator\n\nlast candidate paragraph\n')
++        self.put('blog/post/B/assets/photo.bin', b'original asset')
++        self.stage = self.commit()
++        self.git('branch', 'candidate/B')
++        self.git('switch', '-q', 'main')
++        self.put('engineering.txt', b'main improved\n')
++        self.main = self.commit()
++        self.registry = self.make_registry()
++        self.policy = self.root / 'trusted-registry.json'
++        self.output = self.root / 'result'
++
++    def git(self, *args):
++        result = subprocess.run(['git', *args], cwd=self.repo, capture_output=True, text=True)
++        self.assertEqual(result.returncode, 0, result.stderr)
++        return result.stdout
++
++    def put(self, name, data):
++        path = self.repo / name
++        path.parent.mkdir(parents=True, exist_ok=True)
++        path.write_bytes(data)
++
++    def commit(self):
++        self.git('add', '--all')
++        tree = self.git('write-tree').strip()
++        parents = self.git('for-each-ref', '--format=%(objectname)', self.git('symbolic-ref', 'HEAD').strip()).strip()
++        oid = self.git('commit-tree', tree, '-m', 'Synthetic fixture', *(['-p', parents] if parents else [])).strip()
++        self.git('update-ref', 'HEAD', oid)
++        return oid
++
++    def identities(self, ref):
++        result = {}
++        for row in self.git('ls-tree', '-r', ref).splitlines():
++            meta, path = row.split('\t')
++            mode, kind, blob = meta.split()
++            self.assertEqual(kind, 'blob')
++            result[path] = {'mode': mode, 'blob': blob}
++        return result
++
++    def make_registry(self):
++        main = self.identities('main')
++        stage = self.identities('staging')
++        candidate_paths = [ARTICLE, 'blog/post/B/assets/photo.bin']
++        return {'version': 1, 'target': 'staging', 'repository': str(self.repo),
++                'main': {'ref': 'main', 'sha': self.git('rev-parse', 'main').strip()},
++                'staging': {'ref': 'staging', 'sha': self.git('rev-parse', 'staging').strip()},
++                'trees': {'main': main, 'staging': stage},
++                'candidates': [{'id': 'B', 'source': {'ref': 'candidate/B', 'sha': self.stage},
++                                'paths': {p: stage[p] for p in candidate_paths}}],
++                'engineering': ['engineering.txt'],
++                'checks': {'maintenance/harness-adoption/history.json': stage['maintenance/harness-adoption/history.json']}}
++
++    def run_cli(self, operation='prepare', *extra):
++        raw = (json.dumps(self.registry, indent=2) + '\n').encode()
++        self.policy.write_bytes(raw)
++        return subprocess.run([sys.executable, str(CLI), operation, '--registry', str(self.policy),
++                               '--registry-sha256', hashlib.sha256(raw).hexdigest(),
++                               '--output', str(self.output), *extra], capture_output=True, text=True, env=getattr(self, 'child_env', None))
++
++    def ok(self, result):
++        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
++        return json.loads(result.stdout)
++
++    def source_snapshot(self):
++        git_root = self.repo / '.git'
++        return {str(p.relative_to(self.repo)): p.read_bytes() for p in self.repo.rglob('*')
++                if p.is_file() and (git_root / 'objects') not in p.parents}
++
++    def test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source(self):
++        self.put('engineering.txt', b'uncommitted local edit\n')
++        self.put('untracked.txt', b'keep untracked\n')
++        before = self.source_snapshot()
++        objects = sorted(str(p.relative_to(self.repo)) for p in (self.repo / '.git/objects').rglob('*'))
++        report = self.ok(self.run_cli())
++        self.assertEqual(report['status'], 'ready')
++        self.assertEqual(report['target'], 'staging')
++        self.assertTrue(report['local_ready'])
++        self.assertFalse(report['publishable'])
++        merged = self.identities_from_output(report['result_tree'])
++        expected = dict(self.registry['trees']['staging'])
++        expected['engineering.txt'] = self.registry['trees']['main']['engineering.txt']
++        self.assertEqual(merged, expected)
++        self.assertEqual(before, self.source_snapshot())
++        self.assertEqual(objects, sorted(str(p.relative_to(self.repo)) for p in (self.repo / '.git/objects').rglob('*')))
++        verified = self.ok(self.run_cli('verify'))
++        self.assertEqual(verified['result_tree'], report['result_tree'])
++
++    def test_already_contained_main_returns_noop_without_pr_readiness(self):
++        self.git('update-ref', 'refs/heads/main', self.base)
++        self.registry = self.make_registry()
++        self.registry['engineering'] = []
++        before = self.source_snapshot()
++        report = self.ok(self.run_cli())
++        self.assertEqual(report['status'], 'no-op')
++        self.assertFalse(report['local_ready'])
++        self.assertEqual(report['result_tree'], self.git('rev-parse', 'staging^{tree}').strip())
++        self.assertEqual(before, self.source_snapshot())
++        self.assertEqual(self.ok(self.run_cli('verify'))['status'], 'no-op')
++
++    def test_conflict_reports_exact_paths_and_never_materializes_readiness(self):
++        self.put(ARTICLE, b'---\ntitle: B\n---\n\nfirst published paragraph\n\nseparator\n\nlast incompatible main paragraph\n')
++        self.commit()
++        self.registry = self.make_registry()
++        before = self.source_snapshot()
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0)
++        report = json.loads(result.stdout)
++        self.assertEqual(report['status'], 'conflict')
++        self.assertEqual(report['paths'], [ARTICLE])
++        self.assertFalse(report['local_ready'])
++        self.assertFalse(self.output.exists())
++        self.assertEqual(before, self.source_snapshot())
++
++    def test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob(self):
++        self.put(ARTICLE, b'---\ntitle: B\n---\n\nfirst changed main paragraph\n\nseparator\n\nlast published paragraph\n')
++        self.commit()
++        self.registry = self.make_registry()
++        before = self.source_snapshot()
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0)
++        report = json.loads(result.stdout)
++        self.assertEqual(report['status'], 'failure')
++        self.assertEqual(report['paths'], [ARTICLE])
++        self.assertIn('candidate identity changed', report['error'])
++        self.assertFalse(self.output.exists())
++        self.assertEqual(before, self.source_snapshot())
++
++    def test_registry_requires_complete_unique_candidates_fixed_role_and_strict_schema(self):
++        original = json.loads(json.dumps(self.registry))
++        cases = [
++            ('missing candidate', lambda p: p['candidates'][0]['paths'].pop(ARTICLE)),
++            ('overlap', lambda p: p['candidates'].append(dict(p['candidates'][0], id='B-copy'))),
++            ('role', lambda p: p.update(target='main')),
++            ('unknown', lambda p: p.update(waive_folders=['blog/'])),
++            ('engineering article', lambda p: p['engineering'].append(ARTICLE)),
++            ('incomplete source', lambda p: p['trees']['main'].pop('engineering.txt')),
++        ]
++        before = self.source_snapshot()
++        for label, change in cases:
++            with self.subTest(case=label):
++                self.output = self.root / ('case-' + label.replace(' ', '-'))
++                self.registry = json.loads(json.dumps(original))
++                change(self.registry)
++                result = self.run_cli()
++                self.assertNotEqual(result.returncode, 0, result.stdout)
++                self.assertFalse(json.loads(result.stdout)['local_ready'])
++                self.assertFalse(self.output.exists())
++                self.assertEqual(before, self.source_snapshot())
++        self.registry = original
++
++    def test_candidate_source_pin_must_own_the_registered_full_identity(self):
++        self.git('update-ref', 'refs/heads/candidate/B', self.base)
++        self.registry['candidates'][0]['source']['sha'] = self.base
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        report = json.loads(result.stdout)
++        self.assertIn('candidate source identity', report['error'])
++        self.assertIn(ARTICLE, report['paths'])
++        self.assertFalse(self.output.exists())
++
++    def test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected(self):
++        alias = 'skills/phoenix-writing/reference'
++        report = self.ok(self.run_cli())
++        self.assertEqual(self.identities_from_output(report['result_tree'])[alias], self.registry['trees']['staging'][alias])
++        self.output = self.root / 'unsafe-output'
++        self.git('switch', '-q', 'staging')
++        path = self.repo / alias
++        path.unlink()
++        path.symlink_to('/etc/passwd')
++        self.stage = self.commit()
++        self.git('update-ref', 'refs/heads/candidate/B', self.stage)
++        self.registry = self.make_registry()
++        self.registry['engineering'].append(alias)
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertIn('unsafe symlink', json.loads(result.stdout)['error'])
++        self.assertFalse(self.output.exists())
++
++    def test_local_pin_advance_expires_receipt_for_main_staging_and_candidate_source(self):
++        for ref in ('main', 'staging', 'candidate/B'):
++            with self.subTest(ref=ref):
++                self.output = self.root / ('prepared-' + ref.replace('/', '-'))
++                self.ok(self.run_cli())
++                old = self.git('rev-parse', ref).strip()
++                self.git('update-ref', 'refs/heads/' + ref, self.base)
++                before = self.source_snapshot()
++                result = self.run_cli('verify')
++                self.assertNotEqual(result.returncode, 0)
++                report = json.loads(result.stdout)
++                self.assertEqual(before, self.source_snapshot())
++                self.git('update-ref', 'refs/heads/' + ref, old)
++                self.assertEqual(report['status'], 'stale')
++                self.assertFalse(report['local_ready'])
++                self.assertIn(ref, report['error'])
++
++    def test_schema_and_help_expose_supported_local_operations_without_role_selector(self):
++        result = subprocess.run([sys.executable, str(CLI), 'schema'], capture_output=True, text=True)
++        report = self.ok(result)
++        self.assertEqual(report['target'], 'staging')
++        self.assertEqual(report['operations'], ['prepare', 'verify', 'schema'])
++        self.assertEqual(set(report['registry']['required']), set(self.registry))
++        self.assertFalse(report['registry']['additionalProperties'])
++        help_result = subprocess.run([sys.executable, str(CLI), '--help'], capture_output=True, text=True)
++        self.assertEqual(help_result.returncode, 0)
++        self.assertIn('--registry-sha256', help_result.stdout)
++        self.assertNotIn('--role', help_result.stdout)
++
++    def test_protected_history_check_cannot_be_omitted_or_use_wrong_expected_identity(self):
++        self.registry['checks'] = {}
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        self.assertIn('protected history', json.loads(result.stdout)['error'])
++        self.registry = self.make_registry()
++        name = 'maintenance/harness-adoption/history.json'
++        self.registry['checks'][name] = self.registry['trees']['main']['engineering.txt']
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0)
++        report = json.loads(result.stdout)
++        self.assertIn('protected identity check failed', report['error'])
++        self.assertEqual(report['paths'], [name])
++        self.assertFalse(self.output.exists())
++
++    def test_symlinked_output_parent_cannot_redirect_writes(self):
++        destination = self.root / 'outside'
++        destination.mkdir()
++        alias = self.root / 'output-alias'
++        alias.symlink_to(destination, target_is_directory=True)
++        self.output = alias / 'redirected'
++        before = self.source_snapshot()
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        self.assertIn('output', json.loads(result.stdout)['error'])
++        self.assertFalse((destination / 'redirected').exists())
++        self.assertEqual(before, self.source_snapshot())
++
++    def test_final_pin_reread_blocks_a_native_merge_race(self):
++        wrapper = self.root / 'bin'
++        wrapper.mkdir()
++        real_git = shutil.which('git')
++        script = wrapper / 'git'
++        script.write_text('#!' + sys.executable + '\n' +
++                          'import subprocess, sys\n' +
++                          'result = subprocess.run([' + repr(real_git) + ', *sys.argv[1:]])\n' +
++                          'if "merge-tree" in sys.argv:\n' +
++                          '    subprocess.run([' + repr(real_git) + ', "-C", ' + repr(str(self.repo)) +
++                          ', "update-ref", "refs/heads/main", ' + repr(self.base) + '], check=True)\n' +
++                          'sys.exit(result.returncode)\n')
++        script.chmod(0o755)
++        self.child_env = {**os.environ, 'PATH': str(wrapper) + os.pathsep + os.environ['PATH']}
++        index = (self.repo / '.git/index').read_bytes()
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(json.loads(result.stdout)['status'], 'stale')
++        self.assertFalse(self.output.exists())
++        self.assertEqual(index, (self.repo / '.git/index').read_bytes())
++        self.assertEqual(self.git('rev-parse', 'main').strip(), self.base)
++
++    def test_source_custom_shell_merge_driver_is_not_executed(self):
++        marker = self.root / 'executed'
++        self.git('config', 'merge.candidate.driver', 'touch ' + str(marker))
++        self.put('.gitattributes', b'engineering.txt merge=candidate\n')
++        self.commit()
++        self.git('switch', '-q', 'staging')
++        self.put('.gitattributes', b'engineering.txt merge=candidate\n')
++        self.put('engineering.txt', b'staging incompatible\n')
++        self.stage = self.commit()
++        self.git('update-ref', 'refs/heads/candidate/B', self.stage)
++        self.registry = self.make_registry()
++        before = self.source_snapshot()
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(json.loads(result.stdout)['paths'], ['engineering.txt'])
++        self.assertFalse(marker.exists())
++        self.assertEqual(before, self.source_snapshot())
++
++    def test_candidate_metadata_mode_and_receipt_tampering_block_readiness(self):
++        self.put(ARTICLE, b'---\ntitle: changed main metadata\n---\n\nfirst published paragraph\n\nseparator\n\nlast published paragraph\n')
++        self.commit()
++        self.registry = self.make_registry()
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(json.loads(result.stdout)['paths'], [ARTICLE])
++        self.git('update-ref', 'refs/heads/main', self.main)
++        (self.repo / ARTICLE).write_bytes(subprocess.check_output(['git', 'show', self.main + ':' + ARTICLE], cwd=self.repo))
++        (self.repo / ARTICLE).chmod(0o755)
++        self.commit()
++        self.registry = self.make_registry()
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(json.loads(result.stdout)['paths'], [ARTICLE])
++        self.git('update-ref', 'refs/heads/main', self.main)
++        self.registry = self.make_registry()
++        self.ok(self.run_cli())
++        receipt_path = self.output / 'receipt.json'
++        receipt = json.loads(receipt_path.read_bytes())
++        receipt['result_tree'] = self.git('rev-parse', 'main^{tree}').strip()
++        receipt_path.write_text(json.dumps(receipt))
++        before = self.source_snapshot()
++        result = self.run_cli('verify')
++        self.assertNotEqual(result.returncode, 0)
++        self.assertIn('receipt or result tree', json.loads(result.stdout)['error'])
++        self.assertFalse(json.loads(result.stdout)['local_ready'])
++        self.assertEqual(before, self.source_snapshot())
++
++    def test_source_git_template_cannot_install_an_external_merge_driver(self):
++        marker = self.root / 'template-driver-executed'
++        template = self.root / 'git-template'
++        template.mkdir()
++        (template / 'config').write_text('[merge "candidate"]\n\tdriver = touch ' + str(marker) + '\n')
++        self.git('config', 'init.templateDir', str(template))
++        self.put('.gitattributes', b'engineering.txt merge=candidate\n')
++        self.commit()
++        self.git('switch', '-q', 'staging')
++        self.put('.gitattributes', b'engineering.txt merge=candidate\n')
++        self.put('engineering.txt', b'staging incompatible\n')
++        self.stage = self.commit()
++        self.git('update-ref', 'refs/heads/candidate/B', self.stage)
++        self.registry = self.make_registry()
++        result = self.run_cli()
++        self.assertFalse(marker.exists())
++        self.assertNotEqual(result.returncode, 0)
++        self.assertEqual(json.loads(result.stdout)['status'], 'conflict')
++
++    def test_explicit_preview_ui_engineering_is_allowed_without_article_waiver(self):
++        self.git('switch', '-q', 'staging')
++        self.put('blog/.vitepress/config.mts', b'export default { title: "preview" }\n')
++        self.put('blog/index.md', b'# Shared preview\n')
++        self.stage = self.commit()
++        self.git('update-ref', 'refs/heads/candidate/B', self.stage)
++        self.registry = self.make_registry()
++        self.registry['engineering'].extend(['blog/.vitepress/config.mts', 'blog/index.md'])
++        report = self.ok(self.run_cli())
++        result = self.identities_from_output(report['result_tree'])
++        self.assertEqual(result['blog/.vitepress/config.mts'], self.registry['trees']['staging']['blog/.vitepress/config.mts'])
++        self.assertEqual(result[ARTICLE], self.registry['trees']['staging'][ARTICLE])
++
++    def test_main_ref_cannot_be_labeled_as_staging_even_with_self_consistent_registry(self):
++        main = self.registry['trees']['main']
++        self.registry['staging'] = dict(self.registry['main'])
++        self.registry['trees']['staging'] = dict(main)
++        self.registry['candidates'] = []
++        self.registry['engineering'] = []
++        self.registry['checks'] = {'maintenance/harness-adoption/history.json': main['maintenance/harness-adoption/history.json']}
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        self.assertIn('target ref', json.loads(result.stdout)['error'])
++        self.assertFalse(self.output.exists())
++
++    def test_partial_promisor_source_configuration_is_rejected_without_fetch(self):
++        self.git('config', 'remote.fixture.promisor', 'true')
++        self.git('config', 'remote.fixture.partialclonefilter', 'blob:none')
++        before = self.source_snapshot()
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        self.assertIn('partial/promisor', json.loads(result.stdout)['error'])
++        self.assertFalse(self.output.exists())
++        self.assertEqual(before, self.source_snapshot())
++
++    def test_included_promisor_configuration_cannot_hide_partial_history(self):
++        included = self.root / 'included-git-config'
++        included.write_text('[remote "fixture"]\n\tpromisor = true\n')
++        self.git('config', 'include.path', str(included))
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        self.assertIn('partial/promisor', json.loads(result.stdout)['error'])
++        self.assertFalse(self.output.exists())
++
++    def test_missing_candidate_asset_blob_blocks_noop_without_source_object_writes(self):
++        self.git('update-ref', 'refs/heads/main', self.base)
++        self.registry = self.make_registry()
++        self.registry['engineering'] = []
++        name = 'blog/post/B/assets/photo.bin'
++        blob = self.registry['trees']['staging'][name]['blob']
++        (self.repo / '.git/objects' / blob[:2] / blob[2:]).unlink()
++        objects = sorted(str(p.relative_to(self.repo)) for p in (self.repo / '.git/objects').rglob('*'))
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        report = json.loads(result.stdout)
++        self.assertIn('source blob', report['error'])
++        self.assertIn(name, report['paths'])
++        self.assertFalse(self.output.exists())
++        self.assertEqual(objects, sorted(str(p.relative_to(self.repo)) for p in (self.repo / '.git/objects').rglob('*')))
++
++    def test_corrupted_blob_bytes_cannot_keep_the_registered_git_identity(self):
++        name = 'blog/post/B/assets/photo.bin'
++        blob = self.registry['trees']['staging'][name]['blob']
++        content = b'tampered asset with valid Git object header'
++        object_file = self.repo / '.git/objects' / blob[:2] / blob[2:]
++        object_file.chmod(0o644)
++        object_file.write_bytes(zlib.compress(b'blob ' + str(len(content)).encode() + b'\0' + content))
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0)
++        report = json.loads(result.stdout)
++        self.assertIn('source blob identity mismatch', report['error'])
++        self.assertIn(name, report['paths'])
++        self.assertFalse(self.output.exists())
++
++    def test_main_deleting_a_staging_canonical_alias_blocks_the_sync(self):
++        alias = 'skills/phoenix-writing/reference'
++        (self.repo / alias).unlink()
++        self.commit()
++        self.registry = self.make_registry()
++        self.registry['engineering'].append(alias)
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        self.assertIn('immutable alias', json.loads(result.stdout)['error'])
++        self.assertEqual(json.loads(result.stdout)['paths'], [alias])
++        self.assertFalse(self.output.exists())
++
++    def test_fixed_legacy_source_boundary_requires_protected_history_check(self):
++        self.git('switch', '-q', 'staging')
++        name = 'maintenance/article-publication/source-boundary.json'
++        self.put(name, b'{"immutable": true}\n')
++        self.stage = self.commit()
++        self.git('update-ref', 'refs/heads/candidate/B', self.stage)
++        self.registry = self.make_registry()
++        self.registry['engineering'].append(name)
++        result = self.run_cli()
++        self.assertNotEqual(result.returncode, 0, result.stdout)
++        self.assertIn('protected history', json.loads(result.stdout)['error'])
++        self.assertIn(name, json.loads(result.stdout)['paths'])
++        self.assertFalse(self.output.exists())
++
++    def identities_from_output(self, tree):
++        rows = subprocess.check_output(['git', '--git-dir', str(self.output/'result.git'), 'ls-tree', '-r', tree], text=True)
++        return {row.split('\t')[1]: {'mode': row.split()[0], 'blob': row.split()[2]} for row in rows.splitlines()}
++
++
++if __name__ == '__main__':
++    unittest.main()
+diff --git a/docs/staging-sync.md b/docs/staging-sync.md
+new file mode 100644
+index 0000000..dcdaae9
+--- /dev/null
++++ b/docs/staging-sync.md
+@@ -0,0 +1,38 @@
++# 本機 main → staging 同步
++
++`python3 scripts/staging-sync.py` 只計算固定 `staging` 角色的本機結果。它不會建立遠端分支、PR、merge 或修改部署設定；`local_ready` 只表示本機來源檢查符合這份固定契約。
++
++先取得經維護者審查的完整 registry 與另外提供的 SHA-256，不能把候選自行提供的 registry 和自行算出的 digest 當成核准。執行程式與 registry 都屬於可信任的控制端；這個介面不抵禦控制端或其執行環境遭竄改。
++
++```sh
++python3 scripts/staging-sync.py schema
++python3 scripts/staging-sync.py --help
++python3 scripts/staging-sync.py prepare \
++  --registry /absolute/reviewed-registry.json \
++  --registry-sha256 REVIEWED_EXTERNAL_SHA256 \
++  --output /absolute/new-result
++python3 scripts/staging-sync.py verify \
++  --registry /absolute/reviewed-registry.json \
++  --registry-sha256 REVIEWED_EXTERNAL_SHA256 \
++  --output /absolute/new-result
++```
++
++registry 的 version 固定為 `1`，target 固定為 `staging`。main／staging 的 ref 只能使用同名本機分支、`refs/heads/` 或 `refs/remotes/origin/`；每個 ref 都必須附上完整 commit SHA。`trees` 列出兩個完整 Git tree 的逐檔 mode／blob，`candidates` 列出所有候選的 id、來源 ref／SHA 和完整逐檔身分，`engineering` 逐檔列出其餘差異，`checks` 列出結果必須保留的逐檔身分。所有 `maintenance/harness-adoption/` 歷史路徑，以及既有固定 source-boundary、寫作 baseline manifests、reconciliation receipts、PR #17 scope 與歷史 verifier 副本，都必須在 checks 中；完整清單是程式中的 `PROTECTED_HISTORY`。
++
++候選可以是既有已發布路徑的新修訂，也包含未更動但由該候選持有的資產。來源與 staging 中的候選身分必須一致。完整 blob 包含 frontmatter 與本文，不使用段落、檔名或 metadata 欄位的近似比對。
++
++`blog/post/` 與 `blog/public/assets/` 的差異不得用工程分類豁免。`blog/.vitepress/`、`blog/shared/` 與特定 `blog/index.md` 可以逐檔列入工程分類；每個完整 tree 與確切差異仍須驗證，沒有整個資料夾免驗。三個固定歷史 alias 只允許原始 literal target，不會跟隨連結；main、staging 與結果的 alias 身分必須相同，不允許新增、刪除或改 mode。其餘 symlink 與 submodule 一律拒絕。
++
++計算使用新的暫存 bare repository，以唯讀 alternates 取得來源 objects，採 Git 的獨立 merge tree。控制端不會讀取候選程式碼來執行 checker，也不繼承來源的自訂 shell merge driver。Git reads 關閉 lazy fetch 與所有遠端 protocol，拒絕含 include 檔的 partial／promisor 設定、shallow、grafts 與 replacement refs。完整 source blob 都必須存在，實際內容 hash 必須符合其 Git OID。來源分支、HEAD、index、dirty 檔案及來源 object database 都不寫入。成功輸出只有 `result.git` 和 `receipt.json`，需位於來源 checkout 與 Git storage 之外；不允許自訂 symlink 導向輸出路徑。
++
++- `ready`：獨立結果符合完整來源 tree、候選完整 mode／blob 與 protected checks，local_ready 為 true。
++- `no-op`：main 已是 staging 的 ancestor，local_ready 為 false，不需要 PR。
++- `conflict`：回報 Git 的確切衝突路徑，不會選 ours／theirs。
++- `failure`：回報具體 schema／tree／candidate／protected check 問題與可取得的路徑。
++- `stale`：main、staging 或候選來源 ref 漂移，舊 receipt 不能繼續使用。
++
++prepare 與 verify 都在讀取、計算後及回傳結果前重讀 pins。verify 會重算獨立 merge，並比對整份 receipt 與結果 tree；修改 receipt 不能重新賦予 readiness。receipt 的 registry SHA、main／staging／source pins 與 result tree 可供後續自動化綁定操作，但正式遠端寫入前仍須再次重讀遠端 refs 並做 concurrency／ownership 檢查。這些遠端流程屬於 T-0016，尚未啟用。
++
++本機 CLI 檢查不等同產品 native guard、網站 build、瀏覽器、GitHub CI 或正式環境驗證。不同段落即使 Git 沒有衝突，只要合併後候選的完整 blob、mode 或 metadata 改變，就會停止；需先更新來源、重新審查 registry 並取得受影響作者核准，才能重試。
++
++歷史 Python assertions 不會改成配合現行 done 狀態。`python3 scripts/run-current-python-tests.py` 執行現行 suites，再明確用 PR #22 的 Git snapshot 執行原 T-0013 的 10 項 fixtures；只固定該歷史 module，原檔被改會拒絕，新票與目前結案 tracker 仍在 live suite 驗證，沒有失敗後改跑另一份契約的 fallback。

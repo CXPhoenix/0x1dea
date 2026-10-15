@@ -1,0 +1,19 @@
+
+> 0x1dea@1.4.0 test:unit /private/tmp/T13-final-20261014/main
+> vitest run
+
+
+ RUN  v4.0.18 /private/tmp/T13-final-20261014/main
+
+ ✓ tests/vpHelper.vitest.ts (9 tests) 6ms
+ ✓ tests/encoreTicket.vitest.ts (2 tests) 19ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 21ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 80ms
+ ✓ tests/articleCaptions.vitest.ts (26 tests) 237ms
+ ✓ tests/articleSummary.vitest.ts (12 tests) 164ms
+
+ Test Files  6 passed (6)
+      Tests  54 passed (54)
+   Start at  22:08:07
+   Duration  2.23s (transform 1.07s, setup 0ms, import 3.30s, tests 527ms, environment 5.11s)
+

@@ -1,0 +1,19 @@
+test_unknown_staging_add_revert_history_cannot_hide_behind_equal_final_inventory (article_publication.test_v2.V2Tests.test_unknown_staging_add_revert_history_cannot_hide_behind_equal_final_inventory) ... FAIL
+
+======================================================================
+FAIL: test_unknown_staging_add_revert_history_cannot_hide_behind_equal_final_inventory (article_publication.test_v2.V2Tests.test_unknown_staging_add_revert_history_cannot_hide_behind_equal_final_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 224, in test_unknown_staging_add_revert_history_cannot_hide_behind_equal_final_inventory
+    self.reject(self.v2('prepare', self.root / 'unknown-stage-history'), 'staging history')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "8dbcb02b3a5ea08c61bd924beb697196e0436274", "files": {"blog/index.md": {"mode": "100644", "sha256": "5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368"}, "blog/post/A.md": {"mode": "100644", "sha256": "eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737"}}, "mode": "prepare", "plan_sha256": "a93f787fcb6b5a48e3b696d69e097530b89d81c347233cc347c4e5a616510c88", "pr_ready": false, "publishable": false, "registry_sha256": "f4a2c8642e906114df6cac706528b174598f8d100f23855eeac419c667098eff", "source_scan": {"asset_signature_count": 0, "forbidden_routes": ["/post/B", "/post/B.html"], "limits": "Supplementary signatures; exact source admission and candidate tree remain primary.", "prose_signature_count": 1, "status": "supplementary-pass", "unverified_sources": []}, "version": 2}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.174s
+
+FAILED (failures=1)

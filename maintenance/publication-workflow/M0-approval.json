@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "approved_on": "2026-10-14",
+  "approval_source": ".proj.specs/0012-publication-workflow/approval.md",
+  "classification_sha256": "71e88f0f2187505145701fd13145f9e156692d0e40d1bba7852b7c5290e03b49",
+  "inventory_sha256": "6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a",
+  "scope": "local T-0013 baseline implementation; no merge/deployment/publication"
+}

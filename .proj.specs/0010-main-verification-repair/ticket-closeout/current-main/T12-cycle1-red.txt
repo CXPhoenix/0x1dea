@@ -1,0 +1,16 @@
+test_exact_closeout_is_accepted_on_both_target_projections (test_closeout_successor.CloseoutSuccessorTests.test_exact_closeout_is_accepted_on_both_target_projections) ... FAIL
+
+======================================================================
+FAIL: test_exact_closeout_is_accepted_on_both_target_projections (test_closeout_successor.CloseoutSuccessorTests.test_exact_closeout_is_accepted_on_both_target_projections)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<ticket-checkout>/tests/article_publication/test_closeout_successor.py", line 20, in test_exact_closeout_is_accepted_on_both_target_projections
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Blocked inventory: unapproved existing engineering replacement: .proj.specs/0011-main-to-staging-sync/coverage-report.md
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.806s
+
+FAILED (failures=1)

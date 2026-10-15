@@ -31,3 +31,9 @@ Round2 P0=0 across all axes. The repeated stale branch-cell P1 is corrected in t
 ## Implementation evidence
 
 Coverage: .proj.specs/0010-main-verification-repair/ticket-closeout/coverage-report.md (repository-relative). Independent Standards/Spec report: ticket-closeout/review/code-final.md; security report: ticket-closeout/review/security-final.md. The C3 SOURCE=staging fixture P1 is reproduced and resolved in branch-reproduction-red/green.txt. These paths are relative to the epic under .proj.specs unless stated otherwise. T12 remains review pending actual landing.
+
+## Current main-first refresh after PR #26
+
+The latest owner request and approved 0012 workflow supersede the historical two-PR delivery mechanics above for this refresh. Update only original PR #20 against current main; do not change #21, merge targets or deployment settings. See [current compatibility and authority](../../.proj.specs/0010-main-verification-repair/ticket-closeout/current-main/compatibility.md), [per-criterion audit](../../.proj.specs/0010-main-verification-repair/ticket-closeout/current-main/audit.md) and the current-main coverage/review records.
+
+Independent acceptance readback corrects the old T2 interpretation: AP-01–09 and all six cleanup rows have evidence and actual PR14 landing; the extra interactive-browser timeout is not an approved gate. T1/T2/T10 are evidenced done, T5/T11 retain prior done, T3/T4/T8 remain review. T12 continues review until actual authorized landing; this new current-verifier integration is not backdated into T10. The historical helper and every original assertion are byte-preserved against current main; finite closeout identities reside in the current engineering controller.

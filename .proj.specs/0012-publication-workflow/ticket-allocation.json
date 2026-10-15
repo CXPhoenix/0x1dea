@@ -1,0 +1,90 @@
+{
+  "status": "allocated",
+  "approved_on": "2026-10-11",
+  "timezone": "Asia/Taipei",
+  "spec_blob": "a3f0c03754c389d40ca9fb97d8bb7c1ae992651b",
+  "tickets": [
+    {
+      "id": "T-0013",
+      "slug": "common-engineering-baseline",
+      "blocked_by": [],
+      "test_rows": [
+        "P01",
+        "P02",
+        "P03",
+        "P23"
+      ]
+    },
+    {
+      "id": "T-0014",
+      "slug": "v2-selected-candidate",
+      "blocked_by": [
+        "T-0013"
+      ],
+      "test_rows": [
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P14",
+        "P15",
+        "P16",
+        "P17"
+      ]
+    },
+    {
+      "id": "T-0015",
+      "slug": "local-staging-sync",
+      "blocked_by": [
+        "T-0013"
+      ],
+      "test_rows": [
+        "P09",
+        "P10"
+      ]
+    },
+    {
+      "id": "T-0016",
+      "slug": "main-to-staging-sync",
+      "blocked_by": [
+        "T-0015"
+      ],
+      "test_rows": [
+        "P10",
+        "P11",
+        "P12",
+        "P13"
+      ]
+    },
+    {
+      "id": "T-0017",
+      "slug": "selected-article-delivery",
+      "blocked_by": [
+        "T-0014",
+        "T-0016"
+      ],
+      "test_rows": [
+        "P18",
+        "P19",
+        "P20"
+      ]
+    },
+    {
+      "id": "T-0018",
+      "slug": "publication-workflow-skill",
+      "blocked_by": [
+        "T-0017"
+      ],
+      "test_rows": [
+        "P21",
+        "P22",
+        "P23",
+        "P24"
+      ]
+    }
+  ],
+  "first_authorized_implementation": "T-0013",
+  "merge_authorized": false,
+  "deployment_changes_authorized": false
+}

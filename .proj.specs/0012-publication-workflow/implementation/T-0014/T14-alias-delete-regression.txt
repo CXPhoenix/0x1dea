@@ -1,0 +1,6 @@
+test_existing_canonical_alias_cannot_be_deleted_by_article_source (article_publication.test_v2.V2Tests.test_existing_canonical_alias_cannot_be_deleted_by_article_source) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 2.021s
+
+OK

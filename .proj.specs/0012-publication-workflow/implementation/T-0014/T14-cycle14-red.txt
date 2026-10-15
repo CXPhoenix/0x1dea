@@ -1,0 +1,15 @@
+test_exact_declared_dependency_is_included_and_undeclared_dependency_refused (article_publication.test_v2.V2Tests.test_exact_declared_dependency_is_included_and_undeclared_dependency_refused) ... FAIL
+
+======================================================================
+FAIL: test_exact_declared_dependency_is_included_and_undeclared_dependency_refused (article_publication.test_v2.V2Tests.test_exact_declared_dependency_is_included_and_undeclared_dependency_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 209, in test_exact_declared_dependency_is_included_and_undeclared_dependency_refused
+    self.assertIn('blog/public/shared/chart.svg', report['files'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'blog/public/shared/chart.svg' not found in {'blog/index.md': {'mode': '100644', 'sha256': '5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368'}, 'blog/post/A.md': {'mode': '100644', 'sha256': 'eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737'}}
+
+----------------------------------------------------------------------
+Ran 1 test in 1.067s
+
+FAILED (failures=1)

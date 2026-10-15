@@ -1,0 +1,6 @@
+test_verify_rejects_corrupt_output_blobs_with_unchanged_source_and_receipt (article_publication.test_staging_sync.StagingSyncTests.test_verify_rejects_corrupt_output_blobs_with_unchanged_source_and_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.050s
+
+OK

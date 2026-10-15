@@ -1,0 +1,13 @@
+{
+  "checkout": "/private/tmp/0x1dea-T0013",
+  "branch": "tickets/T-0013/common-engineering-baseline",
+  "base": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+  "delivery_commit": null,
+  "sources": {
+    "scripts/publication-baseline.py": "a5f35fa5b980b6b76a9a7dd8ecf23548ce80ab0473a02e8888f8cf063840d662",
+    "tests/article_publication/test_baseline_inventory.py": "f269a313ca11133f36672c53f13988cdaa5d2b00a9d1d56d08df47de6c2402be",
+    "docs/adr/0008-main-first-engineering-and-shared-staging.md": "a0d9ba031d6e9f26db766c969aad5daa87b6b14b5dc9d1b329653c0dc8641237"
+  },
+  "patch_sha256": "294dcc8c2ed17dc66061cc4fac5546e7ee66505fa0a03668c2a309bf5de68448",
+  "status": "uncommitted proposal checkpoint; not landable"
+}

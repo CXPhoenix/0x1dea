@@ -1,0 +1,46 @@
+{
+  "main": {
+    "blog_paths": 73,
+    "changed": [],
+    "inventory_difference": [],
+    "protected_history_changed": []
+  },
+  "staging": {
+    "blog_paths": 111,
+    "changed": [],
+    "inventory_difference": [],
+    "protected_history_changed": [],
+    "candidate_paths": 50,
+    "candidate_mismatches": []
+  },
+  "unchanged_legacy_files": [
+    "scripts/main_publication_verification.py",
+    "scripts/run-current-python-tests.py",
+    "scripts/verify-harness-adoption.py",
+    "tests/articleCaptions.vitest.ts",
+    "tests/articleSummary.vitest.ts",
+    "tests/article_publication/__init__.py",
+    "tests/article_publication/test_baseline_inventory.py",
+    "tests/article_publication/test_cli.py",
+    "tests/article_publication/test_closed_baseline.py",
+    "tests/article_publication/test_current_baseline.py",
+    "tests/article_publication/test_current_runner.py",
+    "tests/article_publication/test_staging_sync.py",
+    "tests/article_publication/test_v2.py",
+    "tests/encoreTicket.vitest.ts",
+    "tests/fixtures/article-caption-baseline.json",
+    "tests/fixtures/article-caption-entry.md",
+    "tests/fixtures/article-caption-migrated.md",
+    "tests/fixtures/article-caption-provenance.json",
+    "tests/fixtures/article-summary.md",
+    "tests/harness_adoption/__init__.py",
+    "tests/harness_adoption/test_main_release.py",
+    "tests/harness_adoption/test_materializer.py",
+    "tests/harness_adoption/test_publication.py",
+    "tests/harness_adoption/test_tracker.py",
+    "tests/lintCleanup.vitest.ts",
+    "tests/vpHelper.vitest.ts"
+  ],
+  "main_pin": "87740186f2a1b57f8c1df89f36647cbe3663f428",
+  "staging_pin": "035783590895a426ee395045829ebc9d50e2b9cf"
+}

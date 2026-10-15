@@ -1,0 +1,279 @@
+{
+  "repository": "/private/tmp/0x1dea-T0015",
+  "base": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+  "branch": "tickets/T-0015/local-staging-sync",
+  "files": {
+    "scripts/staging-sync.py": {
+      "sha256": "257901190d218bcb55c0dcf6dbc4a5c45b9474107cc2c1e32a225508810c534c",
+      "mode": "100644"
+    },
+    "tests/article_publication/test_staging_sync.py": {
+      "sha256": "71c712d1ca9b3d8cc27abc78bb64664aaff9edf71f1b498028695e2a6664064b",
+      "mode": "100644"
+    },
+    "docs/staging-sync.md": {
+      "sha256": "1cb88ef963e966c1e3be170af383a8f49ff62ab4cafa5090a80c242960b71d50",
+      "mode": "100644"
+    },
+    "scripts/publication_current.py": {
+      "sha256": "5ac0f4a35a1085ed99abb5ff42c19c832655f56fd19196cc59be760c0b63dfd7",
+      "mode": "100644"
+    },
+    "scripts/run-current-python-tests.py": {
+      "sha256": "4ff65f3718fa340b2a3d91d8b639a675b6551ca6d317e3a280a95547056019f0",
+      "mode": "100644"
+    },
+    "tests/article_publication/test_closed_baseline.py": {
+      "sha256": "7edfacf5b89c2f479a7ea4e6a975f2aa21fad93120034586039acc32eaab3627",
+      "mode": "100644"
+    },
+    "tests/article_publication/test_current_runner.py": {
+      "sha256": "4cb9c25c00d45af3d216de872244979157b27189909cd2d367ec657382748a15",
+      "mode": "100644"
+    },
+    "maintenance/publication-workflow/engineering-v1.json": {
+      "sha256": "b733813ba203fe311bd93646a532b8e8bcc7bdb026db2a1c01309f7597262e5e",
+      "mode": "100644"
+    },
+    ".proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md": {
+      "sha256": "ee3e869553d8b30072a902ce713b452332d4a58135abdc94a85a3367eb15f95f",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/current-guard-red.txt": {
+      "sha256": "c78f6b5dfebfc613d936889d1859579bf242875419aab16608db2aef25b15547",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/source-manifest.json": {
+      "sha256": "f6b43e04569a1c58ce80c5ade77bee1e01c1ec3c62035090da39bff7b0d96acf",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/additional-template-regression.txt": {
+      "sha256": "5da8e79f07b067e7dde124b2ae1d768a11a1dc01a24e28d91cef5b640701d413",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/materializer.txt": {
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-01-cli.txt": {
+      "sha256": "d06c717c89391b63bc885fcdb09dc06af5bef0fb1994a4df691ea80dae142f81",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/unit.txt": {
+      "sha256": "fb1abee4d5fe10ddc4f24556ee3a6b33d0573afb4f19e53dde6dc24ba77581eb",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/source.patch": {
+      "sha256": "ddb05bc5a4b2bde19dc4fa8a0598942406771f459aebab7280ef1d0508c4b063",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-registry.json": {
+      "sha256": "cb768e13d29b37be5ac458d94b570731d4f99fdac9c09a4d26b5ed2e3f947df5",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-green.txt": {
+      "sha256": "e70a78d49251b57bde35a57ea4a00669ab258d605b82a56204e2bd1424e0e16e",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/full-current-native.txt": {
+      "sha256": "5f198bd922a6a16da2e5e19bbc7712f71335c2c0e54f24419756c94b175723cb",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-final-verify.json": {
+      "sha256": "c3b92384c9a3d43a0b50cd222f7dc4f5e634906af59be269c811950d7d089940",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/included-missing-green.txt": {
+      "sha256": "44f79dae42316eb907c9f0f6a4beb0334454e922911f64107e762a6e947e92c2",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-09.txt": {
+      "sha256": "1b59fa4ae285a760ca902e080b522b5c1d7823344877101f1a93a8ea626b1314",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-08.txt": {
+      "sha256": "6343fdbf8cdf84cb6ba864a055d5448e7426e9ae36cf6b237e664e6f34241605",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-promisor-green.txt": {
+      "sha256": "c38ef86920ae51619981e5692d03459c1dcade8258da0bee0c990b6f42b8a3e1",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/alias-fixedhistory-red.txt": {
+      "sha256": "c806f838e3aa41f6f77f7c9f7f86b256589ff9730c66d0c3394ee90f6a4a70d6",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/build.txt": {
+      "sha256": "e2ce963a8cc1f0c6f7a5bce17dfdb11d4ab06b309f63897c4c92196785d5d1c9",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-final-prepare.json": {
+      "sha256": "c3b92384c9a3d43a0b50cd222f7dc4f5e634906af59be269c811950d7d089940",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/focused.txt": {
+      "sha256": "2bdec5ca356326b4c6d45d0fca2957d09ceedd5dac54ba9273c64f4a843009cb",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/README.md": {
+      "sha256": "8de04e6a7a3659d66eb1c9d76e35b9372d2157a9798cf840155f60bf44cc10ff",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-06.txt": {
+      "sha256": "03ec1c60521e8da3bb90f0801b95376f0730f97dcd175a7f2b956fd891d77cfd",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-13.txt": {
+      "sha256": "5257ade1ee803d554230a66222dffa88f3bfe5e8a88f6dc08d758364dfc3f2da",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-07.txt": {
+      "sha256": "2c321f12cf35bc4355d0321b3f9e75722b4e4dd871864359cfee25cb8f498f22",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/promisor-red.txt": {
+      "sha256": "6632ff5a6ca7144994459c01864ae2070801dcaeb9ee05ad946727bdeffdd305",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-11.txt": {
+      "sha256": "da6c4b199fdf63c5839d498603e3f6f6522ed04160f16526c67ce226ece875d0",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-05.txt": {
+      "sha256": "cc3a225052c4df5e890ad1302ad3fc9908ba0906410e86b02de444b5dac988d0",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/current-guard-green.txt": {
+      "sha256": "d7763a326bb36d79c57594ec3b9f4cba2651c7c27e1341ebadb586a7b05210e0",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-04.txt": {
+      "sha256": "2346cbd6a53e7beef03cf3c0f26611e17b9909e22ce045f95fa1cd5cbdb59c81",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-10.txt": {
+      "sha256": "032e062e4ac1886d24f95a87ca4a07af489200dbe199ba2caa5c045e30422eb2",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-14.txt": {
+      "sha256": "08b25347cfa06bda48da371fff0ff13b1a2b828667065a8c847c6aa7a802ff35",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/lint.txt": {
+      "sha256": "366b5725e88c65fe84aac9bee7b5ae3fe2d8fc1258006127c7570abab473b364",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-03.txt": {
+      "sha256": "e708165a36be4d1e8174f05634814c530d87b31c674b5655cfea20e68bc90bb8",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-02.txt": {
+      "sha256": "639dff1ed6b1081f6efd2fc7b8153dd115da01976a0e9fb84ec9fbf722042480",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-red.txt": {
+      "sha256": "facdacd4437f1dbc643cc5711b26cc55e3cd5a6ae5609d6bfc56ef360d0840b0",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-verify-report.json": {
+      "sha256": "85fe36f2906c1e93bebdce8ccc411c72bbf0e34bafaa70974d3ed811ba922acf",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/coverage.md": {
+      "sha256": "6359f33a41051e622680ca238f81c362d82d7126555b622f2f128658a618fb6b",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/pre-repair-native-diagnostic.txt": {
+      "sha256": "31e74b00e308364c10f26984db6828e0a6a6cdd3f0418431effee177ad55085b",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-promisor-red.txt": {
+      "sha256": "1b2237fe6170d07d00270d0e5b2ec34395809cfa8be2a2103452c9b8b2453c50",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/structure.txt": {
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-final.txt": {
+      "sha256": "140f6332bf0dc25f131c2caf06e711966b2237549e1712abaa3794febee63e58",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-noop-report.json": {
+      "sha256": "85fe36f2906c1e93bebdce8ccc411c72bbf0e34bafaa70974d3ed811ba922acf",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-final-registry.json": {
+      "sha256": "2574dbeaccb5cd76121bea5dd46336410616dfac2389663150fb4aea7223e952",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/runner-preflight-red.txt": {
+      "sha256": "3bc4fa0d2785bd61697a25dc205de7c1d79112caf33a916905526b3246fbdbfa",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/included-missing-red.txt": {
+      "sha256": "115376a637d391ffda7d52f537326fb1053e94aa71461722c4c177328de89e34",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/promisor-green.txt": {
+      "sha256": "0b6d4de1d3c57cad2bb4350be123ec339976c50142902a8be773b86df51ecc5a",
+      "mode": "100644"
+    }
+  },
+  "context": {
+    "AGENTS.md": {
+      "sha256": "77ad12cb3275f1ac5936bc9ae0bad4dfefc048d819e0274d38db4bf1d98bbf53",
+      "mode": "100644"
+    },
+    "CONTEXT.md": {
+      "sha256": "49bacca233796add4d43558287c9a0131d2650528241c4771674af3d7b5b890e",
+      "mode": "100644"
+    },
+    "docs/agents/workflow.md": {
+      "sha256": "f827f005b59cccf7416e5ebb8c64ecba689d99047cb3b90b05ed0541294f98a1",
+      "mode": "100644"
+    },
+    "docs/agents/language.md": {
+      "sha256": "dad4936776742214eca797c9bba88036c5798cbcc4e7397d6803966fe3c5b382",
+      "mode": "100644"
+    },
+    "docs/agents/issue-tracker.md": {
+      "sha256": "836d887504f2eb9be39edca14ffa613bca15d1e2ae70e3e991c5b0bac9293166",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/spec.en.md": {
+      "sha256": "ab7b8b6e83e92b18c52a04b046888cf399f29065d7caa891a77d6241adf1cb8a",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/test-plan.md": {
+      "sha256": "836dd8e284813af5ca66f3f7281eb59b48d8fbf6a6b5775535c1fed6c307576c",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/traceability.md": {
+      "sha256": "a1f38ae83f41774ab254ef74c5e14316745a2281a55e384b691ca1ce058be75a",
+      "mode": "100644"
+    },
+    "scripts/main_publication_verification.py": {
+      "sha256": "6fe08fedc10407bdde8d19305664e4e989de97fd34882d19dba1caee049ec2c6",
+      "mode": "100644"
+    },
+    "scripts/article-publication.py": {
+      "sha256": "69ad7a645f06bb4de3186f698e356bbd09caedc77ba45b597b4b5833317c6a71",
+      "mode": "100644"
+    },
+    "scripts/run-python-tests.py": {
+      "sha256": "8cf28cbd401b265fb3a142a6978aa1203e713f29f20dc79b2b49f4e2e08e405f",
+      "mode": "100644"
+    },
+    "tests/article_publication/test_current_baseline.py": {
+      "sha256": "3236c23abdfbb26543721f4bb4d0e7f0567a19baf324696e84f26d2d1de9af33",
+      "mode": "100644"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/landing.json": {
+      "sha256": "5a6d0d7e589f670ed7edc64e672285083a6fe7835e8ea5fceb55b7b9c532a3c4",
+      "mode": "100644"
+    }
+  },
+  "scope": "T15 local CLI plus current successor and explicit frozen historical native runner; no target/remote/deploy writes",
+  "checks_checkpoint": "23sync +3closed +1preflight cases pass; full119-Python checkpoint before final security followups; parent full integration reruns current"
+}

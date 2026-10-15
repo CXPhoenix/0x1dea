@@ -1,0 +1,6 @@
+test_empty_other_article_commit_is_rejected_by_identity (article_publication.test_v2.V2Tests.test_empty_other_article_commit_is_rejected_by_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.008s
+
+OK

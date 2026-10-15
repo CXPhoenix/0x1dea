@@ -1,0 +1,42 @@
+[
+  {
+    "case": "different-valid-staging-ancestor",
+    "exit_code": 1,
+    "stdout_empty": true,
+    "stderr": "FAIL: unapproved exact closeout identity: .proj.specs/0001-harness-adoption/landing.json",
+    "ancestry_exit": 0
+  },
+  {
+    "case": "nonancestor",
+    "exit_code": 1,
+    "stdout_empty": true,
+    "stderr": "FAIL: unapproved exact closeout identity: .proj.specs/0001-harness-adoption/landing.json",
+    "ancestry_exit": 1
+  },
+  {
+    "case": "missing-receipt",
+    "exit_code": 1,
+    "stdout_empty": true,
+    "stderr": "FAIL: missing successor path: .proj.specs/0001-harness-adoption/landing.json",
+    "ancestry_exit": null
+  },
+  {
+    "case": "linked-receipt",
+    "exit_code": 1,
+    "stdout_empty": true,
+    "stderr": "FAIL: linked successor path: .proj.specs/0001-harness-adoption/landing.json",
+    "ancestry_exit": null
+  },
+  {
+    "case": "executable-receipt",
+    "exit_code": 1,
+    "stdout_empty": true,
+    "stderr": "FAIL: changed exact closeout identity: .proj.specs/0001-harness-adoption/landing.json",
+    "ancestry_exit": null
+  },
+  {
+    "case": "restored-exact-positive",
+    "exit_code": 0,
+    "target_role": "main"
+  }
+]

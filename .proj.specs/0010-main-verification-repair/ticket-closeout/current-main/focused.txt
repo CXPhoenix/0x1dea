@@ -1,0 +1,10 @@
+test_closeout_requires_regular_exact_mode_and_path (test_closeout_successor.CloseoutSuccessorTests.test_closeout_requires_regular_exact_mode_and_path) ... ok
+test_exact_closeout_is_accepted_on_both_target_projections (test_closeout_successor.CloseoutSuccessorTests.test_exact_closeout_is_accepted_on_both_target_projections) ... ok
+test_existing_unrelated_approval_is_not_the_pinned_closeout_authority (test_closeout_successor.CloseoutSuccessorTests.test_existing_unrelated_approval_is_not_the_pinned_closeout_authority) ... ok
+test_receipt_mutation_cannot_be_authorized_by_repinning_the_map (test_closeout_successor.CloseoutSuccessorTests.test_receipt_mutation_cannot_be_authorized_by_repinning_the_map) ... ok
+test_repinning_arbitrary_ticket_text_does_not_authorize_a_successor (test_closeout_successor.CloseoutSuccessorTests.test_repinning_arbitrary_ticket_text_does_not_authorize_a_successor) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 83.466s
+
+OK
