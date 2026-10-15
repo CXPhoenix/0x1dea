@@ -1,0 +1,22 @@
+test_dispatch_payload_is_data_and_cannot_execute_shell (test_remote_validation.TrustedRemoteValidationTests.test_dispatch_payload_is_data_and_cannot_execute_shell) ... ok
+test_real_trusted_main_validation_and_isolated_staging_build (test_remote_validation.TrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build) ... From /var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-tya0bs15/projections/staging
+ * branch            fe43ebc348eaddece0b3b793a90b1b57d1239c98 -> FETCH_HEAD
+From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-tya0bs15/prepared/sync-bj18jqn_/result
+ * branch            9320ce4c2be1c5599f6992c49fa2aea456d2ba04 -> FETCH_HEAD
+FAIL
+test_validation_refuses_writer_credentials_before_candidate_execution (test_remote_validation.TrustedRemoteValidationTests.test_validation_refuses_writer_credentials_before_candidate_execution) ... ok
+
+======================================================================
+FAIL: test_real_trusted_main_validation_and_isolated_staging_build (test_remote_validation.TrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_validation.py", line 105, in test_real_trusted_main_validation_and_isolated_staging_build
+    self.assertEqual(checked.returncode,0,checked.stdout+checked.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : {"version": 1, "status": "blocked", "reason": "symlink output location rejected", "publishable": false}
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 56.595s
+
+FAILED (failures=1)

@@ -2,7 +2,8 @@
 id: T-0012
 title: Integrate evidence-backed ticket closeout with the exact main guard
 epic: 0010-main-verification-repair
-status: review
+status: done
+landing_evidence: .proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0012-landing.json
 blocked_by: []
 ---
 
@@ -37,3 +38,7 @@ Coverage: .proj.specs/0010-main-verification-repair/ticket-closeout/coverage-rep
 The latest owner request and approved 0012 workflow supersede the historical two-PR delivery mechanics above for this refresh. Update only original PR #20 against current main; do not change #21, merge targets or deployment settings. See [current compatibility and authority](../../.proj.specs/0010-main-verification-repair/ticket-closeout/current-main/compatibility.md), [per-criterion audit](../../.proj.specs/0010-main-verification-repair/ticket-closeout/current-main/audit.md) and the current-main coverage/review records.
 
 Independent acceptance readback corrects the old T2 interpretation: AP-01–09 and all six cleanup rows have evidence and actual PR14 landing; the extra interactive-browser timeout is not an approved gate. T1/T2/T10 are evidenced done, T5/T11 retain prior done, T3/T4/T8 remain review. T12 continues review until actual authorized landing; this new current-verifier integration is not backdated into T10. The historical helper and every original assertion are byte-preserved against current main; finite closeout identities reside in the current engineering controller.
+
+## 2026-10-16 actual dual-target closeout
+
+The owner conditionally authorized this closure after manually merging PR21. Primary GitHub readbacks and real Git ancestry establish the main landing and staging61292484 landing, whose tree equals reviewed head dbb17ad8. The current acceptance audit and exact receipt are under `.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/`. Prior review/unlanded notes above remain historical checkpoints. Done refers to this ticket's approved engineering acceptance and actual landing, not deployment, remote automation activation or publication. Candidate bytes and immutable contracts remain preserved.

@@ -1,0 +1,60 @@
+test_contained_main_noop_does_not_create_branch_or_pull (test_remote_sync.RemoteSyncTests.test_contained_main_noop_does_not_create_branch_or_pull) ... ok
+test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) ... 
+  test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) (options={'authorized': False}) ... FAIL
+  test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) (options={'activation': {}}) ... FAIL
+  test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) (options={'activation': {'repository': 'owner/example', 'permissions_verified': True, 'latest_base_verified': False, 'dispatch_verified': True, 'candidate_isolation_verified': True, 'exercise_run_id': 123, 'workflow': 'staging-sync-validate.yml', 'workflow_sha256': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'branch_seed': None}}) ... FAIL
+  test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) (options={'activation': {'repository': 'other/repo', 'permissions_verified': True, 'latest_base_verified': True, 'dispatch_verified': True, 'candidate_isolation_verified': True, 'exercise_run_id': 123, 'workflow': 'staging-sync-validate.yml', 'workflow_sha256': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'branch_seed': None}}) ... FAIL
+test_repeat_event_updates_at_most_one_owned_pull (test_remote_sync.RemoteSyncTests.test_repeat_event_updates_at_most_one_owned_pull) ... ok
+
+======================================================================
+FAIL: test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) (options={'authorized': False})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 98, in test_missing_authority_or_activation_prerequisites_cannot_write
+    self.assertEqual(result['status'], 'blocked')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+
+
+======================================================================
+FAIL: test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) (options={'activation': {}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 98, in test_missing_authority_or_activation_prerequisites_cannot_write
+    self.assertEqual(result['status'], 'blocked')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+
+
+======================================================================
+FAIL: test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) (options={'activation': {'repository': 'owner/example', 'permissions_verified': True, 'latest_base_verified': False, 'dispatch_verified': True, 'candidate_isolation_verified': True, 'exercise_run_id': 123, 'workflow': 'staging-sync-validate.yml', 'workflow_sha256': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'branch_seed': None}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 98, in test_missing_authority_or_activation_prerequisites_cannot_write
+    self.assertEqual(result['status'], 'blocked')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+
+
+======================================================================
+FAIL: test_missing_authority_or_activation_prerequisites_cannot_write (test_remote_sync.RemoteSyncTests.test_missing_authority_or_activation_prerequisites_cannot_write) (options={'activation': {'repository': 'other/repo', 'permissions_verified': True, 'latest_base_verified': True, 'dispatch_verified': True, 'candidate_isolation_verified': True, 'exercise_run_id': 123, 'workflow': 'staging-sync-validate.yml', 'workflow_sha256': 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', 'branch_seed': None}})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_remote_sync.py", line 98, in test_missing_authority_or_activation_prerequisites_cannot_write
+    self.assertEqual(result['status'], 'blocked')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.015s
+
+FAILED (failures=4)

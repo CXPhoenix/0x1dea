@@ -1,0 +1,18 @@
+test_actual_dual_target_closeout_is_accepted (test_landed_closeout.LandedCloseoutTests.test_actual_dual_target_closeout_is_accepted) ... FAIL
+
+======================================================================
+FAIL: test_actual_dual_target_closeout_is_accepted (test_landed_closeout.LandedCloseoutTests.test_actual_dual_target_closeout_is_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "[T16_CHECKOUT]/tests/article_publication/test_landed_closeout.py", line 31, in test_actual_dual_target_closeout_is_accepted
+    self.assertEqual(report['tracker']['tickets'][ticket]['status'], 'done')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'review' != 'done'
+- review
++ done
+
+
+----------------------------------------------------------------------
+Ran 1 test in 7.413s
+
+FAILED (failures=1)

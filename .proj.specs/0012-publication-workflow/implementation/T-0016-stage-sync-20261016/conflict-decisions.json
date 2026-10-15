@@ -1,0 +1,19 @@
+{
+  "conflicts": [
+    "maintenance/publication-workflow/engineering-v1.json"
+  ],
+  "decision": "Trusted actually landed main policy; every old stage common path retained, altered identities limited to exact PR27-reviewed changes. New stage sync evidence appended separately.",
+  "stage_common": 751,
+  "main_common": 874,
+  "stage_common_missing": [],
+  "updated_existing_paths": [
+    ".proj.tickets/0012-publication-workflow/T-0014-v2-selected-candidate.md",
+    ".proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md",
+    ".proj.tickets/0012-publication-workflow/T-0016-main-to-staging-sync.md",
+    "scripts/publication_build_v2.py",
+    "scripts/publication_current.py",
+    "tests/article_publication/test_closed_baseline.py",
+    ".proj.tickets/0010-main-verification-repair/T-0012-ticket-evidence-closeout.md",
+    "tests/article_publication/test_closeout_successor.py"
+  ]
+}

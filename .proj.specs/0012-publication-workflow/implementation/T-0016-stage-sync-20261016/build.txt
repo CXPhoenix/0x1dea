@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "node": "v24.13.0",
+  "isolation": {
+    "inside": true,
+    "outside_read": "denied",
+    "outside_write": "denied",
+    "network": "denied"
+  },
+  "output_files": 143
+}

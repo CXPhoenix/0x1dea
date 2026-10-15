@@ -1,0 +1,3 @@
+# Actual landing and conditional closeout authority
+
+2026-10-16 Asia/Taipei. The owner reported PR21 merged and requested checking actual main/staging landing, candidate preservation and historical contracts, marking T-0012/T-0014/T-0015 done only when their conditions hold, then continuing T-0016 under the approved project workflow. No target merge or deployment-setting change is authorized. Earlier PR20/25/26 and PR21 delivery requests authorized scoped engineering and management delivery; observed GitHub actor CXPhoenix performed the actual merges. This records current conditional tracker authority, not backdated agent merge authority.

@@ -1,0 +1,68 @@
+test_existing_allowed_sources_are_still_immutable (harness_adoption.test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) ... ok
+test_generated_output_symlink_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_generated_output_symlink_is_rejected) ... ok
+test_git_history_overlays_are_rejected (harness_adoption.test_main_release.MainReleaseTests.test_git_history_overlays_are_rejected) ... ok
+test_ignored_compilable_source_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_ignored_compilable_source_is_rejected) ... ok
+test_listing_successor_is_exact_and_required (harness_adoption.test_main_release.MainReleaseTests.test_listing_successor_is_exact_and_required) ... ok
+test_missing_pinned_objects_are_rejected (harness_adoption.test_main_release.MainReleaseTests.test_missing_pinned_objects_are_rejected) ... ok
+test_nonancestor_head_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_nonancestor_head_is_rejected) ... ok
+test_product_and_historical_bytes_cannot_drift (harness_adoption.test_main_release.MainReleaseTests.test_product_and_historical_bytes_cannot_drift) ... ok
+test_release_scope_cannot_be_refreshed_or_deleted (harness_adoption.test_main_release.MainReleaseTests.test_release_scope_cannot_be_refreshed_or_deleted) ... ok
+test_required_repair_sources_cannot_be_removed_or_linked (harness_adoption.test_main_release.MainReleaseTests.test_required_repair_sources_cannot_be_removed_or_linked) ... ok
+test_reviewed_main_with_listing_repair_is_accepted (harness_adoption.test_main_release.MainReleaseTests.test_reviewed_main_with_listing_repair_is_accepted) ... Traceback (most recent call last):
+  File "<staging-sync-checkout>/scripts/run-current-python-tests.py", line 73, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "<staging-sync-checkout>/scripts/run-current-python-tests.py", line 51, in main
+    result = unittest.TextTestRunner(verbosity=2).run(suite)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/runner.py", line 257, in run
+    test(result)
+    ~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 122, in run
+    test(result)
+    ~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 122, in run
+    test(result)
+    ~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 122, in run
+    test(result)
+    ~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/case.py", line 725, in __call__
+    return self.run(*args, **kwds)
+           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/case.py", line 669, in run
+    self._callTestMethod(testMethod)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/case.py", line 615, in _callTestMethod
+    result = method()
+  File "<staging-sync-checkout>/tests/harness_adoption/test_main_release.py", line 46, in test_reviewed_main_with_listing_repair_is_accepted
+    self.accepted()
+    ~~~~~~~~~~~~~^^
+  File "<staging-sync-checkout>/tests/harness_adoption/test_main_release.py", line 36, in accepted
+    result = self.cli()
+  File "<staging-sync-checkout>/tests/harness_adoption/test_main_release.py", line 31, in cli
+    return subprocess.run(['python3', str(SOURCE / 'scripts/verify-harness-adoption.py'),
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                           '--root', str(self.root)], cwd=self.root,
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                          capture_output=True, text=True)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1220, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 2152, in _communicate
+    ready = selector.select(timeout)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/selectors.py", line 398, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

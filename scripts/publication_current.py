@@ -30,6 +30,10 @@ CLOSEOUT_RECEIPTS = {'.proj.specs/0001-harness-adoption/landing-approval.md': 'b
  '.proj.specs/0011-main-to-staging-sync/landing-approval.md': 'e4c721dcbb228a18bab5728276ebe2b5f2fac660381944ee9725d8b14d754ac0',
  '.proj.specs/0011-main-to-staging-sync/landing.json': '57d798306754b5b6ec250274f87455d983e176e442defbd75ec3b32192a598ac'}
 
+# Owner-authorized, actual PR20/25/26 + PR21 dual-target closeout.
+CLOSEOUT_SUCCESSORS.update({'.proj.tickets/0010-main-verification-repair/T-0012-ticket-evidence-closeout.md': '6570950636c67b59a0d0f8fb41dfe7ca6983346f44e4a0741702f3968f86bb77', '.proj.tickets/0012-publication-workflow/T-0014-v2-selected-candidate.md': '2af9335a48b95e2857eb367d5d8601ff473b5715683db66dddad1de3fa731983', '.proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md': 'd2a8496fdec3958ab6cc19a835ff64f8b7901c3ca43173b1f52aac5aafcc0e3e'})
+CLOSEOUT_RECEIPTS.update({'.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/approval.md': '2eccaf3a6ee4284d6e7289929e0165ca8e9a976315c91bc0012004f1c3cb76d4', '.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0012-landing.json': 'aa43e02ca8224e4322cc12d9d456cf4feaaa047e9c00f6c73bd8a5ce23d82965', '.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0014-landing.json': '50093c6da06cea477dfc1931896f8cc835f89ecd8d0b182e497dc64ef8257130', '.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0015-landing.json': 'f7087e76d6a67f15d6c4e7da3469f1cf1347fb4e8879d89b77dd7af778333cee'})
+
 def git_environment(*, local_clone=False):
     env = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
     env.update({'GIT_CONFIG_NOSYSTEM': '1', 'GIT_CONFIG_GLOBAL': os.devnull,
@@ -212,10 +216,18 @@ def current_identity(root, name, expected):
 
 
 def verify(control, root):
+    return _verify_current(control, root, target_role(control))
+
+
+def verify_staging_sync(control, root):
+    """Trusted main sync operation fixes the staging role; candidate data cannot select it."""
+    return _verify_current(control, root, 'staging')
+
+
+def _verify_current(control, root, role):
     from main_publication_verification import tree, identity
     check_history(control)
     check_history(root)
-    role = target_role(control)
     data, inventory = policy(control)
     git(root, 'merge-base', '--is-ancestor', BASES[role], 'HEAD')
     expected = {p: identity(e) for p, e in tree(control, BASES[role]).items()}

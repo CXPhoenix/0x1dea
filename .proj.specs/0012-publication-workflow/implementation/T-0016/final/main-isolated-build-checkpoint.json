@@ -1,0 +1,414 @@
+{
+  "version": 2,
+  "status": "pass",
+  "binding": "31f436f0abb41786ad36a7e9afa4e0ce1b469d4c3de027d598bc652014847bdb",
+  "runtime_sha256": "bbed7b0c0aee3c07d1c8625f2251026797b0c9ba529912f6acf4eef0bbcc266b",
+  "node_version": "v24.13.0",
+  "command": [
+    "<existing-node-24.13.0>/bin/node",
+    "<existing-product-checkout>/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/bin/vitepress.js",
+    "build",
+    "blog"
+  ],
+  "isolation": {
+    "inside": true,
+    "outside_read": "denied",
+    "outside_write": "denied",
+    "network": "denied"
+  },
+  "profile_sha256": "6346acbbef1d2b08ef9f548f5312947a3ddef52eb3b480b7b42b6c1605a81c0f",
+  "scan": {
+    "status": "main-build-only",
+    "scope": "No publication output exclusion claim"
+  },
+  "files": {
+    "404.html": {
+      "mode": "100644",
+      "sha256": "9bd32dea936fb3d8af2c7c2e70b9e496e6367408559c896c81c43e6c22833644"
+    },
+    "_redirects": {
+      "mode": "100644",
+      "sha256": "67e4743f7e3aa14c61656d8167415e3f44e30df7e0569ced96b00ff6ba6bbb29"
+    },
+    "about.html": {
+      "mode": "100644",
+      "sha256": "a6158e1f58eefa3f6600ffe11eb0363fd13266e5aaa59cef836c918d22edc965"
+    },
+    "assets/.gitkeep": {
+      "mode": "100644",
+      "sha256": "a38cb199f645ee3fb12f6c2d11c7be2d19ab134d44264e19b4666c83319d1b3e"
+    },
+    "assets/about.md.qahsPFpj.js": {
+      "mode": "100644",
+      "sha256": "b9b65da89c7986f378d2183d87b4ea86823640ebd8ee9bc7ac3b6dcc6047e4d3"
+    },
+    "assets/about.md.qahsPFpj.lean.js": {
+      "mode": "100644",
+      "sha256": "eded3b1b90babfa00f20c60326c13c0add3d165260d57137dbefd35fd038953d"
+    },
+    "assets/app.CIPds1Kk.js": {
+      "mode": "100644",
+      "sha256": "2e9311e3cf2c6be4ea5af844288eb78acb2fab1d3c065dfe3e20142dc8e80128"
+    },
+    "assets/chunks/EasingType.1ClTOyCX.js": {
+      "mode": "100644",
+      "sha256": "8e33aa001822d911314c506ebf1e063af4c69bda647edf2b748260e22eb8bc61"
+    },
+    "assets/chunks/framework.NVheHa5I.js": {
+      "mode": "100644",
+      "sha256": "73a36baee5f9acfad256dca805ab3e765771daa49ce0f25e3e02c88bfe574136"
+    },
+    "assets/chunks/index.DL9XF96_.js": {
+      "mode": "100644",
+      "sha256": "ffff2a51ae3691c346efe3b26ada2d6861775295a625ec37d96a54639b9c3e6e"
+    },
+    "assets/chunks/particles.es.Dz1Vpmwy.js": {
+      "mode": "100644",
+      "sha256": "4b67c6fbfa6f5060a6d0c0aaf5773076b7041efe69e74cb316b03514295cbcae"
+    },
+    "assets/chunks/theme.DbIm64sp.js": {
+      "mode": "100644",
+      "sha256": "24880555039b60e7d51c1f7fb914e665806d2bdef7b7ea5fa9cd13b6313fd6b8"
+    },
+    "assets/fontawesome/css/brands.min.css": {
+      "mode": "100644",
+      "sha256": "9e2091a3026c87116c2ee1948fbad3bffbf1b1f733c2f89d351d3dc7aab082f9"
+    },
+    "assets/fontawesome/css/fontawesome.min.css": {
+      "mode": "100644",
+      "sha256": "b164a2d2905748e1d48512f1e985606b4282c9438bbc0ee2958e56f658695d2b"
+    },
+    "assets/fontawesome/css/regular.min.css": {
+      "mode": "100644",
+      "sha256": "d452ca86262c736cab4d172137e27176c2e4c7c141c8150c9154312f2aac3dae"
+    },
+    "assets/fontawesome/css/solid.min.css": {
+      "mode": "100644",
+      "sha256": "abb7189386e7601b342822b2a72812cf972daeb3442b796d7a785ea6f860f7e6"
+    },
+    "assets/fontawesome/webfonts/fa-brands-400.woff2": {
+      "mode": "100644",
+      "sha256": "70c632ba73c7ad942141bb2f56994b8eddf0a284c01aab9f21e0cd10021530c4"
+    },
+    "assets/fontawesome/webfonts/fa-regular-400.woff2": {
+      "mode": "100644",
+      "sha256": "81aaa8342d90df0a3c0b87655e2c31a71941f0dd351fb9fb1ca5d692e744f6d0"
+    },
+    "assets/fontawesome/webfonts/fa-solid-900.woff2": {
+      "mode": "100644",
+      "sha256": "ff58a6b0a01dbce082458f6e5a58719df4e80e0c2b50f744bb5871e21eca6878"
+    },
+    "assets/fontawesome/webfonts/fa-v4compatibility.woff2": {
+      "mode": "100644",
+      "sha256": "4bad0278281153ad5354855ccfbc0674279ec47eff29b3d262c213478311cc52"
+    },
+    "assets/index.md.CtUHDS3B.js": {
+      "mode": "100644",
+      "sha256": "d99a461df66aa0fa1b2e0a12b50f0633535cf8eb26452210986459e7371e9da6"
+    },
+    "assets/index.md.CtUHDS3B.lean.js": {
+      "mode": "100644",
+      "sha256": "d99a461df66aa0fa1b2e0a12b50f0633535cf8eb26452210986459e7371e9da6"
+    },
+    "assets/inter-italic-cyrillic-ext.r48I6akx.woff2": {
+      "mode": "100644",
+      "sha256": "3f2ea09e148441f83171eae388d00da780b24b9bd155c141d0b5fbb0d803871d"
+    },
+    "assets/inter-italic-cyrillic.By2_1cv3.woff2": {
+      "mode": "100644",
+      "sha256": "2a1c3126375078cd85d262aad635ac9d9ff9ac2c18b8143b2d21d540f9cd3dfb"
+    },
+    "assets/inter-italic-greek-ext.1u6EdAuj.woff2": {
+      "mode": "100644",
+      "sha256": "bae39b1cc79168c9ac47f120c3eaa82cb634dc17e457cdd484725d8c7a60ab3e"
+    },
+    "assets/inter-italic-greek.DJ8dCoTZ.woff2": {
+      "mode": "100644",
+      "sha256": "138cf731e5a284e262c576f765a6cb8f58045cb798d16693091e2251a0f63559"
+    },
+    "assets/inter-italic-latin-ext.CN1xVJS-.woff2": {
+      "mode": "100644",
+      "sha256": "3e166de9aeff2d6a3d13c9228e03f7ff76369f5fa95fe0ab1d1d44235d5516aa"
+    },
+    "assets/inter-italic-latin.C2AdPX0b.woff2": {
+      "mode": "100644",
+      "sha256": "3570e65005ccd9ecd87c6ccc7c713fc474a80ff7c3abbb1063f0e8ab4f8dc891"
+    },
+    "assets/inter-italic-vietnamese.BSbpV94h.woff2": {
+      "mode": "100644",
+      "sha256": "a0aae13c473b99b63f3c0b8b692b3b2a4023145171aa86964f268235573e4ce5"
+    },
+    "assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2": {
+      "mode": "100644",
+      "sha256": "a49e47fb34f94acf8ceb57603cb2fc4c01861527a9a304de3a0236b7b67da2c6"
+    },
+    "assets/inter-roman-cyrillic.C5lxZ8CY.woff2": {
+      "mode": "100644",
+      "sha256": "d888610b6342164a592e59a4ce91a3755126a6ca2ee4e0d75c8e915eebaeed68"
+    },
+    "assets/inter-roman-greek-ext.CqjqNYQ-.woff2": {
+      "mode": "100644",
+      "sha256": "7b7519f21aff6b3a011099999cec8a9d4c99173a8c9adeecffb0bd032fc49f69"
+    },
+    "assets/inter-roman-greek.BBVDIX6e.woff2": {
+      "mode": "100644",
+      "sha256": "1a1997dfdcd7a9e0d2b26944b4b7fd1f1b2fde91bb405cb7a5870f93b45d2e05"
+    },
+    "assets/inter-roman-latin-ext.4ZJIpNVo.woff2": {
+      "mode": "100644",
+      "sha256": "539d139f99942e93bead7bbcd18bc00f5a73932eb3a8997367f2b79f4f75bc60"
+    },
+    "assets/inter-roman-latin.Di8DUHzh.woff2": {
+      "mode": "100644",
+      "sha256": "f7ab715caa2c78facb4334b211c81ee66f037cf9c99ca3f24acd543e84a93278"
+    },
+    "assets/inter-roman-vietnamese.BjW4sHH5.woff2": {
+      "mode": "100644",
+      "sha256": "b315417b28ce251a54000a824d73c5af36798a88b3c05594f28dada0cbffab5a"
+    },
+    "assets/post_course_cybersec_index.md.DpvBofuq.js": {
+      "mode": "100644",
+      "sha256": "e110837fa37a83308edf9456db8b5ac5f82361df1c7f52abcbb59e25ab1e4304"
+    },
+    "assets/post_course_cybersec_index.md.DpvBofuq.lean.js": {
+      "mode": "100644",
+      "sha256": "e110837fa37a83308edf9456db8b5ac5f82361df1c7f52abcbb59e25ab1e4304"
+    },
+    "assets/post_course_cybersec_what-is-safety.md.RxG51LQe.js": {
+      "mode": "100644",
+      "sha256": "6d9b2363bd3328a23f4a1737f4bdb9593069c4f2258f8fb0f8ee1fe804e1fa2f"
+    },
+    "assets/post_course_cybersec_what-is-safety.md.RxG51LQe.lean.js": {
+      "mode": "100644",
+      "sha256": "99b331c648b14e57f1c7a5e76a3ee754f34b6ae89a6ba767f61750ed8d7b99fd"
+    },
+    "assets/post_course_cybersec_what-is-safety/1772342178110.gif": {
+      "mode": "100644",
+      "sha256": "72b6d5565bd8fe64acdaa8095e28f5020fb53359889cdbb8e0c13ba6d983efa5"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260227005508.png": {
+      "mode": "100644",
+      "sha256": "5a3094e2ba747556333e1f34c1773784c20a24af8dd029e8d8035558d592baff"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260227014249.png": {
+      "mode": "100644",
+      "sha256": "aa52bbba7acf5b4302c16507814045f4e8d1e0621b52c205a27d1fe90932d1e8"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260228013411.png": {
+      "mode": "100644",
+      "sha256": "0e9c53cf7cd8c42a7141bf7d916155d7ea6f6da67a4a70779186f9a307d6f92f"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260228022122.png": {
+      "mode": "100644",
+      "sha256": "a219da123e747a5d0a18652b85698d3b812a1a29d32314493b41e8f08322d8e2"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260228114351.png": {
+      "mode": "100644",
+      "sha256": "051e7ccf7c2d3a43220c94bf53336acf3d475c914499bf70acf52007f72dbb31"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260228130720.png": {
+      "mode": "100644",
+      "sha256": "75ebfb75472dc51071f6da4366023583aab412ddfa46c0d14dd373d2b8373ebe"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301114806.png": {
+      "mode": "100644",
+      "sha256": "097f9b35af2ce28ac061ae2305d5802619aa342cf7eb4b5158b213010043b74c"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301120037.png": {
+      "mode": "100644",
+      "sha256": "6d43abc8662f574dd4b3f09839a914d2135e5574938874f8b12723f1d53f285d"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301122300.png": {
+      "mode": "100644",
+      "sha256": "0b9be3df40d223d35d502e90d17d90f6956a5137cae43c6729ec75ae01cd3d1b"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301125241.png": {
+      "mode": "100644",
+      "sha256": "a58a448b69ef4f7ffdd2a19f25e031d1a46e1cf890d248bb4abfc0166fd12c5c"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301125313.png": {
+      "mode": "100644",
+      "sha256": "1ed6afeef7d65a1ed614fe6e55c7180d5ef6facea8913c72b2a85fa44d0a21bf"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301125401.png": {
+      "mode": "100644",
+      "sha256": "db48f430928196d5945709e28fbb28269839b9df1cb0316ce3dbb15108efbf92"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301125743.png": {
+      "mode": "100644",
+      "sha256": "4137ea91db759d18a1e25224fe4d17d9102a6c6c2b216aad82768b0935f0d2ed"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301132349.png": {
+      "mode": "100644",
+      "sha256": "72aec17ca978801f12beeb6cf12b070e9e6a490045333dfc8becbbec5573e8c3"
+    },
+    "assets/post_course_rm_index.md.DsXfgjpZ.js": {
+      "mode": "100644",
+      "sha256": "cd5a3b468c523d68a1b72e8e641b1f6241f0e20358fd8a76e4cb7daef3c5496f"
+    },
+    "assets/post_course_rm_index.md.DsXfgjpZ.lean.js": {
+      "mode": "100644",
+      "sha256": "cd5a3b468c523d68a1b72e8e641b1f6241f0e20358fd8a76e4cb7daef3c5496f"
+    },
+    "assets/post_course_rm_why-we-need-rm.md.fjvtOr3-.js": {
+      "mode": "100644",
+      "sha256": "274db2794b3add98c99408cd2bf6b8498c5ca8316072d5f10cd4b176aba99dc0"
+    },
+    "assets/post_course_rm_why-we-need-rm.md.fjvtOr3-.lean.js": {
+      "mode": "100644",
+      "sha256": "3b9421880cb73979554248c595a40735bb70022940f4d8f3788696f0ff2259c2"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260302005553.png": {
+      "mode": "100644",
+      "sha256": "3b84d129e2b7fe73f42901e60ce6dd21662346fade6fa2e548a1f3bca8bc847d"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260302010537.png": {
+      "mode": "100644",
+      "sha256": "4505260ab07b1cee2bcf9b0bc82966abfa7684a8b8ba3197549408540a26544e"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260302012511.png": {
+      "mode": "100644",
+      "sha256": "44143e87b3895b2ba1f54008976637a6551734ed773e6902d6d062aa47c06baa"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260307155631.png": {
+      "mode": "100644",
+      "sha256": "0b71220f06823328675e12fec3000927466de017f943a4c1ccba5d3cac990524"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260307160403.png": {
+      "mode": "100644",
+      "sha256": "29e9a12b93218489a6f02032373b8b9d68f5b645202b02098c5d17f4b5831b94"
+    },
+    "assets/post_course_security-awareness_electricity-privacy.md.FEm0uAQV.js": {
+      "mode": "100644",
+      "sha256": "1af39207eca68e133c0cf07e63274a501e5dde03589ac43bd7194c23faca8114"
+    },
+    "assets/post_course_security-awareness_electricity-privacy.md.FEm0uAQV.lean.js": {
+      "mode": "100644",
+      "sha256": "4f7205e1c95aed20374dcc0bfc0f93d8a3609174ba478a1f4648bb3a51527b7b"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/article-banner.png": {
+      "mode": "100644",
+      "sha256": "9fe833c76165ab1b446432280ff473c2d7e967042ac78af42c65e99d0d15204c"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/nilm-process.svg": {
+      "mode": "100644",
+      "sha256": "25766d5c5fe3c02e1946469e53d755660f3808ea940796eb65a8eb3b287b34da"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg": {
+      "mode": "100644",
+      "sha256": "ebd47e0575a73ef3557a6fc661a43a110dab713ee2e7e8ed30153ad9bb1aae19"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-cat-event.png": {
+      "mode": "100644",
+      "sha256": "8a841ead65839eb117ce054edf84402c2f76baaab77acb0e8e22946cc671f3a7"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-device.png": {
+      "mode": "100644",
+      "sha256": "a6ade6ebbdb800f6ca082a0e7d4cd1d0ed11da90f9d1b0bb5ceefa38d1643047"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-inference.png": {
+      "mode": "100644",
+      "sha256": "90040392c1b60e725be8d0d29a9898b06df225394fd3c27f8d5d743f91a3be30"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-link.png": {
+      "mode": "100644",
+      "sha256": "70ab801df17c0d84b058b0dd239476379956165fd18003851800313d1b62030b"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png": {
+      "mode": "100644",
+      "sha256": "99aead19c23b41ab372d1080e51fdc32ba5bf8f463e42d035794b29a4631441e"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-purpose.png": {
+      "mode": "100644",
+      "sha256": "d77f28698f677dc042fba95801cc7e4c89826748aaba788e4c57900a6f4766f0"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-total.png": {
+      "mode": "100644",
+      "sha256": "44169e071f9272fce9a641b2ce2b11c7eae71d1996011ee31b6a1537386168c0"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-units.png": {
+      "mode": "100644",
+      "sha256": "8bf7cbe695d6a632b9921f6c0ed1de4a0a17f0c413c482b40855494cf49841d5"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg": {
+      "mode": "100644",
+      "sha256": "5e0dcad02b749e4eeecaccafb14aae4a7e75f6571f301750cda9402cbcc0f868"
+    },
+    "assets/post_course_security-awareness_index.md.CYjixnSl.js": {
+      "mode": "100644",
+      "sha256": "7adb0eee03800aee42f782e33e784e1e83cf07dbbd3a63fe5b7efe5b9a1baf1e"
+    },
+    "assets/post_course_security-awareness_index.md.CYjixnSl.lean.js": {
+      "mode": "100644",
+      "sha256": "7adb0eee03800aee42f782e33e784e1e83cf07dbbd3a63fe5b7efe5b9a1baf1e"
+    },
+    "assets/posts.md.8EIpB_sC.js": {
+      "mode": "100644",
+      "sha256": "1991a3468132e2f530ee4683ecfe31ef233d90ba293559a6dc095d4e70174535"
+    },
+    "assets/posts.md.8EIpB_sC.lean.js": {
+      "mode": "100644",
+      "sha256": "1991a3468132e2f530ee4683ecfe31ef233d90ba293559a6dc095d4e70174535"
+    },
+    "assets/style.xPNdW0Lc.css": {
+      "mode": "100644",
+      "sha256": "387a09aea398ac94e0e51d58f7d731526cb35fb338dafe147395e5dfa9c09a54"
+    },
+    "circleImage.svg": {
+      "mode": "100644",
+      "sha256": "0a165ae3fcfec248007e24f112c569387102ddc9b73ac88528c679011efce4e7"
+    },
+    "hashmap.json": {
+      "mode": "100644",
+      "sha256": "1090263b9dbf866b9f2d840f311790261bdecd20ab9fcf49852cb69d1eab97f7"
+    },
+    "heroImageWithoutText.svg": {
+      "mode": "100644",
+      "sha256": "309d453f1463e7fc581055a758429062538943580280bd89cb0306f075612291"
+    },
+    "index.html": {
+      "mode": "100644",
+      "sha256": "cc0da1feddd161a02937a242fa8e62a1d6f6b081143b215ae3767bfc74b07d27"
+    },
+    "phoenixWithText.svg": {
+      "mode": "100644",
+      "sha256": "ba3bf36a716cd2b31ff1b245da9be0d22864b69dc88c50eee0fc40a788a537a8"
+    },
+    "post/course/cybersec/index.html": {
+      "mode": "100644",
+      "sha256": "1009aef432862bf086d635e7d17bca513bc909af904672923ed4f40b24ea7cb3"
+    },
+    "post/course/cybersec/what-is-safety.html": {
+      "mode": "100644",
+      "sha256": "0a58c950ca0208273e69dd744b7af02a9c912e8f3dec870c55adf73abf5a13fc"
+    },
+    "post/course/rm/index.html": {
+      "mode": "100644",
+      "sha256": "990d17dbf1066d6189326008da9b66d5ab23d056d0eafd4956e1e1172366b5c8"
+    },
+    "post/course/rm/why-we-need-rm.html": {
+      "mode": "100644",
+      "sha256": "d1d5c82b517b4fcc9fc89e15a946578b175902c6bd86ee1b59dceacaba3b5c98"
+    },
+    "post/course/security-awareness/electricity-privacy.html": {
+      "mode": "100644",
+      "sha256": "4493ee4d1b9311aa900051cbb04a871d35cbc97ac4a6292ae145c1de12fb65f5"
+    },
+    "post/course/security-awareness/index.html": {
+      "mode": "100644",
+      "sha256": "d9ce8c7a34893a90ac837f78ad7c06ee60931eb60ddc5579a0e789179f8900f6"
+    },
+    "posts.html": {
+      "mode": "100644",
+      "sha256": "5500494385a0322f8391a84f266a213efbb14bdcb6f534410058bf65b0065269"
+    },
+    "vp-icons.css": {
+      "mode": "100644",
+      "sha256": "c3179481ddd882c06c7a5c5888509946f5be5b9ba7e504e3b0ceef1004831786"
+    }
+  },
+  "output_manifest_sha256": "e611e61242dc323408b4e53706ae8d0c19853e8831a665f09d1ed4997360733a",
+  "pr_ready": false,
+  "publishable": false,
+  "surface": "isolated actual VitePress CLI build; no HTTP/browser/remote claim"
+}

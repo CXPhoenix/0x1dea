@@ -1,0 +1,7 @@
+test_contained_main_noop_does_not_create_branch_or_pull (test_remote_sync.RemoteSyncTests.test_contained_main_noop_does_not_create_branch_or_pull) ... ok
+test_repeat_event_updates_at_most_one_owned_pull (test_remote_sync.RemoteSyncTests.test_repeat_event_updates_at_most_one_owned_pull) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.006s
+
+OK
