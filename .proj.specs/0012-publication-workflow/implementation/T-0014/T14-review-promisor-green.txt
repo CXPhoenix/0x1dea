@@ -1,0 +1,6 @@
+test_promisor_local_config_is_refused_before_any_object_fetch (article_publication.test_v2.V2Tests.test_promisor_local_config_is_refused_before_any_object_fetch) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.516s
+
+OK

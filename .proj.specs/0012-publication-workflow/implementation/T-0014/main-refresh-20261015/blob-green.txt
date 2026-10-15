@@ -1,0 +1,6 @@
+test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids (article_publication.test_v2.V2Tests.test_corrupt_blob_bytes_cannot_reuse_reviewed_object_ids) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.986s
+
+OK

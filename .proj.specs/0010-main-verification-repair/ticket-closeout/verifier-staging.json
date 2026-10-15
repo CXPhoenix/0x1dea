@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "scripts/verify-harness-adoption.py"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-11T13:27:16.883235+00:00",
+  "ended_utc": "2026-10-11T13:27:44.383858+00:00",
+  "elapsed_seconds": 27.50306300000011,
+  "exit_code": 0,
+  "log": "verifier-staging.txt",
+  "log_sha256": "992d80b755b38be2f016f859abfdeb930719e05c05ff052409d9fd1a7c61462e",
+  "raw_log_sha256": "992d80b755b38be2f016f859abfdeb930719e05c05ff052409d9fd1a7c61462e",
+  "projection": "Only exact owned checkout prefix replaced with {WORKSPACE}; exits and command retained."
+}

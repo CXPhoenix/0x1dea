@@ -16,3 +16,7 @@ This is an acceptance/seam report, not instrumented line coverage. Final source 
 | Delivery / S5 | Commit parents, non-force ticket push, unmerged PR base/head and remote readback | Pending external delivery at snapshot; checked after commit/push | Final PR and Git readback outside this pre-delivery snapshot |
 
 The full Python run observed final-source hashes before and after execution with source_unchanged=true. Vitest and build inputs have not changed since their successful executions. There is no remote CI, deployment or production-browser claim.
+
+## Actual closeout follow-up
+
+The delivery row above is the original pre-delivery snapshot. PR #19 was subsequently verified open with no auto-merge, then owner-merged at c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7. Owner explicitly requested done. See landing.json and closeout/ for actual open-delivery and merged readbacks. Post-closeout metadata validation uses an independent staging clone so the original local staging ref and checkouts stay untouched. No product/source implementation changed; full suites are not repeated for status-only metadata.

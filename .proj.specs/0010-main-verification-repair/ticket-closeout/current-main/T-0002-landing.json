@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "ticket": "T-0002",
+  "authorized": true,
+  "landed": true,
+  "target": "staging",
+  "commit": "8987806a3c34653a236ca0c683a46bcc9632c27d",
+  "implementation_commit": "8890d5250e22ec4ee0e0493c1e72bab89d16489b",
+  "cleanup_commit": "724ddad73f8411a33c77c68d75f95b41d3af2988",
+  "reviewed_head": "c503a6852affcafce927d8248c35e5fba9c0d1b3",
+  "approval_receipt": ".proj.specs/0010-main-verification-repair/ticket-closeout/current-main/T-0002-landing-approval.md",
+  "pull_request": "https://github.com/CXPhoenix/0x1dea/pull/14",
+  "observed_main": "87740186f2a1b57f8c1df89f36647cbe3663f428",
+  "observed_staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "verified_at": "2026-10-15T15:14:46.038397+00:00",
+  "limits": "Original browser timeout retained; it was outside the approved AP and lint-cleanup gates. No original push time or new browser pass is claimed."
+}

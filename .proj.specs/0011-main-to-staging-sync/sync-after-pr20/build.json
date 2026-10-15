@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "exit_code": 0,
+  "surface": "actual staging VitePress CLI build under deny-default macOS boundary; no remote/deploy claim",
+  "node_version": "v24.13.0",
+  "CF_PAGES_BRANCH": "staging",
+  "isolation": {
+    "inside": true,
+    "outside_read": "denied",
+    "outside_write": "denied",
+    "network": "denied"
+  },
+  "profile_sha256": "ed35cdaddcbf16c5812dbc81620505b314f783b536ae355e0dc863c94255497b",
+  "log_sha256": "07e882abb6436c6d2620269b61570f3d7c832a87594600a343935a1932c63fca",
+  "command": [
+    "node",
+    "installed vitepress/bin/vitepress.js",
+    "build",
+    "blog"
+  ]
+}

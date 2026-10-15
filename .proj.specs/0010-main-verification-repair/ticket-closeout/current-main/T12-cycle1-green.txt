@@ -1,0 +1,6 @@
+test_exact_closeout_is_accepted_on_both_target_projections (test_closeout_successor.CloseoutSuccessorTests.test_exact_closeout_is_accepted_on_both_target_projections) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 14.119s
+
+OK

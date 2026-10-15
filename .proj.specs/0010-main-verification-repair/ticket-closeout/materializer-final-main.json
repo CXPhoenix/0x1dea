@@ -1,0 +1,16 @@
+{
+  "command": [
+    "python3",
+    "scripts/materialize-writing-skills.py",
+    "--check"
+  ],
+  "cwd": "{WORKSPACE}",
+  "started_utc": "2026-10-11T13:36:49.766082+00:00",
+  "ended_utc": "2026-10-11T13:36:50.062316+00:00",
+  "elapsed_seconds": 0.29611012500026845,
+  "exit_code": 0,
+  "log": "materializer-final-main.txt",
+  "log_sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+  "raw_log_sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+  "projection": "Only exact owned checkout prefix replaced with {WORKSPACE}; exits and command retained."
+}

@@ -1,0 +1,29 @@
+test_exact_adoption_closeout_with_real_landing_is_accepted (test_main_release.MainReleaseTests.test_exact_adoption_closeout_with_real_landing_is_accepted) ... ERROR
+
+======================================================================
+ERROR: test_exact_adoption_closeout_with_real_landing_is_accepted (test_main_release.MainReleaseTests.test_exact_adoption_closeout_with_real_landing_is_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "{WORKSPACE}/tests/harness_adoption/test_main_release.py", line 60, in test_exact_adoption_closeout_with_real_landing_is_accepted
+    self.adoption_closeout()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "{WORKSPACE}/tests/harness_adoption/test_main_release.py", line 55, in adoption_closeout
+    self.git('branch', 'staging', 'c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7')
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "{WORKSPACE}/tests/harness_adoption/test_main_release.py", line 28, in git
+    return subprocess.check_output(['git', *args], cwd=self.root, stderr=subprocess.STDOUT)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 472, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+               **kwargs).stdout
+               ^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['git', 'branch', 'staging', 'c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7']' returned non-zero exit status 128.
+
+----------------------------------------------------------------------
+Ran 1 test in 8.953s
+
+FAILED (errors=1)

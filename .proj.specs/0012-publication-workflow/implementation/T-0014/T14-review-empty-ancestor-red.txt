@@ -1,0 +1,19 @@
+test_empty_other_article_commit_is_rejected_by_identity (article_publication.test_v2.V2Tests.test_empty_other_article_commit_is_rejected_by_identity) ... FAIL
+
+======================================================================
+FAIL: test_empty_other_article_commit_is_rejected_by_identity (article_publication.test_v2.V2Tests.test_empty_other_article_commit_is_rejected_by_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 431, in test_empty_other_article_commit_is_rejected_by_identity
+    self.reject(self.v2('prepare', self.root / 'empty-B-ancestor'), 'other candidate ancestry')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "30ab6a448f6e02fa2928dc729ee2b2d676ed7159", "files": {"blog/index.md": {"mode": "100644", "sha256": "5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368"}, "blog/post/A.md": {"mode": "100644", "sha256": "2a9f742f27867d4e21ab0b778e7cbf9cb45ce0bd932cb0c54528670cdf8a588e"}, "blog/post/B.md": {"mode": "100644", "sha256": "a121c48de24cc79c3e97705c93cf28752c5f9b3d7a13c1457afa94683d71657b"}}, "mode": "prepare", "plan_sha256": "8ce0d1c4be0378e1d4a32cd85e953810551bf3bec3bfa51befee9d7b55270e21", "pr_ready": false, "publishable": false, "registry_sha256": "cd115a2d574f4b1c6ae050d364e5874c78468f5ca785a21748e8638b82aff0b6", "source_scan": {"asset_signature_count": 0, "forbidden_routes": [], "limits": "Supplementary signatures; exact source admission and candidate tree remain primary.", "prose_signature_count": 0, "status": "exclusion-unverified", "unverified_sources": ["B"]}, "version": 2}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.522s
+
+FAILED (failures=1)

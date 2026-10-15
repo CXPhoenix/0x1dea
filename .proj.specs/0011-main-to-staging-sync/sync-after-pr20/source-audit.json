@@ -1,0 +1,127 @@
+{
+  "main": "5e6c889c808e7ef4cb83493bf06f8a70dd055b41",
+  "staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "original_pr21": "a67b8de69f70f794a9e062e3ac50a957688ffa9a",
+  "blog_paths": 111,
+  "candidate_paths": 50,
+  "changed_blog": [],
+  "candidate_mismatches": [],
+  "original_main_common_paths": 716,
+  "main_common_changed": [],
+  "protected_history_paths": 376,
+  "history_changed": [],
+  "changed_existing_stage_paths": {
+    ".proj.specs/0011-main-to-staging-sync/coverage-report.md": {
+      "before": {
+        "mode": "100644",
+        "sha256": "6b64c73b195f72ee47027f5098fb157723f21c97cb1e46274d908103f6a2a0b1"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "d610282c67b42bad42d78e4e3d6857c0311fc364c69f41239309c03e06997121"
+      }
+    },
+    ".proj.specs/0012-publication-workflow/approval.md": {
+      "before": {
+        "mode": "100644",
+        "sha256": "032271683b380752b97aea96c6170d2018d2556d398f06925471de5a87544780"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "28e5b9ca38b5df503ee88fb77ea518100971a684f6032f1fabfbc9395f665e09"
+      }
+    },
+    ".proj.tickets/0001-harness-adoption/T-0001-harness-adoption.md": {
+      "before": {
+        "mode": "100644",
+        "sha256": "64a1b2fd10f0911655d7902320cac4b1d3ae240133d36ed35f7e0885c3c1d0d2"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "5465e347c083e87ac5146c65c7fef4a1d6a25c55ffde1acbd4130490493d3799"
+      }
+    },
+    ".proj.tickets/0002-article-publication/T-0002-article-publication-preparation.md": {
+      "before": {
+        "mode": "100644",
+        "sha256": "5c8c3aebcf8bd2c1893c86d2e4f3ba58e4d1ea14f4aa7ef55175c3e3771d5d6f"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "9edef29e54074191f930cd4619b4becdc843ae345dc3d68780615a89cea71b3f"
+      }
+    },
+    ".proj.tickets/0010-main-verification-repair/T-0010-main-verification-repair.md": {
+      "before": {
+        "mode": "100644",
+        "sha256": "9b17972e46344bdc657c301b465e293391817ba326704de6df62a8f726660490"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "9e7d02cdea898061f5e1e91dd66392e81813623eab4531c7069306942e4eeaf4"
+      }
+    },
+    ".proj.tickets/0011-main-to-staging-sync/T-0011-main-to-staging-sync.md": {
+      "before": {
+        "mode": "100644",
+        "sha256": "074cf8e460f5cd77b630feb28eed3d6d672775d0746cb757e961364e1af2f979"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "21ceaea9edad9a52874d8d1b3112dd8afc37d2d1a1fce0c55c5d6419cc3a7125"
+      }
+    },
+    ".proj.tickets/0012-publication-workflow/T-0013-common-engineering-baseline.md": {
+      "before": {
+        "mode": "100644",
+        "sha256": "d0394acb52fc3d263b9c6b09f6dd6be72525f3dc59ddf57e8ba9932f8a5fd1a4"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "7e9085940c20dbb1779d30e2f00bbd2038410e44b033b2b6851e36f146e8b701"
+      }
+    },
+    ".proj.tickets/0012-publication-workflow/T-0014-v2-selected-candidate.md": {
+      "before": {
+        "mode": "100644",
+        "sha256": "51374001ee260def6cbedfa76f14d6ef005ad66ec017c897bb8f72ab978c8e0d"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "9d3dc9e80bcf1519da051087759ced412f74eec7593fc104911ca3fddbde4ae6"
+      }
+    },
+    ".proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md": {
+      "before": {
+        "mode": "100644",
+        "sha256": "e11ec2bca74a799fd808731695b49c97a94140e6e9e50f60d134f7c370c53e36"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "408703841a09d4b4633d5b95288498cd8c9cd3ffd5cc899f8283307ecd14cc25"
+      }
+    },
+    "maintenance/publication-workflow/engineering-v1.json": {
+      "before": {
+        "mode": "100644",
+        "sha256": "1707a123e733c0412af13f6e94d4e2eb4a7e28d27240d438261caed1383dc1ea"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "9e6a41aacca502ce4dc7c7262e5c8811495c4defcf5f28d692163c2210edf9bd"
+      }
+    },
+    "scripts/publication_current.py": {
+      "before": {
+        "mode": "100644",
+        "sha256": "b7851d7e7583f25d0a8841eb19f5947543281a691e31c26543c6b710a71cf5c5"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "801fbf500d627ff1971c759d9778ac5a87088e3af6251783a760e19b01388923"
+      }
+    }
+  },
+  "new_behavior": "none beyond approved main bytes",
+  "checkpoint": "Source proof before adding final raw/browser/report metadata. The policy after-hash belongs to that720-entry checkpoint; final exact-map identity is checked separately after recording evidence. No final self-referential policy hash is claimed."
+}

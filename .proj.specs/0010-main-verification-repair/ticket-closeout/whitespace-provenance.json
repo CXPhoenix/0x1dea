@@ -1,0 +1,23 @@
+{
+  "initial_main_diff_check_exit": 2,
+  "cause": "Three imported historical raw logs contain existing trailing whitespace/blank EOF; original bytes preserved rather than rewriting evidence. Staging has no delta for these logs.",
+  "historical_entries": [
+    {
+      "path": ".proj.specs/0011-main-to-staging-sync/evidence/invalid-ref-red.txt",
+      "staging_blob_sha256": "012ca7b6885f65cb388d484e5dcda546e7e62a980c2c66ce4d6e7af2924ed814",
+      "both_copies_exact": true
+    },
+    {
+      "path": ".proj.specs/0011-main-to-staging-sync/evidence/lint.txt",
+      "staging_blob_sha256": "55bfb0460cc22173793b2df33d0d1b86d5b875bb9f3b3170062dafbc9c12fecc",
+      "both_copies_exact": true
+    },
+    {
+      "path": ".proj.specs/0011-main-to-staging-sync/evidence/unit.txt",
+      "staging_blob_sha256": "ce052e3e5c6ef6f8973725b6d3b595a5b702f18d7bccfc6535d3156771de6d26",
+      "both_copies_exact": true
+    }
+  ],
+  "required_native_checks": "All succeeded; this is an additional diff hygiene check, not a failed product test.",
+  "new_change_whitespace_check": "Exclude only these three verified byte-identical historical files; all other changed paths checked separately."
+}

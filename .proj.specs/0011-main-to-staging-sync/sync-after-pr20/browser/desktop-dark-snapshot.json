@@ -1,0 +1,54 @@
+{
+  "origin": "http://127.0.0.1:8879/post/course/security-awareness/",
+  "refs": {
+    "e1": {
+      "name": "Skip to content",
+      "role": "link"
+    },
+    "e10": {
+      "name": "分類文章",
+      "role": "button"
+    },
+    "e11": {
+      "name": "Permalink to “{{ frontmatter.title }}”",
+      "role": "link"
+    },
+    "e12": {
+      "name": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？",
+      "role": "heading"
+    },
+    "e2": {
+      "name": "0x1DEA",
+      "role": "link"
+    },
+    "e3": {
+      "name": "Main Navigation",
+      "role": "navigation"
+    },
+    "e4": {
+      "name": "Switch to light theme",
+      "role": "switch"
+    },
+    "e5": {
+      "name": "github",
+      "role": "link"
+    },
+    "e6": {
+      "name": "About Me",
+      "role": "link"
+    },
+    "e7": {
+      "name": "文章總覽",
+      "role": "link"
+    },
+    "e8": {
+      "name": "資安認知推廣備課系列 Permalink to “{{ frontmatter.title }}”",
+      "role": "heading"
+    },
+    "e9": {
+      "name": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？ 從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。 2026年10月9日",
+      "role": "link"
+    }
+  },
+  "snapshot": "- link \"Skip to content\" [ref=e1, url=http://127.0.0.1:8879/post/course/security-awareness/#VPContent]\n- link \"0x1DEA\" [ref=e2, url=http://127.0.0.1:8879/]\n- navigation \"Main Navigation\" [ref=e3]\n  - link \"About Me\" [ref=e6, url=http://127.0.0.1:8879/about.html]\n  - link \"文章總覽\" [ref=e7, url=http://127.0.0.1:8879/posts.html]\n  - button \"分類文章\" [expanded=false, ref=e10]\n- switch \"Switch to light theme\" [checked=true, ref=e4]\n- link \"github\" [ref=e5, url=https://github.com/cxphoenix/0x1dea]\n- heading \"資安認知推廣備課系列 Permalink to “{{ frontmatter.title }}”\" [level=1, ref=e8]\n  - link \"Permalink to “{{ frontmatter.title }}”\" [ref=e11, url=http://127.0.0.1:8879/post/course/security-awareness/#frontmatter-title]\n- link \"用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？ 從半夜電鍋到未經同意的挖礦，認識用電的正常與異常，排除一般原因，再把設備、程序與網路紀錄一起帶進攻擊調查。 2026年10月9日\" [ref=e9, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html]\n  - heading \"用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？\" [level=3, ref=e12]"
+}

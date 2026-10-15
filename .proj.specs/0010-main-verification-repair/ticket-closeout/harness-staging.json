@@ -1,0 +1,19 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/harness_adoption",
+    "-v"
+  ],
+  "target": "staging",
+  "exit_code": 0,
+  "test_count": 99,
+  "skips": 0,
+  "unittest_elapsed_seconds": 468.747,
+  "log": "harness-staging.txt",
+  "log_sha256": "c93f2d99fc578e7b8467f70d68323125417456c6d1ff22258d2d36140e1e65f8",
+  "observation": "Captured complete process output; exec session returned exit 0. Start timestamp was not separately captured."
+}

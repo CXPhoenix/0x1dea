@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "ticket": "T-0011",
+  "authorized": true,
+  "landed": true,
+  "commit": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+  "target": "staging",
+  "approval_receipt": ".proj.specs/0011-main-to-staging-sync/landing-approval.md",
+  "remote": "https://github.com/CXPhoenix/0x1dea.git",
+  "observed_remote_staging": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+  "merged_at": "2026-10-11T12:58:17Z",
+  "verified_at": "2026-10-11T13:03:18.437332+00:00",
+  "pull_request": "https://github.com/CXPhoenix/0x1dea/pull/19",
+  "verification": "GitHub reports MERGED into staging; merge commit is ancestor of observed staging; merged tree equals tested/reviewed ticket tree; main ancestry retained.",
+  "authorization_scope": "Owner performed PR merge and explicitly requested T-0011 done; earlier agent delivery left PR open. Metadata closeout only."
+}

@@ -1,0 +1,206 @@
+{
+  "origin": "http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html",
+  "refs": {
+    "e1": {
+      "name": "Skip to content",
+      "role": "link"
+    },
+    "e10": {
+      "name": "用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？ Permalink to “用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？”",
+      "role": "heading"
+    },
+    "e11": {
+      "name": "用電的時間變化可以透露生活細節？ Permalink to “用電的時間變化可以透露生活細節？”",
+      "role": "heading"
+    },
+    "e12": {
+      "name": "半夜的電鍋，是壞了還是有人用？ Permalink to “半夜的電鍋，是壞了還是有人用？”",
+      "role": "heading"
+    },
+    "e13": {
+      "name": "同場加映 延伸閱讀 什麼是安全？能吃嗎？ 如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？ 來看這一篇 ",
+      "role": "link"
+    },
+    "e14": {
+      "name": "先知道平常，才知道哪裡怪怪的 Permalink to “先知道平常，才知道哪裡怪怪的”",
+      "role": "heading"
+    },
+    "e15": {
+      "name": "從總用電，估計個別設備 Permalink to “從總用電，估計個別設備”",
+      "role": "heading"
+    },
+    "e16": {
+      "name": "如果設備真的在忙，它忙的是什麼？ Permalink to “如果設備真的在忙，它忙的是什麼？”",
+      "role": "heading"
+    },
+    "e17": {
+      "name": "一條電力曲線，怎麼接到攻擊調查？ Permalink to “一條電力曲線，怎麼接到攻擊調查？”",
+      "role": "heading"
+    },
+    "e18": {
+      "name": "這些生活紀錄，也會帶出隱私問題 Permalink to “這些生活紀錄，也會帶出隱私問題”",
+      "role": "heading"
+    },
+    "e19": {
+      "name": "先把家裡的「怪怪的」記下來 Permalink to “先把家裡的「怪怪的」記下來”",
+      "role": "heading"
+    },
+    "e2": {
+      "name": "Menu",
+      "role": "button"
+    },
+    "e20": {
+      "name": "參考文獻 Permalink to “參考文獻”",
+      "role": "heading"
+    },
+    "e21": {
+      "name": "Permalink to “用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？”",
+      "role": "link"
+    },
+    "e22": {
+      "name": "staging 修訂審閱稿",
+      "role": "heading"
+    },
+    "e23": {
+      "name": "Permalink to “用電的時間變化可以透露生活細節？”",
+      "role": "link"
+    },
+    "e24": {
+      "name": "Permalink to “半夜的電鍋，是壞了還是有人用？”",
+      "role": "link"
+    },
+    "e25": {
+      "name": "圖 1",
+      "role": "link"
+    },
+    "e26": {
+      "name": "圖 1",
+      "role": "link"
+    },
+    "e27": {
+      "name": "Permalink to “先知道平常，才知道哪裡怪怪的”",
+      "role": "link"
+    },
+    "e28": {
+      "name": "Permalink to “從總用電，估計個別設備”",
+      "role": "link"
+    },
+    "e29": {
+      "name": "圖 1",
+      "role": "link"
+    },
+    "e3": {
+      "name": "On this page",
+      "role": "button"
+    },
+    "e30": {
+      "name": "[1]",
+      "role": "link"
+    },
+    "e31": {
+      "name": "[1]",
+      "role": "link"
+    },
+    "e32": {
+      "name": "Permalink to “如果設備真的在忙，它忙的是什麼？”",
+      "role": "link"
+    },
+    "e33": {
+      "name": "[2]",
+      "role": "link"
+    },
+    "e34": {
+      "name": "[3]",
+      "role": "link"
+    },
+    "e35": {
+      "name": "Permalink to “一條電力曲線，怎麼接到攻擊調查？”",
+      "role": "link"
+    },
+    "e36": {
+      "name": "Permalink to “這些生活紀錄，也會帶出隱私問題”",
+      "role": "link"
+    },
+    "e37": {
+      "name": "[4]",
+      "role": "link"
+    },
+    "e38": {
+      "name": "[4]",
+      "role": "link"
+    },
+    "e39": {
+      "name": "Permalink to “先把家裡的「怪怪的」記下來”",
+      "role": "link"
+    },
+    "e4": {
+      "name": "Sidebar Navigation",
+      "role": "navigation"
+    },
+    "e40": {
+      "name": "Permalink to “參考文獻”",
+      "role": "link"
+    },
+    "e41": {
+      "name": "https://arxiv.org/abs/1404.3878v1 ",
+      "role": "link"
+    },
+    "e42": {
+      "name": "https://www.radware.com/getattachment/Security/Threat-Advisories-and-Attack-Reports/1850/ERT-Alert-ADB-Miner_3.pdf.aspx/?lang=en-US ",
+      "role": "link"
+    },
+    "e43": {
+      "name": "https://discovery.ucl.ac.uk/id/eprint/10226943/ ",
+      "role": "link"
+    },
+    "e44": {
+      "name": "https://arxiv.org/abs/2308.14114v1 ",
+      "role": "link"
+    },
+    "e45": {
+      "name": "圖 1",
+      "role": "link"
+    },
+    "e46": {
+      "name": "圖 2",
+      "role": "link"
+    },
+    "e47": {
+      "name": "[1]",
+      "role": "link"
+    },
+    "e48": {
+      "name": "圖 3",
+      "role": "link"
+    },
+    "e49": {
+      "name": "[4]",
+      "role": "link"
+    },
+    "e5": {
+      "name": "0x1DEA",
+      "role": "link"
+    },
+    "e50": {
+      "name": "CC BY 4.0",
+      "role": "link"
+    },
+    "e6": {
+      "name": "mobile navigation",
+      "role": "button"
+    },
+    "e7": {
+      "name": "資安認知推廣備課系列",
+      "role": "button"
+    },
+    "e8": {
+      "name": "資安認知推廣備課系列",
+      "role": "heading"
+    },
+    "e9": {
+      "name": "電表沒拍到你，用電資料怎麼留下生活線索？",
+      "role": "link"
+    }
+  },
+  "snapshot": "- link \"Skip to content\" [ref=e1, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#VPContent]\n- link \"0x1DEA\" [ref=e5, url=http://127.0.0.1:8879/]\n- button \"mobile navigation\" [expanded=false, ref=e6]\n- button \"Menu\" [expanded=false, ref=e2]\n- button \"On this page\" [ref=e3]\n- navigation \"Sidebar Navigation\" [ref=e4]\n  - button \"資安認知推廣備課系列\" [ref=e7]\n    - heading \"資安認知推廣備課系列\" [level=2, ref=e8]\n  - link \"電表沒拍到你，用電資料怎麼留下生活線索？\" [ref=e9, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html]\n- heading \"用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？ Permalink to “用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？”\" [level=1, ref=e10]\n  - link \"Permalink to “用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？”\" [ref=e21, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E7%94%A8%E9%9B%BB%E7%B4%80%E9%8C%84%E8%A3%A1%E7%9A%84%E6%AD%A3%E5%B8%B8%E8%88%87%E7%95%B0%E5%B8%B8-%E5%AE%B6%E8%A3%A1%E5%93%AA%E5%8F%B0%E8%A8%AD%E5%82%99%E5%9C%A8%E5%81%B7%E5%81%B7%E5%BF%99]\n- heading \"staging 修訂審閱稿\" [level=2, ref=e22]\n- heading \"用電的時間變化可以透露生活細節？ Permalink to “用電的時間變化可以透露生活細節？”\" [level=2, ref=e11]\n  - link \"Permalink to “用電的時間變化可以透露生活細節？”\" [ref=e23, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E7%94%A8%E9%9B%BB%E7%9A%84%E6%99%82%E9%96%93%E8%AE%8A%E5%8C%96%E5%8F%AF%E4%BB%A5%E9%80%8F%E9%9C%B2%E7%94%9F%E6%B4%BB%E7%B4%B0%E7%AF%80]\n- heading \"半夜的電鍋，是壞了還是有人用？ Permalink to “半夜的電鍋，是壞了還是有人用？”\" [level=2, ref=e12]\n  - link \"Permalink to “半夜的電鍋，是壞了還是有人用？”\" [ref=e24, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E5%8D%8A%E5%A4%9C%E7%9A%84%E9%9B%BB%E9%8D%8B-%E6%98%AF%E5%A3%9E%E4%BA%86%E9%82%84%E6%98%AF%E6%9C%89%E4%BA%BA%E7%94%A8]\n- link \"圖 1\" [ref=e25, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#fig-simulated-ems]\n- link \"圖 1\" [ref=e26, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#fig-simulated-ems]\n- link \"同場加映 延伸閱讀 什麼是安全？能吃嗎？ 如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？ 來看這一篇 \" [ref=e13, url=http://127.0.0.1:8879/post/course/cybersec/what-is-safety]\n- heading \"先知道平常，才知道哪裡怪怪的 Permalink to “先知道平常，才知道哪裡怪怪的”\" [level=2, ref=e14]\n  - link \"Permalink to “先知道平常，才知道哪裡怪怪的”\" [ref=e27, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E5%85%88%E7%9F%A5%E9%81%93%E5%B9%B3%E5%B8%B8-%E6%89%8D%E7%9F%A5%E9%81%93%E5%93%AA%E8%A3%A1%E6%80%AA%E6%80%AA%E7%9A%84]\n- heading \"從總用電，估計個別設備 Permalink to “從總用電，估計個別設備”\" [level=2, ref=e15]\n  - link \"Permalink to “從總用電，估計個別設備”\" [ref=e28, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E5%BE%9E%E7%B8%BD%E7%94%A8%E9%9B%BB-%E4%BC%B0%E8%A8%88%E5%80%8B%E5%88%A5%E8%A8%AD%E5%82%99]\n- link \"圖 1\" [ref=e29, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#fig-simulated-ems]\n- link \"[1]\" [ref=e30, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#ref-1]\n- link \"[1]\" [ref=e31, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#ref-1]\n- heading \"如果設備真的在忙，它忙的是什麼？ Permalink to “如果設備真的在忙，它忙的是什麼？”\" [level=2, ref=e16]\n  - link \"Permalink to “如果設備真的在忙，它忙的是什麼？”\" [ref=e32, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E5%A6%82%E6%9E%9C%E8%A8%AD%E5%82%99%E7%9C%9F%E7%9A%84%E5%9C%A8%E5%BF%99-%E5%AE%83%E5%BF%99%E7%9A%84%E6%98%AF%E4%BB%80%E9%BA%BC]\n- link \"[2]\" [ref=e33, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#ref-2]\n- link \"[3]\" [ref=e34, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#ref-3]\n- heading \"一條電力曲線，怎麼接到攻擊調查？ Permalink to “一條電力曲線，怎麼接到攻擊調查？”\" [level=2, ref=e17]\n  - link \"Permalink to “一條電力曲線，怎麼接到攻擊調查？”\" [ref=e35, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E4%B8%80%E6%A2%9D%E9%9B%BB%E5%8A%9B%E6%9B%B2%E7%B7%9A-%E6%80%8E%E9%BA%BC%E6%8E%A5%E5%88%B0%E6%94%BB%E6%93%8A%E8%AA%BF%E6%9F%A5]\n- heading \"這些生活紀錄，也會帶出隱私問題 Permalink to “這些生活紀錄，也會帶出隱私問題”\" [level=2, ref=e18]\n  - link \"Permalink to “這些生活紀錄，也會帶出隱私問題”\" [ref=e36, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E9%80%99%E4%BA%9B%E7%94%9F%E6%B4%BB%E7%B4%80%E9%8C%84-%E4%B9%9F%E6%9C%83%E5%B8%B6%E5%87%BA%E9%9A%B1%E7%A7%81%E5%95%8F%E9%A1%8C]\n- link \"[4]\" [ref=e37, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#ref-4]\n- link \"[4]\" [ref=e38, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#ref-4]\n- heading \"先把家裡的「怪怪的」記下來 Permalink to “先把家裡的「怪怪的」記下來”\" [level=2, ref=e19]\n  - link \"Permalink to “先把家裡的「怪怪的」記下來”\" [ref=e39, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E5%85%88%E6%8A%8A%E5%AE%B6%E8%A3%A1%E7%9A%84%E3%80%8C%E6%80%AA%E6%80%AA%E7%9A%84%E3%80%8D%E8%A8%98%E4%B8%8B%E4%BE%86]\n- link \"圖 1\" [ref=e45, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#fig-simulated-ems]\n- link \"圖 2\" [ref=e46, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#fig-nilm-process]\n- link \"[1]\" [ref=e47, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#ref-1]\n- link \"圖 3\" [ref=e48, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#fig-occupancy-process]\n- link \"[4]\" [ref=e49, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#ref-4]\n- link \"CC BY 4.0\" [ref=e50, url=https://creativecommons.org/licenses/by/4.0/]\n- heading \"參考文獻 Permalink to “參考文獻”\" [level=2, ref=e20]\n  - link \"Permalink to “參考文獻”\" [ref=e40, url=http://127.0.0.1:8879/post/course/security-awareness/electricity-privacy.html#%E5%8F%83%E8%80%83%E6%96%87%E7%8D%BB]\n- link \"https://arxiv.org/abs/1404.3878v1 \" [ref=e41, url=https://arxiv.org/abs/1404.3878v1]\n- link \"https://www.radware.com/getattachment/Security/Threat-Advisories-and-Attack-Reports/1850/ERT-Alert-ADB-Miner_3.pdf.aspx/?lang=en-US \" [ref=e42, url=https://www.radware.com/getattachment/Security/Threat-Advisories-and-Attack-Reports/1850/ERT-Alert-ADB-Miner_3.pdf.aspx/?lang=en-US]\n- link \"https://discovery.ucl.ac.uk/id/eprint/10226943/ \" [ref=e43, url=https://discovery.ucl.ac.uk/id/eprint/10226943/]\n- link \"https://arxiv.org/abs/2308.14114v1 \" [ref=e44, url=https://arxiv.org/abs/2308.14114v1]"
+}

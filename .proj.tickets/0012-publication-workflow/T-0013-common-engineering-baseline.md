@@ -2,7 +2,8 @@
 id: T-0013
 title: Establish the common engineering baseline and M0 inventory
 epic: 0012-publication-workflow
-status: review
+status: done
+landing_evidence: .proj.specs/0012-publication-workflow/implementation/T-0013-landing/landing.json
 blocked_by: []
 ---
 
@@ -107,3 +108,24 @@ Owner authorized commit, non-force ticket-branch push and main PR only, with no 
 deployment-setting changes. Fresh remote refs match approved M0; PR20/21 remain OPEN.
 No candidate article/revision or historical contract change admitted. Status remains review;
 main/staging actual landing and prerequisites remain distinct, uncompleted gates.
+
+### 2026-10-15 actual dual-target acceptance
+
+Owner-confirmed and independently read-back PR22/main001b26f and PR23/staging0357835 are
+MERGED; actual main is an ancestor of actual staging. Both complete source identities equal
+approved M0 plus exact shared engineering successor, with all50 candidate identities intact.
+Main66+34+54 and staging95+34+87 actual landing tests pass; build/lint/native adoption/
+structure/materializer pass. Existing historical assertions/verifiers, writing packages,
+receipts and candidate/published content are unchanged. PR20/21 remain OPEN and are not
+recorded landed or used to close historical tickets. The ticket's blocked_by is empty.
+All T13 ACs met; this local tracker closeout references actual authorized target commits, not
+a proposal or open PR. Landing receipt and coverage: ../../.proj.specs/0012-publication-workflow/implementation/T-0013-landing/.
+No new merge, target push or deployment-setting change.
+
+### Engineering delivery follow-through
+
+Owner authorized this closeout plus separate T14/T15 main PRs. This parent includes
+the independently reviewed four-file current/historical verification successor,
+needed so the closed tracker coexists with unchanged #22 assertions and future maps.
+It does not change the actual T13 landing commits or invent new target landing evidence.
+Review lineage: epic review/code-T-0013-current-successor.md and security counterpart.

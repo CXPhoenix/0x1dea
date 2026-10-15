@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "ticket": "T-0010",
+  "authorized": true,
+  "landed": true,
+  "commit": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+  "target": "staging",
+  "approval_receipt": ".proj.specs/0010-main-verification-repair/landing-approval.md",
+  "main_landing": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+  "primary_pull_request": "https://github.com/CXPhoenix/0x1dea/pull/18",
+  "staging_integration_pull_request": "https://github.com/CXPhoenix/0x1dea/pull/19",
+  "verified_at": "2026-10-11T13:22:36.679327+00:00"
+}

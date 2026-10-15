@@ -1,0 +1,134 @@
+[
+  {
+    "number": 13,
+    "baseRefName": "main",
+    "headRefOid": "64799e6df56cc1fab6673ce387f78794938619cb",
+    "mergeCommit": {
+      "oid": "bed066bc9ae3a4f8010ea9f6118869c7f8e4feb0"
+    },
+    "mergedAt": "2026-10-05T00:14:09Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/13"
+  },
+  {
+    "number": 14,
+    "baseRefName": "staging",
+    "headRefOid": "c503a6852affcafce927d8248c35e5fba9c0d1b3",
+    "mergeCommit": {
+      "oid": "8987806a3c34653a236ca0c683a46bcc9632c27d"
+    },
+    "mergedAt": "2026-10-08T15:25:42Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/14"
+  },
+  {
+    "number": 15,
+    "baseRefName": "main",
+    "headRefOid": "8987806a3c34653a236ca0c683a46bcc9632c27d",
+    "mergeCommit": {
+      "oid": "e457143e8be2f7d54f69bc3e9b80230375be49de"
+    },
+    "mergedAt": "2026-10-08T15:42:00Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/15"
+  },
+  {
+    "number": 16,
+    "baseRefName": "staging",
+    "headRefOid": "1f834fdd6b6a363a68c4ec092c09dee29bd2da1e",
+    "mergeCommit": {
+      "oid": "69ff85f5fe1baddb54102070a436dff9ac1c5b73"
+    },
+    "mergedAt": "2026-10-10T16:15:25Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/16"
+  },
+  {
+    "number": 17,
+    "baseRefName": "main",
+    "headRefOid": "604f8733ca47d67fc277ec127a9da743cefbc22e",
+    "mergeCommit": {
+      "oid": "88b9c53852f527ee636bcc4b4ca5e166f6ec10fd"
+    },
+    "mergedAt": "2026-10-11T08:31:46Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/17"
+  },
+  {
+    "number": 18,
+    "baseRefName": "main",
+    "headRefOid": "c09e1bd820eaa82e52c7bdb359aeaca9e62cc2eb",
+    "mergeCommit": {
+      "oid": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a"
+    },
+    "mergedAt": "2026-10-11T11:49:22Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/18"
+  },
+  {
+    "number": 19,
+    "baseRefName": "staging",
+    "headRefOid": "01b5d69bc1a006ef04d8c475b4e7df38712c9ca0",
+    "mergeCommit": {
+      "oid": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7"
+    },
+    "mergedAt": "2026-10-11T12:58:17Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/19"
+  },
+  {
+    "number": 22,
+    "baseRefName": "main",
+    "headRefOid": "400603de885faa60cc52edfeb2f10f37184e5864",
+    "mergeCommit": {
+      "oid": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb"
+    },
+    "mergedAt": "2026-10-14T15:41:31Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/22"
+  },
+  {
+    "number": 23,
+    "baseRefName": "staging",
+    "headRefOid": "9dd768be49ac5be838933a51719139030f670cc1",
+    "mergeCommit": {
+      "oid": "035783590895a426ee395045829ebc9d50e2b9cf"
+    },
+    "mergedAt": "2026-10-14T16:14:42Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/23"
+  },
+  {
+    "number": 24,
+    "baseRefName": "main",
+    "headRefOid": "b4e87c2453c47010cd82e6789dbb4be3cea0b28f",
+    "mergeCommit": {
+      "oid": "c1dd3bbde1b9522bf88692014866fbc18aaf1173"
+    },
+    "mergedAt": "2026-10-15T04:47:36Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/24"
+  },
+  {
+    "number": 25,
+    "baseRefName": "main",
+    "headRefOid": "44d334e2abe075c6f7e06677d5c6096777b81370",
+    "mergeCommit": {
+      "oid": "b84321dfeb23e155de923e6fdf799f261e3cd1c9"
+    },
+    "mergedAt": "2026-10-15T14:41:06Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/25"
+  },
+  {
+    "number": 26,
+    "baseRefName": "main",
+    "headRefOid": "a42e6bebe83f00adc67200159a303b1fc8ea9e46",
+    "mergeCommit": {
+      "oid": "87740186f2a1b57f8c1df89f36647cbe3663f428"
+    },
+    "mergedAt": "2026-10-15T15:00:46Z",
+    "state": "MERGED",
+    "url": "https://github.com/CXPhoenix/0x1dea/pull/26"
+  }
+]
