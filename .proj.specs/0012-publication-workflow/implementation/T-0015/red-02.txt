@@ -1,0 +1,19 @@
+test_already_contained_main_returns_noop_without_pr_readiness (test_staging_sync.StagingSyncTests.test_already_contained_main_returns_noop_without_pr_readiness) ... FAIL
+test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source (test_staging_sync.StagingSyncTests.test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source) ... ok
+
+======================================================================
+FAIL: test_already_contained_main_returns_noop_without_pr_readiness (test_staging_sync.StagingSyncTests.test_already_contained_main_returns_noop_without_pr_readiness)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 122, in test_already_contained_main_returns_noop_without_pr_readiness
+    self.assertEqual(report['status'], 'no-op')
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'no-op'
+- ready
++ no-op
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.009s
+
+FAILED (failures=1)

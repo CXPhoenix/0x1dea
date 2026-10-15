@@ -1,0 +1,13 @@
+{
+  "registry_sha256": "0e49db40fdf95c115b1f0941dbfd9aba3d56a7766381696feeae2987e91d59f5",
+  "main": "b84321dfeb23e155de923e6fdf799f261e3cd1c9",
+  "staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "main_tree_paths": 2113,
+  "stage_tree_paths": 2317,
+  "candidate_count": 6,
+  "owned_paths": 50,
+  "engineering_paths": 460,
+  "protected_checks": 382,
+  "basis": "Owner-approved immutable M0 six candidates unchanged; exact engineering delta from actually landed main vs current stage; stage source pins are preservation snapshots, not clean-publication provenance",
+  "no_authority": "Diagnostic local CLI exercise only; no stage merge/remote writer/readiness endorsement"
+}

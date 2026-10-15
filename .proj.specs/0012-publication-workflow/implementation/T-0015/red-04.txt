@@ -1,0 +1,25 @@
+test_already_contained_main_returns_noop_without_pr_readiness (test_staging_sync.StagingSyncTests.test_already_contained_main_returns_noop_without_pr_readiness) ... ok
+test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source (test_staging_sync.StagingSyncTests.test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source) ... ok
+test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob (test_staging_sync.StagingSyncTests.test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob) ... FAIL
+test_conflict_reports_exact_paths_and_never_materializes_readiness (test_staging_sync.StagingSyncTests.test_conflict_reports_exact_paths_and_never_materializes_readiness) ... ok
+
+======================================================================
+FAIL: test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob (test_staging_sync.StagingSyncTests.test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 151, in test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob
+    self.assertEqual(report['paths'], [ARTICLE])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [] != ['blog/post/B.md']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'blog/post/B.md'
+
+- []
++ ['blog/post/B.md']
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.207s
+
+FAILED (failures=1)

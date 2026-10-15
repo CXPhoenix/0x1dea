@@ -1,0 +1,236 @@
+{
+  "checkout": "/private/tmp/0x1dea-T0015",
+  "branch": "tickets/T-0015/local-staging-sync",
+  "base": "b84321dfeb23e155de923e6fdf799f261e3cd1c9",
+  "head": "1f13b030eaf322a5ace4c469dfeda453844819f7",
+  "merge_base": "b4e87c2453c47010cd82e6789dbb4be3cea0b28f",
+  "merge_head": "b84321dfeb23e155de923e6fdf799f261e3cd1c9",
+  "files": {
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/README.md": {
+      "sha256": "8de04e6a7a3659d66eb1c9d76e35b9372d2157a9798cf840155f60bf44cc10ff",
+      "size": 1533
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-final-prepare.json": {
+      "sha256": "c3b92384c9a3d43a0b50cd222f7dc4f5e634906af59be269c811950d7d089940",
+      "size": 1225
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-final-registry.json": {
+      "sha256": "2574dbeaccb5cd76121bea5dd46336410616dfac2389663150fb4aea7223e952",
+      "size": 821954
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-final-verify.json": {
+      "sha256": "c3b92384c9a3d43a0b50cd222f7dc4f5e634906af59be269c811950d7d089940",
+      "size": 1225
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-noop-report.json": {
+      "sha256": "85fe36f2906c1e93bebdce8ccc411c72bbf0e34bafaa70974d3ed811ba922acf",
+      "size": 1225
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-registry.json": {
+      "sha256": "cb768e13d29b37be5ac458d94b570731d4f99fdac9c09a4d26b5ed2e3f947df5",
+      "size": 820120
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/actual-verify-report.json": {
+      "sha256": "85fe36f2906c1e93bebdce8ccc411c72bbf0e34bafaa70974d3ed811ba922acf",
+      "size": 1225
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/additional-template-regression.txt": {
+      "sha256": "5da8e79f07b067e7dde124b2ae1d768a11a1dc01a24e28d91cef5b640701d413",
+      "size": 2776
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/alias-fixedhistory-red.txt": {
+      "sha256": "c806f838e3aa41f6f77f7c9f7f86b256589ff9730c66d0c3394ee90f6a4a70d6",
+      "size": 8715
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/build.txt": {
+      "sha256": "e2ce963a8cc1f0c6f7a5bce17dfdb11d4ab06b309f63897c4c92196785d5d1c9",
+      "size": 272
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-final.txt": {
+      "sha256": "140f6332bf0dc25f131c2caf06e711966b2237549e1712abaa3794febee63e58",
+      "size": 459
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-green.txt": {
+      "sha256": "e70a78d49251b57bde35a57ea4a00669ab258d605b82a56204e2bd1424e0e16e",
+      "size": 283
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-promisor-green.txt": {
+      "sha256": "c38ef86920ae51619981e5692d03459c1dcade8258da0bee0c990b6f42b8a3e1",
+      "size": 645
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-promisor-red.txt": {
+      "sha256": "1b2237fe6170d07d00270d0e5b2ec34395809cfa8be2a2103452c9b8b2453c50",
+      "size": 4233
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/closed-red.txt": {
+      "sha256": "facdacd4437f1dbc643cc5711b26cc55e3cd5a6ae5609d6bfc56ef360d0840b0",
+      "size": 1063
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/coverage.md": {
+      "sha256": "6837cf970aba3a81303e8049c8d6a0d7a68060339d6d421c343bf0dabb93f893",
+      "size": 5540
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/current-guard-green.txt": {
+      "sha256": "d7763a326bb36d79c57594ec3b9f4cba2651c7c27e1341ebadb586a7b05210e0",
+      "size": 2892
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/current-guard-red.txt": {
+      "sha256": "c78f6b5dfebfc613d936889d1859579bf242875419aab16608db2aef25b15547",
+      "size": 58
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/delivery-T15-sync.txt": {
+      "sha256": "436e37ce39f11dd613d818d9b48227ce63685e3e6ea65146d0d8ae506c526d7b",
+      "size": 4692
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/focused.txt": {
+      "sha256": "2bdec5ca356326b4c6d45d0fca2957d09ceedd5dac54ba9273c64f4a843009cb",
+      "size": 4232
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/full-current-native.txt": {
+      "sha256": "5f198bd922a6a16da2e5e19bbc7712f71335c2c0e54f24419756c94b175723cb",
+      "size": 21376
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/included-missing-green.txt": {
+      "sha256": "44f79dae42316eb907c9f0f6a4beb0334454e922911f64107e762a6e947e92c2",
+      "size": 3712
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/included-missing-red.txt": {
+      "sha256": "115376a637d391ffda7d52f537326fb1053e94aa71461722c4c177328de89e34",
+      "size": 6730
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/lint.txt": {
+      "sha256": "366b5725e88c65fe84aac9bee7b5ae3fe2d8fc1258006127c7570abab473b364",
+      "size": 191
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/materializer.txt": {
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+      "size": 172
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/pre-repair-native-diagnostic.txt": {
+      "sha256": "31e74b00e308364c10f26984db6828e0a6a6cdd3f0418431effee177ad55085b",
+      "size": 31184
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/promisor-green.txt": {
+      "sha256": "0b6d4de1d3c57cad2bb4350be123ec339976c50142902a8be773b86df51ecc5a",
+      "size": 3344
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/promisor-red.txt": {
+      "sha256": "6632ff5a6ca7144994459c01864ae2070801dcaeb9ee05ad946727bdeffdd305",
+      "size": 4858
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/python-current-final.txt": {
+      "sha256": "69dd87e3e771b6c65b955a4b6e2303e45efc63f331675ac7f993184d4ad540c5",
+      "size": 22980
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-01-cli.txt": {
+      "sha256": "d06c717c89391b63bc885fcdb09dc06af5bef0fb1994a4df691ea80dae142f81",
+      "size": 1384
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-02.txt": {
+      "sha256": "639dff1ed6b1081f6efd2fc7b8153dd115da01976a0e9fb84ec9fbf722042480",
+      "size": 1126
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-03.txt": {
+      "sha256": "e708165a36be4d1e8174f05634814c530d87b31c674b5655cfea20e68bc90bb8",
+      "size": 1974
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-04.txt": {
+      "sha256": "2346cbd6a53e7beef03cf3c0f26611e17b9909e22ce045f95fa1cd5cbdb59c81",
+      "size": 1634
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-05.txt": {
+      "sha256": "cc3a225052c4df5e890ad1302ad3fc9908ba0906410e86b02de444b5dac988d0",
+      "size": 7430
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-06.txt": {
+      "sha256": "03ec1c60521e8da3bb90f0801b95376f0730f97dcd175a7f2b956fd891d77cfd",
+      "size": 2693
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-07.txt": {
+      "sha256": "2c321f12cf35bc4355d0321b3f9e75722b4e4dd871864359cfee25cb8f498f22",
+      "size": 2494
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-08.txt": {
+      "sha256": "6343fdbf8cdf84cb6ba864a055d5448e7426e9ae36cf6b237e664e6f34241605",
+      "size": 5101
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-09.txt": {
+      "sha256": "1b59fa4ae285a760ca902e080b522b5c1d7823344877101f1a93a8ea626b1314",
+      "size": 2908
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-10.txt": {
+      "sha256": "032e062e4ac1886d24f95a87ca4a07af489200dbe199ba2caa5c045e30422eb2",
+      "size": 3522
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-11.txt": {
+      "sha256": "da6c4b199fdf63c5839d498603e3f6f6522ed04160f16526c67ce226ece875d0",
+      "size": 3592
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-13.txt": {
+      "sha256": "5257ade1ee803d554230a66222dffa88f3bfe5e8a88f6dc08d758364dfc3f2da",
+      "size": 4162
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/red-14.txt": {
+      "sha256": "08b25347cfa06bda48da371fff0ff13b1a2b828667065a8c847c6aa7a802ff35",
+      "size": 4602
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/review-capture.json": {
+      "sha256": "2f121c60bb09503579c244175ba64ab97630debf546deaf6cb448235a3ebe9d7",
+      "size": 13084
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/review-git-context.json": {
+      "sha256": "c03805f0d6082f642ba065233d8a71018cc1e453b64c429b24459072e46bb0f1",
+      "size": 803
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/runner-preflight-red.txt": {
+      "sha256": "3bc4fa0d2785bd61697a25dc205de7c1d79112caf33a916905526b3246fbdbfa",
+      "size": 3245
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/source-manifest.json": {
+      "sha256": "f6b43e04569a1c58ce80c5ade77bee1e01c1ec3c62035090da39bff7b0d96acf",
+      "size": 990
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/source.patch": {
+      "sha256": "a2ad79f7b3f4479fb6b3a18bb5be0ea6fbfd16d25d72dcf43f35530acc94d995",
+      "size": 67135
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/structure.txt": {
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "size": 210
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0015/unit.txt": {
+      "sha256": "fb1abee4d5fe10ddc4f24556ee3a6b33d0573afb4f19e53dde6dc24ba77581eb",
+      "size": 610
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0015.md": {
+      "sha256": "fab28e72cd5dc08f3702c1a77b04b5ee560be54c1518851d3e1df50e5517d43a",
+      "size": 1832
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0015.md": {
+      "sha256": "0c52ba6d4f448746719f1d88b5b494a852984b0e78b2a6945dc731d00a1af5cc",
+      "size": 1334
+    },
+    ".proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md": {
+      "sha256": "d11935a63dcd51d943e1f90a3c4084838f81f6b168c2b2666f038abcd419a895",
+      "size": 3357
+    },
+    "docs/staging-sync.md": {
+      "sha256": "1cb88ef963e966c1e3be170af383a8f49ff62ab4cafa5090a80c242960b71d50",
+      "size": 4690
+    },
+    "maintenance/publication-workflow/engineering-v1.json": {
+      "sha256": "6928fce89aa488f8a3fadac2977751b859519d7d6b20e20760bda2212f3a13e2",
+      "size": 68814
+    },
+    "scripts/staging-sync.py": {
+      "sha256": "257901190d218bcb55c0dcf6dbc4a5c45b9474107cc2c1e32a225508810c534c",
+      "size": 20610
+    },
+    "tests/article_publication/test_staging_sync.py": {
+      "sha256": "71c712d1ca9b3d8cc27abc78bb64664aaff9edf71f1b498028695e2a6664064b",
+      "size": 24453
+    }
+  },
+  "layers": "Full staged/committed/unstaged captures; files snapshot scoped to actual main vs resolved working tree",
+  "excluded": "Already landed T14 bytes imported from main are context, not T15 delta. All main identities except T15 ticket must remain identical. No new behavior or test seam. Native source review only; CLI remote writers/real deployment not activated."
+}

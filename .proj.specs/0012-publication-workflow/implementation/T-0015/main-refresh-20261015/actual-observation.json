@@ -1,0 +1,11 @@
+{
+  "actual_result": "ready",
+  "main": "b84321dfeb23e155de923e6fdf799f261e3cd1c9",
+  "staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "result_tree": "5bf030793ba2eea97fe09457df0793c48f6bcd67",
+  "candidate_paths_preserved": 50,
+  "protected_checks_pass": 382,
+  "local_ready": true,
+  "publishable": false,
+  "scope": "Actual pins through PR25 only; PR26 is not yet landed. No ref mutation or native/CI/HTTP readiness. Earlier controller assumption of conflict was incorrect; actual CLI succeeded and raw success retained."
+}

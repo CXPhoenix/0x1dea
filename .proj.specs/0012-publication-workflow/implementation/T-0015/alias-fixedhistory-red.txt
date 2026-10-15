@@ -1,0 +1,123 @@
+test_already_contained_main_returns_noop_without_pr_readiness (test_staging_sync.StagingSyncTests.test_already_contained_main_returns_noop_without_pr_readiness) ... ok
+test_candidate_metadata_mode_and_receipt_tampering_block_readiness (test_staging_sync.StagingSyncTests.test_candidate_metadata_mode_and_receipt_tampering_block_readiness) ... ok
+test_candidate_source_pin_must_own_the_registered_full_identity (test_staging_sync.StagingSyncTests.test_candidate_source_pin_must_own_the_registered_full_identity) ... ok
+test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source (test_staging_sync.StagingSyncTests.test_clean_sync_has_independent_expected_tree_and_preserves_dirty_source) ... ok
+test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob (test_staging_sync.StagingSyncTests.test_conflict_free_different_paragraph_edit_blocks_full_candidate_blob) ... ok
+test_conflict_reports_exact_paths_and_never_materializes_readiness (test_staging_sync.StagingSyncTests.test_conflict_reports_exact_paths_and_never_materializes_readiness) ... ok
+test_corrupted_blob_bytes_cannot_keep_the_registered_git_identity (test_staging_sync.StagingSyncTests.test_corrupted_blob_bytes_cannot_keep_the_registered_git_identity) ... ERROR
+test_explicit_preview_ui_engineering_is_allowed_without_article_waiver (test_staging_sync.StagingSyncTests.test_explicit_preview_ui_engineering_is_allowed_without_article_waiver) ... ok
+test_final_pin_reread_blocks_a_native_merge_race (test_staging_sync.StagingSyncTests.test_final_pin_reread_blocks_a_native_merge_race) ... ok
+test_fixed_legacy_source_boundary_requires_protected_history_check (test_staging_sync.StagingSyncTests.test_fixed_legacy_source_boundary_requires_protected_history_check) ... FAIL
+test_included_promisor_configuration_cannot_hide_partial_history (test_staging_sync.StagingSyncTests.test_included_promisor_configuration_cannot_hide_partial_history) ... ok
+test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected (test_staging_sync.StagingSyncTests.test_literal_historical_alias_is_preserved_and_new_symlinks_are_rejected) ... ok
+test_local_pin_advance_expires_receipt_for_main_staging_and_candidate_source (test_staging_sync.StagingSyncTests.test_local_pin_advance_expires_receipt_for_main_staging_and_candidate_source) ... ok
+test_main_deleting_a_staging_canonical_alias_blocks_the_sync (test_staging_sync.StagingSyncTests.test_main_deleting_a_staging_canonical_alias_blocks_the_sync) ... FAIL
+test_main_ref_cannot_be_labeled_as_staging_even_with_self_consistent_registry (test_staging_sync.StagingSyncTests.test_main_ref_cannot_be_labeled_as_staging_even_with_self_consistent_registry) ... ok
+test_missing_candidate_asset_blob_blocks_noop_without_source_object_writes (test_staging_sync.StagingSyncTests.test_missing_candidate_asset_blob_blocks_noop_without_source_object_writes) ... ok
+test_partial_promisor_source_configuration_is_rejected_without_fetch (test_staging_sync.StagingSyncTests.test_partial_promisor_source_configuration_is_rejected_without_fetch) ... ok
+test_protected_history_check_cannot_be_omitted_or_use_wrong_expected_identity (test_staging_sync.StagingSyncTests.test_protected_history_check_cannot_be_omitted_or_use_wrong_expected_identity) ... ok
+test_registry_requires_complete_unique_candidates_fixed_role_and_strict_schema (test_staging_sync.StagingSyncTests.test_registry_requires_complete_unique_candidates_fixed_role_and_strict_schema) ... ok
+test_schema_and_help_expose_supported_local_operations_without_role_selector (test_staging_sync.StagingSyncTests.test_schema_and_help_expose_supported_local_operations_without_role_selector) ... ok
+test_source_custom_shell_merge_driver_is_not_executed (test_staging_sync.StagingSyncTests.test_source_custom_shell_merge_driver_is_not_executed) ... ok
+test_source_git_template_cannot_install_an_external_merge_driver (test_staging_sync.StagingSyncTests.test_source_git_template_cannot_install_an_external_merge_driver) ... ok
+test_symlinked_output_parent_cannot_redirect_writes (test_staging_sync.StagingSyncTests.test_symlinked_output_parent_cannot_redirect_writes) ... ok
+
+======================================================================
+ERROR: test_corrupted_blob_bytes_cannot_keep_the_registered_git_identity (test_staging_sync.StagingSyncTests.test_corrupted_blob_bytes_cannot_keep_the_registered_git_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 421, in test_corrupted_blob_bytes_cannot_keep_the_registered_git_identity
+    (self.repo / '.git/objects' / blob[:2] / blob[2:]).write_bytes(zlib.compress(b'blob ' + str(len(content)).encode() + b'\0' + content))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 796, in write_bytes
+    with self.open(mode='wb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-sync-48sp3ml_/source/.git/objects/6b/306789f826a1f26cf149d76660111247426362'
+
+======================================================================
+FAIL: test_fixed_legacy_source_boundary_requires_protected_history_check (test_staging_sync.StagingSyncTests.test_fixed_legacy_source_boundary_requires_protected_history_check)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 450, in test_fixed_legacy_source_boundary_requires_protected_history_check
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "checks": [
+    "pinned-source-trees",
+    "independent-git-tree",
+    "full-candidate-identities",
+    "protected-identities",
+    "local-ref-pins"
+  ],
+  "local_ready": true,
+  "main": {
+    "ref": "main",
+    "sha": "6d0f44fe304b0325f50433938e5a63402fb87e61"
+  },
+  "publishable": false,
+  "registry_sha256": "f62da47da8944a8c0b6091b5c253015b3bde471f534d39327e06c5e41fb01207",
+  "repository": "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-sync-ffh_g7tu/source",
+  "result_tree": "84d513c886bbbcd34c739bafa8e110f587defad0",
+  "sources": [
+    {
+      "ref": "candidate/B",
+      "sha": "cd0bb8bddbdc00b2b5f7903e8744d9490fba2349"
+    }
+  ],
+  "staging": {
+    "ref": "staging",
+    "sha": "cd0bb8bddbdc00b2b5f7903e8744d9490fba2349"
+  },
+  "status": "ready",
+  "target": "staging",
+  "version": 1
+}
+
+
+======================================================================
+FAIL: test_main_deleting_a_staging_canonical_alias_blocks_the_sync (test_staging_sync.StagingSyncTests.test_main_deleting_a_staging_canonical_alias_blocks_the_sync)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0015/tests/article_publication/test_staging_sync.py", line 436, in test_main_deleting_a_staging_canonical_alias_blocks_the_sync
+    self.assertNotEqual(result.returncode, 0, result.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "checks": [
+    "pinned-source-trees",
+    "independent-git-tree",
+    "full-candidate-identities",
+    "protected-identities",
+    "local-ref-pins"
+  ],
+  "local_ready": true,
+  "main": {
+    "ref": "main",
+    "sha": "d1389564f36c9c855e6a5fa4e189fa755b7f671b"
+  },
+  "publishable": false,
+  "registry_sha256": "b7b771b2ac546b92c560733155f7a72980ef078f0e3a131ece1001da62d6c1ba",
+  "repository": "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-sync-jtu70eb_/source",
+  "result_tree": "8b70acb0983fbe8938d2a2857813286f0326ad1b",
+  "sources": [
+    {
+      "ref": "candidate/B",
+      "sha": "2e250d7ad638162ced3a340873d68fa821914609"
+    }
+  ],
+  "staging": {
+    "ref": "staging",
+    "sha": "2e250d7ad638162ced3a340873d68fa821914609"
+  },
+  "status": "ready",
+  "target": "staging",
+  "version": 1
+}
+
+
+----------------------------------------------------------------------
+Ran 23 tests in 15.527s
+
+FAILED (failures=2, errors=1)
