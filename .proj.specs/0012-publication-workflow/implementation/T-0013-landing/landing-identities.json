@@ -1,0 +1,18 @@
+{
+  "main": {
+    "head": "001b26f8e931e0cf1e62373c5aa088a1b5ed09eb",
+    "tree": "b4aa6456b9ab7534029468ba51c53200cc840468",
+    "native_adoption": "pass",
+    "candidate_paths_checked": 50,
+    "full_source_identity_verified": true,
+    "candidate_role": "main"
+  },
+  "staging": {
+    "head": "035783590895a426ee395045829ebc9d50e2b9cf",
+    "tree": "a3c0f92567452640a3aeb1943dd2b25ba582de55",
+    "native_adoption": "pass",
+    "candidate_paths_checked": 50,
+    "full_source_identity_verified": true,
+    "candidate_role": "staging"
+  }
+}

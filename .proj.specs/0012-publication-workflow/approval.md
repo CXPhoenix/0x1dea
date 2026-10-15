@@ -59,3 +59,21 @@ only approved engineering/management changes. Candidate articles and historical 
 remain protected. No merge or deployment-setting changes authorized. This does not mark
 T-0013 done, land PR20/21, or authorize staging integration or article publication.
 See implementation/T-0013-current/delivery-preflight.json for fresh unchanged pins/states.
+
+## Owner-authorized staging synchronization and conditional closeout
+
+Owner authorized same-batch T-0013 staging synchronization, commit/non-force push and staging
+PR only, preserving candidates/history, with no target merge or deployment changes. PR23 was
+subsequently manually merged by owner; GitHub readback confirms staging landing0357835 and
+main PR22 landing001b26f. On 2026-10-15 Asia/Taipei owner authorized verification of actual
+landings and marking T-0013 done only when all criteria hold, then implementation of T-0014
+and T-0015 under the previously approved test table. No new merge/deployment-setting change
+or article publication is authorized. PR20/21 remain OPEN; their changes are not consumed.
+
+## Owner-authorized three-PR delivery
+
+On 2026-10-15 Asia/Taipei the owner explicitly authorized commit, non-force push
+and separate main PRs for T13 closeout and T14/T15 fixes. Only reviewed engineering
+and management changes may ship; candidates/history remain preserved. No merge or
+deployment-setting changes. Shared historical/current verification is carried by the
+T13 parent; T14/T15 keep independent canonical ticket branches. PR creation is not landing.
