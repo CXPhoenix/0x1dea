@@ -1,0 +1,6 @@
+test_short_unselected_revision_has_no_exclusion_override (article_publication.test_v2.V2Tests.test_short_unselected_revision_has_no_exclusion_override) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 3.616s
+
+OK

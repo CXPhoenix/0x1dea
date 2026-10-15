@@ -1,0 +1,10 @@
+{
+  "scenario": "same trusted registry/OIDs/refs; source loose blob data modified",
+  "oid": "99b4461a981665e12a0686ff4c4e2d92381284ee",
+  "git_cat_file_reads_replaced_bytes": true,
+  "returncode": 0,
+  "unapproved_bytes_accepted": true,
+  "stderr": "",
+  "original_blob": "# A\n\nA synthetic unique paragraph with enough characters to identify this article in generated indexes and search data.\n",
+  "tampered_blob": "# A\n\nUNREVIEWED OBJECT BYTES FROM A CORRUPT LOCAL DATABASE\n"
+}

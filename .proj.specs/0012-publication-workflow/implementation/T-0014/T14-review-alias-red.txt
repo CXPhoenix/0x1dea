@@ -1,0 +1,19 @@
+test_canonical_alias_cannot_be_newly_added_by_article_source (article_publication.test_v2.V2Tests.test_canonical_alias_cannot_be_newly_added_by_article_source) ... FAIL
+
+======================================================================
+FAIL: test_canonical_alias_cannot_be_newly_added_by_article_source (article_publication.test_v2.V2Tests.test_canonical_alias_cannot_be_newly_added_by_article_source)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 405, in test_canonical_alias_cannot_be_newly_added_by_article_source
+    self.reject(self.v2('prepare', self.root / 'new-canonical-alias'), 'immutable alias')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "2b78b324f7872673fe29419933331366566e8d3e", "files": {"blog/index.md": {"mode": "100644", "sha256": "5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368"}, "blog/post/A.md": {"mode": "100644", "sha256": "eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737"}, "skills/phoenix-writing/reference": {"mode": "120000", "sha256": "1cb52202e5157351dd1044476eba8d864757f30ddb410fcf1c2c333b0a6b4ae0"}}, "mode": "prepare", "plan_sha256": "0220efdb734ea244bbfa16f72f46292c7bcc710464c436b456331e2c0045f1bb", "pr_ready": false, "publishable": false, "registry_sha256": "c6b6e26b3d22eba51940e92e16cf1834d09991c74f7f37312369c4b971a7b972", "source_scan": {"asset_signature_count": 0, "forbidden_routes": ["/post/B", "/post/B.html", "/post/B.md"], "limits": "Supplementary signatures; exact source admission and candidate tree remain primary.", "prose_signature_count": 1, "status": "supplementary-pass", "unverified_sources": []}, "version": 2}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.463s
+
+FAILED (failures=1)

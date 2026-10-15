@@ -1,0 +1,19 @@
+test_B_add_then_revert_in_A_is_rejected_even_when_final_tree_is_only_A (article_publication.test_v2.V2Tests.test_B_add_then_revert_in_A_is_rejected_even_when_final_tree_is_only_A) ... FAIL
+
+======================================================================
+FAIL: test_B_add_then_revert_in_A_is_rejected_even_when_final_tree_is_only_A (article_publication.test_v2.V2Tests.test_B_add_then_revert_in_A_is_rejected_even_when_final_tree_is_only_A)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_v2.py", line 87, in test_B_add_then_revert_in_A_is_rejected_even_when_final_tree_is_only_A
+    self.reject(self.v2('prepare', out), 'source history')
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0014/tests/article_publication/test_cli.py", line 63, in reject
+    self.assertNotEqual(r.returncode,0,r.stdout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {"authority": "local preparation; separate approval, isolated build and output checks required", "candidate_tree": "8dbcb02b3a5ea08c61bd924beb697196e0436274", "files": {"blog/index.md": {"mode": "100644", "sha256": "5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368"}, "blog/post/A.md": {"mode": "100644", "sha256": "eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737"}}, "mode": "prepare", "plan_sha256": "6920c301f0bfabc037a47d2b3194ca7892f0cece12111ef0061f8b47321d3660", "pr_ready": false, "publishable": false, "registry_sha256": "eb9f8b7b2442d5fe9bbb7ea4bbce18cf0dfd64bef1727f3c9a465ef5d806db3f", "version": 2}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.631s
+
+FAILED (failures=1)

@@ -1,0 +1,6 @@
+test_isolated_real_build_and_separate_evidence_required_for_readiness (article_publication.test_v2.V2Tests.test_isolated_real_build_and_separate_evidence_required_for_readiness) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 9.943s
+
+OK

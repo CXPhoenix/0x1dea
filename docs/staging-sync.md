@@ -33,6 +33,8 @@ registry 的 version 固定為 `1`，target 固定為 `staging`。main／staging
 
 prepare 與 verify 都在讀取、計算後及回傳結果前重讀 pins。verify 會重算獨立 merge，並比對整份 receipt 與結果 tree；修改 receipt 不能重新賦予 readiness。receipt 的 registry SHA、main／staging／source pins 與 result tree 可供後續自動化綁定操作，但正式遠端寫入前仍須再次重讀遠端 refs 並做 concurrency／ownership 檢查。這些遠端流程屬於 T-0016，尚未啟用。
 
+verify 也會依重算結果的完整清單讀取輸出 `result.git` 的每個 blob，核對 type／長度與內容的 Git OID。只保留 receipt／tree／OID，卻用另一份 loose object 遮蔽原始 blob，仍會被拒絕；來源檢查不能代替輸出內容檢查。這是當次驗證，後續寫入前仍須重新驗證，不能保證驗證後的儲存內容不再遭修改。
+
 本機 CLI 檢查不等同產品 native guard、網站 build、瀏覽器、GitHub CI 或正式環境驗證。不同段落即使 Git 沒有衝突，只要合併後候選的完整 blob、mode 或 metadata 改變，就會停止；需先更新來源、重新審查 registry 並取得受影響作者核准，才能重試。
 
 歷史 Python assertions 不會改成配合現行 done 狀態。`python3 scripts/run-current-python-tests.py` 執行現行 suites，再明確用 PR #22 的 Git snapshot 執行原 T-0013 的 10 項 fixtures；只固定該歷史 module，原檔被改會拒絕，新票與目前結案 tracker 仍在 live suite 驗證，沒有失敗後改跑另一份契約的 fallback。

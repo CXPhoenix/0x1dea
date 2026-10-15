@@ -1,0 +1,19 @@
+{
+  "main": "b84321dfeb23e155de923e6fdf799f261e3cd1c9",
+  "staging": "035783590895a426ee395045829ebc9d50e2b9cf",
+  "initial_head": "1f13b030eaf322a5ace4c469dfeda453844819f7",
+  "merge_head": "b84321dfeb23e155de923e6fdf799f261e3cd1c9",
+  "main_policy_entries_retained": 281,
+  "only_existing_main_identity_changed": [
+    ".proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md"
+  ],
+  "candidate_count": 6,
+  "candidate_paths_preserved": 50,
+  "protected_checks_preserved": 382,
+  "protected_path_diffs": [],
+  "actual_prepare_verify": "ready",
+  "result_tree": "5bf030793ba2eea97fe09457df0793c48f6bcd67",
+  "source_refs_index_status_objectDB_unchanged": true,
+  "source_object_files": 128,
+  "surface": "Local pinned Git/CLI only; no native/CI/HTTP or remote sync readiness; actual pins through landed PR25 only"
+}

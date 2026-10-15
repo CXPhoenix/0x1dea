@@ -335,6 +335,39 @@ class StagingSyncTests(unittest.TestCase):
         self.assertFalse(json.loads(result.stdout)['local_ready'])
         self.assertEqual(before, self.source_snapshot())
 
+    def test_verify_rejects_corrupt_output_blobs_with_unchanged_source_and_receipt(self):
+        self.ok(self.run_cli())
+        source = self.source_snapshot()
+        receipt = (self.output / 'receipt.json').read_bytes()
+        for name, expected in (
+            ('engineering.txt', self.registry['trees']['main']['engineering.txt']),
+            (ARTICLE, self.registry['trees']['staging'][ARTICLE]),
+        ):
+            with self.subTest(path=name):
+                oid = expected['blob']
+                blob = self.output / 'result.git/objects' / oid[:2] / oid[2:]
+                blob.parent.mkdir(exist_ok=True)
+                original = blob.read_bytes() if blob.exists() else None
+                if original is not None:
+                    blob.chmod(0o600)
+                payload = b'harmless unapproved output artifact bytes\n'
+                blob.write_bytes(zlib.compress(b'blob ' + str(len(payload)).encode() + b'\0' + payload))
+                try:
+                    result = self.run_cli('verify')
+                    self.assertNotEqual(result.returncode, 0, result.stdout)
+                    report = json.loads(result.stdout)
+                    self.assertEqual(report['status'], 'failure')
+                    self.assertFalse(report['local_ready'])
+                    self.assertIn('blob identity mismatch', report['error'])
+                    self.assertEqual(report['paths'], [name])
+                    self.assertEqual((self.output / 'receipt.json').read_bytes(), receipt)
+                    self.assertEqual(self.source_snapshot(), source)
+                finally:
+                    if original is None:
+                        blob.unlink()
+                    else:
+                        blob.write_bytes(original)
+
     def test_source_git_template_cannot_install_an_external_merge_driver(self):
         marker = self.root / 'template-driver-executed'
         template = self.root / 'git-template'

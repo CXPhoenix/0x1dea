@@ -1,0 +1,6 @@
+test_missing_blob_promisor_never_runs_external_helper (article_publication.test_v2.V2Tests.test_missing_blob_promisor_never_runs_external_helper) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.550s
+
+OK

@@ -365,8 +365,10 @@ def main():
             with tempfile.TemporaryDirectory(prefix='staging-sync-verify-') as tmp:
                 report = compute(registry, Path(tmp)/'result.git')
                 report['registry_sha256'] = args.registry_sha256
-                if report != receipt or identities(output/'result.git', report['result_tree']) != identities(Path(tmp)/'result.git', report['result_tree']):
+                expected = identities(Path(tmp)/'result.git', report['result_tree'])
+                if report != receipt or identities(output/'result.git', report['result_tree']) != expected:
                     raise Invalid('receipt or result tree mismatch')
+                check_source_blobs(output/'result.git', {'trees': {'result': expected}})
         check_refs(registry)
         print(canonical(report).decode(), end='')
         return 0

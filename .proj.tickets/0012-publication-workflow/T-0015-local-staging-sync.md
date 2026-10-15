@@ -64,3 +64,21 @@ Independent Standards/Spec/Security final unresolved counts0. Actual unchanged m
 ancestor staging0357835; finite reviewed all6/50 registryprepare/verify no-op, preserved.
 Full test raw/coverage and actual reports in evidence directory; reviews in epic review/.
 No real authorized T15 main/staging landings, so retain review, not done.
+
+### 2026-10-15 PR26 current-main integration
+
+Owner authorized updating original PR26 against actual PR25 main landing `b84321d`,
+with no target merge/deployment changes. Three-way exact manifest resolution retains
+all T14 source/test/evidence identities; only existing main T15 ticket identity changes.
+Independent Security and false-positive review confirmed MEDIUM output-blob verification
+bypass; public verify now checks actual result blobs against independently recomputed
+full identities. One P09 regression has engineering/candidate subtests, genuine red-green.
+Fresh full run159 =66 live harness +83 live publication +10 immutable PR22; 31v2/24sync,
+failures/errors0; website54/build/lint and native/structure/materializer pass. Actual
+isolated T14 build denies outside read/write/network. Evidence: epic implementation/
+T-0015/main-refresh-20261015 and new code/security main-refresh reviews.
+Actual pinned mainb843/stage035 local prepare/verify return ready, not old no-op; six
+candidates/50 paths and382 protected checks retained, source refs/index/status/objects
+unchanged. This excludes not-yet-landed PR26 and does not prove remote/nativeCI/HTTP
+readiness. Historical no-op/127/pre-fix158 checkpoints remain unchanged. Retain review;
+actual authorized dual-target landing and remaining acceptance are required for done.

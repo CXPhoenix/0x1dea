@@ -2,7 +2,7 @@
 id: T-0014
 title: Prepare and verify one article through the explicit v2 contract
 epic: 0012-publication-workflow
-status: todo
+status: review
 blocked_by: [T-0013]
 ---
 
@@ -57,3 +57,32 @@ No real article publication, credential installation or live automation activati
 ## Comments
 
 Owner-approved breakdown/test allocation; implementation evidence will be appended here.
+
+### 2026-10-15 local implementation acceptance
+
+Actual T13 dual-target landing unblocks this slice. Explicit v2 schema/prepare/verify/build/ready
+implements approved P04–08/P14–17. Thirty focused public Git/CLI cases and actual enforced
+VitePress build pass; full current Python66+58 and immutable #22 original10 pass (134 total),
+plus54 website unit/build/lint/structure/materializer. Independent Standards/Spec review
+resolved twoP1 (canonical alias delta and empty other-topic ancestry) and twoP2; security
+resolved independently confirmed lazy-fetch HIGH; all final unresolved counts0.
+Shared current successor/runner independently reviewed with T15. Evidence and coverage:
+`.proj.specs/0012-publication-workflow/implementation/T-0014/`; reviews in epic review directory.
+Original v1/assertions/history remain unchanged. Six actual candidates stay legacy, with no
+source migration, article content or deployment changes. Local synthetic approval/build
+evidence does not prove real served preview or authorize publication/remote delivery.
+Status review only: no new main/staging landing receipts; done remains prohibited.
+
+### 2026-10-15 PR25 current-main revalidation
+
+Owner authorized scoped PR25 update against actual main PR24 landing `c1dd3bb`, with
+no merge or deployment change. Independent review confirmed and fixed MEDIUM corrupt
+source-blob admission: the v2-only Git wrapper verifies blob bytes against Git OIDs;
+v1/history remain unchanged. Approved P16 public seam: one new red-green regression
+with baseline/A/B subtests, plus subsequent public verify rejection. Fresh full run135
+(66 live harness +59 live publication +10 immutable PR22), website54/build/lint and
+native/structure/materializer pass. Actual isolated build denies outside read/write/net.
+Evidence: implementation/T-0014/main-refresh-20261015 in the epic spec directory;
+additional code/security main-refresh reports retain separate review axes. Six actual
+candidates/50 owned paths remain unchanged; synthetic preview approvals are not HTTP
+or real publication evidence. Status remains review; no new landing is claimed.
