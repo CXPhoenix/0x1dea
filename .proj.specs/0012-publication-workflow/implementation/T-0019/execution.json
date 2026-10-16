@@ -1,0 +1,114 @@
+{
+  "ticket": "T-0019",
+  "source_packet": "T19-review-source-v4",
+  "source_packet_sha256": "9aec61e423026da1a19e23cb8ea172e56ff6b621e6e3f743bf5ccc385d638587",
+  "validation_strategy": "Complete regression on unchanged source-v4 production code; later exact22 management-data and PA06 test-only supplement reran all6 methods, not a second single full-suite claim",
+  "surface": "local Git/public CLI/native and actual isolated VitePress; no browser/remote/P13 proof",
+  "python": {
+    "harness_live": 66,
+    "publication_live": 122,
+    "historical_PR22": 10,
+    "total": 198,
+    "failures": 0,
+    "errors": 0,
+    "exit": 0
+  },
+  "unit": 54,
+  "lint": "pass",
+  "build": "pass",
+  "native": "pass",
+  "project": "pass",
+  "materializer": "pass",
+  "review": {
+    "source_Standards": [
+      0,
+      0,
+      0
+    ],
+    "source_Spec": [
+      0,
+      0,
+      0
+    ],
+    "source_security_HIGH_MEDIUM": [
+      0,
+      0
+    ],
+    "final_exact_successor_evidence": {
+      "Standards": [
+        0,
+        0,
+        0
+      ],
+      "Spec": [
+        0,
+        0,
+        0
+      ],
+      "security_HIGH_MEDIUM": [
+        0,
+        0
+      ],
+      "packet_sha256": "63a44aecda765987e5dd6a5d0f89242d3b675f3f4ac80581225c9f8565277864"
+    }
+  },
+  "actual_landings": "pending",
+  "P13": "NOT RUN",
+  "done": false,
+  "artifacts": {
+    "evidence/actual-stage-integration-before.json": {
+      "sha256": "1bc589dea44175a588b5fe24c8a2d2c537507d57908422b2040d1701653e8307"
+    },
+    "evidence/build.txt": {
+      "sha256": "e140328e9e0884a01527a730aab7e48dca44fe92244794071caf13963285f58f"
+    },
+    "evidence/current-stage-management-green.txt": {
+      "sha256": "d7630e7644593fd72f54ddb33b470affeee0fb9ec5f49a1b418390103193bd2e"
+    },
+    "evidence/current-stage-management-red.txt": {
+      "sha256": "8ee41bcc84304b897ed7d18cfb2b4989214230fc0f6f6d12ce1471f57fff58dc"
+    },
+    "evidence/gitlink-green.txt": {
+      "sha256": "4528f8f7cad307f9c1638294c42a0c1efba42a95f0ebe2382d3a72216ee292d7"
+    },
+    "evidence/gitlink-red.txt": {
+      "sha256": "9ef61c9ca4cb736bb76ee7b4e41d3482e3d87bb62dad5ddde2775e0fb5322053"
+    },
+    "evidence/lint.txt": {
+      "sha256": "11dbf56c6802cbff2d1b1a4f4b1f3165328d6276f6632d7f2933c7461707e3eb"
+    },
+    "evidence/materializer.json": {
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    "evidence/native.json": {
+      "sha256": "f73e43d24be5858693603f605884006113d6191add0d9591a1f1b866e527a5ef"
+    },
+    "evidence/physical-green.txt": {
+      "sha256": "2f9ed18e22485a7c1861e473507057eba28ac6fcd87a478d081ed8cfd2c8bdae"
+    },
+    "evidence/physical-red.txt": {
+      "sha256": "7b305a3bd0b3068bc7bbd554f7c6cd728a70585f83979ad8d653fa3c76167e71"
+    },
+    "evidence/project.txt": {
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    "evidence/python-full.txt": {
+      "sha256": "85acbb877d366a39f27f05eae3508608d0511aa10b517c838d6355797effff3c"
+    },
+    "evidence/stage-gitlink-green.txt": {
+      "sha256": "7885051dd1c821fd6178291542e25b8e08514269bb9d6e401487c6d12a6e2b03"
+    },
+    "evidence/stage-gitlink-red.txt": {
+      "sha256": "c4e9244bd389d19201924f6cd739d2d8d4cadb59bea33d83e97b3292c25356c6"
+    },
+    "evidence/synthetic-article-readiness.json": {
+      "sha256": "3af1e6fcfcc5a1ff73bdd5c3321f24004d46f75675f859c2c63b4070983b8ec9"
+    },
+    "evidence/trusted-local-staging-validation.json": {
+      "sha256": "360023bebfd555e90fb585ca3bb84ae2e4f5442eba1a87d6449096c249e4761b"
+    },
+    "evidence/unit.txt": {
+      "sha256": "1cc2d0333962b02bbb146cbd113889e445099bc713cdfaff3a94bb85407629c6"
+    }
+  }
+}

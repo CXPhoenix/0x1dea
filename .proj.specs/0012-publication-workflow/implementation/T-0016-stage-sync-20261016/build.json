@@ -1,0 +1,602 @@
+{
+  "version": 2,
+  "status": "pass",
+  "binding": "94197bddf492559de48eb7d777c36f4c268e97506578242a8df6a281c51f8acb",
+  "runtime_sha256": "bbed7b0c0aee3c07d1c8625f2251026797b0c9ba529912f6acf4eef0bbcc266b",
+  "node_version": "v24.13.0",
+  "command": [
+    "<existing-node-24.13.0>/bin/node",
+    "<existing-product-checkout>/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/bin/vitepress.js",
+    "build",
+    "blog"
+  ],
+  "isolation": {
+    "inside": true,
+    "outside_read": "denied",
+    "outside_write": "denied",
+    "network": "denied"
+  },
+  "profile_sha256": "12e252a0b206c22814b05a151906f39918237d37c058974cdf7a827d074bbfd4",
+  "scan": {
+    "status": "staging-build-only",
+    "scope": "No publication output exclusion claim"
+  },
+  "files": {
+    "404.html": {
+      "mode": "100644",
+      "sha256": "358acf1c39b4c700ddd146512a0ae851d066ad11a6193759426568955e54fc7b"
+    },
+    "_redirects": {
+      "mode": "100644",
+      "sha256": "67e4743f7e3aa14c61656d8167415e3f44e30df7e0569ced96b00ff6ba6bbb29"
+    },
+    "about.html": {
+      "mode": "100644",
+      "sha256": "4b99fe1ff54cfd8c13b9eadf10de208ddd41a5b15d9bfb7d12d72f4a3682845f"
+    },
+    "assets/.gitkeep": {
+      "mode": "100644",
+      "sha256": "a38cb199f645ee3fb12f6c2d11c7be2d19ab134d44264e19b4666c83319d1b3e"
+    },
+    "assets/about.md.Ck58_EOU.js": {
+      "mode": "100644",
+      "sha256": "3be5c389dd49af0783faac23f5279c6cdad5a6e5779a8a4d505c09fcddaf9e54"
+    },
+    "assets/about.md.Ck58_EOU.lean.js": {
+      "mode": "100644",
+      "sha256": "1d90b1a5c357760f0e924348c21d0c7716fb2727146227e9baff0bdd57068c45"
+    },
+    "assets/app.DSoPPm-L.js": {
+      "mode": "100644",
+      "sha256": "0dc8148f6cc63c1926259e1a814cfa1e86355d16a5e66e5d37ef27049da06782"
+    },
+    "assets/chunks/EasingType.1ClTOyCX.js": {
+      "mode": "100644",
+      "sha256": "8e33aa001822d911314c506ebf1e063af4c69bda647edf2b748260e22eb8bc61"
+    },
+    "assets/chunks/framework.CkiDfuxy.js": {
+      "mode": "100644",
+      "sha256": "0f0b2364c3ceba8a026d7c1f2c03b5eb3aa685a7b5c9f98d8dc832a37e92a4ef"
+    },
+    "assets/chunks/index.DL9XF96_.js": {
+      "mode": "100644",
+      "sha256": "ffff2a51ae3691c346efe3b26ada2d6861775295a625ec37d96a54639b9c3e6e"
+    },
+    "assets/chunks/particles.es.XooKTUfc.js": {
+      "mode": "100644",
+      "sha256": "db326c87269fc3961a3de690ee7c757afa912d31d67090be593f16977b4e204a"
+    },
+    "assets/chunks/theme.DHS8YEda.js": {
+      "mode": "100644",
+      "sha256": "11bfdfee161a9b5dc18b15cd3700cf8bc49d8273b32ec5e9ad899e4a457fb290"
+    },
+    "assets/fontawesome/css/brands.min.css": {
+      "mode": "100644",
+      "sha256": "9e2091a3026c87116c2ee1948fbad3bffbf1b1f733c2f89d351d3dc7aab082f9"
+    },
+    "assets/fontawesome/css/fontawesome.min.css": {
+      "mode": "100644",
+      "sha256": "b164a2d2905748e1d48512f1e985606b4282c9438bbc0ee2958e56f658695d2b"
+    },
+    "assets/fontawesome/css/regular.min.css": {
+      "mode": "100644",
+      "sha256": "d452ca86262c736cab4d172137e27176c2e4c7c141c8150c9154312f2aac3dae"
+    },
+    "assets/fontawesome/css/solid.min.css": {
+      "mode": "100644",
+      "sha256": "abb7189386e7601b342822b2a72812cf972daeb3442b796d7a785ea6f860f7e6"
+    },
+    "assets/fontawesome/webfonts/fa-brands-400.woff2": {
+      "mode": "100644",
+      "sha256": "70c632ba73c7ad942141bb2f56994b8eddf0a284c01aab9f21e0cd10021530c4"
+    },
+    "assets/fontawesome/webfonts/fa-regular-400.woff2": {
+      "mode": "100644",
+      "sha256": "81aaa8342d90df0a3c0b87655e2c31a71941f0dd351fb9fb1ca5d692e744f6d0"
+    },
+    "assets/fontawesome/webfonts/fa-solid-900.woff2": {
+      "mode": "100644",
+      "sha256": "ff58a6b0a01dbce082458f6e5a58719df4e80e0c2b50f744bb5871e21eca6878"
+    },
+    "assets/fontawesome/webfonts/fa-v4compatibility.woff2": {
+      "mode": "100644",
+      "sha256": "4bad0278281153ad5354855ccfbc0674279ec47eff29b3d262c213478311cc52"
+    },
+    "assets/index.md.CuSh440m.js": {
+      "mode": "100644",
+      "sha256": "0e006a4da82e8a88e987011a45897b5439ec0c87958aa9d7d95fd300c53be644"
+    },
+    "assets/index.md.CuSh440m.lean.js": {
+      "mode": "100644",
+      "sha256": "0e006a4da82e8a88e987011a45897b5439ec0c87958aa9d7d95fd300c53be644"
+    },
+    "assets/inter-italic-cyrillic-ext.r48I6akx.woff2": {
+      "mode": "100644",
+      "sha256": "3f2ea09e148441f83171eae388d00da780b24b9bd155c141d0b5fbb0d803871d"
+    },
+    "assets/inter-italic-cyrillic.By2_1cv3.woff2": {
+      "mode": "100644",
+      "sha256": "2a1c3126375078cd85d262aad635ac9d9ff9ac2c18b8143b2d21d540f9cd3dfb"
+    },
+    "assets/inter-italic-greek-ext.1u6EdAuj.woff2": {
+      "mode": "100644",
+      "sha256": "bae39b1cc79168c9ac47f120c3eaa82cb634dc17e457cdd484725d8c7a60ab3e"
+    },
+    "assets/inter-italic-greek.DJ8dCoTZ.woff2": {
+      "mode": "100644",
+      "sha256": "138cf731e5a284e262c576f765a6cb8f58045cb798d16693091e2251a0f63559"
+    },
+    "assets/inter-italic-latin-ext.CN1xVJS-.woff2": {
+      "mode": "100644",
+      "sha256": "3e166de9aeff2d6a3d13c9228e03f7ff76369f5fa95fe0ab1d1d44235d5516aa"
+    },
+    "assets/inter-italic-latin.C2AdPX0b.woff2": {
+      "mode": "100644",
+      "sha256": "3570e65005ccd9ecd87c6ccc7c713fc474a80ff7c3abbb1063f0e8ab4f8dc891"
+    },
+    "assets/inter-italic-vietnamese.BSbpV94h.woff2": {
+      "mode": "100644",
+      "sha256": "a0aae13c473b99b63f3c0b8b692b3b2a4023145171aa86964f268235573e4ce5"
+    },
+    "assets/inter-roman-cyrillic-ext.BBPuwvHQ.woff2": {
+      "mode": "100644",
+      "sha256": "a49e47fb34f94acf8ceb57603cb2fc4c01861527a9a304de3a0236b7b67da2c6"
+    },
+    "assets/inter-roman-cyrillic.C5lxZ8CY.woff2": {
+      "mode": "100644",
+      "sha256": "d888610b6342164a592e59a4ce91a3755126a6ca2ee4e0d75c8e915eebaeed68"
+    },
+    "assets/inter-roman-greek-ext.CqjqNYQ-.woff2": {
+      "mode": "100644",
+      "sha256": "7b7519f21aff6b3a011099999cec8a9d4c99173a8c9adeecffb0bd032fc49f69"
+    },
+    "assets/inter-roman-greek.BBVDIX6e.woff2": {
+      "mode": "100644",
+      "sha256": "1a1997dfdcd7a9e0d2b26944b4b7fd1f1b2fde91bb405cb7a5870f93b45d2e05"
+    },
+    "assets/inter-roman-latin-ext.4ZJIpNVo.woff2": {
+      "mode": "100644",
+      "sha256": "539d139f99942e93bead7bbcd18bc00f5a73932eb3a8997367f2b79f4f75bc60"
+    },
+    "assets/inter-roman-latin.Di8DUHzh.woff2": {
+      "mode": "100644",
+      "sha256": "f7ab715caa2c78facb4334b211c81ee66f037cf9c99ca3f24acd543e84a93278"
+    },
+    "assets/inter-roman-vietnamese.BjW4sHH5.woff2": {
+      "mode": "100644",
+      "sha256": "b315417b28ce251a54000a824d73c5af36798a88b3c05594f28dada0cbffab5a"
+    },
+    "assets/post_course_cybersec_index.md.Bn8n4yfm.js": {
+      "mode": "100644",
+      "sha256": "1a63b68a1686f95485daa7fb539582796c1756c3de7e3611c3c57dbb35e4d321"
+    },
+    "assets/post_course_cybersec_index.md.Bn8n4yfm.lean.js": {
+      "mode": "100644",
+      "sha256": "1a63b68a1686f95485daa7fb539582796c1756c3de7e3611c3c57dbb35e4d321"
+    },
+    "assets/post_course_cybersec_what-is-safety.md.DphTm_4m.js": {
+      "mode": "100644",
+      "sha256": "8e8bcb709f438ad3562140096f010f3c898b1cf4687748a918f8a54a61c83f8a"
+    },
+    "assets/post_course_cybersec_what-is-safety.md.DphTm_4m.lean.js": {
+      "mode": "100644",
+      "sha256": "8d905fcec5d2f6347d1b708f06c63f24009bc3ead7418e171e2b9ff879e2e50d"
+    },
+    "assets/post_course_cybersec_what-is-safety/1772342178110.gif": {
+      "mode": "100644",
+      "sha256": "72b6d5565bd8fe64acdaa8095e28f5020fb53359889cdbb8e0c13ba6d983efa5"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260227005508.png": {
+      "mode": "100644",
+      "sha256": "5a3094e2ba747556333e1f34c1773784c20a24af8dd029e8d8035558d592baff"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260227014249.png": {
+      "mode": "100644",
+      "sha256": "aa52bbba7acf5b4302c16507814045f4e8d1e0621b52c205a27d1fe90932d1e8"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260228013411.png": {
+      "mode": "100644",
+      "sha256": "0e9c53cf7cd8c42a7141bf7d916155d7ea6f6da67a4a70779186f9a307d6f92f"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260228022122.png": {
+      "mode": "100644",
+      "sha256": "a219da123e747a5d0a18652b85698d3b812a1a29d32314493b41e8f08322d8e2"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260228114351.png": {
+      "mode": "100644",
+      "sha256": "051e7ccf7c2d3a43220c94bf53336acf3d475c914499bf70acf52007f72dbb31"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260228130720.png": {
+      "mode": "100644",
+      "sha256": "75ebfb75472dc51071f6da4366023583aab412ddfa46c0d14dd373d2b8373ebe"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301114806.png": {
+      "mode": "100644",
+      "sha256": "097f9b35af2ce28ac061ae2305d5802619aa342cf7eb4b5158b213010043b74c"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301120037.png": {
+      "mode": "100644",
+      "sha256": "6d43abc8662f574dd4b3f09839a914d2135e5574938874f8b12723f1d53f285d"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301122300.png": {
+      "mode": "100644",
+      "sha256": "0b9be3df40d223d35d502e90d17d90f6956a5137cae43c6729ec75ae01cd3d1b"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301125241.png": {
+      "mode": "100644",
+      "sha256": "a58a448b69ef4f7ffdd2a19f25e031d1a46e1cf890d248bb4abfc0166fd12c5c"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301125313.png": {
+      "mode": "100644",
+      "sha256": "1ed6afeef7d65a1ed614fe6e55c7180d5ef6facea8913c72b2a85fa44d0a21bf"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301125401.png": {
+      "mode": "100644",
+      "sha256": "db48f430928196d5945709e28fbb28269839b9df1cb0316ce3dbb15108efbf92"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301125743.png": {
+      "mode": "100644",
+      "sha256": "4137ea91db759d18a1e25224fe4d17d9102a6c6c2b216aad82768b0935f0d2ed"
+    },
+    "assets/post_course_cybersec_what-is-safety/20260301132349.png": {
+      "mode": "100644",
+      "sha256": "72aec17ca978801f12beeb6cf12b070e9e6a490045333dfc8becbbec5573e8c3"
+    },
+    "assets/post_course_rm_index.md.CvRvuLJG.js": {
+      "mode": "100644",
+      "sha256": "6b5e76b0e799de1d547338c6ab1a246c9e4c66cf615d4c65658c115f96e91d3d"
+    },
+    "assets/post_course_rm_index.md.CvRvuLJG.lean.js": {
+      "mode": "100644",
+      "sha256": "6b5e76b0e799de1d547338c6ab1a246c9e4c66cf615d4c65658c115f96e91d3d"
+    },
+    "assets/post_course_rm_why-we-need-rm.md.N4A8Z26M.js": {
+      "mode": "100644",
+      "sha256": "6093ca9286dc54cf5d2b92a8c75316ebdeb51ffc20eb9f02f648c7fbe39d654c"
+    },
+    "assets/post_course_rm_why-we-need-rm.md.N4A8Z26M.lean.js": {
+      "mode": "100644",
+      "sha256": "1c7db199c4aac6eec74333808c0a51ee9f0db14c501a7b8449f1e1f09548d30f"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260302005553.png": {
+      "mode": "100644",
+      "sha256": "3b84d129e2b7fe73f42901e60ce6dd21662346fade6fa2e548a1f3bca8bc847d"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260302010537.png": {
+      "mode": "100644",
+      "sha256": "4505260ab07b1cee2bcf9b0bc82966abfa7684a8b8ba3197549408540a26544e"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260302012511.png": {
+      "mode": "100644",
+      "sha256": "44143e87b3895b2ba1f54008976637a6551734ed773e6902d6d062aa47c06baa"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260307155631.png": {
+      "mode": "100644",
+      "sha256": "0b71220f06823328675e12fec3000927466de017f943a4c1ccba5d3cac990524"
+    },
+    "assets/post_course_rm_why-we-need-rm/20260307160403.png": {
+      "mode": "100644",
+      "sha256": "29e9a12b93218489a6f02032373b8b9d68f5b645202b02098c5d17f4b5831b94"
+    },
+    "assets/post_course_security-awareness_electricity-privacy.md.BJELCWyu.js": {
+      "mode": "100644",
+      "sha256": "2fe08763950c78e4a3d0306b74e676211b46baae600cd0ee8a0fdb67396de89d"
+    },
+    "assets/post_course_security-awareness_electricity-privacy.md.BJELCWyu.lean.js": {
+      "mode": "100644",
+      "sha256": "2780d091fc83b1b9eda84cd513c326ce482d4d3d3baff40ae33072462a2276b0"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/article-banner.png": {
+      "mode": "100644",
+      "sha256": "9fe833c76165ab1b446432280ff473c2d7e967042ac78af42c65e99d0d15204c"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/nilm-process.svg": {
+      "mode": "100644",
+      "sha256": "25766d5c5fe3c02e1946469e53d755660f3808ea940796eb65a8eb3b287b34da"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg": {
+      "mode": "100644",
+      "sha256": "ebd47e0575a73ef3557a6fc661a43a110dab713ee2e7e8ed30153ad9bb1aae19"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-cat-event.png": {
+      "mode": "100644",
+      "sha256": "8a841ead65839eb117ce054edf84402c2f76baaab77acb0e8e22946cc671f3a7"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-device.png": {
+      "mode": "100644",
+      "sha256": "a6ade6ebbdb800f6ca082a0e7d4cd1d0ed11da90f9d1b0bb5ceefa38d1643047"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-inference.png": {
+      "mode": "100644",
+      "sha256": "90040392c1b60e725be8d0d29a9898b06df225394fd3c27f8d5d743f91a3be30"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-link.png": {
+      "mode": "100644",
+      "sha256": "70ab801df17c0d84b058b0dd239476379956165fd18003851800313d1b62030b"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png": {
+      "mode": "100644",
+      "sha256": "99aead19c23b41ab372d1080e51fdc32ba5bf8f463e42d035794b29a4631441e"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-purpose.png": {
+      "mode": "100644",
+      "sha256": "d77f28698f677dc042fba95801cc7e4c89826748aaba788e4c57900a6f4766f0"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-total.png": {
+      "mode": "100644",
+      "sha256": "44169e071f9272fce9a641b2ce2b11c7eae71d1996011ee31b6a1537386168c0"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/p-units.png": {
+      "mode": "100644",
+      "sha256": "8bf7cbe695d6a632b9921f6c0ed1de4a0a17f0c413c482b40855494cf49841d5"
+    },
+    "assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg": {
+      "mode": "100644",
+      "sha256": "5e0dcad02b749e4eeecaccafb14aae4a7e75f6571f301750cda9402cbcc0f868"
+    },
+    "assets/post_course_security-awareness_index.md.DiaryOkt.js": {
+      "mode": "100644",
+      "sha256": "3e6481eb0f1651f59cdecc668bb5500ff13e1db6ec6a5fc29584a3d4511f3b3f"
+    },
+    "assets/post_course_security-awareness_index.md.DiaryOkt.lean.js": {
+      "mode": "100644",
+      "sha256": "3e6481eb0f1651f59cdecc668bb5500ff13e1db6ec6a5fc29584a3d4511f3b3f"
+    },
+    "assets/post_local-preview_agent-experiment.md.DQB5K_Ni.js": {
+      "mode": "100644",
+      "sha256": "367c5657eb9b145df5d3e32dea404ef7d500bfdf20ffae9be4aaacafec77c3b7"
+    },
+    "assets/post_local-preview_agent-experiment.md.DQB5K_Ni.lean.js": {
+      "mode": "100644",
+      "sha256": "02d7a997180930b3fae9fe74c41b21dd793f2c6b0651f683ebcff07fc5b9ecbb"
+    },
+    "assets/post_local-preview_agent-experiment/a-cache.png": {
+      "mode": "100644",
+      "sha256": "eab21eb82de25fec0893bfb476504d96fb29a51ea0343b66bf371c2ab6e5d3b9"
+    },
+    "assets/post_local-preview_agent-experiment/a-cause.png": {
+      "mode": "100644",
+      "sha256": "01712b1caec4bd0386013a09b0457e2fa4da87e3a5d3ffefec0f6f914dcbf572"
+    },
+    "assets/post_local-preview_agent-experiment/a-exposure.png": {
+      "mode": "100644",
+      "sha256": "abbbd71de3d418519b589795d08524cdd037ffb68d717e02d08f1ff86b52efc0"
+    },
+    "assets/post_local-preview_agent-experiment/a-log.png": {
+      "mode": "100644",
+      "sha256": "dfe07985dba8f92ed4253a4ad0c8e939f82c42cba32c16a966f196900579e499"
+    },
+    "assets/post_local-preview_agent-experiment/a-reliability.png": {
+      "mode": "100644",
+      "sha256": "821ac6967876388e94fd3054842a5411de24da6f82f7b78a9e7eace171c095a5"
+    },
+    "assets/post_local-preview_agent-experiment/a-task.png": {
+      "mode": "100644",
+      "sha256": "c2a2527e9e6f9954686a484ed56768b732a673936967495e53ff3a16fe8fa3c0"
+    },
+    "assets/post_local-preview_browser-lab.md.BGzcGGI-.js": {
+      "mode": "100644",
+      "sha256": "776ec607ccddff3cdd90451d14e208bc3890aa9b0a15fbb096b07f15556ae32f"
+    },
+    "assets/post_local-preview_browser-lab.md.BGzcGGI-.lean.js": {
+      "mode": "100644",
+      "sha256": "9818979c47e056623899b439da972da405f4d0a5fcce67fb620ab3fefaeb4ae8"
+    },
+    "assets/post_local-preview_browser-lab/b-action.png": {
+      "mode": "100644",
+      "sha256": "abef425ca1b6c2f06c210c6a8de35fa2fb3d7dbfd345c995aff650f92ce6c197"
+    },
+    "assets/post_local-preview_browser-lab/b-flag.png": {
+      "mode": "100644",
+      "sha256": "1674b418d59890a5de348563df7b0c0cd6ff9f8d02a52def0389671fe6df06b7"
+    },
+    "assets/post_local-preview_browser-lab/b-origin.png": {
+      "mode": "100644",
+      "sha256": "0981717f905d34e9ff783c59a7fa151cab6be7fecdaf86fbdb3e5a709c55298a"
+    },
+    "assets/post_local-preview_browser-lab/b-response.png": {
+      "mode": "100644",
+      "sha256": "fe564aea8435a385dd0da2dc61375562e0ba73bb94e2a40dac36d8fc919d6542"
+    },
+    "assets/post_local-preview_browser-lab/b-transfer.png": {
+      "mode": "100644",
+      "sha256": "eb47fdfba1ffc101efbeef89d4eb085750a5e33ffd45cad923ca1e6299e6e09f"
+    },
+    "assets/post_local-preview_browser-lab/b-trust.png": {
+      "mode": "100644",
+      "sha256": "e6eb74b6f7764946ee412a7d8c37356d54c42f4ba86e1ec4bb550eaa0d20699f"
+    },
+    "assets/post_local-preview_idor.md.B2uxvQ9k.js": {
+      "mode": "100644",
+      "sha256": "4f07c7dc8ac19ae5b966ad1c9e5fb6bb17444670cbaa2d3cacc66efefa23b544"
+    },
+    "assets/post_local-preview_idor.md.B2uxvQ9k.lean.js": {
+      "mode": "100644",
+      "sha256": "4983113b2d0716e54701abad9259af1bc40bd2bb68476e3615de94d4ae8b62cd"
+    },
+    "assets/post_local-preview_idor/idor-denied-side-effect.png": {
+      "mode": "100644",
+      "sha256": "27f124416cd1db26a353ea735db158be00191b3eeb1bcd80716e2cc9197c16e4"
+    },
+    "assets/post_local-preview_idor/idor-knowing-id.png": {
+      "mode": "100644",
+      "sha256": "206d88870611020f1f035494726b2c026ca0f850139082c13e74d9370951dc0e"
+    },
+    "assets/post_local-preview_idor/idor-login-is-not-access.png": {
+      "mode": "100644",
+      "sha256": "e4384f3b88d6307a51469172479a2c265453fc8ac9db6423f154ee38432bc8b7"
+    },
+    "assets/post_local-preview_idor/idor-scanner-needs-policy.png": {
+      "mode": "100644",
+      "sha256": "ffe6706a0c10905812a3e15779c4d05fa686d1d1d2cc76d21ac6d52ba570e127"
+    },
+    "assets/post_local-preview_idor/idor-shared-read-only.png": {
+      "mode": "100644",
+      "sha256": "d70432f7fe33671d473d13a5deab1ac8783bbbcd2163d6da2839aed0bbfe3c28"
+    },
+    "assets/post_local-preview_idor/idor-test-known-objects.png": {
+      "mode": "100644",
+      "sha256": "35ce8300d656d43798aa63d319cc2dc6fa708077e4cc9889bb77013e46b810ff"
+    },
+    "assets/post_local-preview_idor/idor-uuid-is-not-policy.png": {
+      "mode": "100644",
+      "sha256": "2c40a8f7bdfc18f30fb4f1eaf573fa05814905cdc36aa2235af2f0b0f5a7bc1d"
+    },
+    "assets/post_local-preview_jwt.md.7tCNtsfr.js": {
+      "mode": "100644",
+      "sha256": "17bf959ae2ec9326eefcab95d7bf473ec01feb5513f6a3088950cd9a1afc0cf8"
+    },
+    "assets/post_local-preview_jwt.md.7tCNtsfr.lean.js": {
+      "mode": "100644",
+      "sha256": "538f1de25bfd303213037df6396996f823fc1ff697041dc9f29d9eabc10db26f"
+    },
+    "assets/post_local-preview_jwt/jwt-claims-have-rules.png": {
+      "mode": "100644",
+      "sha256": "8519d66073db222321219472b5eb2e947ab44037082c36ba93577291ba779a48"
+    },
+    "assets/post_local-preview_jwt/jwt-parse-is-not-verify.png": {
+      "mode": "100644",
+      "sha256": "d2c9005ac8bb101592f08061313a2e185a567c23c1ad12981b4870e61a452055"
+    },
+    "assets/post_local-preview_jwt/jwt-test-rejects-too.png": {
+      "mode": "100644",
+      "sha256": "5a7074c28fed9bd777d899efccc7efd215d01b25683268152ad7b70c23e4a98f"
+    },
+    "assets/post_local-preview_jwt/jwt-token-picks-rules.png": {
+      "mode": "100644",
+      "sha256": "03b88484c88e1a2794cfe44a9ce6e9c09b79737d141e65415d83402d32ab58da"
+    },
+    "assets/post_local-preview_jwt/jwt-verified-not-owner.png": {
+      "mode": "100644",
+      "sha256": "17e6f485b900589e361d30655389239c42ac9c94407e26403854074e495670ff"
+    },
+    "assets/post_local-preview_jwt/jwt-wrong-audience.png": {
+      "mode": "100644",
+      "sha256": "88c2393bc6433ee434914f2eded2375f7e46ab08681f5005825d74577da41b09"
+    },
+    "assets/post_local-preview_sqli.md.DLEB4eg8.js": {
+      "mode": "100644",
+      "sha256": "bd4e6c8b325cbb30e6aaf0e3afa3e47c1c00a2558a30efaa9ec1dc13f7815e48"
+    },
+    "assets/post_local-preview_sqli.md.DLEB4eg8.lean.js": {
+      "mode": "100644",
+      "sha256": "7edf29aaa295587997efed87b2a01b81262f1ce7baed8b169e74dbffd4178836"
+    },
+    "assets/post_local-preview_sqli/sqli-bound-value.png": {
+      "mode": "100644",
+      "sha256": "86776ebdedbb6d5f85eb20014f6509136f5f212bf4f7fe03a7b3a51634e13789"
+    },
+    "assets/post_local-preview_sqli/sqli-data-captain.png": {
+      "mode": "100644",
+      "sha256": "fbf4d6599fefbea6009f8fc8127c881c0975ba3b7b70f72c14b2d1564aade590"
+    },
+    "assets/post_local-preview_sqli/sqli-identifier-value.png": {
+      "mode": "100644",
+      "sha256": "44741f2afa780b8cc4967470695bb564e3118fbc33f72808528c2ea718b5b8fb"
+    },
+    "assets/post_local-preview_sqli/sqli-like-wildcard.png": {
+      "mode": "100644",
+      "sha256": "4b95aff14577c83a5ab1c8df602aa7dec2c54f839f9bea432e36be7e0b5c2f7b"
+    },
+    "assets/post_local-preview_sqli/sqli-orm-raw-sql.png": {
+      "mode": "100644",
+      "sha256": "d6c0350a920dd7cd2ac221af257f8b2160fe681c967365f6caf0e88a98129026"
+    },
+    "assets/post_local-preview_sqli/sqli-query-authorization.png": {
+      "mode": "100644",
+      "sha256": "7e1a69551e7a552f5f2df344bf70758b001ebd81a3cf9423e351dafb37f7da6f"
+    },
+    "assets/post_local-preview_sqli/sqli-sort-allowlist.png": {
+      "mode": "100644",
+      "sha256": "21b64f4708e74ad852b1e048714e1eb735b1f6be200ed700f169624078e4f066"
+    },
+    "assets/posts.md.Dlo9X_63.js": {
+      "mode": "100644",
+      "sha256": "3c873d308393e940f3f9d1a000089cd4f75dc49b7f26b64e02d4f3603d16c8da"
+    },
+    "assets/posts.md.Dlo9X_63.lean.js": {
+      "mode": "100644",
+      "sha256": "3c873d308393e940f3f9d1a000089cd4f75dc49b7f26b64e02d4f3603d16c8da"
+    },
+    "assets/style.CmNHh-CA.css": {
+      "mode": "100644",
+      "sha256": "357f55712fb4b0f3aeb393a2955501ea8c6b1eb41a32b7ac668c8b26344847e1"
+    },
+    "circleImage.svg": {
+      "mode": "100644",
+      "sha256": "0a165ae3fcfec248007e24f112c569387102ddc9b73ac88528c679011efce4e7"
+    },
+    "hashmap.json": {
+      "mode": "100644",
+      "sha256": "5c241eeead2b93e4fd07192c26e84381069377f76f29e2a6c7e53e053d2afc81"
+    },
+    "heroImageWithoutText.svg": {
+      "mode": "100644",
+      "sha256": "309d453f1463e7fc581055a758429062538943580280bd89cb0306f075612291"
+    },
+    "index.html": {
+      "mode": "100644",
+      "sha256": "dd426a522f8ea8ed47a5fc7634e7afe55bf7c0679381d6f7058ba459f9cdcb32"
+    },
+    "phoenixWithText.svg": {
+      "mode": "100644",
+      "sha256": "ba3bf36a716cd2b31ff1b245da9be0d22864b69dc88c50eee0fc40a788a537a8"
+    },
+    "post/course/cybersec/index.html": {
+      "mode": "100644",
+      "sha256": "598622f3533a2ac35c4a4866a0e341a2f15eef05b8881c58875181a01082452d"
+    },
+    "post/course/cybersec/what-is-safety.html": {
+      "mode": "100644",
+      "sha256": "3b3a066ac0fc66dfbc3f5fbace157176364a8c2cd0f78c628d0258e7beb21e2a"
+    },
+    "post/course/rm/index.html": {
+      "mode": "100644",
+      "sha256": "5128e22283377c1304327902f0d94c7825604e0bd9a9f3601a42ff1f5db3d557"
+    },
+    "post/course/rm/why-we-need-rm.html": {
+      "mode": "100644",
+      "sha256": "7fed15927512c1498784aa2f83f347905fef9e7e429f0d85e0865a46de7e770c"
+    },
+    "post/course/security-awareness/electricity-privacy.html": {
+      "mode": "100644",
+      "sha256": "4dafb21a4f4f88efe64b0104154798f4ef372da80e979bfda8a5efa0f181094f"
+    },
+    "post/course/security-awareness/index.html": {
+      "mode": "100644",
+      "sha256": "aa580d30a49bd7fd71f6501c951626aff49e75589a2e6404f1ee803359fb0e08"
+    },
+    "post/local-preview/agent-experiment.html": {
+      "mode": "100644",
+      "sha256": "8f94fc72ea4419e0e1183e02039b54d0c886b19045e2befe256a5a54f66780fa"
+    },
+    "post/local-preview/browser-lab.html": {
+      "mode": "100644",
+      "sha256": "8d89ad330fb3ad86faa2e4d0a1066d36d4e5d5b707f8cf0f03ef0dc06147c316"
+    },
+    "post/local-preview/idor.html": {
+      "mode": "100644",
+      "sha256": "0e6cbe0745a83d046cdbfae17b6e2e94decd46d85d02c9efa00d1dfbd3a47433"
+    },
+    "post/local-preview/jwt.html": {
+      "mode": "100644",
+      "sha256": "990392cea1246484423cda1d9e30e496f54be1bf33b5f07ad56ba695df08b8f7"
+    },
+    "post/local-preview/sqli.html": {
+      "mode": "100644",
+      "sha256": "5e256f5c995f368e06bf645c3162be6c77be39812051b5db4b0032e4e88af914"
+    },
+    "posts.html": {
+      "mode": "100644",
+      "sha256": "1b6d35d408d3d0dcfb34331b5202b9901757e1eea4e9bd587c51d4b4c2ffd1fe"
+    },
+    "vp-icons.css": {
+      "mode": "100644",
+      "sha256": "c3179481ddd882c06c7a5c5888509946f5be5b9ba7e504e3b0ceef1004831786"
+    }
+  },
+  "output_manifest_sha256": "8a743067ad084a6e9552f7cf026f7ad5eefe61bdc473051205007202d0a120a2",
+  "pr_ready": false,
+  "publishable": false,
+  "surface": "isolated actual VitePress CLI build; no HTTP/browser/remote claim"
+}

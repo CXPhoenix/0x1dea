@@ -2,7 +2,7 @@
 id: T-0019
 title: Admit only approved workflow identities through the engineering successor
 epic: 0012-publication-workflow
-status: todo
+status: review
 blocked_by: []
 ---
 
@@ -18,18 +18,18 @@ A maintainer can supply an independently approved finite workflow identity to a 
 
 ## Acceptance criteria
 
-- [ ] Meet supplement A1: trusted repository/main/roles/path/mode/hash approval at native validation and preparation, no grant retains original refusal.
-- [ ] Meet A2: all listed identity/path/type/authority mutations refuse at each public entry; preparation does not execute workflows.
+- [x] Meet supplement A1: trusted repository/main/roles/path/mode/hash approval at native validation and preparation, no grant retains original refusal.
+- [x] Meet A2: all listed identity/path/type/authority mutations refuse at each public entry; preparation does not execute workflows.
 - [ ] Meet A3 and K1–K3: projections/readback and drift refusal, candidates and historical contracts retained; inert fixtures only.
 - [ ] Demonstrate allocated PA-01–06 subcases, approved coverage, standards/spec/security review, and separately authorized actual engineering landings before done.
 
 ## Approved test plan
 
-Allocated rows: PA-01, PA-02, PA-03, PA-04, PA-05, PA-06. All are approved plan rows, **NOT WRITTEN / NOT RUN**. Reuse existing behavioral regressions; distinguish public local Git/native/API-adapter and filesystem-observation fixtures from actual GitHub capability evidence. Follow one seam/test/minimal implementation per TDD cycle only after separate implementation authorization. Coverage must enumerate the listed subcases. No original P01–P24 row is renamed or marked passed by this ticket.
+Allocated rows: PA-01, PA-02, PA-03, PA-04, PA-05, PA-06. These approved rows are implemented; current per-row results are recorded in implementation/T-0019/coverage.md. The registration commit preserves their original NOT WRITTEN / NOT RUN checkpoint. Reuse existing behavioral regressions; distinguish public local Git/native/API-adapter and filesystem-observation fixtures from actual GitHub capability evidence. Follow one seam/test/minimal implementation per TDD cycle only after separate implementation authorization. Coverage must enumerate the listed subcases. No original P01–P24 row is renamed or marked passed by this ticket.
 
 ## Delivery boundary
 
-Current authorization publishes tracker records only. Status is todo; do not claim work or start implementation until separately authorized. Future implementation uses this permanent ticket id on its own ticket branch. Preserve published-only main, all staging candidates/assets, target-specific historical validators/receipts/oracles/aliases and exact current successors. No active workflow, lab, installation, credential/account/rule/runner/deployment changes, merge or automation activation is granted. Done requires approved coverage/reviews and separately authorized actual engineering landings on main and staging; actual remote P13 remains a separate gate, with T-0016 review.
+Current authorization covers implementation, approved tests, independent reviews and reviewable delivery on this permanent ticket branch. Earlier registration-only statements are historical. Status remains review until actual authorized engineering landings on both targets. Preserve published-only main, all staging candidates/assets, target-specific historical validators/receipts/oracles/aliases and exact current successors. No active workflow, lab, installation, credential/account/rule/runner/deployment changes, merge or automation activation is granted. Done requires approved coverage/reviews and separately authorized actual engineering landings on main and staging; actual remote P13 remains a separate gate, with T-0016 review.
 
 ## 給使用者（zh-TW）
 
@@ -39,3 +39,17 @@ Current authorization publishes tracker records only. Status is todo; do not cla
 ## Registration record — 2026-10-16
 
 Recorded by project to-tickets after owner approval and a fresh global id scan of local tracker trees and actual origin/main/origin/staging. No implementation, executable tests, lab, remote mutation, commit or push accompanies this registration. See the registration approval and mapping for immutable review identities and exact scope.
+
+
+## Implementation authority — 2026-10-16
+
+Owner requested autonomous completion of the remaining work, authorizing implementation under the approved PA-01–06 plan. Earlier registration-only wording is a historical checkpoint. Production merge, automation activation and deployment-setting changes remain excluded. Separate bounded private P13 lab authority was subsequently granted; it does not waive engineering acceptance or approve production changes.
+
+
+## Local implementation checkpoint — 2026-10-16
+
+Finite external workflow admission now reaches public prepare/verify/native data validation on both projections. Complete source regression198 (66 Harness + 122 publication + 10 exact historical #22 tests), unit54, zero-warning lint and website build pass. Three red/green observations cover CLI admission, detached-main ref drift and unregistered physical .github rejection. Evidence: implementation/T-0019/coverage.md, tdd-evidence.json, execution.json and evidence/. Standards/source Security initial review found no unresolved issues; initial Spec P1 is fixed and final independent supplement is pending. Status is review, not done: actual main/staging engineering landings and their review/approval evidence remain required. No production workflow, merge, deployment-setting change or P13 pass.
+
+## Exact current-stage management successor
+
+PA-06 exposed22 existing source-bound stage management records missing from main projections. Their exact copies/identities and the red/green public diagnosis are recorded in implementation/T-0019/common-management-sources.json and execution.json. No article or historical byte was rewritten, no path exemption added; final successor/evidence review and actual dual-target landings remain pending.

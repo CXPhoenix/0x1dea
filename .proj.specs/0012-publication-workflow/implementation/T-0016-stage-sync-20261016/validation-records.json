@@ -1,0 +1,81 @@
+{
+  "scope": "Published sync evidence hashes; original raw hashes and literal projections in execution.json; excludes this self-binding file. Source/review/map histories remain separately pinned.",
+  "files": {
+    "README.md": {
+      "sha256": "454cd58adf41bf513981d5ac4c705ba259546baedefb062a71fc225a2cb9ef01",
+      "bytes": 1865
+    },
+    "attempts/README.md": {
+      "sha256": "8d3a7b5e84fb9a8c91afa6671474da877412b09bc43967d3290830079909f4e3",
+      "bytes": 679
+    },
+    "attempts/outer-sandbox-build-blocked.txt": {
+      "sha256": "98599d532c04c4433856a4d0359b0379b716054cd9ed21cb27e6396527f3b302",
+      "bytes": 727
+    },
+    "attempts/python-interrupted.txt": {
+      "sha256": "08ab8dbed52bab2874e4079f62ce07506f9ff1c0e8ed4e7772c6761b59ba5d16",
+      "bytes": 5735
+    },
+    "authority-and-plan.md": {
+      "sha256": "dde99e408d6daa959ed70552e396e6306be7bcfe601d86b2d68e239b50853bb3",
+      "bytes": 1715
+    },
+    "build.json": {
+      "sha256": "ba119b12002fd6a28ae60b63f510821949fd363acc683249c770619c59a38919",
+      "bytes": 25695
+    },
+    "build.txt": {
+      "sha256": "a4a19ffcd691aec22267cab293a6e165ff42e9abd4cae9e0344c9f25aacb606d",
+      "bytes": 195
+    },
+    "conflict-decisions.json": {
+      "sha256": "dcca25fc56011cd67446510547501034710728072ba21e78407e4412844302ed",
+      "bytes": 902
+    },
+    "coverage.md": {
+      "sha256": "3d734568b3e4ad321a3b9c430aa63ce21c3f7ad233e1b819ae04d106d96a8321",
+      "bytes": 3149
+    },
+    "execution.json": {
+      "sha256": "8824510c31ef1fe404f19372e8fa9207b809d9fb365f82763310e3f97240bb1f",
+      "bytes": 4473
+    },
+    "full-python.txt": {
+      "sha256": "b7a9f5a818d252bad2d6be5795e271a9f8d9af98c01c254b0d58688b09516b3f",
+      "bytes": 40363
+    },
+    "lint.txt": {
+      "sha256": "d5df5b4cdc0c1880d818f3fb97baedb942baf69b66562778300eaaa7a1a6f3a2",
+      "bytes": 189
+    },
+    "materializer.txt": {
+      "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382",
+      "bytes": 172
+    },
+    "native-checkpoint.json": {
+      "sha256": "d6f28944e572a2f2789a4dd4de3f1b62fc2a264fed377bc9c3201bc37e14b9a7",
+      "bytes": 5971
+    },
+    "pr-27-merged.json": {
+      "sha256": "c440852046eaf3c747a3b0d3ef7bfe6c46d32068df213bf4aafb35f95cb66483",
+      "bytes": 410
+    },
+    "source-audit.json": {
+      "sha256": "c88844f662e30a0186f7e31e0d55d93fd19d86a841df7ce7291a2f5c52671d73",
+      "bytes": 934
+    },
+    "structure.txt": {
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "bytes": 210
+    },
+    "trusted-validation-build.json": {
+      "sha256": "158ca1de5397609c4ff48c50ba5ce8d3bc285ae8771638d2df594dfe5ef15372",
+      "bytes": 33886
+    },
+    "unit.txt": {
+      "sha256": "0ee8a9cc7965c9fa548f35295f1da0f23f0576356cbe628382c86eac579bf125",
+      "bytes": 715
+    }
+  }
+}

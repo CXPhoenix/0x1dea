@@ -1,0 +1,799 @@
+test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle)
+PA-06: complete M0 ownership retention, not only the admitted path. ... 
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/validation-records.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/validation-records.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/review/security-T-0016-stage-sync.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/review/security-T-0016-stage-sync.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/lint.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/lint.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/structure.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/structure.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/native-checkpoint.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/native-checkpoint.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/execution.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/execution.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/materializer.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/materializer.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/review/code-T-0016-stage-sync.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/review/code-T-0016-stage-sync.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/trusted-validation-build.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/trusted-validation-build.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/pr-27-merged.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/pr-27-merged.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/source-audit.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/source-audit.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/full-python.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/full-python.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/unit.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/unit.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/coverage.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/coverage.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+  test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path. ... ERROR
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/validation-records.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/validation-records.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/validation-records.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/validation-records.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/review/security-T-0016-stage-sync.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/review/security-T-0016-stage-sync.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/review/security-T-0016-stage-sync.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/review/security-T-0016-stage-sync.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/lint.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/lint.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/lint.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/lint.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/structure.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/structure.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/structure.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/structure.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/native-checkpoint.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/native-checkpoint.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/native-checkpoint.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/native-checkpoint.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/execution.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/execution.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/execution.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/execution.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/materializer.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/materializer.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/materializer.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/materializer.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/review/code-T-0016-stage-sync.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/review/code-T-0016-stage-sync.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/review/code-T-0016-stage-sync.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/review/code-T-0016-stage-sync.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/trusted-validation-build.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/trusted-validation-build.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/trusted-validation-build.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/trusted-validation-build.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/pr-27-merged.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/pr-27-merged.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/pr-27-merged.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/pr-27-merged.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/source-audit.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/source-audit.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/source-audit.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/source-audit.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/full-python.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/full-python.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/full-python.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/full-python.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/unit.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/unit.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/unit.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/unit.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/coverage.md', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/coverage.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/coverage.md', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/coverage.md'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt', role='main')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/main/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt'
+
+======================================================================
+ERROR: test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle) (current_stage_management='.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt', role='staging')
+PA-06: complete M0 ownership retention, not only the admitted path.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0016-P13-plan/tests/article_publication/test_workflow_admission.py", line 306, in test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle
+    self.assertEqual((output/role/name).read_bytes(),expected)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 777, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 771, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-r_jo2_ay/preserved/staging/.proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt'
+
+----------------------------------------------------------------------
+Ran 1 test in 11.337s
+
+FAILED (errors=44)

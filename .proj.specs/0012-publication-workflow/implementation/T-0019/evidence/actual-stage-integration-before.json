@@ -1,0 +1,334 @@
+{
+  "manual_policy_resolution": true,
+  "trusted_main_to_staging": {
+    "status": "blocked",
+    "reason": "current reconciliation source inventory mismatch: .proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md, .proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md, .proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt, .proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt, .proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md, .proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json, .proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt, .proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json"
+  },
+  "surface": "real local Git merge-tree and native staging readback; synthetic commit only, no remote landing",
+  "source_commit": "c40fe78d5081f87a7f42520cc5aed189b5459445",
+  "actual_main": "8b31956f47075a831cfd0339339f616af96b3dae",
+  "actual_staging": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+  "result_tree": "14d12c9787e64a141d758320d4532aa1fc18180a",
+  "synthetic_head": "eda6a4b89c5000704f6035264aa37b7278a5202a",
+  "blog_paths_unchanged": 111,
+  "candidate_paths_unchanged": 50,
+  "protected_history_unchanged": [
+    "maintenance/harness-adoption",
+    "maintenance/harness-reconciliation",
+    "maintenance/article-publication",
+    "maintenance/lint-cleanup",
+    "tests/article_publication/test_current_baseline.py",
+    "scripts/run-python-tests.py",
+    "scripts/main_publication_verification.py",
+    "scripts/article-publication.py",
+    "skills/phoenix-writing",
+    "skills/maintaining-writing-skills",
+    "skills/creating-vitepress-post"
+  ],
+  "changed_paths": [
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/README.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/authorization.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/actions-workflows.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/canonical-pr-lifecycle.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/landing-audit.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/main-materialize-writing-skills.py.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/main-rules.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/main-verify-harness-adoption.py.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/main-verify-project.py.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/manifest.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/pr-27.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/pr-28.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/staging-materialize-writing-skills.py.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/staging-rules.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/staging-verify-harness-adoption.py.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/staging-verify-project.py.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/plan.en.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/review.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/test-matrix.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/README.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/drafts/A-workflow-admission.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/drafts/B-job-inputs.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/drafts/C-head-attestation.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/drafts/D-manual-history.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/registration/approval.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/registration/tickets.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/registration/verification.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/requirements.en.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/prompt.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/results.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/round-1.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/round-2.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/verification.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/test-plan.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/traceability.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/README.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/authority.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/coverage.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/delivery-review.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/build.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/consumer-green.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/consumer-red.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/first-red.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/focused.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/journal-red.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/lint.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/materializer.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/native.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/predicate-supplement.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/project.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/python-full.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/snapshot-red.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/trusted-local-staging-validation.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/unit.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/execution.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/setup-notes.md",
+    ".proj.specs/0012-publication-workflow/review/code-T-0020.md",
+    ".proj.specs/0012-publication-workflow/review/security-T-0020.md",
+    ".proj.tickets/0012-publication-workflow/T-0016-main-to-staging-sync.md",
+    ".proj.tickets/0012-publication-workflow/T-0019-finite-workflow-admission.md",
+    ".proj.tickets/0012-publication-workflow/T-0020-reproducible-sync-job-inputs.md",
+    ".proj.tickets/0012-publication-workflow/T-0021-trusted-pr-head-attestation.md",
+    ".proj.tickets/0012-publication-workflow/T-0022-manual-pr-history-continuation.md",
+    "maintenance/publication-workflow/automation/staging-sync-validate.yml.inactive",
+    "maintenance/publication-workflow/automation/staging-sync-writer.yml.inactive",
+    "maintenance/publication-workflow/engineering-v1.json",
+    "scripts/publication-job.py",
+    "scripts/publication_jobs.py",
+    "scripts/staging-sync-remote.py",
+    "tests/article_publication/test_job_inputs.py"
+  ],
+  "native": {
+    "status": "pass",
+    "tracker": {
+      "tickets": {
+        "T-0001": {
+          "id": "T-0001",
+          "title": "Adopt Harness and relocate the existing website root",
+          "epic": "0001-harness-adoption",
+          "status": "done",
+          "landing_evidence": ".proj.specs/0001-harness-adoption/landing.json",
+          "blocked_by": []
+        },
+        "T-0002": {
+          "id": "T-0002",
+          "title": "Prepare local article preview and selected candidates",
+          "epic": "0002-article-publication",
+          "status": "done",
+          "blocked_by": [],
+          "landing_evidence": ".proj.specs/0010-main-verification-repair/ticket-closeout/current-main/T-0002-landing.json"
+        },
+        "T-0003": {
+          "id": "T-0003",
+          "title": "Native Markdown summaries with three appearances",
+          "epic": "0003-article-summary",
+          "status": "review",
+          "blocked_by": [
+            "T-0005"
+          ]
+        },
+        "T-0004": {
+          "id": "T-0004",
+          "title": "Shared preview notice on homepage and article",
+          "epic": "0004-shared-preview-notice",
+          "status": "review",
+          "blocked_by": [
+            "T-0005"
+          ]
+        },
+        "T-0005": {
+          "id": "T-0005",
+          "title": "Reconcile immutable history with exact approved product successors",
+          "epic": "0005-harness-reconciliation",
+          "status": "done",
+          "blocked_by": [],
+          "landing_evidence": ".proj.specs/0005-harness-reconciliation/landing.json"
+        },
+        "T-0006": {
+          "id": "T-0006",
+          "title": "Accept exact electricity article revision and verify staging preview",
+          "epic": "0006-article-electricity-revision",
+          "status": "review",
+          "blocked_by": []
+        },
+        "T-0007": {
+          "id": "T-0007",
+          "title": "Reusable encore ticket and electricity article integration",
+          "epic": "0007-encore-ticket",
+          "status": "review",
+          "blocked_by": []
+        },
+        "T-0008": {
+          "id": "T-0008",
+          "title": "Automatic article figure and table captions with stable references",
+          "epic": "0008-article-captions",
+          "status": "review",
+          "blocked_by": []
+        },
+        "T-0009": {
+          "id": "T-0009",
+          "title": "Restore deterministic tests and exact current-source verification",
+          "epic": "0009-test-contract-repair",
+          "status": "done",
+          "blocked_by": [],
+          "landing_evidence": ".proj.specs/0009-test-contract-repair/landing.json"
+        },
+        "T-0010": {
+          "id": "T-0010",
+          "title": "Restore main verification after the selected electricity release",
+          "epic": "0010-main-verification-repair",
+          "status": "done",
+          "landing_evidence": ".proj.specs/0010-main-verification-repair/landing.json",
+          "blocked_by": []
+        },
+        "T-0012": {
+          "id": "T-0012",
+          "title": "Integrate evidence-backed ticket closeout with the exact main guard",
+          "epic": "0010-main-verification-repair",
+          "status": "done",
+          "landing_evidence": ".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0012-landing.json",
+          "blocked_by": []
+        },
+        "T-0011": {
+          "id": "T-0011",
+          "title": "Synchronize merged main into staging without changing candidates",
+          "epic": "0011-main-to-staging-sync",
+          "status": "done",
+          "blocked_by": [],
+          "landing_evidence": ".proj.specs/0011-main-to-staging-sync/landing.json"
+        },
+        "T-0013": {
+          "id": "T-0013",
+          "title": "Establish the common engineering baseline and M0 inventory",
+          "epic": "0012-publication-workflow",
+          "status": "done",
+          "landing_evidence": ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/landing.json",
+          "blocked_by": []
+        },
+        "T-0014": {
+          "id": "T-0014",
+          "title": "Prepare and verify one article through the explicit v2 contract",
+          "epic": "0012-publication-workflow",
+          "status": "done",
+          "landing_evidence": ".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0014-landing.json",
+          "blocked_by": [
+            "T-0013"
+          ]
+        },
+        "T-0015": {
+          "id": "T-0015",
+          "title": "Prepare a verified main-to-staging synchronization locally",
+          "epic": "0012-publication-workflow",
+          "status": "done",
+          "landing_evidence": ".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0015-landing.json",
+          "blocked_by": [
+            "T-0013"
+          ]
+        },
+        "T-0016": {
+          "id": "T-0016",
+          "title": "Turn main changes into one trusted staging synchronization PR",
+          "epic": "0012-publication-workflow",
+          "status": "review",
+          "blocked_by": [
+            "T-0015",
+            "T-0021",
+            "T-0022"
+          ]
+        },
+        "T-0017": {
+          "id": "T-0017",
+          "title": "Deliver only the approved article and record publication/recovery states",
+          "epic": "0012-publication-workflow",
+          "status": "todo",
+          "blocked_by": [
+            "T-0014",
+            "T-0016"
+          ]
+        },
+        "T-0018": {
+          "id": "T-0018",
+          "title": "Install and demonstrate the project workflow skill in both runtimes",
+          "epic": "0012-publication-workflow",
+          "status": "todo",
+          "blocked_by": [
+            "T-0017"
+          ]
+        },
+        "T-0019": {
+          "id": "T-0019",
+          "title": "Admit only approved workflow identities through the engineering successor",
+          "epic": "0012-publication-workflow",
+          "status": "todo",
+          "blocked_by": []
+        },
+        "T-0020": {
+          "id": "T-0020",
+          "title": "Prepare reproducible isolated writer and validator job inputs",
+          "epic": "0012-publication-workflow",
+          "status": "review",
+          "blocked_by": []
+        },
+        "T-0021": {
+          "id": "T-0021",
+          "title": "Report trusted validation on the exact PR head and expire stale readiness",
+          "epic": "0012-publication-workflow",
+          "status": "todo",
+          "blocked_by": [
+            "T-0019",
+            "T-0020"
+          ]
+        },
+        "T-0022": {
+          "id": "T-0022",
+          "title": "Continue after one explicitly approved manual PR delivery without claiming ownership",
+          "epic": "0012-publication-workflow",
+          "status": "todo",
+          "blocked_by": []
+        }
+      },
+      "next_id": "T-0023",
+      "frontier": [
+        "T-0019",
+        "T-0022"
+      ],
+      "blocked": {
+        "T-0017": [
+          "T-0016"
+        ],
+        "T-0018": [
+          "T-0017"
+        ],
+        "T-0021": [
+          "T-0019",
+          "T-0020"
+        ]
+      },
+      "unresolved_dependencies": {
+        "T-0016": [
+          "T-0021",
+          "T-0022"
+        ],
+        "T-0017": [
+          "T-0016"
+        ],
+        "T-0018": [
+          "T-0017"
+        ],
+        "T-0021": [
+          "T-0019",
+          "T-0020"
+        ]
+      },
+      "paused": []
+    },
+    "target_role": "staging",
+    "target_base": "c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7",
+    "candidate_head": "eda6a4b89c5000704f6035264aa37b7278a5202a",
+    "source_paths": 2941,
+    "publishable": false,
+    "candidate_paths_preserved": 50
+  },
+  "workflow_active": false,
+  "publishable": false,
+  "next_gate": "Main PR must land first. Fast-forward this ticket branch to actual main and revalidate staging before any separately authorized staging merge."
+}
