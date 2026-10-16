@@ -1013,7 +1013,7 @@
     },
     "scripts/verify-harness-adoption.py": {
       "mode": "100644",
-      "sha256": "d2a1b05b7e52be0d4160440063ce30333a7d0f32959a04781eda4033832ef34d"
+      "sha256": "cecd58b0cd8dbe7fde3030b20ae8bce949d54a9be3e839b91da9baa08a47a73a"
     },
     "tests/article_publication/__init__.py": {
       "mode": "100644",
@@ -3853,7 +3853,7 @@
     },
     ".proj.tickets/0012-publication-workflow/T-0019-finite-workflow-admission.md": {
       "mode": "100644",
-      "sha256": "da8b0015899782807fe2562ed6bbf3ac92d7ce1b0f6a8abe0160ab45b4b9adfa"
+      "sha256": "68d07dfa02d96de95bab9b4a524191eb50424d43dbecaadba523d73f3843d7de"
     },
     ".proj.tickets/0012-publication-workflow/T-0020-reproducible-sync-job-inputs.md": {
       "mode": "100644",
@@ -3873,7 +3873,7 @@
     },
     "tests/article_publication/test_workflow_admission.py": {
       "mode": "100644",
-      "sha256": "950d4ced11fd86a046a7becb36e1a975fa8fe8396b38e6fb862d81560e77dd3b"
+      "sha256": "025adaee81df6bf471e8bd68e58f80d221dc22a6f7dcb654da0e24ac43a1da16"
     },
     ".proj.specs/0012-publication-workflow/implementation/T-0020/setup-notes.md": {
       "mode": "100644",
@@ -4146,6 +4146,150 @@
     ".proj.specs/0012-publication-workflow/implementation/T-0022/main-refresh-20261016/review.md": {
       "mode": "100644",
       "sha256": "6714b9c92a7b4ff0cabb74f954f41d537a28343469f6055f288bcf3fb40232f9"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/original-historical-red.txt": {
+      "mode": "100644",
+      "sha256": "4eb8062cbd08b24c5e8c0d66ab458206f307e4f0f45a38dc48fcd1172673ce28"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/new-regression-red.txt": {
+      "mode": "100644",
+      "sha256": "7b04fa3328bf6becb8134e2f6e5eabf311cb58efdc49c8cb6d289ca5ab775cc1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/early-exit-red-v1.txt": {
+      "mode": "100644",
+      "sha256": "f0966da7638cdcf2d103acb9aa4809e53eb0146b7ffe2fe7eeaa437aef070aab"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/focused-final-green.txt": {
+      "mode": "100644",
+      "sha256": "5c4d568ef23784e4d6b3e979027da038c5ccdc9f46140d45d84e34bad57c98dc"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/staging-before-repair.txt": {
+      "mode": "100644",
+      "sha256": "936c5bc9451f71950bcad0d0a18287baca3f3a7bef1584832e5ca91531962942"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-final-python.txt": {
+      "mode": "100644",
+      "sha256": "dd382d1ec85fb4da018c98c684af9843b24b622865eec83295916d6bf0424e55"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/staging-final-python.txt": {
+      "mode": "100644",
+      "sha256": "ed0cc79b4294e910c8c9db7e64840cee00455e2ddff5f36cb0cd9aed147c3d5f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/attempts/staging-v2-alternates-depth.txt": {
+      "mode": "100644",
+      "sha256": "90f58251f4b7d92e1a5316b435816f6d54fc2b2e2bcbbf94210bb5c0b118cec8"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/object-materialization.json": {
+      "mode": "100644",
+      "sha256": "01dd33d231b2360d7f41fe05b79edba2cd91566001177080781e1398859da908"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/materialized-focused-green.txt": {
+      "mode": "100644",
+      "sha256": "55626031b9e72ffa603cd9e3027c643d35708bff9a91536b003bacd5474f616e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/attempts/main-v1-interrupted.txt": {
+      "mode": "100644",
+      "sha256": "727f6c0a2dc2de9094128d550499d382b22e2770b6c145f8cae63c1381458761"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/attempts/staging-v1-interrupted.txt": {
+      "mode": "100644",
+      "sha256": "de4c4f302aff41bd8f4972d44b98998c2454f96bf5374a4a4cf6d6a6eedd3a78"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-unit.txt": {
+      "mode": "100644",
+      "sha256": "c6bf0ec28c56c9613c2796d9457c72ca2c6e2b793b6863e7ddbd667744c2a97d"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-lint.txt": {
+      "mode": "100644",
+      "sha256": "290297acab8d57878a117d17fcbeeb955bf1742abf7afc66e28b804382f3d06b"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-build.txt": {
+      "mode": "100644",
+      "sha256": "ff679748d8390198459472bf6ffc9e895bb12a75e3b9d05b9d0be412acf431b2"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/stage-unit.txt": {
+      "mode": "100644",
+      "sha256": "285a8eaacf858315135621ae47ea95e0075f6223914579fb541b11fbf17c24f1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/stage-lint.txt": {
+      "mode": "100644",
+      "sha256": "5d08a98abd532206bcf78529ff1d963171c514fcf79f80d1cdb974b394d348be"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/stage-build.txt": {
+      "mode": "100644",
+      "sha256": "03e9407e09712f7c570679f59d9c081118058bebdcb7498ddd520c1386e16788"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-native-pre-record.json": {
+      "mode": "100644",
+      "sha256": "4bae23ec6d825bb5969e6f4c09f569d6cce59b094e2a4cb56ab2969dd31de7bf"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/stage-native-pre-record.json": {
+      "mode": "100644",
+      "sha256": "6ecb33285c18156cd8c6898a71a15a50e70223d0cddda3ebd6fc3982bc27bf7f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-project.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/stage-project.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-materializer.json": {
+      "mode": "100644",
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/stage-materializer.json": {
+      "mode": "100644",
+      "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/preservation.json": {
+      "mode": "100644",
+      "sha256": "14bf024aa84062acf9206edf02da9a18672508f22764815959fcd482a0597374"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-actual-build-receipt.json": {
+      "mode": "100644",
+      "sha256": "55b3c695052956e4045defbf141d3444aefa177f89dfd335f17f839b9cfc48a8"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-T16-0x1dea-T0019-history-fix.json": {
+      "mode": "100644",
+      "sha256": "ca5176e45045fa46370d508b0fa7b7d08a14d0587452379fcda6ee06756bb672"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/main-local-ready.json": {
+      "mode": "100644",
+      "sha256": "672a1bb1c033e135af9b587afa08496b95f51c34f0b2e2ffdfb6d9bc83464daf"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/stage-actual-build-receipt.json": {
+      "mode": "100644",
+      "sha256": "3e1c45d9b15e008a0d0ffc5f874e5845052e1db19d3c2e252b8c26926fc3fb35"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/stage-T16-T19-history-stage-fixed.json": {
+      "mode": "100644",
+      "sha256": "3b35e1e1909d947224294a816c164e8a89d2327fe3947550045056735b4aeadd"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/evidence/stage-local-ready.json": {
+      "mode": "100644",
+      "sha256": "0197a923d2cdee13e5dd507d454d4b9ef03ccf3797085be572d236571ddb4c5a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/README.md": {
+      "mode": "100644",
+      "sha256": "ead41b109fe971ed13dd7813ede8f03a6c970f22eede2af36079f2a251cb38d1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/coverage.md": {
+      "mode": "100644",
+      "sha256": "b55eec36eb732bb0c5fe2d8d03f96b2eb5d65d9764cbf50fa5352356fd4568fd"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/review.md": {
+      "mode": "100644",
+      "sha256": "9e4de4b1cd6384432d55b656e093b15f463689526dfb47c4d220f76067443758"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/execution.json": {
+      "mode": "100644",
+      "sha256": "b77281b99d81ae040f8140860253e5bd80d73c2f970a28f4507cf293da41019c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/historical-cli-repair-20261016/README.en.md": {
+      "mode": "100644",
+      "sha256": "0f41a561d5f7ff5eccb0f2eb2ad6a252c02a8c1c101ecd318552b4763ba0737f"
     }
   }
 }

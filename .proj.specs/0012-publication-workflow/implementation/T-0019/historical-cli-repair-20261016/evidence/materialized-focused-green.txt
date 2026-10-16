@@ -1,0 +1,9 @@
+test_exact_approved_workflow_reaches_both_projections_and_native_readback (test_workflow_admission.WorkflowAdmissionTests.test_exact_approved_workflow_reaches_both_projections_and_native_readback)
+PA-02: full positive public flow, never an installed/executed workflow. ... ok
+test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle)
+PA-06: complete M0 ownership retention, not only the admitted path. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 25.049s
+
+OK

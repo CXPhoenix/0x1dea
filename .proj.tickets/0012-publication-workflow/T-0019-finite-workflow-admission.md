@@ -53,3 +53,8 @@ Finite external workflow admission now reaches public prepare/verify/native data
 ## Exact current-stage management successor
 
 PA-06 exposed22 existing source-bound stage management records missing from main projections. Their exact copies/identities and the red/green public diagnosis are recorded in implementation/T-0019/common-management-sources.json and execution.json. No article or historical byte was rewritten, no path exemption added; final successor/evidence review and actual dual-target landings remain pending.
+
+
+## Historical CLI corrective checkpoint — 2026-10-16
+
+The separately authorized main PRs #29, #30 and #31 landed. Retained staging-only historical tests exposed a current-only import dependency in the original three-file CLI overlay. This continuation preserves A1/A3, PA-06 and K1 on the same branch/allocation, adds one public regression method, and retains every original historical assertion/oracle/receipt. See implementation/T-0019/historical-cli-repair-20261016/{README.md,coverage.md,execution.json,review.md} for the cause, raw red/final results and independent review. A first corrective pre-parse version was replaced; its interrupted long runs are not passing evidence. The final source uses trusted CONTROL to register parser dependencies and restores full parsing before target Git access. This repair PR is not yet authorized to merge. Staging synchronization remains held until the repair's actual authorized main landing and separate staging verification. Status remains review; P13 is NOT RUN and production automation/deployment settings remain unchanged.

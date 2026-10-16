@@ -44,14 +44,21 @@ for _name, _value in vars(_HISTORICAL_API).items():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=CONTROL)
-    from publication_workflows import add_arguments, from_args
-    add_arguments(parser)
+    # Historical three-file control overlays have no current policy or helper.
+    # Candidate input cannot select the trusted control's CLI dependencies.
+    control_policy = CONTROL / 'maintenance/publication-workflow/engineering-v1.json'
+    current_control = control_policy.exists() or control_policy.is_symlink()
+    if current_control:
+        from publication_workflows import add_arguments, from_args
+        add_arguments(parser)
     args = parser.parse_args()
     root = args.root.resolve()
     current = root / 'maintenance/publication-workflow/engineering-v1.json'
     ancestry = subprocess.run(['git', '--no-replace-objects', '-C', str(root), 'merge-base',
                                '--is-ancestor', BASES['main'], 'HEAD'], capture_output=True)
     if current.exists() or current.is_symlink() or ancestry.returncode == 0:
+        if not current_control:
+            raise ValueError('current target requires a complete trusted current control')
         from publication_current import verify
         print(json.dumps(verify(CONTROL, root, workflow_admission=from_args(args, CONTROL, root)), indent=2))
         return

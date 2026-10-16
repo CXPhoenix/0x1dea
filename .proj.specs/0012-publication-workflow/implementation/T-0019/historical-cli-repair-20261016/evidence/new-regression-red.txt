@@ -1,0 +1,24 @@
+test_historical_cli_fixture_needs_no_current_workflow_helper (test_workflow_admission.WorkflowAdmissionTests.test_historical_cli_fixture_needs_no_current_workflow_helper)
+PA-06: the original three-file historical CLI overlay still runs alone. ... FAIL
+
+======================================================================
+FAIL: test_historical_cli_fixture_needs_no_current_workflow_helper (test_workflow_admission.WorkflowAdmissionTests.test_historical_cli_fixture_needs_no_current_workflow_helper)
+PA-06: the original three-file historical CLI overlay still runs alone.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0019-history-fix/tests/article_publication/test_workflow_admission.py", line 297, in test_historical_cli_fixture_needs_no_current_workflow_helper
+    self.assertEqual(checked.returncode, 0, checked.stdout+checked.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-dvjjiver/historical-cli/scripts/verify-harness-adoption.py", line 66, in <module>
+    main()
+    ~~~~^^
+  File "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-dvjjiver/historical-cli/scripts/verify-harness-adoption.py", line 47, in main
+    from publication_workflows import add_arguments, from_args
+ModuleNotFoundError: No module named 'publication_workflows'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 3.655s
+
+FAILED (failures=1)

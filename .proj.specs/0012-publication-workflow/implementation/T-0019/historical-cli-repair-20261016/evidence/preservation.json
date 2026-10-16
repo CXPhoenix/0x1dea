@@ -1,0 +1,17 @@
+{
+  "main_base": "0c31f43ba4d3e87fa77f8fb2de5fdd5f47eb788e",
+  "staging_base": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+  "prospective_fixed_stage": "0397601448206ed53707b1393da2a7b68d40e565",
+  "blog_paths_unchanged": 111,
+  "candidate_paths_unchanged": 50,
+  "stage_only_test_files_unchanged": [
+    "tests/fixtures/component-acceptance.md",
+    "tests/harness_adoption/test_reconciliation.py",
+    "tests/harness_adoption/test_successor.py",
+    "tests/harness_adoption/test_test_runner.py",
+    "tests/previewNotice.vitest.ts",
+    "tests/previewNoticeArticle.vitest.ts"
+  ],
+  "main_protected_history_changed": false,
+  "surface": "prospective local correction and isolated staging projection; neither new main nor staging landing"
+}
