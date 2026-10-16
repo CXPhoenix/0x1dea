@@ -1,0 +1,13 @@
+test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses (test_manual_history.ManualHistoryTests.test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses)
+PD-03: one exact historical identity, not a broad closed-pull exemption. ... ok
+test_exact_external_manual_history_continues_without_reassigning_ownership (test_manual_history.ManualHistoryTests.test_exact_external_manual_history_continues_without_reassigning_ownership)
+PD-02: exact historical admission excludes one manual pull, never owns it. ... ok
+test_noop_precedes_manual_ownership_but_ready_defaults_to_refusal (test_manual_history.ManualHistoryTests.test_noop_precedes_manual_ownership_but_ready_defaults_to_refusal)
+PD-01: synchronized refs never need a historical ownership exemption. ... ok
+test_unrelated_pulls_and_unowned_branch_never_gain_history_ownership (test_manual_history.ManualHistoryTests.test_unrelated_pulls_and_unowned_branch_never_gain_history_ownership)
+PD-04: grant leaves unrelated pulls, owned closed state and branch guards intact. ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.405s
+
+OK

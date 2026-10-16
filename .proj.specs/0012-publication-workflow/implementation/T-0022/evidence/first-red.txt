@@ -1,0 +1,21 @@
+test_exact_external_manual_history_continues_without_reassigning_ownership (test_manual_history.ManualHistoryTests.test_exact_external_manual_history_continues_without_reassigning_ownership)
+PD-02: exact historical admission excludes one manual pull, never owns it. ... ERROR
+test_noop_precedes_manual_ownership_but_ready_defaults_to_refusal (test_manual_history.ManualHistoryTests.test_noop_precedes_manual_ownership_but_ready_defaults_to_refusal)
+PD-01: synchronized refs never need a historical ownership exemption. ... ok
+
+======================================================================
+ERROR: test_exact_external_manual_history_continues_without_reassigning_ownership (test_manual_history.ManualHistoryTests.test_exact_external_manual_history_continues_without_reassigning_ownership)
+PD-02: exact historical admission excludes one manual pull, never owns it.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0022/tests/article_publication/test_manual_history.py", line 63, in test_exact_external_manual_history_continues_without_reassigning_ownership
+    original=copy.deepcopy(self.api.prs[0]);admission=self.admission()
+                                                      ~~~~~~~~~~~~~~^^
+  File "/private/tmp/0x1dea-T0022/tests/article_publication/test_manual_history.py", line 45, in admission
+    import publication_manual
+ModuleNotFoundError: No module named 'publication_manual'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.534s
+
+FAILED (errors=1)

@@ -1,0 +1,56 @@
+test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses (test_manual_history.ManualHistoryTests.test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses)
+PD-03: one exact historical identity, not a broad closed-pull exemption. ... 
+  test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses (test_manual_history.ManualHistoryTests.test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses) (candidate_contained='grant')
+PD-03: one exact historical identity, not a broad closed-pull exemption. ... FAIL
+  test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses (test_manual_history.ManualHistoryTests.test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses) (candidate_contained='receipt')
+PD-03: one exact historical identity, not a broad closed-pull exemption. ... FAIL
+test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses (test_manual_history.ManualHistoryTests.test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses)
+PD-03: one exact historical identity, not a broad closed-pull exemption. ... FAIL
+
+======================================================================
+FAIL: test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses (test_manual_history.ManualHistoryTests.test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses) (candidate_contained='grant')
+PD-03: one exact historical identity, not a broad closed-pull exemption.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0022/tests/article_publication/test_manual_history.py", line 111, in test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses
+    self.assertEqual(rejected['status'],'blocked',rejected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'version': 1, 'status': 'ready', 'operation': {'version': 1, 'repository': 'owner/example', 'target': 'staging', 'branch': 'tickets/T-0016/main-to-staging-sync', 'owner': '0x1DEA:T-0016:main-to-staging-sync:v1', 'main': '5f0c1874c7899feddcddc80677883df770359320', 'staging': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'policy': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'tree': '3333333333333333333333333333333333333333', 'id': '2c828ec075838f7d481c38905b4df44174825427c4a7df54cce469ddf7bde6ce'}, 'head': '4444444444444444444444444444444444444444', 'run_id': 456, 'manual_history': [{'number': 28, 'base': 'staging', 'base_sha': 'cd35552f59d1625d81164c24bda3d36a9c8e1e30', 'head': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'merge': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'tree': 'f46b9600a259c08e755c1da3f14fc553a6315b64', 'branch': 'tickets/T-0016/main-to-staging-sync', 'repository': 'owner/example', 'actor': {'login': 'maintainer', 'id': 123, 'type': 'User'}, 'classification': 'manual', 'approval_sha256': '224e6544cff801735f76524f6ed2f94e9dcc1fdb1c29e955dfe8e98b1bb17d84'}], 'publishable': False, 'retries': 0, 'last_preparation': {'status': 'prepared', 'operation': {'version': 1, 'repository': 'owner/example', 'target': 'staging', 'branch': 'tickets/T-0016/main-to-staging-sync', 'owner': '0x1DEA:T-0016:main-to-staging-sync:v1', 'main': '5f0c1874c7899feddcddc80677883df770359320', 'staging': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'policy': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'tree': '3333333333333333333333333333333333333333', 'id': '2c828ec075838f7d481c38905b4df44174825427c4a7df54cce469ddf7bde6ce'}, 'head': '4444444444444444444444444444444444444444', 'manual_history': [{'number': 28, 'base': 'staging', 'base_sha': 'cd35552f59d1625d81164c24bda3d36a9c8e1e30', 'head': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'merge': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'tree': 'f46b9600a259c08e755c1da3f14fc553a6315b64', 'branch': 'tickets/T-0016/main-to-staging-sync', 'repository': 'owner/example', 'actor': {'login': 'maintainer', 'id': 123, 'type': 'User'}, 'classification': 'manual', 'approval_sha256': '224e6544cff801735f76524f6ed2f94e9dcc1fdb1c29e955dfe8e98b1bb17d84'}], 'publishable': False}}
+
+======================================================================
+FAIL: test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses (test_manual_history.ManualHistoryTests.test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses) (candidate_contained='receipt')
+PD-03: one exact historical identity, not a broad closed-pull exemption.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0022/tests/article_publication/test_manual_history.py", line 111, in test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses
+    self.assertEqual(rejected['status'],'blocked',rejected)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'version': 1, 'status': 'ready', 'operation': {'version': 1, 'repository': 'owner/example', 'target': 'staging', 'branch': 'tickets/T-0016/main-to-staging-sync', 'owner': '0x1DEA:T-0016:main-to-staging-sync:v1', 'main': '5f0c1874c7899feddcddc80677883df770359320', 'staging': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'policy': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'tree': '3333333333333333333333333333333333333333', 'id': '2c828ec075838f7d481c38905b4df44174825427c4a7df54cce469ddf7bde6ce'}, 'head': '4444444444444444444444444444444444444444', 'run_id': 456, 'manual_history': [{'number': 28, 'base': 'staging', 'base_sha': 'cd35552f59d1625d81164c24bda3d36a9c8e1e30', 'head': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'merge': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'tree': 'f46b9600a259c08e755c1da3f14fc553a6315b64', 'branch': 'tickets/T-0016/main-to-staging-sync', 'repository': 'owner/example', 'actor': {'login': 'maintainer', 'id': 123, 'type': 'User'}, 'classification': 'manual', 'approval_sha256': '224e6544cff801735f76524f6ed2f94e9dcc1fdb1c29e955dfe8e98b1bb17d84'}], 'publishable': False, 'retries': 0, 'last_preparation': {'status': 'prepared', 'operation': {'version': 1, 'repository': 'owner/example', 'target': 'staging', 'branch': 'tickets/T-0016/main-to-staging-sync', 'owner': '0x1DEA:T-0016:main-to-staging-sync:v1', 'main': '5f0c1874c7899feddcddc80677883df770359320', 'staging': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'policy': 'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb', 'tree': '3333333333333333333333333333333333333333', 'id': '2c828ec075838f7d481c38905b4df44174825427c4a7df54cce469ddf7bde6ce'}, 'head': '4444444444444444444444444444444444444444', 'manual_history': [{'number': 28, 'base': 'staging', 'base_sha': 'cd35552f59d1625d81164c24bda3d36a9c8e1e30', 'head': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'merge': 'a6d33692bd0312ec475c4f21462eb0be47463ebf', 'tree': 'f46b9600a259c08e755c1da3f14fc553a6315b64', 'branch': 'tickets/T-0016/main-to-staging-sync', 'repository': 'owner/example', 'actor': {'login': 'maintainer', 'id': 123, 'type': 'User'}, 'classification': 'manual', 'approval_sha256': '224e6544cff801735f76524f6ed2f94e9dcc1fdb1c29e955dfe8e98b1bb17d84'}], 'publishable': False}}
+
+======================================================================
+FAIL: test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses (test_manual_history.ManualHistoryTests.test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses)
+PD-03: one exact historical identity, not a broad closed-pull exemption.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0022/tests/article_publication/test_manual_history.py", line 117, in test_each_manual_binding_drift_and_ambiguous_or_unmerged_pull_refuses
+    self.assertEqual(self.api.calls,[])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['upload', 'advance', 'dispatch', 'create_pull', 'update_pull'] != []
+
+First list contains 5 additional elements.
+First extra element 0:
+'upload'
+
+- ['upload', 'advance', 'dispatch', 'create_pull', 'update_pull']
++ []
+
+----------------------------------------------------------------------
+Ran 1 test in 0.383s
+
+FAILED (failures=3)

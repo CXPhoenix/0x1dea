@@ -1,0 +1,19 @@
+
+> 0x1dea@1.4.0 test:unit /private/tmp/0x1dea-T0022
+> vitest run
+
+
+ RUN  v4.0.18 /private/tmp/0x1dea-T0022
+
+ ✓ tests/vpHelper.vitest.ts (9 tests) 10ms
+ ✓ tests/encoreTicket.vitest.ts (2 tests) 29ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 28ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 73ms
+ ✓ tests/articleCaptions.vitest.ts (26 tests) 163ms
+ ✓ tests/articleSummary.vitest.ts (12 tests) 168ms
+
+ Test Files  6 passed (6)
+      Tests  54 passed (54)
+   Start at  13:34:31
+   Duration  1.18s (transform 458ms, setup 0ms, import 1.64s, tests 471ms, environment 2.55s)
+

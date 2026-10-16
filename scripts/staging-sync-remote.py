@@ -42,6 +42,8 @@ def main():
     parser.add_argument('--activation-sha256')
     parser.add_argument('--state-dir', type=Path)
     parser.add_argument('--allow-remote-write', action='store_true')
+    parser.add_argument('--manual-history', type=Path)
+    parser.add_argument('--manual-history-sha256')
     parser.add_argument('--operation-record', type=Path)
     parser.add_argument('--head')
     parser.add_argument('--dispatch-inputs-env')
@@ -103,6 +105,12 @@ def main():
         else:
             from publication_remote import GhTransport, GitHubAdapter, run_sync
             activation = checked_json(args.activation, args.activation_sha256, external=True)
+            manual_history = None
+            if args.manual_history is not None or args.manual_history_sha256 is not None:
+                if args.manual_history is None or args.manual_history_sha256 is None:
+                    raise ValueError('manual history requires both independent inputs')
+                from publication_manual import ManualHistory
+                manual_history = ManualHistory(args.manual_history, args.manual_history_sha256, args.repository, source=registry['repository'])
             # Verification code and approved policy must be the actual main checkout.
             head = current.git(CONTROL, 'rev-parse', 'HEAD').decode().strip()
             frozen = current.git(CONTROL, 'show', head+':'+current.POLICY)
@@ -116,7 +124,7 @@ def main():
                 transport = GhTransport(writer_token, state_dir=args.state_dir)
                 api = GitHubAdapter(args.repository, transport)
                 result = run_sync(api, prepare, repository=args.repository, policy=policy,
-                    state_dir=args.state_dir, activation=activation, authorized=True)
+                    state_dir=args.state_dir, activation=activation, authorized=True, manual_history=manual_history)
         print(json.dumps(result, indent=2))
         return 0 if result['status'] in ('pass', 'ready', 'no-op') else 2
     except (ValueError, OSError, KeyError, TypeError) as error:
