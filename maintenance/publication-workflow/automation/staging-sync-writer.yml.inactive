@@ -19,20 +19,36 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
           path: control
+      - name: Prepare fresh source-bound writer inputs without API credentials
+        env:
+          REPOSITORY: ${{ github.repository }}
+          CONFIG: ${{ vars.PUBLICATION_CONFIG_DIR }}
+          JOB_MANIFEST_SHA: ${{ vars.PUBLICATION_WRITER_JOB_SHA256 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$CONFIG"
+          python3 control/scripts/publication-job.py prepare \
+            --manifest "$CONFIG/writer-job.json" --manifest-sha256 "$JOB_MANIFEST_SHA" \
+            --repository "$REPOSITORY" --role writer > "$RUNNER_TEMP/writer-job-receipt.json"
       - name: Run trusted writer with separately provisioned external authority
         env:
           PUBLICATION_WRITER_TOKEN: ${{ secrets.PUBLICATION_WRITER_TOKEN }}
           REPOSITORY: ${{ github.repository }}
           CONFIG: ${{ vars.PUBLICATION_CONFIG_DIR }}
-          REGISTRY_SHA: ${{ vars.PUBLICATION_REGISTRY_SHA256 }}
           ACTIVATION_SHA: ${{ vars.PUBLICATION_ACTIVATION_SHA256 }}
         shell: bash
         run: |
           set -euo pipefail
           test -n "$CONFIG"
-          POLICY=$(python3 -c 'import hashlib,pathlib;print(hashlib.sha256(pathlib.Path("control/maintenance/publication-workflow/engineering-v1.json").read_bytes()).hexdigest())')
-          python3 control/scripts/staging-sync-remote.py run \
-            --repository "$REPOSITORY" --policy-sha256 "$POLICY" \
-            --registry "$CONFIG/registry.json" --registry-sha256 "$REGISTRY_SHA" \
-            --activation "$CONFIG/activation.json" --activation-sha256 "$ACTIVATION_SHA" \
-            --state-dir "$RUNNER_TEMP/publication-writers" --allow-remote-write
+          python3 - <<'PY'
+          import json, os, pathlib, subprocess, sys
+          job = json.loads((pathlib.Path(os.environ['RUNNER_TEMP'])/'writer-job-receipt.json').read_bytes())
+          inputs = pathlib.Path(job['snapshot_root'])
+          subprocess.run([sys.executable,'control/scripts/staging-sync-remote.py','run',
+              '--repository',os.environ['REPOSITORY'],'--policy-sha256',job['operation']['policy'],
+              '--job-snapshot-root',str(inputs),'--job-binding-sha256',job['binding_sha256'],
+              '--activation',str(pathlib.Path(os.environ['CONFIG'])/'activation.json'),
+              '--activation-sha256',os.environ['ACTIVATION_SHA'],
+              '--state-dir',job['state_directory'],'--allow-remote-write'],check=True)
+          PY

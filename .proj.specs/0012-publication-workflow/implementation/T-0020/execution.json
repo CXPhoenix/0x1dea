@@ -1,0 +1,88 @@
+{
+  "ticket": "T-0020",
+  "source_packet": "T20-review-source-v2",
+  "source_packet_sha256": "39f200dc836be53c2205fa925d30cafb903fac3a8c5164c0ef9dd3aca995c30a",
+  "validation_strategy": "v2 production code unchanged; complete regression plus later test-only six-method predicate supplement",
+  "surface": "local CLI/native/full Git and actual isolated VitePress; replayed API only, no browser/GitHub/P13 claim",
+  "python": {
+    "harness_live": 66,
+    "publication_live": 122,
+    "historical_PR22": 10,
+    "total": 198,
+    "failures": 0,
+    "errors": 0,
+    "exit": 0
+  },
+  "unit": 54,
+  "lint": "pass",
+  "build": "pass",
+  "native": "pass",
+  "project": "pass",
+  "materializer": "pass",
+  "review": {
+    "Standards": [
+      0,
+      0,
+      0
+    ],
+    "Spec": [
+      0,
+      0,
+      0
+    ],
+    "security_HIGH_MEDIUM": [
+      0,
+      0
+    ]
+  },
+  "actual_landings": "pending",
+  "P13": "NOT RUN",
+  "done": false,
+  "artifacts": {
+    "evidence/build.txt": {
+      "sha256": "911838dadbc5a918a5b81bc8dfc1a175ce7709870a9c7c1c546e4d68819ab1b4"
+    },
+    "evidence/consumer-green.txt": {
+      "sha256": "0c74343e80e9777c78f67fa545e12db00f001b7ae2192070d8f2235b7da0e589"
+    },
+    "evidence/consumer-red.txt": {
+      "sha256": "0d8223fad1b1df97b2b4d59ddb3cc4067e8466219e62838a748d102884add210"
+    },
+    "evidence/first-red.txt": {
+      "sha256": "b84ad5a519233a9cb74874463c447bc60d0924aa3819ff58a79226481812024f"
+    },
+    "evidence/focused.txt": {
+      "sha256": "df7d9eed8697a30ac6a9a15bbb0589f33f2fe2d57eaf993ff1987267f6a293a2"
+    },
+    "evidence/journal-red.txt": {
+      "sha256": "6417f508f3d7df4e96b78bf999ddd36db85a2e33571b6823488cf2f134ea0326"
+    },
+    "evidence/lint.txt": {
+      "sha256": "c726ee286a925be6488912d181b771b1e953257a1d8951ee8b25f0ef63a3b7f1"
+    },
+    "evidence/materializer.json": {
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    "evidence/native.json": {
+      "sha256": "c5040ffce0b58e02f1469495d29d9203f5cfe09ca61465b2b3fad27ca04e8526"
+    },
+    "evidence/predicate-supplement.txt": {
+      "sha256": "54d7191974089bbef73bc447cbfd039cc55fc5d6f3dda3dbb1382a3719d18fac"
+    },
+    "evidence/project.txt": {
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    "evidence/python-full.txt": {
+      "sha256": "c68b55062393332f10ef1487427762614ce283f0c18df3013a7aa8c2c204c1a0"
+    },
+    "evidence/snapshot-red.txt": {
+      "sha256": "b42d6629e01d2b83f62a3e69eee4b321d3339762db30de7e62d4887bdd83fbc0"
+    },
+    "evidence/trusted-local-staging-validation.json": {
+      "sha256": "929056a12946f2ce802c8c0cb3c67b577b0df446c51d587de4c83bfb832b31c1"
+    },
+    "evidence/unit.txt": {
+      "sha256": "62db690888e2c25cd7615bab87fb87ffb0585085def4347ec323e297bb5fdcc2"
+    }
+  }
+}

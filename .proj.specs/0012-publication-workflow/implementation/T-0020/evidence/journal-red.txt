@@ -1,0 +1,52 @@
+test_durable_journal_recovery_and_unknown_source_identity_refuse (test_job_inputs.JobInputTests.test_durable_journal_recovery_and_unknown_source_identity_refuse)
+PB-05: fresh jobs reuse durable state; an API ack never replaces readback. ... FAIL
+
+======================================================================
+FAIL: test_durable_journal_recovery_and_unknown_source_identity_refuse (test_job_inputs.JobInputTests.test_durable_journal_recovery_and_unknown_source_identity_refuse)
+PB-05: fresh jobs reuse durable state; an API ack never replaces readback.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0020/tests/article_publication/test_job_inputs.py", line 263, in test_durable_journal_recovery_and_unknown_source_identity_refuse
+    self.assertNotEqual(refused.returncode,0,refused.stdout+refused.stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : {
+  "version": 1,
+  "repository": "owner/example",
+  "role": "writer",
+  "snapshot_root": "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-sync-rpdvdt6o/unknown-journal-inputs",
+  "operation": {
+    "version": 1,
+    "repository": "owner/example",
+    "target": "staging",
+    "branch": "tickets/T-0016/main-to-staging-sync",
+    "owner": "0x1DEA:T-0016:main-to-staging-sync:v1",
+    "main": "d32a7846d0cca5fcb810a23cc89a3cc128b7e972",
+    "staging": "d9a7e831dbbeae21c392947fe70edf8e317cafa6",
+    "policy": "7894de4f0d06f65844202631a9da67f149b94f1e2ca656717e13101787456aa2",
+    "tree": "0c20370d5e6752e1b4f37516aa0c23c5b2e55c7d",
+    "id": "939c59cb81bc2404fc1be19ad238b604e197f50f1ae07ee05b9af95dd4637700"
+  },
+  "manifest_sha256": "dd66490de89405f19bba01d7ed0046cf1d103f551fc7dd14e4c7b437d97a79d5",
+  "registry_sha256": "a73e7a7c19de8e8a4426cd25dc6916c9b1f29238533d34a547695f3647332c5e",
+  "runtime_sha256": "ea18d899ad85e1d78cd7ae71132704594739d2067efbf68c013ff82a5de92a53",
+  "state_directory": "/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/staging-sync-rpdvdt6o/durable-state",
+  "state_identity_sha256": "f954f32c8badee33378826ac8525c7c282c57c5f933dd0a3e1fb452d63fd1b93",
+  "writer_group": "publication-writers-owner/example",
+  "validation_group": "publication-validation-owner/example",
+  "cancel_in_progress": false,
+  "isolation": {
+    "inside": true,
+    "outside_read": "denied",
+    "outside_write": "denied",
+    "network": "denied"
+  },
+  "publishable": false,
+  "surface": "local job input preparation; no remote capability proof",
+  "binding_sha256": "aca9190a068cae89d467c95c94c746a32d87aabdefa1bfb3389ca52d2a499035"
+}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 2.089s
+
+FAILED (failures=1)
