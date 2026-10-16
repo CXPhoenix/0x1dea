@@ -1,0 +1,18 @@
+{
+  "scope": "Read-only actual remote landing/configuration and local verification readbacks after #28; no P13 or CI execution. Raw original bytes retained.",
+  "files": {
+    "actions-workflows.json": "51da78a4f28ec83978198558b5be95ebec25c44ab19561c168a975e203f0a785",
+    "landing-audit.json": "7abbf2e87df1898bfc6b258acd16a5b3372d47d7838f37d9a8d420ef293e3e21",
+    "main-materialize-writing-skills.py.txt": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719",
+    "main-rules.json": "d9a6543faec9e93d2a0512d1062a8ff38a418b7639edf73d05c61990aaf68d8d",
+    "main-verify-harness-adoption.py.txt": "66b476f41f1780cdf03f6cc6807de1cc3c3a42b235bac8f6dd4d1e7389881034",
+    "main-verify-project.py.txt": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+    "pr-27.json": "c440852046eaf3c747a3b0d3ef7bfe6c46d32068df213bf4aafb35f95cb66483",
+    "pr-28.json": "8f567349a2666c1808eb0e4a4ed25168c82a3d4f5e1574e7aea34f4c314b52ea",
+    "staging-materialize-writing-skills.py.txt": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382",
+    "staging-rules.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "staging-verify-harness-adoption.py.txt": "d38204a18e041feebccb91a09f8ca20140d7abe75c9ae164feb9bc6554f45703",
+    "staging-verify-project.py.txt": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+    "canonical-pr-lifecycle.json": "eacdc3ba57aad11ee8432004a5823233eb91fd5351e42a2ce6772914268df944"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "status": "pass",
+  "tracker": {
+    "tickets": {
+      "T-0001": {
+        "id": "T-0001",
+        "title": "Adopt Harness and relocate the existing website root",
+        "epic": "0001-harness-adoption",
+        "status": "done",
+        "landing_evidence": ".proj.specs/0001-harness-adoption/landing.json",
+        "blocked_by": []
+      },
+      "T-0002": {
+        "id": "T-0002",
+        "title": "Prepare local article preview and selected candidates",
+        "epic": "0002-article-publication",
+        "status": "done",
+        "blocked_by": [],
+        "landing_evidence": ".proj.specs/0010-main-verification-repair/ticket-closeout/current-main/T-0002-landing.json"
+      },
+      "T-0003": {
+        "id": "T-0003",
+        "title": "Native Markdown summaries with three appearances",
+        "epic": "0003-article-summary",
+        "status": "review",
+        "blocked_by": [
+          "T-0005"
+        ]
+      },
+      "T-0004": {
+        "id": "T-0004",
+        "title": "Shared preview notice on homepage and article",
+        "epic": "0004-shared-preview-notice",
+        "status": "review",
+        "blocked_by": [
+          "T-0005"
+        ]
+      },
+      "T-0005": {
+        "id": "T-0005",
+        "title": "Reconcile immutable history with exact approved product successors",
+        "epic": "0005-harness-reconciliation",
+        "status": "done",
+        "blocked_by": [],
+        "landing_evidence": ".proj.specs/0005-harness-reconciliation/landing.json"
+      },
+      "T-0008": {
+        "id": "T-0008",
+        "title": "Automatic article figure and table captions with stable references",
+        "epic": "0008-article-captions",
+        "status": "review",
+        "blocked_by": []
+      },
+      "T-0010": {
+        "id": "T-0010",
+        "title": "Restore main verification after the selected electricity release",
+        "epic": "0010-main-verification-repair",
+        "status": "done",
+        "landing_evidence": ".proj.specs/0010-main-verification-repair/landing.json",
+        "blocked_by": []
+      },
+      "T-0012": {
+        "id": "T-0012",
+        "title": "Integrate evidence-backed ticket closeout with the exact main guard",
+        "epic": "0010-main-verification-repair",
+        "status": "done",
+        "landing_evidence": ".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0012-landing.json",
+        "blocked_by": []
+      },
+      "T-0011": {
+        "id": "T-0011",
+        "title": "Synchronize merged main into staging without changing candidates",
+        "epic": "0011-main-to-staging-sync",
+        "status": "done",
+        "blocked_by": [],
+        "landing_evidence": ".proj.specs/0011-main-to-staging-sync/landing.json"
+      },
+      "T-0013": {
+        "id": "T-0013",
+        "title": "Establish the common engineering baseline and M0 inventory",
+        "epic": "0012-publication-workflow",
+        "status": "done",
+        "landing_evidence": ".proj.specs/0012-publication-workflow/implementation/T-0013-landing/landing.json",
+        "blocked_by": []
+      },
+      "T-0014": {
+        "id": "T-0014",
+        "title": "Prepare and verify one article through the explicit v2 contract",
+        "epic": "0012-publication-workflow",
+        "status": "done",
+        "landing_evidence": ".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0014-landing.json",
+        "blocked_by": [
+          "T-0013"
+        ]
+      },
+      "T-0015": {
+        "id": "T-0015",
+        "title": "Prepare a verified main-to-staging synchronization locally",
+        "epic": "0012-publication-workflow",
+        "status": "done",
+        "landing_evidence": ".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0015-landing.json",
+        "blocked_by": [
+          "T-0013"
+        ]
+      },
+      "T-0016": {
+        "id": "T-0016",
+        "title": "Turn main changes into one trusted staging synchronization PR",
+        "epic": "0012-publication-workflow",
+        "status": "review",
+        "blocked_by": [
+          "T-0015"
+        ]
+      },
+      "T-0017": {
+        "id": "T-0017",
+        "title": "Deliver only the approved article and record publication/recovery states",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0014",
+          "T-0016"
+        ]
+      },
+      "T-0018": {
+        "id": "T-0018",
+        "title": "Install and demonstrate the project workflow skill in both runtimes",
+        "epic": "0012-publication-workflow",
+        "status": "todo",
+        "blocked_by": [
+          "T-0017"
+        ]
+      }
+    },
+    "next_id": "T-0019",
+    "frontier": [],
+    "blocked": {
+      "T-0017": [
+        "T-0016"
+      ],
+      "T-0018": [
+        "T-0017"
+      ]
+    },
+    "paused": []
+  },
+  "target_role": "main",
+  "target_base": "eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a",
+  "candidate_head": "8b31956f47075a831cfd0339339f616af96b3dae",
+  "source_paths": 2702,
+  "publishable": false,
+  "candidate_paths_preserved": 0
+}

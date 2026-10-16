@@ -3,7 +3,7 @@ id: T-0016
 title: Turn main changes into one trusted staging synchronization PR
 epic: 0012-publication-workflow
 status: review
-blocked_by: [T-0015]
+blocked_by: [T-0015, T-0021, T-0022]
 ---
 
 ## Context
@@ -75,3 +75,10 @@ Evidence: implementation/T-0016/coverage.md, final/execution.json, tdd-evidence.
 After the successful local implementation/reviews, the owner authorized commit, non-force push and one implementation PR to main for T12/T14/T15 closure plus this ticket's approved engineering/management scope. The new authorization supersedes only the earlier local-only delivery checkpoint; no historical evidence is rewritten. See implementation/T-0016-main-delivery-20261016/.
 
 T16 remains review; P13 is unverified and activation blocked. No merge, live automation, deployment-setting or repository-rule/credential change. Actual T16 main/staging landings and the separately authorized disposable remote exercise are still required before done.
+
+
+## Approved P13 prerequisite registration — 2026-10-16
+
+Owner replied ‘同意’ to the reviewed four-ticket proposal and 23-row allocation. Registered T-0019 (A), T-0020 (B), T-0021 (C; blocked by T-0019/T-0020), and T-0022 (D). This ticket retains T-0015 and adds T-0021/T-0022 as unresolved direct blockers; A/B are transitive. No repair depends on T-0016 done. T-0017/T-0018 edges are unchanged.
+
+Actual main8b31956f/staging05fc16c3 include the T-0016 local implementation via merged PR27/28; this does not satisfy P13. The new records authorize tracker publication only. Status remains review; the original P13 remote exercise is NOT RUN, all 23 prerequisite plan rows are NOT WRITTEN / NOT RUN, and lab/credentials/rules/automation/deployment changes remain unauthorized. No new implementation or commit/push accompanies this registration. The approved supplement, review closure and registration evidence are under implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/.
