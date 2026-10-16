@@ -2967,6 +2967,90 @@
       "mode": "100644",
       "sha256": "d8d9db4610bc40b73635912f81c3f494dc5c69178c7a232ce40373a4cc0c00fd"
     },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/README.md": {
+      "mode": "100644",
+      "sha256": "a58243585204f251996582d69237ff51953041eaf4e330521c8b0aafbc42238d"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/authority.md": {
+      "mode": "100644",
+      "sha256": "20755f7e4309f91b3c698150b5910f9185187b6b9ea05ccdc3fc7aac25c83273"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/coverage.md": {
+      "mode": "100644",
+      "sha256": "a4f78aac4fab7c99c24929c27b4bd9f78cd4075645181b95327f6b062ab6b543"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/delivery-review.md": {
+      "mode": "100644",
+      "sha256": "f5bd3fa6c746dab4311b5ead373379c67626236806f25ef4b4f1813705f8c049"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/build.txt": {
+      "mode": "100644",
+      "sha256": "911838dadbc5a918a5b81bc8dfc1a175ce7709870a9c7c1c546e4d68819ab1b4"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/consumer-green.txt": {
+      "mode": "100644",
+      "sha256": "0c74343e80e9777c78f67fa545e12db00f001b7ae2192070d8f2235b7da0e589"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/consumer-red.txt": {
+      "mode": "100644",
+      "sha256": "0d8223fad1b1df97b2b4d59ddb3cc4067e8466219e62838a748d102884add210"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/first-red.txt": {
+      "mode": "100644",
+      "sha256": "b84ad5a519233a9cb74874463c447bc60d0924aa3819ff58a79226481812024f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/focused.txt": {
+      "mode": "100644",
+      "sha256": "df7d9eed8697a30ac6a9a15bbb0589f33f2fe2d57eaf993ff1987267f6a293a2"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/journal-red.txt": {
+      "mode": "100644",
+      "sha256": "6417f508f3d7df4e96b78bf999ddd36db85a2e33571b6823488cf2f134ea0326"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/lint.txt": {
+      "mode": "100644",
+      "sha256": "c726ee286a925be6488912d181b771b1e953257a1d8951ee8b25f0ef63a3b7f1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/materializer.json": {
+      "mode": "100644",
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/native.json": {
+      "mode": "100644",
+      "sha256": "c5040ffce0b58e02f1469495d29d9203f5cfe09ca61465b2b3fad27ca04e8526"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/predicate-supplement.txt": {
+      "mode": "100644",
+      "sha256": "54d7191974089bbef73bc447cbfd039cc55fc5d6f3dda3dbb1382a3719d18fac"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/project.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/python-full.txt": {
+      "mode": "100644",
+      "sha256": "c68b55062393332f10ef1487427762614ce283f0c18df3013a7aa8c2c204c1a0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/snapshot-red.txt": {
+      "mode": "100644",
+      "sha256": "b42d6629e01d2b83f62a3e69eee4b321d3339762db30de7e62d4887bdd83fbc0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/trusted-local-staging-validation.json": {
+      "mode": "100644",
+      "sha256": "929056a12946f2ce802c8c0cb3c67b577b0df446c51d587de4c83bfb832b31c1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/evidence/unit.txt": {
+      "mode": "100644",
+      "sha256": "62db690888e2c25cd7615bab87fb87ffb0585085def4347ec323e297bb5fdcc2"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/execution.json": {
+      "mode": "100644",
+      "sha256": "7825a5d8bd567f152df83b80577587643ee6f8892d02e9ecf30cb94fd04c1a7c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0020/setup-notes.md": {
+      "mode": "100644",
+      "sha256": "1b6db3cef224cf8c03b2c182a09b5cb95e0d3846c39241605b05cd0ac41880fa"
+    },
     ".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0012-landing.json": {
       "mode": "100644",
       "sha256": "aa43e02ca8224e4322cc12d9d456cf4feaaa047e9c00f6c73bd8a5ce23d82965"
@@ -3051,6 +3135,10 @@
       "mode": "100644",
       "sha256": "d5098784bf87aeb62be89d8a6e3722e981e9fd089f846dee1d1ea634746fca33"
     },
+    ".proj.specs/0012-publication-workflow/review/code-T-0020.md": {
+      "mode": "100644",
+      "sha256": "190339d9557a9e6b7597ed52c1619ceae1720613496845af36476de71ded6078"
+    },
     ".proj.specs/0012-publication-workflow/review/document-invariants.json": {
       "mode": "100644",
       "sha256": "2e0161d56c236100e51d85e390bbdc2722e8568fa37811776eb0629026316131"
@@ -3134,6 +3222,10 @@
     ".proj.specs/0012-publication-workflow/review/security-T-0016.md": {
       "mode": "100644",
       "sha256": "f87f3ea9cfe04f0c2c84b428975f88a69aeab09cf1e154e237e8ceb6c1ababe0"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0020.md": {
+      "mode": "100644",
+      "sha256": "8389d8a10e0eaddae5f69e48b8e5e00147822a57bc680c87679f8466d386f3c4"
     },
     ".proj.specs/0012-publication-workflow/review/skill-evaluation/inputs-manifest.json": {
       "mode": "100644",
@@ -3501,7 +3593,7 @@
     },
     ".proj.tickets/0012-publication-workflow/T-0020-reproducible-sync-job-inputs.md": {
       "mode": "100644",
-      "sha256": "2c4d680464cb4023ec9972b17dc0ee5199b4ac07f0db6a98b6d7d75289c81948"
+      "sha256": "3c30bce06ad22fcf279bb473c078cc3c8e8af49846114ce608b656b2dfc20ec5"
     },
     ".proj.tickets/0012-publication-workflow/T-0021-trusted-pr-head-attestation.md": {
       "mode": "100644",
@@ -3541,11 +3633,11 @@
     },
     "maintenance/publication-workflow/automation/staging-sync-validate.yml.inactive": {
       "mode": "100644",
-      "sha256": "a9ada28e413c898f82ac5ab76657794928a7052b297cb61f12d501b61fec18dc"
+      "sha256": "9bb94f2afaa8ddcd7d3349413f064dadef42696d6ed8735a65f6a4154345d16c"
     },
     "maintenance/publication-workflow/automation/staging-sync-writer.yml.inactive": {
       "mode": "100644",
-      "sha256": "c7d6d2221572ebbd2d3938e7518e458db0409c7023886e1b2d861c2060368046"
+      "sha256": "bcf7e40526c0f4f8d899768dc16e38bca9d9baa2d86cb32536dd17d4c21ec9d6"
     },
     "maintenance/publication-workflow/automation/sync-commit-template.txt": {
       "mode": "100644",
@@ -3575,6 +3667,10 @@
       "mode": "100644",
       "sha256": "9202999cb7cad478f611489cba9962cbe9dc11992fb50b94c793cbac63a56a18"
     },
+    "scripts/publication-job.py": {
+      "mode": "100644",
+      "sha256": "32f018ba47fcf8b57d1a20be5e1bfb9fde5ef04d4ba246fb5b50832a992ccfe9"
+    },
     "scripts/publication_build_v2.py": {
       "mode": "100644",
       "sha256": "a26912d507382a265bde490314a53344a021f574f8bbe7797a5d4eb203863e28"
@@ -3582,6 +3678,10 @@
     "scripts/publication_current.py": {
       "mode": "100644",
       "sha256": "e0acb54e4946ddc4fe35ad2bbf2bf49d541eb28eed42e6ca46fb78edf6997bd7"
+    },
+    "scripts/publication_jobs.py": {
+      "mode": "100644",
+      "sha256": "dfd09e168ca74ce6d7e11a78fcce501c121360692bb0bea80622c53caaf37b9e"
     },
     "scripts/publication_remote.py": {
       "mode": "100644",
@@ -3601,7 +3701,7 @@
     },
     "scripts/staging-sync-remote.py": {
       "mode": "100644",
-      "sha256": "9ff0dd194b6d67c30b0ac2916b2a946c06b23c468b31cd1d6a98587aafee72e1"
+      "sha256": "2921e066c3fd40e1916c64113a2365ffd9a400945d7dda41207db6dc072ef15a"
     },
     "scripts/staging-sync.py": {
       "mode": "100644",
@@ -3634,6 +3734,10 @@
     "tests/article_publication/test_current_runner.py": {
       "mode": "100644",
       "sha256": "4cb9c25c00d45af3d216de872244979157b27189909cd2d367ec657382748a15"
+    },
+    "tests/article_publication/test_job_inputs.py": {
+      "mode": "100644",
+      "sha256": "bdd5778766c968edc61ea8d45c95e45a243bc39c4517bba16357ab071d847129"
     },
     "tests/article_publication/test_landed_closeout.py": {
       "mode": "100644",
