@@ -44,6 +44,8 @@ for _name, _value in vars(_HISTORICAL_API).items():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, default=CONTROL)
+    from publication_workflows import add_arguments, from_args
+    add_arguments(parser)
     args = parser.parse_args()
     root = args.root.resolve()
     current = root / 'maintenance/publication-workflow/engineering-v1.json'
@@ -51,7 +53,7 @@ def main():
                                '--is-ancestor', BASES['main'], 'HEAD'], capture_output=True)
     if current.exists() or current.is_symlink() or ancestry.returncode == 0:
         from publication_current import verify
-        print(json.dumps(verify(CONTROL, root), indent=2))
+        print(json.dumps(verify(CONTROL, root, workflow_admission=from_args(args, CONTROL, root)), indent=2))
         return
     # Historical fixture routing is retained; failure never selects another contract.
     records = root / 'maintenance/harness-reconciliation'

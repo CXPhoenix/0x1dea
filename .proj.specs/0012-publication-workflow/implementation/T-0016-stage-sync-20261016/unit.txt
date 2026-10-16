@@ -1,0 +1,21 @@
+
+> 0x1dea@1.4.0 test:unit <staging-sync-checkout>
+> vitest run
+
+
+ RUN  v4.0.18 <staging-sync-checkout>
+
+ ✓ tests/vpHelper.vitest.ts (9 tests) 14ms
+ ✓ tests/encoreTicket.vitest.ts (2 tests) 29ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 30ms
+ ✓ tests/previewNotice.vitest.ts (32 tests) 60ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 119ms
+ ✓ tests/articleCaptions.vitest.ts (26 tests) 237ms
+ ✓ tests/articleSummary.vitest.ts (12 tests) 249ms
+ ✓ tests/previewNoticeArticle.vitest.ts (1 test) 101ms
+
+ Test Files  8 passed (8)
+      Tests  87 passed (87)
+   Start at  01:47:23
+   Duration  2.28s (transform 1.45s, setup 0ms, import 4.32s, tests 839ms, environment 5.40s)
+

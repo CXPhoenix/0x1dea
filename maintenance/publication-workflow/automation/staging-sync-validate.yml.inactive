@@ -12,6 +12,9 @@ on:
       policy: {required: true, type: string}
 permissions:
   contents: read
+concurrency:
+  group: publication-validation-${{ github.repository }}
+  cancel-in-progress: false
 jobs:
   validate:
     runs-on: macos-15
@@ -22,19 +25,31 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
           path: control
-      - name: Validate exact inputs with trusted main code and isolated build
+      - name: Prepare independent validator inputs without API credentials
         env:
-          INPUTS_JSON: ${{ toJSON(inputs) }}
           REPOSITORY: ${{ github.repository }}
           CONFIG: ${{ vars.PUBLICATION_CONFIG_DIR }}
-          REGISTRY_SHA: ${{ vars.PUBLICATION_REGISTRY_SHA256 }}
-          RUNTIME_SHA: ${{ vars.PUBLICATION_RUNTIME_SHA256 }}
+          JOB_MANIFEST_SHA: ${{ vars.PUBLICATION_VALIDATOR_JOB_SHA256 }}
         shell: bash
         run: |
           set -euo pipefail
           test -n "$CONFIG"
-          python3 control/scripts/staging-sync-remote.py validate \
-            --dispatch-inputs-env INPUTS_JSON --repository "$REPOSITORY" \
-            --registry "$CONFIG/registry.json" --registry-sha256 "$REGISTRY_SHA" \
-            --runtime "$CONFIG/runtime.json" --runtime-sha256 "$RUNTIME_SHA" \
-            --build-output "$RUNNER_TEMP/sync-build"
+          python3 control/scripts/publication-job.py prepare \
+            --manifest "$CONFIG/validator-job.json" --manifest-sha256 "$JOB_MANIFEST_SHA" \
+            --repository "$REPOSITORY" --role validator > "$RUNNER_TEMP/validator-job-receipt.json"
+      - name: Validate exact inputs with trusted main code and isolated build
+        env:
+          INPUTS_JSON: ${{ toJSON(inputs) }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, pathlib, subprocess, sys
+          job = json.loads((pathlib.Path(os.environ['RUNNER_TEMP'])/'validator-job-receipt.json').read_bytes())
+          inputs = pathlib.Path(job['snapshot_root'])
+          subprocess.run([sys.executable,'control/scripts/staging-sync-remote.py','validate',
+              '--dispatch-inputs-env','INPUTS_JSON','--repository',os.environ['REPOSITORY'],
+              '--job-snapshot-root',str(inputs),'--job-binding-sha256',job['binding_sha256'],
+              '--build-output',str(pathlib.Path(os.environ['RUNNER_TEMP'])/'sync-build')],check=True)
+          PY

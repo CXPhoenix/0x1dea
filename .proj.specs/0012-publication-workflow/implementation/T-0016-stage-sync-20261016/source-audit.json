@@ -1,0 +1,20 @@
+{
+  "main": "8b31956f47075a831cfd0339339f616af96b3dae",
+  "staging": "612924848ca13663bb2af64e32638fbabedb1685",
+  "pr27_head": "4d6e58c0965b383b860c568fb740aa0cad7b439f",
+  "main_tree_equals_reviewed_pr27_head": true,
+  "isolated_independent_merge_conflict": [
+    "maintenance/publication-workflow/engineering-v1.json"
+  ],
+  "resolved_independent_tree": "63f8e94d1d004da2539c2b98a9bdcf514d2e8b8b",
+  "resolved_index_tree": "63f8e94d1d004da2539c2b98a9bdcf514d2e8b8b",
+  "approved_main_common_paths_identical": 874,
+  "changed_paths_vs_staging": 132,
+  "candidate_paths_unchanged": 50,
+  "blog_paths_unchanged": 111,
+  "protected_history_paths_unchanged": 376,
+  "new_blog_skill_workflow_deployment_delta": false,
+  "T0016_status": "review",
+  "P13": "unverified",
+  "scope": "Actual immutable source/index tree and isolated independent merge before additive sync evidence and exact policy entries; no remote CI/production claim."
+}

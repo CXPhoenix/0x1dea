@@ -1,0 +1,22 @@
+test_snapshot_consumption_rejects_each_filesystem_predicate_and_input_tamper (test_job_inputs.JobInputTests.test_snapshot_consumption_rejects_each_filesystem_predicate_and_input_tamper)
+PB-03: public consumption refuses mutable, substituted or misowned inputs. ... FAIL
+
+======================================================================
+FAIL: test_snapshot_consumption_rejects_each_filesystem_predicate_and_input_tamper (test_job_inputs.JobInputTests.test_snapshot_consumption_rejects_each_filesystem_predicate_and_input_tamper)
+PB-03: public consumption refuses mutable, substituted or misowned inputs.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0020/tests/article_publication/test_job_inputs.py", line 101, in test_snapshot_consumption_rejects_each_filesystem_predicate_and_input_tamper
+    self.assertEqual(checked.returncode,0,checked.stdout+checked.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : usage: publication-job.py [-h] --manifest MANIFEST
+                          --manifest-sha256 MANIFEST_SHA256
+                          --repository REPOSITORY --role {writer,validator}
+                          {prepare}
+publication-job.py: error: argument operation: invalid choice: 'verify' (choose from prepare)
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.315s
+
+FAILED (failures=1)

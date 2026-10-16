@@ -1,0 +1,37 @@
+{
+  "ticket": "T-0020",
+  "surface": "local Python/native/installed VitePress and deny-default sandbox-exec; API fixtures are replay only",
+  "main": "0fd933cdb5c84ba8c2353132aa66c4899cc25152",
+  "staging": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+  "prior_head": "c40fe78d5081f87a7f42520cc5aed189b5459445",
+  "merge_head": "0fd933cdb5c84ba8c2353132aa66c4899cc25152",
+  "full_python_summary": [
+    "harness_adoption (live): testsRun=66 failures=0 errors=0",
+    "article_publication (live): testsRun=128 failures=0 errors=0",
+    "T13 #22 frozen fixture: commit=001b26f8e931e0cf1e62373c5aa088a1b5ed09eb exit=0"
+  ],
+  "unit": 54,
+  "lint": "pass",
+  "build": "pass",
+  "source_review_packet": "T20-main-refresh-review",
+  "preserved": "All blog files, historical validators/oracles/receipts, M0 and aliases are unchanged versus current main. All incoming common entries are retained; the four existing identity updates are the previously reviewed T20 implementation listed below.",
+  "ticket_status": "review",
+  "P13": "NOT RUN",
+  "production_automation": "inactive",
+  "staging_landing": "pending",
+  "artifacts": {
+    "python.txt": "ebf6af0b0aee90de92cb13a2ab018e352fd1a73d4b87eb7b60c2492cf2432f61",
+    "unit.txt": "15f932f0e0c57b9dd8113697256cd7c5b5f5e16f91e7310e237cd22412ac814f",
+    "lint.txt": "c726ee286a925be6488912d181b771b1e953257a1d8951ee8b25f0ef63a3b7f1",
+    "build.txt": "554cc11c6cfd4e194849529ebb03b486b197168ca96c2a898af54d250e6e08e6",
+    "isolated-actual-build-receipt.json": "6b8d4fa3d50dc8b44fd232480704376eb6a70029cb182ae01c959161e1454171",
+    "isolated-T16-0x1dea-T0020.json": "742b8f132c5369aa3c0fe82d2de62dcaf4243400ccbd5011b69c9bcb101ed86c",
+    "isolated-local-ready.json": "bc2ea00e7cdabfadfe87f0c2457f2d02a1111e7759cd42416345838bc65c0050"
+  },
+  "updated_existing_common": [
+    "maintenance/publication-workflow/automation/staging-sync-validate.yml.inactive",
+    "maintenance/publication-workflow/automation/staging-sync-writer.yml.inactive",
+    "scripts/staging-sync-remote.py",
+    ".proj.tickets/0012-publication-workflow/T-0020-reproducible-sync-job-inputs.md"
+  ]
+}

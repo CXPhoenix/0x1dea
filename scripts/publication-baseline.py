@@ -159,15 +159,22 @@ def main():
     prepare_parser.add_argument('--output', type=Path, required=True)
     verify_parser = commands.add_parser('verify', help='Verify candidate using the executing trusted target checkout')
     verify_parser.add_argument('--repo', type=Path, required=True)
+    from publication_workflows import add_arguments, from_args
+    for command_parser in (prepare_parser, verify_parser):
+        add_arguments(command_parser)
     args = parser.parse_args()
     try:
         if args.command == 'verify':
             from publication_current import verify
-            print(json.dumps(verify(Path(__file__).resolve().parents[1], args.repo.resolve()), indent=2))
+            control = Path(__file__).resolve().parents[1]
+            print(json.dumps(verify(control, args.repo.resolve(),
+                                   workflow_admission=from_args(args, control, args.repo)), indent=2))
             return 0
         if args.command == 'prepare':
             from publication_current import prepare
-            print(json.dumps(prepare(Path(__file__).resolve().parents[1], args.output), indent=2))
+            control = Path(__file__).resolve().parents[1]
+            print(json.dumps(prepare(control, args.output,
+                                    workflow_admission=from_args(args, control)), indent=2))
             return 0
         plan = json.loads(args.classification.read_text(), object_pairs_hook=unique_object)
         print(json.dumps(inventory(args.repo, plan), ensure_ascii=False, indent=2))
