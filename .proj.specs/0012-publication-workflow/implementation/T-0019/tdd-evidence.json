@@ -1,0 +1,87 @@
+{
+  "ticket": "T-0019",
+  "surface": "real disposable Git, public preparation CLI and native verifier; synthetic workflow only",
+  "cycles": [
+    {
+      "row": "PA-02",
+      "red": {
+        "exit": 1,
+        "assertion": "prepare expected success; CLI returned 2 for unknown admission arguments"
+      },
+      "green": {
+        "focused_test": "test_exact_approved_workflow_reaches_both_projections_and_native_readback",
+        "exit": 0
+      }
+    },
+    {
+      "row": "PA-05",
+      "red": {
+        "exit": 1,
+        "assertion": "main-ref drift expected refusal but native verifier returned pass"
+      },
+      "green": {
+        "focused_test": "test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head",
+        "exit": 0
+      }
+    },
+    {
+      "row": "PA-03",
+      "review_finding": "prepare ignored physical .github files not listed in common/grant",
+      "red": {
+        "exit": 1,
+        "assertion": "two unregistered physical paths expected refusal; prepare returned success",
+        "log": "evidence/physical-red.txt"
+      },
+      "green": {
+        "exit": 0,
+        "focused_test": "test_undeclared_github_and_path_mode_type_hash_mutations_refuse",
+        "log": "evidence/physical-green.txt"
+      }
+    },
+    {
+      "row": "PA-03",
+      "review_finding": "unlisted uninitialized trusted-main gitlink accepted by prepare",
+      "red": {
+        "exit": 1,
+        "assertion": "expected refusal, prepare returned success",
+        "log": "evidence/gitlink-red.txt"
+      },
+      "green": {
+        "exit": 0,
+        "log": "evidence/gitlink-green.txt"
+      }
+    },
+    {
+      "row": "PA-03",
+      "review_finding": "unlisted uninitialized staging/control/readback-root gitlink accepted at all three public entries",
+      "red": {
+        "exit": 1,
+        "failures": 3,
+        "log": "evidence/stage-gitlink-red.txt"
+      },
+      "green": {
+        "exit": 0,
+        "tests": 6,
+        "log": "evidence/stage-gitlink-green.txt"
+      }
+    },
+    {
+      "row": "PA-06",
+      "finding": "current stage has22 post-M0 management files absent from main projection; real trusted-main staging native diagnosis blocked on these exact paths",
+      "red": {
+        "exit": 1,
+        "errors": 44,
+        "log": "evidence/current-stage-management-red.txt"
+      },
+      "green": {
+        "exit": 0,
+        "methods": 6,
+        "log": "evidence/current-stage-management-green.txt"
+      },
+      "fix": "22 literal mode/blob/SHA source copies and exact common entries; no code exception or historical rewrite"
+    }
+  ],
+  "existing_boundary_regressions": "PA-01/04/06 reuse unchanged ownership/history contracts; PA-03 also has the independently reproduced review-finding red/green cycle",
+  "P13": "NOT RUN",
+  "activation": false
+}

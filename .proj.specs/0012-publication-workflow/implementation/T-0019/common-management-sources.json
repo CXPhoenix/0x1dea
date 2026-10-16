@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "main_source": "8b31956f47075a831cfd0339339f616af96b3dae",
+  "staging_source": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+  "source_staging_policy_sha256": "82ef49d2cf3ddb050fcbb6d77e5b31253ca777ac9b479597bd3830c8ba991808",
+  "entries": {
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "1928c2ddd642f1282b0d3843e2a0f290cbf9cbcd",
+      "sha256": "454cd58adf41bf513981d5ac4c705ba259546baedefb062a71fc225a2cb9ef01",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "23f384c561efc33b92d7708d72afae6cbd80c2a2",
+      "sha256": "8d3a7b5e84fb9a8c91afa6671474da877412b09bc43967d3290830079909f4e3",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "13a8e28acc7ebd7c3ef77d3df0cf7b3f32612242",
+      "sha256": "98599d532c04c4433856a4d0359b0379b716054cd9ed21cb27e6396527f3b302",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "53826c8050e861d469fb5399e6ed748898ed81f8",
+      "sha256": "08ab8dbed52bab2874e4079f62ce07506f9ff1c0e8ed4e7772c6761b59ba5d16",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "141848614bfe324c9e9866e2e72230e3081b091c",
+      "sha256": "dde99e408d6daa959ed70552e396e6306be7bcfe601d86b2d68e239b50853bb3",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "f8ce56dbda4215d3bcc2bf5e8f038c338b4a06ca",
+      "sha256": "ba119b12002fd6a28ae60b63f510821949fd363acc683249c770619c59a38919",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "88c0fae990ff543a5a310537e1646fa3faf675a6",
+      "sha256": "a4a19ffcd691aec22267cab293a6e165ff42e9abd4cae9e0344c9f25aacb606d",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "2a8732f7a1ab36a6a6059f3dbcbef6888ef562a8",
+      "sha256": "dcca25fc56011cd67446510547501034710728072ba21e78407e4412844302ed",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/coverage.md": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "3ec61046713752d3456c532dd474cfebaf0b36b9",
+      "sha256": "3d734568b3e4ad321a3b9c430aa63ce21c3f7ad233e1b819ae04d106d96a8321",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/execution.json": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "f2ea211cf4291cf7876817f6def7275829627950",
+      "sha256": "8824510c31ef1fe404f19372e8fa9207b809d9fb365f82763310e3f97240bb1f",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/full-python.txt": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "bd25869d7d03aa3b1fcd658eac9eec14222a7974",
+      "sha256": "b7a9f5a818d252bad2d6be5795e271a9f8d9af98c01c254b0d58688b09516b3f",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/lint.txt": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "66e20b361b5c2ebc237cedd4c62870de51e97cba",
+      "sha256": "d5df5b4cdc0c1880d818f3fb97baedb942baf69b66562778300eaaa7a1a6f3a2",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/materializer.txt": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "9166ffcb292c684d03a356954ba44ee2de159bd2",
+      "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/native-checkpoint.json": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "429396fce8ddf9926eeb60b9156c8742af12197e",
+      "sha256": "d6f28944e572a2f2789a4dd4de3f1b62fc2a264fed377bc9c3201bc37e14b9a7",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/pr-27-merged.json": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "ed1fe5c7e662ee939e7af6a2c9005b4a45a0b9de",
+      "sha256": "c440852046eaf3c747a3b0d3ef7bfe6c46d32068df213bf4aafb35f95cb66483",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/source-audit.json": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "9f1a6e423b7a3e7aee0befbcdfc91c092f4bbd4c",
+      "sha256": "c88844f662e30a0186f7e31e0d55d93fd19d86a841df7ce7291a2f5c52671d73",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/structure.txt": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "12dae53450778601244c1077e3c33951d98d9488",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/trusted-validation-build.json": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "48d30e626f82966e90b80cda839dd070c8cd8d3d",
+      "sha256": "158ca1de5397609c4ff48c50ba5ce8d3bc285ae8771638d2df594dfe5ef15372",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/unit.txt": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "ec1110bd94eb78769378e10710ead3979e1958e1",
+      "sha256": "0ee8a9cc7965c9fa548f35295f1da0f23f0576356cbe628382c86eac579bf125",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/validation-records.json": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "9d9c6cf9d5c63058922f678f25b9ed1c8d48ab6c",
+      "sha256": "6e8d052f6b806850ca86c2f9971a660fa454c6272424e8e8c7a57aedf69a4989",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0016-stage-sync.md": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "7cb980f42d6b71842632c06e615d002145438494",
+      "sha256": "179c6cac0e4d4cea386b23bf0da85060039393dc08847db0f369c25671fe8e0d",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0016-stage-sync.md": {
+      "source_commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "mode": "100644",
+      "blob": "db4add52496416afdeac1cd4b6dbaa4f9d4f86cd",
+      "sha256": "0bb29e3b4b61fdf94cc72428bccd944e39adc90d827253e18fc91e3133013cde",
+      "classification": "existing stage-sync management evidence; original target/surface claims retained byte-for-byte"
+    }
+  },
+  "count": 22,
+  "article_paths": 0,
+  "history_rewrites": 0,
+  "authority": "Prepared as the exact reviewed A3/K1 engineering/management successor under existing implementation/reviewable-delivery authority. Not a new owner merge/activation grant or a claim that owner separately approved these22 files."
+}
