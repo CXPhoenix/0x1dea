@@ -1,0 +1,42 @@
+---
+id: T-0021
+title: Report trusted validation on the exact PR head and expire stale readiness
+epic: 0012-publication-workflow
+status: todo
+blocked_by: [T-0019, T-0020]
+---
+
+## Context
+
+Owner approved the reviewed four-slice proposal, dependencies and 23-row local prerequisite allocation with the reply ‘同意’ on 2026-10-16 (Asia/Taipei). This ticket is former draft C. The approved [requirements supplement](../../.proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/requirements.en.md), [traceability](../../.proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/traceability.md), [test plan](../../.proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/test-plan.md) and [registration approval](../../.proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/registration/approval.md) govern this ticket; original frozen epic requirements and P13 remain intact.
+
+A trusted-main dispatch run is not a check on the candidate PR head. The read-only validator cannot publish it. Head-only merge guards do not protect target-base freshness or source-main/policy drift.
+
+## Deliverable
+
+A separate local trusted reporting adapter binds a completed successful run to the exact candidate head and configured check identity; local readiness refuses missing capability or stale head/base/main/policy/workflow. Integrate T-0019's synthetic admission and T-0020's source-bound job inputs with public adapter/Git fixtures. The ticket establishes observable requests/refusals, not live branch protection or permission proof.
+
+## Acceptance criteria
+
+- [ ] Meet C1: exact independently read run/source/head/report binding, successful check readback, all non-success/ambiguous cases refuse.
+- [ ] Meet C2: separate reporter identity/credential without expanding writer/build/merge/admin privileges or exposing credentials.
+- [ ] Meet C3: before/after ref/report readback, unknown-result recovery and distinct head/staging/main/policy/workflow drift invalidation.
+- [ ] Meet C4: independently observed strict/check-source/non-bypass capability is required for live readiness, local fixtures cannot satisfy it; no point-in-time observation is called a merge lock, base CAS or later-main guarantee.
+- [ ] Meet K1–K3 and PC-01–07; approved coverage, standards/spec/security review and separately authorized actual engineering landings before done. Actual enforcement remains P13; no rule/queue/workflow activation or merge here.
+
+## Approved test plan
+
+Allocated rows: PC-01, PC-02, PC-03, PC-04, PC-05, PC-06, PC-07. All are approved plan rows, **NOT WRITTEN / NOT RUN**. Reuse existing behavioral regressions; distinguish public local Git/native/API-adapter and filesystem-observation fixtures from actual GitHub capability evidence. Follow one seam/test/minimal implementation per TDD cycle only after separate implementation authorization. Coverage must enumerate the listed subcases. No original P01–P24 row is renamed or marked passed by this ticket.
+
+## Delivery boundary
+
+Current authorization publishes tracker records only. Status is todo; do not claim work or start implementation until separately authorized. Future implementation uses this permanent ticket id on its own ticket branch. Preserve published-only main, all staging candidates/assets, target-specific historical validators/receipts/oracles/aliases and exact current successors. No active workflow, lab, installation, credential/account/rule/runner/deployment changes, merge or automation activation is granted. Done requires approved coverage/reviews and separately authorized actual engineering landings on main and staging; actual remote P13 remains a separate gate, with T-0016 review.
+
+## 給使用者（zh-TW）
+
+讓可信驗證對應到指定 PR head，來源或目標更新就撤銷舊判定；遠端保護是否真正生效，仍由 P13 驗證。測試分配 7 列，須等 A、B 完成。
+
+
+## Registration record — 2026-10-16
+
+Recorded by project to-tickets after owner approval and a fresh global id scan of local tracker trees and actual origin/main/origin/staging. No implementation, executable tests, lab, remote mutation, commit or push accompanies this registration. See the registration approval and mapping for immutable review identities and exact scope.

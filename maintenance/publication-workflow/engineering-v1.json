@@ -945,7 +945,7 @@
     },
     ".proj.tickets/0012-publication-workflow/T-0016-main-to-staging-sync.md": {
       "mode": "100644",
-      "sha256": "46dd5a28172fd8e0f1f94e7a7f874d02370d195a54b8bd427289b3e33c7b0cca"
+      "sha256": "6d21413236abd138dff9538d6cedae8c99f7096700c7cf2c02efecdcecf33450"
     },
     ".proj.tickets/0012-publication-workflow/T-0017-selected-article-delivery.md": {
       "mode": "100644",
@@ -993,7 +993,7 @@
     },
     "scripts/publication-baseline.py": {
       "mode": "100644",
-      "sha256": "9202999cb7cad478f611489cba9962cbe9dc11992fb50b94c793cbac63a56a18"
+      "sha256": "77ac2a499cea2b5deeeafee541ae7a2be17ec077b76025fcc6e6cb9e6230bb88"
     },
     "scripts/publication_build_v2.py": {
       "mode": "100644",
@@ -1001,7 +1001,7 @@
     },
     "scripts/publication_current.py": {
       "mode": "100644",
-      "sha256": "e0acb54e4946ddc4fe35ad2bbf2bf49d541eb28eed42e6ca46fb78edf6997bd7"
+      "sha256": "14773adf0d4de8bbf66bb10208061ce7fe6494f470ce3caad3e5beb4918d365d"
     },
     "scripts/run-current-python-tests.py": {
       "mode": "100644",
@@ -1013,7 +1013,7 @@
     },
     "scripts/verify-harness-adoption.py": {
       "mode": "100644",
-      "sha256": "7b67c4291569c5d4436c0c3bbf11df78a1daaf4d0550c55b2184f40163aaf5a7"
+      "sha256": "d2a1b05b7e52be0d4160440063ce30333a7d0f32959a04781eda4033832ef34d"
     },
     "tests/article_publication/__init__.py": {
       "mode": "100644",
@@ -3502,6 +3502,378 @@
     "tests/article_publication/test_remote_validation.py": {
       "mode": "100644",
       "sha256": "d28b33c701851c57281f793b445d6d73ddb9578892502ab92b3fafa7d2dc22ad"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md": {
+      "mode": "100644",
+      "sha256": "454cd58adf41bf513981d5ac4c705ba259546baedefb062a71fc225a2cb9ef01"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md": {
+      "mode": "100644",
+      "sha256": "8d3a7b5e84fb9a8c91afa6671474da877412b09bc43967d3290830079909f4e3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt": {
+      "mode": "100644",
+      "sha256": "98599d532c04c4433856a4d0359b0379b716054cd9ed21cb27e6396527f3b302"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt": {
+      "mode": "100644",
+      "sha256": "08ab8dbed52bab2874e4079f62ce07506f9ff1c0e8ed4e7772c6761b59ba5d16"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md": {
+      "mode": "100644",
+      "sha256": "dde99e408d6daa959ed70552e396e6306be7bcfe601d86b2d68e239b50853bb3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json": {
+      "mode": "100644",
+      "sha256": "ba119b12002fd6a28ae60b63f510821949fd363acc683249c770619c59a38919"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt": {
+      "mode": "100644",
+      "sha256": "a4a19ffcd691aec22267cab293a6e165ff42e9abd4cae9e0344c9f25aacb606d"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json": {
+      "mode": "100644",
+      "sha256": "dcca25fc56011cd67446510547501034710728072ba21e78407e4412844302ed"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/coverage.md": {
+      "mode": "100644",
+      "sha256": "3d734568b3e4ad321a3b9c430aa63ce21c3f7ad233e1b819ae04d106d96a8321"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/execution.json": {
+      "mode": "100644",
+      "sha256": "8824510c31ef1fe404f19372e8fa9207b809d9fb365f82763310e3f97240bb1f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/full-python.txt": {
+      "mode": "100644",
+      "sha256": "b7a9f5a818d252bad2d6be5795e271a9f8d9af98c01c254b0d58688b09516b3f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/lint.txt": {
+      "mode": "100644",
+      "sha256": "d5df5b4cdc0c1880d818f3fb97baedb942baf69b66562778300eaaa7a1a6f3a2"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/materializer.txt": {
+      "mode": "100644",
+      "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/native-checkpoint.json": {
+      "mode": "100644",
+      "sha256": "d6f28944e572a2f2789a4dd4de3f1b62fc2a264fed377bc9c3201bc37e14b9a7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/pr-27-merged.json": {
+      "mode": "100644",
+      "sha256": "c440852046eaf3c747a3b0d3ef7bfe6c46d32068df213bf4aafb35f95cb66483"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/source-audit.json": {
+      "mode": "100644",
+      "sha256": "c88844f662e30a0186f7e31e0d55d93fd19d86a841df7ce7291a2f5c52671d73"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/structure.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/trusted-validation-build.json": {
+      "mode": "100644",
+      "sha256": "158ca1de5397609c4ff48c50ba5ce8d3bc285ae8771638d2df594dfe5ef15372"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/unit.txt": {
+      "mode": "100644",
+      "sha256": "0ee8a9cc7965c9fa548f35295f1da0f23f0576356cbe628382c86eac579bf125"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/validation-records.json": {
+      "mode": "100644",
+      "sha256": "6e8d052f6b806850ca86c2f9971a660fa454c6272424e8e8c7a57aedf69a4989"
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0016-stage-sync.md": {
+      "mode": "100644",
+      "sha256": "179c6cac0e4d4cea386b23bf0da85060039393dc08847db0f369c25671fe8e0d"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0016-stage-sync.md": {
+      "mode": "100644",
+      "sha256": "0bb29e3b4b61fdf94cc72428bccd944e39adc90d827253e18fc91e3133013cde"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/README.md": {
+      "mode": "100644",
+      "sha256": "d08f4793386b315e0e7d3e602bd2e4f60d8c149c5277cac3cd071d6608de3cee"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/authorization.md": {
+      "mode": "100644",
+      "sha256": "5565aa86096c53d68242030b3786c86fc07820083aac661420cd57c52642c08a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/actions-workflows.json": {
+      "mode": "100644",
+      "sha256": "51da78a4f28ec83978198558b5be95ebec25c44ab19561c168a975e203f0a785"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/canonical-pr-lifecycle.json": {
+      "mode": "100644",
+      "sha256": "eacdc3ba57aad11ee8432004a5823233eb91fd5351e42a2ce6772914268df944"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/landing-audit.json": {
+      "mode": "100644",
+      "sha256": "7abbf2e87df1898bfc6b258acd16a5b3372d47d7838f37d9a8d420ef293e3e21"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/main-materialize-writing-skills.py.txt": {
+      "mode": "100644",
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/main-rules.json": {
+      "mode": "100644",
+      "sha256": "d9a6543faec9e93d2a0512d1062a8ff38a418b7639edf73d05c61990aaf68d8d"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/main-verify-harness-adoption.py.txt": {
+      "mode": "100644",
+      "sha256": "66b476f41f1780cdf03f6cc6807de1cc3c3a42b235bac8f6dd4d1e7389881034"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/main-verify-project.py.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/manifest.json": {
+      "mode": "100644",
+      "sha256": "12aa97f09ee1180dd95e3b4a22e317e75303846e06810ccf4f30af09777f8e66"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/pr-27.json": {
+      "mode": "100644",
+      "sha256": "c440852046eaf3c747a3b0d3ef7bfe6c46d32068df213bf4aafb35f95cb66483"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/pr-28.json": {
+      "mode": "100644",
+      "sha256": "8f567349a2666c1808eb0e4a4ed25168c82a3d4f5e1574e7aea34f4c314b52ea"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/staging-materialize-writing-skills.py.txt": {
+      "mode": "100644",
+      "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/staging-rules.json": {
+      "mode": "100644",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/staging-verify-harness-adoption.py.txt": {
+      "mode": "100644",
+      "sha256": "d38204a18e041feebccb91a09f8ca20140d7abe75c9ae164feb9bc6554f45703"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/evidence/staging-verify-project.py.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/plan.en.md": {
+      "mode": "100644",
+      "sha256": "2f33b9a4d79755a4b88039084721a073b81021ff17ac2194df968b01879f16fb"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/review.md": {
+      "mode": "100644",
+      "sha256": "15c793d23380f2ee5f8fea07aabd662ee7916849653ca5e515915910388a6f04"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-preparation-20261016/test-matrix.md": {
+      "mode": "100644",
+      "sha256": "fce352b391d497a0d3f01716106cdd82c7d8b13956b990ebdef8809a4d11a060"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/README.md": {
+      "mode": "100644",
+      "sha256": "aa697583a8a8c69861a8499cb5e9ded14d7481e405161f2e889c3496a50ad7b5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/drafts/A-workflow-admission.md": {
+      "mode": "100644",
+      "sha256": "be38daae4a5a67277a7c6a48eb24d90a543552aad99d90cb171b6f8aa444a1f9"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/drafts/B-job-inputs.md": {
+      "mode": "100644",
+      "sha256": "e2b6ba87e3b1778bf56f278d41cc65d3a68d381e2967c6dcc8099eb694b8d25b"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/drafts/C-head-attestation.md": {
+      "mode": "100644",
+      "sha256": "044d530992cf1af642ecb91c4a9d33e015397f39d4644fd4df1b39b79c8518c6"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/drafts/D-manual-history.md": {
+      "mode": "100644",
+      "sha256": "c54323437a0e33294dfae8269d371c635efb1c49b47e6459e5b44570e1a08acd"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/registration/approval.md": {
+      "mode": "100644",
+      "sha256": "2f353a90c79be40c937de02728a66ca69ce1268f8e04778b619031973be142fd"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/registration/tickets.json": {
+      "mode": "100644",
+      "sha256": "ab6fe86db6541709e161a3fb777bc3f95c5eecadb8fb54201276b7d47ebc37b0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/registration/verification.json": {
+      "mode": "100644",
+      "sha256": "c336d6b9f8906de96761cf741a348327c070aabf82e11dde32a82511a14cd5a3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/requirements.en.md": {
+      "mode": "100644",
+      "sha256": "848454e64f2d2a27ab84aa54ac6bc9f054c802dbdb50040c165f64821c965573"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/prompt.md": {
+      "mode": "100644",
+      "sha256": "8159428349fc05f1841e42db54967d3b7cd710ea7d470e80d1c65c3a505586da"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/results.md": {
+      "mode": "100644",
+      "sha256": "b713627bff08e9888fef979399bae646fe136b38329fe7c5e0f5dfa90cc2d93e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/round-1.md": {
+      "mode": "100644",
+      "sha256": "bdd7a86d5e55d2346bc92c1db7764214bda48771d70a8e7c3f9cb73ecfa4ef5a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/round-2.md": {
+      "mode": "100644",
+      "sha256": "fc3dee2ef29dfa7ffccafec9855170e98490e905a8aec0ac08e97ed092e99831"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/review/verification.json": {
+      "mode": "100644",
+      "sha256": "9eaf73a011c8becc3fca1b24a580b6ccd427dcc4e09fb06f2a26589c87509393"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/test-plan.md": {
+      "mode": "100644",
+      "sha256": "a0420bd47e461b1f45b799463b2b71745921ba6cb4ee113ef8e567ffbc444d0e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-P13-prerequisite-ticket-proposal-20261016/traceability.md": {
+      "mode": "100644",
+      "sha256": "9e94134783402d53637cddfa77568276692dd5a370e2deabb466098f5da6ff54"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/README.md": {
+      "mode": "100644",
+      "sha256": "272eebe13ae0953ae3b923d06c2fb2ccda9b30213b107f21e18cd3cdd4331ba5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/authority.md": {
+      "mode": "100644",
+      "sha256": "61558219dec4e37a924a7826277701c8657ddf29de591ccaad567ae933ae17e0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/common-management-sources.json": {
+      "mode": "100644",
+      "sha256": "b4a019047e79e59ac1524f02058d46f0e3a1e0bd16321c9b18f8a9bcc1b8d110"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/common-management-successor.md": {
+      "mode": "100644",
+      "sha256": "24bef607bcfcaf237fcd5f92580d575517e88dfab60c319fd5a608062c113bb4"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/coverage.md": {
+      "mode": "100644",
+      "sha256": "4973077421cc07be35baa1e1d18ac85b6bd349fee016a617a4684921282f74bd"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/delivery-review.md": {
+      "mode": "100644",
+      "sha256": "6b1f8b6e837cc05a1fa9b8b38bb948b23149275734dcfe4b01988c5c232814e7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/actual-stage-integration-before.json": {
+      "mode": "100644",
+      "sha256": "1bc589dea44175a588b5fe24c8a2d2c537507d57908422b2040d1701653e8307"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/build.txt": {
+      "mode": "100644",
+      "sha256": "e140328e9e0884a01527a730aab7e48dca44fe92244794071caf13963285f58f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/current-stage-management-green.txt": {
+      "mode": "100644",
+      "sha256": "d7630e7644593fd72f54ddb33b470affeee0fb9ec5f49a1b418390103193bd2e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/current-stage-management-red.txt": {
+      "mode": "100644",
+      "sha256": "8ee41bcc84304b897ed7d18cfb2b4989214230fc0f6f6d12ce1471f57fff58dc"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/gitlink-green.txt": {
+      "mode": "100644",
+      "sha256": "4528f8f7cad307f9c1638294c42a0c1efba42a95f0ebe2382d3a72216ee292d7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/gitlink-red.txt": {
+      "mode": "100644",
+      "sha256": "9ef61c9ca4cb736bb76ee7b4e41d3482e3d87bb62dad5ddde2775e0fb5322053"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/lint.txt": {
+      "mode": "100644",
+      "sha256": "11dbf56c6802cbff2d1b1a4f4b1f3165328d6276f6632d7f2933c7461707e3eb"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/materializer.json": {
+      "mode": "100644",
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/native.json": {
+      "mode": "100644",
+      "sha256": "f73e43d24be5858693603f605884006113d6191add0d9591a1f1b866e527a5ef"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/physical-green.txt": {
+      "mode": "100644",
+      "sha256": "2f9ed18e22485a7c1861e473507057eba28ac6fcd87a478d081ed8cfd2c8bdae"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/physical-red.txt": {
+      "mode": "100644",
+      "sha256": "7b305a3bd0b3068bc7bbd554f7c6cd728a70585f83979ad8d653fa3c76167e71"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/project.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/python-full.txt": {
+      "mode": "100644",
+      "sha256": "85acbb877d366a39f27f05eae3508608d0511aa10b517c838d6355797effff3c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/stage-gitlink-green.txt": {
+      "mode": "100644",
+      "sha256": "7885051dd1c821fd6178291542e25b8e08514269bb9d6e401487c6d12a6e2b03"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/stage-gitlink-red.txt": {
+      "mode": "100644",
+      "sha256": "c4e9244bd389d19201924f6cd739d2d8d4cadb59bea33d83e97b3292c25356c6"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/synthetic-article-readiness.json": {
+      "mode": "100644",
+      "sha256": "3af1e6fcfcc5a1ff73bdd5c3321f24004d46f75675f859c2c63b4070983b8ec9"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/trusted-local-staging-validation.json": {
+      "mode": "100644",
+      "sha256": "360023bebfd555e90fb585ca3bb84ae2e4f5442eba1a87d6449096c249e4761b"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/evidence/unit.txt": {
+      "mode": "100644",
+      "sha256": "1cc2d0333962b02bbb146cbd113889e445099bc713cdfaff3a94bb85407629c6"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/execution.json": {
+      "mode": "100644",
+      "sha256": "6f6528b555ce700e753886ae11d8bf1fa7211191341c06cbfe3c8edb7124d857"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/first-full-run-summary.json": {
+      "mode": "100644",
+      "sha256": "554de75ac6ea9f6c4b2e2a24777f45111415389ba4a94948bff5fd2284c78170"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/setup-attempts.md": {
+      "mode": "100644",
+      "sha256": "df5b93e00b561648d9d6dfddc1df323dca655ed0e7e7b86c9d97e85378a0059f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0019/tdd-evidence.json": {
+      "mode": "100644",
+      "sha256": "b472dcccabd2a0a654c6666988eaee8f39095e12e97ec69bf253500b6952e314"
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0019.md": {
+      "mode": "100644",
+      "sha256": "aba8f3fd1767e9c7d7c3b5fe440e1b5d57dbee66bb05393d4a4abe4d724045c2"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0019.md": {
+      "mode": "100644",
+      "sha256": "e021775a57a5530c33bd10f716eb8572d986063bcda26bd3ed27465452a9ae38"
+    },
+    ".proj.tickets/0012-publication-workflow/T-0019-finite-workflow-admission.md": {
+      "mode": "100644",
+      "sha256": "da8b0015899782807fe2562ed6bbf3ac92d7ce1b0f6a8abe0160ab45b4b9adfa"
+    },
+    ".proj.tickets/0012-publication-workflow/T-0020-reproducible-sync-job-inputs.md": {
+      "mode": "100644",
+      "sha256": "2c4d680464cb4023ec9972b17dc0ee5199b4ac07f0db6a98b6d7d75289c81948"
+    },
+    ".proj.tickets/0012-publication-workflow/T-0021-trusted-pr-head-attestation.md": {
+      "mode": "100644",
+      "sha256": "02f37c0eee76a7ead2437af8eedb9f7aca19ec3f4570935da6a32d9d814241ef"
+    },
+    ".proj.tickets/0012-publication-workflow/T-0022-manual-pr-history-continuation.md": {
+      "mode": "100644",
+      "sha256": "ad7072650c38aa1297caa4203201d85fcde68b2c7940e5ed6e5a3d44a9b4506a"
+    },
+    "scripts/publication_workflows.py": {
+      "mode": "100644",
+      "sha256": "b9056283b6ea119cb531ae53222992a544998f65e3f1751798a06cbeb600d729"
+    },
+    "tests/article_publication/test_workflow_admission.py": {
+      "mode": "100644",
+      "sha256": "950d4ced11fd86a046a7becb36e1a975fa8fe8396b38e6fb862d81560e77dd3b"
     }
   }
 }

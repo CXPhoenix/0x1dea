@@ -1,0 +1,7 @@
+test_undeclared_github_and_path_mode_type_hash_mutations_refuse (test_workflow_admission.WorkflowAdmissionTests.test_undeclared_github_and_path_mode_type_hash_mutations_refuse)
+PA-03: finite admission cannot grant any other deployment path/type. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 7.626s
+
+OK

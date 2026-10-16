@@ -65,7 +65,7 @@ def regular(root, name):
     return current
 
 
-def policy(control):
+def policy(control, workflow_admission=None):
     data = json.loads(regular(control, POLICY).read_text())
     if set(data) != {'version', 'bases', 'm0_sha256', 'scope', 'common'} or type(data['version']) is not int or data['version'] != 1 or data['bases'] != BASES or data['m0_sha256'] != M0_SHA:
         raise ValueError('unapproved M0 successor pins')
@@ -87,10 +87,20 @@ def policy(control):
         path = regular(control, name)
         if path.stat().st_mode & 0o111 or digest(path.read_bytes()) != sha256:
             raise ValueError('changed exact closeout identity: ' + name)
+    admitted = workflow_admission.allowed(control) if workflow_admission else {}
+    if not workflow_admission:
+        from publication_workflows import github_git_paths
+        if github_git_paths(control, 'HEAD'):
+            raise ValueError('protected Git deployment sources require finite workflow admission')
+    github_sources = {name for name in source_names(control)
+                      if name == '.github' or name.startswith('.github/')}
+    if github_sources != set(admitted):
+        raise ValueError('protected deployment sources outside finite workflow admission: '
+                         + ', '.join(sorted(github_sources ^ set(admitted))))
     writing = ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post')
     for name, expected in data['common'].items():
         regular(control, name)
-        if name in owned or name in protected_history or name.startswith(('blog/', '.github/')) or any(name.startswith(prefix + package + '/') for prefix in ('skills/', '.agents/skills/', '.claude/skills/') for package in writing):
+        if name in owned or name in protected_history or name.startswith('blog/') or (name.startswith('.github/') and name not in admitted) or any(name.startswith(prefix + package + '/') for prefix in ('skills/', '.agents/skills/', '.claude/skills/') for package in writing):
             raise ValueError('protected content/history in common successor: ' + name)
         if set(expected) != {'mode', 'sha256'} or expected['mode'] not in {'100644', '100755'} or not isinstance(expected['sha256'], str) or len(expected['sha256']) != 64 or any(c not in '0123456789abcdef' for c in expected['sha256']):
             raise ValueError('invalid exact common identity: ' + name)
@@ -102,9 +112,9 @@ def policy(control):
     return data, inventory
 
 
-def prepare(control, output):
+def prepare(control, output, *, workflow_admission=None):
     check_history(control)
-    data, inventory = policy(control)
+    data, inventory = policy(control, workflow_admission)
     output = output.absolute()
     if output.exists() or output.is_symlink() or output.resolve().is_relative_to(control.resolve()):
         raise ValueError('output must be new and outside the control checkout')
@@ -114,7 +124,7 @@ def prepare(control, output):
     output = output.resolve()
     owned = {p for c in inventory['candidates'] for p in c['paths']}
     for name, expected in data['common'].items():
-        if name in owned or name.startswith(('blog/', '.github/')):
+        if name in owned or name.startswith('blog/') or (name.startswith('.github/') and not workflow_admission):
             raise ValueError('candidate/deployment path in engineering projection: ' + name)
         path = regular(control, name)
         mode = '100755' if path.stat().st_mode & 0o100 else '100644'
@@ -128,7 +138,12 @@ def prepare(control, output):
                            check=True, capture_output=True, env=git_environment(local_clone=True))
             git(target, 'checkout', '--detach', base)
             for target_role_name, target_pin in BASES.items():
+                if workflow_admission:
+                    target_pin = (workflow_admission.main if target_role_name == 'main' else
+                                  git(control, 'rev-parse', 'refs/heads/staging').decode().strip())
                 git(target, 'update-ref', 'refs/heads/' + target_role_name, target_pin)
+            if workflow_admission:
+                git(target, 'update-ref', 'refs/publication/workflow-main', workflow_admission.main)
             for name in data['common']:
                 target_path = target / name
                 target_path.parent.mkdir(parents=True, exist_ok=True)
@@ -215,20 +230,23 @@ def current_identity(root, name, expected):
     return {'mode': mode, 'sha256': digest(raw)}
 
 
-def verify(control, root):
-    return _verify_current(control, root, target_role(control))
+def verify(control, root, *, workflow_admission=None):
+    return _verify_current(control, root, target_role(control), workflow_admission)
 
 
-def verify_staging_sync(control, root):
+def verify_staging_sync(control, root, *, workflow_admission=None):
     """Trusted main sync operation fixes the staging role; candidate data cannot select it."""
-    return _verify_current(control, root, 'staging')
+    return _verify_current(control, root, 'staging', workflow_admission)
 
 
-def _verify_current(control, root, role):
+def _verify_current(control, root, role, workflow_admission=None):
     from main_publication_verification import tree, identity
     check_history(control)
     check_history(root)
-    data, inventory = policy(control)
+    data, inventory = policy(control, workflow_admission)
+    from publication_workflows import check_git_sources
+    check_git_sources(root, {name:entry for name,entry in data['common'].items()
+                             if name.startswith('.github/')})
     git(root, 'merge-base', '--is-ancestor', BASES[role], 'HEAD')
     expected = {p: identity(e) for p, e in tree(control, BASES[role]).items()}
     expected.update(data['common'])

@@ -1,0 +1,55 @@
+{
+  "request_date": "2026-10-16",
+  "scope": "Local proposal documentation and exact management successor only; no implementation or live GitHub exercise",
+  "proposal_version": "proposal-v2",
+  "review_packet_files_sha256": "4d6679da51298d028c983c14b74fb23860bb4b0d4f54fa71692365b1ca6ad6b6",
+  "frozen_prompt_sha256": "8159428349fc05f1841e42db54967d3b7cd710ea7d470e80d1c65c3a505586da",
+  "review_unresolved": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 0
+  },
+  "checks": [
+    {
+      "name": "adoption",
+      "command": "python3 scripts/verify-harness-adoption.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"pass\",\n  \"tracker\": {\n    \"tickets\": {\n      \"T-0001\": {\n        \"id\": \"T-0001\",\n        \"title\": \"Adopt Harness and relocate the existing website root\",\n        \"epic\": \"0001-harness-adoption\",\n        \"status\": \"done\",\n        \"landing_evidence\": \".proj.specs/0001-harness-adoption/landing.json\",\n        \"blocked_by\": []\n      },\n      \"T-0002\": {\n        \"id\": \"T-0002\",\n        \"title\": \"Prepare local article preview and selected candidates\",\n        \"epic\": \"0002-article-publication\",\n        \"status\": \"done\",\n        \"blocked_by\": [],\n        \"landing_evidence\": \".proj.specs/0010-main-verification-repair/ticket-closeout/current-main/T-0002-landing.json\"\n      },\n      \"T-0003\": {\n        \"id\": \"T-0003\",\n        \"title\": \"Native Markdown summaries with three appearances\",\n        \"epic\": \"0003-article-summary\",\n        \"status\": \"review\",\n        \"blocked_by\": [\n          \"T-0005\"\n        ]\n      },\n      \"T-0004\": {\n        \"id\": \"T-0004\",\n        \"title\": \"Shared preview notice on homepage and article\",\n        \"epic\": \"0004-shared-preview-notice\",\n        \"status\": \"review\",\n        \"blocked_by\": [\n          \"T-0005\"\n        ]\n      },\n      \"T-0005\": {\n        \"id\": \"T-0005\",\n        \"title\": \"Reconcile immutable history with exact approved product successors\",\n        \"epic\": \"0005-harness-reconciliation\",\n        \"status\": \"done\",\n        \"blocked_by\": [],\n        \"landing_evidence\": \".proj.specs/0005-harness-reconciliation/landing.json\"\n      },\n      \"T-0008\": {\n        \"id\": \"T-0008\",\n        \"title\": \"Automatic article figure and table captions with stable references\",\n        \"epic\": \"0008-article-captions\",\n        \"status\": \"review\",\n        \"blocked_by\": []\n      },\n      \"T-0010\": {\n        \"id\": \"T-0010\",\n        \"title\": \"Restore main verification after the selected electricity release\",\n        \"epic\": \"0010-main-verification-repair\",\n        \"status\": \"done\",\n        \"landing_evidence\": \".proj.specs/0010-main-verification-repair/landing.json\",\n        \"blocked_by\": []\n      },\n      \"T-0012\": {\n        \"id\": \"T-0012\",\n        \"title\": \"Integrate evidence-backed ticket closeout with the exact main guard\",\n        \"epic\": \"0010-main-verification-repair\",\n        \"status\": \"done\",\n        \"landing_evidence\": \".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0012-landing.json\",\n        \"blocked_by\": []\n      },\n      \"T-0011\": {\n        \"id\": \"T-0011\",\n        \"title\": \"Synchronize merged main into staging without changing candidates\",\n        \"epic\": \"0011-main-to-staging-sync\",\n        \"status\": \"done\",\n        \"blocked_by\": [],\n        \"landing_evidence\": \".proj.specs/0011-main-to-staging-sync/landing.json\"\n      },\n      \"T-0013\": {\n        \"id\": \"T-0013\",\n        \"title\": \"Establish the common engineering baseline and M0 inventory\",\n        \"epic\": \"0012-publication-workflow\",\n        \"status\": \"done\",\n        \"landing_evidence\": \".proj.specs/0012-publication-workflow/implementation/T-0013-landing/landing.json\",\n        \"blocked_by\": []\n      },\n      \"T-0014\": {\n        \"id\": \"T-0014\",\n        \"title\": \"Prepare and verify one article through the explicit v2 contract\",\n        \"epic\": \"0012-publication-workflow\",\n        \"status\": \"done\",\n        \"landing_evidence\": \".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0014-landing.json\",\n        \"blocked_by\": [\n          \"T-0013\"\n        ]\n      },\n      \"T-0015\": {\n        \"id\": \"T-0015\",\n        \"title\": \"Prepare a verified main-to-staging synchronization locally\",\n        \"epic\": \"0012-publication-workflow\",\n        \"status\": \"done\",\n        \"landing_evidence\": \".proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0015-landing.json\",\n        \"blocked_by\": [\n          \"T-0013\"\n        ]\n      },\n      \"T-0016\": {\n        \"id\": \"T-0016\",\n        \"title\": \"Turn main changes into one trusted staging synchronization PR\",\n        \"epic\": \"0012-publication-workflow\",\n        \"status\": \"review\",\n        \"blocked_by\": [\n          \"T-0015\"\n        ]\n      },\n      \"T-0017\": {\n        \"id\": \"T-0017\",\n        \"title\": \"Deliver only the approved article and record publication/recovery states\",\n        \"epic\": \"0012-publication-workflow\",\n        \"status\": \"todo\",\n        \"blocked_by\": [\n          \"T-0014\",\n          \"T-0016\"\n        ]\n      },\n      \"T-0018\": {\n        \"id\": \"T-0018\",\n        \"title\": \"Install and demonstrate the project workflow skill in both runtimes\",\n        \"epic\": \"0012-publication-workflow\",\n        \"status\": \"todo\",\n        \"blocked_by\": [\n          \"T-0017\"\n        ]\n      }\n    },\n    \"next_id\": \"T-0019\",\n    \"frontier\": [],\n    \"blocked\": {\n      \"T-0017\": [\n        \"T-0016\"\n      ],\n      \"T-0018\": [\n        \"T-0017\"\n      ]\n    },\n    \"paused\": []\n  },\n  \"target_role\": \"main\",\n  \"target_base\": \"eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a\",\n  \"candidate_head\": \"8b31956f47075a831cfd0339339f616af96b3dae\",\n  \"source_paths\": 2733,\n  \"publishable\": false,\n  \"candidate_paths_preserved\": 0\n}\n"
+    },
+    {
+      "name": "structure",
+      "command": "python3 scripts/verify-project.py",
+      "exit_code": 0,
+      "stdout": "PASS: shared instructions, 36 skills across Claude/Codex trees, invocation policies, helper assets and native role configs\nStatic/offline checks only; confirm discovery in fresh Claude Code and Codex sessions.\n"
+    },
+    {
+      "name": "materializer",
+      "command": "python3 scripts/materialize-writing-skills.py --check",
+      "exit_code": 0,
+      "stdout": "{\"generated_files\": 176, \"mode\": \"check\", \"source_files\": 55, \"source_policy_sha256\": \"7879465c123f916589ca4350b129e62f45b3350a66cfccba308ea546bfe7b864\", \"status\": \"pass\"}\n"
+    }
+  ],
+  "check_source_paths_before_this_receipt": 2733,
+  "expected_common_records_after_this_receipt": 906,
+  "final_exact_recheck": {
+    "command": "python3 scripts/verify-harness-adoption.py",
+    "output": "/private/tmp/T16-P13-prerequisite-final-native.json",
+    "note": "Separate final output is written after this receipt and its finite map entry; it avoids a recursive self-hash."
+  },
+  "proposed_tests": {
+    "A": 6,
+    "B": 6,
+    "C": 7,
+    "D": 4,
+    "total": 23,
+    "status": "NOT WRITTEN / NOT RUN"
+  },
+  "P13": "NOT RUN",
+  "T0016": "review",
+  "tracker_changes": false,
+  "lab_created": false,
+  "automation_activated": false,
+  "deployment_changes": false,
+  "commits_or_pushes": false,
+  "owner_confirmation": "pending"
+}
