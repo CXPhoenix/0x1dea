@@ -1,0 +1,32 @@
+{
+  "status": "failed",
+  "command": "python3 scripts/run-current-python-tests.py",
+  "harness_live": {
+    "tests": 66,
+    "failures": 0,
+    "errors": 0
+  },
+  "publication_live": {
+    "tests": 122,
+    "failures": 2,
+    "errors": 0
+  },
+  "historical_PR22": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0
+  },
+  "failures": [
+    {
+      "test": "test_real_trusted_main_validation_and_isolated_staging_build",
+      "cause": "PUBLICATION_TEST_DEPENDENCIES absent; explicit installed dependencies required"
+    },
+    {
+      "test": "test_isolated_real_build_and_separate_evidence_required_for_readiness",
+      "cause": "copied module entry resolves outside declared dependency directory; reviewed containment guard refused"
+    }
+  ],
+  "correction": "Use existing canonical /Users/phoenix/dev/online-notes/0x1DEA/node_modules as explicit dependency root; do not install, skip or weaken isolation",
+  "code_failure_not_inferred_from_runtime_config_errors": true,
+  "rerun": "pending after PA-03 correction"
+}

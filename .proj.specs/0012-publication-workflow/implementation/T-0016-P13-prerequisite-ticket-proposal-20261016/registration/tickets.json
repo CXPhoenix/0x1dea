@@ -1,0 +1,146 @@
+{
+  "approval_date": "2026-10-16",
+  "owner_response": "同意",
+  "authority": "Register the reviewed four tickets, approved dependency edges and 23-row local test allocation only; no implementation authority",
+  "review_version": "proposal-v2",
+  "review_files_sha256": "4d6679da51298d028c983c14b74fb23860bb4b0d4f54fa71692365b1ca6ad6b6",
+  "frozen_prompt_sha256": "8159428349fc05f1841e42db54967d3b7cd710ea7d470e80d1c65c3a505586da",
+  "source_refs": {
+    "origin/main": {
+      "commit": "8b31956f47075a831cfd0339339f616af96b3dae",
+      "highest": 18
+    },
+    "origin/staging": {
+      "commit": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+      "highest": 18
+    }
+  },
+  "global_max_before": 18,
+  "tickets": [
+    {
+      "draft": "A",
+      "id": "T-0019",
+      "slug": "finite-workflow-admission",
+      "source": "A-workflow-admission.md",
+      "title": "Admit only approved workflow identities through the engineering successor",
+      "blocked_by": [],
+      "rows": [
+        "PA-01",
+        "PA-02",
+        "PA-03",
+        "PA-04",
+        "PA-05",
+        "PA-06"
+      ],
+      "criteria": [
+        "A1",
+        "A2",
+        "A3",
+        "K1",
+        "K2",
+        "K3"
+      ],
+      "ticket_path": ".proj.tickets/0012-publication-workflow/T-0019-finite-workflow-admission.md",
+      "status": "todo"
+    },
+    {
+      "draft": "B",
+      "id": "T-0020",
+      "slug": "reproducible-sync-job-inputs",
+      "source": "B-job-inputs.md",
+      "title": "Prepare reproducible isolated writer and validator job inputs",
+      "blocked_by": [],
+      "rows": [
+        "PB-01",
+        "PB-02",
+        "PB-03",
+        "PB-04",
+        "PB-05",
+        "PB-06"
+      ],
+      "criteria": [
+        "B1",
+        "B2",
+        "B3",
+        "K1",
+        "K2",
+        "K3"
+      ],
+      "ticket_path": ".proj.tickets/0012-publication-workflow/T-0020-reproducible-sync-job-inputs.md",
+      "status": "todo"
+    },
+    {
+      "draft": "C",
+      "id": "T-0021",
+      "slug": "trusted-pr-head-attestation",
+      "source": "C-head-attestation.md",
+      "title": "Report trusted validation on the exact PR head and expire stale readiness",
+      "blocked_by": [
+        "T-0019",
+        "T-0020"
+      ],
+      "rows": [
+        "PC-01",
+        "PC-02",
+        "PC-03",
+        "PC-04",
+        "PC-05",
+        "PC-06",
+        "PC-07"
+      ],
+      "criteria": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "K1",
+        "K2",
+        "K3"
+      ],
+      "ticket_path": ".proj.tickets/0012-publication-workflow/T-0021-trusted-pr-head-attestation.md",
+      "status": "todo"
+    },
+    {
+      "draft": "D",
+      "id": "T-0022",
+      "slug": "manual-pr-history-continuation",
+      "source": "D-manual-history.md",
+      "title": "Continue after one explicitly approved manual PR delivery without claiming ownership",
+      "blocked_by": [],
+      "rows": [
+        "PD-01",
+        "PD-02",
+        "PD-03",
+        "PD-04"
+      ],
+      "criteria": [
+        "D1",
+        "D2",
+        "D3",
+        "K1",
+        "K2",
+        "K3"
+      ],
+      "ticket_path": ".proj.tickets/0012-publication-workflow/T-0022-manual-pr-history-continuation.md",
+      "status": "todo"
+    }
+  ],
+  "T0016": {
+    "status": "review",
+    "blocked_by_before": [
+      "T-0015"
+    ],
+    "blocked_by_after": [
+      "T-0015",
+      "T-0021",
+      "T-0022"
+    ]
+  },
+  "T0017_T0018": "unchanged",
+  "local_plan_rows": 23,
+  "plan_execution": "NOT WRITTEN / NOT RUN",
+  "P13": "NOT RUN",
+  "implementation_authorized": false,
+  "remote_mutations": false,
+  "commit_push": false
+}

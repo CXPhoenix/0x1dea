@@ -42,12 +42,16 @@ def main():
     parser.add_argument('--activation-sha256')
     parser.add_argument('--state-dir', type=Path)
     parser.add_argument('--allow-remote-write', action='store_true')
+    parser.add_argument('--manual-history', type=Path)
+    parser.add_argument('--manual-history-sha256')
     parser.add_argument('--operation-record', type=Path)
     parser.add_argument('--head')
     parser.add_argument('--dispatch-inputs-env')
     parser.add_argument('--runtime', type=Path)
     parser.add_argument('--runtime-sha256')
     parser.add_argument('--build-output', type=Path)
+    parser.add_argument('--job-snapshot-root', type=Path)
+    parser.add_argument('--job-binding-sha256')
     args = parser.parse_args()
     # Consume the explicit writer credential before any trusted Git preparation.
     # Only the JSON transport receives the retained value; no subprocess inherits it.
@@ -64,6 +68,17 @@ def main():
     try:
         if args.operation == 'run' and not args.allow_remote_write:
             raise ValueError('remote authority and activation prerequisites missing')
+        job = None
+        if args.job_snapshot_root is not None or args.job_binding_sha256 is not None:
+            if args.job_snapshot_root is None or args.job_binding_sha256 is None:
+                raise ValueError('sealed job root and independent binding digest required')
+            from publication_jobs import verify_job
+            job = verify_job(args.job_snapshot_root, args.job_binding_sha256,
+                repository=args.repository, role='writer' if args.operation == 'run' else 'validator',
+                include_inputs=True)
+            if args.operation == 'run' and (args.state_dir is None
+                    or str(args.state_dir) != job['state_directory']):
+                raise ValueError('writer durable state must match verified job binding')
         from publication_remote_git import LocalPreparation, validate_operation, operation_for
         import publication_current as current
         policy = hashlib.sha256(current.regular(CONTROL, current.POLICY).read_bytes()).hexdigest()
@@ -78,16 +93,24 @@ def main():
             args.policy_sha256, args.head = inputs['policy'], inputs['head']
         if policy != args.policy_sha256:
             raise ValueError('trusted main policy digest required')
-        registry = checked_json(args.registry, args.registry_sha256)
+        registry = job['checked_inputs']['registry'] if job else checked_json(args.registry, args.registry_sha256)
         if args.operation == 'validate':
             if (dispatch_record is None and args.operation_record is None) or args.head is None or args.build_output is None:
                 raise ValueError('exact operation, head and new build output required')
             record = dispatch_record if dispatch_record is not None else json.loads(args.operation_record.read_bytes())
-            runtime = checked_json(args.runtime, args.runtime_sha256)
+            runtime = job['checked_inputs']['runtime'] if job else checked_json(args.runtime, args.runtime_sha256)
+            if job:
+                args.runtime_sha256 = job['runtime_sha256']
             result = validate_operation(record, args.head, registry, runtime, args.runtime_sha256, args.build_output)
         else:
             from publication_remote import GhTransport, GitHubAdapter, run_sync
             activation = checked_json(args.activation, args.activation_sha256, external=True)
+            manual_history = None
+            if args.manual_history is not None or args.manual_history_sha256 is not None:
+                if args.manual_history is None or args.manual_history_sha256 is None:
+                    raise ValueError('manual history requires both independent inputs')
+                from publication_manual import ManualHistory
+                manual_history = ManualHistory(args.manual_history, args.manual_history_sha256, args.repository, source=registry['repository'])
             # Verification code and approved policy must be the actual main checkout.
             head = current.git(CONTROL, 'rev-parse', 'HEAD').decode().strip()
             frozen = current.git(CONTROL, 'show', head+':'+current.POLICY)
@@ -101,7 +124,7 @@ def main():
                 transport = GhTransport(writer_token, state_dir=args.state_dir)
                 api = GitHubAdapter(args.repository, transport)
                 result = run_sync(api, prepare, repository=args.repository, policy=policy,
-                    state_dir=args.state_dir, activation=activation, authorized=True)
+                    state_dir=args.state_dir, activation=activation, authorized=True, manual_history=manual_history)
         print(json.dumps(result, indent=2))
         return 0 if result['status'] in ('pass', 'ready', 'no-op') else 2
     except (ValueError, OSError, KeyError, TypeError) as error:

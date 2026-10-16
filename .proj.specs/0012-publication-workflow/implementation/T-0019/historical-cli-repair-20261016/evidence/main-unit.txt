@@ -1,0 +1,19 @@
+
+> 0x1dea@1.4.0 test:unit /private/tmp/0x1dea-T0019-history-fix
+> vitest run
+
+
+ RUN  v4.0.18 /private/tmp/0x1dea-T0019-history-fix
+
+ ✓ tests/vpHelper.vitest.ts (9 tests) 8ms
+ ✓ tests/encoreTicket.vitest.ts (2 tests) 17ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 39ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 60ms
+ ✓ tests/articleCaptions.vitest.ts (26 tests) 142ms
+ ✓ tests/articleSummary.vitest.ts (12 tests) 159ms
+
+ Test Files  6 passed (6)
+      Tests  54 passed (54)
+   Start at  14:09:42
+   Duration  1.45s (transform 467ms, setup 0ms, import 1.79s, tests 425ms, environment 3.16s)
+

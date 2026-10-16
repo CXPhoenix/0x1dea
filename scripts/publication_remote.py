@@ -64,7 +64,7 @@ def writer_lock(state_dir, repository):
         os.close(fd)
 
 
-def run_sync(api, prepare, *, repository, policy, state_dir, activation, authorized=False):
+def run_sync(api, prepare, *, repository, policy, state_dir, activation, authorized=False, manual_history=None):
     if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository) or not re.fullmatch('[0-9a-f]{64}', policy):
         raise ValueError('invalid trusted repository/policy identity')
     with writer_lock(state_dir, repository):
@@ -76,7 +76,7 @@ def run_sync(api, prepare, *, repository, policy, state_dir, activation, authori
             _write_record(record, value)
         for retry in range(4):
             try:
-                result = _run_once(api, prepare, repository, policy, activation, authorized, journal)
+                result = _run_once(api, prepare, repository, policy, activation, authorized, journal, manual_history)
             except (RemoteError, KeyError, TypeError, ValueError):
                 result = {'status':'blocked', 'reason':'remote outcome/permission/response not established; readback required', 'publishable':False}
             result['retries'] = retry
@@ -101,7 +101,7 @@ def _write_record(path, value):
             os.unlink(temporary)
 
 
-def _owned_pulls(api, repository, activation, main):
+def _owned_pulls(api, repository, activation, main, manual_history=None, refs=None):
     prs = [p for p in api.pulls() if p['branch'] == BRANCH]
     bootstrap = [p for p in prs if type(activation.get('bootstrap_pr')) is int
                  and p['number'] == activation['bootstrap_pr'] and p['state'] == 'closed'
@@ -111,7 +111,10 @@ def _owned_pulls(api, repository, activation, main):
     # Excluding the record is not enough: its observed identity is also required
     # before an initial implementation commit may bootstrap branch ownership.
     proven = len(bootstrap) == 1
-    return [p for p in prs if not proven or p != bootstrap[0]], proven
+    history = [manual_history.observe(api, refs, prs)] if manual_history else []
+    filtered = [p for p in prs if (not proven or p != bootstrap[0])
+                and not any(p['number'] == item['number'] for item in history)]
+    return filtered, proven, history
 
 
 def _pull_snapshot(prs):
@@ -125,7 +128,7 @@ def _matches_pull(p, repository, operation, head):
             and p.get('repository') == repository and p.get('branch') == BRANCH)
 
 
-def _run_once(api, prepare, repository, policy, activation, authorized, journal):
+def _run_once(api, prepare, repository, policy, activation, authorized, journal, manual_history=None):
     required = ('permissions_verified', 'latest_base_verified', 'dispatch_verified',
                 'candidate_isolation_verified')
     if (not authorized or activation.get('repository') != repository
@@ -138,7 +141,7 @@ def _run_once(api, prepare, repository, policy, activation, authorized, journal)
     if prepared['status'] != 'ready':
         return dict(prepared, version=1, publishable=False)
     operation = operation_for(repository, policy, refs, prepared['tree'])
-    prs, bootstrap_pr_proven = _owned_pulls(api, repository, activation, refs['main'])
+    prs, bootstrap_pr_proven, history = _owned_pulls(api, repository, activation, refs['main'], manual_history, refs)
     if (any(p['repository'] != repository or p['base'] != 'staging' or p['owner'] != OWNER for p in prs)
             or sum(p['state'] == 'open' for p in prs) > 1
             or any(p['state'] != 'open' and p['operation'] == operation['id'] for p in prs)):
@@ -154,7 +157,7 @@ def _run_once(api, prepare, repository, policy, activation, authorized, journal)
         if api.commit(refs['branch'])['tree'] != prepared['tree']:
             return {'status': 'blocked', 'reason': 'owned result tree mismatch', 'publishable': False}
         head = refs['branch']
-    journal({'status':'prepared', 'operation':operation, 'head':head, 'publishable':False})
+    journal({'status':'prepared', 'operation':operation, 'head':head, 'manual_history':history, 'publishable':False})
     workflow = api.workflow(refs['main'])
     if (workflow != {'sha256': activation.get('workflow_sha256'), 'main': refs['main']}
             or not re.fullmatch('[0-9a-f]{64}', str(activation.get('workflow_sha256', '')))
@@ -192,7 +195,8 @@ def _run_once(api, prepare, repository, policy, activation, authorized, journal)
     run = exact_runs[0]
     if api.refs() != expected:
         return {'status': 'stale', 'reason': 'pins drifted during validation', 'publishable': False}
-    if _pull_snapshot(_owned_pulls(api, repository, activation, refs['main'])[0]) != _pull_snapshot(prs):
+    latest_prs, _, latest_history = _owned_pulls(api, repository, activation, refs['main'], manual_history, refs)
+    if _pull_snapshot(latest_prs) != _pull_snapshot(prs) or latest_history != history:
         return {'status':'stale', 'reason':'PR identity changed during validation', 'publishable':False}
     prs = [p for p in prs if p['state'] == 'open']
     if not prs:
@@ -203,8 +207,10 @@ def _run_once(api, prepare, repository, policy, activation, authorized, journal)
                       lambda observed: sum(_matches_pull(p, repository, operation, head) and p.get('number') == prs[0]['number'] for p in observed) == 1)
     if api.refs() != expected:
         return {'status':'stale', 'reason':'pins drifted after PR mutation', 'publishable':False}
+    if manual_history and _owned_pulls(api, repository, activation, refs['main'], manual_history, expected)[2] != history:
+        return {'status':'stale', 'reason':'manual history changed after PR mutation', 'publishable':False}
     return {'version': 1, 'status': 'ready', 'operation': operation,
-            'head': head, 'run_id': run['id'], 'publishable': False}
+            'head': head, 'run_id': run['id'], 'manual_history':history, 'publishable': False}
 
 
 class GitHubAdapter:
@@ -272,20 +278,30 @@ class GitHubAdapter:
                         and operation.get('branch') == BRANCH and operation.get('target') == 'staging' else None,
                 'operation':operation.get('id')}
 
-    def pulls(self):
-        from urllib.parse import urlencode
-        rows = self.pages('pulls?'+urlencode({'state':'all', 'head':self.repository.split('/')[0]+':'+BRANCH}))
-        result = []
-        for p in rows:
-            try:
-                operation = json.loads((p.get('body') or '').split('\n\n0x1DEA-operation: ', 1)[1])
-            except (ValueError, IndexError):
-                operation = {}
-            result.append({'number':p['number'], 'state':p['state'], 'base':p['base']['ref'],
+    def pull_identity(self, p):
+        try:
+            operation = json.loads((p.get('body') or '').split('\n\n0x1DEA-operation: ', 1)[1])
+        except (ValueError, IndexError):
+            operation = {}
+        if not isinstance(operation, dict):
+            operation = {}
+        return {'number':p['number'], 'state':p['state'], 'base':p['base']['ref'],
                 'head':p['head']['sha'], 'branch':p['head']['ref'],
                 'repository':(p['head'].get('repo') or {}).get('full_name'),
                 'owner':operation.get('owner'), 'operation':operation.get('id'),
-                'merged':p.get('merged_at') is not None})
+                'merged':p.get('merged_at') is not None, 'base_sha':p['base'].get('sha'),
+                'merge':p.get('merge_commit_sha'), 'tree':None,
+                'actor':{key:(p.get('user') or {}).get(key) for key in ('id','login','type')}}
+
+    def pulls(self):
+        from urllib.parse import urlencode
+        rows = self.pages('pulls?'+urlencode({'state':'all', 'head':self.repository.split('/')[0]+':'+BRANCH}))
+        return [self.pull_identity(p) for p in rows]
+
+    def pull_details(self, number):
+        result = self.pull_identity(self.request('GET', self.prefix+'pulls/'+str(number)))
+        if result['merged'] and result['merge']:
+            result['tree'] = self.commit(result['merge'])['tree']
         return result
 
     def workflow(self, main):

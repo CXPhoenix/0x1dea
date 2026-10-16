@@ -1,0 +1,52 @@
+{
+  "main": "8b31956f47075a831cfd0339339f616af96b3dae",
+  "staging": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+  "main27_tree_equals_reviewed_head": true,
+  "stage28_tree_equals_reviewed_head": true,
+  "main_is_stage_ancestor": true,
+  "main_common_paths": 874,
+  "staging_common_paths": 896,
+  "shared_common_identities_equal": 874,
+  "stage_only_common_management_paths": [
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/README.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/README.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/outer-sandbox-build-blocked.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/attempts/python-interrupted.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/authority-and-plan.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/build.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/conflict-decisions.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/coverage.md",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/execution.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/full-python.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/lint.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/materializer.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/native-checkpoint.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/pr-27-merged.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/source-audit.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/structure.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/trusted-validation-build.json",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/unit.txt",
+    ".proj.specs/0012-publication-workflow/implementation/T-0016-stage-sync-20261016/validation-records.json",
+    ".proj.specs/0012-publication-workflow/review/code-T-0016-stage-sync.md",
+    ".proj.specs/0012-publication-workflow/review/security-T-0016-stage-sync.md"
+  ],
+  "main_blog_paths": 73,
+  "staging_blog_paths_unchanged": 111,
+  "candidate_paths_unchanged": 50,
+  "historical_paths_unchanged_per_own_target": {
+    "main": 372,
+    "staging": 376
+  },
+  "preexisting_target_specific_history_differences_preserved": [
+    "maintenance/harness-adoption/generated-writing-manifest.json",
+    "maintenance/harness-adoption/runtime-source-policy.json",
+    "maintenance/harness-reconciliation/article-electricity-revision.json",
+    "maintenance/harness-reconciliation/components.json",
+    "maintenance/harness-reconciliation/staging.json",
+    "maintenance/harness-reconciliation/test-contract-repair.json"
+  ],
+  "T0016_status_both": "review",
+  "P13": "unverified",
+  "scope": "Actual immutable remote commit/tree audit. Historical paths compared against each target own prior baseline, not unified: four existing stage-only receipts plus two existing distinct manifests. No CI/dispatch/deployment claim."
+}
