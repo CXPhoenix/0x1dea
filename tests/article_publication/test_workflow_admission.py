@@ -276,6 +276,58 @@ class WorkflowAdmissionTests(unittest.TestCase):
         self.assertFalse((self.directory/'candidate-grant').exists())
         self.assertFalse((self.directory/'digest-swap').exists())
 
+    def test_historical_cli_fixture_needs_no_current_workflow_helper(self):
+        """PA-06: the original three-file historical CLI overlay still runs alone."""
+        fixture = self.directory/'historical-cli'
+        subprocess.run(['git', 'clone', '--shared', '--no-checkout', '--template=',
+                        str(SOURCE), str(fixture)], check=True, capture_output=True)
+        subprocess.run(['git', '-C', str(fixture), 'checkout', '--detach',
+                        '69ff85f5fe1baddb54102070a436dff9ac1c5b73'],
+                       check=True, capture_output=True)
+        for name in ('scripts/verify-harness-adoption.py', 'scripts/harness_reconciliation.py',
+                     'maintenance/harness-reconciliation/staging.json'):
+            source = SOURCE/name
+            if source.exists():
+                target = fixture/name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source, target)
+        self.assertFalse((fixture/'scripts/publication_workflows.py').exists())
+        command = [sys.executable, str(fixture/'scripts/verify-harness-adoption.py')]
+        checked = subprocess.run(command, cwd=fixture, capture_output=True, text=True)
+        self.assertEqual(checked.returncode, 0, checked.stdout+checked.stderr)
+        self.assertEqual(json.loads(checked.stdout)['status'], 'pass')
+        unknown = subprocess.run(command+['--workflow-admission', str(self.admission)],
+                                 cwd=fixture, capture_output=True, text=True)
+        self.assertNotEqual(unknown.returncode, 0)
+        self.assertIn('unrecognized arguments', unknown.stderr)
+        # Current help/argument errors must exit before probing the target Git repo.
+        tools = self.directory/'git-probe-bin'
+        tools.mkdir()
+        marker = self.directory/'target-git-probed'
+        real_git = shutil.which('git')
+        probe = tools/'git'
+        probe.write_text('#!'+sys.executable+'\n'+
+            'import os,sys\nfrom pathlib import Path\n'+
+            'args=sys.argv[1:]\n'+
+            'if "-C" in args and args[args.index("-C")+1]=='+repr(str(fixture))+':\n'+
+            ' Path('+repr(str(marker))+').write_text("target Git queried")\n'+
+            'os.execv('+repr(real_git)+', ["git", *args])\n')
+        probe.chmod(0o755)
+        env = dict(os.environ, PATH=str(tools)+os.pathsep+os.environ['PATH'])
+        current = [sys.executable, str(SOURCE/'scripts/verify-harness-adoption.py'),
+                   '--root', str(fixture)]
+        for option in ('--help', '--unknown-option'):
+            marker.unlink(missing_ok=True)
+            result = subprocess.run(current+[option], cwd=SOURCE, env=env,
+                                    capture_output=True, text=True)
+            self.assertFalse(marker.exists(), result.stdout+result.stderr)
+            if option == '--help':
+                self.assertEqual(result.returncode, 0)
+                self.assertIn('--workflow-admission', result.stdout)
+            else:
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn('unrecognized arguments', result.stderr)
+
     def test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle(self):
         """PA-06: complete M0 ownership retention, not only the admitted path."""
         output = self.directory/'preserved'
