@@ -5,12 +5,19 @@ createdTime: 2026-10-09T00:32:47+08:00
 updatedTime: 2026-10-11T00:54:35+08:00
 thumbnail: /assets/post_course_security-awareness_electricity-privacy/p-total.png
 category: 資安認知推廣備課系列
+draft: true
+previewOnly: true
 pageClass: electricity-privacy-article
 ---
 
 <img src="/assets/post_course_security-awareness_electricity-privacy/article-banner.png" alt="深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。" style="display: block; margin: 1.5rem auto; max-width: 100%; height: auto;" />
 
 # 用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？
+
+<PreviewNotice
+  title="staging 修訂審閱稿"
+  text="這篇供 staging 預覽與審稿，尚未發佈到正式站。"
+/>
 
 <ArticleSummary variant="note">
 

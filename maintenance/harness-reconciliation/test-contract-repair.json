@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "predecessor": "f93237b1ed538484f24ed103ef00c7e5ee2e1828",
+  "captured": "6e4eb804bcbda8504935be49fd6537d6327d5303",
+  "product_delta": [
+    {
+      "path": "blog/.vitepress/config.mts",
+      "before": {
+        "mode": "100644",
+        "sha256": "db40c18699ef20d20afef8973168517ff8eeb990fa3836d0eed402485b59df57"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "0ccc64fcc43d4ee5a629edc07d574c43d077e45b0f2e58188e7f82955c0b4875"
+      }
+    },
+    {
+      "path": "blog/.vitepress/markdown/articleCaptions.ts",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "158d498ae46c898e73310310fcc6ae8421a1aa8ddc859bf50b58ce0c88201d81"
+      }
+    },
+    {
+      "path": "blog/.vitepress/theme/components/EncoreTicket.vue",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "64b15c3d3ab6f3eeecfde0761fb800dbab441edc6caf2609bea04bb28e04f0b8"
+      }
+    },
+    {
+      "path": "blog/.vitepress/theme/index.ts",
+      "before": {
+        "mode": "100644",
+        "sha256": "eb1dbb229d27cc0932b252c1ee9fcfde783d319c3ef8997cb8faf070c141af68"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "8ad3444a2e1eeb6deecabf88100af1322be092ade66b8885b1cf83feedcfe8c2"
+      }
+    },
+    {
+      "path": "blog/.vitepress/theme/style.css",
+      "before": {
+        "mode": "100644",
+        "sha256": "0221c1a7b079eee06d79e65da3c1c3d65ca9ec13efb5f688c6049aa093662167"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "aa8b849436212db45fda7da072e04dbfec97440e6f610cadc1b09a635d5a46bd"
+      }
+    },
+    {
+      "path": "blog/post/course/security-awareness/electricity-privacy.md",
+      "before": {
+        "mode": "100644",
+        "sha256": "f36261ac4208d55d73c5c1250c3c96bf419cbadbfa053fd33b45f40af4969e34"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "7d8f648692e2dd0c977473839ce7e83daaae92065e3851953c35524710b44e53"
+      }
+    },
+    {
+      "path": "docs/authoring/article-captions.md",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "72d1b896d7fff74be08ddfc9560245361f89ba9aeb347e48c70c2deab370029c"
+      }
+    },
+    {
+      "path": "docs/components/encore-ticket.md",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "c009a6d4d3176ec981cca76684e08cbab4fb23ed8dff29f98a7a514e56616c2e"
+      }
+    },
+    {
+      "path": "maintenance/writing-skills/SOURCES.md",
+      "before": {
+        "mode": "100644",
+        "sha256": "f03da29140dd0e6864861399c130e1f35945511928735dbb0597b0e880e7310c"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "fc29bbefb00580a0bf07978bf94533e766b370c7a188f8852fa18097727d7c15"
+      }
+    },
+    {
+      "path": "maintenance/writing-skills/VALIDATION.md",
+      "before": {
+        "mode": "100644",
+        "sha256": "84cfa730667e1156c89fb40676138272b47a08b0edcbb28c7ddb329561962c57"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "2292d41418aaad231f1efbcda34dad4b0fa1f2f8ffb05f21e86144c10b0152b5"
+      }
+    },
+    {
+      "path": "skills/phoenix-writing/SKILL.md",
+      "before": {
+        "mode": "100644",
+        "sha256": "456ccbb6a52f6fcabad1dfa8e7dfeb072d92aa1518df2cfb8ae149856b338a73"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
+      }
+    },
+    {
+      "path": "skills/phoenix-writing/references/context-form.md",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "ec4a9205411a835a28f4ba3a72b8f155a0d7378c48de99f354d57c2e575bd04e"
+      }
+    },
+    {
+      "path": "tests/articleCaptions.vitest.ts",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "38ce8b542631f9fc5e92b027821d04568a6f72fed11e15eae64a7dda498dd52c"
+      }
+    },
+    {
+      "path": "tests/encoreTicket.vitest.ts",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "fa5291052e2c3e572be2a28ca778e16f6f9368dd8a867264de59b1ff8ff388c0"
+      }
+    },
+    {
+      "path": "tests/fixtures/article-caption-baseline.json",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "6baa4a586594b205359520c8d999d767c696524d1677be92132ded6fc5bb7149"
+      }
+    }
+  ],
+  "repair_delta": [
+    {
+      "path": "README.md",
+      "before": {
+        "mode": "100644",
+        "sha256": "529bad3c142c2ebcad48e2d206358ed565ebf26b377afcf15c9081f4892c8f68"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "19db74857fa6901be48b4952e24facf4767adc08a7d136573a91bf73a99814c0"
+      }
+    },
+    {
+      "path": "package.json",
+      "before": {
+        "mode": "100644",
+        "sha256": "63b98e9c0c02ac1bc35d99a62f445bfe8849bb36e686064feb5d5fda8e5a6f06"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "9e0e6e7b9b51f4ad28457513158d9976da54317a68c96fc0e2e5ba9c3d9f42d4"
+      }
+    },
+    {
+      "path": "tests/articleCaptions.vitest.ts",
+      "before": {
+        "mode": "100644",
+        "sha256": "38ce8b542631f9fc5e92b027821d04568a6f72fed11e15eae64a7dda498dd52c"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "81fd3247b289489577d77948fc29c94304567088d6c12b8a24c7bc513d6052ba"
+      }
+    },
+    {
+      "path": "tests/article_publication/__init__.py",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "ca4700c2df368d7c7b33ece27a657732283786bb5063e4d1119a6c525ae0c0a3"
+      }
+    },
+    {
+      "path": "tests/fixtures/article-caption-entry.md",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "9ee10b2b8afe41d6d201df259ed95c58e869bd5592bbaa4995d603f5823f265e"
+      }
+    },
+    {
+      "path": "tests/fixtures/article-caption-migrated.md",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "a81a826ec72da2c1cb78a6f829773ad87687491d06399c307344a7879aef9506"
+      }
+    },
+    {
+      "path": "tests/fixtures/article-caption-provenance.json",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "f7b1d31152a6b63e1e89da5993d43130504118d29e873e79942d41749ce65744"
+      }
+    },
+    {
+      "path": "tests/harness_adoption/__init__.py",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "a0a9cab31657f958cfd8762a4082f4233aa180dd24d14d1f29623e9d01676cc5"
+      }
+    }
+  ]
+}

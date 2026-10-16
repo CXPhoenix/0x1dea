@@ -1,0 +1,11 @@
+{
+  "root": "/Users/phoenix/dev/online-notes/0x1DEA",
+  "branch": "tickets/T-0009/test-contract-repair",
+  "head": "6e4eb804bcbda8504935be49fd6537d6327d5303",
+  "node": "v24.13.0",
+  "pnpm": "10.28.0",
+  "python": "Python 3.14.3",
+  "successor_sha256": "d5d286235aaf60ac04389a1fc76ab396a3dde087270856be36d804c9e3937aeb",
+  "surface": "installed local runtimes, public renderer and real Git/subprocess CLI; no deployment or new browser verification",
+  "complete_test_log": "full-test-final.txt (added only after successful execution completes)"
+}

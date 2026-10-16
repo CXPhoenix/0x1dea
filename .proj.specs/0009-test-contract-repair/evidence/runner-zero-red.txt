@@ -1,0 +1,28 @@
+test_zero_tests_in_either_suite_is_failure_but_other_suite_runs (test_test_runner.TestRunnerTests.test_zero_tests_in_either_suite_is_failure_but_other_suite_runs) ... FAIL
+
+======================================================================
+FAIL: test_zero_tests_in_either_suite_is_failure_but_other_suite_runs (test_test_runner.TestRunnerTests.test_zero_tests_in_either_suite_is_failure_but_other_suite_runs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/phoenix/dev/online-notes/0x1DEA/tests/harness_adoption/test_test_runner.py", line 43, in test_zero_tests_in_either_suite_is_failure_but_other_suite_runs
+    self.assertNotEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 == 0 : harness_adoption: testsRun=0 failures=0 errors=0
+article_publication: testsRun=1 failures=0 errors=0
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+NO TESTS RAN
+test_sample (article_publication.test_sample.Sample.test_sample) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.058s
+
+FAILED (failures=1)

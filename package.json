@@ -38,7 +38,9 @@
     "docs:preview": "vitepress preview blog",
     "new:post": "tsx scripts/vpHelper.ts new post",
     "test:unit": "vitest run",
-    "lint": "eslint scripts tests blog/shared blog/.vitepress eslint.config.js vitest.config.ts uno.config.ts tsconfig.json package.json --max-warnings 0"
+    "lint": "eslint scripts tests blog/shared blog/.vitepress eslint.config.js vitest.config.ts uno.config.ts tsconfig.json package.json --max-warnings 0",
+    "test:python": "python3 -B scripts/run-python-tests.py",
+    "test": "pnpm test:unit && pnpm test:python"
   },
   "dependencies": {
     "@tsparticles/slim": "^3.9.1",

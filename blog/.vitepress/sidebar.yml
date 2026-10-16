@@ -31,5 +31,5 @@
 /post/course/security-awareness/:
   - text: 資安認知推廣備課系列
     items:
-      - text: 用電紀錄裡的正常與異常：家裡哪台設備在偷偷忙？
+      - text: 電表沒拍到你，用電資料怎麼留下生活線索？
         link: /post/course/security-awareness/electricity-privacy

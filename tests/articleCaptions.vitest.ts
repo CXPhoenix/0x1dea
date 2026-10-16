@@ -149,15 +149,15 @@ describe('article captions through VitePress Markdown', () => {
     expect(doc.querySelector('#fig-occupancy-process figcaption a')?.getAttribute('href')).toBe('#ref-4')
   })
 
-  it('renders the production article with preserved media and source-note citations', async () => {
+  it('renders the current editorial article with preserved media and source-note citations', async () => {
     const source = readFileSync(`${root}/post/course/security-awareness/electricity-privacy.md`, 'utf8')
     const md = await renderer()
     const doc = parse(md.render(source))
-    expect(createHash('sha256').update(source).digest('hex')).toBe('8e6cc7a954ceaf4248ea8aa0f6d24ee343b8b5da4466f858b5440df95a0f68db')
+    expect(createHash('sha256').update(source).digest('hex')).toBe('7d8f648692e2dd0c977473839ce7e83daaae92065e3851953c35524710b44e53')
     expect(doc.querySelectorAll('figure.article-figure')).toHaveLength(3)
     expect(doc.querySelectorAll('a.article-reference')).toHaveLength(6)
     expect(Array.from(doc.querySelectorAll('img')).map(el => ({ src: el.getAttribute('src'), alt: el.getAttribute('alt') }))).toEqual(baseline.images)
-    expect(source.split('---', 3)[1]).toBe(baseline.frontmatter.replace('draft: true\n', '').replace('previewOnly: true\n', ''))
+    expect(source.split('---', 3)[1]).toBe(baseline.frontmatter)
     expect(source).not.toMatch(/圖 [123]/)
     expect(source).toContain('@fig:nilm-process 是依 NILMTK 重新繪製的流程示意 [[1]](#ref-1)')
     expect(source).toContain('@fig:occupancy-process 依 Liang 與 Wang 的方法重繪 [[4]](#ref-4)')

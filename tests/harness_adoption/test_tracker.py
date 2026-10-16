@@ -58,7 +58,7 @@ class TrackerTests(unittest.TestCase):
         for name in names:
             target = fixture / name
             target.parent.mkdir(parents=True, exist_ok=True)
-            # Accepted historical input comes from its epoch, never the live checkout.
+            # This fixture checks the immutable lint epoch, not later product evolutions.
             target.write_bytes(subprocess.check_output(['git', '--no-replace-objects', 'show', epoch + ':' + name], cwd=source))
         verifier.check_lint_successor(fixture)
         boundary_path = fixture / 'maintenance/lint-cleanup/source-boundary.json'
@@ -99,6 +99,17 @@ class TrackerTests(unittest.TestCase):
         self.ticket(2, blockers='[T-0001]')
         self.assertEqual(verifier.check_tickets(self.root)['blocked'], {'T-0002': ['T-0001']})
 
+    def test_only_todo_is_blocked_but_inflight_dependencies_remain_visible(self):
+        self.ticket(1, 'review')
+        self.ticket(2, 'todo', '[T-0001]')
+        self.ticket(3, 'processing', '[T-0001]')
+        self.ticket(4, 'review', '[T-0001]')
+        views = verifier.check_tickets(self.root)
+        self.assertEqual(views['blocked'], {'T-0002': ['T-0001']})
+        self.assertEqual(views['unresolved_dependencies'], {
+            'T-0002': ['T-0001'], 'T-0003': ['T-0001'], 'T-0004': ['T-0001']})
+        self.assertEqual(views['frontier'], [])
+
     def test_duplicate_id_across_epics_rejected(self):
         p = self.ticket()
         other = self.root / '.proj.tickets/0002-other/T-0001-other.md'
@@ -131,6 +142,57 @@ class TrackerTests(unittest.TestCase):
     def test_done_requires_real_landing_record(self):
         self.ticket(status='done', extra='landing_evidence: nonexistent.json\n')
         with self.assertRaisesRegex(ValueError, 'landing'): verifier.check_tickets(self.root)
+
+    def test_done_uses_remote_staging_only_when_local_ref_is_absent(self):
+        import json
+        import subprocess
+        source = MODULE.parents[1]
+        fixture = self.root / 'landing'
+        subprocess.run(['git', 'clone', '--shared', '--no-checkout', str(source), str(fixture)],
+                       check=True, capture_output=True)
+        self.root = fixture
+        epoch = '724ddad73f8411a33c77c68d75f95b41d3af2988'
+
+        def git(*args):
+            return subprocess.check_output(['git', *args], cwd=fixture, stderr=subprocess.PIPE)
+
+        git('update-ref', '-d', 'refs/heads/staging')
+        git('update-ref', 'refs/remotes/origin/staging', epoch)
+        self.ticket(status='done', extra='landing_evidence: landing.json\n')
+        (fixture / 'approval.md').write_text('Disposable authorized landing fixture.\n')
+        receipt = {'ticket': 'T-0001', 'authorized': True, 'landed': True,
+                   'commit': epoch, 'approval_receipt': 'approval.md', 'target': 'staging'}
+        (fixture / 'landing.json').write_text(json.dumps(receipt))
+        self.assertEqual(verifier.check_tickets(fixture)['tickets']['T-0001']['status'], 'done')
+        parent = git('rev-parse', epoch + '^').decode().strip()
+        git('update-ref', 'refs/heads/staging', parent)
+        with self.subTest(case='wrong local ancestry cannot fall back to valid remote'):
+            with self.assertRaisesRegex(ValueError, 'landing'):
+                verifier.check_tickets(fixture)
+        local_ref = fixture / '.git/refs/heads/staging'
+        original_ref = local_ref.read_bytes()
+        try:
+            local_ref.write_text('f' * 40 + '\n')
+            with self.subTest(case='invalid local ref cannot fall back to valid remote'):
+                with self.assertRaisesRegex(ValueError, 'landing'):
+                    verifier.check_tickets(fixture)
+        finally:
+            local_ref.write_bytes(original_ref)
+        git('update-ref', '-d', 'refs/heads/staging')
+        git('update-ref', 'refs/remotes/origin/staging', parent)
+        with self.subTest(case='wrong remote ancestry'):
+            with self.assertRaisesRegex(ValueError, 'landing'):
+                verifier.check_tickets(fixture)
+        git('update-ref', '-d', 'refs/remotes/origin/staging')
+        with self.subTest(case='both refs missing'):
+            with self.assertRaisesRegex(ValueError, 'landing'):
+                verifier.check_tickets(fixture)
+        git('update-ref', 'refs/heads/staging', epoch)
+        self.assertEqual(verifier.check_tickets(fixture)['tickets']['T-0001']['status'], 'done')
+        (fixture / 'approval.md').unlink()
+        with self.subTest(case='approval still required'):
+            with self.assertRaisesRegex(ValueError, 'landing'):
+                verifier.check_tickets(fixture)
 
     def test_stale_translation_and_missing_source_rejected(self):
         en = self.root / 'spec.en.md'

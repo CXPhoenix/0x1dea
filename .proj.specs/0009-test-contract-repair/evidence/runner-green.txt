@@ -1,0 +1,9 @@
+test_both_named_suites_run_with_positive_counts (test_test_runner.TestRunnerTests.test_both_named_suites_run_with_positive_counts) ... ok
+test_failure_and_import_error_in_either_suite_propagate (test_test_runner.TestRunnerTests.test_failure_and_import_error_in_either_suite_propagate) ... ok
+test_unimportable_suite_does_not_prevent_other_suite_running (test_test_runner.TestRunnerTests.test_unimportable_suite_does_not_prevent_other_suite_running) ... ok
+test_zero_tests_in_either_suite_is_failure_but_other_suite_runs (test_test_runner.TestRunnerTests.test_zero_tests_in_either_suite_is_failure_but_other_suite_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.467s
+
+OK

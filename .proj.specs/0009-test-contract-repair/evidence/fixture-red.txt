@@ -1,0 +1,16 @@
+test_exact_reviewed_components_pass_full_cli (test_reconciliation.ReconciliationTests.test_exact_reviewed_components_pass_full_cli) ... FAIL
+
+======================================================================
+FAIL: test_exact_reviewed_components_pass_full_cli (test_reconciliation.ReconciliationTests.test_exact_reviewed_components_pass_full_cli)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/phoenix/dev/online-notes/0x1DEA/tests/harness_adoption/test_reconciliation.py", line 203, in test_exact_reviewed_components_pass_full_cli
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: changed current reconciliation source: blog/.vitepress/theme/index.ts
+
+
+----------------------------------------------------------------------
+Ran 1 test in 3.078s
+
+FAILED (failures=1)

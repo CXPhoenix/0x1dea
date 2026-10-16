@@ -1,0 +1,42 @@
+{
+  "full-test-final.txt": {
+    "command": "pnpm test",
+    "exit_code": 0,
+    "sha256": "e5d8f744e9166e65ab57fe3e065853a17f26b6e1ee6b4fe64208121b58378d3b"
+  },
+  "lint.txt": {
+    "command": "pnpm lint",
+    "exit_code": 0,
+    "sha256": "4cfd096ac29ad6c5410ce0b19176e37ba1f9fedbcbdf87ffa44f39843569f605"
+  },
+  "build.txt": {
+    "command": "pnpm docs:build",
+    "exit_code": 0,
+    "sha256": "babde208f54c6dd578758094f2ea8cd299e181c00c94030966cd02f088e70e61"
+  },
+  "structure-final.txt": {
+    "command": "python3 -B scripts/verify-project.py",
+    "exit_code": 0,
+    "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+  },
+  "materializer-final.txt": {
+    "command": "python3 -B scripts/materialize-writing-skills.py --check",
+    "exit_code": 0,
+    "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382"
+  },
+  "guard-final.txt": {
+    "command": "python3 -B scripts/verify-harness-adoption.py",
+    "exit_code": 0,
+    "sha256": "83ea22e71c934a7d6f5072b71fe86278820d57235ddfbbcec0706eda5a0b989a"
+  },
+  "rollback.txt": {
+    "command": "disposable clone coupled rollback + exclusive Finder restoration",
+    "exit_code": 0,
+    "sha256": "4fe4c89a377502a51d8d1761f90938de9641aff6d4d653f7f9f6e39d538f9571"
+  },
+  "guard-complete.txt": {
+    "command": "python3 -B scripts/verify-harness-adoption.py after final review dispositions",
+    "exit_code": 0,
+    "sha256": "14596afb33166064c0e23245da358c112de38a780d74087bda8c8690c9031fb0"
+  }
+}

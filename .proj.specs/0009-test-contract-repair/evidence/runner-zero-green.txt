@@ -1,0 +1,6 @@
+test_zero_tests_in_either_suite_is_failure_but_other_suite_runs (test_test_runner.TestRunnerTests.test_zero_tests_in_either_suite_is_failure_but_other_suite_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.107s
+
+OK

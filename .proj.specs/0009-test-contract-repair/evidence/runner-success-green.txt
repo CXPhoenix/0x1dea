@@ -1,0 +1,6 @@
+test_both_named_suites_run_with_positive_counts (test_test_runner.TestRunnerTests.test_both_named_suites_run_with_positive_counts) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.204s
+
+OK

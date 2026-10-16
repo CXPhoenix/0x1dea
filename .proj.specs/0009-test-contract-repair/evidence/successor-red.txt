@@ -1,0 +1,16 @@
+test_00_exact_current_successor_passes_readonly_public_cli (test_successor.SuccessorTests.test_00_exact_current_successor_passes_readonly_public_cli) ... FAIL
+
+======================================================================
+FAIL: test_00_exact_current_successor_passes_readonly_public_cli (test_successor.SuccessorTests.test_00_exact_current_successor_passes_readonly_public_cli)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/phoenix/dev/online-notes/0x1DEA/tests/harness_adoption/test_successor.py", line 42, in test_00_exact_current_successor_passes_readonly_public_cli
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: changed current reconciliation source: README.md
+
+
+----------------------------------------------------------------------
+Ran 1 test in 3.703s
+
+FAILED (failures=1)

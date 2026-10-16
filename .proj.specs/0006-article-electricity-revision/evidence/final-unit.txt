@@ -1,0 +1,14 @@
+
+ RUN  v4.0.18 <checkout>
+
+ ✓ tests/vpHelper.vitest.ts (9 tests) 12ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 73ms
+ ✓ tests/previewNotice.vitest.ts (32 tests) 128ms
+ ✓ tests/previewNoticeArticle.vitest.ts (1 test) 302ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 191ms
+ ✓ tests/articleSummary.vitest.ts (12 tests) 364ms
+
+ Test Files  6 passed (6)
+      Tests  59 passed (59)
+   Start at  10:31:00
+   Duration  2.85s (transform 840ms, setup 0ms, import 3.63s, tests 1.07s, environment 5.86s)

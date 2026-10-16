@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "sha256": {
+    "maintenance/harness-adoption/baseline-files.json": "a27eb6c95af35785f787e8abd12849f6b73653abb113b1c07511e955f19ac26b",
+    "maintenance/harness-adoption/candidate-delta.json": "30c1e6448d81ace9768ee6481e7b8df5e57d25f491dd4e093b3f0813d832f57f",
+    "maintenance/harness-adoption/framework-import-manifest.json": "b0fb7cf39924c3371be420bce8f3c8c6f1356fcd0f2dc5a24f538e9192718d7e",
+    "maintenance/article-publication/source-boundary.json": "9b19137ccb03816d5c965bc5ee406cc7da6f97a0bee3a0c71d0ac35fa8c6187c",
+    "maintenance/lint-cleanup/source-boundary.json": "22f7fa33ad55af3c04a180c41dae55416eff0a3e43ee6ee87f0d761e5a4ca0f3",
+    "maintenance/harness-reconciliation/staging.json": "96011a4f53031ffffa4ab029c0eaaf3c01d34f50145a3e6da77c9deb42c59195",
+    "maintenance/harness-reconciliation/components.json": "5c72ce5d7a3b3dd370ddfe59bf595411adab5f618e738149034e1ea7505db377",
+    "maintenance/harness-reconciliation/article-electricity-revision.json": "a59ff8d81971f9ee85b92fa2eb940f6c7018d182454ded89169bbf27e8c125f9",
+    "tests/fixtures/article-caption-baseline.json": "6baa4a586594b205359520c8d999d767c696524d1677be92132ded6fc5bb7149",
+    "blog/post/course/security-awareness/electricity-privacy.md": "7d8f648692e2dd0c977473839ce7e83daaae92065e3851953c35524710b44e53",
+    "pnpm-lock.yaml": "a3fd09a4774cdf0f5c7260b2cac942fbc7d353f408138570339456a516b30842"
+  }
+}

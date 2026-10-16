@@ -104,6 +104,9 @@ The six statuses are **queries** over the tree, not folders:
 - **Frontier** — what can start now: `status: todo` and every `blocked_by` id is `done`. Lowest
   ticket id first.
 - **Blocked** — `status: todo` with at least one `blocked_by` id not `done`. Report which ones.
+- **Unresolved dependencies** — all tickets with a non-done dependency, including
+  processing/review tickets; exposed as `unresolved_dependencies` by the verifier.
+  This preserves the edges without classifying in-flight work as the todo-only Blocked view.
 - **In flight** — `status: processing` or `status: review`.
 - **Paused** — `status: pending`. Surfaced only when the user asks what is left.
 

@@ -1,0 +1,27 @@
+{
+  "scope": "disposable Git clone; complete non-planning repair set reverted to HEAD",
+  "restored_paths": [
+    "CONTEXT.md",
+    "README.md",
+    "docs/agents/issue-tracker.md",
+    "maintenance/harness-reconciliation/test-contract-repair.json",
+    "package.json",
+    "scripts/harness_reconciliation.py",
+    "scripts/run-python-tests.py",
+    "scripts/verify-harness-adoption.py",
+    "tests/articleCaptions.vitest.ts",
+    "tests/article_publication/__init__.py",
+    "tests/fixtures/article-caption-entry.md",
+    "tests/fixtures/article-caption-migrated.md",
+    "tests/fixtures/article-caption-provenance.json",
+    "tests/harness_adoption/__init__.py",
+    "tests/harness_adoption/test_reconciliation.py",
+    "tests/harness_adoption/test_successor.py",
+    "tests/harness_adoption/test_test_runner.py",
+    "tests/harness_adoption/test_tracker.py"
+  ],
+  "unchanged_article_history_lock": true,
+  "prior_config_rejection_restored": true,
+  "backup_restore_matches": true,
+  "occupied_destination_preserved": true
+}

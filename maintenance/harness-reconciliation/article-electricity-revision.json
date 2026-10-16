@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "ticket": "T-0006",
+  "base": "69ff85f5fe1baddb54102070a436dff9ac1c5b73",
+  "authorization": "Owner explicitly approved the exact article revision guard correction and non-force staging push; history and all unlisted sources remain protected.",
+  "delta": [
+    {
+      "path": "blog/post/course/security-awareness/electricity-privacy.md",
+      "before": {
+        "mode": "100644",
+        "sha256": "7d7df900fe0bb3da0dc8beb8e8e146dab9326cccdf57d12d0c25fcf2a708bcc0"
+      },
+      "after": {
+        "mode": "100644",
+        "sha256": "f36261ac4208d55d73c5c1250c3c96bf419cbadbfa053fd33b45f40af4969e34"
+      }
+    },
+    {
+      "path": "blog/public/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "8a841ead65839eb117ce054edf84402c2f76baaab77acb0e8e22946cc671f3a7"
+      }
+    },
+    {
+      "path": "blog/public/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+      "before": null,
+      "after": {
+        "mode": "100644",
+        "sha256": "99aead19c23b41ab372d1080e51fdc32ba5bf8f463e42d035794b29a4631441e"
+      }
+    }
+  ]
+}

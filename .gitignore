@@ -6,8 +6,10 @@ node_modules/
 dist/
 cache/
 
-# Local env files
+# Local env files (public example stays trackable)
 .env
+.env.*
+!.env.example
 *.local
 
 # Logs

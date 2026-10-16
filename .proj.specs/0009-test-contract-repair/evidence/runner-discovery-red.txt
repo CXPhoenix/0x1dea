@@ -1,0 +1,15 @@
+test_unimportable_suite_does_not_prevent_other_suite_running (test_test_runner.TestRunnerTests.test_unimportable_suite_does_not_prevent_other_suite_running) ... FAIL
+
+======================================================================
+FAIL: test_unimportable_suite_does_not_prevent_other_suite_running (test_test_runner.TestRunnerTests.test_unimportable_suite_does_not_prevent_other_suite_running)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/phoenix/dev/online-notes/0x1DEA/tests/harness_adoption/test_test_runner.py", line 69, in test_unimportable_suite_does_not_prevent_other_suite_running
+    self.assertIn('article_publication: testsRun=1 failures=0 errors=0', result.stdout)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'article_publication: testsRun=1 failures=0 errors=0' not found in ''
+
+----------------------------------------------------------------------
+Ran 1 test in 0.061s
+
+FAILED (failures=1)
