@@ -1,0 +1,82 @@
+{
+  "ticket": "T-0022",
+  "source_packet": "T22-review-source-v2",
+  "source_packet_sha256": "53a24234ba866e609d40f5f63fb78d67a3366527b4e7e9b6a043e1645796a386",
+  "validation_strategy": "v2 source complete regression; final additions are management evidence only",
+  "surface": "local CLI/native/full Git and actual isolated VitePress; replayed API only, no browser/GitHub/P13 claim",
+  "python": {
+    "harness_live": 66,
+    "publication_live": 120,
+    "historical_PR22": 10,
+    "total": 196,
+    "failures": 0,
+    "errors": 0,
+    "exit": 0
+  },
+  "unit": 54,
+  "lint": "pass",
+  "build": "pass",
+  "native": "pass",
+  "project": "pass",
+  "materializer": "pass",
+  "review": {
+    "Standards": [
+      0,
+      0,
+      0
+    ],
+    "Spec": [
+      0,
+      0,
+      0
+    ],
+    "security_HIGH_MEDIUM": [
+      0,
+      0
+    ]
+  },
+  "actual_landings": "pending",
+  "P13": "NOT RUN",
+  "done": false,
+  "artifacts": {
+    "evidence/build.txt": {
+      "sha256": "8272a574cf0dae75b2d635be4903e95d7cdc42aa8d17dfc586d1845ac9f144ac"
+    },
+    "evidence/candidate-green.txt": {
+      "sha256": "935d21fe05181af1f3630437dc49a6d882dd802e4f11c8277b6ea4a7afc3694c"
+    },
+    "evidence/candidate-red.txt": {
+      "sha256": "33e4c42e137bb1178e95d7374542f038c0c52c5075ede87eeddb6200b75b46db"
+    },
+    "evidence/existing-remote.txt": {
+      "sha256": "21656453b96be772e2851fd0cca7467a2d9c6d5f6652ac56df827374662f3f86"
+    },
+    "evidence/first-red.txt": {
+      "sha256": "74f23d49504ce4722727bd63b1defc3e1129f707b468b364cb0e727e321f4cd4"
+    },
+    "evidence/focused.txt": {
+      "sha256": "1786e00effa46ceb8d36ac6e34448f1640c3e1584f278eaa7c0f3d07bf9bb6d7"
+    },
+    "evidence/lint.txt": {
+      "sha256": "dffc96a3271cb45529ac9d6c20bb757ff4af149a51c772b64ed3cab0a8c360f6"
+    },
+    "evidence/materializer.json": {
+      "sha256": "78b2813ac9badf455d774291b0baab40980f4997fc28768f1bde1bc8a8b97719"
+    },
+    "evidence/native.json": {
+      "sha256": "55ecc69c406f53373eb5db63975de8270bb3a3799a88844416256a16205d32ba"
+    },
+    "evidence/project.txt": {
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    "evidence/python-full.txt": {
+      "sha256": "32c8119c6727fc043497d6874057ccff0368a73b4b4a6df664944c093d8aaed0"
+    },
+    "evidence/trusted-local-staging-validation.json": {
+      "sha256": "77a2b767ae58223d35ac57cde8274fcb254844c241583cc11a10bf5215b7df09"
+    },
+    "evidence/unit.txt": {
+      "sha256": "53ddb2a6197f8e0337bcd19b3647523a5799f1c8ee256da1f655c1cee32421ce"
+    }
+  }
+}
