@@ -1,0 +1,14 @@
+{
+  "repository": "CXPhoenix/0x1dea-publication-lab",
+  "base": "6b7da901a50d9ffacd50984e78a95838a68881ab",
+  "branch": "tickets/T-0016/p13-lab-bootstrap-20261018",
+  "path": ".github/workflows/p13-bootstrap-capability.yml",
+  "sha256": "3275d7add6b4b881bd6413f09dd885f1760f0ce672b95366c72b7755993ea168",
+  "pending_paths": [
+    ".github/workflows/p13-bootstrap-capability.yml"
+  ],
+  "prod_paths_changed": [],
+  "authority": "User explicitly approved this exact private lab, necessary validation workflows and bounded synthetic exercises; stop on missing platform/runner permission; no install/account/billing changes. A1 bootstrap capability probe only, not gated controller/A2 activation or P13 pass.",
+  "budget": "one workflow_dispatch, one job,2min job timeout; no installation, candidates, source checkout, API writes, tokens, secrets, PRs or merges; no production writes",
+  "expected_missing_config": "lab REST observes0variables/0secrets/0workflows/0runs; readonly defaults; onlybootstrapadminactor. macos15 hosted ability must be observed not inferred from0selfhosted."
+}
