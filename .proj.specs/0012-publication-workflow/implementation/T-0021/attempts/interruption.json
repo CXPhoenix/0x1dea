@@ -1,0 +1,16 @@
+{
+  "reason": "Spec P1 findings require source edits; only own test process trees stopped before changes; not passing evidence",
+  "snapshot": "T21-source-review",
+  "runs": [
+    {
+      "root_pid": 58030,
+      "cwd": "/private/tmp/0x1dea-T0021",
+      "owned_processes_stopped": 2
+    },
+    {
+      "root_pid": 58152,
+      "cwd": "/private/tmp/T21-retained-stage-preview",
+      "owned_processes_stopped": 3
+    }
+  ]
+}

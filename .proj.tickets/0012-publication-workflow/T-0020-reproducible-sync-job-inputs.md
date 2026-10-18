@@ -2,8 +2,9 @@
 id: T-0020
 title: Prepare reproducible isolated writer and validator job inputs
 epic: 0012-publication-workflow
-status: review
+status: done
 blocked_by: []
+landing_evidence: .proj.specs/0012-publication-workflow/implementation/prerequisite-closeout-20261018/T-0020-landing.json
 ---
 
 ## Context
@@ -21,7 +22,7 @@ A maintainer can run a local public preflight/input-preparation flow for fresh s
 - [x] Meet B1: exact existing runtime/deps/isolation/full-history checks before writes; no install or weaker fallback.
 - [x] Meet B2: independently source-bound external inputs/digests, separate fresh jobs and credentials, explicit per-job snapshot root/UID/mode/type/link-count/open/read predicates, tamper refusals and deny-default probes; label filesystem-observation fixture limits.
 - [x] Meet B3: durable per-repository state, bounded unknown-outcome recovery, shared non-cancelling writer group, separate validator group and no global/manual lock claim.
-- [ ] Meet K1–K3 and PB-01–06; approved coverage, standards/spec/security review and separately authorized actual engineering landings before done. No fake capability receipt or lab setup.
+- [x] Meet K1–K3 and PB-01–06; approved coverage, standards/spec/security review and separately authorized actual engineering landings before done. No fake capability receipt or lab setup.
 
 ## Approved test plan
 
@@ -52,3 +53,7 @@ PB-01–06 implemented and focused six-method run passed. See implementation/T-0
 ## Reviewable delivery checkpoint
 
 Local approved coverage and complete source regressions passed; independent Standards/Spec/security source reviews have no unresolved findings. See implementation/T-0020/execution.json and review/code-T-0020.md, review/security-T-0020.md. Final evidence supplement and actual main/staging landings are recorded separately; this ticket is not done and does not prove P13.
+
+## Conditional actual dual-target closeout — 2026-10-18
+
+All allocated local prerequisite rows and independent reviews are complete; the main engineering PR and staging PR33 actually landed. T-0019 also includes the separately authorized PR32 historical CLI correction. See .proj.specs/0012-publication-workflow/implementation/prerequisite-closeout-20261018/coverage.md, evidence/ and T-0020-landing.json for per-criterion evidence. Both target native readbacks pass; common1071 identities, all111 staging blog paths, all50 candidate paths, published-only main and immutable contracts are preserved. Earlier pending/review statements remain historical checkpoints. Status is now done for this repair only; actual remote capability/P13 is still NOT RUN and T-0016 remains review. No production merge, activation or deployment-setting change accompanies this closure.

@@ -1,0 +1,8 @@
+test_changed_historical_fixture_file_is_rejected_before_loading_tests (test_current_runner.CurrentRunnerTests.test_changed_historical_fixture_file_is_rejected_before_loading_tests) ... ok
+test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import)
+K1: frozen selection never hides changed/missing/linked current test bytes. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.115s
+
+OK

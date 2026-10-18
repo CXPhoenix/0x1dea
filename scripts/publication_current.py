@@ -137,10 +137,12 @@ def prepare(control, output, *, workflow_admission=None):
             subprocess.run(['git', 'clone', '--shared', '--no-checkout', '--template=', str(control), str(target)],
                            check=True, capture_output=True, env=git_environment(local_clone=True))
             git(target, 'checkout', '--detach', base)
-            for target_role_name, target_pin in BASES.items():
-                if workflow_admission:
-                    target_pin = (workflow_admission.main if target_role_name == 'main' else
-                                  git(control, 'rev-parse', 'refs/heads/staging').decode().strip())
+            # HEAD/tree stay at the immutable M0 projection bases. Named target
+            # refs retain actual trusted histories needed by completed-ticket checks.
+            for target_role_name in BASES:
+                target_pin = git(control, 'rev-parse', 'refs/heads/' + target_role_name).decode().strip()
+                if workflow_admission and target_role_name == 'main':
+                    target_pin = workflow_admission.main
                 git(target, 'update-ref', 'refs/heads/' + target_role_name, target_pin)
             if workflow_admission:
                 git(target, 'update-ref', 'refs/publication/workflow-main', workflow_admission.main)

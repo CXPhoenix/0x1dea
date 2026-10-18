@@ -1,0 +1,23 @@
+test_current_guard_rejects_partial_promisor_candidate_without_fetch (article_publication.test_closed_baseline.ClosedBaselineTests.test_current_guard_rejects_partial_promisor_candidate_without_fetch) ... ok
+test_current_guard_still_rejects_m0_as_implementation_landing (article_publication.test_closed_baseline.ClosedBaselineTests.test_current_guard_still_rejects_m0_as_implementation_landing) ... ok
+test_real_closed_t13_landing_does_not_require_future_ticket_scripts (article_publication.test_closed_baseline.ClosedBaselineTests.test_real_closed_t13_landing_does_not_require_future_ticket_scripts) ... ok
+test_closeout_requires_regular_exact_mode_and_path (article_publication.test_closeout_successor.CloseoutSuccessorTests.test_closeout_requires_regular_exact_mode_and_path) ... ok
+test_exact_closeout_is_accepted_on_both_target_projections (article_publication.test_closeout_successor.CloseoutSuccessorTests.test_exact_closeout_is_accepted_on_both_target_projections) ... ok
+test_existing_unrelated_approval_is_not_the_pinned_closeout_authority (article_publication.test_closeout_successor.CloseoutSuccessorTests.test_existing_unrelated_approval_is_not_the_pinned_closeout_authority) ... ok
+test_receipt_mutation_cannot_be_authorized_by_repinning_the_map (article_publication.test_closeout_successor.CloseoutSuccessorTests.test_receipt_mutation_cannot_be_authorized_by_repinning_the_map) ... ok
+test_repinning_arbitrary_ticket_text_does_not_authorize_a_successor (article_publication.test_closeout_successor.CloseoutSuccessorTests.test_repinning_arbitrary_ticket_text_does_not_authorize_a_successor) ... ok
+test_actual_dual_target_closeout_is_accepted (article_publication.test_landed_closeout.LandedCloseoutTests.test_actual_dual_target_closeout_is_accepted) ... ok
+test_new_receipts_reject_another_valid_ancestor_even_with_repinning (article_publication.test_landed_closeout.LandedCloseoutTests.test_new_receipts_reject_another_valid_ancestor_even_with_repinning) ... ok
+test_trusted_main_validates_staging_without_executing_candidate_code (article_publication.test_landed_closeout.LandedCloseoutTests.test_trusted_main_validates_staging_without_executing_candidate_code) ... ok
+test_dispatch_payload_is_data_and_cannot_execute_shell (article_publication.test_remote_validation.TrustedRemoteValidationTests.test_dispatch_payload_is_data_and_cannot_execute_shell) ... ok
+test_real_trusted_main_validation_and_isolated_staging_build (article_publication.test_remote_validation.TrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build) ... From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-vxxqyk2m/projections/staging
+ * branch            80b5c6b7a85dc2a88c372911bdd1755e527ed21b -> FETCH_HEAD
+From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-vxxqyk2m/prepared/sync-y4u2c6wb/result
+ * branch            86e56504f6a551472d044cb3b2012250ba7a1b3c -> FETCH_HEAD
+ok
+test_validation_refuses_writer_credentials_before_candidate_execution (article_publication.test_remote_validation.TrustedRemoteValidationTests.test_validation_refuses_writer_credentials_before_candidate_execution) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 201.068s
+
+OK

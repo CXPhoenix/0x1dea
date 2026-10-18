@@ -1,0 +1,9 @@
+test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check (article_publication.test_head_reporting.HeadReportingTests.test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check)
+PC-01: dispatched main run is distinct from the independently read candidate. ... ok
+test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success (article_publication.test_head_reporting.HeadReportingTests.test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success)
+PC-02: ack-only and ambiguous run inventory cannot become candidate success. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.379s
+
+OK

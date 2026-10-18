@@ -1,0 +1,26 @@
+[
+  {
+    "variant": "original",
+    "exit": 1,
+    "stderr": "FAIL: missing/invalid landing evidence: /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/closed-baseline-4e5fwjq1/projection/main/.proj.tickets/0012-publication-workflow/T-0019-finite-workflow-admission.md\n",
+    "stdout_status": null
+  },
+  {
+    "variant": "main-only",
+    "exit": 1,
+    "stderr": "FAIL: missing/invalid landing evidence: /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/closed-baseline-4e5fwjq1/projection/main/.proj.tickets/0012-publication-workflow/T-0019-finite-workflow-admission.md\n",
+    "stdout_status": null
+  },
+  {
+    "variant": "staging-only",
+    "exit": 0,
+    "stderr": "",
+    "stdout_status": "pass"
+  },
+  {
+    "variant": "both-actual",
+    "exit": 0,
+    "stderr": "",
+    "stdout_status": "pass"
+  }
+]

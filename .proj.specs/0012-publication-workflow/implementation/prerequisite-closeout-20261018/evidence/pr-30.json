@@ -1,0 +1,17 @@
+{
+  "baseRefName": "main",
+  "headRefOid": "9bec047965163a1274a91cba5ac77bcf12c92540",
+  "mergeCommit": {
+    "oid": "1501c54dcc6856b2d6dbf6e5577c04933d59c798"
+  },
+  "mergedAt": "2026-10-16T05:33:52Z",
+  "mergedBy": {
+    "id": "MDQ6VXNlcjQ1ODE5NDIx",
+    "is_bot": false,
+    "login": "CXPhoenix",
+    "name": "CXPhoenix"
+  },
+  "number": 30,
+  "state": "MERGED",
+  "url": "https://github.com/CXPhoenix/0x1dea/pull/30"
+}

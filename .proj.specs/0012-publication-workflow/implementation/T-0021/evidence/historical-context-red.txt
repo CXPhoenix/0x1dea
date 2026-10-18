@@ -1,0 +1,16 @@
+test_real_closed_t13_landing_does_not_require_future_ticket_scripts (test_closed_baseline.ClosedBaselineTests.test_real_closed_t13_landing_does_not_require_future_ticket_scripts) ... FAIL
+
+======================================================================
+FAIL: test_real_closed_t13_landing_does_not_require_future_ticket_scripts (test_closed_baseline.ClosedBaselineTests.test_real_closed_t13_landing_does_not_require_future_ticket_scripts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_closed_baseline.py", line 34, in test_real_closed_t13_landing_does_not_require_future_ticket_scripts
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: missing/invalid landing evidence: /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/closed-baseline-bw0l0f68/projection/main/.proj.tickets/0012-publication-workflow/T-0019-finite-workflow-admission.md
+
+
+----------------------------------------------------------------------
+Ran 1 test in 7.864s
+
+FAILED (failures=1)

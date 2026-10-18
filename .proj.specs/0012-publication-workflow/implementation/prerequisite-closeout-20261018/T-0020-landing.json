@@ -1,0 +1,16 @@
+{
+  "ticket": "T-0020",
+  "authorized": true,
+  "landed": true,
+  "target": "staging",
+  "commit": "d2e59426fe545116f2c2b637fc6f181dcfcdbaf5",
+  "main_commit": "1501c54dcc6856b2d6dbf6e5577c04933d59c798",
+  "main_validation_head": "64b31a2c38959ef5490892fa2a001bb0bf2f8ca0",
+  "approval_receipt": ".proj.specs/0012-publication-workflow/implementation/prerequisite-closeout-20261018/approval.md",
+  "main_pr": 30,
+  "staging_pr": 33,
+  "main_mergedAt": "2026-10-16T05:33:52Z",
+  "staging_mergedAt": "2026-10-18T04:35:59Z",
+  "correction_pr": null,
+  "scope": "Actual approved engineering/management landing only; local prerequisite acceptance, not actual P13 capability, workflow activation, deployment or candidate publication"
+}

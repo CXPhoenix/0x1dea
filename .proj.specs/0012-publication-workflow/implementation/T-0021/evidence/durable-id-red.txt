@@ -1,0 +1,52 @@
+test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call (test_head_reporting.HeadReportingTests.test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call)
+PC-07: initial inventory, pending recovery and known POST all pin identity. ... 
+  test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call (test_head_reporting.HeadReportingTests.test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call) (case='existing')
+PC-07: initial inventory, pending recovery and known POST all pin identity. ... FAIL
+  test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call (test_head_reporting.HeadReportingTests.test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call) (case='pending')
+PC-07: initial inventory, pending recovery and known POST all pin identity. ... FAIL
+  test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call (test_head_reporting.HeadReportingTests.test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call) (case='acknowledged')
+PC-07: initial inventory, pending recovery and known POST all pin identity. ... FAIL
+
+======================================================================
+FAIL: test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call (test_head_reporting.HeadReportingTests.test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call) (case='existing')
+PC-07: initial inventory, pending recovery and known POST all pin identity.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 451, in test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call
+    self.assertEqual(retried['status'],'blocked',retried)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 82, 'binding': '178c10bed5fee8ae94f9b42619ec406830efc90edaa8d705cd77476ee81a523d', 'guarantee': 'point-in-time observation; no lock, base CAS, merge authority or later-main guarantee'}
+
+======================================================================
+FAIL: test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call (test_head_reporting.HeadReportingTests.test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call) (case='pending')
+PC-07: initial inventory, pending recovery and known POST all pin identity.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 451, in test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call
+    self.assertEqual(retried['status'],'blocked',retried)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 82, 'binding': '178c10bed5fee8ae94f9b42619ec406830efc90edaa8d705cd77476ee81a523d', 'guarantee': 'point-in-time observation; no lock, base CAS, merge authority or later-main guarantee'}
+
+======================================================================
+FAIL: test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call (test_head_reporting.HeadReportingTests.test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call) (case='acknowledged')
+PC-07: initial inventory, pending recovery and known POST all pin identity.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 451, in test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call
+    self.assertEqual(retried['status'],'blocked',retried)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 82, 'binding': '178c10bed5fee8ae94f9b42619ec406830efc90edaa8d705cd77476ee81a523d', 'guarantee': 'point-in-time observation; no lock, base CAS, merge authority or later-main guarantee'}
+
+----------------------------------------------------------------------
+Ran 1 test in 2.104s
+
+FAILED (failures=3)
