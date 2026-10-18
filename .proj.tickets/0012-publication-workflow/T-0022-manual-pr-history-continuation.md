@@ -2,8 +2,9 @@
 id: T-0022
 title: Continue after one explicitly approved manual PR delivery without claiming ownership
 epic: 0012-publication-workflow
-status: review
+status: done
 blocked_by: []
+landing_evidence: .proj.specs/0012-publication-workflow/implementation/prerequisite-closeout-20261018/T-0022-landing.json
 ---
 
 ## Context
@@ -21,7 +22,7 @@ The public recovery flow can continue past one independently approved exact manu
 - [x] Meet D1: no-op order/default ready refusal preserved; continuation approval binds every listed immutable delivery identity and ancestry.
 - [x] Meet D2: skip only that exact historical conflict, retain manual classification and original records; every listed mutation/unmerged/reopened/ambiguous case refuses.
 - [x] Meet D3: unrelated open/closed PR, fake ownership, unverified/mismatched deleted/recreated branch and closed matching owned operation remain fail-closed; preserve exact parent D4 non-force owned-branch recovery without treating manual history as owned; no duplicate/reopen/force/fallback branch.
-- [ ] Meet K1–K3 and PD-01–04; approved coverage, standards/spec/security review and separately authorized actual engineering landings before done. No production PR edit or remote lab operation.
+- [x] Meet K1–K3 and PD-01–04; approved coverage, standards/spec/security review and separately authorized actual engineering landings before done. No production PR edit or remote lab operation.
 
 ## Approved test plan
 
@@ -47,3 +48,7 @@ Owner requested autonomous implementation after approval of PD-01–04. This sup
 ## Reviewable delivery checkpoint
 
 Local approved coverage and complete source regressions passed; independent Standards/Spec/security source reviews have no unresolved findings. See implementation/T-0022/execution.json and review/code-T-0022.md, review/security-T-0022.md. Final evidence supplement and actual main/staging landings are recorded separately; this ticket is not done and does not prove P13.
+
+## Conditional actual dual-target closeout — 2026-10-18
+
+All allocated local prerequisite rows and independent reviews are complete; the main engineering PR and staging PR33 actually landed. T-0019 also includes the separately authorized PR32 historical CLI correction. See .proj.specs/0012-publication-workflow/implementation/prerequisite-closeout-20261018/coverage.md, evidence/ and T-0022-landing.json for per-criterion evidence. Both target native readbacks pass; common1071 identities, all111 staging blog paths, all50 candidate paths, published-only main and immutable contracts are preserved. Earlier pending/review statements remain historical checkpoints. Status is now done for this repair only; actual remote capability/P13 is still NOT RUN and T-0016 remains review. No production merge, activation or deployment-setting change accompanies this closure.

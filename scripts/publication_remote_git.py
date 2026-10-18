@@ -97,7 +97,7 @@ def validate_operation(operation, head, registry, runtime, runtime_digest, outpu
     import os
     import subprocess
     import publication_current as current
-    if any(os.environ.get(key) for key in ('PUBLICATION_WRITER_TOKEN', 'GH_TOKEN', 'GITHUB_TOKEN')):
+    if any(os.environ.get(key) for key in ('PUBLICATION_WRITER_TOKEN', 'PUBLICATION_REPORTER_TOKEN', 'GH_TOKEN', 'GITHUB_TOKEN')):
         raise ValueError('validation must not receive writer or API credentials')
     expected = operation_for(operation['repository'], operation['policy'], operation, operation['tree'])
     if operation != expected:

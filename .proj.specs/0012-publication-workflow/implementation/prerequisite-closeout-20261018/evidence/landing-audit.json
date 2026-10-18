@@ -1,0 +1,17 @@
+{
+  "surface": "actual fetched remote Git history and complete tree identities; no new delivery or deployment",
+  "main": "64b31a2c38959ef5490892fa2a001bb0bf2f8ca0",
+  "staging": "d2e59426fe545116f2c2b637fc6f181dcfcdbaf5",
+  "PR33_reviewed_head": "2f2983d363e1dcb7a13506fc5f1022bde0e875bb",
+  "same_tree_as_complete_238_and_unit87_checkpoint": true,
+  "tree": "7f7233f61cfd42f1528182963ea2f40d6d656d67",
+  "common_equal_main": 1071,
+  "staging_blog_paths_preserved": 111,
+  "candidate_paths_preserved": 50,
+  "protected_history_paths_preserved": 426,
+  "main_published_blog_unchanged": true,
+  "no_new_active_workflows_or_deploy_changes": true,
+  "main_PRs29_30_31_32_ancestors_of_both_targets": true,
+  "status_changes_written": false,
+  "P13": "NOT RUN"
+}

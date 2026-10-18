@@ -1,0 +1,18 @@
+test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check (article_publication.test_head_reporting.HeadReportingTests.test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check)
+PC-01: dispatched main run is distinct from the independently read candidate. ... ERROR
+
+======================================================================
+ERROR: test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check (article_publication.test_head_reporting.HeadReportingTests.test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check)
+PC-01: dispatched main run is distinct from the independently read candidate.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 95, in test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check
+    result=self.report()
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 89, in report
+    import publication_reporting as reporting
+ModuleNotFoundError: No module named 'publication_reporting'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.309s
+
+FAILED (errors=1)

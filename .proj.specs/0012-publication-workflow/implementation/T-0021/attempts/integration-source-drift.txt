@@ -1,0 +1,18 @@
+test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (article_publication.test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags. ... FAIL
+
+======================================================================
+FAIL: test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (article_publication.test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 307, in test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission
+    native=w.cli(native=True);self.assertEqual(native.returncode,0,native.stdout+native.stderr)
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: changed current reconciliation source: tests/article_publication/test_head_reporting.py
+
+
+----------------------------------------------------------------------
+Ran 1 test in 4.706s
+
+FAILED (failures=1)

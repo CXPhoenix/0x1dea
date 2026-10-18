@@ -1,0 +1,13 @@
+test_candidate_head_drift_expires_old_readiness_before_or_after_reporting (article_publication.test_head_reporting.HeadReportingTests.test_candidate_head_drift_expires_old_readiness_before_or_after_reporting)
+PC-04: H1→H2 cannot reuse an H1 success or attempt any merge. ... ok
+test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check (article_publication.test_head_reporting.HeadReportingTests.test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check)
+PC-01: dispatched main run is distinct from the independently read candidate. ... ok
+test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success (article_publication.test_head_reporting.HeadReportingTests.test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success)
+PC-02: ack-only and ambiguous run inventory cannot become candidate success. ... ok
+test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries)
+PC-03: a configured reporter is separate from writer/build authority. ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 2.908s
+
+OK
