@@ -1,0 +1,9 @@
+test_confirmed_check_id_and_journal_identity_are_pinned_across_calls (article_publication.test_head_reporting.HeadReportingTests.test_confirmed_check_id_and_journal_identity_are_pinned_across_calls)
+PC-07 review regression: a replacement check is not the confirmed identity. ... ok
+test_independent_non_bypass_observation_is_required_and_config_drift_expires_it (article_publication.test_head_reporting.HeadReportingTests.test_independent_non_bypass_observation_is_required_and_config_drift_expires_it)
+PC-05 review regression: standard role plus complete inherited bypass inventory. ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 2.327s
+
+OK

@@ -1,0 +1,15 @@
+{
+  "snapshot": "T21-source-v3-review",
+  "reason": "C3 durable first-known identity retry gap; interrupted before source correction, not passing evidence",
+  "roots": [
+    95562,
+    95728
+  ],
+  "owned_pids": [
+    95562,
+    95728,
+    98462,
+    98765,
+    98771
+  ]
+}

@@ -1,0 +1,5 @@
+test_existing_allowed_sources_are_still_immutable (harness_adoption.test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) ... ok
+test_generated_output_symlink_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_generated_output_symlink_is_rejected) ... ok
+test_git_history_overlays_are_rejected (harness_adoption.test_main_release.MainReleaseTests.test_git_history_overlays_are_rejected) ... ok
+test_ignored_compilable_source_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_ignored_compilable_source_is_rejected) ... ok
+test_listing_successor_is_exact_and_required (harness_adoption.test_main_release.MainReleaseTests.test_listing_successor_is_exact_and_required) ... 

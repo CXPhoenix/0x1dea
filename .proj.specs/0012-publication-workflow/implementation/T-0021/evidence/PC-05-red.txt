@@ -1,0 +1,124 @@
+test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness)
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... 
+  test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='missing-strict')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... FAIL
+  test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='wrong-check')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... FAIL
+  test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='wrong-app')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... FAIL
+  test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='admins-bypass')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... FAIL
+  test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='admin-actor')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... FAIL
+  test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='wrong-actor')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... FAIL
+  test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='protection-after')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... FAIL
+test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness)
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... FAIL
+
+======================================================================
+FAIL: test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='missing-strict')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 205, in test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 81}
+
+======================================================================
+FAIL: test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='wrong-check')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 205, in test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 81}
+
+======================================================================
+FAIL: test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='wrong-app')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 205, in test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 81}
+
+======================================================================
+FAIL: test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='admins-bypass')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 205, in test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 81}
+
+======================================================================
+FAIL: test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='admin-actor')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 205, in test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 81}
+
+======================================================================
+FAIL: test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='wrong-actor')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 205, in test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 81}
+
+======================================================================
+FAIL: test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness) (case='protection-after')
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 205, in test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 81}
+
+======================================================================
+FAIL: test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness)
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 215, in test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness
+    self.assertIn('live capability',result['reason'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'live capability' not found in 'report binding/permission/outcome not established'
+
+----------------------------------------------------------------------
+Ran 1 test in 1.501s
+
+FAILED (failures=8)

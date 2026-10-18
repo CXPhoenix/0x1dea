@@ -1,0 +1,20 @@
+test_unknown_write_is_read_back_without_duplicate_and_old_results_are_not_locks (article_publication.test_head_reporting.HeadReportingTests.test_unknown_write_is_read_back_without_duplicate_and_old_results_are_not_locks)
+PC-07: durable unknown-outcome recovery and repeated decision revalidation. ... FAIL
+
+======================================================================
+FAIL: test_unknown_write_is_read_back_without_duplicate_and_old_results_are_not_locks (article_publication.test_head_reporting.HeadReportingTests.test_unknown_write_is_read_back_without_duplicate_and_old_results_are_not_locks)
+PC-07: durable unknown-outcome recovery and repeated decision revalidation.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 258, in test_unknown_write_is_read_back_without_duplicate_and_old_results_are_not_locks
+    self.assertEqual(first['status'],'ready',first)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'blocked' != 'ready'
+- blocked
++ ready
+ : {'status': 'blocked', 'local_ready': False, 'live_ready': False, 'publishable': False, 'reason': 'report binding/permission/outcome not established', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': True}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.451s
+
+FAILED (failures=1)

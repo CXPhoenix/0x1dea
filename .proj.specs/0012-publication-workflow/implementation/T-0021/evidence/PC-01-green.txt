@@ -1,0 +1,7 @@
+test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check (article_publication.test_head_reporting.HeadReportingTests.test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check)
+PC-01: dispatched main run is distinct from the independently read candidate. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.455s
+
+OK

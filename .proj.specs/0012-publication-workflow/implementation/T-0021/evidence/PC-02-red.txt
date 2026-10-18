@@ -1,0 +1,22 @@
+test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success (article_publication.test_head_reporting.HeadReportingTests.test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success)
+PC-02: ack-only and ambiguous run inventory cannot become candidate success. ... 
+  test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success (article_publication.test_head_reporting.HeadReportingTests.test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success) (case='duplicate')
+PC-02: ack-only and ambiguous run inventory cannot become candidate success. ... FAIL
+
+======================================================================
+FAIL: test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success (article_publication.test_head_reporting.HeadReportingTests.test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success) (case='duplicate')
+PC-02: ack-only and ambiguous run inventory cannot become candidate success.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 131, in test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'check_id': 81}
+
+----------------------------------------------------------------------
+Ran 1 test in 1.092s
+
+FAILED (failures=1)

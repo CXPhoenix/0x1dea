@@ -1,0 +1,46 @@
+test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding (article_publication.test_head_reporting.HeadReportingTests.test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding)
+PC-06: unchanged candidate head cannot preserve an outdated source binding. ... 
+  test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding (article_publication.test_head_reporting.HeadReportingTests.test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding) (case='main-during-read')
+PC-06: unchanged candidate head cannot preserve an outdated source binding. ... FAIL
+  test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding (article_publication.test_head_reporting.HeadReportingTests.test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding) (case='policy')
+PC-06: unchanged candidate head cannot preserve an outdated source binding. ... FAIL
+  test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding (article_publication.test_head_reporting.HeadReportingTests.test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding) (case='workflow')
+PC-06: unchanged candidate head cannot preserve an outdated source binding. ... FAIL
+
+======================================================================
+FAIL: test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding (article_publication.test_head_reporting.HeadReportingTests.test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding) (case='main-during-read')
+PC-06: unchanged candidate head cannot preserve an outdated source binding.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 247, in test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'fresh_validation_required': False, 'check_id': 81}
+
+======================================================================
+FAIL: test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding (article_publication.test_head_reporting.HeadReportingTests.test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding) (case='policy')
+PC-06: unchanged candidate head cannot preserve an outdated source binding.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 248, in test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding
+    self.assertIn('main' if case.startswith('main') else case,result['reason'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'policy' not found in 'main drift; fresh independent validation required'
+
+======================================================================
+FAIL: test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding (article_publication.test_head_reporting.HeadReportingTests.test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding) (case='workflow')
+PC-06: unchanged candidate head cannot preserve an outdated source binding.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 248, in test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding
+    self.assertIn('main' if case.startswith('main') else case,result['reason'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'workflow' not found in 'main drift; fresh independent validation required'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.609s
+
+FAILED (failures=3)

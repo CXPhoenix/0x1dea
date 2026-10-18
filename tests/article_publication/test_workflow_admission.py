@@ -47,7 +47,7 @@ class WorkflowAdmissionTests(unittest.TestCase):
         self.main = self.git('hash-object', '-t', 'commit', '-w', '--stdin', data=raw).strip().decode()
         self.git('update-ref', 'HEAD', self.main)
         self.git('update-ref', 'refs/heads/main', self.main)
-        self.git('update-ref', 'refs/heads/staging', '05fc16c30f978bbafab4b8cc89f24f8657ab3045')
+        self.git('update-ref', 'refs/heads/staging', 'd2e59426fe545116f2c2b637fc6f181dcfcdbaf5')
         self.grant = {'version':1, 'repository':'owner/example', 'main':self.main,
                       'policies':dict.fromkeys(('main','staging'), hashlib.sha256((self.control/POLICY).read_bytes()).hexdigest()),
                       'roles':['main','staging'], 'approval':'owner-approved-local-fixture',

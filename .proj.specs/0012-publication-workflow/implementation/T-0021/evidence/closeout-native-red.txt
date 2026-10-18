@@ -1,0 +1,1 @@
+FAIL: missing/invalid landing evidence: /private/tmp/T21-closeout-initial-projection/main/.proj.tickets/0010-main-verification-repair/T-0012-ticket-evidence-closeout.md

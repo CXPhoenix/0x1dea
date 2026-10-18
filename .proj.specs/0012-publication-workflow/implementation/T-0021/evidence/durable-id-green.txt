@@ -1,0 +1,7 @@
+test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call (test_head_reporting.HeadReportingTests.test_first_observed_or_acknowledged_check_id_cannot_change_during_one_call)
+PC-07: initial inventory, pending recovery and known POST all pin identity. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 1.573s
+
+OK

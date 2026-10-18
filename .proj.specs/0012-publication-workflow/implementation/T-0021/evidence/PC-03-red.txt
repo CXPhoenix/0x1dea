@@ -1,0 +1,67 @@
+test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries)
+PC-03: a configured reporter is separate from writer/build authority. ... 
+  test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries) (role='writer', app=15368)
+PC-03: a configured reporter is separate from writer/build authority. ... FAIL
+  test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries) (role='validator', app=15368)
+PC-03: a configured reporter is separate from writer/build authority. ... FAIL
+  test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries) (role='reporter', app=99)
+PC-03: a configured reporter is separate from writer/build authority. ... FAIL
+test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries)
+PC-03: a configured reporter is separate from writer/build authority. ... ERROR
+
+======================================================================
+ERROR: test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries)
+PC-03: a configured reporter is separate from writer/build authority.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 150, in test_reporter_role_identity_permission_and_credential_boundaries
+    validator.validate_operation({},self.head,{}, {},'0'*64,self.f.root/'must-not-build')
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-T0021/scripts/publication_remote_git.py", line 102, in validate_operation
+    expected = operation_for(operation['repository'], operation['policy'], operation, operation['tree'])
+                             ~~~~~~~~~^^^^^^^^^^^^^^
+KeyError: 'repository'
+
+======================================================================
+FAIL: test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries) (role='writer', app=15368)
+PC-03: a configured reporter is separate from writer/build authority.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 145, in test_reporter_role_identity_permission_and_credential_boundaries
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'check_id': 81}
+
+======================================================================
+FAIL: test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries) (role='validator', app=15368)
+PC-03: a configured reporter is separate from writer/build authority.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 145, in test_reporter_role_identity_permission_and_credential_boundaries
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'check_id': 81}
+
+======================================================================
+FAIL: test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries) (role='reporter', app=99)
+PC-03: a configured reporter is separate from writer/build authority.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 145, in test_reporter_role_identity_permission_and_credential_boundaries
+    self.assertEqual(result['status'],'blocked',result)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ready' != 'blocked'
+- ready
++ blocked
+ : {'status': 'ready', 'local_ready': True, 'live_ready': False, 'publishable': False, 'reason': 'exact successful candidate check observed; local observation only', 'surface': 'local API contract; live enforcement unverified', 'check_id': 81}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.754s
+
+FAILED (failures=3, errors=1)

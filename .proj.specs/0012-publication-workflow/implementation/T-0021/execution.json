@@ -1,0 +1,108 @@
+{
+  "scope": "local source-v5 implementation and explicit original contracts; not actual GitHub/P13 enforcement",
+  "snapshot_sha256": "7c5352346dc6954c13c749b31cd8fd71ce0bfe6595d4b92743cac30f2087c7a0",
+  "tested_policy_sha256": "b3dcf834aabc9b9ef3b7379982a85d9a21b4a93bd565d040a6f660811ffcaf3b",
+  "code_identities": {
+    "scripts/publication_reporting.py": "62709e51fbe11f532c555d508ee1353baa9f996c9ad1193382cebba279299275",
+    "scripts/publication_current.py": "9a427b543a39d3bfc9f85c96fbcff32a272e3bb01f835c27a4336ebe93599752",
+    "scripts/publication_remote_git.py": "bf031ffb2b2bb1213113c605c4e1f72e8636572690de4016d5c535138c991ae8",
+    "scripts/run-current-python-tests.py": "b0efd41c0f220571747de311f3e910639fbf0c2137fa17d8c798841e9149e377",
+    "tests/article_publication/test_head_reporting.py": "3d6f06f366fcf8a04404c9369f0e5c31aefa1be46366209e16bf042363ac20a4",
+    "tests/article_publication/test_workflow_admission.py": "2a5465298d8415d2b9330ce2ce771061cd8e91a8a4734510b46161b167df3778",
+    "tests/article_publication/test_current_runner.py": "7ee1a4a56656d1ffba2ca1863d2272a26ba7032e68d5486b8ff28d22308d1cec",
+    "tests/article_publication/test_current_history_context.py": "bd6ce3ff96ae8fdd9bbaea4e5f15b4e3a0557581b52f20bdd72db95a2e4c2f86"
+  },
+  "results": {
+    "main": {
+      "exit": 0,
+      "harness_live": 66,
+      "publication_live": 146,
+      "frozen_PR22": 10,
+      "frozen_PR32": 14,
+      "total": 236,
+      "isolated_builds": [
+        {
+          "path": ".proj.specs/0012-publication-workflow/implementation/T-0021/evidence/full-main-T16-fixture-pr32.json",
+          "sha256": "68e44674449ba2675ed1578212dc94662e402c45933a18f0289a0d76bf505fbf"
+        },
+        {
+          "path": ".proj.specs/0012-publication-workflow/implementation/T-0021/evidence/full-main-T16-0x1dea-T0021.json",
+          "sha256": "a5d510e038b8c62878bfda89a3592f82297298dbd998f5fb57227d19b44462f4"
+        }
+      ]
+    },
+    "staging": {
+      "exit": 0,
+      "harness_live": 95,
+      "publication_live": 146,
+      "frozen_PR22": 10,
+      "frozen_PR32": 14,
+      "total": 265,
+      "isolated_builds": [
+        {
+          "path": ".proj.specs/0012-publication-workflow/implementation/T-0021/evidence/full-stage-T16-fixture-pr32.json",
+          "sha256": "7db0c49fcd767dcd033824cbce67b1552dcdc465194b530b799d8e34f339c96e"
+        },
+        {
+          "path": ".proj.specs/0012-publication-workflow/implementation/T-0021/evidence/full-stage-T16-T21-final-retained-stage-preview.json",
+          "sha256": "f160bdafbe51401e22ff4fc6bfb35393d2648144c25ec8ec9232f81b4ca8096b"
+        }
+      ]
+    }
+  },
+  "focused": {
+    "PC01_07": 12,
+    "current_original_assertions": 14,
+    "PR32_original_assertions": 14,
+    "runner_guard_methods": 2,
+    "guard_mutations": 12
+  },
+  "website": {
+    "main_unit": 54,
+    "staging_unit": 87,
+    "lint": "pass on both",
+    "build": "pass on both",
+    "checkpoint": "source-v4 website bytes, unchanged through source-v5; not browser/device validation"
+  },
+  "source_reviews": {
+    "Standards_new": [
+      0,
+      0,
+      0
+    ],
+    "Spec": [
+      0,
+      0,
+      0
+    ],
+    "security_HIGH_MEDIUM": [
+      0,
+      0
+    ],
+    "historical_accepted_P2": "STD-V2-01",
+    "resolved_label_P2": "STD-V4-01"
+  },
+  "final_metadata_review": {
+    "status": "pass",
+    "snapshot_sha256": "a950ca7a300cb05e9fc6c7cb3707f7c4196a697f61efd71863b501971fb5bba7",
+    "Standards_new": [
+      0,
+      0,
+      0
+    ],
+    "Spec_new": [
+      0,
+      0,
+      0
+    ],
+    "historical_accepted_P2": "STD-V2-01",
+    "record": "final-review.md"
+  },
+  "T0016": "review",
+  "T0021": "review; actual engineering landings pending",
+  "P13": "NOT RUN",
+  "merged": false,
+  "production_automation_enabled": false,
+  "deployment_settings_changed": false,
+  "post_test_changes": "records, ticket review state and exact policy hashes only; code/test bytes identical; fresh post-record native/readback required"
+}

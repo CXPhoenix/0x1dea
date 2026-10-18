@@ -2,8 +2,9 @@
 id: T-0019
 title: Admit only approved workflow identities through the engineering successor
 epic: 0012-publication-workflow
-status: review
+status: done
 blocked_by: []
+landing_evidence: .proj.specs/0012-publication-workflow/implementation/prerequisite-closeout-20261018/T-0019-landing.json
 ---
 
 ## Context
@@ -20,8 +21,8 @@ A maintainer can supply an independently approved finite workflow identity to a 
 
 - [x] Meet supplement A1: trusted repository/main/roles/path/mode/hash approval at native validation and preparation, no grant retains original refusal.
 - [x] Meet A2: all listed identity/path/type/authority mutations refuse at each public entry; preparation does not execute workflows.
-- [ ] Meet A3 and K1–K3: projections/readback and drift refusal, candidates and historical contracts retained; inert fixtures only.
-- [ ] Demonstrate allocated PA-01–06 subcases, approved coverage, standards/spec/security review, and separately authorized actual engineering landings before done.
+- [x] Meet A3 and K1–K3: projections/readback and drift refusal, candidates and historical contracts retained; inert fixtures only.
+- [x] Demonstrate allocated PA-01–06 subcases, approved coverage, standards/spec/security review, and separately authorized actual engineering landings before done.
 
 ## Approved test plan
 
@@ -58,3 +59,7 @@ PA-06 exposed22 existing source-bound stage management records missing from main
 ## Historical CLI corrective checkpoint — 2026-10-16
 
 The separately authorized main PRs #29, #30 and #31 landed. Retained staging-only historical tests exposed a current-only import dependency in the original three-file CLI overlay. This continuation preserves A1/A3, PA-06 and K1 on the same branch/allocation, adds one public regression method, and retains every original historical assertion/oracle/receipt. See implementation/T-0019/historical-cli-repair-20261016/{README.md,coverage.md,execution.json,review.md} for the cause, raw red/final results and independent review. A first corrective pre-parse version was replaced; its interrupted long runs are not passing evidence. The final source uses trusted CONTROL to register parser dependencies and restores full parsing before target Git access. This repair PR is not yet authorized to merge. Staging synchronization remains held until the repair's actual authorized main landing and separate staging verification. Status remains review; P13 is NOT RUN and production automation/deployment settings remain unchanged.
+
+## Conditional actual dual-target closeout — 2026-10-18
+
+All allocated local prerequisite rows and independent reviews are complete; the main engineering PR and staging PR33 actually landed. T-0019 also includes the separately authorized PR32 historical CLI correction. See .proj.specs/0012-publication-workflow/implementation/prerequisite-closeout-20261018/coverage.md, evidence/ and T-0019-landing.json for per-criterion evidence. Both target native readbacks pass; common1071 identities, all111 staging blog paths, all50 candidate paths, published-only main and immutable contracts are preserved. Earlier pending/review statements remain historical checkpoints. Status is now done for this repair only; actual remote capability/P13 is still NOT RUN and T-0016 remains review. No production merge, activation or deployment-setting change accompanies this closure.
