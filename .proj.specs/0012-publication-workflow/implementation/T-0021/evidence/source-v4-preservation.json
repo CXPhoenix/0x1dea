@@ -1,0 +1,21 @@
+{
+  "surface": "prospective local main/staging source-v4 Git trees only; no remote mutation",
+  "actual_main": "64b31a2c38959ef5490892fa2a001bb0bf2f8ca0",
+  "actual_staging": "d2e59426fe545116f2c2b637fc6f181dcfcdbaf5",
+  "main_tree": "25c6ce6106b366d93ff54ef9a502be973b5fd80b",
+  "synthetic_main": "b461adcdf872d2afc0df03b100f3c453f9a7af54",
+  "staging_tree": "8d1ac78cea136c58a02a5b20cb6e0ec21090e900",
+  "synthetic_staging": "d2f1a1022b4d4aa6cff7c7388fa941dba67b38db",
+  "main_blog_preserved": true,
+  "staging_blog_preserved": true,
+  "P13": "NOT RUN",
+  "history_maintenance_paths_preserved": 557,
+  "candidate_paths_preserved": 50,
+  "main_blog_paths_preserved": 73,
+  "staging_blog_paths_preserved": 111,
+  "historical_frozen_test_unchanged": true,
+  "active_github_sources_unchanged": true,
+  "source_v4_manifest_unchanged": true,
+  "actual_main_not_mutated": true,
+  "actual_staging_not_mutated": true
+}

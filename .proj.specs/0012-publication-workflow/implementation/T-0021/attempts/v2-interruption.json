@@ -1,0 +1,16 @@
+{
+  "snapshot": "T21-source-v2-review",
+  "reason": "Spec C3/PC07 same-call identity drift requires source correction; partial runs are not passes",
+  "root_pids": [
+    84696,
+    84794
+  ],
+  "stopped_owned_pids": [
+    84696,
+    84794,
+    89536,
+    89689,
+    89730,
+    89752
+  ]
+}

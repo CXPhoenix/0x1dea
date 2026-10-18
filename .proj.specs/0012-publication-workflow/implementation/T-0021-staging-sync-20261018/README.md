@@ -1,0 +1,13 @@
+# T-0021 engineering synchronization to staging
+
+The owner reported PR #34 merged and authorized synchronizing the same T-0019/T-0020/T-0022 closeouts and T-0021 fixes to staging, completing tests and review, then commit/non-force push/a staging PR. No merge, production activation or deployment-setting change is authorized. T-0021 and T-0016 remain review; P13 NOT RUN.
+
+Actual main source is `6b7da901a50d9ffacd50984e78a95838a68881ab`, merged PR #34 head `9192ff8639c32410f6428167c640a0afd14a9f8c`. Staging base is `d2e59426fe545116f2c2b637fc6f181dcfcdbaf5`. An isolated full-history clone prepares a two-parent integration; there are no conflicts. All126 initial changed paths equal main exactly, and all8 core code/test identities match the tested/reviewed main payload. The original user checkout is untouched.
+
+The approved existing test allocation is reused, without new behavior, test seams or assertions. The complete fresh staging Python command passes95 live Harness+146 live publication+10 original #22+14 original #32=265 tests; the two historical contexts and current original assertions remain explicit. Website87 tests, lint and build pass. The full Python command includes two successful trusted isolated builds with the original deny-default probes. See coverage.md, execution.json and raw evidence/.
+
+The tested source is the3167-path initial merged source with tree `4ed11957622b944ef798e2ab4eb638d6989619c5`, before adding this finite execution/review evidence and refreshing its exact policy hashes. These later metadata additions do not change the8 code/test identities, article bytes or original history contracts. Final native and preservation rechecks and independent evidence review are separate checkpoints; no complete-suite-after-metadata claim is made.
+
+Preserve all111 staging blog paths,50 candidate paths and557 existing maintenance paths except the evolving engineering policy. The M0 inventory, original five historical test modules, receipt/oracle/alias contracts and T-0016 bytes remain unchanged. No blog, .github, active workflow, account/credential/rules or deployment-source increment. Local REST replay/CLI/build evidence is not actual GitHub/P13 enforcement; live_ready/publishable remain false. Actual target landing remains pending until the owner separately merges the resulting PR.
+
+Final independent evidence supplement is complete: Standards/Spec newP0/P1/P2=0/0/0 and securityHIGH/MEDIUM=0/0 on the3189-entry packet. See ../../review/code-T-0021-stage-sync-20261018.md and security-T-0021-stage-sync-20261018.md. The only subsequent edits save these conclusions and exact hashes; final native/preservation and actual delivery readbacks remain separate.

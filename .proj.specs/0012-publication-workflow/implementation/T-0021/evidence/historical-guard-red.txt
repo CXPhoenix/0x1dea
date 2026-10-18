@@ -1,0 +1,151 @@
+test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import)
+K1: frozen selection never hides changed/missing/linked current test bytes. ... 
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closed_baseline.py', mutation='bytes')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closed_baseline.py', mutation='missing')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closed_baseline.py', mutation='symlink')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closeout_successor.py', mutation='bytes')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closeout_successor.py', mutation='missing')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closeout_successor.py', mutation='symlink')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_landed_closeout.py', mutation='bytes')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_landed_closeout.py', mutation='missing')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_landed_closeout.py', mutation='symlink')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_remote_validation.py', mutation='bytes')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_remote_validation.py', mutation='missing')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+  test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_remote_validation.py', mutation='symlink')
+K1: frozen selection never hides changed/missing/linked current test bytes. ... FAIL
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closed_baseline.py', mutation='bytes')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closed_baseline.py', mutation='missing')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closed_baseline.py', mutation='symlink')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closeout_successor.py', mutation='bytes')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closeout_successor.py', mutation='missing')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_closeout_successor.py', mutation='symlink')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_landed_closeout.py', mutation='bytes')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_landed_closeout.py', mutation='missing')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_landed_closeout.py', mutation='symlink')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_remote_validation.py', mutation='bytes')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_remote_validation.py', mutation='missing')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+======================================================================
+FAIL: test_changed_pr32_contracts_are_rejected_before_any_test_import (test_current_runner.CurrentRunnerTests.test_changed_pr32_contracts_are_rejected_before_any_test_import) (module='test_remote_validation.py', mutation='symlink')
+K1: frozen selection never hides changed/missing/linked current test bytes.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_current_runner.py", line 50, in test_changed_pr32_contracts_are_rejected_before_any_test_import
+    self.assertIn('changed PR32 frozen test contract',result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'changed PR32 frozen test contract' not found in ''
+
+----------------------------------------------------------------------
+Ran 1 test in 0.924s
+
+FAILED (failures=12)

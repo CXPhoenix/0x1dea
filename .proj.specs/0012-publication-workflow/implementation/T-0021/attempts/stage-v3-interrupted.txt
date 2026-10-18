@@ -1,0 +1,3 @@
+test_existing_allowed_sources_are_still_immutable (harness_adoption.test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) ... ok
+test_generated_output_symlink_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_generated_output_symlink_is_rejected) ... ok
+test_git_history_overlays_are_rejected (harness_adoption.test_main_release.MainReleaseTests.test_git_history_overlays_are_rejected) ... 

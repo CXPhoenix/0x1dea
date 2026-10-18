@@ -1,0 +1,19 @@
+test_candidate_head_drift_expires_old_readiness_before_or_after_reporting (article_publication.test_head_reporting.HeadReportingTests.test_candidate_head_drift_expires_old_readiness_before_or_after_reporting)
+PC-04: H1→H2 cannot reuse an H1 success or attempt any merge. ... ok
+test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check (article_publication.test_head_reporting.HeadReportingTests.test_exact_trusted_success_reports_only_candidate_head_and_reads_back_check)
+PC-01: dispatched main run is distinct from the independently read candidate. ... ok
+test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding (article_publication.test_head_reporting.HeadReportingTests.test_main_policy_workflow_drift_keeps_candidate_head_but_expires_binding)
+PC-06: unchanged candidate head cannot preserve an outdated source binding. ... ok
+test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success (article_publication.test_head_reporting.HeadReportingTests.test_non_success_missing_duplicate_and_wrong_run_bindings_never_report_success)
+PC-02: ack-only and ambiguous run inventory cannot become candidate success. ... ok
+test_reporter_role_identity_permission_and_credential_boundaries (article_publication.test_head_reporting.HeadReportingTests.test_reporter_role_identity_permission_and_credential_boundaries)
+PC-03: a configured reporter is separate from writer/build authority. ... ok
+test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness (article_publication.test_head_reporting.HeadReportingTests.test_staging_or_capability_drift_and_local_only_evidence_refuse_live_readiness)
+PC-05: strict/source/actor requirements are observed, never asserted by candidate data. ... ok
+test_unknown_write_is_read_back_without_duplicate_and_old_results_are_not_locks (article_publication.test_head_reporting.HeadReportingTests.test_unknown_write_is_read_back_without_duplicate_and_old_results_are_not_locks)
+PC-07: durable unknown-outcome recovery and repeated decision revalidation. ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 6.668s
+
+OK

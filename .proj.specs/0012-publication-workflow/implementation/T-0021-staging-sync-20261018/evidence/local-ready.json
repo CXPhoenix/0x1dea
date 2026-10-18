@@ -1,0 +1,39 @@
+{
+  "approval_sha256": "ce191a9d4229fce5c452fba82ca8dcb472926a8c20d07eb43670144dceb01c25",
+  "authority": "local exact candidate ready for separately authorized PR; no merge/publication authority",
+  "build_sha256": "24101fb328eccefd86f7a421598d38f342457ad0d80128675561860b2bf611a3",
+  "candidate_tree": "5efa0df6453d6a32e803cddd96a5c39e1c3c47a4",
+  "files": {
+    "blog/.vitepress/config.mts": {
+      "mode": "100644",
+      "sha256": "a1ef690cd4093f7f61d7d5d06205abaabecae6244287e59cac713a60006d4f3c"
+    },
+    "blog/index.md": {
+      "mode": "100644",
+      "sha256": "5ebd63183514bef23e999d6b248358201339279c87080729ff2e67cd0a9e0368"
+    },
+    "blog/post/A.md": {
+      "mode": "100644",
+      "sha256": "eba0ed7b271a596abfb6da8c7185094a42e4c73e1fe853d6d2638fa4c83fe737"
+    }
+  },
+  "mode": "ready",
+  "plan_sha256": "9f28ea668c8ab6ffbb9912aa9c58a48a50580eb53a1fd00f30ff57e287c1113a",
+  "pr_ready": true,
+  "primary_source_verification": "pass",
+  "publishable": false,
+  "registry_sha256": "a2adf975af6ab2dc0db78ebf5da379cfeae9b75f060cd1ff41dd5de1d3e7bf7d",
+  "source_scan": {
+    "asset_signature_count": 0,
+    "forbidden_routes": [
+      "/post/B",
+      "/post/B.html",
+      "/post/B.md"
+    ],
+    "limits": "Supplementary signatures; exact source admission and candidate tree remain primary.",
+    "prose_signature_count": 1,
+    "status": "supplementary-pass",
+    "unverified_sources": []
+  },
+  "version": 2
+}

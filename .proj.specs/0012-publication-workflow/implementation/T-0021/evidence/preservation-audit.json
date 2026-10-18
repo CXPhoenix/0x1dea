@@ -1,0 +1,28 @@
+{
+  "surface": "prospective final execution local main/staging Git trees; no remote mutation",
+  "execution_snapshot_sha256": "7c5352346dc6954c13c749b31cd8fd71ce0bfe6595d4b92743cac30f2087c7a0",
+  "actual_main": "64b31a2c38959ef5490892fa2a001bb0bf2f8ca0",
+  "actual_staging": "d2e59426fe545116f2c2b637fc6f181dcfcdbaf5",
+  "main_tree": "cfd6e789894e122fda642c212deeb2eaa73c61dc",
+  "synthetic_main": "db658ec852fc7e727cb2a58af4cb8ff5de8cbab2",
+  "staging_tree": "2d69e80734e57ca77c362d5637688b1e8bc5bb70",
+  "synthetic_staging": "ab1584d7bbf14f6bd8d33e0bc7f2086787ff0bdd",
+  "main_blog_preserved": true,
+  "staging_blog_preserved": true,
+  "P13": "NOT RUN",
+  "source_snapshot_unchanged": true,
+  "source_manifest_entries": 2993,
+  "candidate_paths_preserved": 50,
+  "main_blog_paths_preserved": 73,
+  "stage_blog_paths_preserved": 111,
+  "maintenance_history_paths_preserved": {
+    "main": 550,
+    "staging": 557
+  },
+  "original_five_contract_modules_unchanged": true,
+  "changed_paths_count": 104,
+  "scope_paths_valid": true,
+  "no_github_or_blog_delta": true,
+  "T0016_status": "review",
+  "T0016_unchanged": true
+}

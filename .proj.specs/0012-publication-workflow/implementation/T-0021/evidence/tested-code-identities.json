@@ -1,0 +1,10 @@
+{
+  "scripts/publication_reporting.py": "62709e51fbe11f532c555d508ee1353baa9f996c9ad1193382cebba279299275",
+  "scripts/publication_current.py": "9a427b543a39d3bfc9f85c96fbcff32a272e3bb01f835c27a4336ebe93599752",
+  "scripts/publication_remote_git.py": "bf031ffb2b2bb1213113c605c4e1f72e8636572690de4016d5c535138c991ae8",
+  "scripts/run-current-python-tests.py": "b0efd41c0f220571747de311f3e910639fbf0c2137fa17d8c798841e9149e377",
+  "tests/article_publication/test_head_reporting.py": "3d6f06f366fcf8a04404c9369f0e5c31aefa1be46366209e16bf042363ac20a4",
+  "tests/article_publication/test_workflow_admission.py": "2a5465298d8415d2b9330ce2ce771061cd8e91a8a4734510b46161b167df3778",
+  "tests/article_publication/test_current_runner.py": "7ee1a4a56656d1ffba2ca1863d2272a26ba7032e68d5486b8ff28d22308d1cec",
+  "tests/article_publication/test_current_history_context.py": "bd6ce3ff96ae8fdd9bbaea4e5f15b4e3a0557581b52f20bdd72db95a2e4c2f86"
+}

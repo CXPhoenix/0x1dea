@@ -1,0 +1,43 @@
+test_candidate_head_drift_expires_old_readiness_before_or_after_reporting (article_publication.test_head_reporting.HeadReportingTests.test_candidate_head_drift_expires_old_readiness_before_or_after_reporting)
+PC-04: H1→H2 cannot reuse an H1 success or attempt any merge. ... 
+  test_candidate_head_drift_expires_old_readiness_before_or_after_reporting (article_publication.test_head_reporting.HeadReportingTests.test_candidate_head_drift_expires_old_readiness_before_or_after_reporting) (phase='before-write')
+PC-04: H1→H2 cannot reuse an H1 success or attempt any merge. ... FAIL
+  test_candidate_head_drift_expires_old_readiness_before_or_after_reporting (article_publication.test_head_reporting.HeadReportingTests.test_candidate_head_drift_expires_old_readiness_before_or_after_reporting) (phase='during-write')
+PC-04: H1→H2 cannot reuse an H1 success or attempt any merge. ... FAIL
+  test_candidate_head_drift_expires_old_readiness_before_or_after_reporting (article_publication.test_head_reporting.HeadReportingTests.test_candidate_head_drift_expires_old_readiness_before_or_after_reporting) (phase='after-readback')
+PC-04: H1→H2 cannot reuse an H1 success or attempt any merge. ... FAIL
+
+======================================================================
+FAIL: test_candidate_head_drift_expires_old_readiness_before_or_after_reporting (article_publication.test_head_reporting.HeadReportingTests.test_candidate_head_drift_expires_old_readiness_before_or_after_reporting) (phase='before-write')
+PC-04: H1→H2 cannot reuse an H1 success or attempt any merge.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 181, in test_candidate_head_drift_expires_old_readiness_before_or_after_reporting
+    self.assertIn('head',result['reason'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'head' not found in 'report binding/permission/outcome not established'
+
+======================================================================
+FAIL: test_candidate_head_drift_expires_old_readiness_before_or_after_reporting (article_publication.test_head_reporting.HeadReportingTests.test_candidate_head_drift_expires_old_readiness_before_or_after_reporting) (phase='during-write')
+PC-04: H1→H2 cannot reuse an H1 success or attempt any merge.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 181, in test_candidate_head_drift_expires_old_readiness_before_or_after_reporting
+    self.assertIn('head',result['reason'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'head' not found in 'report binding/permission/outcome not established'
+
+======================================================================
+FAIL: test_candidate_head_drift_expires_old_readiness_before_or_after_reporting (article_publication.test_head_reporting.HeadReportingTests.test_candidate_head_drift_expires_old_readiness_before_or_after_reporting) (phase='after-readback')
+PC-04: H1→H2 cannot reuse an H1 success or attempt any merge.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 181, in test_candidate_head_drift_expires_old_readiness_before_or_after_reporting
+    self.assertIn('head',result['reason'])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'head' not found in 'report binding/permission/outcome not established'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.643s
+
+FAILED (failures=3)

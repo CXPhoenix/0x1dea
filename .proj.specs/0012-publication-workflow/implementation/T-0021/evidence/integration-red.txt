@@ -1,0 +1,17 @@
+test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (article_publication.test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags. ... ERROR
+
+======================================================================
+ERROR: test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (article_publication.test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0021/tests/article_publication/test_head_reporting.py", line 335, in test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission
+    result=reporting.report_from_job(api,reporter,control=w.control,snapshot_root=job['snapshot_root'],binding_sha256=job['binding_sha256'],admission=admission,config=report_config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'publication_reporting' has no attribute 'report_from_job'
+
+----------------------------------------------------------------------
+Ran 1 test in 10.469s
+
+FAILED (errors=1)
