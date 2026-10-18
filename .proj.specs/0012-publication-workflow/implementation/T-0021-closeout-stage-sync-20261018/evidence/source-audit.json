@@ -1,0 +1,17 @@
+{
+  "status": "pass",
+  "stage_base": "500d02b88ade48485c825921780368bcf302ca10",
+  "main_source": "d9466840e893a175c764e84add99c423af04351b",
+  "initial_changed_paths": 41,
+  "main_payload_identical_except_union_policy": true,
+  "blog_paths_preserved": 111,
+  "candidate_paths_preserved": 50,
+  "protected_maintenance_paths_preserved": 557,
+  "core_identities_unchanged": 8,
+  "lab_evidence_digests": 19,
+  "T0021": "done",
+  "T0016": "review",
+  "P13": "blocked; actual run failure retained",
+  "no_product_or_workflow_delta": true,
+  "resolved_tree": "f12ddba35887d9e76c7a5dd174edde1057ca1eb0"
+}

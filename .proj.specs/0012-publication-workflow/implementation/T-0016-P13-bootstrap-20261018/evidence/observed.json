@@ -1,0 +1,43 @@
+{
+  "candidate_code_executed": false,
+  "image_os": "macos15",
+  "image_version": "20260907.0337.1",
+  "limited_roles_verified": false,
+  "live_ready": false,
+  "probe_id": "p13-757ac70a8daa73474b9ca675",
+  "product_validation_executed": false,
+  "publishable": false,
+  "repository": "CXPhoenix/0x1dea-publication-lab",
+  "requirements": {
+    "external_config_selected": false,
+    "node_exact": false,
+    "pnpm_exact": false,
+    "sandbox_exec_available": true,
+    "validator_job_digest_selected": false,
+    "writer_job_digest_selected": false
+  },
+  "runner_os": "macOS",
+  "status": "blocked",
+  "surface": "actual hosted bootstrap observation only",
+  "tools": {
+    "git": {
+      "available": true,
+      "exit": 0,
+      "version": "git version 2.55.0"
+    },
+    "node": {
+      "available": true,
+      "exit": 0,
+      "version": "v22.23.2"
+    },
+    "pnpm": {
+      "available": false
+    },
+    "python3": {
+      "available": true,
+      "exit": 0,
+      "version": "Python 3.14.7"
+    }
+  },
+  "version": 1
+}
