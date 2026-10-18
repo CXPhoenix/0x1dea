@@ -1,0 +1,68 @@
+name: P13 bounded bootstrap capability probe
+run-name: P13-bootstrap-${{ inputs.probe_id }}
+on:
+  workflow_dispatch:
+    inputs:
+      probe_id:
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: p13-bootstrap-${{ github.repository }}
+  cancel-in-progress: false
+jobs:
+  observe:
+    if: github.repository == 'CXPhoenix/0x1dea-publication-lab' && github.event_name == 'workflow_dispatch'
+    runs-on: macos-15
+    timeout-minutes: 2
+    steps:
+      - name: Observe preinstalled runtime and prerequisite presence without installation
+        env:
+          PROBE_ID: ${{ inputs.probe_id }}
+          CONFIG_PRESENT: ${{ vars.PUBLICATION_CONFIG_DIR != '' }}
+          VALIDATOR_JOB_DIGEST_PRESENT: ${{ vars.PUBLICATION_VALIDATOR_JOB_SHA256 != '' }}
+          WRITER_JOB_DIGEST_PRESENT: ${{ vars.PUBLICATION_WRITER_JOB_SHA256 != '' }}
+          COREPACK_ENABLE_NETWORK: '0'
+          COREPACK_ENABLE_AUTO_PIN: '0'
+          COREPACK_ENABLE_PROJECT_SPEC: '0'
+          COREPACK_ENABLE_DOWNLOAD_PROMPT: '0'
+          npm_config_offline: 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, re, shutil, subprocess, sys
+          probe = os.environ['PROBE_ID']
+          if not re.fullmatch(r'p13-[0-9a-f]{24}', probe):
+              raise SystemExit('invalid independent probe identity')
+          observed = {}
+          for tool in ('node', 'pnpm', 'python3', 'git'):
+              if not shutil.which(tool):
+                  observed[tool] = {'available': False}
+                  continue
+              try:
+                  result = subprocess.run([tool, '--version'], capture_output=True, text=True, timeout=10)
+                  version = result.stdout.strip()
+                  observed[tool] = {'available': True, 'exit': result.returncode,
+                      'version': version if re.fullmatch(r'[A-Za-z0-9 .()+_-]{1,100}', version) else 'unrecognized'}
+              except subprocess.TimeoutExpired:
+                  observed[tool] = {'available': True, 'timeout': True}
+          requirements = {
+              'node_exact': observed.get('node', {}).get('version') == 'v24.13.0',
+              'pnpm_exact': observed.get('pnpm', {}).get('version') == '10.28.0',
+              'sandbox_exec_available': bool(shutil.which('sandbox-exec')),
+              'external_config_selected': os.environ['CONFIG_PRESENT'] == 'true',
+              'validator_job_digest_selected': os.environ['VALIDATOR_JOB_DIGEST_PRESENT'] == 'true',
+              'writer_job_digest_selected': os.environ['WRITER_JOB_DIGEST_PRESENT'] == 'true',
+          }
+          record = {'version': 1, 'probe_id': probe, 'repository': 'CXPhoenix/0x1dea-publication-lab',
+              'runner_os': os.environ.get('RUNNER_OS'), 'image_os': os.environ.get('ImageOS'),
+              'image_version': os.environ.get('ImageVersion'), 'tools': observed,
+              'requirements': requirements, 'surface': 'actual hosted bootstrap observation only',
+              'candidate_code_executed': False, 'product_validation_executed': False,
+              'limited_roles_verified': False, 'live_ready': False, 'publishable': False,
+              'status': 'prerequisites-observed' if all(requirements.values()) else 'blocked'}
+          print('P13_BOOTSTRAP_RESULT=' + json.dumps(record, sort_keys=True), flush=True)
+          sys.exit(0 if all(requirements.values()) else 1)
+          PY

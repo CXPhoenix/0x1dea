@@ -1,0 +1,59 @@
+{
+  "evidence/intent.json": {
+    "sha256": "0bcf8668afa444e682ca26cb1c66f946cce149fdf1ffca4d2952dc92f4652335"
+  },
+  "evidence/rulesets.json": {
+    "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "evidence/repository.json": {
+    "sha256": "ab0246943c0823eca01bb1b22c94403263c5f8e1cce70d83320eed1f8affb06f"
+  },
+  "evidence/default-permissions.json": {
+    "sha256": "f6e178fc1e56cf43900da383f85398b61de9ae61c6b8433116c1856605745924"
+  },
+  "evidence/review-scope.json": {
+    "sha256": "841d153876824a15f3635d7ebc9af462b5cd302b2dbbb31f535d2a64a680c887"
+  },
+  "evidence/secrets-metadata.json": {
+    "sha256": "0c50ddcc4353f60a9107a6d428f5cb454f200f424ff0f7b7852fa5381de20764"
+  },
+  "evidence/workflows-after.json": {
+    "sha256": "57c21493729ef0c75f158169b8e9d336428f859e1af5a1ff53ae8417a35827b6"
+  },
+  "evidence/workflow-disabled.json": {
+    "sha256": "5badf0eefe0fe0965c652505b9030cf9006a0507d98aac4fbd0f376f68fee96e"
+  },
+  "evidence/lab-refs-before.txt": {
+    "sha256": "2b89f01c522175f884bc77f865aefa42756147ecf1e285b0d2c00b192685ab91"
+  },
+  "evidence/actors.json": {
+    "sha256": "6e38c89ba6b605fbf864e0bca206d902d5df65d72c2bfc55400edb93043e7bab"
+  },
+  "evidence/variables.json": {
+    "sha256": "3093a7aa074cc6702a3e806e502893e96149dc56c30ad5630358e2f042428421"
+  },
+  "evidence/lab-refs-after.txt": {
+    "sha256": "36d754f86aff8e5b0d36e848dd8e281a8114b2d4002284508c1701aaff8e7416"
+  },
+  "evidence/dispatch-response.txt": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence/reviewed-workflow.yml": {
+    "sha256": "3275d7add6b4b881bd6413f09dd885f1760f0ce672b95366c72b7755993ea168"
+  },
+  "evidence/run.json": {
+    "sha256": "cf6d7d33f0445718a3cc43ddb92ec397d2930c0afa6af07c030aff2affedca54"
+  },
+  "evidence/dispatch-request.json": {
+    "sha256": "8be257de2820feb215f29ed4aa6151a0bc1ea8df408fb886f62a71ba98dbc853"
+  },
+  "evidence/observed.json": {
+    "sha256": "5d37db5f468bded141da51a24a18271031caeff4fc630128653b30a7c3bc9c68"
+  },
+  "evidence/jobs.json": {
+    "sha256": "369e5ea89f02f4831a67fed0154a2044083f9a019ded299541df70deae9340ad"
+  },
+  "evidence/protection-after.json": {
+    "sha256": "f2322ed8943819acc4b261857a8b2f8bf2eedbe99d88331c0fb36dc9fa9030cc"
+  }
+}

@@ -2,7 +2,8 @@
 id: T-0021
 title: Report trusted validation on the exact PR head and expire stale readiness
 epic: 0012-publication-workflow
-status: review
+status: done
+landing_evidence: .proj.specs/0012-publication-workflow/implementation/T-0021-actual-closeout-20261018/landing.json
 blocked_by: [T-0019, T-0020]
 ---
 
@@ -22,7 +23,7 @@ A separate local trusted reporting adapter binds a completed successful run to t
 - [x] Meet C2: separate reporter identity/credential without expanding writer/build/merge/admin privileges or exposing credentials.
 - [x] Meet C3: before/after ref/report readback, unknown-result recovery and distinct head/staging/main/policy/workflow drift invalidation.
 - [x] Meet C4: independently observed strict/check-source/non-bypass capability is required for live readiness, local fixtures cannot satisfy it; no point-in-time observation is called a merge lock, base CAS or later-main guarantee.
-- [ ] Meet K1–K3 and PC-01–07; approved coverage, standards/spec/security review and separately authorized actual engineering landings before done. Actual enforcement remains P13; no rule/queue/workflow activation or merge here.
+- [x] Meet K1–K3 and PC-01–07; approved coverage, standards/spec/security review and separately authorized actual engineering landings before done. Actual enforcement remains P13; no rule/queue/workflow activation or merge here.
 
 ## Approved test plan — original registration checkpoint
 
@@ -50,3 +51,7 @@ The owner explicitly requested completing the conditional prerequisite closeouts
 Status review. Approved PC01-07 local behavior is implemented; focused12 and complete prospective-main236/retained-stage265 pass, including all current negatives, unchanged #22/#32 historical contracts and actual deny-default builds. Source Standards/Spec/security reviews have no unresolved implementation findings. Historical STD-V2-01 batching deviation remains recorded rather than rewritten as sequential TDD; the later coverage label inconsistency is corrected. Coverage/execution/reviews are in ../../.proj.specs/0012-publication-workflow/implementation/T-0021/.
 
 C1-C4 checkmarks describe the approved local contract only. Replayed API envelopes are not real platform capability evidence. The original registration NOT WRITTEN/NOT RUN/todo paragraphs above are historical and superseded by the explicit implementation authority and this checkpoint. The remaining combined acceptance item still requires separately authorized actual engineering landings on main and staging before done. T-0016 remains review; P13 NOT RUN. No production merge, automation activation or deployment change.
+
+## Conditional actual dual-target closeout — 2026-10-18
+
+The owner reported PR35 merged and requested conditional closeout. Actual main PR34 (6b7da90) and staging PR35 (500d02b) equal the reviewed heads by tree; all8 core code/test identities and local PC01-07 evidence/reviews match. Both actual target native readbacks pass, all candidate/article/history bytes and original test contracts are retained. See implementation/T-0021-actual-closeout-20261018/coverage.md, landing.json and evidence/. All local criteria plus actual engineering landings are met; status done. This local metadata update is not a new remote tracker delivery. Actual GitHub/P13 enforcement is outside this local ticket; T16 remains review and no production activation is authorized.

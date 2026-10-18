@@ -1,0 +1,16 @@
+{
+  "ticket": "T-0021",
+  "authorized": true,
+  "landed": true,
+  "target": "staging",
+  "commit": "500d02b88ade48485c825921780368bcf302ca10",
+  "main_commit": "6b7da901a50d9ffacd50984e78a95838a68881ab",
+  "main_validation_head": "9192ff8639c32410f6428167c640a0afd14a9f8c",
+  "staging_validation_head": "8473c5c0f20eaa2707010fab742024237e031a30",
+  "approval_receipt": ".proj.specs/0012-publication-workflow/implementation/T-0021-actual-closeout-20261018/approval.md",
+  "main_pr": 34,
+  "staging_pr": 35,
+  "main_mergedAt": "2026-10-18T05:50:49Z",
+  "staging_mergedAt": "2026-10-18T06:15:34Z",
+  "scope": "Actual approved engineering/management landings and PC01-07 local contract only; not actual P13 enforcement or production activation"
+}

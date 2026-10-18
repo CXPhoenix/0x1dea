@@ -1,0 +1,9 @@
+{
+  "probe_id": "p13-757ac70a8daa73474b9ca675",
+  "repository": "CXPhoenix/0x1dea-publication-lab",
+  "expected_main": "e7d6a9607e93dcd372ee57853540692c2185cff9",
+  "workflow": "p13-bootstrap-capability.yml",
+  "expected_workflow_sha256": "3275d7add6b4b881bd6413f09dd885f1760f0ce672b95366c72b7755993ea168",
+  "dispatch_budget": 1,
+  "job_timeout_minutes": 2
+}
