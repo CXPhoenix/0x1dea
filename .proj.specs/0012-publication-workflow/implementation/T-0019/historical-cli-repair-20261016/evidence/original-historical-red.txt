@@ -1,0 +1,22 @@
+test_00_clean_pinned_staging_reaches_successful_readonly_full_cli (test_reconciliation.ReconciliationTests.test_00_clean_pinned_staging_reaches_successful_readonly_full_cli) ... FAIL
+
+======================================================================
+FAIL: test_00_clean_pinned_staging_reaches_successful_readonly_full_cli (test_reconciliation.ReconciliationTests.test_00_clean_pinned_staging_reaches_successful_readonly_full_cli)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/T22-staging-same-tree-preview/tests/harness_adoption/test_reconciliation.py", line 37, in test_00_clean_pinned_staging_reaches_successful_readonly_full_cli
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/tmpniepcicr/candidate/scripts/verify-harness-adoption.py", line 66, in <module>
+    main()
+    ~~~~^^
+  File "/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/tmpniepcicr/candidate/scripts/verify-harness-adoption.py", line 47, in main
+    from publication_workflows import add_arguments, from_args
+ModuleNotFoundError: No module named 'publication_workflows'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 2.123s
+
+FAILED (failures=1)

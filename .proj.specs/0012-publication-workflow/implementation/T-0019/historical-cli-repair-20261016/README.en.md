@@ -1,0 +1,19 @@
+# T-0019 historical CLI compatibility repair
+
+This is a corrective continuation of approved A1/A3, PA-06 and K1, on the existing T-0019 branch and allocation. No historical assertion, oracle, immutable receipt, M0 ownership or candidate changes. The owner authorized production main merges #29–31; all three landed. A separate repair PR is reviewable only and needs a new explicit merge grant. Staging delivery is held until the repair lands on main and the same commits are independently checked for staging. T-0019 and T-0016 remain review; P13 is NOT RUN; production automation/deployment settings remain untouched.
+
+## Cause and scope
+
+PR #29 imported publication_workflows before selecting the historical contract. The retained three-file historical CLI overlay intentionally has no such module, causing ModuleNotFoundError before original positive/negative assertions could execute. Main's live suite does not contain the original staging-only reconciliation module, so main-only testing missed the exposure. The unchanged retained-stage files are enumerated in the preservation audit. The complete preserved staging suite produced 35 failure records, all with that missing-module cause; publication and frozen PR #22 tests passed. The original old test remains unchanged.
+
+The correction registers workflow CLI dependencies only when trusted CONTROL has a current policy. Full argument parsing remains before candidate Git access; target contract classification retains its original policy/ancestry condition, and an incomplete control is explicitly refused for a current target. There is no failure-dependent fallback and no current validation bypass. A new public PA-06 regression reproduces the original three-file overlay and checks legacy unknown-flag rejection, current help/unknown-argument early exit and no target Git query at those exits.
+
+A first corrective version passed the historical positive but moved a Git query before argument parsing. Review raised an unconfirmed remote-helper concern; the public PATH probe established only the query-order change, not an exploit. That version was replaced and both incomplete long runs were explicitly stopped (exit143). They are retained under attempts and are not final passing evidence. The final version restores the original parsing order and removes the new trigger surface.
+
+## Isolated Git object-storage diagnostic
+
+The unchanged final source first encountered Git exit128 in the retained-stage nested fixtures. A minimized reproduction exposed `ignoring alternate object stores, nesting too deep`; the temporary preview had accumulated six layers of shared repositories. This caused four publication failure records plus ten frozen-fixture failure records, while the 95 historical/live Harness cases passed. The isolated preview's own object store was materialized with local repack, then its alternates entry removed after fsck. HEAD, tree, main/staging refs and clean status are identical before/after. No product/test/runner assertion or history commit changed. The same formerly failing PA-02/PA-06 probes passed, then the complete unchanged suite was rerun. Failed environment attempts and the object identity receipt are retained separately. This is not a product fix or a weaker fallback.
+
+## Surfaces and evidence
+
+Final complete main and retained-staging Python executions are separate. The staging result is an isolated synthetic projection, not a remote landing or live Actions/P13 result. Original red records, final raw results and real deny-default build receipts are retained. The earlier pending-merge native refusal was an ancestry/setup diagnostic and is never counted as a pass. Fresh website checks for the final source pass: main54/staging87 unit tests, lint and VitePress build. Fresh isolated deny-default builds also run in the full Python executions. No browser claim is made for this Python-only correction.

@@ -1,0 +1,22 @@
+
+> 0x1dea@1.4.0 test:unit /private/tmp/T19-history-stage-fixed
+> vitest run
+
+
+ RUN  v4.0.18 /private/tmp/T19-history-stage-fixed
+
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 29ms
+ ✓ tests/encoreTicket.vitest.ts (2 tests) 25ms
+ ✓ tests/previewNotice.vitest.ts (32 tests) 67ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 151ms
+ ✓ tests/previewNoticeArticle.vitest.ts (1 test) 320ms
+   ✓ compiles the selected article with a shared notice and keeps following prose outside  319ms
+ ✓ tests/articleCaptions.vitest.ts (26 tests) 513ms
+ ✓ tests/vpHelper.vitest.ts (9 tests) 75ms
+ ✓ tests/articleSummary.vitest.ts (12 tests) 447ms
+
+ Test Files  8 passed (8)
+      Tests  87 passed (87)
+   Start at  14:09:41
+   Duration  1.95s (transform 763ms, setup 0ms, import 3.63s, tests 1.63s, environment 3.76s)
+

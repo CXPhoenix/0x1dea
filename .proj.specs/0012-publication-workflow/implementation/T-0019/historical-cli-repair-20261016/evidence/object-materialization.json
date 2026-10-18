@@ -1,0 +1,21 @@
+{
+  "before": {
+    "HEAD": "0397601448206ed53707b1393da2a7b68d40e565",
+    "tree": "bc5a45750c63b763f66730c14bbd242ae00275e5",
+    "main": "0c31f43ba4d3e87fa77f8fb2de5fdd5f47eb788e",
+    "staging": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+    "status": ""
+  },
+  "after": {
+    "HEAD": "0397601448206ed53707b1393da2a7b68d40e565",
+    "tree": "bc5a45750c63b763f66730c14bbd242ae00275e5",
+    "main": "0c31f43ba4d3e87fa77f8fb2de5fdd5f47eb788e",
+    "staging": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+    "status": ""
+  },
+  "same_source_and_refs": true,
+  "fsck_exit": 0,
+  "alternates_removed_after_local_repack": true,
+  "surface": "isolated synthetic preview object storage only; no product/remote/history/tree change",
+  "diagnostic": "ignoring alternate object stores, nesting too deep; fatal unable to read tree eeda8e48d1cb203e4cec2bd53e26d3dcf5c7d45a"
+}

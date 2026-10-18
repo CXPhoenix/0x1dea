@@ -1,0 +1,24 @@
+test_historical_cli_fixture_needs_no_current_workflow_helper (test_workflow_admission.WorkflowAdmissionTests.test_historical_cli_fixture_needs_no_current_workflow_helper)
+PA-06: the original three-file historical CLI overlay still runs alone. ... FAIL
+
+======================================================================
+FAIL: test_historical_cli_fixture_needs_no_current_workflow_helper (test_workflow_admission.WorkflowAdmissionTests.test_historical_cli_fixture_needs_no_current_workflow_helper)
+PA-06: the original three-file historical CLI overlay still runs alone.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0019-history-fix/tests/article_publication/test_workflow_admission.py", line 323, in test_historical_cli_fixture_needs_no_current_workflow_helper
+    self.assertFalse(marker.exists(), result.stdout+result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false : usage: verify-harness-adoption.py [--root ROOT] [-h]
+
+Route immutable historical contracts and the reviewed current M0 successor.
+
+options:
+  --root ROOT
+  -h, --help   show this help message and exit
+
+
+----------------------------------------------------------------------
+Ran 1 test in 9.724s
+
+FAILED (failures=1)

@@ -1,0 +1,18 @@
+test_fresh_writer_validator_snapshots_recompute_same_operation_with_independent_digests (test_job_inputs.JobInputTests.test_fresh_writer_validator_snapshots_recompute_same_operation_with_independent_digests)
+PB-02: actual local Git/runtime/isolation with separate fresh job inputs. ... FAIL
+
+======================================================================
+FAIL: test_fresh_writer_validator_snapshots_recompute_same_operation_with_independent_digests (test_job_inputs.JobInputTests.test_fresh_writer_validator_snapshots_recompute_same_operation_with_independent_digests)
+PB-02: actual local Git/runtime/isolation with separate fresh job inputs.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0020/tests/article_publication/test_job_inputs.py", line 69, in test_fresh_writer_validator_snapshots_recompute_same_operation_with_independent_digests
+    self.assertEqual(writer.returncode,0,writer.stdout+writer.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/private/tmp/0x1dea-T0020/scripts/publication-job.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.350s
+
+FAILED (failures=1)

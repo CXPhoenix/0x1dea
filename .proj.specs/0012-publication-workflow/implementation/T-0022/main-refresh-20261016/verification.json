@@ -1,0 +1,36 @@
+{
+  "ticket": "T-0022",
+  "surface": "local Python/native/installed VitePress and deny-default sandbox-exec; API fixtures are replay only",
+  "main": "1501c54dcc6856b2d6dbf6e5577c04933d59c798",
+  "staging": "05fc16c30f978bbafab4b8cc89f24f8657ab3045",
+  "prior_head": "59869abecea863feb06d54700e75cc0148870398",
+  "merge_head": "1501c54dcc6856b2d6dbf6e5577c04933d59c798",
+  "full_python_summary": [
+    "harness_adoption (live): testsRun=66 failures=0 errors=0",
+    "article_publication (live): testsRun=132 failures=0 errors=0",
+    "T13 #22 frozen fixture: commit=001b26f8e931e0cf1e62373c5aa088a1b5ed09eb exit=0"
+  ],
+  "unit": 54,
+  "lint": "pass",
+  "build": "pass",
+  "source_review_packet": "T22-main-refresh-review",
+  "preserved": "All blog files, historical validators/oracles/receipts, M0 and aliases unchanged versus current main. Retain every incoming common entry; existing reviewed identity updates are enumerated below.",
+  "ticket_status": "review",
+  "P13": "NOT RUN",
+  "production_automation": "inactive",
+  "staging_landing": "pending",
+  "artifacts": {
+    "python.txt": "4301856f9cb9de44800f98ad0eebd078f4a35b3a5cc1b0a6e6e7a1324ee5a23f",
+    "unit.txt": "abd4372dd81dec42c5d69a59f63524b60b67f1a179a6ee7a1772e66595e3363d",
+    "lint.txt": "dffc96a3271cb45529ac9d6c20bb757ff4af149a51c772b64ed3cab0a8c360f6",
+    "build.txt": "186695abc86af90b6cd81892cdad59c3a3699c17743b4a540eaf14e5b02e2928",
+    "isolated-T16-0x1dea-T0022.json": "d2b06fae9667e4f18686f53415fa9ee2f9b65502ab4ea035dda8b49f0fce37e4",
+    "isolated-actual-build-receipt.json": "e5ec0f8bd8a5c1c5d72e3dac2d47185abeba41d12220c7aba04cb61418fe4745",
+    "isolated-local-ready.json": "020a330ab991893f651c0bbb004923488b91e62090452a6e6314b5137eedd49e"
+  },
+  "updated_existing_common": [
+    "scripts/publication_remote.py",
+    "scripts/staging-sync-remote.py",
+    ".proj.tickets/0012-publication-workflow/T-0022-manual-pr-history-continuation.md"
+  ]
+}
