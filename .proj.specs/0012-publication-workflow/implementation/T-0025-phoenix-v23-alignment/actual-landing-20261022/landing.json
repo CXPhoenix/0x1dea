@@ -1,0 +1,18 @@
+{
+  "ticket": "T-0025",
+  "authorized": true,
+  "landed": true,
+  "target": "staging",
+  "commit": "be42124387b0028146f2474c75707dd5ffeeaa2e",
+  "main_commit": "fd711f96fb00ee57cbaf4bfb0699c58a03126a80",
+  "main_validation_head": "a4f88dce1af27dc642d8776b11e771218127be38",
+  "staging_validation_head": "5f68049939c86243ed0dd0e98700948d79356978",
+  "approval_receipt": ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/approval.md",
+  "main_pr": 45,
+  "staging_pr": 46,
+  "main_tree_matches_reviewed": true,
+  "staging_tree_matches_reviewed": true,
+  "main_mergedAt": "2026-10-21T17:34:00Z",
+  "staging_mergedAt": "2026-10-21T17:37:36Z",
+  "scope": "Actual owner-authorized Phoenix v2.3 common writing alignment and manual staging reconciliation. No article publication, P13 or automation activation."
+}

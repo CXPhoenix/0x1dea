@@ -1,0 +1,52 @@
+{
+  "observed_utc": "2026-10-21T17:38:34.743743+00:00",
+  "refs": {
+    "main": {
+      "commit": "fd711f96fb00ee57cbaf4bfb0699c58a03126a80",
+      "ten_writing_identities": "exact pinned bf6f872 mode/hash",
+      "blog_tree": "f28b0b24af594abb569e1770b9c61fd9cd58d3c6"
+    },
+    "staging": {
+      "commit": "be42124387b0028146f2474c75707dd5ffeeaa2e",
+      "ten_writing_identities": "exact pinned bf6f872 mode/hash",
+      "blog_tree": "7dc8b5b665d2cb296b971a2e2c6ee4b9a9da5c0b"
+    }
+  },
+  "candidate_paths_preserved": 50,
+  "guard_functions_unchanged_from_review": true,
+  "post_delivery": {
+    "observed_utc": "2026-10-21T17:38:22.578811+00:00",
+    "actual_main": "fd711f96fb00ee57cbaf4bfb0699c58a03126a80",
+    "actual_staging": "be42124387b0028146f2474c75707dd5ffeeaa2e",
+    "PC01_command": [
+      "python3",
+      "-m",
+      "unittest",
+      "-v",
+      "test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission"
+    ],
+    "PC01_exit": 0,
+    "main_native_exit": 0,
+    "staging_native_exit": 0,
+    "trees_equal_reviewed": true,
+    "scope": "Actual merged implementation refs, native CLI on both target trees and original PC01; no live CI/P13 or automation activation claim."
+  },
+  "independent_closeout_review": {
+    "captured_files": 11,
+    "base": "fd711f96fb00ee57cbaf4bfb0699c58a03126a80",
+    "standards": {
+      "breaches": 0,
+      "smells": 0
+    },
+    "spec": {
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    },
+    "security": {
+      "HIGH": 0,
+      "MEDIUM": 0
+    },
+    "scope": "Captured closeout metadata, actual receipt/ancestry/tree/source identities and raw local command results; no new program changes. Reviewers did not rerun tests or query remote. Derived summary added after the review; final native rechecks exact source identities."
+  }
+}

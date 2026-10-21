@@ -5269,7 +5269,7 @@
     },
     ".proj.tickets/0012-publication-workflow/T-0025-phoenix-v23-main-alignment.md": {
       "mode": "100644",
-      "sha256": "26eff9147d05f9da41f85589492e96626849236ca52c6c6ef4e99fee56dae5b3"
+      "sha256": "60fbd28b3ac02bedda22cfa1f2a53252356f9d947627dc8d328f6e577cf81e3a"
     },
     "tests/article_publication/test_phoenix_alignment.py": {
       "mode": "100644",
@@ -5317,7 +5317,7 @@
     },
     ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/coverage.md": {
       "mode": "100644",
-      "sha256": "0e8d50d11830f99f1ce04f2cd824bda16310b5e0154d860b818304cb664a8e86"
+      "sha256": "83c9c2b8e20781bfb90ce6652f5234903ee4e85e784b56a5441b0c8703b61b94"
     },
     ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/W01-green.txt": {
       "mode": "100644",
@@ -5458,6 +5458,38 @@
     ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/test-context.md": {
       "mode": "100644",
       "sha256": "3deac196bddce47afcc6f707dc0fdde875739f3554ebbc44a6d15d702864b2e5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/PC01.txt": {
+      "mode": "100644",
+      "sha256": "a923e5b98263ea7e0790f3d0f7601fd8272cbc750cf04e908e78e34ad283ffa3"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/landing.json": {
+      "mode": "100644",
+      "sha256": "dc7c5e374143c37ccecc26454616d76d9894838067cd72d590609669611d8e18"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/main-native-before-closeout.json": {
+      "mode": "100644",
+      "sha256": "b3ace2807047cec22b499b09fb12a6f0097d0124e8e9663928b9b61070ebc4d6"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/readback.json": {
+      "mode": "100644",
+      "sha256": "c5b3cc5f1e4bc28d1e6530d84bf684d8c0bf3221c75f32f0d6f317e031486ff1"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/staging-native-before-closeout.json": {
+      "mode": "100644",
+      "sha256": "c7f9b1440a7852441cd9272e7fef075feeab532a93915e70e53ae3157908c337"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/materializer.txt": {
+      "mode": "100644",
+      "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/native-after-closeout.json": {
+      "mode": "100644",
+      "sha256": "17bb7ded7a4eaa1eb0e224eed16557b3291869976d1004189f85a4b131ee7d31"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/structure.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
     }
   }
 }

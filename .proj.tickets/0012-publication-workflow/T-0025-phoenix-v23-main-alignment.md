@@ -2,7 +2,8 @@
 id: T-0025
 title: Align the exact Phoenix v2.3 shared writing baseline onto main
 epic: 0012-publication-workflow
-status: review
+status: done
+landing_evidence: .proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/landing.json
 blocked_by: []
 ---
 
@@ -28,4 +29,6 @@ Main contains the exact staging v2.3 canonical package and deterministically gen
 
 ## Comments
 
-Owner authorization and existing epic-seam mapping: implementation/T-0025-phoenix-v23-alignment/approval.md and plan.md. Implementation is verified and independently reviewed; status remains review until actual authorized main landing.
+Owner authorization and existing epic-seam mapping: implementation/T-0025-phoenix-v23-alignment/approval.md and plan.md. Actual owner-authorized main and staging landings are observed; the exact commits and approval receipt are bound below.
+
+Actual owner-authorized main and staging implementation landings are recorded in .proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/actual-landing-20261022/landing.json. Final metadata synchronization does not publish articles or activate automation.
