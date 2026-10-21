@@ -1001,7 +1001,7 @@
     },
     "scripts/publication_current.py": {
       "mode": "100644",
-      "sha256": "af71dcd012fa8025c31568c9932fbb230ab31587624cd45a4663b4a35b73a086"
+      "sha256": "f4999e60557394d5f6d8563c7c0139fbbef5eae8f8b27d27c58b099e4f08aaf4"
     },
     "scripts/run-current-python-tests.py": {
       "mode": "100644",
@@ -5982,6 +5982,38 @@
     ".proj.specs/0006-article-electricity-revision/review/chain-analysis.md": {
       "mode": "100644",
       "sha256": "ed7944e086ac74a71b7bdcae85b800858ee3cf92bb869b61950a6d72e1179135"
+    },
+    ".proj.tickets/0007-encore-ticket/T-0007-encore-ticket.md": {
+      "mode": "100644",
+      "sha256": "2ff354a7ac1728fa0dd029f8c9d547824989e9f8dfe404a4c93669e547cb8d0e"
+    },
+    ".proj.specs/0007-encore-ticket/closeout-20261021/approval.md": {
+      "mode": "100644",
+      "sha256": "62b1b31d0a94803cff82665a2eed1698941d267e45a8de6df824be99c972cd3a"
+    },
+    ".proj.specs/0007-encore-ticket/closeout-20261021/coverage-report.md": {
+      "mode": "100644",
+      "sha256": "0d8d8f0166eb4f094d0d2fa04bc42b32e80b31056dbca65c192c8b207baeb2f6"
+    },
+    ".proj.specs/0007-encore-ticket/closeout-20261021/landing.json": {
+      "mode": "100644",
+      "sha256": "00134961cc86038417586c668a696a25079603565440a76fda8eb119b4e30735"
+    },
+    ".proj.specs/0007-encore-ticket/closeout-20261021/retrospective.md": {
+      "mode": "100644",
+      "sha256": "70879d3c75b5e2fc26a401ae98e34439f6573b866920ba3edcc823feb5826a5f"
+    },
+    ".proj.specs/0007-encore-ticket/closeout-20261021/review/code.md": {
+      "mode": "100644",
+      "sha256": "84598bb5d9978786b7bcc4dd090096999c88a90bc851dcf30259b3cb2d415893"
+    },
+    ".proj.specs/0007-encore-ticket/closeout-20261021/review/security.md": {
+      "mode": "100644",
+      "sha256": "039a3b45c050a5d35a03b5c157cd6d623351085d0df358544ec3ae571ca5ab34"
+    },
+    ".proj.specs/0007-encore-ticket/review/chain-analysis.md": {
+      "mode": "100644",
+      "sha256": "c5b70fa33832f225a3470fe6d4f0d7524c498bed20a033474dd20bee888876ed"
     }
   }
 }
