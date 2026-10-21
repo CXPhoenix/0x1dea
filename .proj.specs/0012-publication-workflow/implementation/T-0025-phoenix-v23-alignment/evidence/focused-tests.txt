@@ -1,0 +1,9 @@
+test_each_exact_identity_rejects_changed_bytes_even_with_repinning (test_phoenix_alignment.PhoenixAlignmentTests.test_each_exact_identity_rejects_changed_bytes_even_with_repinning) ... ok
+test_exact_v23_is_accepted_in_both_engineering_projections (test_phoenix_alignment.PhoenixAlignmentTests.test_exact_v23_is_accepted_in_both_engineering_projections) ... ok
+test_missing_entries_files_links_and_all_executable_bits_are_refused (test_phoenix_alignment.PhoenixAlignmentTests.test_missing_entries_files_links_and_all_executable_bits_are_refused) ... ok
+test_unlisted_writing_changes_remain_protected (test_phoenix_alignment.PhoenixAlignmentTests.test_unlisted_writing_changes_remain_protected) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 66.605s
+
+OK

@@ -1,0 +1,6 @@
+test_exact_v23_is_accepted_in_both_engineering_projections (test_phoenix_alignment.PhoenixAlignmentTests.test_exact_v23_is_accepted_in_both_engineering_projections) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 13.435s
+
+OK

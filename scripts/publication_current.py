@@ -18,6 +18,27 @@ DISCORD_RECORD = 'blog/public/.well-known/discord'
 DISCORD_IDENTITY = {'mode': '100644',
                     'sha256': 'd28142c7a5a13b28d22abaa933cedc2027ce9abbabb2f09c55b989084caa5019'}
 
+# Exact owner-approved Phoenix v2.3 source from staging bf6f872; no prefix waiver.
+PHOENIX_V23_SUCCESSORS = {'skills/phoenix-writing/SKILL.md': {'mode': '100644',
+                                     'sha256': '056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea'},
+ 'skills/phoenix-writing/references/context-form.md': {'mode': '100644',
+                                                       'sha256': 'ec4a9205411a835a28f4ba3a72b8f155a0d7378c48de99f354d57c2e575bd04e'},
+ '.agents/skills/phoenix-writing/SKILL.md': {'mode': '100644',
+                                             'sha256': '056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea'},
+ '.agents/skills/phoenix-writing/references/context-form.md': {'mode': '100644',
+                                                               'sha256': '99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9'},
+ '.claude/skills/phoenix-writing/SKILL.md': {'mode': '100644',
+                                             'sha256': '056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea'},
+ '.claude/skills/phoenix-writing/references/context-form.md': {'mode': '100644',
+                                                               'sha256': '99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9'},
+ 'maintenance/harness-adoption/runtime-source-policy.json': {'mode': '100644',
+                                                             'sha256': 'a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb'},
+ 'maintenance/harness-adoption/generated-writing-manifest.json': {'mode': '100644',
+                                                                  'sha256': '606b123e3cdb43ad4449c45eb1c58e572a794c73b066696ae746b216451d01f0'},
+ 'maintenance/writing-skills/SOURCES.md': {'mode': '100644',
+                                           'sha256': 'fc29bbefb00580a0bf07978bf94533e766b370c7a188f8852fa18097727d7c15'},
+ 'maintenance/writing-skills/VALIDATION.md': {'mode': '100644',
+                                              'sha256': '2292d41418aaad231f1efbcda34dad4b0fa1f2f8ffb05f21e86144c10b0152b5'}}
 
 # Finite, reviewed metadata successors; historical M0 blobs remain immutable.
 CLOSEOUT_SUCCESSORS = {'.proj.specs/0011-main-to-staging-sync/coverage-report.md': 'd610282c67b42bad42d78e4e3d6857c0311fc364c69f41239309c03e06997121',
@@ -95,6 +116,12 @@ def policy(control, workflow_admission=None):
         path = regular(control, name)
         if path.stat().st_mode & 0o111 or digest(path.read_bytes()) != sha256:
             raise ValueError('changed exact closeout identity: ' + name)
+    for name, expected in PHOENIX_V23_SUCCESSORS.items():
+        if data['common'].get(name) != expected:
+            raise ValueError('unapproved exact Phoenix v2.3 identity: ' + name)
+        path = regular(control, name)
+        if path.stat().st_mode & 0o111 or digest(path.read_bytes()) != expected['sha256']:
+            raise ValueError('changed exact Phoenix v2.3 identity: ' + name)
     admitted = workflow_admission.allowed(control) if workflow_admission else {}
     if not workflow_admission:
         from publication_workflows import github_git_paths
@@ -108,11 +135,11 @@ def policy(control, workflow_admission=None):
     writing = ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post')
     for name, expected in data['common'].items():
         regular(control, name)
-        if name in owned or name in protected_history or name.startswith('blog/') or (name.startswith('.github/') and name not in admitted) or any(name.startswith(prefix + package + '/') for prefix in ('skills/', '.agents/skills/', '.claude/skills/') for package in writing):
+        if name in owned or name in protected_history or name.startswith('blog/') or (name.startswith('.github/') and name not in admitted) or (name not in PHOENIX_V23_SUCCESSORS and any(name.startswith(prefix + package + '/') for prefix in ('skills/', '.agents/skills/', '.claude/skills/') for package in writing)):
             raise ValueError('protected content/history in common successor: ' + name)
         if set(expected) != {'mode', 'sha256'} or expected['mode'] not in {'100644', '100755'} or not isinstance(expected['sha256'], str) or len(expected['sha256']) != 64 or any(c not in '0123456789abcdef' for c in expected['sha256']):
             raise ValueError('invalid exact common identity: ' + name)
-        if name != 'scripts/verify-harness-adoption.py' and name not in CLOSEOUT_SUCCESSORS:
+        if name != 'scripts/verify-harness-adoption.py' and name not in CLOSEOUT_SUCCESSORS and name not in PHOENIX_V23_SUCCESSORS:
             for entries in inventory['trees'].values():
                 previous = entries.get(name)
                 if previous and expected != {'mode': previous['mode'], 'sha256': digest(git(control, 'cat-file', 'blob', previous['blob']))}:
@@ -276,6 +303,8 @@ def _verify_current(control, root, role, workflow_admission=None):
     for name, entry in expected.items():
         if name == DISCORD_RECORD and regular(root, name).stat().st_mode & 0o111:
             raise ValueError('executable published Discord source: ' + name)
+        if name in PHOENIX_V23_SUCCESSORS and regular(root, name).stat().st_mode & 0o111:
+            raise ValueError('executable approved Phoenix v2.3 source: ' + name)
         if current_identity(root, name, entry) != entry:
             raise ValueError(('changed test repair provenance: ' if name == 'maintenance/harness-reconciliation/test-contract-repair.json' else 'changed current reconciliation source: ') + name)
     spec = spec_from_file_location('trusted_current_tracker', control / 'scripts/verify-harness-adoption.py')

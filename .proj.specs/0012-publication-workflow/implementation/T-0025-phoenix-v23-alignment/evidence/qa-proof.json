@@ -1,0 +1,18 @@
+{
+  "candidate_paths_preserved": 50,
+  "main_blog_unchanged": true,
+  "staging_blog_unchanged": true,
+  "main_staging_guard_functions_identical": true,
+  "only_test_delta": [
+    "tests/article_publication/test_phoenix_alignment.py"
+  ],
+  "qa_main": "384ba0d7978418025656fc62679f0e181f1af72c",
+  "qa_staging": "242a65411d64cb4b924ff543f03424b73a3ba85a",
+  "real_refs_unchanged": true,
+  "PC01": {
+    "command": "original existing public test; same dependencies and loopback",
+    "exit_code": 0,
+    "raw_log_sha256": "f6542cdeb51675da652f103240316699bd2a1e006d5541c5ac736547ff4f5c8e"
+  },
+  "root_cause": "Unchanged PC01 combines a new main-side verifier hash with a pre-alignment staging-side verifier hash; merge-tree refuses engineering-v1.json. Exact approved main/stage alignment resolves that real conflict. No test/assertion edit or bypass."
+}

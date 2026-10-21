@@ -1,0 +1,16 @@
+test_exact_v23_is_accepted_in_both_engineering_projections (test_phoenix_alignment.PhoenixAlignmentTests.test_exact_v23_is_accepted_in_both_engineering_projections) ... FAIL
+
+======================================================================
+FAIL: test_exact_v23_is_accepted_in_both_engineering_projections (test_phoenix_alignment.PhoenixAlignmentTests.test_exact_v23_is_accepted_in_both_engineering_projections)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-phoenix-v23-alignment-20261022/work/tests/article_publication/test_phoenix_alignment.py", line 32, in test_exact_v23_is_accepted_in_both_engineering_projections
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Blocked inventory: protected content/history in common successor: skills/phoenix-writing/SKILL.md
+
+
+----------------------------------------------------------------------
+Ran 1 test in 1.737s
+
+FAILED (failures=1)

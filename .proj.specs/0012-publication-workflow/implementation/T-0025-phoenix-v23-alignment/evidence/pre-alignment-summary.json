@@ -1,0 +1,20 @@
+{
+  "first_pre_alignment_run": "failed, exit 1",
+  "groups": [
+    66,
+    158,
+    10,
+    14
+  ],
+  "only_error": "PC01 engineering-v1.json Git merge conflict",
+  "frozen_groups": [
+    10,
+    14
+  ],
+  "frozen_exit_codes": [
+    0,
+    0
+  ],
+  "source_or_test_edits_to_resolve": "none; separately reviewed aligned QA refs",
+  "qa_full_run": "in progress; do not infer success"
+}
