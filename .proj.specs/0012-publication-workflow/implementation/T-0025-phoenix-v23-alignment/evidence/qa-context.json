@@ -1,0 +1,49 @@
+{
+  "scope": "Never-published local QA commits, unchanged tested program and test bytes; real refs are not modified",
+  "main": "384ba0d7978418025656fc62679f0e181f1af72c",
+  "staging": "242a65411d64cb4b924ff543f03424b73a3ba85a",
+  "actual_main": "8baa132eec03336f6776ea45b0c8e4a6889c3c74",
+  "actual_staging": "bf6f872db9aa4a2d3e4a765ef4f171186349f432",
+  "conflict_paths": [
+    "maintenance/publication-workflow/engineering-v1.json"
+  ],
+  "rehash": [
+    "scripts/publication_current.py",
+    ".proj.tickets/0003-article-summary/T-0003-article-summary.md",
+    ".proj.tickets/0004-shared-preview-notice/T-0004-shared-preview-notice.md",
+    ".proj.tickets/0008-article-captions/T-0008-article-captions.md"
+  ],
+  "main_blog": "f28b0b24af594abb569e1770b9c61fd9cd58d3c6",
+  "staging_blog": "7dc8b5b665d2cb296b971a2e2c6ee4b9a9da5c0b",
+  "files": {
+    ".agents/skills/phoenix-writing/SKILL.md": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea",
+    ".claude/skills/phoenix-writing/SKILL.md": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea",
+    "maintenance/harness-adoption/generated-writing-manifest.json": "606b123e3cdb43ad4449c45eb1c58e572a794c73b066696ae746b216451d01f0",
+    "maintenance/harness-adoption/runtime-source-policy.json": "a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb",
+    "maintenance/publication-workflow/engineering-v1.json": "e4b202db3901acc0e453c21e476fb94ebc7c44045767c5b92c1c4f8e356df62a",
+    "maintenance/writing-skills/SOURCES.md": "fc29bbefb00580a0bf07978bf94533e766b370c7a188f8852fa18097727d7c15",
+    "maintenance/writing-skills/VALIDATION.md": "2292d41418aaad231f1efbcda34dad4b0fa1f2f8ffb05f21e86144c10b0152b5",
+    "scripts/publication_current.py": "ae535a8040f01620a77d3fab4d3f433cb578f883b1e24c162769ff05f0cb27cd",
+    "skills/phoenix-writing/SKILL.md": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea",
+    ".agents/skills/phoenix-writing/references/context-form.md": "99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9",
+    ".claude/skills/phoenix-writing/references/context-form.md": "99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/approval.md": "9e0b5ea0dc4194f8cd3517245a5ee736058e3cb4994e5efcfa0a6237792d25ab",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/coverage.md": "30f4e74dd83b58d0283045d7d1650f4469c388b2c9a76ee25aaa1e90bdfbb81e",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/W01-green.txt": "f105d9b3ba08fd4daa189a04aef85143393eb3b03b84d06af454434eb3547388",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/W01-red.txt": "9ed1de6a3c846d78c1ebec1ce824ebfd80f35828f6cfda0f6b4b8b16f6e544db",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/W01-temp-alias-failure.txt": "1a0a01a6384284180a6f1fd81913fee6de8deb7a984129a97f05f6a3a0439e6c",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/baseline-PC01.txt": "3ef89d8cabfaaf506934054f1e9c4a50d8bcb55ecca14100c402840de3c960a2",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/baseline-checks.json": "4ddddb8506b9541be48785e971078265b28b1cf63eb607739aff46a97d484e57",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/focused-tests.txt": "facb99be6224c962a28aa3ad09d9853d815367ffdcfd41fb50c56cdcf83b1867",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/materialize-write.txt": "917716b09d10900b66a34ef5b0f04dc7c2cbf93ddd7ebe88fba35e2fbae80b4c",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/package-discovery.json": "08286ba66de612c1b39a1e1b7918b49d2fb66acfc08e4be735e4164899dd47f7",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/preservation.json": "0534f6d7a88157a3784763974382de5ca131f05b78aeb032ae50a8212d962fc7",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/payload.json": "a3b60262f6c7a7f25a8162bf7edab4763b6ad8f215b8bc878f37b9f92216b7dd",
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/plan.md": "9bf30d06d068c9a80a4347d997643a7fd97a31cded923bc7ac7b6b9d0162eb42",
+    ".proj.specs/0012-publication-workflow/review/code-T-0025.md": "1fc7d0e761e7a9fea3c56fc75918b100533824175c32c27cf00891adb0f3fe88",
+    ".proj.specs/0012-publication-workflow/review/security-T-0025.md": "26c4348123fc77025ba7276c5e3d8b8192f2460b6731bece637e7903ce22be53",
+    ".proj.tickets/0012-publication-workflow/T-0025-phoenix-v23-main-alignment.md": "ddbdf70d75818a05ccafc480e64da3d2374fb41b250cc155476deda7ddf4c58b",
+    "skills/phoenix-writing/references/context-form.md": "ec4a9205411a835a28f4ba3a72b8f155a0d7378c48de99f354d57c2e575bd04e",
+    "tests/article_publication/test_phoenix_alignment.py": "29c65aecc968c053da49b0512e8eaed414c481990e168d27135e772bae7ffc64"
+  }
+}

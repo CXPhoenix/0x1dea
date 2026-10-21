@@ -1,0 +1,20 @@
+{
+  "sha256": "e454c725bd1841fc1e1707cd786e6282d96f8157b9e8a88eaa8399e3fc073b88",
+  "bytes": 18807,
+  "verify_command": [
+    "git",
+    "bundle",
+    "verify",
+    "qa-context.bundle"
+  ],
+  "verify_exit_code": 0,
+  "refs": {
+    "main": "384ba0d7978418025656fc62679f0e181f1af72c",
+    "staging": "242a65411d64cb4b924ff543f03424b73a3ba85a"
+  },
+  "prerequisites": [
+    "8baa132eec03336f6776ea45b0c8e4a6889c3c74",
+    "bf6f872db9aa4a2d3e4a765ef4f171186349f432"
+  ],
+  "scope": "Data archive of never-published QA commits; no target refs changed."
+}

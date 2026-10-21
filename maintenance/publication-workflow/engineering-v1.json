@@ -1001,7 +1001,7 @@
     },
     "scripts/publication_current.py": {
       "mode": "100644",
-      "sha256": "bbe73638595c6d8d89f70f1fbbb331c51e7fd6ad15f4cc39ccfba8dc8b87ff49"
+      "sha256": "ae535a8040f01620a77d3fab4d3f433cb578f883b1e24c162769ff05f0cb27cd"
     },
     "scripts/run-current-python-tests.py": {
       "mode": "100644",
@@ -5254,6 +5254,210 @@
     ".proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/report-render.json": {
       "mode": "100644",
       "sha256": "af8464a983ca9ab43ffe1264e7a8f6aeaaa963dcbc20be2a01290a333f2cf16d"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/approval.md": {
+      "mode": "100644",
+      "sha256": "9e0b5ea0dc4194f8cd3517245a5ee736058e3cb4994e5efcfa0a6237792d25ab"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/payload.json": {
+      "mode": "100644",
+      "sha256": "a3b60262f6c7a7f25a8162bf7edab4763b6ad8f215b8bc878f37b9f92216b7dd"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/plan.md": {
+      "mode": "100644",
+      "sha256": "9bf30d06d068c9a80a4347d997643a7fd97a31cded923bc7ac7b6b9d0162eb42"
+    },
+    ".proj.tickets/0012-publication-workflow/T-0025-phoenix-v23-main-alignment.md": {
+      "mode": "100644",
+      "sha256": "26eff9147d05f9da41f85589492e96626849236ca52c6c6ef4e99fee56dae5b3"
+    },
+    "tests/article_publication/test_phoenix_alignment.py": {
+      "mode": "100644",
+      "sha256": "29c65aecc968c053da49b0512e8eaed414c481990e168d27135e772bae7ffc64"
+    },
+    "skills/phoenix-writing/SKILL.md": {
+      "mode": "100644",
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
+    },
+    "skills/phoenix-writing/references/context-form.md": {
+      "mode": "100644",
+      "sha256": "ec4a9205411a835a28f4ba3a72b8f155a0d7378c48de99f354d57c2e575bd04e"
+    },
+    ".agents/skills/phoenix-writing/SKILL.md": {
+      "mode": "100644",
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
+    },
+    ".agents/skills/phoenix-writing/references/context-form.md": {
+      "mode": "100644",
+      "sha256": "99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9"
+    },
+    ".claude/skills/phoenix-writing/SKILL.md": {
+      "mode": "100644",
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
+    },
+    ".claude/skills/phoenix-writing/references/context-form.md": {
+      "mode": "100644",
+      "sha256": "99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9"
+    },
+    "maintenance/harness-adoption/runtime-source-policy.json": {
+      "mode": "100644",
+      "sha256": "a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb"
+    },
+    "maintenance/harness-adoption/generated-writing-manifest.json": {
+      "mode": "100644",
+      "sha256": "606b123e3cdb43ad4449c45eb1c58e572a794c73b066696ae746b216451d01f0"
+    },
+    "maintenance/writing-skills/SOURCES.md": {
+      "mode": "100644",
+      "sha256": "fc29bbefb00580a0bf07978bf94533e766b370c7a188f8852fa18097727d7c15"
+    },
+    "maintenance/writing-skills/VALIDATION.md": {
+      "mode": "100644",
+      "sha256": "2292d41418aaad231f1efbcda34dad4b0fa1f2f8ffb05f21e86144c10b0152b5"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/coverage.md": {
+      "mode": "100644",
+      "sha256": "0e8d50d11830f99f1ce04f2cd824bda16310b5e0154d860b818304cb664a8e86"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/W01-green.txt": {
+      "mode": "100644",
+      "sha256": "f105d9b3ba08fd4daa189a04aef85143393eb3b03b84d06af454434eb3547388"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/W01-red.txt": {
+      "mode": "100644",
+      "sha256": "9ed1de6a3c846d78c1ebec1ce824ebfd80f35828f6cfda0f6b4b8b16f6e544db"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/W01-temp-alias-failure.txt": {
+      "mode": "100644",
+      "sha256": "1a0a01a6384284180a6f1fd81913fee6de8deb7a984129a97f05f6a3a0439e6c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/baseline-PC01.txt": {
+      "mode": "100644",
+      "sha256": "3ef89d8cabfaaf506934054f1e9c4a50d8bcb55ecca14100c402840de3c960a2"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/baseline-checks.json": {
+      "mode": "100644",
+      "sha256": "4ddddb8506b9541be48785e971078265b28b1cf63eb607739aff46a97d484e57"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/focused-tests.txt": {
+      "mode": "100644",
+      "sha256": "facb99be6224c962a28aa3ad09d9853d815367ffdcfd41fb50c56cdcf83b1867"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/materialize-write.txt": {
+      "mode": "100644",
+      "sha256": "917716b09d10900b66a34ef5b0f04dc7c2cbf93ddd7ebe88fba35e2fbae80b4c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/package-discovery.json": {
+      "mode": "100644",
+      "sha256": "08286ba66de612c1b39a1e1b7918b49d2fb66acfc08e4be735e4164899dd47f7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/preservation.json": {
+      "mode": "100644",
+      "sha256": "0534f6d7a88157a3784763974382de5ca131f05b78aeb032ae50a8212d962fc7"
+    },
+    ".proj.specs/0012-publication-workflow/review/code-T-0025.md": {
+      "mode": "100644",
+      "sha256": "931c4b518d4640d2e5bfd0ee870c5eaf0e9fb3e71435d1b671be04e1b380073d"
+    },
+    ".proj.specs/0012-publication-workflow/review/security-T-0025.md": {
+      "mode": "100644",
+      "sha256": "f481cb00fb0d6f075df8bda1724968b152a2fc515504619f5de42a37ac1af2a0"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/PC01-aligned-candidate.txt": {
+      "mode": "100644",
+      "sha256": "f6542cdeb51675da652f103240316699bd2a1e006d5541c5ac736547ff4f5c8e"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/PC01-conflict-paths.txt": {
+      "mode": "100644",
+      "sha256": "b7b1bed68176c7c3181faafcc5f049822c38a514ed9635390d37bf4ab8cd08e2"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/PC01-pre-alignment-failed.txt": {
+      "mode": "100644",
+      "sha256": "d96bfccb932fc93b6392181a001f193a86573b329ef5868870701cb55e3cbf2b"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/checks.json": {
+      "mode": "100644",
+      "sha256": "205350e2dd5c687278672a2e715bb5e96a4be7ad84652144f9fb6d3e66b6b088"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/full-tested-manifest.json": {
+      "mode": "100644",
+      "sha256": "98c49aa3251907b98f98cf2bc55298ef56f3d22f486a65d57be4d691aaf9c890"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/materializer-pre-archive.txt": {
+      "mode": "100644",
+      "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/materializer.txt": {
+      "mode": "100644",
+      "sha256": "4a8330209f0b2b69defa1714427c3fa9a9e505863b210dd08215b90584071382"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/native-pre-archive.txt": {
+      "mode": "100644",
+      "sha256": "c531cb2173ab551bb89f17b3c45db7d4180c3a0419c89cfa90697745115c26d7"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/native.json": {
+      "mode": "100644",
+      "sha256": "d8314a8d7ab2211fa96664ae0bd32eea376b3cc1dcc120347f42f4a6786e6cbb"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/pre-alignment-python-failed-receipt.json": {
+      "mode": "100644",
+      "sha256": "8bfae7f08603c762cc5edca173900ad7239721584ac17f365b58dd3e1fb28c1d"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/pre-alignment-python-failed.log.txt": {
+      "mode": "100644",
+      "sha256": "1ed5a78dc3be101c7952842010e0cd93d8636d0ee81985f43b1bf4d5859ed4ff"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/pre-alignment-summary.json": {
+      "mode": "100644",
+      "sha256": "795cca944735d6314580a1692981dbda6d0b373b822c8135938764fd7938201f"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/pre-alignment-tested-manifest.json": {
+      "mode": "100644",
+      "sha256": "ae88462eceb313bcadb3d76821f9d95271b57504f456dbf46eebf18d583015d6"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/python-receipt.json": {
+      "mode": "100644",
+      "sha256": "302cbdd759c29b297fffda9dd02b287e9a489df2ffacb64b86d1097695bd486d"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/python-tested-policy.json": {
+      "mode": "100644",
+      "sha256": "e4b202db3901acc0e453c21e476fb94ebc7c44045767c5b92c1c4f8e356df62a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/python.log.txt": {
+      "mode": "100644",
+      "sha256": "b5ff200903154b98824425321bf9fe8e3ff4a6770690192c4363bc6131ac35c8"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/qa-bundle.json": {
+      "mode": "100644",
+      "sha256": "e5be792d07da2534e7a9e49629cf009fd6fde09da049657dbab1b77ffd15b94b"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/qa-context.bundle": {
+      "mode": "100644",
+      "sha256": "e454c725bd1841fc1e1707cd786e6282d96f8157b9e8a88eaa8399e3fc073b88"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/qa-context.json": {
+      "mode": "100644",
+      "sha256": "10a863a83a31a6ede4c6c696ea508a3816dd7cc0aa14b8b254f92fc1d6db9a2a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/qa-proof.json": {
+      "mode": "100644",
+      "sha256": "80c4a09a9f9862bfea4220f403f3d04b28a94aa5cb2b57f9c655dbf1851dc50a"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/qa-replay.md": {
+      "mode": "100644",
+      "sha256": "4818194795153d3a97a0f5ae936396841cdad99642066ab3e8abc55c62f50d55"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/structure-pre-archive.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/structure.txt": {
+      "mode": "100644",
+      "sha256": "bdef1ff9bd5f8bade0f74d43e9bab528965fdd5dba4c545063e95eaa30ff801c"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0025-phoenix-v23-alignment/evidence/test-context.md": {
+      "mode": "100644",
+      "sha256": "3deac196bddce47afcc6f707dc0fdde875739f3554ebbc44a6d15d702864b2e5"
     }
   }
 }

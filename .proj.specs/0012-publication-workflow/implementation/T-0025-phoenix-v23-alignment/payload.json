@@ -1,0 +1,46 @@
+{
+  "source": "bf6f872db9aa4a2d3e4a765ef4f171186349f432",
+  "main": "8baa132eec03336f6776ea45b0c8e4a6889c3c74",
+  "files": {
+    "skills/phoenix-writing/SKILL.md": {
+      "mode": "100644",
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
+    },
+    "skills/phoenix-writing/references/context-form.md": {
+      "mode": "100644",
+      "sha256": "ec4a9205411a835a28f4ba3a72b8f155a0d7378c48de99f354d57c2e575bd04e"
+    },
+    ".agents/skills/phoenix-writing/SKILL.md": {
+      "mode": "100644",
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
+    },
+    ".agents/skills/phoenix-writing/references/context-form.md": {
+      "mode": "100644",
+      "sha256": "99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9"
+    },
+    ".claude/skills/phoenix-writing/SKILL.md": {
+      "mode": "100644",
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea"
+    },
+    ".claude/skills/phoenix-writing/references/context-form.md": {
+      "mode": "100644",
+      "sha256": "99425a0fa284146eec55e5625406ad6c6b50ea4249bd7587c80925d2311c67d9"
+    },
+    "maintenance/harness-adoption/runtime-source-policy.json": {
+      "mode": "100644",
+      "sha256": "a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb"
+    },
+    "maintenance/harness-adoption/generated-writing-manifest.json": {
+      "mode": "100644",
+      "sha256": "606b123e3cdb43ad4449c45eb1c58e572a794c73b066696ae746b216451d01f0"
+    },
+    "maintenance/writing-skills/SOURCES.md": {
+      "mode": "100644",
+      "sha256": "fc29bbefb00580a0bf07978bf94533e766b370c7a188f8852fa18097727d7c15"
+    },
+    "maintenance/writing-skills/VALIDATION.md": {
+      "mode": "100644",
+      "sha256": "2292d41418aaad231f1efbcda34dad4b0fa1f2f8ffb05f21e86144c10b0152b5"
+    }
+  }
+}
