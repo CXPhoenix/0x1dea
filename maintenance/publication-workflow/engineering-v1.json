@@ -1001,7 +1001,7 @@
     },
     "scripts/publication_current.py": {
       "mode": "100644",
-      "sha256": "e6c45235e07c54c4fcc6e2a7c94cba6d0c93f81180a0d54f74f80bcda20968e6"
+      "sha256": "11e4e46801e56c3a5886df9cc71652beadfce39f8caf8f4bfde6f839fe12f8b5"
     },
     "scripts/run-current-python-tests.py": {
       "mode": "100644",
@@ -2845,7 +2845,7 @@
     },
     ".proj.tickets/0004-shared-preview-notice/T-0004-shared-preview-notice.md": {
       "mode": "100644",
-      "sha256": "dddb6062429afaf7d138e6c67a4f6693096be9b01b53f6c0b76c4b6f09e27b9e"
+      "sha256": "2558ba0a0178b6f0f9504c3f91d70f833c5034637f85a12c676d10b09bad9d00"
     },
     ".proj.tickets/0005-harness-reconciliation/T-0005-harness-reconciliation.md": {
       "mode": "100644",
@@ -5922,6 +5922,34 @@
     ".proj.specs/_reports/ui-closeout-20261021/test-context.md": {
       "mode": "100644",
       "sha256": "e35a76fb569e3bdbb9eee0977a8b4fe1b1843ab6c57e39f8f7b00ad79c021ef8"
+    },
+    ".proj.specs/0004-shared-preview-notice/closeout-20261021/approval.md": {
+      "mode": "100644",
+      "sha256": "34295b3685acd4082504063ee43bf6e00ee90c30a954759eb7f6d798f84c00c8"
+    },
+    ".proj.specs/0004-shared-preview-notice/closeout-20261021/coverage-report.md": {
+      "mode": "100644",
+      "sha256": "8d315711fdcb433287e813cc6c5f5d6f9e54845c1337e6d0905a379977dddb4f"
+    },
+    ".proj.specs/0004-shared-preview-notice/closeout-20261021/landing.json": {
+      "mode": "100644",
+      "sha256": "08a44de8b33cad7b82a2a10357b57fe9d23a420408578c26f0e94b27d2d8bfb1"
+    },
+    ".proj.specs/0004-shared-preview-notice/closeout-20261021/retrospective.md": {
+      "mode": "100644",
+      "sha256": "495c7f9e5c44958551a3ed89a692d622d82abaf90427d9ced5459d8db0775ca2"
+    },
+    ".proj.specs/0004-shared-preview-notice/closeout-20261021/review/code.md": {
+      "mode": "100644",
+      "sha256": "84598bb5d9978786b7bcc4dd090096999c88a90bc851dcf30259b3cb2d415893"
+    },
+    ".proj.specs/0004-shared-preview-notice/closeout-20261021/review/security.md": {
+      "mode": "100644",
+      "sha256": "039a3b45c050a5d35a03b5c157cd6d623351085d0df358544ec3ae571ca5ab34"
+    },
+    ".proj.specs/0004-shared-preview-notice/review/chain-analysis.md": {
+      "mode": "100644",
+      "sha256": "c337f22faf7f1b9236261220dc0ffad023abcfd5e1a175ecdd55baa7aaa433f4"
     }
   }
 }
