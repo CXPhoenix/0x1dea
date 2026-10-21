@@ -1,0 +1,20 @@
+test_real_trusted_main_validation_and_isolated_staging_build (test_current_history_context.CurrentTrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build) ... From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-a12gmvk0/projections/staging
+ * branch            067e53c4e62088b6c54eac554a10b0b402d2bd90 -> FETCH_HEAD
+From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-a12gmvk0/prepared/sync-olacq_0g/result
+ * branch            abd9317205bdf9507d19657d2f766b8456ed63c7 -> FETCH_HEAD
+FAIL
+
+======================================================================
+FAIL: test_real_trusted_main_validation_and_isolated_staging_build (test_current_history_context.CurrentTrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-discord-harness-20261020/tests/article_publication/test_remote_validation.py", line 105, in test_real_trusted_main_validation_and_isolated_staging_build
+    self.assertEqual(checked.returncode,0,checked.stdout+checked.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : {"version": 1, "status": "blocked", "reason": "current reconciliation source inventory mismatch: blog/public/.well-known/discord", "publishable": false}
+
+
+----------------------------------------------------------------------
+Ran 1 test in 8.188s
+
+FAILED (failures=1)

@@ -1,0 +1,6 @@
+test_every_executable_bit_on_published_record_is_refused (test_published_static_successor.PublishedStaticSuccessorTests.test_every_executable_bit_on_published_record_is_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 12.406s
+
+OK

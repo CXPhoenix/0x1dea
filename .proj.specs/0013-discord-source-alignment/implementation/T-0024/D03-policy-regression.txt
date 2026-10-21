@@ -1,0 +1,6 @@
+test_candidate_policy_cannot_approve_changed_or_additional_public_records (test_published_static_successor.PublishedStaticSuccessorTests.test_candidate_policy_cannot_approve_changed_or_additional_public_records) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 12.618s
+
+OK

@@ -332,7 +332,7 @@ class HeadReportingTests(unittest.TestCase):
         # Current receipt metadata needs its actual trusted named histories; inert
         # future main remains based on real main, with no staging candidate parent.
         tree=w.git('write-tree').decode().strip()
-        raw=('tree '+tree+'\nparent 64b31a2c38959ef5490892fa2a001bb0bf2f8ca0\nauthor Fixture <fixture@example.invalid> 1 +0000\ncommitter Fixture <fixture@example.invalid> 1 +0000\n\nSynthetic reporting source\n').encode()
+        raw=('tree '+tree+'\nparent '+w.main+'\nauthor Fixture <fixture@example.invalid> 1 +0000\ncommitter Fixture <fixture@example.invalid> 1 +0000\n\nSynthetic reporting source\n').encode()
         w.main=w.git('hash-object','-t','commit','-w','--stdin',data=raw).decode().strip()
         w.git('update-ref','HEAD',w.main);w.git('update-ref','refs/heads/main',w.main)
         w.grant['main']=w.main;w.save_grant()

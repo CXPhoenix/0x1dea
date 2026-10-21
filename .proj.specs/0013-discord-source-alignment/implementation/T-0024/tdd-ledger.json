@@ -1,0 +1,101 @@
+{
+  "ticket": "T-0024",
+  "approved_rows": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06"
+  ],
+  "cycles": [
+    {
+      "row": "D01",
+      "behavior": "exact published record accepted on main and staging",
+      "red": "one new method, both role subtests failed with inventory mismatch; observed before product edit in tool session37557",
+      "green": "same method passed after ancestry-gated exact identity addition (11.421s, session85966)",
+      "initial_raw_log_on_disk": false
+    },
+    {
+      "row": "D02",
+      "behavior": "all execute bits refused",
+      "red_log": "D02-mode-red.txt",
+      "green_log": "D02-mode-green.txt",
+      "detail": "owner already refused; group and other initially accepted, then refused by finite new-record mode check"
+    },
+    {
+      "row": "D05",
+      "behavior": "current closed-landing fixture remains valid with actual post-publication HEAD",
+      "red_log": "D05-current-fixture-red.txt",
+      "green_log": "D05-current-fixture-green.txt",
+      "detail": "only live setup data materialized; frozen original assertions untouched"
+    },
+    {
+      "row": "D05",
+      "behavior": "actual current remote-validation fixture includes record before Git tree capture and isolated build",
+      "red_log": "D05-remote-fixture-red.txt",
+      "green_log": "D05-remote-fixture-green.txt"
+    },
+    {
+      "row": "D04",
+      "behavior": "new ancestry-error and policy tests reach intended boundary on staging",
+      "red_log": "D04-staging-role-red.txt",
+      "intermediate_failed_attempt": "D04-staging-role-attempt2-failed.txt",
+      "green_log": "D04-staging-role-green.txt",
+      "detail": "fixed only new-test controls/candidate separation; product role logic unchanged"
+    }
+  ],
+  "immediately_green_regressions": [
+    "D02-identity-regression.txt",
+    "D03-unknown-regression.txt",
+    "D03-policy-regression.txt",
+    "D04-historical-regression.txt",
+    "D04-missing-pin-regression.txt",
+    "D04-query-error-regression.txt"
+  ],
+  "interrupted_runs": {
+    "main": "main-full-python-interrupted-v1.txt",
+    "staging": "staging-full-python-interrupted-v1.txt",
+    "exit_code": 143,
+    "count_as_pass": false
+  },
+  "final_full_runs": {
+    "source": "v6",
+    "main": {
+      "harness_adoption": 66,
+      "article_publication": 154,
+      "frozen_pr22": 10,
+      "frozen_pr32": 14,
+      "total": 244
+    },
+    "staging": {
+      "harness_adoption": 95,
+      "article_publication": 154,
+      "frozen_pr22": 10,
+      "frozen_pr32": 14,
+      "total": 273
+    },
+    "both_exit_code": 0,
+    "both_source_stable": true
+  },
+  "preservation": "five frozen modules, original assertions, runner, hash-pinned historical verifiers and original M0 unchanged",
+  "fixture_alignment_cycles": [
+    {
+      "source": "v3",
+      "red": "main/staging-full-python-failed-v3.txt",
+      "issue": "current done-ticket metadata with old staging fixture history"
+    },
+    {
+      "source": "v4-v5",
+      "red": [
+        "D05-workflow-ref-secondary-failure.txt",
+        "D05-current-fixtures-v5-merge-failure.txt"
+      ],
+      "green": [
+        "D05-head-fixture-v6-green.txt",
+        "D05-workflow-fixtures-v6-green.txt"
+      ],
+      "change": "owner-approved actual main/staging setup; deterministic fixture-only policy order before capture"
+    }
+  ]
+}
