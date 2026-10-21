@@ -1,0 +1,9 @@
+{
+  "reason": "Focused head-reporting identified temporary JSON merge conflict; stop obsolete full runs before fixture-only layout fix",
+  "root_pids": [
+    51868,
+    51953
+  ],
+  "terminated_descendants": 4,
+  "count_as_pass": false
+}

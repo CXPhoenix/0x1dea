@@ -13,6 +13,10 @@ BASES = {'main': MAIN, 'staging': STAGING}
 POLICY = 'maintenance/publication-workflow/engineering-v1.json'
 M0 = '.proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.proposed.json'
 M0_SHA = '6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a'
+DISCORD_PUBLICATION = '0e690064985d9d734849e1ec44a8c0f8d84fb2a3'
+DISCORD_RECORD = 'blog/public/.well-known/discord'
+DISCORD_IDENTITY = {'mode': '100644',
+                    'sha256': 'd28142c7a5a13b28d22abaa933cedc2027ce9abbabb2f09c55b989084caa5019'}
 
 
 # Finite, reviewed metadata successors; historical M0 blobs remain immutable.
@@ -253,10 +257,21 @@ def _verify_current(control, root, role, workflow_admission=None):
     expected = {p: identity(e) for p, e in tree(control, BASES[role]).items()}
     expected.update(data['common'])
     expected[POLICY] = {'mode': '100644', 'sha256': digest(regular(control, POLICY).read_bytes())}
+    # Only targets containing the actual approved publication require this record.
+    # Historical M0 projections retain their original source set.
+    try:
+        git(root, 'merge-base', '--is-ancestor', DISCORD_PUBLICATION, 'HEAD')
+    except subprocess.CalledProcessError as error:
+        if error.returncode != 1:
+            raise ValueError('published Discord source ancestry is unavailable') from error
+    else:
+        expected[DISCORD_RECORD] = DISCORD_IDENTITY
     actual = source_names(root)
     if actual != set(expected):
         raise ValueError('current reconciliation source inventory mismatch: ' + ', '.join(sorted(actual ^ set(expected))[:8]))
     for name, entry in expected.items():
+        if name == DISCORD_RECORD and regular(root, name).stat().st_mode & 0o111:
+            raise ValueError('executable published Discord source: ' + name)
         if current_identity(root, name, entry) != entry:
             raise ValueError(('changed test repair provenance: ' if name == 'maintenance/harness-reconciliation/test-contract-repair.json' else 'changed current reconciliation source: ') + name)
     spec = spec_from_file_location('trusted_current_tracker', control / 'scripts/verify-harness-adoption.py')

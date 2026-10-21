@@ -1,0 +1,16 @@
+test_real_closed_t13_landing_does_not_require_future_ticket_scripts (test_current_history_context.CurrentClosedBaselineTests.test_real_closed_t13_landing_does_not_require_future_ticket_scripts) ... FAIL
+
+======================================================================
+FAIL: test_real_closed_t13_landing_does_not_require_future_ticket_scripts (test_current_history_context.CurrentClosedBaselineTests.test_real_closed_t13_landing_does_not_require_future_ticket_scripts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-discord-harness-20261020/tests/article_publication/test_closed_baseline.py", line 34, in test_real_closed_t13_landing_does_not_require_future_ticket_scripts
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: current reconciliation source inventory mismatch: blog/public/.well-known/discord
+
+
+----------------------------------------------------------------------
+Ran 1 test in 6.373s
+
+FAILED (failures=1)

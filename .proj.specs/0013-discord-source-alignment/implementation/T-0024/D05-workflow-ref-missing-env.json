@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-20T23:30:03.623396+00:00",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_workflow_admission.WorkflowAdmissionTests.test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head",
+    "test_workflow_admission.WorkflowAdmissionTests.test_exact_approved_workflow_reaches_both_projections_and_native_readback",
+    "test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle",
+    "test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission"
+  ],
+  "exit_code": 1,
+  "source_sha256": {
+    "scripts/publication_current.py": "bbe73638595c6d8d89f70f1fbbb331c51e7fd6ad15f4cc39ccfba8dc8b87ff49",
+    "tests/article_publication/test_published_static_successor.py": "c15a73933cd5b1394e0a8810205daac37431b4fd24f4ddbf1771e704955c3ec5",
+    "tests/article_publication/test_current_history_context.py": "b893a0dd29851078d062b1d5be8050d4c8372806fef0624c5ef17c8dd43c8d73",
+    "maintenance/publication-workflow/engineering-v1.json": "7ec860c314c0ca9f74779333a92ad2b2b3a56cb11e473857a60c02a74c37aca2"
+  }
+}

@@ -1,0 +1,6 @@
+test_unknown_well_known_public_and_management_sources_are_refused (test_published_static_successor.PublishedStaticSuccessorTests.test_unknown_well_known_public_and_management_sources_are_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 10.616s
+
+OK

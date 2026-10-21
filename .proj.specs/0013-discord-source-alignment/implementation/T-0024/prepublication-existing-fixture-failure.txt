@@ -1,0 +1,18 @@
+test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head (test_workflow_admission.WorkflowAdmissionTests.test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head)
+PA-05: an old detached control cannot hide an advanced/replaced main ref. ... FAIL
+
+======================================================================
+FAIL: test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head (test_workflow_admission.WorkflowAdmissionTests.test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head)
+PA-05: an old detached control cannot hide an advanced/replaced main ref.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-discord-prepublication-baseline-20261021/tests/article_publication/test_workflow_admission.py", line 111, in test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head
+    self.assertEqual(before.returncode, 0, before.stdout+before.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: missing/invalid landing evidence: /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/workflow-admission-9h2ehgsd/control/.proj.tickets/0012-publication-workflow/T-0021-trusted-pr-head-attestation.md
+
+
+----------------------------------------------------------------------
+Ran 1 test in 7.311s
+
+FAILED (failures=1)
