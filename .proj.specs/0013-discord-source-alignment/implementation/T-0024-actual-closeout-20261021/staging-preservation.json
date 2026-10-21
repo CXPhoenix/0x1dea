@@ -1,0 +1,12 @@
+{
+  "root": "/private/tmp/0x1dea-discord-harness-delivery-staging-20261021",
+  "base": "87ff977bb11c42b810dfedc34c519052f62fbaa7",
+  "HEAD": "47884951367ccdaf14b752c3647daf380f5cbe2f",
+  "role": "staging",
+  "existing_identities_preserved": 3234,
+  "blog_identities_preserved": 112,
+  "protected_hashes_preserved": 13,
+  "candidate_paths_preserved": 50,
+  "status": "pass",
+  "publishable": false
+}
