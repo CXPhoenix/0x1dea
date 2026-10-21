@@ -1,0 +1,30 @@
+{
+  "full_python": {
+    "command": [
+      "python3",
+      "scripts/run-current-python-tests.py"
+    ],
+    "groups": [
+      66,
+      158,
+      10,
+      14
+    ],
+    "total": 248,
+    "exit_code": 0,
+    "receipt": "python-receipt.json",
+    "log": "python.log.txt",
+    "scope": "Never-landed aligned QA context: exact main 384ba0d / staging 242a654. The 29 identities matched the authoring snapshot when QA was created. The final archive was added afterward; engineering-v1.json, coverage.md and T-0025 ticket metadata then changed, with final structure/materializer/native checks covering that archive and state. Program/test source and all ten writing identities remain identical to QA. The original pre-alignment run had one PC01 merge conflict and is retained as failed. No fixture, assertion or historical runner change."
+  },
+  "focused": {
+    "tests": 4,
+    "exit_code": 0,
+    "log": "focused-tests.txt"
+  },
+  "post_archive": {
+    "native": "pass; see fixed-point native.json",
+    "structure": "pass",
+    "materializer": "pass"
+  },
+  "post_commit_PC01": "Not yet run; scheduled after actual main landing. No result is inferred."
+}

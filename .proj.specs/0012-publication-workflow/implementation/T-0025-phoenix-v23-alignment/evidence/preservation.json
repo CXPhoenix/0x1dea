@@ -1,0 +1,26 @@
+{
+  "observed_utc": "2026-10-21T16:55:00.683452+00:00",
+  "original_staging": "bf6f872db9aa4a2d3e4a765ef4f171186349f432",
+  "main_base": "8baa132eec03336f6776ea45b0c8e4a6889c3c74",
+  "main_blog_tree": "f28b0b24af594abb569e1770b9c61fd9cd58d3c6",
+  "main_website_paths": 74,
+  "original_website_paths_unchanged": 112,
+  "candidate_paths_preserved": 50,
+  "existing_backup_descendants_unchanged": 736,
+  "protected_historical_hashes": {
+    "scripts/verify-harness-adoption.py": "cecd58b0cd8dbe7fde3030b20ae8bce949d54a9be3e839b91da9baa08a47a73a",
+    "scripts/run-current-python-tests.py": "b0efd41c0f220571747de311f3e910639fbf0c2137fa17d8c798841e9149e377",
+    "tests/article_publication/test_current_baseline.py": "3236c23abdfbb26543721f4bb4d0e7f0567a19baf324696e84f26d2d1de9af33",
+    "tests/article_publication/test_closed_baseline.py": "eecd82cbad8e850e433375902cefb343a1ed4e971a316414a5a08d636e3f96cb",
+    "tests/article_publication/test_closeout_successor.py": "357eae72b7fbdbe7f3eee5ad6b6a2c013a724d581d0b6623c98c1052622e3c8d",
+    "tests/article_publication/test_landed_closeout.py": "30cac9bc27ede1824bc44eb17421583eedb7af4c155a99f1833e64e03f67603d",
+    "tests/article_publication/test_remote_validation.py": "d28b33c701851c57281f793b445d6d73ddb9578892502ab92b3fafa7d2dc22ad",
+    ".proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.proposed.json": "6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a",
+    "maintenance/harness-adoption/baseline-files.json": "a27eb6c95af35785f787e8abd12849f6b73653abb113b1c07511e955f19ac26b",
+    "maintenance/harness-adoption/candidate-delta.json": "30c1e6448d81ace9768ee6481e7b8df5e57d25f491dd4e093b3f0813d832f57f",
+    "maintenance/harness-adoption/framework-import-manifest.json": "b0fb7cf39924c3371be420bce8f3c8c6f1356fcd0f2dc5a24f538e9192718d7e",
+    "maintenance/article-publication/source-boundary.json": "9b19137ccb03816d5c965bc5ee406cc7da6f97a0bee3a0c71d0ac35fa8c6187c",
+    "maintenance/lint-cleanup/source-boundary.json": "22f7fa33ad55af3c04a180c41dae55416eff0a3e43ee6ee87f0d761e5a4ca0f3"
+  },
+  "scope": "No article/asset/preview configuration change; original file content, mode, inode and mtime preserved. Private backup names remain local."
+}
