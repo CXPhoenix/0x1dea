@@ -1001,7 +1001,7 @@
     },
     "scripts/publication_current.py": {
       "mode": "100644",
-      "sha256": "9a427b543a39d3bfc9f85c96fbcff32a272e3bb01f835c27a4336ebe93599752"
+      "sha256": "bbe73638595c6d8d89f70f1fbbb331c51e7fd6ad15f4cc39ccfba8dc8b87ff49"
     },
     "scripts/run-current-python-tests.py": {
       "mode": "100644",
@@ -3873,7 +3873,7 @@
     },
     "tests/article_publication/test_workflow_admission.py": {
       "mode": "100644",
-      "sha256": "2a5465298d8415d2b9330ce2ce771061cd8e91a8a4734510b46161b167df3778"
+      "sha256": "f0403c0ad1a9aeb013b2425fb57a61394b242adc3afb444fced3c16365b94d8f"
     },
     ".proj.specs/0012-publication-workflow/implementation/T-0020/setup-notes.md": {
       "mode": "100644",
@@ -4361,7 +4361,7 @@
     },
     "tests/article_publication/test_head_reporting.py": {
       "mode": "100644",
-      "sha256": "3d6f06f366fcf8a04404c9369f0e5c31aefa1be46366209e16bf042363ac20a4"
+      "sha256": "290711cbe6c77d46b01ce76aa10f7bd7be0f378a35a7ee1bc843b7685c9191eb"
     },
     ".proj.specs/0012-publication-workflow/implementation/T-0021/README.md": {
       "mode": "100644",
@@ -4561,7 +4561,7 @@
     },
     "tests/article_publication/test_current_history_context.py": {
       "mode": "100644",
-      "sha256": "bd6ce3ff96ae8fdd9bbaea4e5f15b4e3a0557581b52f20bdd72db95a2e4c2f86"
+      "sha256": "b893a0dd29851078d062b1d5be8050d4c8372806fef0624c5ef17c8dd43c8d73"
     },
     ".proj.specs/0012-publication-workflow/implementation/T-0021/attempts/main-v4-failed-stale-context.txt": {
       "mode": "100644",
@@ -4906,6 +4906,310 @@
     ".proj.specs/0012-publication-workflow/review/security-T-0021-closeout-P13-20261018.md": {
       "mode": "100644",
       "sha256": "14e26a17564287ab7a8770ca38434ad3c5c83da4e04e89c1f19b3b2568123fca"
+    },
+    ".proj.specs/0013-discord-source-alignment/approval.md": {
+      "mode": "100644",
+      "sha256": "4cfb43f3942c54b2c5f99f2f8088fbb9c3cc6a64912bfd37b658c89aa71ab7cf"
+    },
+    ".proj.specs/0013-discord-source-alignment/diagnosis.json": {
+      "mode": "100644",
+      "sha256": "aba97fd6b48cbf4adc46bc73ecc69b3c9c2b95d0d1e52233d53e5294201e0707"
+    },
+    ".proj.specs/0013-discord-source-alignment/review/prompt.md": {
+      "mode": "100644",
+      "sha256": "b753df77dc7786582a3ca67e4fcaa1c06a7379e2313bfe0b310d80538002a69a"
+    },
+    ".proj.specs/0013-discord-source-alignment/review/round-1.md": {
+      "mode": "100644",
+      "sha256": "7414ddd4d5c70796df243cb44884434c426164a144e267a51e9b82f84e2e0133"
+    },
+    ".proj.specs/0013-discord-source-alignment/review/round-2.md": {
+      "mode": "100644",
+      "sha256": "cbd444acdf7448fc3a845740bfe15f96691f1504c4e15867e748b1cb5f344e5c"
+    },
+    ".proj.specs/0013-discord-source-alignment/spec.en.md": {
+      "mode": "100644",
+      "sha256": "564241acd5072af06eba34b233d953ff861164238e811b0f1b3409dbe978e8c9"
+    },
+    ".proj.specs/0013-discord-source-alignment/spec.zh-TW.md": {
+      "mode": "100644",
+      "sha256": "67a31b8d8996d45a2da93c7086affabb91a2b61bd7e155f33f4853a719ed688a"
+    },
+    ".proj.specs/0013-discord-source-alignment/test-plan.md": {
+      "mode": "100644",
+      "sha256": "199e2868b17f0d613f1344cea4e1cf9631395ddbe04a87ad944b5b32e10bf35f"
+    },
+    ".proj.specs/0013-discord-source-alignment/ticket-allocation.json": {
+      "mode": "100644",
+      "sha256": "12811ec4e5a185faabcef24c0f453724f87aad3e98a5cc341b6ae1f34ff8e173"
+    },
+    ".proj.specs/0013-discord-source-alignment/ticket-proposal.md": {
+      "mode": "100644",
+      "sha256": "43ab333ea4e54f71e2a839dce95b0967a6766b102839ac3b097c50e5c88d5cef"
+    },
+    ".proj.specs/0013-discord-source-alignment/traceability.md": {
+      "mode": "100644",
+      "sha256": "fd5308be62ebc25653f38bf0da7582460ae616d55332292dc7239fcc92251f1a"
+    },
+    ".proj.tickets/0013-discord-source-alignment/T-0024-discord-source-alignment.md": {
+      "mode": "100644",
+      "sha256": "d907c2b4a835259a6f4c72773dd1c5aa21a396201e2fe2bc4c13f181aa2ef1ea"
+    },
+    "tests/article_publication/test_published_static_successor.py": {
+      "mode": "100644",
+      "sha256": "c15a73933cd5b1394e0a8810205daac37431b4fd24f4ddbf1771e704955c3ec5"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D02-identity-regression.txt": {
+      "mode": "100644",
+      "sha256": "b818717861e2e2b91a26d4a58e15c241d086293fa711566a4028defa0a72822a"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D02-mode-green.txt": {
+      "mode": "100644",
+      "sha256": "0030877c05d23fd734af8b77670b6dabc3c11bb0975f4b4d9965045db816d2f6"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D02-mode-red.txt": {
+      "mode": "100644",
+      "sha256": "30d4244a8689ee3a8c2e2edadb3847f0ca242144b8377e1b64d874201cdbdd27"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D03-policy-regression.txt": {
+      "mode": "100644",
+      "sha256": "bf8ffceddaca833e606ffe59138957a9629f39b932cf8ebae68e829851d8f3d5"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D03-unknown-regression.txt": {
+      "mode": "100644",
+      "sha256": "0bddd326baba9bc023d6a387b1cdc3c1d335763763271a097b4d4bbebaa242ca"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D04-historical-regression.txt": {
+      "mode": "100644",
+      "sha256": "98b5ac849278475199cf6e6b72931e51c6c30186025d45761ce058ebcdb65fc6"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D04-missing-pin-regression.txt": {
+      "mode": "100644",
+      "sha256": "4bdd88ef84f9d417376be38d81e7b1de3354e284b13cffdd47078f4d5faa8fe0"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D04-query-error-regression.txt": {
+      "mode": "100644",
+      "sha256": "e736a824646a9f77976a12e0f991dc3ea981337d2e79693c97f93869b25901c6"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D04-staging-role-attempt2-failed.txt": {
+      "mode": "100644",
+      "sha256": "99300b29db59ce2ea43f25921fe0c38881c2f77e5aa787cb9330370699c29f34"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D04-staging-role-green.txt": {
+      "mode": "100644",
+      "sha256": "7c696165ee453d77dc55d6a076dde4c9f821180ef5bd2eab15216da44644467a"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D04-staging-role-red.txt": {
+      "mode": "100644",
+      "sha256": "87c210a03f817457e8eb58b567d32305ff8b9cfb165b3158f1e40d5bd4bcdba9"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-current-fixture-green.txt": {
+      "mode": "100644",
+      "sha256": "9b42703219972d67933be3d92992e1da38494e9206f44d0d80b08a8043a29c1b"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-current-fixture-red.txt": {
+      "mode": "100644",
+      "sha256": "6286c3514ea0e0e0755a99f16a9a1cd2e7add48f690310d511642e51e4cb7123"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-remote-fixture-green.txt": {
+      "mode": "100644",
+      "sha256": "2ece0bb7304f076e48bc92b4e171617b29e94963006294c84e85901a4848c4ee"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-remote-fixture-red.txt": {
+      "mode": "100644",
+      "sha256": "6cf4002f1d24c5463c9f37b46f638a47e997faf40d7f854a42f5df4666f4fe24"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/coverage.md": {
+      "mode": "100644",
+      "sha256": "12ae1e8777b056bcd4fe1b292a31a0764c53058a86b4b678fd641460a5a99a90"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/main-full-python-interrupted-v1.txt": {
+      "mode": "100644",
+      "sha256": "b90f20f9b082ebcbeaf521baf4c00be0d7968e280a746773bdddeb4f32794396"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/main-full-python.receipt.json": {
+      "mode": "100644",
+      "sha256": "2a222249f1c1346e160a573de706bed4fb4a09fa03e93e33dccffd801d3e6f36"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/main-full-python.txt": {
+      "mode": "100644",
+      "sha256": "6434c350d8da79f40250befbe53a66cd05bf47bea874004da5d05933ba78e8b4"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/main-native-before-full.json": {
+      "mode": "100644",
+      "sha256": "12b6697a17557a8df606623b34dd71b680bd688ebe4251e7f87f5c254045da74"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/main-preservation.json": {
+      "mode": "100644",
+      "sha256": "f4fe1878d58cbe368d8c784d1ef9aa8249c0fc1f3a0f23e3faaaf1edf659aa75"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/prepublication-existing-fixture-failure.txt": {
+      "mode": "100644",
+      "sha256": "bfc825e99ee0a7396df1c49a28c622710ba683f0cdb76b690000dbaf7ed10d2f"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/protected-history.json": {
+      "mode": "100644",
+      "sha256": "b61e423864ebb094a545d810c6e27bc0a176a9c68ce8f6ed4ca0d32697877117"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/source-v3-review-context.json": {
+      "mode": "100644",
+      "sha256": "236a985bd02839312980bd4999254cbbb652446aa7696939b9ed4091c206be31"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/staging-full-python-interrupted-v1.txt": {
+      "mode": "100644",
+      "sha256": "ae04bcd642116b6f30442317b1d6ef4bc859f9ff97735e4bd7b76592c35c4d48"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/staging-full-python.receipt.json": {
+      "mode": "100644",
+      "sha256": "241b73382584c091c05d9ba89495674e1d72099dcdcf1fee71f849920d0368e7"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/staging-full-python.txt": {
+      "mode": "100644",
+      "sha256": "7b32cc45bd50566331278f52b258d80edf375d64ec9c73114277164bc99903c2"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/staging-native-before-full.json": {
+      "mode": "100644",
+      "sha256": "cfd4b1a3a4d7a15aa1147d0570e9ff76bf2e25c5551c7a4a471c5f800b3082f4"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/staging-preservation.json": {
+      "mode": "100644",
+      "sha256": "321b93b8f3bcd302da89b21be62fd4ebe30ccf9c3ad88ad003f064ac62130062"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/tdd-ledger.json": {
+      "mode": "100644",
+      "sha256": "78010bd521b74d6c817f78276708fe54168a030486979173461669458d96a12c"
+    },
+    ".proj.specs/0013-discord-source-alignment/review/code-T-0024.md": {
+      "mode": "100644",
+      "sha256": "3cea7fefa92af8d5eeaef26783e127c64ac6937d0cda125e18b0318afe54c80e"
+    },
+    ".proj.specs/0013-discord-source-alignment/review/security-T-0024.md": {
+      "mode": "100644",
+      "sha256": "244b493b2da511666a292ada5a39cfb6f23d7ee9657f418950af24013a90be20"
+    },
+    ".proj.specs/0013-discord-source-alignment/fixture-ref-approval.md": {
+      "mode": "100644",
+      "sha256": "88f51529d78332edf3db9f4892b4842361cfe329a48ee43f0c24d3de364bf747"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-workflow-ref-missing-env.json": {
+      "mode": "100644",
+      "sha256": "c1fd8a78912dab169cc0c4cc1339ac07550e386ca16087bd89867e4bcd80ed43"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-workflow-ref-missing-env.txt": {
+      "mode": "100644",
+      "sha256": "314ec9fdf42e7ce498c5c17bbfa17c4de12090d7a9b9d2294b86b01d144f33b5"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-workflow-ref-secondary-failure.json": {
+      "mode": "100644",
+      "sha256": "3abfe078401df67ac1550ba4a9493976ccb69ada12c532c64f5645821ca6e6e9"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-workflow-ref-secondary-failure.txt": {
+      "mode": "100644",
+      "sha256": "0ecee31dafb337dd05d3e397374972ae03307c7096355550a26e63d404574dfd"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/fixture-ref-followup.md": {
+      "mode": "100644",
+      "sha256": "ff7c40b83479d7ea137c008de2f3da771ad8f76d65b5807aaefaf500b866d9be"
+    },
+    ".proj.specs/0013-discord-source-alignment/review/source-v4-fixture-ref.md": {
+      "mode": "100644",
+      "sha256": "58ceca946e9e225be315cd35e79d04495b19ff9a0398138fbc6fada631dfa538"
+    },
+    ".proj.specs/0013-discord-source-alignment/main-fixture-approval.md": {
+      "mode": "100644",
+      "sha256": "6fa41c87af27cbcf5984102b4ca6a69602462e6dd31fc460be7a89fd473e8f6e"
+    },
+    ".proj.specs/0013-discord-source-alignment/fixture-layout-note.md": {
+      "mode": "100644",
+      "sha256": "b3b9bc6b0d7b619f6bb28879a8f5ee1f8a7fe8d656b5d6e47f256b41b6164189"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-current-fixtures-v5-merge-failure.txt": {
+      "mode": "100644",
+      "sha256": "a49e7ef6cf184c82af7014bb01472179a53111697f4c7a44a00bc3cb51b9399c"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-current-fixtures-v5-sandbox-refusal.txt": {
+      "mode": "100644",
+      "sha256": "b229eea64fd65557ccdfb01da7dbec210bea738c88de794547bb1807e7de88bf"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-head-fixture-v6-green.json": {
+      "mode": "100644",
+      "sha256": "b3b723985d27dad5a8693daae3b47f1b8ef4e374495f0ba61f30c0bda6ca97e7"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-head-fixture-v6-green.txt": {
+      "mode": "100644",
+      "sha256": "6909b28d7d8d52c580a4fb7078fdfc7530130c7a0629ea2255cd364413be338c"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-workflow-fixtures-v6-green.json": {
+      "mode": "100644",
+      "sha256": "e0b11a3ecc19ed5d1e55eb13eb8923e2e405c04c9a87aefaed7d7e964094b598"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/D05-workflow-fixtures-v6-green.txt": {
+      "mode": "100644",
+      "sha256": "d4f46c74ff2929dd52f7247cbcb3555390e161c3f2460bc1ccc3631dc9280634"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/README.md": {
+      "mode": "100644",
+      "sha256": "003928de0cea338157a7a6cfe0f04cb710289b39dce7103f4d72cd95b96b23d8"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/interrupted-v5.json": {
+      "mode": "100644",
+      "sha256": "93203fe5b5374824602d9204ac8ee4b53849a6116395b87323518d595ec5f9d6"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/main-full-python-failed-v3.receipt.json": {
+      "mode": "100644",
+      "sha256": "be279deab7ed15f036628a505a2f6d68c5794fb290d517d6bbe73101f9aa280c"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/main-full-python-failed-v3.txt": {
+      "mode": "100644",
+      "sha256": "ebb287869ee9a7590705f872544235e2c41d40a05c862adfdeb840e81658b458"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/main-full-python-interrupted-v5.txt": {
+      "mode": "100644",
+      "sha256": "89018418d9b2033170a07cd5b638ab8bd9b5a0aa17e5c1de1d569c86132ae673"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/main-native-v6.json": {
+      "mode": "100644",
+      "sha256": "1c33ab8fd919133ca09d61828b9a8fe9c8400738dce24bdafd0af79eef360fea"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/source-v6-review-context.json": {
+      "mode": "100644",
+      "sha256": "0ecf6fdc1a2eb65596dccd5968ab43870d523c7b0f09ef76a420aa5b737442a4"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/staging-full-python-failed-v3.receipt.json": {
+      "mode": "100644",
+      "sha256": "ec24ee3459fc8f20b7dfe55502f639113030abb32f25449f7d001c3c1ba938cc"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/staging-full-python-failed-v3.txt": {
+      "mode": "100644",
+      "sha256": "553e670aff1cd94b118a07ab3edc10facc3b2ada439ddbf89bf5c5cf866ddec4"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/staging-full-python-interrupted-v5.txt": {
+      "mode": "100644",
+      "sha256": "7b7b8fc0ff5ec9e1e45c277cdad2e2c7ec70ca41df831a166126b3fc840c2946"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/staging-native-v6.json": {
+      "mode": "100644",
+      "sha256": "dd1c128590ddf261f8d59525b01701c6a75f1409f519d0494d789b0ade713012"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/v5-layout-merge-experiment-v2.txt": {
+      "mode": "100644",
+      "sha256": "2bad869f53cc84dbf3f446b73c4978e8434889f85ec07c6d0b95c2185f9c38f0"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/v5-layout-merge-experiment.txt": {
+      "mode": "100644",
+      "sha256": "ddc1e160f38d0d83fcea5cdf56cd803e7b91d18d58e34b3a94dca53b0857550d"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/v5-merge-diagnosis.txt": {
+      "mode": "100644",
+      "sha256": "a515c86471636ee4ae77491bbe4a1cf0f8406754cb153de9596a56c82c28c329"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024/v6-fixture-map-preservation.json": {
+      "mode": "100644",
+      "sha256": "0f94e4cf154f79c033b1117a9c4914e0430a1ff984f1f1cce71d2831f587d8ac"
+    },
+    ".proj.specs/0013-discord-source-alignment/publication-approval.md": {
+      "mode": "100644",
+      "sha256": "eedb5d942823f11e66d73288eee0cf24595021aa49b1766e532ced66b0f77e8f"
     }
   }
 }

@@ -1,0 +1,8 @@
+test_unavailable_publication_commit_is_not_treated_as_old_history (test_published_static_successor.PublishedStaticSuccessorTests.test_unavailable_publication_commit_is_not_treated_as_old_history) ... ok
+test_ancestry_query_error_is_not_treated_as_normal_non_ancestor (test_published_static_successor.PublishedStaticSuccessorTests.test_ancestry_query_error_is_not_treated_as_normal_non_ancestor) ... ok
+test_candidate_policy_cannot_approve_changed_or_additional_public_records (test_published_static_successor.PublishedStaticSuccessorTests.test_candidate_policy_cannot_approve_changed_or_additional_public_records) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 39.655s
+
+OK

@@ -1,0 +1,19 @@
+test_candidate_admission_and_independent_digest_or_source_swap_refuse (test_workflow_admission.WorkflowAdmissionTests.test_candidate_admission_and_independent_digest_or_source_swap_refuse)
+PA-04: approved bytes cannot select their own authority or source. ... ok
+test_exact_approved_workflow_reaches_both_projections_and_native_readback (test_workflow_admission.WorkflowAdmissionTests.test_exact_approved_workflow_reaches_both_projections_and_native_readback)
+PA-02: full positive public flow, never an installed/executed workflow. ... ok
+test_historical_cli_fixture_needs_no_current_workflow_helper (test_workflow_admission.WorkflowAdmissionTests.test_historical_cli_fixture_needs_no_current_workflow_helper)
+PA-06: the original three-file historical CLI overlay still runs alone. ... ok
+test_no_grant_preserves_default_denial_at_both_public_entries (test_workflow_admission.WorkflowAdmissionTests.test_no_grant_preserves_default_denial_at_both_public_entries)
+PA-01: an engineering digest alone grants no workflow authority. ... ok
+test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle)
+PA-06: complete M0 ownership retention, not only the admitted path. ... ok
+test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head (test_workflow_admission.WorkflowAdmissionTests.test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head)
+PA-05: an old detached control cannot hide an advanced/replaced main ref. ... ok
+test_undeclared_github_and_path_mode_type_hash_mutations_refuse (test_workflow_admission.WorkflowAdmissionTests.test_undeclared_github_and_path_mode_type_hash_mutations_refuse)
+PA-03: finite admission cannot grant any other deployment path/type. ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 98.947s
+
+OK

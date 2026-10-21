@@ -1,0 +1,24 @@
+test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head (test_workflow_admission.WorkflowAdmissionTests.test_trusted_main_ref_drift_expires_grant_even_with_pinned_control_head)
+PA-05: an old detached control cannot hide an advanced/replaced main ref. ... ok
+test_exact_approved_workflow_reaches_both_projections_and_native_readback (test_workflow_admission.WorkflowAdmissionTests.test_exact_approved_workflow_reaches_both_projections_and_native_readback)
+PA-02: full positive public flow, never an installed/executed workflow. ... ok
+test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle (test_workflow_admission.WorkflowAdmissionTests.test_projection_retains_noncommon_baseline_bytes_aliases_and_historical_oracle)
+PA-06: complete M0 ownership retention, not only the admitted path. ... ok
+test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags. ... ERROR
+
+======================================================================
+ERROR: test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-discord-harness-20261020/tests/article_publication/test_head_reporting.py", line 351, in test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission
+    runtime_file=w.directory/'runtime.json';runtime_file.write_bytes(remote.canonical({'version':1,'node':str(Path(shutil.which('node')).resolve()),'node_version':'v24.13.0','dependencies':str(Path(os.environ['PUBLICATION_TEST_DEPENDENCIES']).resolve())}))
+                                                                                                                                                                                                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 709, in __getitem__
+KeyError: 'PUBLICATION_TEST_DEPENDENCIES'
+
+----------------------------------------------------------------------
+Ran 4 tests in 43.783s
+
+FAILED (errors=1)

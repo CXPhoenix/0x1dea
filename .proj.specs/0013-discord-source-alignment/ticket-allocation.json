@@ -1,0 +1,16 @@
+{
+  "id": "T-0024",
+  "branch": "tickets/T-0024/discord-source-alignment",
+  "blocked_by": [],
+  "test_rows": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06"
+  ],
+  "reserved_prior_local_id": "T-0023",
+  "highest_registered_before_allocation": 22,
+  "owner_approved": true
+}

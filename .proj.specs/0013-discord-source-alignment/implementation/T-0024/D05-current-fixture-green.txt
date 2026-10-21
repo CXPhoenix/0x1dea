@@ -1,0 +1,6 @@
+test_real_closed_t13_landing_does_not_require_future_ticket_scripts (test_current_history_context.CurrentClosedBaselineTests.test_real_closed_t13_landing_does_not_require_future_ticket_scripts) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 11.549s
+
+OK

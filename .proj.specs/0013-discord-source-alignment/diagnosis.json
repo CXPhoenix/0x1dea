@@ -1,0 +1,11 @@
+{
+  "main": "0e690064985d9d734849e1ec44a8c0f8d84fb2a3",
+  "staging": "87ff977bb11c42b810dfedc34c519052f62fbaa7",
+  "native_command": "python3 scripts/verify-harness-adoption.py",
+  "exit_code": 1,
+  "stderr": "FAIL: current reconciliation source inventory mismatch: blog/public/.well-known/discord",
+  "discord_sha256": "d28142c7a5a13b28d22abaa933cedc2027ce9abbabb2f09c55b989084caa5019",
+  "discord_git_blob": "8168cb39a2c92c4b3f2b2191a9d7236491f424f4",
+  "code_changed": false,
+  "new_tests_written": false
+}

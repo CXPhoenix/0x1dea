@@ -1,0 +1,22 @@
+test_unavailable_publication_commit_is_not_treated_as_old_history (test_published_static_successor.PublishedStaticSuccessorTests.test_unavailable_publication_commit_is_not_treated_as_old_history) ... FAIL
+test_ancestry_query_error_is_not_treated_as_normal_non_ancestor (test_published_static_successor.PublishedStaticSuccessorTests.test_ancestry_query_error_is_not_treated_as_normal_non_ancestor) ... ok
+test_candidate_policy_cannot_approve_changed_or_additional_public_records (test_published_static_successor.PublishedStaticSuccessorTests.test_candidate_policy_cannot_approve_changed_or_additional_public_records) ... ok
+
+======================================================================
+FAIL: test_unavailable_publication_commit_is_not_treated_as_old_history (test_published_static_successor.PublishedStaticSuccessorTests.test_unavailable_publication_commit_is_not_treated_as_old_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-discord-harness-staging-20261021/tests/article_publication/test_published_static_successor.py", line 160, in test_unavailable_publication_commit_is_not_treated_as_old_history
+    self.assert_refused(self.verify(root),
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+                        'published Discord source ancestry is unavailable')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-discord-harness-staging-20261021/tests/article_publication/test_published_static_successor.py", line 51, in assert_refused
+    self.assertIn(reason, result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'published Discord source ancestry is unavailable' not found in "FAIL: Command '['git', '--no-replace-objects', '--literal-pathspecs', '-C', '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/discord-source-contract-tntrrq8f/projection/main', 'cat-file', 'blob', '42fc35c2cc041ca45e6a4c3549488f0c30224ff3']' returned non-zero exit status 128.\n"
+
+----------------------------------------------------------------------
+Ran 3 tests in 38.893s
+
+FAILED (failures=1)
