@@ -2,7 +2,8 @@
 id: T-0007
 title: Reusable encore ticket and electricity article integration
 epic: 0007-encore-ticket
-status: review
+status: done
+landing_evidence: .proj.specs/0007-encore-ticket/closeout-20261021/landing.json
 blocked_by: []
 ---
 
@@ -20,7 +21,7 @@ A reusable EncoreTicket accepts a title, href and optional description, appears 
 - [x] E2: actual Markdown/SSR integration with intact next section.
 - [x] E3/E4: D appearance in desktop/mobile and light/dark; keyboard/link semantics and actual navigation.
 - [x] E5: task-entry article preserved except the exact recommendation paragraph; bounded source inventory.
-- [ ] E6: product checks pass; preservation rejections accurately separated; no historical guard change or external publication.
+- [x] E6: product checks pass; preservation rejections accurately separated; no historical guard change or external publication.
 
 ## 給使用者（zh-TW）
 
@@ -35,3 +36,8 @@ Local UI delivery and independent code/security reviews are complete. E6 remains
 The owner subsequently authorized a scoped commit and non-force origin/staging push on 2026-10-11 after disclosure of the above limits. This supersedes earlier no-publication statements for the requested Git actions only. Existing caption WIP is excluded from the index. Status remains review while the disclosed E6 checks are unresolved; actual Git landing will be verified independently.
 
 The owner subsequently authorized missing-tool restoration and required the normal hook. Frozen-lockfile restoration resolved full lint: pnpm lint, all 61 unit tests and VitePress build passed again, without manifest or lockfile changes. The earlier missing-plugin limitation is resolved; unrelated metadata and historical preservation limitations remain. See approval.md and coverage-report.md for the narrowed installation exception.
+
+
+## Current closeout — 2026-10-21
+
+The owner requested closure after actual staging landing. Current E1–E6 acceptance and retained limits are in [closeout-20261021/coverage-report.md](../../.proj.specs/0007-encore-ticket/closeout-20261021/coverage-report.md); [actual landing](../../.proj.specs/0007-encore-ticket/closeout-20261021/landing.json). This dated entry supersedes the earlier review/no-landing or missing-current-evidence comments only. It does not backdate gates, remove historical failures, publish candidate articles or claim the latest metadata-only Git head was deployed.

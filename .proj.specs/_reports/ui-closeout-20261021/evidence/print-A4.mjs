@@ -1,0 +1,14 @@
+import {writeFile,readFile} from 'node:fs/promises';
+const root='/private/tmp/0x1dea-ui-closeout-evidence-20261021';
+const socket=new WebSocket(process.argv[2]);await new Promise((resolve,reject)=>{socket.onopen=resolve;socket.onerror=reject});
+let id=0;const pending=new Map();socket.onmessage=e=>{const r=JSON.parse(e.data);if(r.id){const p=pending.get(r.id);pending.delete(r.id);r.error?p.reject(r.error):p.resolve(r.result)}};
+const call=(method,params={},sessionId)=>new Promise((resolve,reject)=>{const n=++id;pending.set(n,{resolve,reject});socket.send(JSON.stringify({id:n,method,params,...(sessionId?{sessionId}:{})}))});
+const targets=await call('Target.getTargets');const target=targets.targetInfos.find(t=>t.type==='page'&&t.url.startsWith('http://127.0.0.1:4380/__closeout_acceptance'));
+if(!target)throw Error('Exact disposable QA page required');const {sessionId}=await call('Target.attachToTarget',{targetId:target.targetId,flatten:true});
+await call('Emulation.setEmulatedMedia',{media:'print',features:[{name:'prefers-color-scheme',value:'light'}]},sessionId);
+const measured=await call('Runtime.evaluate',{expression:await readFile(root+'/metrics.js','utf8'),returnByValue:true},sessionId);
+await writeFile(root+'/print-metrics.json',JSON.stringify(JSON.parse(measured.result.value),null,2)+'\n');
+const settings={paperWidth:210/25.4,paperHeight:297/25.4,scale:1,displayHeaderFooter:false,printBackground:true,preferCSSPageSize:false,marginTop:.4,marginBottom:.4,marginLeft:.4,marginRight:.4};
+const pdf=await call('Page.printToPDF',settings,sessionId);await writeFile(root+'/summary-A4.pdf',Buffer.from(pdf.data,'base64'));
+await writeFile(root+'/print-settings.json',JSON.stringify({surface:'Same agent-browser Chromium page via native CDP; CLI pdf exposes no paper settings',target:target.url,settings},null,2)+'\n');
+await call('Emulation.setEmulatedMedia',{media:'',features:[{name:'prefers-color-scheme',value:'light'}]},sessionId);await call('Target.detachFromTarget',{sessionId});socket.close();

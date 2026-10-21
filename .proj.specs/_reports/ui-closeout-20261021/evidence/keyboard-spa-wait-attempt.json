@@ -1,0 +1,196 @@
+[
+  {
+    "args": [
+      "set",
+      "viewport",
+      "1280",
+      "900"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "set",
+      "media",
+      "light"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "open",
+      "http://127.0.0.1:4380/__closeout_acceptance.html"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ 元件驗收 | 0x1DEA\n  http://127.0.0.1:4380/__closeout_acceptance.html\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "snapshot",
+      "-i",
+      "-u"
+    ],
+    "exit_code": 0,
+    "stdout": "- link \"Skip to content\" [ref=e1, url=http://127.0.0.1:4380/__closeout_acceptance.html#VPContent]\n- link \"0x1DEA\" [ref=e2, url=http://127.0.0.1:4380/]\n- navigation \"Main Navigation\" [ref=e3]\n  - link \"About Me\" [ref=e6, url=http://127.0.0.1:4380/about.html]\n  - link \"文章總覽\" [ref=e7, url=http://127.0.0.1:4380/posts.html]\n  - button \"分類文章\" [expanded=false, ref=e15]\n- switch \"Switch to dark theme\" [checked=false, ref=e4]\n- link \"github\" [ref=e5, url=https://github.com/cxphoenix/0x1dea]\n- heading \"元件驗收 Permalink to “元件驗收”\" [level=1, ref=e8]\n  - link \"Permalink to “元件驗收”\" [ref=e16, url=http://127.0.0.1:4380/__closeout_acceptance.html#%E5%85%83%E4%BB%B6%E9%A9%97%E6%94%B6]\n- link \"關於本站\" [ref=e32, url=http://127.0.0.1:4380/about.html]\n- link \"關於本站\" [ref=e33, url=http://127.0.0.1:4380/about.html]\n- link \"關於本站\" [ref=e34, url=http://127.0.0.1:4380/about.html]\n- link \"很長連結\" [ref=e35, url=https://example.com/a-long-unbroken-path-that-should-never-cause-page-horizontal-overflow-in-the-summary]\n- button \"Copy Code\" [ref=e24]\n- generic \"console.log('$ is code content')\" [ref=e25] focusable [tabindex]\n- heading \"Caption acceptance Permalink to “Caption acceptance”\" [level=2, ref=e9]\n  - link \"Permalink to “Caption acceptance”\" [ref=e17, url=http://127.0.0.1:4380/__closeout_acceptance.html#caption-acceptance]\n- link \"圖 1\" [ref=e18, url=http://127.0.0.1:4380/__closeout_acceptance.html#fig-first-proof]\n- link \"圖 2\" [ref=e19, url=http://127.0.0.1:4380/__closeout_acceptance.html#fig-second-proof]\n- link \"表 1\" [ref=e20, url=http://127.0.0.1:4380/__closeout_acceptance.html#tbl-first-table]\n- link \"表 2\" [ref=e21, url=http://127.0.0.1:4380/__closeout_acceptance.html#tbl-second-table]\n- table \"表 1：First table caption\" [ref=e10] focusable [tabindex]\n  - columnheader \"Label\" [ref=e36]\n  - columnheader \"Value\" [ref=e37]\n  - cell \"Alpha\" [ref=e26]\n  - cell \"One\" [ref=e27]\n- table \"表 2：Second table caption\" [ref=e11] focusable [tabindex]\n  - columnheader \"Label\" [ref=e38]\n  - columnheader \"Value\" [ref=e39]\n  - cell \"Beta\" [ref=e28]\n  - cell \"Two\" [ref=e29]\n- table \"OrdinaryTableUnnumberedUnchanged\" [ref=e12] focusable [tabindex]\n  - columnheader \"Ordinary\" [ref=e40]\n  - columnheader \"Table\" [ref=e41]\n  - cell \"Unnumbered\" [ref=e30]\n  - cell \"Unchanged\" [ref=e31]\n- link \"Actual article\" [ref=e22, url=http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html]\n- heading \"Hostile <img src=x onerror=alert(1)>\" [level=2, ref=e23]\n- link \"同場加映 延伸閱讀 First safe recommendation Independent first 來看這一篇 \" [ref=e13, url=http://127.0.0.1:4380/about]\n- link \"同場加映 延伸閱讀 Second <script>safe</script> recommendation 來看這一篇 \" [ref=e14, url=http://127.0.0.1:4380/about]\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "focus",
+      "a[href=\"#fig-first-proof\"]"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Shift+Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({href:document.activeElement.getAttribute(\"href\"),outline:getComputedStyle(document.activeElement).outline,rect:document.activeElement.getBoundingClientRect().toJSON()})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"href\\\":\\\"#fig-first-proof\\\",\\\"outline\\\":\\\"rgb(52, 81, 178) solid 2px\\\",\\\"rect\\\":{\\\"x\\\":336.765625,\\\"y\\\":438.0625,\\\"width\\\":33.15625,\\\"height\\\":24,\\\"top\\\":438.0625,\\\"right\\\":369.921875,\\\"bottom\\\":462.0625,\\\"left\\\":336.765625}}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "screenshot",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-fig-first-proof.png"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Screenshot saved to /private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-fig-first-proof.png\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Enter"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({hash:location.hash,target:!!document.getElementById(location.hash.slice(1))})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"hash\\\":\\\"#fig-first-proof\\\",\\\"target\\\":true}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "focus",
+      "a[href=\"#tbl-first-table\"]"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Shift+Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({href:document.activeElement.getAttribute(\"href\"),outline:getComputedStyle(document.activeElement).outline,rect:document.activeElement.getBoundingClientRect().toJSON()})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"href\\\":\\\"#tbl-first-table\\\",\\\"outline\\\":\\\"rgb(52, 81, 178) solid 2px\\\",\\\"rect\\\":{\\\"x\\\":428.578125,\\\"y\\\":438.0625,\\\"width\\\":33.15625,\\\"height\\\":24,\\\"top\\\":438.0625,\\\"right\\\":461.734375,\\\"bottom\\\":462.0625,\\\"left\\\":428.578125}}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "screenshot",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-tbl-first-table.png"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Screenshot saved to /private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-tbl-first-table.png\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Enter"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({hash:location.hash,target:!!document.getElementById(location.hash.slice(1))})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"hash\\\":\\\"#tbl-first-table\\\",\\\"target\\\":true}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "window.__closeoutSpaProbe=\"ticket-closeout-20261021\""
+    ],
+    "exit_code": 0,
+    "stdout": "\"ticket-closeout-20261021\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "click",
+      "a[href=\"/post/course/security-awareness/electricity-privacy.html\"]"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "wait",
+      "--url",
+      "**/electricity-privacy.html"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "✗ Wait timed out after 25000ms\n"
+  }
+]

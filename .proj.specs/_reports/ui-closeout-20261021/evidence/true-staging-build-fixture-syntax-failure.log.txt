@@ -1,0 +1,27 @@
+
+  vitepress v2.0.0-alpha.16
+
+- building client + server bundles...
+✗ Build failed in 45ms
+[31m✗[0m building client + server bundles...
+build error:
+[vitepress] [article-captions] Invalid block: ::: figure id=first-proof caption="First figure caption"
+file: /private/tmp/0x1dea-ui-closeout-stage-20261021/blog/__closeout_acceptance.md
+[vitepress] [article-captions] Invalid block: ::: figure id=first-proof caption="First figure caption"
+file: /private/tmp/0x1dea-ui-closeout-stage-20261021/blog/__closeout_acceptance.md
+    at fail (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.vite-temp/config.mts.timestamp-1792596295313-d4cf81ae6271a8.mjs:12:9)
+    at md.block.ruler.before.alt (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.vite-temp/config.mts.timestamp-1792596295313-d4cf81ae6271a8.mjs:24:7)
+    at ParserBlock.tokenize (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:28133:20)
+    at ParserBlock.parse (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:28174:8)
+    at Array.block (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:25821:20)
+    at Core.process (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:26355:13)
+    at MarkdownIt.parse (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:31631:13)
+    at md.parse (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:23125:10)
+    at MarkdownIt.render (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:31650:36)
+    at MarkdownItAsync.render (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:31709:18)
+    at md.render (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:23189:20)
+    at MarkdownItAsync.renderAsync (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:31714:25)
+    at file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:37356:27
+    at Object.transform (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vitepress@2.0.0-alpha.16_@types+node@25.2.3_change-case@5.4.4_jiti@2.6.1_markdown-it-ma_1bf3f5f19abe9334dd80e337afadd633/node_modules/vitepress/dist/node/chunk-CCYAX98b.js:41759:65)
+    at Object.handler (file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/vite@7.3.1_@types+node@25.2.3_jiti@2.6.1_tsx@4.21.0_yaml@2.8.2/node_modules/vite/dist/node/chunks/config.js:33730:13)
+    at file:///Users/phoenix/dev/online-notes/0x1DEA/node_modules/.pnpm/rollup@4.57.1/node_modules/rollup/dist/es/shared/node-entry.js:22548:40

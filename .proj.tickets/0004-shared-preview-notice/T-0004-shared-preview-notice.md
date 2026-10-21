@@ -2,7 +2,8 @@
 id: T-0004
 title: Shared preview notice on homepage and article
 epic: 0004-shared-preview-notice
-status: review
+status: done
+landing_evidence: .proj.specs/0004-shared-preview-notice/closeout-20261021/landing.json
 blocked_by: [T-0005]
 ---
 
@@ -17,11 +18,11 @@ Homepage and selected article use the same environment-controlled note with inde
 
 ## Acceptance criteria
 
-- [ ] N1–N2: title/text and exact flag behavior preserved on both consumers.
-- [ ] N3–N4: clean preview and Production matrix evidenced with actual SSR HTML and browser; true/main documented as the valid explicit override; supported Production configuration is false; separately authorized release verification remains required.
-- [ ] N5–N6: escaping/accessibility/layout preserved; public example tracked and local .env variants ignored without secret access or new env loader.
-- [ ] N7: existing commit and unlanded consumer work distinguished; retrospective record does not backdate gates or create fake completion.
-- [ ] New work follows approved test plan and review/security/surface gates; selected article change is limited to the staging notice replacement.
+- [x] N1–N2: title/text and exact flag behavior preserved on both consumers.
+- [x] N3–N4: clean preview and Production matrix evidenced with actual SSR HTML and browser; true/main documented as the valid explicit override; supported Production configuration is false; separately authorized release verification remains required.
+- [x] N5–N6: escaping/accessibility/layout preserved; public example tracked and local .env variants ignored without secret access or new env loader.
+- [x] N7: existing commit and unlanded consumer work distinguished; retrospective record does not backdate gates or create fake completion.
+- [x] New work follows approved test plan and review/security/surface gates; selected article change is limited to the staging notice replacement.
 
 ## 給使用者（zh-TW）
 
@@ -38,3 +39,8 @@ Approval: ../../.proj.specs/0004-shared-preview-notice/approval.md. No landing a
 ## Local verification evidence
 
 See coverage-report.md under the epic, maintenance/component-delivery/TDD.md and scope.md. Local behavior verified; existing harness verifier config hash mismatch reproduced on pristine baseline. Actual deployment/landing not performed.
+
+
+## Current closeout — 2026-10-21
+
+The owner requested closure after actual staging landing. Current N1–N7 acceptance and retained limits are in [closeout-20261021/coverage-report.md](../../.proj.specs/0004-shared-preview-notice/closeout-20261021/coverage-report.md); [actual landing](../../.proj.specs/0004-shared-preview-notice/closeout-20261021/landing.json). This dated entry supersedes the earlier review/no-landing or missing-current-evidence comments only. It does not backdate gates, remove historical failures, publish candidate articles or claim the latest metadata-only Git head was deployed.

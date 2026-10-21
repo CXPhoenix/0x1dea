@@ -1,0 +1,16 @@
+{
+  "surface": "Same agent-browser Chromium page via native CDP; CLI pdf exposes no paper settings",
+  "target": "http://127.0.0.1:4380/__closeout_acceptance.html",
+  "settings": {
+    "paperWidth": 8.267716535433072,
+    "paperHeight": 11.692913385826772,
+    "scale": 1,
+    "displayHeaderFooter": false,
+    "printBackground": true,
+    "preferCSSPageSize": false,
+    "marginTop": 0.4,
+    "marginBottom": 0.4,
+    "marginLeft": 0.4,
+    "marginRight": 0.4
+  }
+}

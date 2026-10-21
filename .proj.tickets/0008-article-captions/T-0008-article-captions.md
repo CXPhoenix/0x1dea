@@ -2,7 +2,8 @@
 id: T-0008
 title: Automatic article figure and table captions with stable references
 epic: 0008-article-captions
-status: review
+status: done
+landing_evidence: .proj.specs/0008-article-captions/closeout-20261021/landing.json
 blocked_by: []
 ---
 
@@ -33,3 +34,8 @@ Build-time opt-in image/table captions, separate per-document counters and stabl
 Spec/traceability/approved test table and two review rounds: .proj.specs/0008-article-captions/. Local work only; no commit/push/deploy/install or historical guard changes. Keep status review after local delivery until authorized landing actually occurs.
 
 Local implementation and C1–C9 verification complete. See coverage-report.md, browser-evidence.md and review/code-T-0008.md / review/security-T-0008.md in the epic. 25 new tests, 86 full-suite tests, full lint and final VitePress build passed. Structure/materializer baseline metadata failures and final immutable-history adoption rejection are disclosed, not bypassed. No commit/push/landing performed; status remains review.
+
+
+## Current closeout — 2026-10-21
+
+The owner requested closure after actual staging landing. Current C1–C9 acceptance and retained limits are in [closeout-20261021/coverage-report.md](../../.proj.specs/0008-article-captions/closeout-20261021/coverage-report.md); [actual landing](../../.proj.specs/0008-article-captions/closeout-20261021/landing.json). This dated entry supersedes the earlier review/no-landing or missing-current-evidence comments only. It does not backdate gates, remove historical failures, publish candidate articles or claim the latest metadata-only Git head was deployed.

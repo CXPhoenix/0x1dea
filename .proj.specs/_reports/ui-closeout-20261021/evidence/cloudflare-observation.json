@@ -1,0 +1,31 @@
+{
+  "observed_at": "2026-10-21T15:26:03.685616+00:00",
+  "surface": "Read-only authenticated Cloudflare Dashboard via cua_repl; selected public deployment fields only; no settings changed",
+  "production": {
+    "deployment_id": "31cc7a4d-cc1f-40fd-8fd9-286f47dc31f4",
+    "source_commit": "0e690064985d9d734849e1ec44a8c0f8d84fb2a3",
+    "branch": "main",
+    "state": "success",
+    "deployed_at": "2026-10-20T15:52:54.384663Z",
+    "url": "https://31cc7a4d.0x1dea.pages.dev",
+    "alias": "https://0x1dea.rtfm.diy",
+    "build_command": "npx vitepress build blog",
+    "output": "/blog/.vitepress/dist",
+    "VITE_SITE_NOTICE_ENABLED": "false",
+    "dashboard": "https://dash.cloudflare.com/b36550529cf61ab585322587e36f7f79/pages/view/0x1dea/31cc7a4d-cc1f-40fd-8fd9-286f47dc31f4"
+  },
+  "preview": {
+    "deployment_id": "67b8c227-8b29-4b7d-9fc1-eeb8f553e252",
+    "source_commit": "87ff977bb11c42b810dfedc34c519052f62fbaa7",
+    "branch": "staging",
+    "state": "success",
+    "deployed_at": "2026-10-20T15:55:05.323082Z",
+    "url": "https://67b8c227.0x1dea.pages.dev",
+    "alias": "https://staging.0x1dea.pages.dev",
+    "build_command": "npx vitepress build blog",
+    "output": "/blog/.vitepress/dist",
+    "VITE_SITE_NOTICE_ENABLED": "true",
+    "dashboard": "https://dash.cloudflare.com/b36550529cf61ab585322587e36f7f79/pages/view/0x1dea/67b8c227-8b29-4b7d-9fc1-eeb8f553e252"
+  },
+  "limit": "Current main/staging metadata-only commits are skipped by Cloudflare. These are actual latest published source commits, not inferred latest Git HEAD deployments."
+}

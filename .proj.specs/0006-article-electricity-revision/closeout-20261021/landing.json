@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "ticket": "T-0006",
+  "authorized": true,
+  "landed": true,
+  "target": "staging",
+  "commit": "f93237b1ed538484f24ed103ef00c7e5ee2e1828",
+  "approval_receipt": ".proj.specs/0006-article-electricity-revision/closeout-20261021/approval.md",
+  "verified_at": "2026-10-21T15:34:43.595335+00:00",
+  "observed_staging": "f503f00a4891a519eb12b54e6bfc8f0db267c55f",
+  "evidence": ".proj.specs/_reports/ui-closeout-20261021/evidence",
+  "limits": "Current acceptance/rerun against pinned sources; no original push timestamp invented. This receipt records actual implementation landing, not the future closeout-metadata commit."
+}

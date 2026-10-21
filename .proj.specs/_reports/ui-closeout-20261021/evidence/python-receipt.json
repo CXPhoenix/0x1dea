@@ -1,0 +1,33 @@
+{
+  "command": [
+    "python3",
+    "scripts/run-current-python-tests.py"
+  ],
+  "root": "/private/tmp/0x1dea-ui-closeout-test-context-20261021",
+  "candidate_context": {
+    "kind": "Disposable local candidate context; never published",
+    "head": "04d078d883d3b3bd0610b9b59f507558c6769007",
+    "main": "8baa132eec03336f6776ea45b0c8e4a6889c3c74",
+    "local_staging_candidate": "04d078d883d3b3bd0610b9b59f507558c6769007",
+    "actual_remote_staging_observed": "f503f00a4891a519eb12b54e6bfc8f0db267c55f",
+    "candidate_parent": "f503f00a4891a519eb12b54e6bfc8f0db267c55f",
+    "all_blog_tree_equal": true,
+    "all_tests_runner_and_wrapper_equal": true,
+    "control_function_and_class_asts": "unchanged; finite exact metadata additions only",
+    "reason": "Current source admits done T-0006/T-0007 into common engineering. Old remote staging contains review versions while actual main has neither ticket, producing add/add in the positive synthetic-main fixture. The intended closure lands on staging first. This local candidate input models that post-closeout staging state without changing any assertion, fixture file, main parent or remote."
+  },
+  "started_utc": "2026-10-21T16:01:55.272237+00:00",
+  "env": {
+    "PUBLICATION_TEST_DEPENDENCIES": "/Users/phoenix/dev/online-notes/0x1DEA/node_modules",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "source_sha256": {
+    "scripts/publication_current.py": "b496b2d2538d6c62877b314464faef322457ee52ecb478400fb12581f99d7007",
+    "scripts/run-current-python-tests.py": "b0efd41c0f220571747de311f3e910639fbf0c2137fa17d8c798841e9149e377",
+    "scripts/verify-harness-adoption.py": "cecd58b0cd8dbe7fde3030b20ae8bce949d54a9be3e839b91da9baa08a47a73a",
+    "maintenance/publication-workflow/engineering-v1.json": "bdcd348de429cff48e43957ecb1659a1c59bb16cee25fdb53d60eb29b70a4557"
+  },
+  "exit_code": 0,
+  "finished_utc": "2026-10-21T16:18:15.382119+00:00",
+  "log_sha256": "dc85de91cdcc0cbf77547c2fc37adf8d55b97a4891f55b612078d9e348e25002"
+}

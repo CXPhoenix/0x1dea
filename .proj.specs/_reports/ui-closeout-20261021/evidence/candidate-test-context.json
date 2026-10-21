@@ -1,0 +1,12 @@
+{
+  "kind": "Disposable local candidate context; never published",
+  "head": "04d078d883d3b3bd0610b9b59f507558c6769007",
+  "main": "8baa132eec03336f6776ea45b0c8e4a6889c3c74",
+  "local_staging_candidate": "04d078d883d3b3bd0610b9b59f507558c6769007",
+  "actual_remote_staging_observed": "f503f00a4891a519eb12b54e6bfc8f0db267c55f",
+  "candidate_parent": "f503f00a4891a519eb12b54e6bfc8f0db267c55f",
+  "all_blog_tree_equal": true,
+  "all_tests_runner_and_wrapper_equal": true,
+  "control_function_and_class_asts": "unchanged; finite exact metadata additions only",
+  "reason": "Current source admits done T-0006/T-0007 into common engineering. Old remote staging contains review versions while actual main has neither ticket, producing add/add in the positive synthetic-main fixture. The intended closure lands on staging first. This local candidate input models that post-closeout staging state without changing any assertion, fixture file, main parent or remote."
+}

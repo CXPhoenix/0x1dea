@@ -1,0 +1,348 @@
+{
+  "url": "http://127.0.0.1:4380/__closeout_acceptance.html",
+  "theme": "mac",
+  "viewport": 1280,
+  "pageWidth": 1280,
+  "summaries": [
+    {
+      "class": "_summary_yyhr4_2 _note_yyhr4_17",
+      "label": "TL;DR",
+      "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+      "bounds": {
+        "x": 296,
+        "y": 229.890625,
+        "width": 688,
+        "height": 258
+      },
+      "contrast": 18.883060964594996,
+      "children": [
+        {
+          "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+          "bounds": {
+            "x": 349,
+            "y": 294.890625,
+            "width": 609,
+            "height": 35
+          },
+          "before": "none",
+          "contrast": 18.883060964594996
+        },
+        {
+          "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+          "bounds": {
+            "x": 349,
+            "y": 338.890625,
+            "width": 609,
+            "height": 35
+          },
+          "before": "none",
+          "contrast": 18.883060964594996
+        },
+        {
+          "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+          "bounds": {
+            "x": 349,
+            "y": 382.890625,
+            "width": 609,
+            "height": 70
+          },
+          "before": "none",
+          "contrast": 18.883060964594996
+        }
+      ],
+      "nestedPrompts": [],
+      "interactive": 0
+    },
+    {
+      "class": "_summary_yyhr4_2 _cards_yyhr4_84",
+      "label": "TL;DR",
+      "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+      "bounds": {
+        "x": 296,
+        "y": 517.890625,
+        "width": 688,
+        "height": 480
+      },
+      "contrast": 18.883060964594996,
+      "children": [
+        {
+          "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+          "bounds": {
+            "x": 322,
+            "y": 582.890625,
+            "width": 636,
+            "height": 105
+          },
+          "before": "\"\"",
+          "contrast": 18.883060964594996
+        },
+        {
+          "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+          "bounds": {
+            "x": 322,
+            "y": 702.890625,
+            "width": 636,
+            "height": 105
+          },
+          "before": "\"\"",
+          "contrast": 18.883060964594996
+        },
+        {
+          "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+          "bounds": {
+            "x": 322,
+            "y": 822.890625,
+            "width": 636,
+            "height": 140
+          },
+          "before": "\"\"",
+          "contrast": 18.883060964594996
+        }
+      ],
+      "nestedPrompts": [],
+      "interactive": 0
+    },
+    {
+      "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+      "label": "TL;DR",
+      "text": "TL;DR\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+      "bounds": {
+        "x": 296,
+        "y": 1027.890625,
+        "width": 688,
+        "height": 282
+      },
+      "contrast": 18.883060964594996,
+      "children": [
+        {
+          "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+          "bounds": {
+            "x": 322,
+            "y": 1116.890625,
+            "width": 636,
+            "height": 35
+          },
+          "before": "\"\"",
+          "contrast": 18.883060964594996
+        },
+        {
+          "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+          "bounds": {
+            "x": 322,
+            "y": 1160.890625,
+            "width": 636,
+            "height": 35
+          },
+          "before": "\"\"",
+          "contrast": 18.883060964594996
+        },
+        {
+          "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+          "bounds": {
+            "x": 322,
+            "y": 1204.890625,
+            "width": 636,
+            "height": 70
+          },
+          "before": "\"\"",
+          "contrast": 18.883060964594996
+        }
+      ],
+      "nestedPrompts": [],
+      "interactive": 0
+    },
+    {
+      "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+      "label": "Markdown 邊界",
+      "text": "Markdown 邊界\n很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。\n很長連結\n程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890\n\n段落 強調 與 斜體。\n\njs\nconsole.log('$ is code content')\n\n內部容器\n\n容器項目不是 prompt。",
+      "bounds": {
+        "x": 296,
+        "y": 1405.890625,
+        "width": 688,
+        "height": 631.75
+      },
+      "contrast": 18.883060964594996,
+      "children": [
+        {
+          "text": "很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。",
+          "bounds": {
+            "x": 322,
+            "y": 1494.890625,
+            "width": 636,
+            "height": 117
+          },
+          "before": "\"\"",
+          "contrast": 18.883060964594996
+        },
+        {
+          "text": "很長連結",
+          "bounds": {
+            "x": 322,
+            "y": 1623.890625,
+            "width": 636,
+            "height": 35
+          },
+          "before": "\"\"",
+          "contrast": 18.883060964594996
+        },
+        {
+          "text": "程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890",
+          "bounds": {
+            "x": 322,
+            "y": 1667.890625,
+            "width": 636,
+            "height": 70
+          },
+          "before": "\"\"",
+          "contrast": 18.883060964594996
+        }
+      ],
+      "nestedPrompts": [
+        "none",
+        "none"
+      ],
+      "interactive": 1
+    },
+    {
+      "class": "_summary_yyhr4_2 _note_yyhr4_17",
+      "label": "TL;DR",
+      "text": "TL;DR\n\nfallback note",
+      "bounds": {
+        "x": 296,
+        "y": 2657.640625,
+        "width": 688,
+        "height": 135
+      },
+      "contrast": 18.883060964594996,
+      "children": [],
+      "nestedPrompts": [],
+      "interactive": 0
+    }
+  ],
+  "notices": [
+    {
+      "text": "Hostile <img src=x onerror=alert(1)>\n\nPlain <script>alert(1)</script>\nSecond line",
+      "label": "Hostile <img src=x onerror=alert(1)>",
+      "contrast": 9.940989272097232,
+      "bounds": {
+        "x": 296,
+        "y": 5752.671875,
+        "width": 688,
+        "height": 158
+      },
+      "executable": 0
+    }
+  ],
+  "captions": [
+    {
+      "text": "圖 1：First figure caption",
+      "font": 17.5,
+      "contrast": 10.940207996567228,
+      "bounds": {
+        "x": 296,
+        "y": 3963.3125,
+        "width": 688,
+        "height": 29.75
+      },
+      "clipped": false
+    },
+    {
+      "text": "表 1：First table caption",
+      "font": 17.5,
+      "contrast": 10.940207996567228,
+      "bounds": {
+        "x": 296,
+        "y": 4109.0625,
+        "width": 688,
+        "height": 44.75
+      },
+      "clipped": false
+    },
+    {
+      "text": "圖 2：Second figure caption",
+      "font": 17.5,
+      "contrast": 10.940207996567228,
+      "bounds": {
+        "x": 296,
+        "y": 5288.171875,
+        "width": 688,
+        "height": 29.75
+      },
+      "clipped": false
+    },
+    {
+      "text": "表 2：Second table caption",
+      "font": 17.5,
+      "contrast": 10.940207996567228,
+      "bounds": {
+        "x": 296,
+        "y": 5357.921875,
+        "width": 688,
+        "height": 44.75
+      },
+      "clipped": false
+    }
+  ],
+  "references": [
+    {
+      "text": "圖 1",
+      "href": "#fig-first-proof",
+      "target": true
+    },
+    {
+      "text": "圖 2",
+      "href": "#fig-second-proof",
+      "target": true
+    },
+    {
+      "text": "表 1",
+      "href": "#tbl-first-table",
+      "target": true
+    },
+    {
+      "text": "表 2",
+      "href": "#tbl-second-table",
+      "target": true
+    }
+  ],
+  "recommendation": [
+    {
+      "text": "同場加映\nENCORE\n\n延伸閱讀\n\nFirst safe recommendation\n\nIndependent first\n\n來看這一篇 →",
+      "href": "/about",
+      "links": 0,
+      "bounds": {
+        "x": 296,
+        "y": 5942.671875,
+        "width": 688,
+        "height": 196.59375
+      },
+      "contrast": 10.12956619740644
+    },
+    {
+      "text": "同場加映\nENCORE\n\n延伸閱讀\n\nSecond <script>safe</script> recommendation\n\n來看這一篇 →",
+      "href": "/about",
+      "links": 0,
+      "bounds": {
+        "x": 296,
+        "y": 6171.265625,
+        "width": 688,
+        "height": 162.0625
+      },
+      "contrast": 10.12956619740644
+    }
+  ],
+  "sentinel": true,
+  "images": [
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+      "alt": "Independent first alt",
+      "loaded": true
+    },
+    {
+      "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+      "alt": "Independent second alt",
+      "loaded": true
+    }
+  ],
+  "duplicates": []
+}

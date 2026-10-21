@@ -1,0 +1,312 @@
+[
+  {
+    "args": [
+      "set",
+      "viewport",
+      "1280",
+      "900"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "set",
+      "media",
+      "light"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "open",
+      "http://127.0.0.1:4380/__closeout_acceptance.html"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ 元件驗收 | 0x1DEA\n  http://127.0.0.1:4380/__closeout_acceptance.html\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "snapshot",
+      "-i",
+      "-u"
+    ],
+    "exit_code": 0,
+    "stdout": "- link \"Skip to content\" [ref=e1, url=http://127.0.0.1:4380/__closeout_acceptance.html#VPContent]\n- link \"0x1DEA\" [ref=e2, url=http://127.0.0.1:4380/]\n- navigation \"Main Navigation\" [ref=e3]\n  - link \"About Me\" [ref=e6, url=http://127.0.0.1:4380/about.html]\n  - link \"文章總覽\" [ref=e7, url=http://127.0.0.1:4380/posts.html]\n  - button \"分類文章\" [expanded=false, ref=e15]\n- switch \"Switch to dark theme\" [checked=false, ref=e4]\n- link \"github\" [ref=e5, url=https://github.com/cxphoenix/0x1dea]\n- heading \"元件驗收 Permalink to “元件驗收”\" [level=1, ref=e8]\n  - link \"Permalink to “元件驗收”\" [ref=e16, url=http://127.0.0.1:4380/__closeout_acceptance.html#%E5%85%83%E4%BB%B6%E9%A9%97%E6%94%B6]\n- link \"關於本站\" [ref=e32, url=http://127.0.0.1:4380/about.html]\n- link \"關於本站\" [ref=e33, url=http://127.0.0.1:4380/about.html]\n- link \"關於本站\" [ref=e34, url=http://127.0.0.1:4380/about.html]\n- link \"很長連結\" [ref=e35, url=https://example.com/a-long-unbroken-path-that-should-never-cause-page-horizontal-overflow-in-the-summary]\n- button \"Copy Code\" [ref=e24]\n- generic \"console.log('$ is code content')\" [ref=e25] focusable [tabindex]\n- heading \"Caption acceptance Permalink to “Caption acceptance”\" [level=2, ref=e9]\n  - link \"Permalink to “Caption acceptance”\" [ref=e17, url=http://127.0.0.1:4380/__closeout_acceptance.html#caption-acceptance]\n- link \"圖 1\" [ref=e18, url=http://127.0.0.1:4380/__closeout_acceptance.html#fig-first-proof]\n- link \"圖 2\" [ref=e19, url=http://127.0.0.1:4380/__closeout_acceptance.html#fig-second-proof]\n- link \"表 1\" [ref=e20, url=http://127.0.0.1:4380/__closeout_acceptance.html#tbl-first-table]\n- link \"表 2\" [ref=e21, url=http://127.0.0.1:4380/__closeout_acceptance.html#tbl-second-table]\n- table \"表 1：First table caption\" [ref=e10] focusable [tabindex]\n  - columnheader \"Label\" [ref=e36]\n  - columnheader \"Value\" [ref=e37]\n  - cell \"Alpha\" [ref=e26]\n  - cell \"One\" [ref=e27]\n- table \"表 2：Second table caption\" [ref=e11] focusable [tabindex]\n  - columnheader \"Label\" [ref=e38]\n  - columnheader \"Value\" [ref=e39]\n  - cell \"Beta\" [ref=e28]\n  - cell \"Two\" [ref=e29]\n- table \"OrdinaryTableUnnumberedUnchanged\" [ref=e12] focusable [tabindex]\n  - columnheader \"Ordinary\" [ref=e40]\n  - columnheader \"Table\" [ref=e41]\n  - cell \"Unnumbered\" [ref=e30]\n  - cell \"Unchanged\" [ref=e31]\n- link \"Actual article\" [ref=e22, url=http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html]\n- heading \"Hostile <img src=x onerror=alert(1)>\" [level=2, ref=e23]\n- link \"同場加映 延伸閱讀 First safe recommendation Independent first 來看這一篇 \" [ref=e13, url=http://127.0.0.1:4380/about]\n- link \"同場加映 延伸閱讀 Second <script>safe</script> recommendation 來看這一篇 \" [ref=e14, url=http://127.0.0.1:4380/about]\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "focus",
+      "a[href=\"#fig-first-proof\"]"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Shift+Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({href:document.activeElement.getAttribute(\"href\"),outline:getComputedStyle(document.activeElement).outline,rect:document.activeElement.getBoundingClientRect().toJSON()})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"href\\\":\\\"#fig-first-proof\\\",\\\"outline\\\":\\\"rgb(52, 81, 178) solid 2px\\\",\\\"rect\\\":{\\\"x\\\":336.765625,\\\"y\\\":438.0625,\\\"width\\\":33.15625,\\\"height\\\":24,\\\"top\\\":438.0625,\\\"right\\\":369.921875,\\\"bottom\\\":462.0625,\\\"left\\\":336.765625}}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "screenshot",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-fig-first-proof.png"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Screenshot saved to /private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-fig-first-proof.png\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Enter"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({hash:location.hash,target:!!document.getElementById(location.hash.slice(1))})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"hash\\\":\\\"#fig-first-proof\\\",\\\"target\\\":true}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "focus",
+      "a[href=\"#tbl-first-table\"]"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Shift+Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({href:document.activeElement.getAttribute(\"href\"),outline:getComputedStyle(document.activeElement).outline,rect:document.activeElement.getBoundingClientRect().toJSON()})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"href\\\":\\\"#tbl-first-table\\\",\\\"outline\\\":\\\"rgb(52, 81, 178) solid 2px\\\",\\\"rect\\\":{\\\"x\\\":428.578125,\\\"y\\\":438.0625,\\\"width\\\":33.15625,\\\"height\\\":24,\\\"top\\\":438.0625,\\\"right\\\":461.734375,\\\"bottom\\\":462.0625,\\\"left\\\":428.578125}}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "screenshot",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-tbl-first-table.png"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Screenshot saved to /private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-tbl-first-table.png\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Enter"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({hash:location.hash,target:!!document.getElementById(location.hash.slice(1))})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"hash\\\":\\\"#tbl-first-table\\\",\\\"target\\\":true}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "window.__closeoutSpaProbe=\"ticket-closeout-20261021\""
+    ],
+    "exit_code": 0,
+    "stdout": "\"ticket-closeout-20261021\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "click",
+      "a[href=\"/post/course/security-awareness/electricity-privacy.html\"]"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "wait",
+      "--fn",
+      "location.pathname.endsWith('/electricity-privacy.html')"
+    ],
+    "exit_code": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({probe:window.__closeoutSpaProbe,url:location.href,figures:document.querySelectorAll(\"figure\").length,references:document.querySelectorAll(\"a[href^=\\\"#fig-\\\"]\").length,ids:[...document.querySelectorAll(\"[id]\")].map(x=>x.id).filter((id,i,a)=>a.indexOf(id)!==i)})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"probe\\\":\\\"ticket-closeout-20261021\\\",\\\"url\\\":\\\"http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html\\\",\\\"figures\\\":3,\\\"references\\\":6,\\\"ids\\\":[]}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "focus",
+      "a[href=\"/post/course/cybersec/what-is-safety\"]"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Shift+Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Tab"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "eval",
+      "JSON.stringify({href:document.activeElement.getAttribute(\"href\"),outline:getComputedStyle(document.activeElement).outline,descendants:document.activeElement.querySelectorAll(\"a,button,input\").length})"
+    ],
+    "exit_code": 0,
+    "stdout": "\"{\\\"href\\\":\\\"/post/course/cybersec/what-is-safety\\\",\\\"outline\\\":\\\"rgb(52, 81, 178) solid 3px\\\",\\\"descendants\\\":0}\"\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "screenshot",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-encore.png"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Screenshot saved to /private/tmp/0x1dea-ui-closeout-evidence-20261021/focus-encore.png\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "press",
+      "Enter"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ Done\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "wait",
+      "--fn",
+      "location.pathname.includes('/what-is-safety')"
+    ],
+    "exit_code": 0,
+    "stdout": "true\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "snapshot",
+      "-i",
+      "-u"
+    ],
+    "exit_code": 0,
+    "stdout": "- link \"Skip to content\" [ref=e1, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#VPContent]\n- link \"0x1DEA\" [ref=e3, url=http://127.0.0.1:4380/]\n- navigation \"Main Navigation\" [ref=e4]\n  - link \"About Me\" [ref=e9, url=http://127.0.0.1:4380/about.html]\n  - link \"文章總覽\" [ref=e10, url=http://127.0.0.1:4380/posts.html]\n  - button \"分類文章\" [expanded=false, ref=e30]\n- switch \"Switch to dark theme\" [checked=false, ref=e5]\n- link \"github\" [ref=e6, url=https://github.com/cxphoenix/0x1dea]\n- navigation \"Sidebar Navigation\" [ref=e2]\n  - button \"資安教學備課\" [ref=e7]\n    - heading \"資安教學備課\" [level=2, ref=e11]\n  - link \"安全？能吃嗎？\" [ref=e12, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html]\n- navigation \"On this page\" [ref=e8]\n  - heading \"On this page\" [level=2, ref=e31]\n  - link \"安全的定義\" [ref=e60, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E5%AE%89%E5%85%A8%E7%9A%84%E5%AE%9A%E7%BE%A9]\n  - link \"我們如何判斷「危險」\" [ref=e61, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E6%88%91%E5%80%91%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%B7%E3%80%8C%E5%8D%B1%E9%9A%AA%E3%80%8D]\n  - link \"達成某種需要「資訊」力量的目標\" [ref=e62, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E9%81%94%E6%88%90%E6%9F%90%E7%A8%AE%E9%9C%80%E8%A6%81%E3%80%8C%E8%B3%87%E8%A8%8A%E3%80%8D%E5%8A%9B%E9%87%8F%E7%9A%84%E7%9B%AE%E6%A8%99]\n  - link \"不夠清楚？舉個例子\" [ref=e63, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E4%B8%8D%E5%A4%A0%E6%B8%85%E6%A5%9A-%E8%88%89%E5%80%8B%E4%BE%8B%E5%AD%90]\n  - link \"結論？\" [ref=e64, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E7%B5%90%E8%AB%96]\n- heading \"什麼是安全？能吃嗎？ Permalink to “什麼是安全？能吃嗎？”\" [level=1, ref=e13]\n  - link \"Permalink to “什麼是安全？能吃嗎？”\" [ref=e32, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E4%BB%80%E9%BA%BC%E6%98%AF%E5%AE%89%E5%85%A8-%E8%83%BD%E5%90%83%E5%97%8E]\n- heading \"安全的定義 Permalink to “安全的定義”\" [level=2, ref=e14]\n  - link \"Permalink to “安全的定義”\" [ref=e33, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E5%AE%89%E5%85%A8%E7%9A%84%E5%AE%9A%E7%BE%A9]\n- heading \"國語辭典中的「安全」 Permalink to “國語辭典中的「安全」”\" [level=3, ref=e15]\n  - link \"Permalink to “國語辭典中的「安全」”\" [ref=e34, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E5%9C%8B%E8%AA%9E%E8%BE%AD%E5%85%B8%E4%B8%AD%E7%9A%84%E3%80%8C%E5%AE%89%E5%85%A8%E3%80%8D]\n- link \"教育部的國語辭典簡編本的說明 \" [ref=e35, url=https://dict.concised.moe.edu.tw/dictView.jsp?ID=39720&q=1]\n- link \"教育部重編國語辭典修訂本 \" [ref=e36, url=https://dict.revised.moe.edu.tw/search.jsp?md=1]\n- link \"安全 \" [ref=e37, url=https://dict.revised.moe.edu.tw/dictView.jsp?ID=147841&q=1&word=%E5%AE%89%E5%85%A8]\n- link \"危險 \" [ref=e38, url=https://dict.revised.moe.edu.tw/dictView.jsp?ID=160729&q=1&word=%E5%8D%B1%E9%9A%AA]\n- link \"平安 \" [ref=e39, url=https://dict.concised.moe.edu.tw/dictView.jsp?ID=3357]\n- heading \"英文語系中對「安全」的解釋 Permalink to “英文語系中對「安全」的解釋”\" [level=3, ref=e16]\n  - link \"Permalink to “英文語系中對「安全」的解釋”\" [ref=e40, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E8%8B%B1%E6%96%87%E8%AA%9E%E7%B3%BB%E4%B8%AD%E5%B0%8D%E3%80%8C%E5%AE%89%E5%85%A8%E3%80%8D%E7%9A%84%E8%A7%A3%E9%87%8B]\n- link \"Merriam-Webster Dictionary \" [ref=e41, url=https://www.merriam-webster.com/dictionary/safety]\n- link \"Cambridge Dictionary \" [ref=e42, url=https://dictionary.cambridge.org/dictionary/english/safety]\n- link \"Danger \" [ref=e43, url=https://www.merriam-webster.com/dictionary/danger]\n- link \"Risk \" [ref=e44, url=https://www.merriam-webster.com/dictionary/risk]\n- heading \"誤會了！國語辭典的「安全」其實已經告訴你了 Permalink to “誤會了！國語辭典的「安全」其實已經告訴你了”\" [level=3, ref=e17]\n  - link \"Permalink to “誤會了！國語辭典的「安全」其實已經告訴你了”\" [ref=e45, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E8%AA%A4%E6%9C%83%E4%BA%86-%E5%9C%8B%E8%AA%9E%E8%BE%AD%E5%85%B8%E7%9A%84%E3%80%8C%E5%AE%89%E5%85%A8%E3%80%8D%E5%85%B6%E5%AF%A6%E5%B7%B2%E7%B6%93%E5%91%8A%E8%A8%B4%E4%BD%A0%E4%BA%86]\n- heading \"我們如何判斷「危險」 Permalink to “我們如何判斷「危險」”\" [level=2, ref=e18]\n  - link \"Permalink to “我們如何判斷「危險」”\" [ref=e46, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E6%88%91%E5%80%91%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%B7%E3%80%8C%E5%8D%B1%E9%9A%AA%E3%80%8D]\n- heading \"從「Danger」的定義出發 Permalink to “從「Danger」的定義出發”\" [level=3, ref=e19]\n  - link \"Permalink to “從「Danger」的定義出發”\" [ref=e47, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E5%BE%9E%E3%80%8Cdanger%E3%80%8D%E7%9A%84%E5%AE%9A%E7%BE%A9%E5%87%BA%E7%99%BC]\n- heading \"危險＝發生壞事 Permalink to “危險＝發生壞事”\" [level=3, ref=e20]\n  - link \"Permalink to “危險＝發生壞事”\" [ref=e48, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E5%8D%B1%E9%9A%AA-%E7%99%BC%E7%94%9F%E5%A3%9E%E4%BA%8B]\n- heading \"保持安全＝達成我們的目標 Permalink to “保持安全＝達成我們的目標”\" [level=3, ref=e21]\n  - link \"Permalink to “保持安全＝達成我們的目標”\" [ref=e49, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E4%BF%9D%E6%8C%81%E5%AE%89%E5%85%A8-%E9%81%94%E6%88%90%E6%88%91%E5%80%91%E7%9A%84%E7%9B%AE%E6%A8%99]\n- heading \"達成某種需要「資訊」力量的目標 Permalink to “達成某種需要「資訊」力量的目標”\" [level=2, ref=e22]\n  - link \"Permalink to “達成某種需要「資訊」力量的目標”\" [ref=e50, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E9%81%94%E6%88%90%E6%9F%90%E7%A8%AE%E9%9C%80%E8%A6%81%E3%80%8C%E8%B3%87%E8%A8%8A%E3%80%8D%E5%8A%9B%E9%87%8F%E7%9A%84%E7%9B%AE%E6%A8%99]\n- link \"Security \" [ref=e51, url=https://www.merriam-webster.com/dictionary/security]\n- heading \"資安的範圍？ Permalink to “資安的範圍？”\" [level=3, ref=e23]\n  - link \"Permalink to “資安的範圍？”\" [ref=e52, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E8%B3%87%E5%AE%89%E7%9A%84%E7%AF%84%E5%9C%8D]\n- link \"資安 \" [ref=e53, url=https://www.iso.org/obp/ui/#iso:std:iso-iec:27000:ed-5:v1:en:term:3.28]\n- heading \"不夠清楚？舉個例子 Permalink to “不夠清楚？舉個例子”\" [level=2, ref=e24]\n  - link \"Permalink to “不夠清楚？舉個例子”\" [ref=e54, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E4%B8%8D%E5%A4%A0%E6%B8%85%E6%A5%9A-%E8%88%89%E5%80%8B%E4%BE%8B%E5%AD%90]\n- link \"https://buckeye-bazaar.osucyber.club/ \" [ref=e55, url=https://buckeye-bazaar.osucyber.club/]\n- heading \"確認目標與目的 Permalink to “確認目標與目的”\" [level=3, ref=e25]\n  - link \"Permalink to “確認目標與目的”\" [ref=e56, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E7%A2%BA%E8%AA%8D%E7%9B%AE%E6%A8%99%E8%88%87%E7%9B%AE%E7%9A%84]\n- heading \"規劃破壞「安全目標」的方法 Permalink to “規劃破壞「安全目標」的方法”\" [level=3, ref=e26]\n  - link \"Permalink to “規劃破壞「安全目標」的方法”\" [ref=e57, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E8%A6%8F%E5%8A%83%E7%A0%B4%E5%A3%9E%E3%80%8C%E5%AE%89%E5%85%A8%E7%9B%AE%E6%A8%99%E3%80%8D%E7%9A%84%E6%96%B9%E6%B3%95]\n- generic \"Unit Price×Quantity=Total Amount\" [ref=e27] focusable [tabindex]\n- heading \"嘗試執行攻擊方法 Permalink to “嘗試執行攻擊方法”\" [level=3, ref=e28]\n  - link \"Permalink to “嘗試執行攻擊方法”\" [ref=e58, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E5%98%97%E8%A9%A6%E5%9F%B7%E8%A1%8C%E6%94%BB%E6%93%8A%E6%96%B9%E6%B3%95]\n- heading \"結論？ Permalink to “結論？”\" [level=2, ref=e29]\n  - link \"Permalink to “結論？”\" [ref=e59, url=http://127.0.0.1:4380/post/course/cybersec/what-is-safety.html#%E7%B5%90%E8%AB%96]\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "console"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "errors"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "open",
+      "http://127.0.0.1:4380/__closeout_acceptance.html"
+    ],
+    "exit_code": 0,
+    "stdout": "✓ 元件驗收 | 0x1DEA\n  http://127.0.0.1:4380/__closeout_acceptance.html\n",
+    "stderr": ""
+  },
+  {
+    "args": [
+      "snapshot"
+    ],
+    "exit_code": 0,
+    "stdout": "- link \"Skip to content\" [ref=e1]\n- banner\n  - generic\n    - link \"0x1DEA\" [ref=e2]\n      - StaticText \"0x1DEA\"\n    - generic\n      - navigation \"Main Navigation\" [ref=e3]\n        - StaticText \"Main Navigation\"\n        - link \"About Me\" [ref=e6]\n          - StaticText \"About Me\"\n        - link \"文章總覽\" [ref=e7]\n          - StaticText \"文章總覽\"\n        - button \"分類文章\" [expanded=false, ref=e15]\n          - StaticText \"分類文章\"\n      - switch \"Switch to dark theme\" [checked=false, ref=e4]\n      - link \"github\" [ref=e5]\n- main\n  - heading \"元件驗收 Permalink to “元件驗收”\" [level=1, ref=e8]\n    - StaticText \"元件驗收\"\n    - link \"Permalink to “元件驗收”\" [ref=e16]\n      - StaticText \"#\"\n  - note \"TL;DR\"\n    - paragraph\n      - StaticText \"TL;DR\"\n    - list\n      - listitem [level=1]\n        - ListMarker \"• \"\n        - StaticText \"總度數會漏掉 \"\n        - strong\n          - StaticText \"時間變化\"\n        - StaticText \"；較細的用電紀錄，可能留下作息線索。\"\n      - listitem [level=1]\n        - ListMarker \"• \"\n        - StaticText \"NILM 與在家狀態模型做的是\"\n        - emphasis\n          - StaticText \"估計\"\n        - StaticText \"，曲線不能直接證明誰做了什麼。\"\n      - listitem [level=1]\n        - ListMarker \"• \"\n        - StaticText \"刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 \"\n        - link \"關於本站\" [ref=e32]\n        - StaticText \" 與 \"\n        - code\n          - StaticText \"inline-code\"\n        - StaticText \"。\"\n  - note \"TL;DR\"\n    - paragraph\n      - StaticText \"TL;DR\"\n    - list\n      - listitem [level=1]\n        - ListMarker \"• \"\n        - StaticText \"總度數會漏掉 \"\n        - strong\n          - StaticText \"時間變化\"\n        - StaticText \"；較細的用電紀錄，可能留下作息線索。\"\n      - listitem [level=1]\n        - ListMarker \"• \"\n        - StaticText \"NILM 與在家狀態模型做的是\"\n        - emphasis\n          - StaticText \"估計\"\n        - StaticText \"，曲線不能直接證明誰做了什麼。\"\n      - listitem [level=1]\n        - ListMarker \"• \"\n        - StaticText \"刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 \"\n        - link \"關於本站\" [ref=e33]\n        - StaticText \" 與 \"\n        - code\n          - StaticText \"inline-code\"\n        - StaticText \"。\"\n  - note \"TL;DR\"\n    - sectionheader\n      - StaticText \"TL;DR\"\n    - list\n      - listitem [level=1]\n        - StaticText \"總度數會漏掉 \"\n        - strong\n          - StaticText \"時間變化\"\n        - StaticText \"；較細的用電紀錄，可能留下作息線索。\"\n      - listitem [level=1]\n        - StaticText \"NILM 與在家狀態模型做的是\"\n        - emphasis\n          - StaticText \"估計\"\n        - StaticText \"，曲線不能直接證明誰做了什麼。\"\n      - listitem [level=1]\n        - StaticText \"刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 \"\n        - link \"關於本站\" [ref=e34]\n        - StaticText \" 與 \"\n        - code\n          - StaticText \"inline-code\"\n        - StaticText \"。\"\n  - paragraph\n    - StaticText \"後文 sentinel 不在摘要中。\"\n  - note \"Markdown 邊界\"\n    - sectionheader\n      - StaticText \"Markdown 邊界\"\n    - list\n      - listitem [level=1]\n        - StaticText \"很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\"\n        - list\n          - listitem [level=2]\n            - ListMarker \"• \"\n            - StaticText \"巢狀項目不是新的 prompt。\"\n      - listitem [level=1]\n        - link \"很長連結\" [ref=e35]\n      - listitem [level=1]\n        - StaticText \"程式碼 \"\n        - code\n          - StaticText \"long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890\"\n    - paragraph\n      - StaticText \"段落 \"\n      - strong\n        - StaticText \"強調\"\n      - StaticText \" 與 \"\n      - emphasis\n        - StaticText \"斜體\"\n      - StaticText \"。\"\n    - generic\n      - button \"Copy Code\" [ref=e24]\n      - StaticText \"js\"\n      - generic [ref=e25] focusable [tabindex]\n        - code\n          - StaticText \"console.log('$ is code content')\"\n    - paragraph\n      - StaticText \"內部容器\"\n    - list\n      - listitem [level=1]\n        - ListMarker \"• \"\n        - StaticText \"容器項目不是 prompt。\"\n  - paragraph\n    - StaticText \"第二個後文 sentinel。\"\n  - paragraph\n    - StaticText \"info\"\n  - paragraph\n    - StaticText \"原生 INFO\"\n  - list\n    - listitem [level=1]\n      - ListMarker \"• \"\n      - StaticText \"容器項目不是 prompt。\"\n  - paragraph\n    - StaticText \"tip\"\n  - paragraph\n    - StaticText \"原生 TIP\"\n  - paragraph\n    - StaticText \"warning\"\n  - paragraph\n    - StaticText \"原生 WARNING\"\n  - group\n    - DisclosureTriangle \"details\" [expanded=false]\n      - StaticText \"details\"\n  - note \"TL;DR\"\n    - paragraph\n      - StaticText \"TL;DR\"\n    - paragraph\n      - StaticText \"fallback note\"\n  - heading \"Caption acceptance Permalink to “Caption acceptance”\" [level=2, ref=e9]\n    - StaticText \"Caption acceptance\"\n    - link \"Permalink to “Caption acceptance”\" [ref=e17]\n      - StaticText \"#\"\n  - figure\n    - image \"Independent first alt\"\n    - Figcaption\n      - StaticText \"圖 1：First figure caption\"\n  - paragraph\n    - StaticText \"See \"\n    - link \"圖 1\" [ref=e18]\n    - StaticText \", \"\n    - link \"圖 2\" [ref=e19]\n    - StaticText \", \"\n    - link \"表 1\" [ref=e20]\n    - StaticText \", \"\n    - link \"表 2\" [ref=e21]\n    - StaticText \".\"\n  - table \"表 1：First table caption\" [ref=e10] focusable [tabindex]\n    - caption\n      - StaticText \"表 1：First table caption\"\n    - rowgroup\n      - row\n        - columnheader \"Label\" [ref=e36]\n        - columnheader \"Value\" [ref=e37]\n    - row\n      - cell \"Alpha\" [ref=e26]\n      - cell \"One\" [ref=e27]\n  - figure\n    - image \"Independent second alt\"\n    - Figcaption\n      - StaticText \"圖 2：Second figure caption\"\n  - table \"表 2：Second table caption\" [ref=e11] focusable [tabindex]\n    - caption\n      - StaticText \"表 2：Second table caption\"\n    - rowgroup\n      - row\n        - columnheader \"Label\" [ref=e38]\n        - columnheader \"Value\" [ref=e39]\n    - row\n      - cell \"Beta\" [ref=e28]\n      - cell \"Two\" [ref=e29]\n  - table [ref=e12] focusable [tabindex]\n    - rowgroup\n      - row\n        - columnheader \"Ordinary\" [ref=e40]\n        - columnheader \"Table\" [ref=e41]\n    - row\n      - cell \"Unnumbered\" [ref=e30]\n      - cell \"Unchanged\" [ref=e31]\n  - paragraph\n    - link \"Actual article\" [ref=e22]\n  - note \"Hostile <img src=x onerror=alert(1)>\"\n    - heading \"Hostile <img src=x onerror=alert(1)>\" [level=2, ref=e23]\n    - paragraph\n      - StaticText \"Plain <script>alert(1)</script>\\nSecond line\"\n  - link \"同場加映 延伸閱讀 First safe recommendation Independent first 來看這一篇 \" [ref=e13]\n    - StaticText \"同場加映\"\n    - paragraph\n      - StaticText \"延伸閱讀\"\n    - paragraph\n      - StaticText \"First safe recommendation\"\n    - paragraph\n      - StaticText \"Independent first\"\n    - StaticText \"來看這一篇 \"\n  - link \"同場加映 延伸閱讀 Second <script>safe</script> recommendation 來看這一篇 \" [ref=e14]\n    - StaticText \"同場加映\"\n    - paragraph\n      - StaticText \"延伸閱讀\"\n    - paragraph\n      - StaticText \"Second <script>safe</script> recommendation\"\n    - StaticText \"來看這一篇 \"\n- contentinfo\n- contentinfo\n  - paragraph\n    - StaticText \"魔法是想像的領域 ~芙莉蓮 <葬送のフリーレン> ｜ 資安世界也是 ~CXPh03n1x\"\n  - paragraph\n    - StaticText \"Copyright © 2026 CXPh03n1x@FHSH.isip-hs.whoam!\"\n",
+    "stderr": ""
+  }
+]

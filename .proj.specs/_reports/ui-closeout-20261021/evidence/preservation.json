@@ -1,0 +1,115 @@
+{
+  "observed_at": "2026-10-21T15:35:38.835081+00:00",
+  "staging_blog_entries": 112,
+  "candidate_paths": [
+    "blog/post/course/security-awareness/electricity-privacy.md",
+    "blog/post/local-preview/agent-experiment.md",
+    "blog/post/local-preview/browser-lab.md",
+    "blog/post/local-preview/idor.md",
+    "blog/post/local-preview/jwt.md",
+    "blog/post/local-preview/sqli.md",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-link.png",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-purpose.png",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/p-units.png",
+    "blog/public/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+    "blog/public/assets/post_local-preview_agent-experiment/a-cache.png",
+    "blog/public/assets/post_local-preview_agent-experiment/a-cause.png",
+    "blog/public/assets/post_local-preview_agent-experiment/a-exposure.png",
+    "blog/public/assets/post_local-preview_agent-experiment/a-log.png",
+    "blog/public/assets/post_local-preview_agent-experiment/a-reliability.png",
+    "blog/public/assets/post_local-preview_agent-experiment/a-task.png",
+    "blog/public/assets/post_local-preview_browser-lab/b-action.png",
+    "blog/public/assets/post_local-preview_browser-lab/b-flag.png",
+    "blog/public/assets/post_local-preview_browser-lab/b-origin.png",
+    "blog/public/assets/post_local-preview_browser-lab/b-response.png",
+    "blog/public/assets/post_local-preview_browser-lab/b-transfer.png",
+    "blog/public/assets/post_local-preview_browser-lab/b-trust.png",
+    "blog/public/assets/post_local-preview_idor/idor-denied-side-effect.png",
+    "blog/public/assets/post_local-preview_idor/idor-knowing-id.png",
+    "blog/public/assets/post_local-preview_idor/idor-login-is-not-access.png",
+    "blog/public/assets/post_local-preview_idor/idor-scanner-needs-policy.png",
+    "blog/public/assets/post_local-preview_idor/idor-shared-read-only.png",
+    "blog/public/assets/post_local-preview_idor/idor-test-known-objects.png",
+    "blog/public/assets/post_local-preview_idor/idor-uuid-is-not-policy.png",
+    "blog/public/assets/post_local-preview_jwt/jwt-claims-have-rules.png",
+    "blog/public/assets/post_local-preview_jwt/jwt-parse-is-not-verify.png",
+    "blog/public/assets/post_local-preview_jwt/jwt-test-rejects-too.png",
+    "blog/public/assets/post_local-preview_jwt/jwt-token-picks-rules.png",
+    "blog/public/assets/post_local-preview_jwt/jwt-verified-not-owner.png",
+    "blog/public/assets/post_local-preview_jwt/jwt-wrong-audience.png",
+    "blog/public/assets/post_local-preview_sqli/sqli-bound-value.png",
+    "blog/public/assets/post_local-preview_sqli/sqli-data-captain.png",
+    "blog/public/assets/post_local-preview_sqli/sqli-identifier-value.png",
+    "blog/public/assets/post_local-preview_sqli/sqli-like-wildcard.png",
+    "blog/public/assets/post_local-preview_sqli/sqli-orm-raw-sql.png",
+    "blog/public/assets/post_local-preview_sqli/sqli-query-authorization.png",
+    "blog/public/assets/post_local-preview_sqli/sqli-sort-allowlist.png"
+  ],
+  "protected_history": {
+    "scripts/verify-harness-adoption.py": {
+      "sha256": "cecd58b0cd8dbe7fde3030b20ae8bce949d54a9be3e839b91da9baa08a47a73a",
+      "git_entry": "100644 blob 1d1e00701132974b2e5ee192b4eeedb5646d3133\tscripts/verify-harness-adoption.py"
+    },
+    "scripts/run-current-python-tests.py": {
+      "sha256": "b0efd41c0f220571747de311f3e910639fbf0c2137fa17d8c798841e9149e377",
+      "git_entry": "100644 blob 9d7de01b6426fea8bb37e011447a97fcd0dc7744\tscripts/run-current-python-tests.py"
+    },
+    "tests/article_publication/test_current_baseline.py": {
+      "sha256": "3236c23abdfbb26543721f4bb4d0e7f0567a19baf324696e84f26d2d1de9af33",
+      "git_entry": "100644 blob bec6ed9505e7aaf4075f7911423b49adaa331841\ttests/article_publication/test_current_baseline.py"
+    },
+    "tests/article_publication/test_closed_baseline.py": {
+      "sha256": "eecd82cbad8e850e433375902cefb343a1ed4e971a316414a5a08d636e3f96cb",
+      "git_entry": "100644 blob bf3ec763fa19fdf8bf35f56236752ab40e3087ec\ttests/article_publication/test_closed_baseline.py"
+    },
+    "tests/article_publication/test_closeout_successor.py": {
+      "sha256": "357eae72b7fbdbe7f3eee5ad6b6a2c013a724d581d0b6623c98c1052622e3c8d",
+      "git_entry": "100644 blob d4a2a21b02241bc3c45f86d551442fe4d9d530c9\ttests/article_publication/test_closeout_successor.py"
+    },
+    "tests/article_publication/test_landed_closeout.py": {
+      "sha256": "30cac9bc27ede1824bc44eb17421583eedb7af4c155a99f1833e64e03f67603d",
+      "git_entry": "100644 blob bd77607e084f0f66da91d108fbe7f89e405b5675\ttests/article_publication/test_landed_closeout.py"
+    },
+    "tests/article_publication/test_remote_validation.py": {
+      "sha256": "d28b33c701851c57281f793b445d6d73ddb9578892502ab92b3fafa7d2dc22ad",
+      "git_entry": "100644 blob e2a1630bd9f5868b11165843c45e42b837af9a1f\ttests/article_publication/test_remote_validation.py"
+    },
+    ".proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.proposed.json": {
+      "sha256": "6d95e0c7036fef827ce3c4c7b97beae811597e908d755837cce4431b526ea89a",
+      "git_entry": "100644 blob 6517082ad18dd2f73baf10595e70f5019957851a\t.proj.specs/0012-publication-workflow/implementation/T-0013/M0-inventory.proposed.json"
+    },
+    "maintenance/harness-adoption/baseline-files.json": {
+      "sha256": "a27eb6c95af35785f787e8abd12849f6b73653abb113b1c07511e955f19ac26b",
+      "git_entry": "100644 blob e886c9397ae1631b56c40081520af61a7de6b21d\tmaintenance/harness-adoption/baseline-files.json"
+    },
+    "maintenance/harness-adoption/candidate-delta.json": {
+      "sha256": "30c1e6448d81ace9768ee6481e7b8df5e57d25f491dd4e093b3f0813d832f57f",
+      "git_entry": "100644 blob 31b7b5ae0813915e04a553d6ef146e2cf7436eeb\tmaintenance/harness-adoption/candidate-delta.json"
+    },
+    "maintenance/harness-adoption/framework-import-manifest.json": {
+      "sha256": "b0fb7cf39924c3371be420bce8f3c8c6f1356fcd0f2dc5a24f538e9192718d7e",
+      "git_entry": "100644 blob 110e41732c3e08b542c61723ccb72485ab4f29a0\tmaintenance/harness-adoption/framework-import-manifest.json"
+    },
+    "maintenance/article-publication/source-boundary.json": {
+      "sha256": "9b19137ccb03816d5c965bc5ee406cc7da6f97a0bee3a0c71d0ac35fa8c6187c",
+      "git_entry": "100644 blob d990cfd294deee88db61e2796622a609fddc895d\tmaintenance/article-publication/source-boundary.json"
+    },
+    "maintenance/lint-cleanup/source-boundary.json": {
+      "sha256": "22f7fa33ad55af3c04a180c41dae55416eff0a3e43ee6ee87f0d761e5a4ca0f3",
+      "git_entry": "100644 blob 4caed7f10772d0ab019bcd97a9fca601f61a113c\tmaintenance/lint-cleanup/source-boundary.json"
+    }
+  },
+  "website_changed": false,
+  "original_checkout": "No writes; remains clean staging f503f00a4891a519eb12b54e6bfc8f0db267c55f",
+  "backup": "Existing 20261021-001709-staging-sync-21w170z9 backup untouched; not re-created or deleted",
+  "source_manifest": "source-pins.json",
+  "scope": "All historical management records unchanged except the five current ticket metadata successors; current guard only adds exact CLOSEOUT constants."
+}

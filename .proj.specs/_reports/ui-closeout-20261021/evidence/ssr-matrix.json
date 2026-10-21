@@ -1,0 +1,320 @@
+[
+  {
+    "case": "true-staging",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/true-staging"
+    ],
+    "exit_code": 0,
+    "seconds": 5.35,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": "true",
+      "CF_PAGES_BRANCH": "staging"
+    },
+    "SSR": {
+      "index.html": {
+        "sha256": "e8e0b5140f8a6b7800b966758730199b1516f9d3936a2913cb7811bf3f629f8d",
+        "notice_count": 1,
+        "summary_count": 1,
+        "caption_ids": [],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "post/course/security-awareness/electricity-privacy.html": {
+        "sha256": "37ed85cf6de3fe753598b92d7f51c28f040d761417698764d8ddc6aaac3edae5",
+        "notice_count": 1,
+        "summary_count": 2,
+        "caption_ids": [
+          "fig-simulated-ems",
+          "fig-nilm-process",
+          "fig-occupancy-process"
+        ],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "__closeout_acceptance.html": {
+        "sha256": "088c823ff75c18d4743a110b3adcb991c4cd01344581b47470521466f3d849b0",
+        "notice_count": 1,
+        "summary_count": 6,
+        "caption_ids": [
+          "fig-first-proof",
+          "tbl-first-table",
+          "fig-second-proof",
+          "tbl-second-table"
+        ],
+        "unresolved": false,
+        "sentinel": true
+      }
+    }
+  },
+  {
+    "case": "absent-staging",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/absent-staging"
+    ],
+    "exit_code": 0,
+    "seconds": 4.82,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": null,
+      "CF_PAGES_BRANCH": "staging"
+    },
+    "SSR": {
+      "index.html": {
+        "sha256": "47598a6ffdacf349a103189b0655e9acb81328d8c23e231b725ee76a0b90d2ce",
+        "notice_count": 1,
+        "summary_count": 1,
+        "caption_ids": [],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "post/course/security-awareness/electricity-privacy.html": {
+        "sha256": "fc3142238e199111def1fdc570cc3c02082aae0f02f0c5b1b76506e938655173",
+        "notice_count": 1,
+        "summary_count": 2,
+        "caption_ids": [
+          "fig-simulated-ems",
+          "fig-nilm-process",
+          "fig-occupancy-process"
+        ],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "__closeout_acceptance.html": {
+        "sha256": "f7b5cdbd0a8bbeef2f5bd73e3fdd36a05e0169d52e39508998901ac6abc2bc57",
+        "notice_count": 1,
+        "summary_count": 6,
+        "caption_ids": [
+          "fig-first-proof",
+          "tbl-first-table",
+          "fig-second-proof",
+          "tbl-second-table"
+        ],
+        "unresolved": false,
+        "sentinel": true
+      }
+    }
+  },
+  {
+    "case": "false-main",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/false-main"
+    ],
+    "exit_code": 0,
+    "seconds": 4.38,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": "false",
+      "CF_PAGES_BRANCH": "main"
+    },
+    "SSR": {
+      "index.html": {
+        "sha256": "72b2ef60b84aecc81f997271fbbb9bcaf1d5d64a60ca716d17652f35185290a5",
+        "notice_count": 0,
+        "summary_count": 0,
+        "caption_ids": [],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "post/course/security-awareness/electricity-privacy.html": {
+        "sha256": "86b754207caf1ed446b76aaca5430e87d37c90526f90f6cde718511f90869da9",
+        "notice_count": 0,
+        "summary_count": 1,
+        "caption_ids": [
+          "fig-simulated-ems",
+          "fig-nilm-process",
+          "fig-occupancy-process"
+        ],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "__closeout_acceptance.html": {
+        "sha256": "becaa38c6635a8789b5fd4a29b4b6e520872347b80dde3ef329e81c166ee8cb1",
+        "notice_count": 0,
+        "summary_count": 5,
+        "caption_ids": [
+          "fig-first-proof",
+          "tbl-first-table",
+          "fig-second-proof",
+          "tbl-second-table"
+        ],
+        "unresolved": false,
+        "sentinel": true
+      }
+    }
+  },
+  {
+    "case": "absent-main",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/absent-main"
+    ],
+    "exit_code": 0,
+    "seconds": 6.38,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": null,
+      "CF_PAGES_BRANCH": "main"
+    },
+    "SSR": {
+      "index.html": {
+        "sha256": "f74ec33c8b88148a53779393273dd16d6cfd93ebbfbbc14d66396d25bc0f22d8",
+        "notice_count": 0,
+        "summary_count": 0,
+        "caption_ids": [],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "post/course/security-awareness/electricity-privacy.html": {
+        "sha256": "85eeedb5c85ba6d239ddc62e650ff83fa58ccdd18521d106f6d19701122b90bd",
+        "notice_count": 0,
+        "summary_count": 1,
+        "caption_ids": [
+          "fig-simulated-ems",
+          "fig-nilm-process",
+          "fig-occupancy-process"
+        ],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "__closeout_acceptance.html": {
+        "sha256": "8b6d0ace936d0bcd357488fd7032d210bb115909ee0fae89c2a8c0f0010e997b",
+        "notice_count": 0,
+        "summary_count": 5,
+        "caption_ids": [
+          "fig-first-proof",
+          "tbl-first-table",
+          "fig-second-proof",
+          "tbl-second-table"
+        ],
+        "unresolved": false,
+        "sentinel": true
+      }
+    }
+  },
+  {
+    "case": "absent-absent",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/absent-absent"
+    ],
+    "exit_code": 0,
+    "seconds": 11.98,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": null,
+      "CF_PAGES_BRANCH": null
+    },
+    "SSR": {
+      "index.html": {
+        "sha256": "f74ec33c8b88148a53779393273dd16d6cfd93ebbfbbc14d66396d25bc0f22d8",
+        "notice_count": 0,
+        "summary_count": 0,
+        "caption_ids": [],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "post/course/security-awareness/electricity-privacy.html": {
+        "sha256": "85eeedb5c85ba6d239ddc62e650ff83fa58ccdd18521d106f6d19701122b90bd",
+        "notice_count": 0,
+        "summary_count": 1,
+        "caption_ids": [
+          "fig-simulated-ems",
+          "fig-nilm-process",
+          "fig-occupancy-process"
+        ],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "__closeout_acceptance.html": {
+        "sha256": "8b6d0ace936d0bcd357488fd7032d210bb115909ee0fae89c2a8c0f0010e997b",
+        "notice_count": 0,
+        "summary_count": 5,
+        "caption_ids": [
+          "fig-first-proof",
+          "tbl-first-table",
+          "fig-second-proof",
+          "tbl-second-table"
+        ],
+        "unresolved": false,
+        "sentinel": true
+      }
+    }
+  },
+  {
+    "case": "true-main",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/true-main"
+    ],
+    "exit_code": 0,
+    "seconds": 11.41,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": "true",
+      "CF_PAGES_BRANCH": "main"
+    },
+    "SSR": {
+      "index.html": {
+        "sha256": "e8e0b5140f8a6b7800b966758730199b1516f9d3936a2913cb7811bf3f629f8d",
+        "notice_count": 1,
+        "summary_count": 1,
+        "caption_ids": [],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "post/course/security-awareness/electricity-privacy.html": {
+        "sha256": "37ed85cf6de3fe753598b92d7f51c28f040d761417698764d8ddc6aaac3edae5",
+        "notice_count": 1,
+        "summary_count": 2,
+        "caption_ids": [
+          "fig-simulated-ems",
+          "fig-nilm-process",
+          "fig-occupancy-process"
+        ],
+        "unresolved": false,
+        "sentinel": false
+      },
+      "__closeout_acceptance.html": {
+        "sha256": "088c823ff75c18d4743a110b3adcb991c4cd01344581b47470521466f3d849b0",
+        "notice_count": 1,
+        "summary_count": 6,
+        "caption_ids": [
+          "fig-first-proof",
+          "tbl-first-table",
+          "fig-second-proof",
+          "tbl-second-table"
+        ],
+        "unresolved": false,
+        "sentinel": true
+      }
+    }
+  }
+]

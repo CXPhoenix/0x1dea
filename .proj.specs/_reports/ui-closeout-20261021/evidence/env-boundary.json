@@ -1,0 +1,10 @@
+{
+  "public_example_tracked": true,
+  "ignored": {
+    ".env": true,
+    ".env.local": true,
+    ".env.production": true,
+    ".env.production.local": true
+  },
+  "local_env_files_read_or_copied": false
+}
