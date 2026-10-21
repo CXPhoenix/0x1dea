@@ -1,0 +1,6 @@
+test_missing_changed_and_linked_record_is_refused (test_published_static_successor.PublishedStaticSuccessorTests.test_missing_changed_and_linked_record_is_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 16.329s
+
+OK

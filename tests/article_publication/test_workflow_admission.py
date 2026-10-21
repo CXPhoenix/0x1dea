@@ -25,7 +25,11 @@ class WorkflowAdmissionTests(unittest.TestCase):
         self.control = self.directory/'control'
         subprocess.run(['git', 'clone', '--shared', '--no-checkout', '--template=',
                         str(SOURCE), str(self.control)], check=True, capture_output=True)
-        self.git('checkout', '--detach', '8b31956f47075a831cfd0339339f616af96b3dae')
+        main = subprocess.check_output(
+            ['git', '--no-replace-objects', '-C', str(SOURCE), 'rev-parse',
+             'refs/heads/main'], text=True).strip()
+        self.git('checkout', '--detach', main)
+        baseline = json.loads((self.control/POLICY).read_bytes())['common']
         data = json.loads((SOURCE/POLICY).read_bytes())
         for name in data['common']:
             p = self.control/name
@@ -38,6 +42,10 @@ class WorkflowAdmissionTests(unittest.TestCase):
         path.write_bytes(self.workflow_raw)
         self.entry = {'mode':'100644', 'sha256':hashlib.sha256(self.workflow_raw).hexdigest()}
         data['common'][WORKFLOW] = self.entry
+        # Put new fixture entries first, away from staging-only tail additions.
+        entries = data['common']
+        data['common'] = {name: entries[name] for fresh in (True, False)
+                          for name in entries if (name not in baseline) == fresh}
         (self.control/POLICY).write_text(json.dumps(data, indent=2)+'\n')
         self.git('add', '-A')
         tree = self.git('write-tree').strip().decode()
@@ -47,7 +55,10 @@ class WorkflowAdmissionTests(unittest.TestCase):
         self.main = self.git('hash-object', '-t', 'commit', '-w', '--stdin', data=raw).strip().decode()
         self.git('update-ref', 'HEAD', self.main)
         self.git('update-ref', 'refs/heads/main', self.main)
-        self.git('update-ref', 'refs/heads/staging', 'd2e59426fe545116f2c2b637fc6f181dcfcdbaf5')
+        staging = subprocess.check_output(
+            ['git', '--no-replace-objects', '-C', str(SOURCE), 'rev-parse',
+             'refs/heads/staging'], text=True).strip()
+        self.git('update-ref', 'refs/heads/staging', staging)
         self.grant = {'version':1, 'repository':'owner/example', 'main':self.main,
                       'policies':dict.fromkeys(('main','staging'), hashlib.sha256((self.control/POLICY).read_bytes()).hexdigest()),
                       'roles':['main','staging'], 'approval':'owner-approved-local-fixture',

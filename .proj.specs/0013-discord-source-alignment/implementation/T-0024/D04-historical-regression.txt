@@ -1,0 +1,6 @@
+test_historical_projections_keep_inventory_and_refuse_record_or_cross_role (test_published_static_successor.PublishedStaticSuccessorTests.test_historical_projections_keep_inventory_and_refuse_record_or_cross_role) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 15.830s
+
+OK

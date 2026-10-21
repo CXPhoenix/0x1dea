@@ -1,0 +1,7 @@
+main=47c35d9abe3484b1f649c8fe7679e2baa20cc50f
+staging=87ff977bb11c42b810dfedc34c519052f62fbaa7
+3dd40f121468bfebbab33ce21d88d5b65118d898
+maintenance/publication-workflow/engineering-v1.json
+
+Auto-merging maintenance/publication-workflow/engineering-v1.json
+CONFLICT (content): Merge conflict in maintenance/publication-workflow/engineering-v1.json

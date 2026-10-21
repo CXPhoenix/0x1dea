@@ -1,0 +1,20 @@
+test_ancestry_query_error_is_not_treated_as_normal_non_ancestor (test_published_static_successor.PublishedStaticSuccessorTests.test_ancestry_query_error_is_not_treated_as_normal_non_ancestor) ... FAIL
+
+======================================================================
+FAIL: test_ancestry_query_error_is_not_treated_as_normal_non_ancestor (test_published_static_successor.PublishedStaticSuccessorTests.test_ancestry_query_error_is_not_treated_as_normal_non_ancestor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-discord-harness-staging-20261021/tests/article_publication/test_published_static_successor.py", line 178, in test_ancestry_query_error_is_not_treated_as_normal_non_ancestor
+    self.assert_refused(self.verify(root, control=SOURCE, env=env),
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        'published Discord source ancestry is unavailable')
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/0x1dea-discord-harness-staging-20261021/tests/article_publication/test_published_static_successor.py", line 51, in assert_refused
+    self.assertIn(reason, result.stderr)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'published Discord source ancestry is unavailable' not found in "FAIL: Command '['git', '--no-replace-objects', '--literal-pathspecs', '-C', '/private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/discord-source-contract-kzfm0gvx/projection/main', 'merge-base', '--is-ancestor', 'c6efa7ded4731cbe251bdbc6fea5615e7e7b11b7', 'HEAD']' returned non-zero exit status 1.\n"
+
+----------------------------------------------------------------------
+Ran 1 test in 13.521s
+
+FAILED (failures=1)

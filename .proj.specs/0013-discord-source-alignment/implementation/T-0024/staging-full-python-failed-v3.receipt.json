@@ -1,0 +1,31 @@
+{
+  "role": "staging",
+  "root": "/private/tmp/0x1dea-discord-harness-staging-20261021",
+  "started_utc": "2026-10-20T16:41:46.512280+00:00",
+  "finished_utc": "2026-10-20T16:58:14.455243+00:00",
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "-B",
+    "scripts/run-current-python-tests.py"
+  ],
+  "exit_code": 1,
+  "source_sha256": {
+    "maintenance/publication-workflow/engineering-v1.json": "c86e9f19ad3d2d001d182e587df1f1a529ea0186c0990fa0eb12215015f80e84",
+    "scripts/publication_current.py": "bbe73638595c6d8d89f70f1fbbb331c51e7fd6ad15f4cc39ccfba8dc8b87ff49",
+    "tests/article_publication/test_current_history_context.py": "b893a0dd29851078d062b1d5be8050d4c8372806fef0624c5ef17c8dd43c8d73",
+    ".proj.specs/0013-discord-source-alignment/approval.md": "4cfb43f3942c54b2c5f99f2f8088fbb9c3cc6a64912bfd37b658c89aa71ab7cf",
+    ".proj.specs/0013-discord-source-alignment/diagnosis.json": "aba97fd6b48cbf4adc46bc73ecc69b3c9c2b95d0d1e52233d53e5294201e0707",
+    ".proj.specs/0013-discord-source-alignment/review/prompt.md": "b753df77dc7786582a3ca67e4fcaa1c06a7379e2313bfe0b310d80538002a69a",
+    ".proj.specs/0013-discord-source-alignment/review/round-1.md": "7414ddd4d5c70796df243cb44884434c426164a144e267a51e9b82f84e2e0133",
+    ".proj.specs/0013-discord-source-alignment/review/round-2.md": "cbd444acdf7448fc3a845740bfe15f96691f1504c4e15867e748b1cb5f344e5c",
+    ".proj.specs/0013-discord-source-alignment/spec.en.md": "564241acd5072af06eba34b233d953ff861164238e811b0f1b3409dbe978e8c9",
+    ".proj.specs/0013-discord-source-alignment/spec.zh-TW.md": "67a31b8d8996d45a2da93c7086affabb91a2b61bd7e155f33f4853a719ed688a",
+    ".proj.specs/0013-discord-source-alignment/test-plan.md": "199e2868b17f0d613f1344cea4e1cf9631395ddbe04a87ad944b5b32e10bf35f",
+    ".proj.specs/0013-discord-source-alignment/ticket-allocation.json": "12811ec4e5a185faabcef24c0f453724f87aad3e98a5cc341b6ae1f34ff8e173",
+    ".proj.specs/0013-discord-source-alignment/ticket-proposal.md": "43ab333ea4e54f71e2a839dce95b0967a6766b102839ac3b097c50e5c88d5cef",
+    ".proj.specs/0013-discord-source-alignment/traceability.md": "fd5308be62ebc25653f38bf0da7582460ae616d55332292dc7239fcc92251f1a",
+    ".proj.tickets/0013-discord-source-alignment/T-0024-discord-source-alignment.md": "b6d08a1f72a45ebc3e9213038b9b0745a599189eea98671b75719642d47f2e99",
+    "tests/article_publication/test_published_static_successor.py": "c15a73933cd5b1394e0a8810205daac37431b4fd24f4ddbf1771e704955c3ec5"
+  },
+  "source_stable": true
+}

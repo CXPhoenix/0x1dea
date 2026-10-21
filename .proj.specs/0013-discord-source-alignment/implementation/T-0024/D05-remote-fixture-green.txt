@@ -1,0 +1,10 @@
+test_real_trusted_main_validation_and_isolated_staging_build (test_current_history_context.CurrentTrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build) ... From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-u1rjdw4d/projections/staging
+ * branch            e6c3341979141c2af1661ca291d4fdc29abb56eb -> FETCH_HEAD
+From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-u1rjdw4d/prepared/sync-r9ov94aw/result
+ * branch            c7cdc62a215d572337f8640054d08f25c29a4c87 -> FETCH_HEAD
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 68.852s
+
+OK
