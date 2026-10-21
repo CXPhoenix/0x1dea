@@ -1,0 +1,9 @@
+{
+  "surface": "isolated Chromium file:// report",
+  "external_resources": [],
+  "horizontal_overflow": false,
+  "title": "Discord Harness 修補結案",
+  "screenshot_retained_outside_repo": "/private/tmp/0x1dea-harness-closeout-report.png",
+  "both_theme_palettes": "inline CSS root + prefers-color-scheme dark",
+  "network_policy": "no external resource requests observed"
+}

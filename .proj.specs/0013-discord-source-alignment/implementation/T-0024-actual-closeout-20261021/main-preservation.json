@@ -1,0 +1,12 @@
+{
+  "root": "/private/tmp/0x1dea-discord-harness-delivery-main-20261021",
+  "base": "0e690064985d9d734849e1ec44a8c0f8d84fb2a3",
+  "HEAD": "e2d055bcd279d86c6bbcec3874aa028eb5d49145",
+  "role": "main",
+  "existing_identities_preserved": 3049,
+  "blog_identities_preserved": 74,
+  "protected_hashes_preserved": 13,
+  "candidate_paths_preserved": 0,
+  "status": "pass",
+  "publishable": false
+}
