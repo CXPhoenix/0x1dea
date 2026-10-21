@@ -2,7 +2,8 @@
 id: T-0024
 title: Admit the exact published Discord source without changing historical contracts
 epic: 0013-discord-source-alignment
-status: review
+status: done
+landing_evidence: .proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/landing.json
 blocked_by: []
 ---
 
@@ -52,3 +53,7 @@ Owner-approved D01-D06 implemented and locally verified. See ../../.proj.specs/0
 ## Publication authority — 2026-10-21
 
 The owner authorized commit, main publication and subsequent staging alignment while preserving historical contracts and candidates. See publication-approval.md in the governing spec directory. Earlier no-delivery statements are historical checkpoints. Status remains review until actual authorized landings and readbacks.
+
+## Actual authorized delivery — 2026-10-21
+
+Main PR40 e2d055b and staging PR41 4788495 landed with exact reviewed trees. Both actual native readbacks pass; all13 protected hashes, all published/candidate blog identities,50candidatepaths and33stage-only policy entries are preserved. Actual closeout coverage and landing.json supersede earlier local review/no-delivery checkpoints. All local criteria plus authorized dual-target delivery are met; status done. P13 and workflow/permission/deployment activation remain outside this ticket.

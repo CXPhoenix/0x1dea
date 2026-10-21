@@ -1,0 +1,18 @@
+{
+  "ticket": "T-0024",
+  "authorized": true,
+  "landed": true,
+  "target": "staging",
+  "commit": "47884951367ccdaf14b752c3647daf380f5cbe2f",
+  "main_commit": "e2d055bcd279d86c6bbcec3874aa028eb5d49145",
+  "main_validation_head": "d46731938efdfbd1072613330c7499f5ca96e2cd",
+  "staging_validation_head": "03da7fcd828452c6480accd9845260deadaeccf4",
+  "approval_receipt": ".proj.specs/0013-discord-source-alignment/publication-approval.md",
+  "main_pr": 40,
+  "staging_pr": 41,
+  "main_tree_matches_reviewed": true,
+  "staging_tree_matches_reviewed": true,
+  "main_mergedAt": "2026-10-21T14:56:28Z",
+  "staging_mergedAt": "2026-10-21T14:59:12Z",
+  "scope": "Actual owner-authorized repair delivery and native readback; not P13 or production automation activation"
+}

@@ -1,0 +1,15 @@
+{
+  "root": "/private/tmp/0x1dea-discord-harness-delivery-staging-20261021",
+  "main": "e2d055bcd279d86c6bbcec3874aa028eb5d49145",
+  "staging_before": "87ff977bb11c42b810dfedc34c519052f62fbaa7",
+  "conflicts": [
+    "maintenance/publication-workflow/engineering-v1.json"
+  ],
+  "stage_only_policy_entries_preserved": 33,
+  "changed_existing_policy_identities": [
+    "scripts/publication_current.py",
+    "tests/article_publication/test_current_history_context.py",
+    "tests/article_publication/test_head_reporting.py",
+    "tests/article_publication/test_workflow_admission.py"
+  ]
+}

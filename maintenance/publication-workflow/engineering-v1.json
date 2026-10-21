@@ -4953,7 +4953,7 @@
     },
     ".proj.tickets/0013-discord-source-alignment/T-0024-discord-source-alignment.md": {
       "mode": "100644",
-      "sha256": "d907c2b4a835259a6f4c72773dd1c5aa21a396201e2fe2bc4c13f181aa2ef1ea"
+      "sha256": "6bb8e31d34a8aed685d0c23b7e866515926b3bdebe05a4927c4349453616fe0d"
     },
     "tests/article_publication/test_published_static_successor.py": {
       "mode": "100644",
@@ -5210,6 +5210,50 @@
     ".proj.specs/0013-discord-source-alignment/publication-approval.md": {
       "mode": "100644",
       "sha256": "eedb5d942823f11e66d73288eee0cf24595021aa49b1766e532ced66b0f77e8f"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/alignment-context.json": {
+      "mode": "100644",
+      "sha256": "52ecab3da35670d054d57190f951c9fbd34656b4153c13de903a9da51c994014"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/coverage.md": {
+      "mode": "100644",
+      "sha256": "984a4b19dadd1fd499baed7b485a4ead639d286650f0430547d2370e9028f8af"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/landing.json": {
+      "mode": "100644",
+      "sha256": "61649acce8816b2861eb548547becbf077326881d719654c4adf28e9123f4eea"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/main-native.json": {
+      "mode": "100644",
+      "sha256": "3a66ba927700c60d28dbdf4b68663c64df524e9b1f3c0ffc1d78c560d9e79120"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/main-preservation.json": {
+      "mode": "100644",
+      "sha256": "19baa8d234f0e1e022456c85f39e158918a6d4cc0c6fe763a1763cc950d1ef44"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/staging-native.json": {
+      "mode": "100644",
+      "sha256": "b6ca2183ab0f6322f66e71de5e7353bbf3ad4f8513cfa05688b29bfd4168c76f"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/staging-preservation.json": {
+      "mode": "100644",
+      "sha256": "898769ed32c8f5be9ddc31c11fbcda2f92616b5a4b05d87dec518d3da8edb89c"
+    },
+    ".proj.specs/0013-discord-source-alignment/reports/discord-harness-closeout.html": {
+      "mode": "100644",
+      "sha256": "90995ae444e24dcb3a0cea553dc22f93f418f609c1a0b626e19b4ff4b997db0d"
+    },
+    ".proj.specs/0013-discord-source-alignment/retrospective.md": {
+      "mode": "100644",
+      "sha256": "7bd230f664210b6b925a35dcc0239425ed39fbce05fc61493d5253c802908c65"
+    },
+    ".proj.specs/0013-discord-source-alignment/review/chain-analysis.md": {
+      "mode": "100644",
+      "sha256": "afe9786f8cff6e6ee749ec15ea306e610ce6ffc8f43646ea8c3e67db75832026"
+    },
+    ".proj.specs/0013-discord-source-alignment/implementation/T-0024-actual-closeout-20261021/report-render.json": {
+      "mode": "100644",
+      "sha256": "af8464a983ca9ab43ffe1264e7a8f6aeaaa963dcbc20be2a01290a333f2cf16d"
     }
   }
 }
