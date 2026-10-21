@@ -1001,7 +1001,7 @@
     },
     "scripts/publication_current.py": {
       "mode": "100644",
-      "sha256": "11e4e46801e56c3a5886df9cc71652beadfce39f8caf8f4bfde6f839fe12f8b5"
+      "sha256": "af71dcd012fa8025c31568c9932fbb230ab31587624cd45a4663b4a35b73a086"
     },
     "scripts/run-current-python-tests.py": {
       "mode": "100644",
@@ -5950,6 +5950,38 @@
     ".proj.specs/0004-shared-preview-notice/review/chain-analysis.md": {
       "mode": "100644",
       "sha256": "c337f22faf7f1b9236261220dc0ffad023abcfd5e1a175ecdd55baa7aaa433f4"
+    },
+    ".proj.tickets/0006-article-electricity-revision/T-0006-article-electricity-revision.md": {
+      "mode": "100644",
+      "sha256": "0eebfe661ee271d5096d6c69710c34cf96e3cdf046e44aa8a96fb3e3c99b1b31"
+    },
+    ".proj.specs/0006-article-electricity-revision/closeout-20261021/approval.md": {
+      "mode": "100644",
+      "sha256": "950bb6ae6487887214bb8fba20fd4c3e9d6c896a5ce4b75ba33f9081580790e8"
+    },
+    ".proj.specs/0006-article-electricity-revision/closeout-20261021/coverage-report.md": {
+      "mode": "100644",
+      "sha256": "b2ca880d75dd472ee874b02b0f0afff4e9186b3268c4b2ebc092f3f230b3506f"
+    },
+    ".proj.specs/0006-article-electricity-revision/closeout-20261021/landing.json": {
+      "mode": "100644",
+      "sha256": "cd91ce3d61fcaa3344f1ab70a5a13da36049fe8193d60a41adf475d2d7103379"
+    },
+    ".proj.specs/0006-article-electricity-revision/closeout-20261021/retrospective.md": {
+      "mode": "100644",
+      "sha256": "337b92674362e5b7f590dece1d5664426a09f5131c4128fe99625a3fb9274649"
+    },
+    ".proj.specs/0006-article-electricity-revision/closeout-20261021/review/code.md": {
+      "mode": "100644",
+      "sha256": "84598bb5d9978786b7bcc4dd090096999c88a90bc851dcf30259b3cb2d415893"
+    },
+    ".proj.specs/0006-article-electricity-revision/closeout-20261021/review/security.md": {
+      "mode": "100644",
+      "sha256": "039a3b45c050a5d35a03b5c157cd6d623351085d0df358544ec3ae571ca5ab34"
+    },
+    ".proj.specs/0006-article-electricity-revision/review/chain-analysis.md": {
+      "mode": "100644",
+      "sha256": "ed7944e086ac74a71b7bdcae85b800858ee3cf92bb869b61950a6d72e1179135"
     }
   }
 }
