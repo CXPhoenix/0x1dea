@@ -1,0 +1,18 @@
+test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags. ... ERROR
+
+======================================================================
+ERROR: test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-ui-closeout-stage-20261021/tests/article_publication/test_head_reporting.py", line 351, in test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission
+    runtime_file=w.directory/'runtime.json';runtime_file.write_bytes(remote.canonical({'version':1,'node':str(Path(shutil.which('node')).resolve()),'node_version':'v24.13.0','dependencies':str(Path(os.environ['PUBLICATION_TEST_DEPENDENCIES']).resolve())}))
+                                                                                                                                                                                                      ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen os>", line 709, in __getitem__
+KeyError: 'PUBLICATION_TEST_DEPENDENCIES'
+
+----------------------------------------------------------------------
+Ran 1 test in 8.395s
+
+FAILED (errors=1)

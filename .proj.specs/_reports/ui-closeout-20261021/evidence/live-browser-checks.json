@@ -1,0 +1,26 @@
+[
+  {
+    "label": "production-home",
+    "url": "https://0x1dea.rtfm.diy",
+    "open_exit": 0,
+    "eval_exit": 0
+  },
+  {
+    "label": "production-article",
+    "url": "https://0x1dea.rtfm.diy/post/course/security-awareness/electricity-privacy.html",
+    "open_exit": 0,
+    "eval_exit": 0
+  },
+  {
+    "label": "preview-home",
+    "url": "https://staging.0x1dea.pages.dev",
+    "open_exit": 0,
+    "eval_exit": 0
+  },
+  {
+    "label": "preview-article",
+    "url": "https://staging.0x1dea.pages.dev/post/course/security-awareness/electricity-privacy.html",
+    "open_exit": 0,
+    "eval_exit": 0
+  }
+]

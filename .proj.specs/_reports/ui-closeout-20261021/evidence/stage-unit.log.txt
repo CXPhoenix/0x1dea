@@ -1,0 +1,21 @@
+
+> 0x1dea@1.4.0 test:unit /private/tmp/0x1dea-ui-closeout-stage-20261021
+> vitest run
+
+
+ RUN  v4.0.18 /private/tmp/0x1dea-ui-closeout-stage-20261021
+
+ ✓ tests/encoreTicket.vitest.ts (2 tests) 42ms
+ ✓ blog/.vitepress/theme/components/__tests__/Particles.spec.ts (2 tests) 55ms
+ ✓ tests/previewNotice.vitest.ts (32 tests) 123ms
+ ✓ tests/lintCleanup.vitest.ts (3 tests) 88ms
+ ✓ tests/previewNoticeArticle.vitest.ts (1 test) 122ms
+ ✓ tests/articleCaptions.vitest.ts (26 tests) 201ms
+ ✓ tests/vpHelper.vitest.ts (9 tests) 4ms
+ ✓ tests/articleSummary.vitest.ts (12 tests) 186ms
+
+ Test Files  8 passed (8)
+      Tests  87 passed (87)
+   Start at  23:25:02
+   Duration  1.76s (transform 1.23s, setup 0ms, import 3.97s, tests 821ms, environment 4.57s)
+

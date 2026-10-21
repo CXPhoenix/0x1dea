@@ -1,0 +1,94 @@
+[
+  {
+    "case": "true-staging",
+    "consumer": "home",
+    "matching_notice_texts": 1,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "true-staging",
+    "consumer": "article",
+    "matching_notice_texts": 1,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "absent-staging",
+    "consumer": "home",
+    "matching_notice_texts": 1,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "absent-staging",
+    "consumer": "article",
+    "matching_notice_texts": 1,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "false-main",
+    "consumer": "home",
+    "matching_notice_texts": 0,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "false-main",
+    "consumer": "article",
+    "matching_notice_texts": 0,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "absent-main",
+    "consumer": "home",
+    "matching_notice_texts": 0,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "absent-main",
+    "consumer": "article",
+    "matching_notice_texts": 0,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "absent-absent",
+    "consumer": "home",
+    "matching_notice_texts": 0,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "absent-absent",
+    "consumer": "article",
+    "matching_notice_texts": 0,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "true-main",
+    "consumer": "home",
+    "matching_notice_texts": 1,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "true-main",
+    "consumer": "article",
+    "matching_notice_texts": 1,
+    "ssr_hydrated_equal": true
+  },
+  {
+    "case": "production-home",
+    "matching_notice_texts": 0,
+    "actual_response_hydrated_equal": true
+  },
+  {
+    "case": "production-article",
+    "matching_notice_texts": 0,
+    "actual_response_hydrated_equal": true
+  },
+  {
+    "case": "preview-home",
+    "matching_notice_texts": 1,
+    "actual_response_hydrated_equal": true
+  },
+  {
+    "case": "preview-article",
+    "matching_notice_texts": 1,
+    "actual_response_hydrated_equal": true
+  }
+]

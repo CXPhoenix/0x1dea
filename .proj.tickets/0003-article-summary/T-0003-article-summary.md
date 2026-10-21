@@ -2,7 +2,8 @@
 id: T-0003
 title: Native Markdown summaries with three appearances
 epic: 0003-article-summary
-status: review
+status: done
+landing_evidence: .proj.specs/0003-article-summary/closeout-20261021/landing.json
 blocked_by: [T-0005]
 ---
 
@@ -17,10 +18,10 @@ An author can use ArticleSummary directly in Markdown, select note/cards/termina
 
 ## Acceptance criteria
 
-- [ ] S1–S3: all three appearances and fallback render the canonical list and richer Markdown without custom containers, content loss or boundary capture.
-- [ ] S4–S7: actual built SSR page and hydrated browser pass navigation, mobile, light/dark, keyboard/accessibility and print checks.
-- [ ] S8: no arbitrary HTML parser or unrelated article/banner changes; usage guidance and one approved consumer are demoable.
-- [ ] Approved plan is followed with actual red/green and a coverage report; code/security/surface gates pass before authorized landing.
+- [x] S1–S3: all three appearances and fallback render the canonical list and richer Markdown without custom containers, content loss or boundary capture.
+- [x] S4–S7: actual built SSR page and hydrated browser pass navigation, mobile, light/dark, keyboard/accessibility and print checks.
+- [x] S8: no arbitrary HTML parser or unrelated article/banner changes; usage guidance and one approved consumer are demoable.
+- [x] Approved plan is followed with actual red/green and a coverage report; code/security/surface gates pass before authorized landing.
 
 ## 給使用者（zh-TW）
 
@@ -37,3 +38,8 @@ Approval: ../../.proj.specs/0003-article-summary/approval.md. No landing authori
 ## Local verification evidence
 
 See coverage-report.md under the epic, maintenance/component-delivery/TDD.md and scope.md. Local behavior verified; existing harness verifier config hash mismatch reproduced on pristine baseline. Actual deployment/landing not performed.
+
+
+## Current closeout — 2026-10-21
+
+The owner requested closure after actual staging landing. Current S1–S8 acceptance and retained limits are in [closeout-20261021/coverage-report.md](../../.proj.specs/0003-article-summary/closeout-20261021/coverage-report.md); [actual landing](../../.proj.specs/0003-article-summary/closeout-20261021/landing.json). This dated entry supersedes the earlier review/no-landing or missing-current-evidence comments only. It does not backdate gates, remove historical failures, publish candidate articles or claim the latest metadata-only Git head was deployed.

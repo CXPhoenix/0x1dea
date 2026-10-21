@@ -38,6 +38,10 @@ CLOSEOUT_RECEIPTS = {'.proj.specs/0001-harness-adoption/landing-approval.md': 'b
 CLOSEOUT_SUCCESSORS.update({'.proj.tickets/0010-main-verification-repair/T-0012-ticket-evidence-closeout.md': '6570950636c67b59a0d0f8fb41dfe7ca6983346f44e4a0741702f3968f86bb77', '.proj.tickets/0012-publication-workflow/T-0014-v2-selected-candidate.md': '2af9335a48b95e2857eb367d5d8601ff473b5715683db66dddad1de3fa731983', '.proj.tickets/0012-publication-workflow/T-0015-local-staging-sync.md': 'd2a8496fdec3958ab6cc19a835ff64f8b7901c3ca43173b1f52aac5aafcc0e3e'})
 CLOSEOUT_RECEIPTS.update({'.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/approval.md': '2eccaf3a6ee4284d6e7289929e0165ca8e9a976315c91bc0012004f1c3cb76d4', '.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0012-landing.json': 'aa43e02ca8224e4322cc12d9d456cf4feaaa047e9c00f6c73bd8a5ce23d82965', '.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0014-landing.json': '50093c6da06cea477dfc1931896f8cc835f89ecd8d0b182e497dc64ef8257130', '.proj.specs/0012-publication-workflow/implementation/dual-landing-20261016/T-0015-landing.json': 'f7087e76d6a67f15d6c4e7da3469f1cf1347fb4e8879d89b77dd7af778333cee'})
 
+# Owner-accepted UI ticket closeout, current evidence dated 2026-10-21.
+CLOSEOUT_SUCCESSORS.update({'.proj.tickets/0003-article-summary/T-0003-article-summary.md': 'ece0b587c9bda3ef2fc5f3f8f43f45d4a78999a8a84bcf63209294aa309ea1f7'})
+CLOSEOUT_RECEIPTS.update({'.proj.specs/0003-article-summary/closeout-20261021/approval.md': '653a0154b4879c072ccccd083320eb11f0fb082ef1049b73eb53055905cf4669', '.proj.specs/0003-article-summary/closeout-20261021/landing.json': 'c7f67257ae1a081e38195a629ce54b887152595c8cfd78496da57c77aad7a173'})
+
 def git_environment(*, local_clone=False):
     env = {key: value for key, value in os.environ.items() if not key.startswith('GIT_')}
     env.update({'GIT_CONFIG_NOSYSTEM': '1', 'GIT_CONFIG_GLOBAL': os.devnull,

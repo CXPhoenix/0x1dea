@@ -1,0 +1,4586 @@
+[
+  {
+    "url": "http://127.0.0.1:4380/__closeout_acceptance.html",
+    "theme": "mac",
+    "viewport": 1280,
+    "pageWidth": 1280,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 296,
+          "y": 229.890625,
+          "width": 688,
+          "height": 258
+        },
+        "contrast": 10.696090350022232,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 349,
+              "y": 294.890625,
+              "width": 609,
+              "height": 35
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 349,
+              "y": 338.890625,
+              "width": 609,
+              "height": 35
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 349,
+              "y": 382.890625,
+              "width": 609,
+              "height": 70
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _cards_yyhr4_84",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 296,
+          "y": 517.890625,
+          "width": 688,
+          "height": 380
+        },
+        "contrast": 10.58963696439639,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 322,
+              "y": 582.890625,
+              "width": 202,
+              "height": 280
+            },
+            "before": "\"\"",
+            "contrast": 11.300356775084618
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 539,
+              "y": 582.890625,
+              "width": 202,
+              "height": 280
+            },
+            "before": "\"\"",
+            "contrast": 11.300356775084618
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 756,
+              "y": 582.890625,
+              "width": 202,
+              "height": 280
+            },
+            "before": "\"\"",
+            "contrast": 11.300356775084618
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "TL;DR",
+        "text": "TL;DR\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 296,
+          "y": 927.890625,
+          "width": 688,
+          "height": 282
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 322,
+              "y": 1016.890625,
+              "width": 636,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 322,
+              "y": 1060.890625,
+              "width": 636,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 322,
+              "y": 1104.890625,
+              "width": 636,
+              "height": 70
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "Markdown 邊界",
+        "text": "Markdown 邊界\n很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。\n很長連結\n程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890\n\n段落 強調 與 斜體。\n\njs\nconsole.log('$ is code content')\n\n內部容器\n\n容器項目不是 prompt。",
+        "bounds": {
+          "x": 296,
+          "y": 1305.890625,
+          "width": 688,
+          "height": 631.75
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。",
+            "bounds": {
+              "x": 322,
+              "y": 1394.890625,
+              "width": 636,
+              "height": 117
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "很長連結",
+            "bounds": {
+              "x": 322,
+              "y": 1523.890625,
+              "width": 636,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890",
+            "bounds": {
+              "x": 322,
+              "y": 1567.890625,
+              "width": 636,
+              "height": 70
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [
+          "none",
+          "none"
+        ],
+        "interactive": 1
+      },
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\nfallback note",
+        "bounds": {
+          "x": 296,
+          "y": 2557.640625,
+          "width": 688,
+          "height": 135
+        },
+        "contrast": 10.696090350022232,
+        "children": [],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "Hostile <img src=x onerror=alert(1)>\n\nPlain <script>alert(1)</script>\nSecond line",
+        "label": "Hostile <img src=x onerror=alert(1)>",
+        "contrast": 9.940989272097232,
+        "bounds": {
+          "x": 296,
+          "y": 5652.671875,
+          "width": 688,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：First figure caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 296,
+          "y": 3863.3125,
+          "width": 688,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 1：First table caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 296,
+          "y": 4009.0625,
+          "width": 688,
+          "height": 44.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：Second figure caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 296,
+          "y": 5188.171875,
+          "width": 688,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 2：Second table caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 296,
+          "y": 5257.921875,
+          "width": 688,
+          "height": 44.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-first-proof",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-second-proof",
+        "target": true
+      },
+      {
+        "text": "表 1",
+        "href": "#tbl-first-table",
+        "target": true
+      },
+      {
+        "text": "表 2",
+        "href": "#tbl-second-table",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nFirst safe recommendation\n\nIndependent first\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 296,
+          "y": 5842.671875,
+          "width": 688,
+          "height": 196.59375
+        },
+        "contrast": 10.12956619740644
+      },
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nSecond <script>safe</script> recommendation\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 296,
+          "y": 6071.265625,
+          "width": 688,
+          "height": 162.0625
+        },
+        "contrast": 10.12956619740644
+      }
+    ],
+    "sentinel": true,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent first alt",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent second alt",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "1280-light-fixture"
+  },
+  {
+    "url": "http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html",
+    "theme": "mac",
+    "viewport": 1280,
+    "pageWidth": 1280,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 336,
+          "y": 726.96875,
+          "width": 624,
+          "height": 328
+        },
+        "contrast": 10.696090350022232,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 389,
+              "y": 791.96875,
+              "width": 545,
+              "height": 70
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 389,
+              "y": 870.96875,
+              "width": 545,
+              "height": 70
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 389,
+              "y": 949.96875,
+              "width": 545,
+              "height": 70
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "staging 修訂審閱稿\n\n這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "staging 修訂審閱稿",
+        "contrast": 9.940989272097232,
+        "bounds": {
+          "x": 336,
+          "y": 574.96875,
+          "width": 624,
+          "height": 122
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 336,
+          "y": 4206.90625,
+          "width": 624,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 336,
+          "y": 7162.171875,
+          "width": 624,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 336,
+          "y": 11256.15625,
+          "width": 624,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 336,
+          "y": 5119.953125,
+          "width": 624,
+          "height": 196.59375
+        },
+        "contrast": 10.12956619740644
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "1280-light-article"
+  },
+  {
+    "url": "http://127.0.0.1:4380/__closeout_acceptance.html",
+    "theme": "dark mac",
+    "viewport": 1280,
+    "pageWidth": 1280,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 296,
+          "y": 229.890625,
+          "width": 688,
+          "height": 258
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 349,
+              "y": 294.890625,
+              "width": 609,
+              "height": 35
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 349,
+              "y": 338.890625,
+              "width": 609,
+              "height": 35
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 349,
+              "y": 382.890625,
+              "width": 609,
+              "height": 70
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _cards_yyhr4_84",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 296,
+          "y": 517.890625,
+          "width": 688,
+          "height": 380
+        },
+        "contrast": 11.920439417242624,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 322,
+              "y": 582.890625,
+              "width": 202,
+              "height": 280
+            },
+            "before": "\"\"",
+            "contrast": 14.078884721774244
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 539,
+              "y": 582.890625,
+              "width": 202,
+              "height": 280
+            },
+            "before": "\"\"",
+            "contrast": 14.078884721774244
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 756,
+              "y": 582.890625,
+              "width": 202,
+              "height": 280
+            },
+            "before": "\"\"",
+            "contrast": 14.078884721774244
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "TL;DR",
+        "text": "TL;DR\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 296,
+          "y": 927.890625,
+          "width": 688,
+          "height": 282
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 322,
+              "y": 1016.890625,
+              "width": 636,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 322,
+              "y": 1060.890625,
+              "width": 636,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 322,
+              "y": 1104.890625,
+              "width": 636,
+              "height": 70
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "Markdown 邊界",
+        "text": "Markdown 邊界\n很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。\n很長連結\n程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890\n\n段落 強調 與 斜體。\n\njs\nconsole.log('$ is code content')\n\n內部容器\n\n容器項目不是 prompt。",
+        "bounds": {
+          "x": 296,
+          "y": 1305.890625,
+          "width": 688,
+          "height": 631.75
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。",
+            "bounds": {
+              "x": 322,
+              "y": 1394.890625,
+              "width": 636,
+              "height": 117
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "很長連結",
+            "bounds": {
+              "x": 322,
+              "y": 1523.890625,
+              "width": 636,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890",
+            "bounds": {
+              "x": 322,
+              "y": 1567.890625,
+              "width": 636,
+              "height": 70
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [
+          "none",
+          "none"
+        ],
+        "interactive": 1
+      },
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\nfallback note",
+        "bounds": {
+          "x": 296,
+          "y": 2557.640625,
+          "width": 688,
+          "height": 135
+        },
+        "contrast": 11.937051849832931,
+        "children": [],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "Hostile <img src=x onerror=alert(1)>\n\nPlain <script>alert(1)</script>\nSecond line",
+        "label": "Hostile <img src=x onerror=alert(1)>",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 296,
+          "y": 5652.671875,
+          "width": 688,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：First figure caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 296,
+          "y": 3863.3125,
+          "width": 688,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 1：First table caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 296,
+          "y": 4009.0625,
+          "width": 688,
+          "height": 44.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：Second figure caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 296,
+          "y": 5188.171875,
+          "width": 688,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 2：Second table caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 296,
+          "y": 5257.921875,
+          "width": 688,
+          "height": 44.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-first-proof",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-second-proof",
+        "target": true
+      },
+      {
+        "text": "表 1",
+        "href": "#tbl-first-table",
+        "target": true
+      },
+      {
+        "text": "表 2",
+        "href": "#tbl-second-table",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nFirst safe recommendation\n\nIndependent first\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 296,
+          "y": 5842.671875,
+          "width": 688,
+          "height": 196.59375
+        },
+        "contrast": 11.972955937725956
+      },
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nSecond <script>safe</script> recommendation\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 296,
+          "y": 6071.265625,
+          "width": 688,
+          "height": 162.0625
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": true,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent first alt",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent second alt",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "1280-dark-fixture"
+  },
+  {
+    "url": "http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html",
+    "theme": "dark mac",
+    "viewport": 1280,
+    "pageWidth": 1280,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 336,
+          "y": 726.96875,
+          "width": 624,
+          "height": 328
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 389,
+              "y": 791.96875,
+              "width": 545,
+              "height": 70
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 389,
+              "y": 870.96875,
+              "width": 545,
+              "height": 70
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 389,
+              "y": 949.96875,
+              "width": 545,
+              "height": 70
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "staging 修訂審閱稿\n\n這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "staging 修訂審閱稿",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 336,
+          "y": 574.96875,
+          "width": 624,
+          "height": 122
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 336,
+          "y": 4206.90625,
+          "width": 624,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 336,
+          "y": 7162.171875,
+          "width": 624,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 336,
+          "y": 11256.15625,
+          "width": 624,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 336,
+          "y": 5119.953125,
+          "width": 624,
+          "height": 196.59375
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "1280-dark-article"
+  },
+  {
+    "url": "http://127.0.0.1:4380/__closeout_acceptance.html",
+    "theme": "mac",
+    "viewport": 360,
+    "pageWidth": 360,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 261.890625,
+          "width": 312,
+          "height": 464
+        },
+        "contrast": 10.696090350022232,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 72,
+              "y": 324.890625,
+              "width": 243,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 72,
+              "y": 438.890625,
+              "width": 243,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 72,
+              "y": 552.890625,
+              "width": 243,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _cards_yyhr4_84",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 755.890625,
+          "width": 312,
+          "height": 686
+        },
+        "contrast": 10.58963696439639,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 45,
+              "y": 818.890625,
+              "width": 270,
+              "height": 175
+            },
+            "before": "\"\"",
+            "contrast": 11.300356775084618
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 45,
+              "y": 1008.890625,
+              "width": 270,
+              "height": 175
+            },
+            "before": "\"\"",
+            "contrast": 11.300356775084618
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 45,
+              "y": 1198.890625,
+              "width": 270,
+              "height": 210
+            },
+            "before": "\"\"",
+            "contrast": 11.300356775084618
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "TL;DR",
+        "text": "TL;DR\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 1471.890625,
+          "width": 312,
+          "height": 488
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 45,
+              "y": 1558.890625,
+              "width": 270,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 45,
+              "y": 1672.890625,
+              "width": 270,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 45,
+              "y": 1786.890625,
+              "width": 270,
+              "height": 140
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "Markdown 邊界",
+        "text": "Markdown 邊界\n很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。\n很長連結\n程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890\n\n段落 強調 與 斜體。\n\njs\nconsole.log('$ is code content')\n\n內部容器\n\n容器項目不是 prompt。",
+        "bounds": {
+          "x": 24,
+          "y": 2055.890625,
+          "width": 312,
+          "height": 838.75
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。",
+            "bounds": {
+              "x": 45,
+              "y": 2142.890625,
+              "width": 270,
+              "height": 222
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "很長連結",
+            "bounds": {
+              "x": 45,
+              "y": 2376.890625,
+              "width": 270,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890",
+            "bounds": {
+              "x": 45,
+              "y": 2420.890625,
+              "width": 270,
+              "height": 140
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [
+          "none",
+          "none"
+        ],
+        "interactive": 1
+      },
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\nfallback note",
+        "bounds": {
+          "x": 24,
+          "y": 3514.640625,
+          "width": 312,
+          "height": 131
+        },
+        "contrast": 10.696090350022232,
+        "children": [],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "Hostile <img src=x onerror=alert(1)>\n\nPlain <script>alert(1)</script>\nSecond line",
+        "label": "Hostile <img src=x onerror=alert(1)>",
+        "contrast": 9.940989272097232,
+        "bounds": {
+          "x": 24,
+          "y": 5613.171875,
+          "width": 312,
+          "height": 230
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：First figure caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 4355.21875,
+          "width": 312,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 1：First table caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 4500.96875,
+          "width": 312,
+          "height": 44.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：Second figure caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 5148.671875,
+          "width": 312,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 2：Second table caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 5218.421875,
+          "width": 312,
+          "height": 44.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-first-proof",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-second-proof",
+        "target": true
+      },
+      {
+        "text": "表 1",
+        "href": "#tbl-first-table",
+        "target": true
+      },
+      {
+        "text": "表 2",
+        "href": "#tbl-second-table",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nFirst safe recommendation\n\nIndependent first\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5875.171875,
+          "width": 312,
+          "height": 223.59375
+        },
+        "contrast": 10.12956619740644
+      },
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nSecond <script>safe</script> recommendation\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 6130.765625,
+          "width": 312,
+          "height": 212.796875
+        },
+        "contrast": 10.12956619740644
+      }
+    ],
+    "sentinel": true,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent first alt",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent second alt",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "360-light-fixture"
+  },
+  {
+    "url": "http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html",
+    "theme": "mac",
+    "viewport": 360,
+    "pageWidth": 360,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 877.15625,
+          "width": 312,
+          "height": 464
+        },
+        "contrast": 10.696090350022232,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 940.15625,
+              "width": 243,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 1054.15625,
+              "width": 243,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 1168.15625,
+              "width": 243,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "staging 修訂審閱稿\n\n這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "staging 修訂審閱稿",
+        "contrast": 9.940989272097232,
+        "bounds": {
+          "x": 24,
+          "y": 689.15625,
+          "width": 312,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 4802.4375,
+          "width": 312,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 8404.859375,
+          "width": 312,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 14109.703125,
+          "width": 312,
+          "height": 59.5
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5697.828125,
+          "width": 312,
+          "height": 281.1875
+        },
+        "contrast": 10.12956619740644
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "360-light-article"
+  },
+  {
+    "url": "http://127.0.0.1:4380/__closeout_acceptance.html",
+    "theme": "dark mac",
+    "viewport": 360,
+    "pageWidth": 360,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 261.890625,
+          "width": 312,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 72,
+              "y": 324.890625,
+              "width": 243,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 72,
+              "y": 438.890625,
+              "width": 243,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 72,
+              "y": 552.890625,
+              "width": 243,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _cards_yyhr4_84",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 755.890625,
+          "width": 312,
+          "height": 686
+        },
+        "contrast": 11.920439417242624,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 45,
+              "y": 818.890625,
+              "width": 270,
+              "height": 175
+            },
+            "before": "\"\"",
+            "contrast": 14.078884721774244
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 45,
+              "y": 1008.890625,
+              "width": 270,
+              "height": 175
+            },
+            "before": "\"\"",
+            "contrast": 14.078884721774244
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 45,
+              "y": 1198.890625,
+              "width": 270,
+              "height": 210
+            },
+            "before": "\"\"",
+            "contrast": 14.078884721774244
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "TL;DR",
+        "text": "TL;DR\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 1471.890625,
+          "width": 312,
+          "height": 488
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 45,
+              "y": 1558.890625,
+              "width": 270,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 45,
+              "y": 1672.890625,
+              "width": 270,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 45,
+              "y": 1786.890625,
+              "width": 270,
+              "height": 140
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "Markdown 邊界",
+        "text": "Markdown 邊界\n很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。\n很長連結\n程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890\n\n段落 強調 與 斜體。\n\njs\nconsole.log('$ is code content')\n\n內部容器\n\n容器項目不是 prompt。",
+        "bounds": {
+          "x": 24,
+          "y": 2055.890625,
+          "width": 312,
+          "height": 838.75
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。",
+            "bounds": {
+              "x": 45,
+              "y": 2142.890625,
+              "width": 270,
+              "height": 222
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "很長連結",
+            "bounds": {
+              "x": 45,
+              "y": 2376.890625,
+              "width": 270,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890",
+            "bounds": {
+              "x": 45,
+              "y": 2420.890625,
+              "width": 270,
+              "height": 140
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [
+          "none",
+          "none"
+        ],
+        "interactive": 1
+      },
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\nfallback note",
+        "bounds": {
+          "x": 24,
+          "y": 3514.640625,
+          "width": 312,
+          "height": 131
+        },
+        "contrast": 11.937051849832931,
+        "children": [],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "Hostile <img src=x onerror=alert(1)>\n\nPlain <script>alert(1)</script>\nSecond line",
+        "label": "Hostile <img src=x onerror=alert(1)>",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 5613.171875,
+          "width": 312,
+          "height": 230
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：First figure caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4355.21875,
+          "width": 312,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 1：First table caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4500.96875,
+          "width": 312,
+          "height": 44.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：Second figure caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 5148.671875,
+          "width": 312,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 2：Second table caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 5218.421875,
+          "width": 312,
+          "height": 44.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-first-proof",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-second-proof",
+        "target": true
+      },
+      {
+        "text": "表 1",
+        "href": "#tbl-first-table",
+        "target": true
+      },
+      {
+        "text": "表 2",
+        "href": "#tbl-second-table",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nFirst safe recommendation\n\nIndependent first\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5875.171875,
+          "width": 312,
+          "height": 223.59375
+        },
+        "contrast": 11.972955937725956
+      },
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nSecond <script>safe</script> recommendation\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 6130.765625,
+          "width": 312,
+          "height": 212.796875
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": true,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent first alt",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent second alt",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "360-dark-fixture"
+  },
+  {
+    "url": "http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html",
+    "theme": "dark mac",
+    "viewport": 360,
+    "pageWidth": 360,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 877.15625,
+          "width": 312,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 940.15625,
+              "width": 243,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 1054.15625,
+              "width": 243,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 1168.15625,
+              "width": 243,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "staging 修訂審閱稿\n\n這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "staging 修訂審閱稿",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 689.15625,
+          "width": 312,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4802.4375,
+          "width": 312,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 8404.859375,
+          "width": 312,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 14109.703125,
+          "width": 312,
+          "height": 59.5
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5697.828125,
+          "width": 312,
+          "height": 281.1875
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "360-dark-article"
+  },
+  {
+    "url": "http://127.0.0.1:4380/__closeout_acceptance.html",
+    "theme": "mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 261.890625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 10.696090350022232,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 72,
+              "y": 324.890625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 72,
+              "y": 438.890625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 72,
+              "y": 552.890625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _cards_yyhr4_84",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 755.890625,
+          "width": 342,
+          "height": 686
+        },
+        "contrast": 10.58963696439639,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 45,
+              "y": 818.890625,
+              "width": 300,
+              "height": 175
+            },
+            "before": "\"\"",
+            "contrast": 11.300356775084618
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 45,
+              "y": 1008.890625,
+              "width": 300,
+              "height": 175
+            },
+            "before": "\"\"",
+            "contrast": 11.300356775084618
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 45,
+              "y": 1198.890625,
+              "width": 300,
+              "height": 210
+            },
+            "before": "\"\"",
+            "contrast": 11.300356775084618
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "TL;DR",
+        "text": "TL;DR\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 1471.890625,
+          "width": 342,
+          "height": 488
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 45,
+              "y": 1558.890625,
+              "width": 300,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 45,
+              "y": 1672.890625,
+              "width": 300,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 45,
+              "y": 1786.890625,
+              "width": 300,
+              "height": 140
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "Markdown 邊界",
+        "text": "Markdown 邊界\n很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。\n很長連結\n程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890\n\n段落 強調 與 斜體。\n\njs\nconsole.log('$ is code content')\n\n內部容器\n\n容器項目不是 prompt。",
+        "bounds": {
+          "x": 24,
+          "y": 2055.890625,
+          "width": 342,
+          "height": 767.75
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。",
+            "bounds": {
+              "x": 45,
+              "y": 2142.890625,
+              "width": 300,
+              "height": 222
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "很長連結",
+            "bounds": {
+              "x": 45,
+              "y": 2376.890625,
+              "width": 300,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890",
+            "bounds": {
+              "x": 45,
+              "y": 2420.890625,
+              "width": 300,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [
+          "none",
+          "none"
+        ],
+        "interactive": 1
+      },
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\nfallback note",
+        "bounds": {
+          "x": 24,
+          "y": 3443.640625,
+          "width": 342,
+          "height": 131
+        },
+        "contrast": 10.696090350022232,
+        "children": [],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "Hostile <img src=x onerror=alert(1)>\n\nPlain <script>alert(1)</script>\nSecond line",
+        "label": "Hostile <img src=x onerror=alert(1)>",
+        "contrast": 9.940989272097232,
+        "bounds": {
+          "x": 24,
+          "y": 5626.984375,
+          "width": 342,
+          "height": 194
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：First figure caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 4326.625,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 1：First table caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 4472.375,
+          "width": 342,
+          "height": 44.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：Second figure caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 5162.484375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 2：Second table caption",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 5232.234375,
+          "width": 342,
+          "height": 44.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-first-proof",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-second-proof",
+        "target": true
+      },
+      {
+        "text": "表 1",
+        "href": "#tbl-first-table",
+        "target": true
+      },
+      {
+        "text": "表 2",
+        "href": "#tbl-second-table",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nFirst safe recommendation\n\nIndependent first\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5852.984375,
+          "width": 342,
+          "height": 223.59375
+        },
+        "contrast": 10.12956619740644
+      },
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nSecond <script>safe</script> recommendation\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 6108.578125,
+          "width": 342,
+          "height": 212.796875
+        },
+        "contrast": 10.12956619740644
+      }
+    ],
+    "sentinel": true,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent first alt",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent second alt",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "390-light-fixture"
+  },
+  {
+    "url": "http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html",
+    "theme": "mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 886.15625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 10.696090350022232,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 949.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 1063.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 1177.15625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 10.696090350022232
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "staging 修訂審閱稿\n\n這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "staging 修訂審閱稿",
+        "contrast": 9.940989272097232,
+        "bounds": {
+          "x": 24,
+          "y": 698.15625,
+          "width": 342,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 4685.53125,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 8151.125,
+          "width": 342,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 10.940207996567228,
+        "bounds": {
+          "x": 24,
+          "y": 13512.734375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5567.390625,
+          "width": 342,
+          "height": 219.390625
+        },
+        "contrast": 10.12956619740644
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "390-light-article"
+  },
+  {
+    "url": "http://127.0.0.1:4380/__closeout_acceptance.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 261.890625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 72,
+              "y": 324.890625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 72,
+              "y": 438.890625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 72,
+              "y": 552.890625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _cards_yyhr4_84",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 755.890625,
+          "width": 342,
+          "height": 686
+        },
+        "contrast": 11.920439417242624,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 45,
+              "y": 818.890625,
+              "width": 300,
+              "height": 175
+            },
+            "before": "\"\"",
+            "contrast": 14.078884721774244
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 45,
+              "y": 1008.890625,
+              "width": 300,
+              "height": 175
+            },
+            "before": "\"\"",
+            "contrast": 14.078884721774244
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 45,
+              "y": 1198.890625,
+              "width": 300,
+              "height": 210
+            },
+            "before": "\"\"",
+            "contrast": 14.078884721774244
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "TL;DR",
+        "text": "TL;DR\n總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。\nNILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。\n刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+        "bounds": {
+          "x": 24,
+          "y": 1471.890625,
+          "width": 342,
+          "height": 488
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "總度數會漏掉 時間變化；較細的用電紀錄，可能留下作息線索。",
+            "bounds": {
+              "x": 45,
+              "y": 1558.890625,
+              "width": 300,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "NILM 與在家狀態模型做的是估計，曲線不能直接證明誰做了什麼。",
+            "bounds": {
+              "x": 45,
+              "y": 1672.890625,
+              "width": 300,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "刪掉姓名仍可能保留連結線索。收哪些細節，先看分析目的。閱讀 關於本站 與 inline-code。",
+            "bounds": {
+              "x": 45,
+              "y": 1786.890625,
+              "width": 300,
+              "height": 140
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      },
+      {
+        "class": "_summary_yyhr4_2 _terminal_yyhr4_136",
+        "label": "Markdown 邊界",
+        "text": "Markdown 邊界\n很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。\n很長連結\n程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890\n\n段落 強調 與 斜體。\n\njs\nconsole.log('$ is code content')\n\n內部容器\n\n容器項目不是 prompt。",
+        "bounds": {
+          "x": 24,
+          "y": 2055.890625,
+          "width": 342,
+          "height": 767.75
+        },
+        "contrast": 14.813987958912081,
+        "children": [
+          {
+            "text": "很長的內容會在手機換行，一個項目只有一個 prompt，不會因為文字換行再次添加 prompt。\n巢狀項目不是新的 prompt。",
+            "bounds": {
+              "x": 45,
+              "y": 2142.890625,
+              "width": 300,
+              "height": 222
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "很長連結",
+            "bounds": {
+              "x": 45,
+              "y": 2376.890625,
+              "width": 300,
+              "height": 35
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          },
+          {
+            "text": "程式碼 long-inline-code-abcdefghijklmnopqrstuvwxyz1234567890",
+            "bounds": {
+              "x": 45,
+              "y": 2420.890625,
+              "width": 300,
+              "height": 105
+            },
+            "before": "\"\"",
+            "contrast": 14.813987958912081
+          }
+        ],
+        "nestedPrompts": [
+          "none",
+          "none"
+        ],
+        "interactive": 1
+      },
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\nfallback note",
+        "bounds": {
+          "x": 24,
+          "y": 3443.640625,
+          "width": 342,
+          "height": 131
+        },
+        "contrast": 11.937051849832931,
+        "children": [],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "Hostile <img src=x onerror=alert(1)>\n\nPlain <script>alert(1)</script>\nSecond line",
+        "label": "Hostile <img src=x onerror=alert(1)>",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 5626.984375,
+          "width": 342,
+          "height": 194
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：First figure caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4326.625,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 1：First table caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4472.375,
+          "width": 342,
+          "height": 44.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：Second figure caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 5162.484375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "表 2：Second table caption",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 5232.234375,
+          "width": 342,
+          "height": 44.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-first-proof",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-second-proof",
+        "target": true
+      },
+      {
+        "text": "表 1",
+        "href": "#tbl-first-table",
+        "target": true
+      },
+      {
+        "text": "表 2",
+        "href": "#tbl-second-table",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nFirst safe recommendation\n\nIndependent first\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5852.984375,
+          "width": 342,
+          "height": 223.59375
+        },
+        "contrast": 11.972955937725956
+      },
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\nSecond <script>safe</script> recommendation\n\n來看這一篇 →",
+        "href": "/about",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 6108.578125,
+          "width": 342,
+          "height": 212.796875
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": true,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent first alt",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-inference.png",
+        "alt": "Independent second alt",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "390-dark-fixture"
+  },
+  {
+    "url": "http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 886.15625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 949.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 1063.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 1177.15625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "staging 修訂審閱稿\n\n這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "staging 修訂審閱稿",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 698.15625,
+          "width": 342,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4685.53125,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 8151.125,
+          "width": 342,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 13512.734375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5567.390625,
+          "width": 342,
+          "height": 219.390625
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "390-dark-article"
+  },
+  {
+    "url": "http://127.0.0.1:4380/index.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [],
+    "notices": [
+      {
+        "text": "六篇 staging 試稿預覽\n\n這六篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "六篇 staging 試稿預覽",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 1099,
+          "width": 342,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [],
+    "references": [],
+    "recommendation": [],
+    "sentinel": false,
+    "images": [],
+    "duplicates": [],
+    "label": "true-staging-home"
+  },
+  {
+    "url": "http://127.0.0.1:4380/post/course/security-awareness/electricity-privacy.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 886.15625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 949.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 1063.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 1177.15625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "staging 修訂審閱稿\n\n這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "staging 修訂審閱稿",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 698.15625,
+          "width": 342,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4685.53125,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 8151.125,
+          "width": 342,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 13512.734375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5567.390625,
+          "width": 342,
+          "height": 219.390625
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "true-staging-article"
+  },
+  {
+    "url": "http://127.0.0.1:4381/index.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [],
+    "notices": [
+      {
+        "text": "六篇 staging 試稿預覽\n\n這六篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "六篇 staging 試稿預覽",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 1099,
+          "width": 342,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [],
+    "references": [],
+    "recommendation": [],
+    "sentinel": false,
+    "images": [],
+    "duplicates": [],
+    "label": "absent-staging-home"
+  },
+  {
+    "url": "http://127.0.0.1:4381/post/course/security-awareness/electricity-privacy.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 886.15625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 949.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 1063.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 1177.15625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "staging 修訂審閱稿\n\n這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "staging 修訂審閱稿",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 698.15625,
+          "width": 342,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4685.53125,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 8151.125,
+          "width": 342,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 13512.734375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5567.390625,
+          "width": 342,
+          "height": 219.390625
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "absent-staging-article"
+  },
+  {
+    "url": "http://127.0.0.1:4382/index.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [],
+    "notices": [],
+    "captions": [],
+    "references": [],
+    "recommendation": [],
+    "sentinel": false,
+    "images": [],
+    "duplicates": [],
+    "label": "false-main-home"
+  },
+  {
+    "url": "http://127.0.0.1:4382/post/course/security-awareness/electricity-privacy.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 688.15625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 751.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 865.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 979.15625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4487.53125,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 7953.125,
+          "width": 342,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 13314.734375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5369.390625,
+          "width": 342,
+          "height": 219.390625
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "false-main-article"
+  },
+  {
+    "url": "http://127.0.0.1:4383/index.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [],
+    "notices": [],
+    "captions": [],
+    "references": [],
+    "recommendation": [],
+    "sentinel": false,
+    "images": [],
+    "duplicates": [],
+    "label": "absent-main-home"
+  },
+  {
+    "url": "http://127.0.0.1:4383/post/course/security-awareness/electricity-privacy.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 688.15625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 751.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 865.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 979.15625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4487.53125,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 7953.125,
+          "width": 342,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 13314.734375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5369.390625,
+          "width": 342,
+          "height": 219.390625
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "absent-main-article"
+  },
+  {
+    "url": "http://127.0.0.1:4384/index.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [],
+    "notices": [],
+    "captions": [],
+    "references": [],
+    "recommendation": [],
+    "sentinel": false,
+    "images": [],
+    "duplicates": [],
+    "label": "absent-absent-home"
+  },
+  {
+    "url": "http://127.0.0.1:4384/post/course/security-awareness/electricity-privacy.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 688.15625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 751.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 865.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 979.15625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4487.53125,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 7953.125,
+          "width": 342,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 13314.734375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5369.390625,
+          "width": 342,
+          "height": 219.390625
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "absent-absent-article"
+  },
+  {
+    "url": "http://127.0.0.1:4385/index.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [],
+    "notices": [
+      {
+        "text": "六篇 staging 試稿預覽\n\n這六篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "六篇 staging 試稿預覽",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 1099,
+          "width": 342,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [],
+    "references": [],
+    "recommendation": [],
+    "sentinel": false,
+    "images": [],
+    "duplicates": [],
+    "label": "true-main-home"
+  },
+  {
+    "url": "http://127.0.0.1:4385/post/course/security-awareness/electricity-privacy.html",
+    "theme": "dark mac",
+    "viewport": 390,
+    "pageWidth": 390,
+    "summaries": [
+      {
+        "class": "_summary_yyhr4_2 _note_yyhr4_17",
+        "label": "TL;DR",
+        "text": "TL;DR\n\n先認識平常的用電，再留意時段、持續時間與設備是否出現異常。\n用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。\n對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+        "bounds": {
+          "x": 24,
+          "y": 886.15625,
+          "width": 342,
+          "height": 464
+        },
+        "contrast": 11.937051849832931,
+        "children": [
+          {
+            "text": "先認識平常的用電，再留意時段、持續時間與設備是否出現異常。",
+            "bounds": {
+              "x": 72,
+              "y": 949.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "用電增加可能來自宵夜、排程或故障；挖礦等未經同意的工作也是要查的方向。",
+            "bounds": {
+              "x": 72,
+              "y": 1063.15625,
+              "width": 273,
+              "height": 105
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          },
+          {
+            "text": "對照設備量測、程序、連線與帳號紀錄，才能進一步查明原因；總電表不會直接判定被駭。",
+            "bounds": {
+              "x": 72,
+              "y": 1177.15625,
+              "width": 273,
+              "height": 140
+            },
+            "before": "none",
+            "contrast": 11.937051849832931
+          }
+        ],
+        "nestedPrompts": [],
+        "interactive": 0
+      }
+    ],
+    "notices": [
+      {
+        "text": "staging 修訂審閱稿\n\n這篇供 staging 預覽與審稿，尚未發佈到正式站。",
+        "label": "staging 修訂審閱稿",
+        "contrast": 10.948996122407182,
+        "bounds": {
+          "x": 24,
+          "y": 698.15625,
+          "width": 342,
+          "height": 158
+        },
+        "executable": 0
+      }
+    ],
+    "captions": [
+      {
+        "text": "圖 1：模擬總功率",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 4685.53125,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 2：由整戶用電估計設備用電，再以單獨量測評估差異",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 8151.125,
+          "width": 342,
+          "height": 59.5
+        },
+        "clipped": false
+      },
+      {
+        "text": "圖 3：每小時電表資料用於估計在家狀態",
+        "font": 17.5,
+        "contrast": 12.805893471499829,
+        "bounds": {
+          "x": 24,
+          "y": 13512.734375,
+          "width": 342,
+          "height": 29.75
+        },
+        "clipped": false
+      }
+    ],
+    "references": [
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 1",
+        "href": "#fig-simulated-ems",
+        "target": true
+      },
+      {
+        "text": "圖 2",
+        "href": "#fig-nilm-process",
+        "target": true
+      },
+      {
+        "text": "圖 3",
+        "href": "#fig-occupancy-process",
+        "target": true
+      }
+    ],
+    "recommendation": [
+      {
+        "text": "同場加映\nENCORE\n\n延伸閱讀\n\n什麼是安全？能吃嗎？\n\n如果平常怎麼運作都還不清楚，要怎麼發現哪裡出了問題呢？\n\n來看這一篇 →",
+        "href": "/post/course/cybersec/what-is-safety",
+        "links": 0,
+        "bounds": {
+          "x": 24,
+          "y": 5567.390625,
+          "width": 342,
+          "height": 219.390625
+        },
+        "contrast": 11.972955937725956
+      }
+    ],
+    "sentinel": false,
+    "images": [
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/article-banner.png",
+        "alt": "深藍夜色中的住宅與暖色窗光，柔和波形橫越屋頂上方。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-total.png",
+        "alt": "兩張圖分別寫白天與晚上用電十二度；只看總量時兩者一樣。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-cat-event.png",
+        "alt": "女人懷疑突然增加的用電代表有人在家，貓回答只是來吃宵夜。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/simulated-ems.svg",
+        "alt": "模擬凌晨00:00至02:00用電，01:10至01:25電鍋加熱600瓦，接著保溫50瓦至01:35；家戶總功率是固定150瓦基載加上電鍋功率。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-midnight-event.png",
+        "alt": "Fry 看著半夜電鍋加熱，分不清是設備壞了還是有人餓了。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/nilm-process.svg",
+        "alt": "整戶用電經能源分解模型，得到個別設備用電估計，再與各設備單獨量測的用電比較。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/p-device.png",
+        "alt": "Fry 看著功率上升，疑惑是否就能喊出微波爐。",
+        "loaded": true
+      },
+      {
+        "src": "/assets/post_course_security-awareness_electricity-privacy/occupancy-process.svg",
+        "alt": "每小時電表資料送入模型估計在家狀態；另外取得的在家紀錄用於訓練與評估。",
+        "loaded": true
+      }
+    ],
+    "duplicates": [],
+    "label": "true-main-article"
+  }
+]

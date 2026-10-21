@@ -1,0 +1,104 @@
+test_existing_allowed_sources_are_still_immutable (harness_adoption.test_main_release.MainReleaseTests.test_existing_allowed_sources_are_still_immutable) ... ok
+test_generated_output_symlink_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_generated_output_symlink_is_rejected) ... ok
+test_git_history_overlays_are_rejected (harness_adoption.test_main_release.MainReleaseTests.test_git_history_overlays_are_rejected) ... ok
+test_ignored_compilable_source_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_ignored_compilable_source_is_rejected) ... ok
+test_listing_successor_is_exact_and_required (harness_adoption.test_main_release.MainReleaseTests.test_listing_successor_is_exact_and_required) ... ok
+test_missing_pinned_objects_are_rejected (harness_adoption.test_main_release.MainReleaseTests.test_missing_pinned_objects_are_rejected) ... ok
+test_nonancestor_head_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_nonancestor_head_is_rejected) ... ok
+test_product_and_historical_bytes_cannot_drift (harness_adoption.test_main_release.MainReleaseTests.test_product_and_historical_bytes_cannot_drift) ... ok
+test_release_scope_cannot_be_refreshed_or_deleted (harness_adoption.test_main_release.MainReleaseTests.test_release_scope_cannot_be_refreshed_or_deleted) ... ok
+test_required_repair_sources_cannot_be_removed_or_linked (harness_adoption.test_main_release.MainReleaseTests.test_required_repair_sources_cannot_be_removed_or_linked) ... ok
+test_reviewed_main_with_listing_repair_is_accepted (harness_adoption.test_main_release.MainReleaseTests.test_reviewed_main_with_listing_repair_is_accepted) ... ok
+test_source_existence_type_mode_and_parent_are_enforced (harness_adoption.test_main_release.MainReleaseTests.test_source_existence_type_mode_and_parent_are_enforced) ... ok
+test_unknown_tracked_and_untracked_product_is_rejected (harness_adoption.test_main_release.MainReleaseTests.test_unknown_tracked_and_untracked_product_is_rejected) ... ok
+test_builds_physical_complete_packages_and_projects_links (harness_adoption.test_materializer.MaterializerTests.test_builds_physical_complete_packages_and_projects_links) ... ok
+test_check_detects_output_manifest_and_policy_drift (harness_adoption.test_materializer.MaterializerTests.test_check_detects_output_manifest_and_policy_drift) ... ok
+test_preserves_encoded_spaces_in_projected_markdown_links (harness_adoption.test_materializer.MaterializerTests.test_preserves_encoded_spaces_in_projected_markdown_links) ... ok
+test_rejects_alias_target_escape_and_nested_backing_symlink (harness_adoption.test_materializer.MaterializerTests.test_rejects_alias_target_escape_and_nested_backing_symlink) ... ok
+test_rejects_extra_and_missing_backing_files (harness_adoption.test_materializer.MaterializerTests.test_rejects_extra_and_missing_backing_files) ... ok
+test_rejects_forged_policy_alias_mapping_and_duplicate_input (harness_adoption.test_materializer.MaterializerTests.test_rejects_forged_policy_alias_mapping_and_duplicate_input) ... ok
+test_rejects_manifest_directory_without_removing_its_data (harness_adoption.test_materializer.MaterializerTests.test_rejects_manifest_directory_without_removing_its_data) ... ok
+test_rejects_pinned_backing_hash_drift_and_regular_alias_replacement (harness_adoption.test_materializer.MaterializerTests.test_rejects_pinned_backing_hash_drift_and_regular_alias_replacement) ... ok
+test_rejects_policy_parent_symlink_before_read (harness_adoption.test_materializer.MaterializerTests.test_rejects_policy_parent_symlink_before_read) ... ok
+test_rejects_quoted_top_level_runtime_keys_and_duplicate_names (harness_adoption.test_materializer.MaterializerTests.test_rejects_quoted_top_level_runtime_keys_and_duplicate_names) ... ok
+test_rejects_runtime_extra_and_claude_codex_metadata_on_check (harness_adoption.test_materializer.MaterializerTests.test_rejects_runtime_extra_and_claude_codex_metadata_on_check) ... ok
+test_rejects_runtime_parent_and_foreign_framework_symlinks (harness_adoption.test_materializer.MaterializerTests.test_rejects_runtime_parent_and_foreign_framework_symlinks) ... ok
+test_rejects_source_claude_frontmatter_before_generation (harness_adoption.test_materializer.MaterializerTests.test_rejects_source_claude_frontmatter_before_generation) ... ok
+test_rejects_source_parent_symlink_even_with_matching_hash (harness_adoption.test_materializer.MaterializerTests.test_rejects_source_parent_symlink_even_with_matching_hash) ... ok
+test_rejects_unknown_active_markdown_link_syntax_and_missing_link (harness_adoption.test_materializer.MaterializerTests.test_rejects_unknown_active_markdown_link_syntax_and_missing_link) ... ok
+test_rejects_unknown_missing_extra_and_changed_inputs_before_write (harness_adoption.test_materializer.MaterializerTests.test_rejects_unknown_missing_extra_and_changed_inputs_before_write) ... ok
+test_rejects_unknown_or_duplicate_canonical_frontmatter_keys (harness_adoption.test_materializer.MaterializerTests.test_rejects_unknown_or_duplicate_canonical_frontmatter_keys) ... ok
+test_rejects_wrong_top_level_name_even_when_nested_name_matches (harness_adoption.test_materializer.MaterializerTests.test_rejects_wrong_top_level_name_even_when_nested_name_matches) ... ok
+test_rollback_restores_original_entry_symlinks_after_first_install_failure (harness_adoption.test_materializer.MaterializerTests.test_rollback_restores_original_entry_symlinks_after_first_install_failure) ... ok
+test_rolls_back_partial_install_and_preserves_foreign_framework (harness_adoption.test_materializer.MaterializerTests.test_rolls_back_partial_install_and_preserves_foreign_framework) ... ok
+test_second_generation_and_check_are_deterministic_and_read_only (harness_adoption.test_materializer.MaterializerTests.test_second_generation_and_check_are_deterministic_and_read_only) ... ok
+test_baseline_and_authorized_descendant_history_are_accepted (harness_adoption.test_publication.PublicationAncestryTests.test_baseline_and_authorized_descendant_history_are_accepted) ... ok
+test_missing_baseline_object_is_rejected (harness_adoption.test_publication.PublicationAncestryTests.test_missing_baseline_object_is_rejected) ... ok
+test_unrelated_history_is_rejected (harness_adoption.test_publication.PublicationAncestryTests.test_unrelated_history_is_rejected) ... ok
+test_00_clean_pinned_staging_reaches_successful_readonly_full_cli (harness_adoption.test_reconciliation.ReconciliationTests.test_00_clean_pinned_staging_reaches_successful_readonly_full_cli) ... ok
+test_byte_drift_of_config_theme_summary_banner_is_rejected (harness_adoption.test_reconciliation.ReconciliationTests.test_byte_drift_of_config_theme_summary_banner_is_rejected) ... ok
+test_exact_authorized_article_revision_passes_public_cli (harness_adoption.test_reconciliation.ReconciliationTests.test_exact_authorized_article_revision_passes_public_cli) ... ok
+test_exact_reviewed_components_pass_full_cli (harness_adoption.test_reconciliation.ReconciliationTests.test_exact_reviewed_components_pass_full_cli) ... ok
+test_ignored_unapproved_test_source_is_rejected (harness_adoption.test_reconciliation.ReconciliationTests.test_ignored_unapproved_test_source_is_rejected) ... ok
+test_manifest_absence_is_fail_closed_rollback (harness_adoption.test_reconciliation.ReconciliationTests.test_manifest_absence_is_fail_closed_rollback) ... ok
+test_missing_linked_and_executable_drift_are_rejected (harness_adoption.test_reconciliation.ReconciliationTests.test_missing_linked_and_executable_drift_are_rejected) ... ok
+test_nonancestor_or_missing_pin_history_is_rejected (harness_adoption.test_reconciliation.ReconciliationTests.test_nonancestor_or_missing_pin_history_is_rejected) ... ok
+test_pins_and_provenance_tampering_are_rejected (harness_adoption.test_reconciliation.ReconciliationTests.test_pins_and_provenance_tampering_are_rejected) ... ok
+test_revision_rejects_fourth_path_even_when_ignored (harness_adoption.test_reconciliation.ReconciliationTests.test_revision_rejects_fourth_path_even_when_ignored) ... ok
+test_revision_rejects_missing_predecessor_object (harness_adoption.test_reconciliation.ReconciliationTests.test_revision_rejects_missing_predecessor_object) ... ok
+test_revision_rejects_nonancestor_pin (harness_adoption.test_reconciliation.ReconciliationTests.test_revision_rejects_nonancestor_pin) ... ok
+test_revision_rejects_record_before_hash_and_pin_tampering (harness_adoption.test_reconciliation.ReconciliationTests.test_revision_rejects_record_before_hash_and_pin_tampering) ... ok
+test_revision_rejects_source_bytes_mode_missing_and_links (harness_adoption.test_reconciliation.ReconciliationTests.test_revision_rejects_source_bytes_mode_missing_and_links) ... Traceback (most recent call last):
+  File "/private/tmp/0x1dea-ui-closeout-stage-20261021/scripts/run-current-python-tests.py", line 100, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/private/tmp/0x1dea-ui-closeout-stage-20261021/scripts/run-current-python-tests.py", line 64, in main
+    result = unittest.TextTestRunner(verbosity=2).run(suite)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/runner.py", line 257, in run
+    test(result)
+    ~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 122, in run
+    test(result)
+    ~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 122, in run
+    test(result)
+    ~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/suite.py", line 122, in run
+    test(result)
+    ~~~~^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/case.py", line 725, in __call__
+    return self.run(*args, **kwds)
+           ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/case.py", line 669, in run
+    self._callTestMethod(testMethod)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/unittest/case.py", line 615, in _callTestMethod
+    result = method()
+  File "/private/tmp/0x1dea-ui-closeout-stage-20261021/tests/harness_adoption/test_reconciliation.py", line 108, in test_revision_rejects_source_bytes_mode_missing_and_links
+    self.rejected(name)
+    ~~~~~~~~~~~~~^^^^^^
+  File "/private/tmp/0x1dea-ui-closeout-stage-20261021/tests/harness_adoption/test_reconciliation.py", line 192, in rejected
+    result = self.cli()
+  File "/private/tmp/0x1dea-ui-closeout-stage-20261021/tests/harness_adoption/test_reconciliation.py", line 32, in cli
+    return subprocess.run(['python3', str(self.root / 'scripts/verify-harness-adoption.py')], cwd=self.root, capture_output=True, text=True)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 556, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 1220, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/subprocess.py", line 2152, in _communicate
+    ready = selector.select(timeout)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.3_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/selectors.py", line 398, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt

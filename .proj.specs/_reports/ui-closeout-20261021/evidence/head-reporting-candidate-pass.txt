@@ -1,0 +1,7 @@
+test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags. ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 37.712s
+
+OK

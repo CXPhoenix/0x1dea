@@ -1,0 +1,110 @@
+[
+  {
+    "case": "true-staging",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/true-staging"
+    ],
+    "exit_code": 0,
+    "seconds": 5.35,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": "true",
+      "CF_PAGES_BRANCH": "staging"
+    }
+  },
+  {
+    "case": "absent-staging",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/absent-staging"
+    ],
+    "exit_code": 0,
+    "seconds": 4.82,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": null,
+      "CF_PAGES_BRANCH": "staging"
+    }
+  },
+  {
+    "case": "false-main",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/false-main"
+    ],
+    "exit_code": 0,
+    "seconds": 4.38,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": "false",
+      "CF_PAGES_BRANCH": "main"
+    }
+  },
+  {
+    "case": "absent-main",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/absent-main"
+    ],
+    "exit_code": 0,
+    "seconds": 6.38,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": null,
+      "CF_PAGES_BRANCH": "main"
+    }
+  },
+  {
+    "case": "absent-absent",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/absent-absent"
+    ],
+    "exit_code": 0,
+    "seconds": 11.98,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": null,
+      "CF_PAGES_BRANCH": null
+    }
+  },
+  {
+    "case": "true-main",
+    "command": [
+      "pnpm",
+      "exec",
+      "vitepress",
+      "build",
+      "blog",
+      "--outDir",
+      "/private/tmp/0x1dea-ui-closeout-evidence-20261021/builds/true-main"
+    ],
+    "exit_code": 0,
+    "seconds": 11.41,
+    "env": {
+      "VITE_SITE_NOTICE_ENABLED": "true",
+      "CF_PAGES_BRANCH": "main"
+    }
+  }
+]
