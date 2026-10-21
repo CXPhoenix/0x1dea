@@ -1,0 +1,28 @@
+test_exact_v23_is_accepted_in_both_engineering_projections (test_phoenix_alignment.PhoenixAlignmentTests.test_exact_v23_is_accepted_in_both_engineering_projections) ... 
+  test_exact_v23_is_accepted_in_both_engineering_projections (test_phoenix_alignment.PhoenixAlignmentTests.test_exact_v23_is_accepted_in_both_engineering_projections) (role='main') ... FAIL
+  test_exact_v23_is_accepted_in_both_engineering_projections (test_phoenix_alignment.PhoenixAlignmentTests.test_exact_v23_is_accepted_in_both_engineering_projections) (role='staging') ... FAIL
+
+======================================================================
+FAIL: test_exact_v23_is_accepted_in_both_engineering_projections (test_phoenix_alignment.PhoenixAlignmentTests.test_exact_v23_is_accepted_in_both_engineering_projections) (role='main')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-phoenix-v23-alignment-20261022/work/tests/article_publication/test_phoenix_alignment.py", line 46, in test_exact_v23_is_accepted_in_both_engineering_projections
+    self.assertEqual(built.returncode, 0, built.stdout + built.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : MATERIALIZER: symlink checkout root/ancestor
+
+
+======================================================================
+FAIL: test_exact_v23_is_accepted_in_both_engineering_projections (test_phoenix_alignment.PhoenixAlignmentTests.test_exact_v23_is_accepted_in_both_engineering_projections) (role='staging')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-phoenix-v23-alignment-20261022/work/tests/article_publication/test_phoenix_alignment.py", line 46, in test_exact_v23_is_accepted_in_both_engineering_projections
+    self.assertEqual(built.returncode, 0, built.stdout + built.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : MATERIALIZER: symlink checkout root/ancestor
+
+
+----------------------------------------------------------------------
+Ran 1 test in 13.428s
+
+FAILED (failures=2)

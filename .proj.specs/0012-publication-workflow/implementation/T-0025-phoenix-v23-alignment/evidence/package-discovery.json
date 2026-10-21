@@ -1,0 +1,92 @@
+{
+  "surface": "Physical canonical/Codex/Claude packages and local context pointers; not a new native-host reload or model evaluation",
+  "version": "2.3",
+  "links": [
+    {
+      "source": "skills/phoenix-writing/SKILL.md",
+      "target": "references/tw-vocabulary.md"
+    },
+    {
+      "source": "skills/phoenix-writing/SKILL.md",
+      "target": "references/style-examples.md"
+    },
+    {
+      "source": "skills/phoenix-writing/SKILL.md",
+      "target": "references/context-form.md"
+    },
+    {
+      "source": "skills/phoenix-writing/SKILL.md",
+      "target": "../maintaining-writing-skills/references/writing-process.md"
+    },
+    {
+      "source": "skills/phoenix-writing/SKILL.md",
+      "target": "../creating-vitepress-post/SKILL.md"
+    },
+    {
+      "source": "skills/phoenix-writing/SKILL.md",
+      "target": "../maintaining-writing-skills/SKILL.md"
+    },
+    {
+      "source": "skills/phoenix-writing/references/context-form.md",
+      "target": "../../../maintenance/writing-skills/SOURCES.md"
+    },
+    {
+      "source": ".agents/skills/phoenix-writing/SKILL.md",
+      "target": "references/tw-vocabulary.md"
+    },
+    {
+      "source": ".agents/skills/phoenix-writing/SKILL.md",
+      "target": "references/style-examples.md"
+    },
+    {
+      "source": ".agents/skills/phoenix-writing/SKILL.md",
+      "target": "references/context-form.md"
+    },
+    {
+      "source": ".agents/skills/phoenix-writing/SKILL.md",
+      "target": "../maintaining-writing-skills/references/writing-process.md"
+    },
+    {
+      "source": ".agents/skills/phoenix-writing/SKILL.md",
+      "target": "../creating-vitepress-post/SKILL.md"
+    },
+    {
+      "source": ".agents/skills/phoenix-writing/SKILL.md",
+      "target": "../maintaining-writing-skills/SKILL.md"
+    },
+    {
+      "source": ".agents/skills/phoenix-writing/references/context-form.md",
+      "target": "../../../../maintenance/writing-skills/SOURCES.md"
+    },
+    {
+      "source": ".claude/skills/phoenix-writing/SKILL.md",
+      "target": "references/tw-vocabulary.md"
+    },
+    {
+      "source": ".claude/skills/phoenix-writing/SKILL.md",
+      "target": "references/style-examples.md"
+    },
+    {
+      "source": ".claude/skills/phoenix-writing/SKILL.md",
+      "target": "references/context-form.md"
+    },
+    {
+      "source": ".claude/skills/phoenix-writing/SKILL.md",
+      "target": "../maintaining-writing-skills/references/writing-process.md"
+    },
+    {
+      "source": ".claude/skills/phoenix-writing/SKILL.md",
+      "target": "../creating-vitepress-post/SKILL.md"
+    },
+    {
+      "source": ".claude/skills/phoenix-writing/SKILL.md",
+      "target": "../maintaining-writing-skills/SKILL.md"
+    },
+    {
+      "source": ".claude/skills/phoenix-writing/references/context-form.md",
+      "target": "../../../../maintenance/writing-skills/SOURCES.md"
+    }
+  ],
+  "invocation_policy": "unchanged",
+  "materializer": "unchanged"
+}

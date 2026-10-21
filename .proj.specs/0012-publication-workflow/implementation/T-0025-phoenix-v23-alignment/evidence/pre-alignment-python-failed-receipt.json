@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python3",
+    "scripts/run-current-python-tests.py"
+  ],
+  "started_utc": "2026-10-21T16:55:23.634284+00:00",
+  "source_context": {
+    "head": "8baa132eec03336f6776ea45b0c8e4a6889c3c74",
+    "main": "8baa132eec03336f6776ea45b0c8e4a6889c3c74",
+    "staging": "bf6f872db9aa4a2d3e4a765ef4f171186349f432"
+  },
+  "tested_policy_sha256": "e4b202db3901acc0e453c21e476fb94ebc7c44045767c5b92c1c4f8e356df62a",
+  "guard_sha256": "ae535a8040f01620a77d3fab4d3f433cb578f883b1e24c162769ff05f0cb27cd",
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PUBLICATION_TEST_DEPENDENCIES": "/Users/phoenix/dev/online-notes/0x1DEA/node_modules"
+  },
+  "exit_code": 1,
+  "finished_utc": "2026-10-21T17:12:24.305770+00:00",
+  "log_sha256": "1ed5a78dc3be101c7952842010e0cd93d8636d0ee81985f43b1bf4d5859ed4ff"
+}

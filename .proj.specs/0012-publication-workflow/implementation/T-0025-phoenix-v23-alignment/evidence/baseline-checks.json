@@ -1,0 +1,27 @@
+[
+  {
+    "label": "baseline-structure",
+    "command": [
+      "python3",
+      "scripts/verify-project.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "baseline-materializer",
+    "command": [
+      "python3",
+      "scripts/materialize-writing-skills.py",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  {
+    "label": "baseline-native",
+    "command": [
+      "python3",
+      "scripts/verify-harness-adoption.py"
+    ],
+    "exit_code": 0
+  }
+]

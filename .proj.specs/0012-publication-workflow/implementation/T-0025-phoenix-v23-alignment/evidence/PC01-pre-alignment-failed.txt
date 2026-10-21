@@ -1,0 +1,20 @@
+test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags. ... ERROR
+
+======================================================================
+ERROR: test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-phoenix-v23-alignment-20261022/work/tests/article_publication/test_head_reporting.py", line 356, in test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission
+    job=jobs.materialize_job(config_file,digest(config_file),repository='owner/example',role='validator')
+  File "/private/tmp/0x1dea-phoenix-v23-alignment-20261022/work/scripts/publication_jobs.py", line 225, in materialize_job
+    result = sync.compute(registry,Path(temporary)/'result.git')
+  File "/private/tmp/0x1dea-phoenix-v23-alignment-20261022/work/scripts/staging-sync.py", line 261, in compute
+    raise Invalid('Git merge conflict', status='conflict', paths=sorted(set(paths)))
+trusted_staging_sync.py.Invalid: Git merge conflict
+
+----------------------------------------------------------------------
+Ran 1 test in 11.837s
+
+FAILED (errors=1)

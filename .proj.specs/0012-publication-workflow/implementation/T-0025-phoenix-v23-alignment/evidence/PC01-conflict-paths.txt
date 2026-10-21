@@ -1,0 +1,1 @@
+Invalid Git merge conflict ['maintenance/publication-workflow/engineering-v1.json']
