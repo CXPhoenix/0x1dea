@@ -961,7 +961,7 @@
     },
     "docs/article-publication-v2.md": {
       "mode": "100644",
-      "sha256": "97fc98eafccd9696a993b183a635dc2a594b7e53e13f9b4176035ca1ac610390"
+      "sha256": "17c10f185c9e5b24420d61a65ed71830fa9c54521e4f79a44a1ea4f98684fc67"
     },
     "docs/article-publication-v2.schema.json": {
       "mode": "100644",
@@ -1000,7 +1000,7 @@
       "sha256": "a26912d507382a265bde490314a53344a021f574f8bbe7797a5d4eb203863e28"
     },
     "scripts/publication_current.py": {
-      "successor_sha256": "921648d7896d8224235b3c7c10ee8b4c6205ac928fe7c7c5615cabb86b03197e",
+      "successor_sha256": "7e425b79d6e23c985ee5288123d0576748f65a3a2d8cf03d7c8805f04b2e9251",
       "mode": "100644",
       "sha256": "ae535a8040f01620a77d3fab4d3f433cb578f883b1e24c162769ff05f0cb27cd"
     },
@@ -1342,7 +1342,7 @@
     },
     "docs/staging-sync.md": {
       "mode": "100644",
-      "sha256": "b1031d216abb5614e9fa75ac2b3e384f8498b2b000a45c630c903528c24a35a8"
+      "sha256": "0c558e900f68f5eb436a776918c5088e8cb7b6463331cfca55661aed687f8447"
     },
     "scripts/staging-sync.py": {
       "mode": "100644",
@@ -4362,7 +4362,7 @@
     },
     "tests/article_publication/test_head_reporting.py": {
       "mode": "100644",
-      "sha256": "290711cbe6c77d46b01ce76aa10f7bd7be0f378a35a7ee1bc843b7685c9191eb"
+      "sha256": "b49086de49c96defd224f17b3117c0e48dccdc213eacc3aa98f6fc1fa6258706"
     },
     ".proj.specs/0012-publication-workflow/implementation/T-0021/README.md": {
       "mode": "100644",
@@ -5302,11 +5302,11 @@
     },
     "maintenance/harness-adoption/runtime-source-policy.json": {
       "mode": "100644",
-      "sha256": "efc2c83fda450f3001d0d4315d84a654298a3ea568f61b00bcd005b5a96cfb68"
+      "sha256": "1438ca382e0b6e68d412cc97b563936c22cebfa708c621d60749a6e7554782cc"
     },
     "maintenance/harness-adoption/generated-writing-manifest.json": {
       "mode": "100644",
-      "sha256": "08e26dabe216582022923e949c69eeec7bfa5932983c9ae6045ad161c520a78f"
+      "sha256": "07d2bd25cb1263542c341a42b4b4f1c30705f26502b24f161dc38aba624052d2"
     },
     "maintenance/writing-skills/SOURCES.md": {
       "mode": "100644",
@@ -5510,7 +5510,7 @@
     },
     ".proj.specs/0014-article-discovery/README.md": {
       "mode": "100644",
-      "sha256": "7063f705c42b62b59af2cfd2265cebf9e1f6559571742c2b9b28c814a1fa4e90"
+      "sha256": "4d91d722467541ec83668f4a59bfca0ecc8780318decf8951fe411a3841c97e3"
     },
     ".proj.specs/0014-article-discovery/planning/approval.md": {
       "mode": "100644",
@@ -5582,7 +5582,7 @@
     },
     ".proj.specs/0014-article-discovery/implementation/T-0026/README.md": {
       "mode": "100644",
-      "sha256": "512943b022c940d395f43646a0467b21b3157988cb0e92c8d2062fff72f3cd84"
+      "sha256": "e28999ed32ff543936bfa0f5bd50ecec7d92c18ddaef10e83890bb6e1895d74b"
     },
     ".proj.specs/0014-article-discovery/review/round-1/contracts.md": {
       "mode": "100644",
@@ -6218,7 +6218,7 @@
     },
     ".proj.tickets/0014-article-discovery/T-0028-optional-context-glossary.md": {
       "mode": "100644",
-      "sha256": "4a97b816fdd183bb4f5b9a2554b8e8d477dd46dcf696c2dced82c360e11541bf"
+      "sha256": "1680c06b1c30dcf2a853fc7c678c57ef22934b9347eec39c4d6739ac610ab5f9"
     },
     ".proj.tickets/0014-article-discovery/T-0026-local-notes-current-guard.md": {
       "mode": "100644",
@@ -6226,11 +6226,11 @@
     },
     ".proj.tickets/0014-article-discovery/T-0029-public-preparation-routing.md": {
       "mode": "100644",
-      "sha256": "cdf08626ce4962bd4696e98dd5ba4e755c24ae370b51feb55a73918743dd52f6"
+      "sha256": "29abc235c53547dc5ae25b00ce7ea8e67d3e5101c280915ef39076bace525285"
     },
     ".proj.tickets/0014-article-discovery/T-0027-free-conversation-entry.md": {
       "mode": "100644",
-      "sha256": "08250892c5c45b8126424dd464595717aa0c7b7b3e46e4a55d247cf1332bbcf8"
+      "sha256": "5b4cc1b879bb05f4098b8a625a01ee60a2c68caa5b44f3a032d1469a0ab30c78"
     },
     ".gitignore": {
       "mode": "100644",
@@ -6242,19 +6242,11 @@
     },
     ".proj.specs/0014-article-discovery/implementation/T-0026/coverage-report.md": {
       "mode": "100644",
-      "sha256": "92e20d796cb0307906f88eddf9ab7aac90698f888613a70959d35dac5f604b09"
+      "sha256": "3b08a6ac152395008110bc75f549ac442851a8466595eb57c53f89c1f21f74f0"
     },
     ".proj.specs/0014-article-discovery/implementation/T-0026/execution-results.json": {
       "mode": "100644",
       "sha256": "608d578885c2c913f4b337ae6aa39fe3363a91e20bd92a5f422dd4ce067dcfee"
-    },
-    ".proj.specs/0014-article-discovery/implementation/T-0026/first-full-current-python.log": {
-      "mode": "100644",
-      "sha256": "e82b2c9bdd007d2229c9c2262b1b59bc6e14d60c71a072805a7c3903394c5680"
-    },
-    ".proj.specs/0014-article-discovery/implementation/T-0026/full-current-python.log": {
-      "mode": "100644",
-      "sha256": "a84babada95033870c818c7913d9f4d3f62599690a42210a7c4b435f33819805"
     },
     ".proj.specs/0014-article-discovery/implementation/T-0026/functional.patch": {
       "mode": "100644",
@@ -6294,7 +6286,7 @@
     },
     ".agents/skills/article-discovery/SKILL.md": {
       "mode": "100644",
-      "sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035"
+      "sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5"
     },
     ".agents/skills/article-discovery/agents/openai.yaml": {
       "mode": "100644",
@@ -6302,7 +6294,7 @@
     },
     ".claude/skills/article-discovery/SKILL.md": {
       "mode": "100644",
-      "sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035"
+      "sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5"
     },
     ".proj.specs/0014-article-discovery/planning/batch-pr-approval.md": {
       "mode": "100644",
@@ -6310,7 +6302,7 @@
     },
     "AGENTS.md": {
       "mode": "100644",
-      "sha256": "5492e48162cb47aec3bf2fcec1f159435cede3f2e50ab7e8fce962f18922dcd4"
+      "sha256": "c68401f65bb1ba9d264abaeff3921bf0df71cbba60e0fa093ed5cac360733aea"
     },
     "docs/agents/domain.md": {
       "mode": "100644",
@@ -6338,7 +6330,7 @@
     },
     "skills/article-discovery/SKILL.md": {
       "mode": "100644",
-      "sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035"
+      "sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5"
     },
     "tests/article_publication/test_article_discovery_package.py": {
       "mode": "100644",
@@ -6354,7 +6346,7 @@
     },
     ".proj.specs/0014-article-discovery/implementation/T-0027/coverage-report.md": {
       "mode": "100644",
-      "sha256": "296e346cdaa9cca67bc5651fac8482da813cb2decce2e86b817dfc313d8ce2b1"
+      "sha256": "af2dccc7cbf6341ea8559e0603be6b964a2ddfb6325a1b769e6933914de0001a"
     },
     ".proj.specs/0014-article-discovery/implementation/T-0027/native-results.json": {
       "mode": "100644",
@@ -6370,7 +6362,7 @@
     },
     ".agents/skills/maintaining-writing-skills/references/writing-process.md": {
       "mode": "100644",
-      "sha256": "edc7c29a57bcc9b3609ef719d848b1b01916539857dfb1b5cc5ad7c7f921d042"
+      "sha256": "3b191bef447d141cd2fd923f8ff37569b93fb8f82d5d155498d4e7913bfeea02"
     },
     ".claude/skills/article-discovery/references/persistence.md": {
       "mode": "100644",
@@ -6378,7 +6370,7 @@
     },
     ".claude/skills/maintaining-writing-skills/references/writing-process.md": {
       "mode": "100644",
-      "sha256": "edc7c29a57bcc9b3609ef719d848b1b01916539857dfb1b5cc5ad7c7f921d042"
+      "sha256": "3b191bef447d141cd2fd923f8ff37569b93fb8f82d5d155498d4e7913bfeea02"
     },
     "skills/article-discovery/references/persistence.md": {
       "mode": "100644",
@@ -6386,11 +6378,11 @@
     },
     "skills/maintaining-writing-skills/references/writing-process.md": {
       "mode": "100644",
-      "sha256": "4466f00c71fdd41db5eb9892fc1667a50a98d82d89fd45b9e3d117ffc63d004c"
+      "sha256": "be8d12b3bedcc5852068a3a76182b3a2f9dfc9762d70417cf929b6b935c334a4"
     },
     ".proj.specs/0014-article-discovery/implementation/T-0028/coverage-report.md": {
       "mode": "100644",
-      "sha256": "e9123e607e2a276ac1e8f917605e7101f65cacc1fd6674c6de76cf7f624dce78"
+      "sha256": "382fa7d45a9b34da6b35f33b5222b671c1e86a1d73a3878e0b2d7fd9a326172c"
     },
     ".proj.specs/0014-article-discovery/implementation/T-0028/native-results.json": {
       "mode": "100644",
@@ -6399,6 +6391,98 @@
     ".proj.specs/0014-article-discovery/review/code-review-T-0028-checkpoint.md": {
       "mode": "100644",
       "sha256": "1436c392e1518280c5d22d9fe9ffb36be880c4fe93033322f5415c1613e09756"
+    },
+    ".agents/skills/article-discovery/references/public-preparation.md": {
+      "mode": "100644",
+      "sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c"
+    },
+    ".claude/skills/article-discovery/references/public-preparation.md": {
+      "mode": "100644",
+      "sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c"
+    },
+    "skills/article-discovery/references/public-preparation.md": {
+      "mode": "100644",
+      "sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c"
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/first-full-current-python.txt": {
+      "mode": "100644",
+      "sha256": "e82b2c9bdd007d2229c9c2262b1b59bc6e14d60c71a072805a7c3903394c5680"
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/full-current-python.txt": {
+      "mode": "100644",
+      "sha256": "a84babada95033870c818c7913d9f4d3f62599690a42210a7c4b435f33819805"
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0029/native-results.json": {
+      "mode": "100644",
+      "sha256": "a32a02c51a22a7f58796b20cbfe96f3a4d3a3aaf06a17eca678019c17d48eef1"
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0029/coverage-report.md": {
+      "mode": "100644",
+      "sha256": "9a3bd0c8509b8510a54e61de43db4c2c5dd75b5755fedaf8fc0a80c9950035dd"
+    },
+    ".proj.specs/0014-article-discovery/review/code-review-T-0029-checkpoint.md": {
+      "mode": "100644",
+      "sha256": "23a902729b4136f203cef5abfde185ff9289cb81f61026c1396ef4ae3f3ba8ea"
+    },
+    ".proj.specs/0014-article-discovery/review/code-review-batch.md": {
+      "mode": "100644",
+      "sha256": "0ee1ce7617994f4517dda7c3dca8080f8a4187ce3ba87fbe9304ff053960c8aa"
+    },
+    ".proj.specs/0014-article-discovery/review/security-batch.md": {
+      "mode": "100644",
+      "sha256": "30873d24a2dba682a47b1451b12266275d5527541e81868e28b11e27713d02a8"
+    },
+    ".proj.specs/0014-article-discovery/review/batch-source-snapshot.json": {
+      "mode": "100644",
+      "sha256": "6306b170ffd48603c465f96b354fcab8a192ff7897f86b4683be5171ba97a03d"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/unit.txt": {
+      "mode": "100644",
+      "sha256": "72c15f9556c06471bbff243df71c2ad0af93bae4496d1ab0406f22d91b43c60e"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/full-python.txt": {
+      "mode": "100644",
+      "sha256": "ecdf9f3bf60c8d698d549955c609a84ba274d9053d075406c2bbf66295ff3388"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/command-results.json": {
+      "mode": "100644",
+      "sha256": "ccb94af974c09ee3249bc529350ac922c34e285ab36018483d11c1be56072a02"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/focused-regression.txt": {
+      "mode": "100644",
+      "sha256": "8a8a597e61b143d2f6f3e43df06c3fe70c39a80d2e17659a3fce25639d0425b1"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/preservation.json": {
+      "mode": "100644",
+      "sha256": "4e963665cdd1b596e93617d0ce246216576fc59b1dac6f22ea909ed5500b71fd"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/notes-coexistence.json": {
+      "mode": "100644",
+      "sha256": "22885701bb284c1ebdf02e7f34138691bf29f35856856f091347efa4491499a4"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/README.md": {
+      "mode": "100644",
+      "sha256": "0b3e9c1b5d7ff1537d4bb268594f8d04c9524ec937356662dcc5976708096e16"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/initial-full-python.txt": {
+      "mode": "100644",
+      "sha256": "f18cdf7fbc823a78a8b0fa7d2028bc1806ca36fbe363ed36ea60ae0c87b3b3fc"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/lint.txt": {
+      "mode": "100644",
+      "sha256": "8a445bf71c9258c986f1449f1a62ec8465d4ab825af82ac792bd22d881a6d178"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/regression-source-snapshot.json": {
+      "mode": "100644",
+      "sha256": "e238f99d48f18013bb4ae2401ef6e99ead1a4776663ab8effca65ad2f03f1933"
+    },
+    ".proj.specs/0014-article-discovery/implementation/batch/intermediate-source-pin-failure.txt": {
+      "mode": "100644",
+      "sha256": "94d4fef826a6ba54215ae08654f11017f879855e793e0d65073948047b750509"
+    },
+    ".proj.specs/0014-article-discovery/review/batch-metadata-supplement.md": {
+      "mode": "100644",
+      "sha256": "e23dc888c36596f088d0211e4ccb04f1696fe0b983089c0eddee412932ac8904"
     }
   }
 }

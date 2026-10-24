@@ -2,7 +2,7 @@
 id: T-0029
 title: Perform requested public checks and retain article delivery ownership
 epic: 0014-article-discovery
-status: todo
+status: review
 blocked_by: [T-0027]
 proposal_key: D
 test_plan_approved: true
@@ -57,3 +57,9 @@ Use branch `tickets/T-0029/public-preparation-routing`. Follow the approved prop
 ## Comments
 
 2026-10-24: allocated from approved proposal D; initial state todo. Only A is authorized to begin implementation in the current request. B–D retain their approved plans and dependency edges; do not infer implementation or landing completion from allocation.
+
+2026-10-24: owner authorized stacked B–D implementation and one combined A–D PR. D07 expressive/public baseline and multi-trigger preparation already returned useful results before this slice; preserve those observed strengths rather than inventing a failing behavior. Final conditional integration and native cases remain to verify.
+
+## Batch verification and review
+
+The owner authorized B–D together and one combined A–D PR. The approved table and permanent dependencies are unchanged. Local implementation, native evidence, the complete 287-test Python suite and 54 Vitest tests are complete; Claude native behavior remains unverified because OAuth expired. See [batch coverage](../../.proj.specs/0014-article-discovery/implementation/batch/README.md), [Standards/Spec](../../.proj.specs/0014-article-discovery/review/code-review-batch.md) and [security](../../.proj.specs/0014-article-discovery/review/security-batch.md). This ticket is review, not done; no landing, remote publication or deployment is inferred.

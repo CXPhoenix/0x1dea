@@ -1,0 +1,1440 @@
+{
+  "root": "/private/tmp/0x1dea-T0026",
+  "branch": "tickets/T-0029/public-preparation-routing",
+  "base": "8b2cffab8ed1a8a2c50ece18b6fe5b578f186668",
+  "head": "fb9413f1252edafae28a9f4f08b8c1da5024dc20",
+  "merge_base": "8b2cffab8ed1a8a2c50ece18b6fe5b578f186668",
+  "scope": "Formal stage6 combined A-D committed plus pending source and native coverage. Complete fixed regression is running against same27functional hashes; its result is pending, never asserted pass. Final result/status/report-only closure will be captured as explicit supplement; no production source change permitted without affected review refresh.",
+  "files": {
+    ".agents/skills/article-discovery/SKILL.md": {
+      "sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5",
+      "bytes": 2843,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".agents/skills/article-discovery/agents/openai.yaml": {
+      "sha256": "641ef492c9b319271ee9289d3aee8409a036e24141c1aefaf3eb695f783292ad",
+      "bytes": 89,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".agents/skills/article-discovery/references/persistence.md": {
+      "sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1",
+      "bytes": 4944,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".agents/skills/article-discovery/references/public-preparation.md": {
+      "sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c",
+      "bytes": 3625,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".agents/skills/maintaining-writing-skills/references/writing-process.md": {
+      "sha256": "3b191bef447d141cd2fd923f8ff37569b93fb8f82d5d155498d4e7913bfeea02",
+      "bytes": 4525,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".claude/skills/article-discovery/SKILL.md": {
+      "sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5",
+      "bytes": 2843,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".claude/skills/article-discovery/references/persistence.md": {
+      "sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1",
+      "bytes": 4944,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".claude/skills/article-discovery/references/public-preparation.md": {
+      "sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c",
+      "bytes": 3625,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".claude/skills/maintaining-writing-skills/references/writing-process.md": {
+      "sha256": "3b191bef447d141cd2fd923f8ff37569b93fb8f82d5d155498d4e7913bfeea02",
+      "bytes": 4525,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".gitignore": {
+      "sha256": "9f7ac2c358f5b1af070bf44703e40dfe4786e8dfd02772f66c944e09ea58bb98",
+      "bytes": 848,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/README.md": {
+      "sha256": "aa1760ee2dd5c3ad6c74023f3cbab4a6f3d2113950483f5bde74412ed8c2a726",
+      "bytes": 3497,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/README.md": {
+      "sha256": "e28999ed32ff543936bfa0f5bd50ecec7d92c18ddaef10e83890bb6e1895d74b",
+      "bytes": 5688,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/coexistence-native.json": {
+      "sha256": "e8ce7fb8e28a4dc59a5281a74fb740b6d30a1b1210ea81ba0f8c0f282e9d6a22",
+      "bytes": 219123,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/coverage-report.md": {
+      "sha256": "3b08a6ac152395008110bc75f549ac442851a8466595eb57c53f89c1f21f74f0",
+      "bytes": 6255,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/execution-results.json": {
+      "sha256": "608d578885c2c913f4b337ae6aa39fe3363a91e20bd92a5f422dd4ce067dcfee",
+      "bytes": 5425,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/first-full-current-python.txt": {
+      "sha256": "e82b2c9bdd007d2229c9c2262b1b59bc6e14d60c71a072805a7c3903394c5680",
+      "bytes": 54641,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/full-current-python.txt": {
+      "sha256": "a84babada95033870c818c7913d9f4d3f62599690a42210a7c4b435f33819805",
+      "bytes": 52613,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/functional.patch": {
+      "sha256": "ecb9bab34dc31c997a7318ef41d9a95738241a588d7a5400706408431f144424",
+      "bytes": 27647,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/head-policy-regression.json": {
+      "sha256": "2f0279acdb3dcaed63adaf3cac8fab5c232a0c566c0a0201b1f95544c1c29348",
+      "bytes": 4256,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/policy-admissions.json": {
+      "sha256": "38ffb828449cfdd91ffd50604668a7818825d41cb1363e29a110de536a67d348",
+      "bytes": 22430,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/preservation.json": {
+      "sha256": "21bb9f7f91be170c917fa841ca32d0779b76d86d659e30dac71905893da703f9",
+      "bytes": 999,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/source-scope.json": {
+      "sha256": "1a4ddb7e005ee2ff11965c5cbd42fee37a9e013badf8bc9b54d4c60eeaf20bc1",
+      "bytes": 2975,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/tdd-red-green.json": {
+      "sha256": "74ff6298dfd47a0bc1dd28bcbd3a19289322b39d615cae1710607f2ed516c334",
+      "bytes": 7375,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0026/ticket-allocation.json": {
+      "sha256": "0acd57a32871aa4c1142aa9e7cba5f75b876187a22ca66e43a40ea799ada9342",
+      "bytes": 2267,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0027/coverage-report.md": {
+      "sha256": "296e346cdaa9cca67bc5651fac8482da813cb2decce2e86b817dfc313d8ce2b1",
+      "bytes": 3629,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0027/native-results.json": {
+      "sha256": "c11b7c4d48cdf45b9fefa2b52f81828c7f0c10dc040d021bec49a0d623d4ff5c",
+      "bytes": 21295,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0028/coverage-report.md": {
+      "sha256": "e9123e607e2a276ac1e8f917605e7101f65cacc1fd6674c6de76cf7f624dce78",
+      "bytes": 4135,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0028/native-results.json": {
+      "sha256": "d1af1fb12db5a68f4e684c38577b9cabe11a869dc0222905802452f2b77c1220",
+      "bytes": 162348,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0029/coverage-report.md": {
+      "sha256": "a74b44240227cdf4d77150745ba27b8a2b30de71268ced8faebce9710beec2ad",
+      "bytes": 3253,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0029/native-results.json": {
+      "sha256": "a32a02c51a22a7f58796b20cbfe96f3a4d3a3aaf06a17eca678019c17d48eef1",
+      "bytes": 69431,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/planning/approval.md": {
+      "sha256": "17d5d87d7f6ec5cc698614c81432ef36f035dbe6bf5ed2350c16b4efb218297d",
+      "bytes": 2087,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/planning/batch-pr-approval.md": {
+      "sha256": "14ad05de1b994fce602cc3946398d7ea3d8e8390bc1063a2ad67247606cacb46",
+      "bytes": 895,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/planning/ticket-proposal/A-local-notes-current-guard.md": {
+      "sha256": "49a27355a11526a6cb7a288875aaf8b37e052dbedf5cab2b70cd3ba8f29aea02",
+      "bytes": 6293,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/planning/ticket-proposal/B-free-conversation-entry.md": {
+      "sha256": "636a88074f26e4914c4f4d9495c46a09f147cde3688146c9254e24f1ad1d3985",
+      "bytes": 9215,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/planning/ticket-proposal/C-optional-context-glossary.md": {
+      "sha256": "44476db73632e8a428d03da6092139da35289c3c57a35ec3a4abad19369041e4",
+      "bytes": 9680,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/planning/ticket-proposal/D-public-preparation-routing.md": {
+      "sha256": "d8f74ae4850b463c6e448fa05a4e97c2b6bd20e39ef1e1877fdda6da03e5095b",
+      "bytes": 7792,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/planning/ticket-proposal/README.md": {
+      "sha256": "bcbf1a4aa7ea99ef56dafab870c79cf9e9848e9b14fa53b7b100ef1ec9c6e451",
+      "bytes": 10902,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/reports/article-discovery-review-round-1.html": {
+      "sha256": "c229b544c83b851d081d929ae33b5515f0fee3b81b6923fb643b985dd2f7e54f",
+      "bytes": 91340,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/reports/article-discovery-review-round-2.html": {
+      "sha256": "11597d648ba0435ea9287dc22a7fbe0665ed0e2ab793bd43efc0dee8bbb71f0c",
+      "bytes": 61774,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/STATUS.md": {
+      "sha256": "5b4d134075d5a37ce667093543721d01811cc2b01c4e9251dcd0c921e48fbcf4",
+      "bytes": 648,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/capture-verification.json": {
+      "sha256": "68ad0e93ea5734ef3a8d8bccec3af7fb558d9f57602356c4d4d8790e43f8ada3",
+      "bytes": 650,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/code-review-T-0026.md": {
+      "sha256": "d305912a711884d2d9e611a9b894f8639fb3b314c286e1556f2889414de64482",
+      "bytes": 3476,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/code-review-T-0027-checkpoint.md": {
+      "sha256": "209b7a121fd0d0be1b5d79cd481e2cbe9244991df64c806f3649b4efea4f63f8",
+      "bytes": 1689,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/code-review-T-0028-checkpoint.md": {
+      "sha256": "1436c392e1518280c5d22d9fe9ffb36be880c4fe93033322f5415c1613e09756",
+      "bytes": 1685,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/code-review-T-0029-checkpoint.md": {
+      "sha256": "23a902729b4136f203cef5abfde185ff9289cb81f61026c1396ef4ae3f3ba8ea",
+      "bytes": 1502,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/owner-requirements.md": {
+      "sha256": "30fa71f7bf921bbd7fd11781d8dce6825b78f4b41046158510f5b983b498f141",
+      "bytes": 883,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/prompt.md": {
+      "sha256": "3f5d674830cff8f9154503ee589378ebeb7a3ba1175953e350e70b8bebe7526d",
+      "bytes": 5442,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/prompt.sha256": {
+      "sha256": "beebcac15033f34e0d90dc2218395da309755ef7771f19689bd934efb3624938",
+      "bytes": 76,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/report-preview-status.md": {
+      "sha256": "0bef28508858219b6979f7f10addfb2438a2d1003ba4fadf0d22e32869535b7b",
+      "bytes": 527,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/report-validation.json": {
+      "sha256": "c52ed37d0d93da89d819db6ecb70627744a93b069553b40729e823d85456e0bf",
+      "bytes": 536,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1.md": {
+      "sha256": "051d37dd66ac4a4da67c7a184fcd8fbbfbe3e42987423efe569b4df39129c339",
+      "bytes": 5199,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1/completeness.md": {
+      "sha256": "20f7cfb6f66c551490865486b6a40be87c405024de69e317e57f069d29c37ac7",
+      "bytes": 5615,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1/contracts.md": {
+      "sha256": "8ea7e6afa3c3e94a66ca2f7a05385c3f6c3060836473775b5fb8cb790aabb5e2",
+      "bytes": 4525,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1/findings.json": {
+      "sha256": "5019bc05afedcc94df1afb1df6bd1055cc489918fb6317ca887f28434b2b6802",
+      "bytes": 9964,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1/red-team.md": {
+      "sha256": "ec2838c4c348819319362c5b2f4998f909d06871012147ce163d79bcca16bfb6",
+      "bytes": 4421,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1/supplement-completeness.md": {
+      "sha256": "810abce6684e4879e6a4decaac114f06f5ac26fabb5b3191dece45e9d10aaae1",
+      "bytes": 2512,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1/supplement-contracts.md": {
+      "sha256": "7fdbaf8b0ef099704daf7e97b121ad986d5f4649d88a8c77d8a441d1c4d182ca",
+      "bytes": 1583,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1/supplement-red-team.md": {
+      "sha256": "c225344eaa6ad2f10f4e44827620f7aeca701be0a91b46f380fc91545d39f6a3",
+      "bytes": 2621,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1/supplement-verifiability.md": {
+      "sha256": "ca1e0f94998e721c7613208647ce4b56b3d636a3fec73df9976572d8d87a3918",
+      "bytes": 1220,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-1/verifiability.md": {
+      "sha256": "1c8c8e2d67f8e7b93ed48a650332241fd19bf1bbb0a19c41a749d5b001867e5e",
+      "bytes": 5341,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-2.md": {
+      "sha256": "4b58e0fea3c7aa966490ed41d8352403e17db529dda14eb2bb92ea6e65bb2ceb",
+      "bytes": 4202,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-2/completeness.md": {
+      "sha256": "31037b6bb6ae18aba2cea04937452c3b8a3322583b374e1a0ba6571572e084e9",
+      "bytes": 2477,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-2/contracts.md": {
+      "sha256": "8910b6f9064b0c8394b1eb440742fb38b0298533e53df28041da085d792e4f7e",
+      "bytes": 6153,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-2/red-team.md": {
+      "sha256": "388ef2bb68a091c155bd600a590dbc0a4aef45b011c52bfcdaed95e2fcc24ffe",
+      "bytes": 3944,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-2/report-validation.json": {
+      "sha256": "9897f28e9978d5a542301fee4b56cd1ec70973cbca404bf47840403754b69125",
+      "bytes": 250,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-2/results.json": {
+      "sha256": "a92c02126810ad2bc0db0255ebc2fa72474e83225501108fa573adb18f5c39a5",
+      "bytes": 2837,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-2/revision-map.md": {
+      "sha256": "395b1a03065a61e3358401e50ab5c55702963d1b673674ea97285ee786be986f",
+      "bytes": 3598,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-2/validation.json": {
+      "sha256": "d00c530ff0a368a39943d3002dd480fe97ea00c77f03ec95577694e4279bf8c7",
+      "bytes": 709,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/round-2/verifiability.md": {
+      "sha256": "c27ad7869edae2f8aa9910b97ad28227a4425c8004dd779fe59963b036f4796f",
+      "bytes": 4736,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/scope-untracked.patch": {
+      "sha256": "fc7e837d2f4357d01e99383be796061a8870cea9948505e2591eb19afc2e004a",
+      "bytes": 56474,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/security-T-0026.md": {
+      "sha256": "b5a065e65f8609f7f625f3357c41fb2250236ea879a67cf0704974bb96f86bc9",
+      "bytes": 2543,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/source-index.json": {
+      "sha256": "d8c5dd17df56be7bd8c3482837a78a4170db647247e710f9db7993b8c18df49d",
+      "bytes": 16337,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/status-before-capture.txt": {
+      "sha256": "7be7d1eab3868dfdd93855c7a4e58a28da7a312980489cb1df8cd6c36dd0ac47",
+      "bytes": 4944,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/tracked-staged.patch": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/tracked-unstaged.patch": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/capture.json": {
+      "sha256": "dcf974b2242309ff66877e9ab6736a92d9f5c899ec929d301adb7daf31889684",
+      "bytes": 12107,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/.agents/skills/domain-modeling/SKILL.md.txt": {
+      "sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+      "bytes": 3331,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/.agents/skills/grill-with-docs/SKILL.md.txt": {
+      "sha256": "fc6401cbf34f1f3b6cb5e97253e25671d822733fc3f985117fe0d162639abf61",
+      "bytes": 216,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/.agents/skills/grilling/SKILL.md.txt": {
+      "sha256": "ddad6f07e4883861d3c0ca3e017a755dc426801ca269c1beae38e1f2171ac473",
+      "bytes": 2109,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/.gitignore.txt": {
+      "sha256": "0dd687b78a174740ac9f2ae2218d81c82401e4f705753148c0157987fbf53d50",
+      "bytes": 854,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/.proj.specs/0014-article-discovery/README.md.txt": {
+      "sha256": "b1380096d5e5c7e0ccade1263ccb91f007efdd0dcd8000b1c38aa2ba0fef138c",
+      "bytes": 2227,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/.proj.specs/0014-article-discovery/spec.en.md.txt": {
+      "sha256": "fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9",
+      "bytes": 25323,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/.proj.specs/0014-article-discovery/traceability.md.txt": {
+      "sha256": "10b76ae9e98195bea614ed497238b1c5f54d4f89b47204971304d0cf10f98999",
+      "bytes": 9569,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/.proj.specs/_discovery/article-writing-entry/research.md.txt": {
+      "sha256": "1e6a2f6928d08c3001baf69678b0a3337279c003eb24a03776570cf1a9a5ddc2",
+      "bytes": 18570,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/AGENTS.md.txt": {
+      "sha256": "77ad12cb3275f1ac5936bc9ae0bad4dfefc048d819e0274d38db4bf1d98bbf53",
+      "bytes": 11038,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/CONTEXT.md.txt": {
+      "sha256": "6a6b92efa597b39d24669606a753d5f4ba7751d7f01058c5ea152ff0e0c8fd28",
+      "bytes": 1455,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/adr/0001-walking-skeleton-then-epic-loop.md.txt": {
+      "sha256": "ac3e95352fb096ee256030765a1701536cb6e1e17ff624e64d8db4213fc4cc5e",
+      "bytes": 2060,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/adr/0002-ticket-status-in-frontmatter.md.txt": {
+      "sha256": "b94e17c319f0adb3e8ffc34ac513b567ccb1cae91852c65ee0b1ed4e7d5d47a7",
+      "bytes": 1421,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/adr/0003-adversarial-review-fixed-axes-two-rounds.md.txt": {
+      "sha256": "6b7e5059d30fccb0ffff7176e25e440060a32f2301d821f34f97f1d878796128",
+      "bytes": 1437,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/adr/0004-existing-product-harness-adoption.md.txt": {
+      "sha256": "97e7f131c798829140590faf56906b7a801512c2e120703a3c0b0900c0c899eb",
+      "bytes": 834,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/adr/0005-physical-product-writing-packages.md.txt": {
+      "sha256": "bc9f9e0bdd6feed9a5f5eb46cc7b3cb40e33afb4b2c035373dbe3d752d396b84",
+      "bytes": 1391,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/adr/0006-local-tracker-and-authorized-landing.md.txt": {
+      "sha256": "0e55737594a1c73005f80749c963369c805c38b274ffa21b1483006c20d8f96e",
+      "bytes": 1020,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/adr/0007-validated-taiwan-writing-language-exception.md.txt": {
+      "sha256": "711f3326f5efe0a7c3b90d1508c22d1642d6d03a62b6f3051a62d043b243ca90",
+      "bytes": 769,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/adr/0008-main-first-engineering-and-shared-staging.md.txt": {
+      "sha256": "a0d9ba031d6e9f26db766c969aad5daa87b6b14b5dc9d1b329653c0dc8641237",
+      "bytes": 2218,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/agents/codex.md.txt": {
+      "sha256": "20ab3a45cf34c28f7f4973c4c978aaba188674add1ecb2a585b1667605db1929",
+      "bytes": 1655,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/agents/domain.md.txt": {
+      "sha256": "a8787a7e5b90612009b44db690c66d32169505048f767a480bed389ce3d8ac84",
+      "bytes": 2128,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/agents/issue-tracker.md.txt": {
+      "sha256": "fafad4d4469f996c0a1196dccfeaab28b60ac7c8b17fc5709cb20acdee8856b6",
+      "bytes": 6562,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/agents/language.md.txt": {
+      "sha256": "dad4936776742214eca797c9bba88036c5798cbcc4e7397d6803966fe3c5b382",
+      "bytes": 3980,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/agents/review.md.txt": {
+      "sha256": "59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e",
+      "bytes": 4568,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/agents/runtime.md.txt": {
+      "sha256": "4a862c86b8a84581a8ec26eb058c626bc4b36181a6cfa7baaf5482333b079fcf",
+      "bytes": 9354,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/agents/skill-sources.json.txt": {
+      "sha256": "7d788647d07b6e8cad0f99f29a12c1237b6b4a001c5309e7ee9c416f8bd43bcb",
+      "bytes": 14345,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/docs/agents/workflow.md.txt": {
+      "sha256": "f827f005b59cccf7416e5ebb8c64ecba689d99047cb3b90b05ed0541294f98a1",
+      "bytes": 9917,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/maintenance/harness-adoption/generated-writing-manifest.json.txt": {
+      "sha256": "606b123e3cdb43ad4449c45eb1c58e572a794c73b066696ae746b216451d01f0",
+      "bytes": 89175,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/maintenance/harness-adoption/runtime-source-policy.json.txt": {
+      "sha256": "a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb",
+      "bytes": 11375,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/maintenance/writing-skills/behavior-eval-20261004/design.json.txt": {
+      "sha256": "70d1e6ac5c3c5aa7fc15036dfca87c93110b47e3bf168516ebf71fda5905f2bf",
+      "bytes": 684,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/scripts/materialize-writing-skills.py.txt": {
+      "sha256": "8446420db45e314c65292327cac6f601f66001d8c91048702c73a1018bac6de4",
+      "bytes": 18322,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/scripts/verify-project.py.txt": {
+      "sha256": "302eb9bd75b45ef9cbe5ffec63086dce920a0adbf761db93910ae4e37f4764fb",
+      "bytes": 6894,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/skills/creating-vitepress-post/SKILL.md.txt": {
+      "sha256": "5942e8bf371c5ea5b9dac91580d4c91ef88be0749c7c9784d82ba86bf5dca365",
+      "bytes": 2935,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/skills/maintaining-writing-skills/SKILL.md.txt": {
+      "sha256": "04835b103d9d57b6fd9a70659d598c9b9d13debe26f0c87fdb3b1406305b52ec",
+      "bytes": 1538,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/skills/maintaining-writing-skills/references/article-maintenance.md.txt": {
+      "sha256": "3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4",
+      "bytes": 1058,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/skills/maintaining-writing-skills/references/skill-maintenance.md.txt": {
+      "sha256": "78dde171ee3bff1dba86deb8b62a1c7d811296c2e7ba64523cdd81dacc24b755",
+      "bytes": 1421,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/skills/maintaining-writing-skills/references/writing-process.md.txt": {
+      "sha256": "90cabbc770cf0220ccb18e2dc567e9aeadc75487f1f052a664e0d8ce8939dda4",
+      "bytes": 3939,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/skills/managing-article-publication/SKILL.md.txt": {
+      "sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2",
+      "bytes": 1893,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/skills/managing-article-publication/references/future-actions.md.txt": {
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5",
+      "bytes": 2112,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/skills/phoenix-writing/SKILL.md.txt": {
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea",
+      "bytes": 3345,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/source/tests/harness_adoption/test_materializer.py.txt": {
+      "sha256": "498f9c38217c4f38c0032036f8de7f398f4b4201803ef91f8dbefc5ac319ae6f",
+      "bytes": 16359,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/capture.json": {
+      "sha256": "5dd6c44b076109930893b838235539a36ac214209aae5a74933d4a4e4b94374a",
+      "bytes": 7952,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/.claude/skills/domain-modeling/SKILL.md.txt": {
+      "sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+      "bytes": 3331,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/.claude/skills/grill-with-docs/SKILL.md.txt": {
+      "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "bytes": 247,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/.claude/skills/grilling/SKILL.md.txt": {
+      "sha256": "d9ed7c64655d7f81014022a5782ff1f1da1c6100c92ab28ef9bd110a2776baa9",
+      "bytes": 2149,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/publication-workflow/engineering-v1.json.txt": {
+      "sha256": "478b638866a3fff4730879afe6d1a858e89ceb690bda8abbba1a2c2b0cf9928c",
+      "bytes": 324177,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E1/input.json.txt": {
+      "sha256": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918",
+      "bytes": 745,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E1/rubric.json.txt": {
+      "sha256": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3",
+      "bytes": 830,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E2/input.json.txt": {
+      "sha256": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6",
+      "bytes": 931,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E2/rubric.json.txt": {
+      "sha256": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c",
+      "bytes": 800,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E3/input.json.txt": {
+      "sha256": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e",
+      "bytes": 599,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E3/rubric.json.txt": {
+      "sha256": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607",
+      "bytes": 805,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E4/input.json.txt": {
+      "sha256": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425",
+      "bytes": 599,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E4/rubric.json.txt": {
+      "sha256": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791",
+      "bytes": 723,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E5/input.json.txt": {
+      "sha256": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca",
+      "bytes": 215,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E5/rubric.json.txt": {
+      "sha256": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc",
+      "bytes": 755,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E6/input.json.txt": {
+      "sha256": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01",
+      "bytes": 711,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E6/rubric.json.txt": {
+      "sha256": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947",
+      "bytes": 782,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E7/input.json.txt": {
+      "sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9",
+      "bytes": 429,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E7/rubric.json.txt": {
+      "sha256": "aecfdaa4b5d3786cd86d3482e0139ba22604f2a0b2088f92e4f9ddcc9e179b05",
+      "bytes": 805,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E8/input.json.txt": {
+      "sha256": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2",
+      "bytes": 730,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E8/rubric.json.txt": {
+      "sha256": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a",
+      "bytes": 813,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/scripts/publication_current.py.txt": {
+      "sha256": "759826ee582cf0fd8b8d72cf5a6911b09b89dd53c1abe5f17cf48167697bcd58",
+      "bytes": 25591,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/scripts/verify-harness-adoption.py.txt": {
+      "sha256": "cecd58b0cd8dbe7fde3030b20ae8bce949d54a9be3e839b91da9baa08a47a73a",
+      "bytes": 3618,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-1/supplement/source/skills/managing-article-publication/references/local.md.txt": {
+      "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be",
+      "bytes": 5703,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/capture.json": {
+      "sha256": "68d2fd248d43eb552bc83cc0d212bdea1d49a6be1ff50eb64d4e87c15568fa26",
+      "bytes": 22948,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/document-validation.json": {
+      "sha256": "2b06778017efab91008527a2c515d286cbb32c29066a4c1963cd978cd1d84c02",
+      "bytes": 405,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/round-1-to-round-2.patch": {
+      "sha256": "3b3b9938712a952f60836741c7374b7bbcc760189408b8beb481e70ecfe23808",
+      "bytes": 35896,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/scope-untracked.patch": {
+      "sha256": "94283e3b146d169504f7890e0abbe8bcf14023cc63669291ac8ef9355c96b776",
+      "bytes": 68817,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.agents/skills/domain-modeling/SKILL.md.txt": {
+      "sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+      "bytes": 3331,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.agents/skills/grill-with-docs/SKILL.md.txt": {
+      "sha256": "fc6401cbf34f1f3b6cb5e97253e25671d822733fc3f985117fe0d162639abf61",
+      "bytes": 216,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.agents/skills/grilling/SKILL.md.txt": {
+      "sha256": "ddad6f07e4883861d3c0ca3e017a755dc426801ca269c1beae38e1f2171ac473",
+      "bytes": 2109,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.claude/skills/domain-modeling/SKILL.md.txt": {
+      "sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+      "bytes": 3331,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.claude/skills/grill-with-docs/SKILL.md.txt": {
+      "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "bytes": 247,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.claude/skills/grilling/SKILL.md.txt": {
+      "sha256": "d9ed7c64655d7f81014022a5782ff1f1da1c6100c92ab28ef9bd110a2776baa9",
+      "bytes": 2149,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.gitignore.txt": {
+      "sha256": "0dd687b78a174740ac9f2ae2218d81c82401e4f705753148c0157987fbf53d50",
+      "bytes": 854,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.proj.specs/0014-article-discovery/README.md.txt": {
+      "sha256": "da31e59f41c6cdaba86680d8755e1690b05c2f53fde6189d882a5a1e91f80ec6",
+      "bytes": 2842,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.proj.specs/0014-article-discovery/spec.en.md.txt": {
+      "sha256": "1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4",
+      "bytes": 34213,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.proj.specs/0014-article-discovery/traceability.md.txt": {
+      "sha256": "8ab2510923ffeb5315cde7803e9a82de491e3abd679459fbe7e456f86c8438f6",
+      "bytes": 12372,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/.proj.specs/_discovery/article-writing-entry/research.md.txt": {
+      "sha256": "1e6a2f6928d08c3001baf69678b0a3337279c003eb24a03776570cf1a9a5ddc2",
+      "bytes": 18570,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/AGENTS.md.txt": {
+      "sha256": "77ad12cb3275f1ac5936bc9ae0bad4dfefc048d819e0274d38db4bf1d98bbf53",
+      "bytes": 11038,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/CONTEXT.md.txt": {
+      "sha256": "6a6b92efa597b39d24669606a753d5f4ba7751d7f01058c5ea152ff0e0c8fd28",
+      "bytes": 1455,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/adr/0001-walking-skeleton-then-epic-loop.md.txt": {
+      "sha256": "ac3e95352fb096ee256030765a1701536cb6e1e17ff624e64d8db4213fc4cc5e",
+      "bytes": 2060,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/adr/0002-ticket-status-in-frontmatter.md.txt": {
+      "sha256": "b94e17c319f0adb3e8ffc34ac513b567ccb1cae91852c65ee0b1ed4e7d5d47a7",
+      "bytes": 1421,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/adr/0003-adversarial-review-fixed-axes-two-rounds.md.txt": {
+      "sha256": "6b7e5059d30fccb0ffff7176e25e440060a32f2301d821f34f97f1d878796128",
+      "bytes": 1437,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/adr/0004-existing-product-harness-adoption.md.txt": {
+      "sha256": "97e7f131c798829140590faf56906b7a801512c2e120703a3c0b0900c0c899eb",
+      "bytes": 834,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/adr/0005-physical-product-writing-packages.md.txt": {
+      "sha256": "bc9f9e0bdd6feed9a5f5eb46cc7b3cb40e33afb4b2c035373dbe3d752d396b84",
+      "bytes": 1391,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/adr/0006-local-tracker-and-authorized-landing.md.txt": {
+      "sha256": "0e55737594a1c73005f80749c963369c805c38b274ffa21b1483006c20d8f96e",
+      "bytes": 1020,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/adr/0007-validated-taiwan-writing-language-exception.md.txt": {
+      "sha256": "711f3326f5efe0a7c3b90d1508c22d1642d6d03a62b6f3051a62d043b243ca90",
+      "bytes": 769,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/adr/0008-main-first-engineering-and-shared-staging.md.txt": {
+      "sha256": "a0d9ba031d6e9f26db766c969aad5daa87b6b14b5dc9d1b329653c0dc8641237",
+      "bytes": 2218,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/agents/codex.md.txt": {
+      "sha256": "20ab3a45cf34c28f7f4973c4c978aaba188674add1ecb2a585b1667605db1929",
+      "bytes": 1655,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/agents/domain.md.txt": {
+      "sha256": "a8787a7e5b90612009b44db690c66d32169505048f767a480bed389ce3d8ac84",
+      "bytes": 2128,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/agents/issue-tracker.md.txt": {
+      "sha256": "fafad4d4469f996c0a1196dccfeaab28b60ac7c8b17fc5709cb20acdee8856b6",
+      "bytes": 6562,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/agents/language.md.txt": {
+      "sha256": "dad4936776742214eca797c9bba88036c5798cbcc4e7397d6803966fe3c5b382",
+      "bytes": 3980,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/agents/review.md.txt": {
+      "sha256": "59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e",
+      "bytes": 4568,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/agents/runtime.md.txt": {
+      "sha256": "4a862c86b8a84581a8ec26eb058c626bc4b36181a6cfa7baaf5482333b079fcf",
+      "bytes": 9354,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/agents/skill-sources.json.txt": {
+      "sha256": "7d788647d07b6e8cad0f99f29a12c1237b6b4a001c5309e7ee9c416f8bd43bcb",
+      "bytes": 14345,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/docs/agents/workflow.md.txt": {
+      "sha256": "f827f005b59cccf7416e5ebb8c64ecba689d99047cb3b90b05ed0541294f98a1",
+      "bytes": 9917,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/harness-adoption/generated-writing-manifest.json.txt": {
+      "sha256": "606b123e3cdb43ad4449c45eb1c58e572a794c73b066696ae746b216451d01f0",
+      "bytes": 89175,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/harness-adoption/runtime-source-policy.json.txt": {
+      "sha256": "a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb",
+      "bytes": 11375,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/publication-workflow/engineering-v1.json.txt": {
+      "sha256": "478b638866a3fff4730879afe6d1a858e89ceb690bda8abbba1a2c2b0cf9928c",
+      "bytes": 324177,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E1/input.json.txt": {
+      "sha256": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918",
+      "bytes": 745,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E1/rubric.json.txt": {
+      "sha256": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3",
+      "bytes": 830,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E2/input.json.txt": {
+      "sha256": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6",
+      "bytes": 931,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E2/rubric.json.txt": {
+      "sha256": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c",
+      "bytes": 800,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E3/input.json.txt": {
+      "sha256": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e",
+      "bytes": 599,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E3/rubric.json.txt": {
+      "sha256": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607",
+      "bytes": 805,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E4/input.json.txt": {
+      "sha256": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425",
+      "bytes": 599,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E4/rubric.json.txt": {
+      "sha256": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791",
+      "bytes": 723,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E5/input.json.txt": {
+      "sha256": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca",
+      "bytes": 215,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E5/rubric.json.txt": {
+      "sha256": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc",
+      "bytes": 755,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E6/input.json.txt": {
+      "sha256": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01",
+      "bytes": 711,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E6/rubric.json.txt": {
+      "sha256": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947",
+      "bytes": 782,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E7/input.json.txt": {
+      "sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9",
+      "bytes": 429,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E7/rubric.json.txt": {
+      "sha256": "aecfdaa4b5d3786cd86d3482e0139ba22604f2a0b2088f92e4f9ddcc9e179b05",
+      "bytes": 805,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E8/input.json.txt": {
+      "sha256": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2",
+      "bytes": 730,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/cases/E8/rubric.json.txt": {
+      "sha256": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a",
+      "bytes": 813,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/maintenance/writing-skills/behavior-eval-20261004/design.json.txt": {
+      "sha256": "70d1e6ac5c3c5aa7fc15036dfca87c93110b47e3bf168516ebf71fda5905f2bf",
+      "bytes": 684,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/scripts/materialize-writing-skills.py.txt": {
+      "sha256": "8446420db45e314c65292327cac6f601f66001d8c91048702c73a1018bac6de4",
+      "bytes": 18322,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/scripts/publication_current.py.txt": {
+      "sha256": "759826ee582cf0fd8b8d72cf5a6911b09b89dd53c1abe5f17cf48167697bcd58",
+      "bytes": 25591,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/scripts/verify-harness-adoption.py.txt": {
+      "sha256": "cecd58b0cd8dbe7fde3030b20ae8bce949d54a9be3e839b91da9baa08a47a73a",
+      "bytes": 3618,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/scripts/verify-project.py.txt": {
+      "sha256": "302eb9bd75b45ef9cbe5ffec63086dce920a0adbf761db93910ae4e37f4764fb",
+      "bytes": 6894,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/skills/creating-vitepress-post/SKILL.md.txt": {
+      "sha256": "5942e8bf371c5ea5b9dac91580d4c91ef88be0749c7c9784d82ba86bf5dca365",
+      "bytes": 2935,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/skills/maintaining-writing-skills/SKILL.md.txt": {
+      "sha256": "04835b103d9d57b6fd9a70659d598c9b9d13debe26f0c87fdb3b1406305b52ec",
+      "bytes": 1538,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/skills/maintaining-writing-skills/references/article-maintenance.md.txt": {
+      "sha256": "3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4",
+      "bytes": 1058,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/skills/maintaining-writing-skills/references/skill-maintenance.md.txt": {
+      "sha256": "78dde171ee3bff1dba86deb8b62a1c7d811296c2e7ba64523cdd81dacc24b755",
+      "bytes": 1421,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/skills/maintaining-writing-skills/references/writing-process.md.txt": {
+      "sha256": "90cabbc770cf0220ccb18e2dc567e9aeadc75487f1f052a664e0d8ce8939dda4",
+      "bytes": 3939,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/skills/managing-article-publication/SKILL.md.txt": {
+      "sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2",
+      "bytes": 1893,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/skills/managing-article-publication/references/future-actions.md.txt": {
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5",
+      "bytes": 2112,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/skills/managing-article-publication/references/local.md.txt": {
+      "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be",
+      "bytes": 5703,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/skills/phoenix-writing/SKILL.md.txt": {
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea",
+      "bytes": 3345,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/source/tests/harness_adoption/test_materializer.py.txt": {
+      "sha256": "498f9c38217c4f38c0032036f8de7f398f4b4201803ef91f8dbefc5ac319ae6f",
+      "bytes": 16359,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/status-capture.txt": {
+      "sha256": "b741037b9661d3084d2b368209afe48140c2133b78cda19d19176727969fae46",
+      "bytes": 17868,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/tracked-staged.patch": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/review/versions/round-2/tracked-unstaged.patch": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/spec.en.md": {
+      "sha256": "1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4",
+      "bytes": 34213,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/spec.zh-TW.md": {
+      "sha256": "5f0b9dc33a200000ab8400cf180b5a16aea70d3c9cc134af4a7d6919b0df9692",
+      "bytes": 24990,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/0014-article-discovery/traceability.md": {
+      "sha256": "8ab2510923ffeb5315cde7803e9a82de491e3abd679459fbe7e456f86c8438f6",
+      "bytes": 12372,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.specs/_discovery/article-writing-entry/research.md": {
+      "sha256": "1e6a2f6928d08c3001baf69678b0a3337279c003eb24a03776570cf1a9a5ddc2",
+      "bytes": 18570,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.tickets/0014-article-discovery/T-0026-local-notes-current-guard.md": {
+      "sha256": "e58e0df0e1368697456b8d99d154fd8daab26b141d19377a9041b43e551634e8",
+      "bytes": 7604,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.tickets/0014-article-discovery/T-0027-free-conversation-entry.md": {
+      "sha256": "08250892c5c45b8126424dd464595717aa0c7b7b3e46e4a55d247cf1332bbcf8",
+      "bytes": 9698,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.tickets/0014-article-discovery/T-0028-optional-context-glossary.md": {
+      "sha256": "4a97b816fdd183bb4f5b9a2554b8e8d477dd46dcf696c2dced82c360e11541bf",
+      "bytes": 10543,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    ".proj.tickets/0014-article-discovery/T-0029-public-preparation-routing.md": {
+      "sha256": "26f88307894f66320255098772ca3d037e23970e5916d93062a6e999e9cbaec6",
+      "bytes": 8357,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "AGENTS.md": {
+      "sha256": "c68401f65bb1ba9d264abaeff3921bf0df71cbba60e0fa093ed5cac360733aea",
+      "bytes": 12438,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "docs/agents/domain.md": {
+      "sha256": "d14b5f02d004f3a82da35aa8b8fa5f0837d5ce24f1388faa63b9d1059261dfd6",
+      "bytes": 2715,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "docs/agents/language.md": {
+      "sha256": "d44b4af6c0c2fed01ad883567e7a31b0699a06919b1c07b2572409a26a2f9c00",
+      "bytes": 4257,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "docs/agents/runtime.md": {
+      "sha256": "5ef5e21fe7a96745fd3de64080df318131a82bd34f365d6d5a0a6015c1372438",
+      "bytes": 9378,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "docs/agents/skill-sources.json": {
+      "sha256": "15138ad2917774c7e2378853610470a7c202662de5982a5d69976bac4e2ae521",
+      "bytes": 14860,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "docs/agents/workflow.md": {
+      "sha256": "eb6ede2cc9249bd88224ba484ab05459f0aef048a9d4e7ade7d600add5865b3b",
+      "bytes": 10446,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "maintenance/harness-adoption/generated-writing-manifest.json": {
+      "sha256": "07d2bd25cb1263542c341a42b4b4f1c30705f26502b24f161dc38aba624052d2",
+      "bytes": 91929,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "maintenance/harness-adoption/runtime-source-policy.json": {
+      "sha256": "1438ca382e0b6e68d412cc97b563936c22cebfa708c621d60749a6e7554782cc",
+      "bytes": 11913,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "maintenance/publication-workflow/engineering-v1.json": {
+      "sha256": "87c8517c982231e0e3ad51f5bb062701d1ad774435c2f861c66d9de07d795934",
+      "bytes": 335135,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "scripts/materialize-writing-skills.py": {
+      "sha256": "493c657224ef88f5340afc1c73f6be1209b566e35eba9bf4a0d9042a935287c1",
+      "bytes": 18873,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "scripts/publication_current.py": {
+      "sha256": "7e425b79d6e23c985ee5288123d0576748f65a3a2d8cf03d7c8805f04b2e9251",
+      "bytes": 31116,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "scripts/run-writing-python-tests.py": {
+      "sha256": "ae0d16a3357692fadd884e1d9bdf1fb6dd91585a012b4f16cc4768caec9a5c20",
+      "bytes": 3931,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "skills/article-discovery/SKILL.md": {
+      "sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5",
+      "bytes": 2843,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "skills/article-discovery/references/persistence.md": {
+      "sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1",
+      "bytes": 4944,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "skills/article-discovery/references/public-preparation.md": {
+      "sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c",
+      "bytes": 3625,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "skills/maintaining-writing-skills/references/writing-process.md": {
+      "sha256": "be8d12b3bedcc5852068a3a76182b3a2f9dfc9762d70417cf929b6b935c334a4",
+      "bytes": 4522,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "tests/article_publication/test_article_discovery_package.py": {
+      "sha256": "5bb730ac3fbfc64f551ae8d079ad3f53a83e52cdff7ef80cb2658bd7373757f4",
+      "bytes": 2648,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "tests/article_publication/test_current_article_packages.py": {
+      "sha256": "6fb37bad122f952f4b1581060b9cbc316684b15aef019767457626f7ae698f91",
+      "bytes": 1845,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "tests/article_publication/test_head_reporting.py": {
+      "sha256": "b49086de49c96defd224f17b3117c0e48dccdc213eacc3aa98f6fc1fa6258706",
+      "bytes": 34307,
+      "mode": "0o100644",
+      "symlink": false
+    },
+    "tests/article_publication/test_local_writing_notes.py": {
+      "sha256": "7a9148a97c363cee400f320d58b6f1ab0385ff4ce55b8e9390448789d073ea82",
+      "bytes": 19870,
+      "mode": "0o100644",
+      "symlink": false
+    }
+  },
+  "deleted": [],
+  "exclusions": []
+}

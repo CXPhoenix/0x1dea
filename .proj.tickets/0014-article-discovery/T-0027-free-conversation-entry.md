@@ -2,7 +2,7 @@
 id: T-0027
 title: Start article discovery through free conversation in both project runtimes
 epic: 0014-article-discovery
-status: processing
+status: review
 blocked_by: []
 proposal_key: B
 test_plan_approved: true
@@ -64,3 +64,7 @@ Use branch `tickets/T-0027/free-conversation-entry`. Follow the approved proposa
 2026-10-24: owner authorized B–D implementation and one combined A–D PR; see planning/batch-pr-approval.md. Original approval tables and edges are unchanged.
 
 2026-10-24: B targeted TDD/native checkpoint complete; see implementation/T-0027/coverage-report.md and review/code-review-T-0027-checkpoint.md. Remains processing until the combined final regression and formal reviews; Claude host is unverified due to expired OAuth.
+
+## Batch verification and review
+
+The owner authorized B–D together and one combined A–D PR. The approved table and permanent dependencies are unchanged. Local implementation, native evidence, the complete 287-test Python suite and 54 Vitest tests are complete; Claude native behavior remains unverified because OAuth expired. See [batch coverage](../../.proj.specs/0014-article-discovery/implementation/batch/README.md), [Standards/Spec](../../.proj.specs/0014-article-discovery/review/code-review-batch.md) and [security](../../.proj.specs/0014-article-discovery/review/security-batch.md). This ticket is review, not done; no landing, remote publication or deployment is inferred.

@@ -19,3 +19,7 @@
 [native-results.json](native-results.json)保留 19 組初版觀測、14 組修正／補測／guard 觀測及獨立讀回／guard 證據，清楚標示來源階段。行為 reviewer 先指出缺少單獨 . key，補測後確認；修正版 owner、fresh resume、C10 全部經獨立行為判讀確認，無新增 P0／P1／P2。未量測覆蓋百分比、作者辨識或文風品質。
 
 原規格／核准表／永久相依不變；無術語不建空表、唯一舊 CONTEXT 不重問、工程 CONTEXT 不作替代。票仍 processing，待全組合回歸及正式審查才進 review；沒有 landing／發布或 Claude 行為通過宣告。
+
+## 批次收尾補件
+
+完整組合 Python 287 項及 Vitest 54 項已實際成功；正式 Standards／Spec／Security 來源審查無剩餘發現。前文的 processing／等待批次關卡為先行檢查點，已由[批次紀錄](../batch/README.md)與 ticket review 狀態取代。Claude 行為未驗證與其他範圍限制仍有效；尚未 landing。

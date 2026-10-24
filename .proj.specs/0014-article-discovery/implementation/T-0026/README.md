@@ -1,5 +1,7 @@
 # T-0026 本機實作與證據
 
+本頁保留 A 完成時的本機檢查點；後續已 commit，且使用者追加授權 B～D 與單一 PR。最新進度見 [epic 首頁](../../README.md)及批次收尾紀錄。下列「尚未 commit／B～D 尚未實作／沒有 PR 授權」均為當時範圍，非現況。兩份新 log 後來為保留測試候選樹改名為 .txt，原始位元組與 A commit 歷史保留。
+
 使用者於 2026-10-24 核准提案 A 及 A01～A06 測試表。實作位於 `/private/tmp/0x1dea-T0026`，分支為 `tickets/T-0026/local-notes-current-guard`，基底是本機 main `8b2cffab8ed1a8a2c50ece18b6fe5b578f186668`。HEAD 仍停在基底，修改尚未 commit。原 staging 工作目錄 `/Users/phoenix/dev/online-notes/0x1DEA` 的已追蹤來源位元組未變，只在原處保存新增的 epic／tracker 紀錄。
 
 ## 交付行為

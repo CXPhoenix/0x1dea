@@ -4,9 +4,9 @@
       "links": [],
       "logical_source": "skills/article-discovery/SKILL.md",
       "path": ".agents/skills/article-discovery/SKILL.md",
-      "sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035",
+      "sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5",
       "source": "skills/article-discovery/SKILL.md",
-      "source_sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035"
+      "source_sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5"
     },
     {
       "path": ".agents/skills/article-discovery/agents/openai.yaml",
@@ -20,6 +20,14 @@
       "sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1",
       "source": "skills/article-discovery/references/persistence.md",
       "source_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "links": [],
+      "logical_source": "skills/article-discovery/references/public-preparation.md",
+      "path": ".agents/skills/article-discovery/references/public-preparation.md",
+      "sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c",
+      "source": "skills/article-discovery/references/public-preparation.md",
+      "source_sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c"
     },
     {
       "links": [
@@ -380,9 +388,9 @@
       ],
       "logical_source": "skills/maintaining-writing-skills/references/writing-process.md",
       "path": ".agents/skills/maintaining-writing-skills/references/writing-process.md",
-      "sha256": "edc7c29a57bcc9b3609ef719d848b1b01916539857dfb1b5cc5ad7c7f921d042",
+      "sha256": "3b191bef447d141cd2fd923f8ff37569b93fb8f82d5d155498d4e7913bfeea02",
       "source": "skills/maintaining-writing-skills/references/writing-process.md",
-      "source_sha256": "4466f00c71fdd41db5eb9892fc1667a50a98d82d89fd45b9e3d117ffc63d004c"
+      "source_sha256": "be8d12b3bedcc5852068a3a76182b3a2f9dfc9762d70417cf929b6b935c334a4"
     },
     {
       "links": [],
@@ -815,9 +823,9 @@
       "links": [],
       "logical_source": "skills/article-discovery/SKILL.md",
       "path": ".claude/skills/article-discovery/SKILL.md",
-      "sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035",
+      "sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5",
       "source": "skills/article-discovery/SKILL.md",
-      "source_sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035"
+      "source_sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5"
     },
     {
       "links": [],
@@ -826,6 +834,14 @@
       "sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1",
       "source": "skills/article-discovery/references/persistence.md",
       "source_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "links": [],
+      "logical_source": "skills/article-discovery/references/public-preparation.md",
+      "path": ".claude/skills/article-discovery/references/public-preparation.md",
+      "sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c",
+      "source": "skills/article-discovery/references/public-preparation.md",
+      "source_sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c"
     },
     {
       "links": [
@@ -1176,9 +1192,9 @@
       ],
       "logical_source": "skills/maintaining-writing-skills/references/writing-process.md",
       "path": ".claude/skills/maintaining-writing-skills/references/writing-process.md",
-      "sha256": "edc7c29a57bcc9b3609ef719d848b1b01916539857dfb1b5cc5ad7c7f921d042",
+      "sha256": "3b191bef447d141cd2fd923f8ff37569b93fb8f82d5d155498d4e7913bfeea02",
       "source": "skills/maintaining-writing-skills/references/writing-process.md",
-      "source_sha256": "4466f00c71fdd41db5eb9892fc1667a50a98d82d89fd45b9e3d117ffc63d004c"
+      "source_sha256": "be8d12b3bedcc5852068a3a76182b3a2f9dfc9762d70417cf929b6b935c334a4"
     },
     {
       "links": [],
@@ -1607,5 +1623,5 @@
     "managing-article-publication",
     "article-discovery"
   ],
-  "source_policy_sha256": "efc2c83fda450f3001d0d4315d84a654298a3ea568f61b00bcd005b5a96cfb68"
+  "source_policy_sha256": "1438ca382e0b6e68d412cc97b563936c22cebfa708c621d60749a6e7554782cc"
 }

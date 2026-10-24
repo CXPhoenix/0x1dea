@@ -37,4 +37,4 @@ verify 也會依重算結果的完整清單讀取輸出 `result.git` 的每個 b
 
 本機 CLI 檢查不等同產品 native guard、網站 build、瀏覽器、GitHub CI 或正式環境驗證。不同段落即使 Git 沒有衝突，只要合併後候選的完整 blob、mode 或 metadata 改變，就會停止；需先更新來源、重新審查 registry 並取得受影響作者核准，才能重試。
 
-歷史 Python assertions 不會改成配合現行 done 狀態。`python3 scripts/run-current-python-tests.py` 執行現行 suites，再明確用 PR #22 的 Git snapshot 執行原 T-0013 的 10 項 fixtures；只固定該歷史 module，原檔被改會拒絕，新票與目前結案 tracker 仍在 live suite 驗證，沒有失敗後改跑另一份契約的 fallback。
+歷史 Python assertions 不會改成配合現行 done 狀態。加入 article-discovery 第五套件後，使用 `python3 -B scripts/run-writing-python-tests.py` 執行現行 suites，並在執行前固定 PR #22、PR #32 與 Phoenix 四套件的歷史脈絡；原模組 bytes 改變會拒絕。current 五套件 counterpart 保留原負向方法，另驗證五套件與原聲音。原 `run-current-python-tests.py` 與固定歷史模組不改，新票與目前結案 tracker 仍在 live suite 驗證；不是失敗後改跑另一份契約的 fallback。沿用現有 Node／pnpm 與已審查 node_modules，執行完整驗證前以 `PUBLICATION_TEST_DEPENDENCIES` 指定該相依套件位置，不自動安裝。

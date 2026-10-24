@@ -2,7 +2,7 @@
 id: T-0028
 title: Save and resume writing context with an on-demand compatible glossary
 epic: 0014-article-discovery
-status: processing
+status: review
 blocked_by: [T-0026, T-0027]
 proposal_key: C
 test_plan_approved: true
@@ -66,3 +66,7 @@ Use branch `tickets/T-0028/optional-context-glossary`. Follow the approved propo
 2026-10-24: owner batch authority permits stacking reviewed local A/B checkpoints before their combined PR lands; permanent dependencies remain. C01-before reproduced the old unexpected location and empty legacy CONTEXT creation.
 
 2026-10-24: C targeted native checkpoint complete; see implementation/T-0028/coverage-report.md and review/code-review-T-0028-checkpoint.md. One source ambiguity P1 was corrected and independently confirmed; affected branches were replayed. Full combined regression/formal reviews remain batch gates; status stays processing.
+
+## Batch verification and review
+
+The owner authorized B–D together and one combined A–D PR. The approved table and permanent dependencies are unchanged. Local implementation, native evidence, the complete 287-test Python suite and 54 Vitest tests are complete; Claude native behavior remains unverified because OAuth expired. See [batch coverage](../../.proj.specs/0014-article-discovery/implementation/batch/README.md), [Standards/Spec](../../.proj.specs/0014-article-discovery/review/code-review-batch.md) and [security](../../.proj.specs/0014-article-discovery/review/security-batch.md). This ticket is review, not done; no landing, remote publication or deployment is inferred.

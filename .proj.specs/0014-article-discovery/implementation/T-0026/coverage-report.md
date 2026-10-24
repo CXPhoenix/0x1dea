@@ -17,7 +17,7 @@
 
 ## 完整回歸
 
-未修改的 current Python runner 結束碼為 0：live Harness 66＋live article-publication 170＋原 #22 的 10＋原 #32 的 14＝**260 項通過，零失敗／錯誤／略過**。見[完整 log](full-current-python.log)。最後執行沿用既有文件的相依環境設定，耗時 1192.154 秒。Vitest 54 項全數通過。portable、materializer --check、lint 與 native working-main 也已通過；實際命令與結果保留於 execution-results.json。
+未修改的 current Python runner 結束碼為 0：live Harness 66＋live article-publication 170＋原 #22 的 10＋原 #32 的 14＝**260 項通過，零失敗／錯誤／略過**。見[完整 log](full-current-python.txt)。最後執行沿用既有文件的相依環境設定，耗時 1192.154 秒。Vitest 54 項全數通過。portable、materializer --check、lint 與 native working-main 也已通過；實際命令與結果保留於 execution-results.json。
 
 `pnpm test` 因 main 沒有此別名而以 1 結束，沒有執行測試；package scripts 未變。實際入口是 `pnpm test:unit` 與 `PUBLICATION_TEST_DEPENDENCIES=/private/tmp/0x1dea-T0026/node_modules PYTHONDONTWRITEBYTECODE=1 python3 -B scripts/run-current-python-tests.py`。這是命令調整紀錄，不把失敗別名報成成功。沿用既有 Node 24.13.0／pnpm 10.28.0 相依套件，沒有安裝。
 
@@ -25,7 +25,7 @@
 
 實際 red → green 包含：一般筆記原先被拒絕、反斜線 key 原先被接受、group 可執行筆記原先被接受、index 所屬筆記原先被接受，以及缺少忽略規則。[TDD 紀錄](tdd-red-green.json)保留摘要與原始 log 雜湊。
 
-[第一次完整 log](first-full-current-python.log)保留缺少相依環境設定的失敗；已依既有測試前置條件修正。之後原 head-reporting 測試暴露 A 的真實 helper-policy merge 衝突；同一原測試在未修改 main 通過，未更改其斷言／輸入。固定路徑的 additive successor 修正後，同測試、新增有限 pin 負向案例及最後完整 runner 均通過。見[回歸紀錄](head-policy-regression.json)。沒有豁免歷史失敗或修改舊測試使其轉綠。
+[第一次完整 log](first-full-current-python.txt)保留缺少相依環境設定的失敗；已依既有測試前置條件修正。之後原 head-reporting 測試暴露 A 的真實 helper-policy merge 衝突；同一原測試在未修改 main 通過，未更改其斷言／輸入。固定路徑的 additive successor 修正後，同測試、新增有限 pin 負向案例及最後完整 runner 均通過。見[回歸紀錄](head-policy-regression.json)。沒有豁免歷史失敗或修改舊測試使其轉綠。
 
 ## 保留檢查、審查與最後 metadata 關卡
 

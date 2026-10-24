@@ -344,7 +344,12 @@ class HeadReportingTests(unittest.TestCase):
         candidates=[{'id':c['id'],'source':{'ref':'staging','sha':stage},'paths':{n:trees['staging'][n] for n in c['paths']}} for c in m0['candidates']]
         owned={n for c in candidates for n in c['paths']}
         delta={n for n in set(trees['main'])|set(trees['staging']) if trees['main'].get(n)!=trees['staging'].get(n)}
-        registry={'version':1,'target':'staging','repository':str(w.control),'main':{'ref':'main','sha':w.main},'staging':{'ref':'staging','sha':stage},'trees':trees,'candidates':candidates,'engineering':sorted(delta-owned),'checks':{n:v for n,v in trees['staging'].items() if n.startswith('maintenance/harness-adoption/') or n in sync.PROTECTED_HISTORY}}
+        registry={'version':1,'target':'staging','repository':str(w.control),'main':{'ref':'main','sha':w.main},'staging':{'ref':'staging','sha':stage},'trees':trees,'candidates':candidates,'engineering':sorted(delta-owned),'checks':{n:trees['main'][n] if n in {
+            # Independently pinned current main owns the reviewed fifth-package
+            # inventories. All other protected checks retain staging ownership.
+            'maintenance/harness-adoption/generated-writing-manifest.json',
+            'maintenance/harness-adoption/runtime-source-policy.json',
+        } else v for n,v in trees['staging'].items() if n.startswith('maintenance/harness-adoption/') or n in sync.PROTECTED_HISTORY}}
         state=w.directory/'durable';state.mkdir(mode=0o700)
         identity=state/'identity.json';identity.write_bytes(remote.canonical({'version':1,'repository':'owner/example','store_id':'c'*64}));identity.chmod(0o400)
         registry_file=w.directory/'registry.json';registry_file.write_bytes(remote.canonical(registry))

@@ -61,11 +61,15 @@
     },
     {
       "path": "skills/article-discovery/SKILL.md",
-      "sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035"
+      "sha256": "74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5"
     },
     {
       "path": "skills/article-discovery/references/persistence.md",
       "sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "path": "skills/article-discovery/references/public-preparation.md",
+      "sha256": "c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c"
     },
     {
       "path": "skills/creating-vitepress-post/SKILL.md",
@@ -217,7 +221,7 @@
     },
     {
       "path": "skills/maintaining-writing-skills/references/writing-process.md",
-      "sha256": "4466f00c71fdd41db5eb9892fc1667a50a98d82d89fd45b9e3d117ffc63d004c"
+      "sha256": "be8d12b3bedcc5852068a3a76182b3a2f9dfc9762d70417cf929b6b935c334a4"
     },
     {
       "path": "skills/managing-article-publication/SKILL.md",

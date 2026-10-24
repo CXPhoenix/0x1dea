@@ -21,3 +21,7 @@
 第五套件使原 Phoenix 正向測試固定要求的 v2.3 policy／manifest 位元組不再適用。原檔與 runner 完整保留；新 runner 在執行前固定三種歷史脈絡並比對原測試 bytes，不做失敗後回退。原 Phoenix 模組在 `8b2cffab…` main 與 `6fcb277a…` staging 脈絡完整執行；current counterpart 繼承三個原負向方法，另外驗證五套件與原 Phoenix 聲音位元組。缺少歷史本機 named refs 的首跑失敗也已記錄，補齊明定 fixture refs 後四項通過。
 
 保留「先自由聊、按需整理」；B 不暴露 C／D 尚未存在的參照。既有工程技能、文章、資產、root CONTEXT、兩個 alias 與歷史 E1～E8 未改。核准測試表未改，相依票在單一 PR landing 前不標 done。
+
+## 批次收尾補件
+
+完整組合 Python 287 項及 Vitest 54 項已實際成功；正式 Standards／Spec／Security 來源審查無剩餘發現。前文的 processing／等待批次關卡為先行檢查點，已由[批次紀錄](../batch/README.md)與 ticket review 狀態取代。Claude 行為未驗證與其他範圍限制仍有效；尚未 landing。

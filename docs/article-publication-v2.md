@@ -74,7 +74,11 @@ ready 只回傳本機 PR 準備狀態，publishable 永遠為 false；PR、落�
 明確 skip，不能當成隔離或 readiness 成功。主機 sandbox 也可能阻擋父程序的 localhost
 listener；應保留失敗、於授權環境重驗，不能改成未受約束的 build。
 
-目前驗證入口是 `python3 scripts/run-current-python-tests.py`：current suites 與固定 #22
-歷史契約分開列出。原 `test_current_baseline.py` 的 bytes/assertions 與 v1 runner 保留；
-當時 review→done 的反事實測試使用當時 code/tracker，新的 closed-tracker cases 則核對
-目前已落地的 T-0013。歷史通過不代表新 v2 程式已通過。
+加入 article-discovery 第五套件後，目前完整驗證入口是
+`python3 -B scripts/run-writing-python-tests.py`，並沿用上述既有相依套件前置條件。
+current suites 與預先固定的 #22、#32、Phoenix 四套件歷史契約分開列出；current
+五套件 counterpart 保留原負向方法，另核對原聲音與五套件。原
+`run-current-python-tests.py`、`test_current_baseline.py` 與固定歷史模組的
+bytes/assertions 保留，不在失敗後更換契約。當時 review→done 的反事實測試使用
+當時 code/tracker，新的 closed-tracker cases 仍核對目前已落地的 T-0013。
+歷史成功不代表現行 v2 程式成功，實際結果以當次完整命令與範圍為準。

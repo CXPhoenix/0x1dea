@@ -1,0 +1,12 @@
+test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (article_publication.test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags. ... ok
+test_real_trusted_main_validation_and_isolated_staging_build (article_publication.test_current_history_context.CurrentTrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build) ... From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-hx8pd31_/projections/staging
+ * branch            43b975587de9289adeb6a82035965643232ad29c -> FETCH_HEAD
+From /private/var/folders/z3/gp_vxt9j4vv4gmf09pmkprvr0000gn/T/sync-trusted-build-hx8pd31_/prepared/sync-v4c6i5sn/result
+ * branch            92102c00789b9405773776f484183769dc475b4d -> FETCH_HEAD
+ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 80.255s
+
+OK

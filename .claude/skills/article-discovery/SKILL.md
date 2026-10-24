@@ -1,6 +1,6 @@
 ---
 name: article-discovery
-description: Start an article, explore or revisit its direction, or save/resume article context and terminology. Direct drafting, specified revision and proofreading proceed without a discovery interview.
+description: Start an article, explore or revisit its direction, save/resume article context and terminology, or prepare a supplied article for public reading. Direct drafting, specified revision and proofreading proceed without a discovery interview.
 ---
 
 # Article discovery
@@ -23,3 +23,10 @@ For an authorized context save/resume or an established writing workspace, read
 [optional persistence and vocabulary](references/persistence.md). Ordinary chatting
 and article-file-only requests need no notes. Preserve author choice states and
 reuse a sole compatible glossary without reopening settled questions.
+
+## Requested artifacts and public reading
+
+For requested public editorial preparation or an article artifact/preview/delivery
+request, read [public preparation and delivery owners](references/public-preparation.md).
+Use the existing creation, maintenance and publication routes. Editorial check results
+and named gaps do not establish build/site/publication readiness or new authority.

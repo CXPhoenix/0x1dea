@@ -173,6 +173,9 @@ three skills or run a tuning workflow as an adoption step. Provenance is in
   branch. A sole article GLOSSARY.md or legacy CONTEXT.md is reused; engineering
   CONTEXT.md is not an article fallback. Conversation alone creates no notes.
 - Explicit Phoenix voice or continuing that work: load the active runtime's `phoenix-writing`.
+- Requested public editorial preparation uses article-discovery's conditional
+  branch; missing evidence is reported per passage/asset, not as a generic checklist.
+  Website preview/selected publication preparation retains managing-article-publication.
 - Creating a new site article file: load `creating-vitepress-post`; chat drafts and revisions do not scaffold.
 - Writing-skill, article or instruction maintenance: load `maintaining-writing-skills`.
 - New requirements, tickets and progress use only `.proj.specs/` and `.proj.tickets/`.
