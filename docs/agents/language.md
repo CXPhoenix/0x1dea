@@ -74,3 +74,9 @@ new permitted routing/path projections receive a new freeze and fresh E1–E9 ev
 AGENTS, CLAUDE, docs/agents, ADRs and all 32 framework skill trees remain English.
 Imported English baselines retain source bytes; their Chinese translations are audit copies
 with matching Git blob hashes. Historical Harness review is not recreated.
+
+## Article discovery
+
+The fifth canonical product package, article-discovery, is English and materialized
+into both native runtime trees. It does not extend the three-tree Chinese exception.
+User-facing article prose and evidence navigation retain Taiwan Traditional Chinese.

@@ -16,6 +16,7 @@
     }
   ],
   "implicit": {
+    "article-discovery": true,
     "creating-vitepress-post": true,
     "maintaining-writing-skills": true,
     "managing-article-publication": true,
@@ -57,6 +58,10 @@
     {
       "path": "maintenance/writing-skills/legacy/phoenix-writing/reference/visual-guide.md",
       "sha256": "094e6b89e257c5406d99cb8d2f50544b3eb851eacb06881bfb2ba8f29ce41a36"
+    },
+    {
+      "path": "skills/article-discovery/SKILL.md",
+      "sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8"
     },
     {
       "path": "skills/creating-vitepress-post/SKILL.md",
@@ -252,6 +257,7 @@
     "phoenix-writing",
     "maintaining-writing-skills",
     "creating-vitepress-post",
-    "managing-article-publication"
+    "managing-article-publication",
+    "article-discovery"
   ]
 }

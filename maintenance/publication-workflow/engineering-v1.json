@@ -1000,7 +1000,7 @@
       "sha256": "a26912d507382a265bde490314a53344a021f574f8bbe7797a5d4eb203863e28"
     },
     "scripts/publication_current.py": {
-      "successor_sha256": "19075dde82fd02cdf2a2bc7012212952a413db1ae9ee4f6abfa7515af4a4c428",
+      "successor_sha256": "7630663ddbc735b6a290adf472e40ad9da7c06dc5a88598faa5560861a1893b3",
       "mode": "100644",
       "sha256": "ae535a8040f01620a77d3fab4d3f433cb578f883b1e24c162769ff05f0cb27cd"
     },
@@ -5302,11 +5302,11 @@
     },
     "maintenance/harness-adoption/runtime-source-policy.json": {
       "mode": "100644",
-      "sha256": "a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb"
+      "sha256": "96638ddcd530ba8015cb4437551dc5f7c0343feccf5199b1d9d089cd756ec229"
     },
     "maintenance/harness-adoption/generated-writing-manifest.json": {
       "mode": "100644",
-      "sha256": "606b123e3cdb43ad4449c45eb1c58e572a794c73b066696ae746b216451d01f0"
+      "sha256": "dcb7f3cf90955d865f71b16820ce988e40fe5ae94299c7ba95d82a7f8adb01e7"
     },
     "maintenance/writing-skills/SOURCES.md": {
       "mode": "100644",
@@ -6230,7 +6230,7 @@
     },
     ".proj.tickets/0014-article-discovery/T-0027-free-conversation-entry.md": {
       "mode": "100644",
-      "sha256": "919ad0aadadd0886af9db816632eb33c69e72adabca0f67527bb2862b94a1438"
+      "sha256": "08250892c5c45b8126424dd464595717aa0c7b7b3e46e4a55d247cf1332bbcf8"
     },
     ".gitignore": {
       "mode": "100644",
@@ -6291,6 +6291,78 @@
     ".proj.specs/0014-article-discovery/review/security-T-0026.md": {
       "mode": "100644",
       "sha256": "b5a065e65f8609f7f625f3357c41fb2250236ea879a67cf0704974bb96f86bc9"
+    },
+    ".agents/skills/article-discovery/SKILL.md": {
+      "mode": "100644",
+      "sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8"
+    },
+    ".agents/skills/article-discovery/agents/openai.yaml": {
+      "mode": "100644",
+      "sha256": "641ef492c9b319271ee9289d3aee8409a036e24141c1aefaf3eb695f783292ad"
+    },
+    ".claude/skills/article-discovery/SKILL.md": {
+      "mode": "100644",
+      "sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8"
+    },
+    ".proj.specs/0014-article-discovery/planning/batch-pr-approval.md": {
+      "mode": "100644",
+      "sha256": "14ad05de1b994fce602cc3946398d7ea3d8e8390bc1063a2ad67247606cacb46"
+    },
+    "AGENTS.md": {
+      "mode": "100644",
+      "sha256": "2d327edc2753286ba4a92f67cbd2804080ebaf7da3f5e3d0021828695608e414"
+    },
+    "docs/agents/domain.md": {
+      "mode": "100644",
+      "sha256": "360f7b9cbfdd35aec428a5b3cd581f42ccd12863610cace98455d19111bbc3ac"
+    },
+    "docs/agents/language.md": {
+      "mode": "100644",
+      "sha256": "d44b4af6c0c2fed01ad883567e7a31b0699a06919b1c07b2572409a26a2f9c00"
+    },
+    "docs/agents/runtime.md": {
+      "mode": "100644",
+      "sha256": "5ef5e21fe7a96745fd3de64080df318131a82bd34f365d6d5a0a6015c1372438"
+    },
+    "docs/agents/skill-sources.json": {
+      "mode": "100644",
+      "sha256": "15138ad2917774c7e2378853610470a7c202662de5982a5d69976bac4e2ae521"
+    },
+    "docs/agents/workflow.md": {
+      "mode": "100644",
+      "sha256": "eb6ede2cc9249bd88224ba484ab05459f0aef048a9d4e7ade7d600add5865b3b"
+    },
+    "scripts/materialize-writing-skills.py": {
+      "mode": "100644",
+      "sha256": "493c657224ef88f5340afc1c73f6be1209b566e35eba9bf4a0d9042a935287c1"
+    },
+    "skills/article-discovery/SKILL.md": {
+      "mode": "100644",
+      "sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8"
+    },
+    "tests/article_publication/test_article_discovery_package.py": {
+      "mode": "100644",
+      "sha256": "5bb730ac3fbfc64f551ae8d079ad3f53a83e52cdff7ef80cb2658bd7373757f4"
+    },
+    "scripts/run-writing-python-tests.py": {
+      "mode": "100644",
+      "sha256": "ae0d16a3357692fadd884e1d9bdf1fb6dd91585a012b4f16cc4768caec9a5c20"
+    },
+    "tests/article_publication/test_current_article_packages.py": {
+      "mode": "100644",
+      "sha256": "6fb37bad122f952f4b1581060b9cbc316684b15aef019767457626f7ae698f91"
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0027/coverage-report.md": {
+      "mode": "100644",
+      "sha256": "296e346cdaa9cca67bc5651fac8482da813cb2decce2e86b817dfc313d8ce2b1"
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0027/native-results.json": {
+      "mode": "100644",
+      "sha256": "c11b7c4d48cdf45b9fefa2b52f81828c7f0c10dc040d021bec49a0d623d4ff5c"
+    },
+    ".proj.specs/0014-article-discovery/review/code-review-T-0027-checkpoint.md": {
+      "mode": "100644",
+      "sha256": "209b7a121fd0d0be1b5d79cd481e2cbe9244991df64c806f3649b4efea4f63f8"
     }
   }
 }

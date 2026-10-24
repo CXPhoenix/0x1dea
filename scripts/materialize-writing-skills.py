@@ -95,13 +95,23 @@ def inventory(root, relative, allowed_links=()):
     return files, links
 
 
+def owned_names(root):
+    """Keep the original four-package fixture contract; admit the known fifth."""
+    article = root / 'skills/article-discovery'
+    if article.exists() or article.is_symlink():
+        return NAMES + ('article-discovery',)
+    if any((root / runtime / 'skills/article-discovery').exists() for runtime in RUNTIMES):
+        raise Invalid('orphaned article-discovery output without canonical source')
+    return NAMES
+
+
 def load_inputs(root):
     policy_path = checked_path(root, POLICY)
     raw = policy_path.read_bytes()
     policy = json.loads(raw)
     if set(policy) != {"schema_version", "skills", "implicit", "inputs", "aliases"} or policy["schema_version"] != 1:
         raise Invalid("unsupported source policy schema")
-    if policy["skills"] != list(NAMES) or policy["implicit"] != {n: True for n in NAMES}:
+    if policy["skills"] != list(owned_names(root)) or policy["implicit"] != {n: True for n in owned_names(root)}:
         raise Invalid("skill ownership or invocation policy changed")
     aliases = [{"path": p, "literal_target": t, "backing_root": b, "runtime_subpath": d, "literal_sha256": sha(t.encode())} for p, t, b, d in ALIASES]
     if policy["aliases"] != aliases:
@@ -116,7 +126,7 @@ def load_inputs(root):
         pinned[path] = entry["sha256"]
     actual = set()
     actual_links = {}
-    for name in NAMES:
+    for name in owned_names(root):
         files, links = inventory(root, "skills/" + name, {a[0] for a in ALIASES})
         actual |= files
         actual_links.update(links)
@@ -140,7 +150,7 @@ def load_inputs(root):
         if sha(data) != expected:
             raise Invalid("source SHA drift: " + path)
         contents[path] = data
-    for name in NAMES:
+    for name in owned_names(root):
         key = f"skills/{name}/SKILL.md"
         if key not in contents:
             raise Invalid("missing canonical SKILL: " + key)
@@ -264,7 +274,7 @@ def render(root, raw_policy, contents):
             records.append({"path": destination, "source": source, "logical_source": logical_path,
                             "source_sha256": sha(data), "sha256": sha(projected), "links": links})
         if runtime == ".agents":
-            for name in NAMES:
+            for name in owned_names(root):
                 destination = f"{runtime}/skills/{name}/agents/openai.yaml"
                 metadata = (f'interface:\n  display_name: "{name}"\n'
                             'policy:\n  allow_implicit_invocation: true\n').encode()
@@ -272,14 +282,14 @@ def render(root, raw_policy, contents):
                 records.append({"path": destination, "source": "generated:codex-metadata",
                                 "sha256": sha(metadata)})
     manifest = {"schema_version": 1, "source_policy_sha256": sha(raw_policy),
-                "generator_sha256": sha(Path(__file__).read_bytes()), "skills": list(NAMES),
+                "generator_sha256": sha(Path(__file__).read_bytes()), "skills": list(owned_names(root)),
                 "files": sorted(records, key=lambda r: r["path"])}
     files[MANIFEST] = json_bytes(manifest)
     return files
 
 
 def validate_runtime(root):
-    allowed = {f"{runtime}/skills/{name}": f"../../skills/{name}" for runtime in RUNTIMES for name in NAMES}
+    allowed = {f"{runtime}/skills/{name}": f"../../skills/{name}" for runtime in RUNTIMES for name in owned_names(root)}
     for runtime in RUNTIMES:
         path = checked_path(root, f"{runtime}/skills", missing=True)
         if not path.exists():
@@ -296,7 +306,7 @@ def validate_runtime(root):
 def output_inventory(root):
     actual = {}
     for runtime in RUNTIMES:
-        for name in NAMES:
+        for name in owned_names(root):
             target = f"{runtime}/skills/{name}"
             if not (root / target).exists() or (root / target).is_symlink():
                 raise Invalid("missing/nonphysical runtime package: " + target)
@@ -316,7 +326,7 @@ def stage_files(directory, files):
 
 
 def install(root, stage, fail_after):
-    targets = [f"{r}/skills/{n}" for r in RUNTIMES for n in NAMES] + [MANIFEST]
+    targets = [f"{r}/skills/{n}" for r in RUNTIMES for n in owned_names(root)] + [MANIFEST]
     installed = []
     backups = []
     backup_root = stage / "rollback"
@@ -349,7 +359,7 @@ def main():
     parser.add_argument("--root", type=Path, default=Path(__file__).absolute().parents[1])
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--check", action="store_true", help="recompute in temp and compare without repository writes")
-    mode.add_argument("--write", action="store_true", help="explicitly replace the six owned package directories and manifest")
+    mode.add_argument("--write", action="store_true", help="explicitly replace owned runtime package directories and manifest")
     parser.add_argument("--test-fail-after", type=int, choices=range(1, 8), help="exercise transactional rollback after this install step")
     args = parser.parse_args()
     root = args.root.absolute()

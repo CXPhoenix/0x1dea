@@ -1,6 +1,19 @@
 {
   "files": [
     {
+      "links": [],
+      "logical_source": "skills/article-discovery/SKILL.md",
+      "path": ".agents/skills/article-discovery/SKILL.md",
+      "sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8",
+      "source": "skills/article-discovery/SKILL.md",
+      "source_sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8"
+    },
+    {
+      "path": ".agents/skills/article-discovery/agents/openai.yaml",
+      "sha256": "641ef492c9b319271ee9289d3aee8409a036e24141c1aefaf3eb695f783292ad",
+      "source": "generated:codex-metadata"
+    },
+    {
       "links": [
         {
           "from": "../../scripts/vpHelper.ts",
@@ -791,6 +804,14 @@
       "source_sha256": "bcbf73c6144fb372b633bfed06a65c9e3318180d987622b273d4a8c8410f1c19"
     },
     {
+      "links": [],
+      "logical_source": "skills/article-discovery/SKILL.md",
+      "path": ".claude/skills/article-discovery/SKILL.md",
+      "sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8",
+      "source": "skills/article-discovery/SKILL.md",
+      "source_sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8"
+    },
+    {
       "links": [
         {
           "from": "../../scripts/vpHelper.ts",
@@ -1561,13 +1582,14 @@
       "source_sha256": "bcbf73c6144fb372b633bfed06a65c9e3318180d987622b273d4a8c8410f1c19"
     }
   ],
-  "generator_sha256": "8446420db45e314c65292327cac6f601f66001d8c91048702c73a1018bac6de4",
+  "generator_sha256": "493c657224ef88f5340afc1c73f6be1209b566e35eba9bf4a0d9042a935287c1",
   "schema_version": 1,
   "skills": [
     "phoenix-writing",
     "maintaining-writing-skills",
     "creating-vitepress-post",
-    "managing-article-publication"
+    "managing-article-publication",
+    "article-discovery"
   ],
-  "source_policy_sha256": "a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb"
+  "source_policy_sha256": "96638ddcd530ba8015cb4437551dc5f7c0343feccf5199b1d9d089cd756ec229"
 }

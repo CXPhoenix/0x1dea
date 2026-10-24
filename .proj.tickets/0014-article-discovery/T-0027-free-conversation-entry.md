@@ -2,7 +2,7 @@
 id: T-0027
 title: Start article discovery through free conversation in both project runtimes
 epic: 0014-article-discovery
-status: todo
+status: processing
 blocked_by: []
 proposal_key: B
 test_plan_approved: true
@@ -60,3 +60,7 @@ Use branch `tickets/T-0027/free-conversation-entry`. Follow the approved proposa
 ## Comments
 
 2026-10-24: allocated from approved proposal B; initial state todo. Only A is authorized to begin implementation in the current request. B–D retain their approved plans and dependency edges; do not infer implementation or landing completion from allocation.
+
+2026-10-24: owner authorized B–D implementation and one combined A–D PR; see planning/batch-pr-approval.md. Original approval tables and edges are unchanged.
+
+2026-10-24: B targeted TDD/native checkpoint complete; see implementation/T-0027/coverage-report.md and review/code-review-T-0027-checkpoint.md. Remains processing until the combined final regression and formal reviews; Claude host is unverified due to expired OAuth.

@@ -51,3 +51,9 @@ If the concept you need isn't in the glossary yet, that's a signal: either you'r
 If your output contradicts an existing ADR, surface it explicitly rather than silently overriding:
 
 > _Contradicts ADR-0007 (event-sourced orders), but worth reopening because…_
+
+## Editorial boundary
+
+This document governs engineering context. Article discovery uses its own editorial
+choices; an audience, feeling or writing decision does not update engineering
+CONTEXT.md or create an ADR. Follow article-discovery for the conversation path.
