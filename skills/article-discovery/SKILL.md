@@ -1,6 +1,6 @@
 ---
 name: article-discovery
-description: Start an article, explore an article idea or revisit its direction through conversation. Use when the author wants help finding a way into writing; direct drafting, specified revision and proofreading proceed without a discovery interview.
+description: Start an article, explore or revisit its direction, or save/resume article context and terminology. Direct drafting, specified revision and proofreading proceed without a discovery interview.
 ---
 
 # Article discovery
@@ -16,3 +16,10 @@ Preserve protected wording, stance, unresolved endings and deliberate ambiguity.
 Ordinary conversation creates no writing workspace, context document, engineering spec, ticket, ADR or test table. Code-only work and non-writing emotional conversation retain their own routes. If prose reveals a tooling or renderer change, identify that engineering need for the existing pipeline and continue unaffected prose.
 
 Use [Phoenix writing](../phoenix-writing/SKILL.md) only for an explicit Phoenix voice request or continuation of work already using that voice. Other voices remain the author's choice.
+
+## Saved writing context
+
+For an authorized context save/resume or an established writing workspace, read
+[optional persistence and vocabulary](references/persistence.md). Ordinary chatting
+and article-file-only requests need no notes. Preserve author choice states and
+reuse a sole compatible glossary without reopening settled questions.

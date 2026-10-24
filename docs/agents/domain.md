@@ -2,7 +2,7 @@
 
 How the engineering skills should consume this repo's domain documentation when exploring the codebase.
 
-**This repo is single-context**: one `CONTEXT.md` and one `docs/adr/`, both at the repo root.
+**Engineering is single-context**: one `CONTEXT.md` and one `docs/adr/`, both at the repo root.
 
 ## Before exploring, read these
 
@@ -57,3 +57,8 @@ If your output contradicts an existing ADR, surface it explicitly rather than si
 This document governs engineering context. Article discovery uses its own editorial
 choices; an audience, feeling or writing decision does not update engineering
 CONTEXT.md or create an ADR. Follow article-discovery for the conversation path.
+
+Authorized article notes follow article-discovery's optional persistence branch.
+A single existing article GLOSSARY.md or legacy CONTEXT.md retains its vocabulary
+ownership. Those local notes do not add engineering contexts or ADRs, and the root
+engineering CONTEXT.md is never their fallback vocabulary destination.

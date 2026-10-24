@@ -2,7 +2,7 @@
 id: T-0028
 title: Save and resume writing context with an on-demand compatible glossary
 epic: 0014-article-discovery
-status: todo
+status: processing
 blocked_by: [T-0026, T-0027]
 proposal_key: C
 test_plan_approved: true
@@ -62,3 +62,7 @@ Use branch `tickets/T-0028/optional-context-glossary`. Follow the approved propo
 ## Comments
 
 2026-10-24: allocated from approved proposal C; initial state todo. Only A is authorized to begin implementation in the current request. B–D retain their approved plans and dependency edges; do not infer implementation or landing completion from allocation.
+
+2026-10-24: owner batch authority permits stacking reviewed local A/B checkpoints before their combined PR lands; permanent dependencies remain. C01-before reproduced the old unexpected location and empty legacy CONTEXT creation.
+
+2026-10-24: C targeted native checkpoint complete; see implementation/T-0028/coverage-report.md and review/code-review-T-0028-checkpoint.md. One source ambiguity P1 was corrected and independently confirmed; affected branches were replayed. Full combined regression/formal reviews remain batch gates; status stays processing.

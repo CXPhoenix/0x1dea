@@ -169,6 +169,9 @@ three skills or run a tuning workflow as an adoption step. Provenance is in
   Direct drafting, specified revision and proofreading proceed without an interview.
   Conversation alone creates no workspace/context files; author-requested assistance
   takes precedence over a general writing-planning checklist.
+- Saving/resuming article context uses article-discovery's optional persistence
+  branch. A sole article GLOSSARY.md or legacy CONTEXT.md is reused; engineering
+  CONTEXT.md is not an article fallback. Conversation alone creates no notes.
 - Explicit Phoenix voice or continuing that work: load the active runtime's `phoenix-writing`.
 - Creating a new site article file: load `creating-vitepress-post`; chat drafts and revisions do not scaffold.
 - Writing-skill, article or instruction maintenance: load `maintaining-writing-skills`.

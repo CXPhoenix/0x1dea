@@ -1000,7 +1000,7 @@
       "sha256": "a26912d507382a265bde490314a53344a021f574f8bbe7797a5d4eb203863e28"
     },
     "scripts/publication_current.py": {
-      "successor_sha256": "7630663ddbc735b6a290adf472e40ad9da7c06dc5a88598faa5560861a1893b3",
+      "successor_sha256": "921648d7896d8224235b3c7c10ee8b4c6205ac928fe7c7c5615cabb86b03197e",
       "mode": "100644",
       "sha256": "ae535a8040f01620a77d3fab4d3f433cb578f883b1e24c162769ff05f0cb27cd"
     },
@@ -5302,11 +5302,11 @@
     },
     "maintenance/harness-adoption/runtime-source-policy.json": {
       "mode": "100644",
-      "sha256": "96638ddcd530ba8015cb4437551dc5f7c0343feccf5199b1d9d089cd756ec229"
+      "sha256": "efc2c83fda450f3001d0d4315d84a654298a3ea568f61b00bcd005b5a96cfb68"
     },
     "maintenance/harness-adoption/generated-writing-manifest.json": {
       "mode": "100644",
-      "sha256": "dcb7f3cf90955d865f71b16820ce988e40fe5ae94299c7ba95d82a7f8adb01e7"
+      "sha256": "08e26dabe216582022923e949c69eeec7bfa5932983c9ae6045ad161c520a78f"
     },
     "maintenance/writing-skills/SOURCES.md": {
       "mode": "100644",
@@ -6218,7 +6218,7 @@
     },
     ".proj.tickets/0014-article-discovery/T-0028-optional-context-glossary.md": {
       "mode": "100644",
-      "sha256": "c33d34c570e716e27958813e177010e0884b38bacb00ee067741e27794d3a487"
+      "sha256": "4a97b816fdd183bb4f5b9a2554b8e8d477dd46dcf696c2dced82c360e11541bf"
     },
     ".proj.tickets/0014-article-discovery/T-0026-local-notes-current-guard.md": {
       "mode": "100644",
@@ -6294,7 +6294,7 @@
     },
     ".agents/skills/article-discovery/SKILL.md": {
       "mode": "100644",
-      "sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8"
+      "sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035"
     },
     ".agents/skills/article-discovery/agents/openai.yaml": {
       "mode": "100644",
@@ -6302,7 +6302,7 @@
     },
     ".claude/skills/article-discovery/SKILL.md": {
       "mode": "100644",
-      "sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8"
+      "sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035"
     },
     ".proj.specs/0014-article-discovery/planning/batch-pr-approval.md": {
       "mode": "100644",
@@ -6310,11 +6310,11 @@
     },
     "AGENTS.md": {
       "mode": "100644",
-      "sha256": "2d327edc2753286ba4a92f67cbd2804080ebaf7da3f5e3d0021828695608e414"
+      "sha256": "5492e48162cb47aec3bf2fcec1f159435cede3f2e50ab7e8fce962f18922dcd4"
     },
     "docs/agents/domain.md": {
       "mode": "100644",
-      "sha256": "360f7b9cbfdd35aec428a5b3cd581f42ccd12863610cace98455d19111bbc3ac"
+      "sha256": "d14b5f02d004f3a82da35aa8b8fa5f0837d5ce24f1388faa63b9d1059261dfd6"
     },
     "docs/agents/language.md": {
       "mode": "100644",
@@ -6338,7 +6338,7 @@
     },
     "skills/article-discovery/SKILL.md": {
       "mode": "100644",
-      "sha256": "9ca2d3b8a17fdd1913a604a1b0da0d29b2f2b5e2c153d3b8fd078df5d9e7d1e8"
+      "sha256": "7f909af07b7a691f87404fc583d8b4b8325a66c42a151c43f3a920695a79d035"
     },
     "tests/article_publication/test_article_discovery_package.py": {
       "mode": "100644",
@@ -6363,6 +6363,42 @@
     ".proj.specs/0014-article-discovery/review/code-review-T-0027-checkpoint.md": {
       "mode": "100644",
       "sha256": "209b7a121fd0d0be1b5d79cd481e2cbe9244991df64c806f3649b4efea4f63f8"
+    },
+    ".agents/skills/article-discovery/references/persistence.md": {
+      "mode": "100644",
+      "sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    ".agents/skills/maintaining-writing-skills/references/writing-process.md": {
+      "mode": "100644",
+      "sha256": "edc7c29a57bcc9b3609ef719d848b1b01916539857dfb1b5cc5ad7c7f921d042"
+    },
+    ".claude/skills/article-discovery/references/persistence.md": {
+      "mode": "100644",
+      "sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    ".claude/skills/maintaining-writing-skills/references/writing-process.md": {
+      "mode": "100644",
+      "sha256": "edc7c29a57bcc9b3609ef719d848b1b01916539857dfb1b5cc5ad7c7f921d042"
+    },
+    "skills/article-discovery/references/persistence.md": {
+      "mode": "100644",
+      "sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    "skills/maintaining-writing-skills/references/writing-process.md": {
+      "mode": "100644",
+      "sha256": "4466f00c71fdd41db5eb9892fc1667a50a98d82d89fd45b9e3d117ffc63d004c"
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0028/coverage-report.md": {
+      "mode": "100644",
+      "sha256": "e9123e607e2a276ac1e8f917605e7101f65cacc1fd6674c6de76cf7f624dce78"
+    },
+    ".proj.specs/0014-article-discovery/implementation/T-0028/native-results.json": {
+      "mode": "100644",
+      "sha256": "d1af1fb12db5a68f4e684c38577b9cabe11a869dc0222905802452f2b77c1220"
+    },
+    ".proj.specs/0014-article-discovery/review/code-review-T-0028-checkpoint.md": {
+      "mode": "100644",
+      "sha256": "1436c392e1518280c5d22d9fe9ffb36be880c4fe93033322f5415c1613e09756"
     }
   }
 }
