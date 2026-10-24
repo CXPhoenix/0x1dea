@@ -197,6 +197,15 @@
         "Narrow description, task-conditional local/future references, observable completion; no cross-model efficacy claim."
       ],
       "invocation": "discoverable in both runtimes; no external-action authority"
+    },
+    "article-discovery": {
+      "source": "skills/article-discovery",
+      "created_on": "2026-10-24",
+      "ownership": "canonical English product; deterministic generated .agents/.claude packages",
+      "adaptations": [
+        "Article-specific conversational contract from reviewed epic 0014; preserves engineering interviewing and domain-modeling skills."
+      ],
+      "invocation": "discoverable for article ideas/direction; explicit invocation supported; no new file or remote-action authority"
     }
   },
   "local_adaptations": {

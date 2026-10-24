@@ -1,0 +1,17 @@
+{
+  "id": "E7",
+  "criteria": [
+    "正文由問題引出圖中的更新／失效時間差",
+    "10:00、10:05與空窗範圍精確，保留可能而非必然",
+    "自然融入圖的閱讀關係，不只是圖存在的裝飾描述",
+    "保留單快取範圍，不推跨服務保證",
+    "正文＋一行圖說，無製圖prompt或假稱生成圖片"
+  ],
+  "scale": {
+    "0": "violated or missing",
+    "1": "partial/borderline",
+    "2": "satisfied with evidence"
+  },
+  "hard_failures": "Violation of explicit output/format constraints, altered protected facts/stance, invented evidence/experience, unauthorized article/tool side effect, incorrect mechanism",
+  "pass": "No hard failure and every criterion >=1; total >=8/10. Report full/partial scores and quoted evidence, not binary alone."
+}

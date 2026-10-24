@@ -1,0 +1,10 @@
+{
+  "acceptance_criteria": 17,
+  "traceability_rows": 48,
+  "all_criteria_reached": true,
+  "original_prompt_unchanged": true,
+  "surrounding_context_files_unchanged": 60,
+  "spec_sha256": "1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4",
+  "spec_git_blob": "aa08308eb23756514ebc770e6a4719c60388d83d",
+  "scope": "Document integrity only; not behavioral acceptance or review outcome."
+}

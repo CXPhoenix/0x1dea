@@ -1,0 +1,12 @@
+{
+  "id": "E3",
+  "request": "Use Phoenix voice to explain cache invalidation in English, at most 80 words. No jokes, emoticons, questions, headings, or invented personal experiences. Return only the paragraph. Use only the supplied facts.",
+  "materials": {
+    "facts": [
+      "A cache stores reusable results.",
+      "If the underlying data changes before the cached copy is removed or refreshed, the copy may be stale.",
+      "An invalidation rule decides when to remove or refresh that copy.",
+      "This scenario describes one cache, not coordination among multiple services."
+    ]
+  }
+}

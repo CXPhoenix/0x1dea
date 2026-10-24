@@ -1,0 +1,699 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; script-src 'none'"><title>0014 article-discovery｜第一輪審查證據</title><style> :root{color-scheme:light dark;--bg:#f7f8fa;--paper:#fff;--text:#18212b;--muted:#536171;--line:#cbd2db;--accent:#a12b3e;--code:#edf0f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI","PingFang TC","Noto Sans TC",sans-serif;line-height:1.8}main{max-width:1080px;margin:auto;padding:52px 30px 80px}.eyebrow,.kicker{font-size:.82rem;letter-spacing:.04em;color:var(--muted)}h1{font-size:clamp(2rem,4vw,3rem);line-height:1.25;margin:12px 0;color:var(--accent)}h2{font-size:1.45rem;margin:0 0 16px}h3{font-size:1.18rem;line-height:1.5;margin:6px 0 14px}.lead{font-size:1.18rem;max-width:56ch}section{margin-top:42px;padding-top:24px;border-top:1px solid var(--line)}article+article{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}p{margin:10px 0 16px}nav{display:flex;gap:20px;flex-wrap:wrap;margin:24px 0}a{color:var(--accent);text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.small{color:var(--muted);font-size:.88rem}.table-wrap{overflow-x:auto;max-width:100%}table{border-collapse:collapse;width:100%;text-align:left;font-size:.92rem}th,td{padding:12px;vertical-align:top;border-bottom:1px solid var(--line)}thead th{background:var(--code)}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}code{overflow-wrap:anywhere}pre{background:var(--code);padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}details{margin:14px 0;border:1px solid var(--line);padding:14px;background:var(--paper)}summary{cursor:pointer;overflow-wrap:anywhere}.sources{font-size:.85rem;overflow-wrap:anywhere}@media(prefers-color-scheme:dark){:root{--bg:#11161c;--paper:#19212a;--text:#e4e9ef;--muted:#adb9c6;--line:#3c4855;--accent:#ffb2bf;--code:#202b36}}@media(max-width:600px){main{padding:28px 16px 60px}th,td{padding:9px}.small{font-size:.85rem}section{margin-top:30px}}</style></head><body><main><p class="eyebrow">0x1DEA / 0014 article-discovery / Round 1 / 2026-10-24</p><h1>第一輪尚未通過</h1><p class="lead">1 項 P0、3 類 P1。公開準備的完成條件需要先釐清，才能通過零 P0 關卡。</p><p>本輪檢查文章入口是否會過度追問，以及工程／文章分工、按需詞彙檔和既有 CONTEXT 的相容性。四個面向使用獨立上下文；原始分級全部保留。</p><nav aria-label="報告導覽"><a href="#findings">問題</a><a href="#focus">指定重點</a><a href="#limits">界線與代價</a><a href="#evidence">證據表</a></nav><section><h2>四個面向的回傳結果</h2><div class="table-wrap"><table><thead><tr><th>面向</th><th>P0</th><th>P1</th><th>P2</th><th>Reviewer</th></tr></thead><tbody><tr><th scope="row">完整性</th><td>0</td><td>3</td><td>0</td><td><code>/root/ad_completeness</code></td></tr><tr><th scope="row">可驗證性</th><td>1</td><td>0</td><td>0</td><td><code>/root/ad_verifiability</code></td></tr><tr><th scope="row">契約衝突</th><td>0</td><td>0</td><td>0</td><td><code>/root/ad_contracts</code></td></tr><tr><th scope="row">紅隊</th><td>0</td><td>1</td><td>0</td><td><code>/root/ad_redteam</code></td></tr></tbody></table></div><p class="small">合計 1 筆 P0、4 筆 P1。完整性 C-R1-03 與紅隊 RT-01 指向相同的筆記／guard 問題，按問題歸納為 3 類 P1；合併索引不改變原始分級。依據：E01、E02。</p></section><section id="findings"><h2>四項需要處理的問題</h2><article aria-labelledby="G1"><p class="kicker">P0 · V-01 · 推論</p><h3 id="G1">公開準備檢查缺少可判定的完成條件</h3><p>D8 與 AC-13 使用 applicable、address、handled、relevant stage，未定義各類檢查的最低結果或指定提供判準的既有契約。</p><p><strong>反例：</strong>含同事私人對話與外部圖片的公開準備：籠統提醒與逐項列出核對結果、待決公開範圍及缺口，都可以聲稱已處理，卻無法依相同規則驗收。</p><p><strong>影響：</strong>公開準備無法一致判定，也可能以持續籠統追問取代具體處理。</p><p><strong>最小修正方向：</strong>只為已列類別補上觸發與最低輸出：已知核對結果、具體作者待決事項、未驗證缺口；不新增每篇必填的問卷。</p><p class="small">未執行的情境反例；分級來自對應 reviewer。若 handled 只表示辨識問題，須明寫最低辨識結果與未解項目的交付方式；目前兩種讀法都成立。</p><p class="sources">凍結來源：<a href="#src-1">.proj.specs/0014-article-discovery/spec.en.md:86–90</a><br><a href="#src-2">.proj.specs/0014-article-discovery/spec.en.md:115–115</a><br><a href="#src-3">docs/agents/review.md:20–24</a></p></article><article aria-labelledby="G2"><p class="kicker">P1 · C-R1-01 · 推論</p><h3 id="G2">單一未指定 GLOSSARY.md 的沿用規則未完整落到驗收</h3><p>D7 已說明沿用單一既有 GLOSSARY 或 legacy CONTEXT，但 AC-12 只明列 single legacy CONTEXT 或 designated glossary；矩陣也未明列唯一、未指定的 GLOSSARY。</p><p><strong>反例：</strong>工作區只有一份 GLOSSARY，返回寫作時 agent 仍要求重新指定權威；正文已排除此行為，但明列驗收案例可能抓不到。</p><p><strong>影響：</strong>在正常續寫情境增加一次本可省略的追問。</p><p><strong>最小修正方向：</strong>AC-12 與對應矩陣明列單一未指定 GLOSSARY、單一 legacy CONTEXT，以及有效指定的 glossary。</p><p class="small">未執行的情境反例；分級來自對應 reviewer。可寬鬆解讀 AC-12 已涵蓋，但 designated 限定和矩陣列舉未明確涵蓋；是驗收覆蓋缺口。</p><p class="sources">凍結來源：<a href="#src-4">.proj.specs/0014-article-discovery/spec.en.md:79–84</a><br><a href="#src-5">.proj.specs/0014-article-discovery/spec.en.md:114–114</a><br><a href="#src-6">.proj.specs/0014-article-discovery/traceability.md:37–38</a></p></article><article aria-labelledby="G3"><p class="kicker">P1 · C-R1-02 · 推論</p><h3 id="G3">暫定建議不得升格為作者確認，缺少直接驗收</h3><p>D3 要求推論不可記成作者確認，D5 保存 confirmed／tentative settings；AC-08 與 R18 只明列保存和 readback，未直接驗收狀態忠實性。</p><p><strong>反例：</strong>agent 建議暫以初學者為受眾，作者未答就要求試寫。agent 將受眾存成作者已確認，讀回完全一致，仍可能通過現有保存驗收。</p><p><strong>影響：</strong>下一次把推論當成已定選擇，限制作者方向或衍生重新確認。</p><p><strong>最小修正方向：</strong>在驗收與矩陣補上對話→保存→返回的狀態保留，禁止未答建議或推論升格為作者確認。</p><p class="small">未執行的情境反例；分級來自對應 reviewer。相關脈絡可被解讀為包含正確狀態，但沒有明示 pass/fail 落點；正文仍足以指導實作，因此列 P1。</p><p class="sources">凍結來源：<a href="#src-7">.proj.specs/0014-article-discovery/spec.en.md:43–45</a><br><a href="#src-8">.proj.specs/0014-article-discovery/spec.en.md:64–67</a><br><a href="#src-9">.proj.specs/0014-article-discovery/spec.en.md:110–110</a><br><a href="#src-10">.proj.specs/0014-article-discovery/traceability.md:26–26</a></p></article><article aria-labelledby="G4"><p class="kicker">P1 · C-R1-03 / RT-01 · 推論</p><h3 id="G4">本機筆記與 current source guard 的相容界線未定</h3><p>保存與 current guard 分別有驗收，但缺少保存動態筆記後再執行來源盤點的交集。</p><p><strong>反例：</strong>作者合法保存 .proj.writing/rain/PROJECT.md 並由 Git 忽略；其後 current guard 仍可能將它視為未列出的來源而拒絕。</p><p><strong>影響：</strong>正常文章保存成為工程驗證的意外障礙；可能誘發搬走筆記或過度放寬來源界線。</p><p><strong>最小修正方向：</strong>明定筆記的來源分類及驗證 surface，補保存／更新後的 guard 驗收，維持精確工程來源與歷史保護。</p><p class="small">未執行的情境反例；分級來自對應 reviewer。由凍結原始碼推論，未實際建立工作區或執行 guard。契約 reviewer 認為規格未承諾含筆記的原始工作目錄直接通過，因此未列為不可相容契約。</p><p class="sources">凍結來源：<a href="#src-11">.proj.specs/0014-article-discovery/spec.en.md:64–68</a><br><a href="#src-12">.proj.specs/0014-article-discovery/spec.en.md:143–143</a><br><a href="#src-13">scripts/publication_current.py:227–248</a><br><a href="#src-14">scripts/publication_current.py:288–302</a><br><a href="#src-15">scripts/verify-harness-adoption.py:59–63</a></p></article></section><section id="focus"><h2>對指定重點的回答</h2><p><strong>過度追問：</strong>四份初始報告都認為自由聊、直接起稿、listen-only、沿用答案和停問有可檢查的條文。仍有驗收缺口可能讓正常續寫多問一次，或把暫定設定當成已定。這是靜態判讀，不是實際對話已通過。</p><p><strong>工程／文章分工：</strong>規格已明示文章例外，且 skill／工具修改保留工程流程；契約 reviewer 未發現不可相容規則。正常保存後的工程驗證仍有交集缺口。</p><p><strong>GLOSSARY 與 CONTEXT：</strong>無術語不建檔、legacy 單檔沿用、雙檔權威不明只暫停詞彙寫入、工程 root 不作 fallback，都已有正文規則。單一未指定 GLOSSARY 的驗收覆蓋仍須補齊。</p><p class="small">以上判讀依據 E03、E04、E05；不能推導成實作、宿主或使用者體驗的通過證明。</p></section><section id="limits"><h2>界線、代價與保留觀點</h2><p>完整性與紅隊將筆記／guard 交集列為 P1。契約 reviewer 也確認 guard 會讀 ignored 檔案，但認為規格沒有承諾含筆記的原始工作目錄直接通過，因此不構成不可相容契約。兩種面向的判讀並列保留；本報告沒有用零 finding 抵銷 P1，也沒有把它升級為 P0。</p><p>修正應以補齊可觀察結果與漏掉的組合為主。若為此新增每篇必填問卷，會犧牲「先自由聊」；若以寬鬆目錄豁免接納筆記，會犧牲原本的來源邊界。筆記應如何與驗證 surface 隔離，需要在規格修訂時明定。</p><p>報告的本機 file:// 預覽被瀏覽器安全政策拒絕，工具只允許 HTTP／HTTPS；本次沒有繞過限制。已進行靜態結構檢查，視覺呈現、鍵盤操作與實際網路行為仍未驗證。依據：E09。</p><p>本次只有規格與原始碼閱讀。沒有實作 skill、測試真實對話、建立寫作筆記、執行 guard 反例或驗證發布。補充案例實際只有 E1–E8，不宣稱 E9 已核對。</p><p>第一輪原始來源 40 份，同輪補充 23 份；63 份及 frozen prompt 的雜湊均保持一致。spec 與 traceability 未改動。本次沒有第二輪、ticket、commit 或遠端交付。</p><p class="small">依據：E06、E07、E08。零 P0 是進入 ticket 階段的條件；本輪 V-01 仍開啟。</p></section><section><h2>下一個決定</h2><p>是否依這四項修正方向調整規格，明定筆記與 current guard 的驗證界線，再以原始凍結提示進行第二輪？</p><p class="small">這份報告提供可檢視的修正方向，沒有代替作者選擇具體儲存／驗證方案。</p></section><section id="evidence"><h2>證據表</h2><div class="table-wrap"><table><thead><tr><th>編號</th><th>主張</th><th>來源</th><th>層級</th></tr></thead><tbody><tr><th scope="row">E01</th><td>四個獨立面向的回傳分級；補充結果一併計入</td><td>以下內嵌的四份初始及四份同輪補充 reviewer 報告</td><td>已驗證</td></tr><tr><th scope="row">E02</th><td>1 筆 P0、4 筆 P1，歸納為 1 類 P0、3 類 P1</td><td>findings.json；同一 G4 保留 C-R1-03 與 RT-01</td><td>已驗證</td></tr><tr><th scope="row">E03</th><td>過度追問的靜態限制與殘留驗收缺口</td><td><a href="#src-16">.proj.specs/0014-article-discovery/spec.en.md:35–45</a>；四份 reviewer 報告及 C-R1-01／02、V-01</td><td>推論</td></tr><tr><th scope="row">E04</th><td>工程／文章分流為明示提案；未發現不可相容規則</td><td><a href="#src-17">.proj.specs/0014-article-discovery/spec.en.md:50–60</a>；契約 reviewer 初始／補充報告</td><td>推論</td></tr><tr><th scope="row">E05</th><td>詞彙檔正文已有按需與 legacy 相容規則；AC 覆蓋不足</td><td><a href="#src-18">.proj.specs/0014-article-discovery/spec.en.md:64–84</a>；C-R1-01 與契約／紅隊報告</td><td>推論</td></tr><tr><th scope="row">E06</th><td>筆記／guard 的不同面向判讀並列，沒有多數表決</td><td>C-R1-03、RT-01 及 supplement-contracts.md</td><td>推論</td></tr><tr><th scope="row">E07</th><td>63 份來源、spec 與 prompt 維持原始雜湊；僅使用一輪</td><td>capture-verification.json；兩份 capture；findings.json</td><td>已驗證</td></tr><tr><th scope="row">E08</th><td>P0 未解決會阻擋 ticket；第二輪沿用提示，最多兩輪</td><td><a href="#src-19">docs/agents/review.md:31–61</a></td><td>已驗證</td></tr><tr><th scope="row">G1</th><td>公開準備檢查缺少可判定的完成條件；反例與修正方向</td><td>V-01；上列凍結條文及原始報告</td><td>推論</td></tr><tr><th scope="row">G2</th><td>單一未指定 GLOSSARY.md 的沿用規則未完整落到驗收；反例與修正方向</td><td>C-R1-01；上列凍結條文及原始報告</td><td>推論</td></tr><tr><th scope="row">G3</th><td>暫定建議不得升格為作者確認，缺少直接驗收；反例與修正方向</td><td>C-R1-02；上列凍結條文及原始報告</td><td>推論</td></tr><tr><th scope="row">G4</th><td>本機筆記與 current source guard 的相容界線未定；反例與修正方向</td><td>C-R1-03、RT-01；上列凍結條文及原始報告</td><td>推論</td></tr><tr><th scope="row">E09</th><td>本機報告預覽遭工具政策拒絕；僅完成靜態檢查</td><td>review/report-preview-status.md；report-validation.json</td><td>已驗證</td></tr></tbody></table></div><p class="small">已驗證＝實際讀到的條文、檔案或檢查結果；推論＝reviewer 根據凍結資料提出的判斷與反例。本報告未加入新的外部研究主張。</p></section><section><h2>內嵌凍結條文</h2><details id="src-1"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:86–90</code></summary><pre>  86  ### D8. Drafting, public checks and authority
+  87  
+  88  - During discovery, personal feeling is expression rather than a claim requiring proof. Verify material external factual claims when needed; keep evidence, author opinion, hypothetical examples and unavailable verification distinct. Do not turn a single experience into a universal recommendation.
+  89  - Before requested public preparation, address applicable factual/source/third-party context and media-reading issues. Search optimization is considered when requested, not a criterion for every personal entry. These checks do not require speculative warnings during every initial conversation.
+  90  - Route creation, preview, prepare, verification and publication to the existing owners. A brief, resolved term, request to save notes, or completed discovery grants no additional commit, push, PR, merge, deploy, account or remote-index authority. Previously granted applicable authority is reused rather than requested again.</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-2"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:115–115</code></summary><pre> 115  | AC-13 | Expressive experience retains its scope; applicable external claims and public-preparation issues are handled at the relevant stage. Search settings are not mandatory. No local context or discovery action implies a new remote operation. |</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-3"><summary><code>docs/agents/review.md:20–24</code></summary><pre>  20  1. **Completeness.** Does `traceability.md` have holes? Every `{type × field × boundary}` combination
+  21     must reach an acceptance criterion. Report each combination that does not.
+  22  2. **Verifiability.** Can each acceptance criterion be judged pass or fail without interpretation?
+  23     Words like &quot;appropriately&quot;, &quot;reasonably&quot;, &quot;as needed&quot;, &quot;where possible&quot; make a criterion
+  24     unjudgeable: grade those P0.</pre><p class="small">來源 SHA-256：<code>59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e</code></p></details>
+<details id="src-4"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:79–84</code></summary><pre>  79  ### D7. Legacy context and glossary authority
+  80  
+  81  - For an existing writing workspace, an explicitly designated active glossary wins within that workspace. Without a designation, reuse the single existing article GLOSSARY.md or legacy article CONTEXT.md as its active vocabulary artifact. Read and maintain that existing artifact within authorization; do not create a duplicate merely to adopt the new name.
+  82  - If both filenames exist without a designated owner, or a designated file is missing/invalid, report the concrete ambiguity before vocabulary writes. Resolve that ownership with the author, while continuing unrelated prose. Do not silently merge, overwrite, rename, delete or choose by modification time.
+  83  - This epic defines compatibility, not a migration of existing article files. Any requested later migration must preserve the existing entries and establish one active owner. The repository&#x27;s engineering context is never a fallback article glossary.
+  84  - Replace the live writing guidance that universally requires a writing CONTEXT.md plus PROJECT.md with these optional persistence and article-glossary rules. Retain historical snapshots as historical evidence and leave external/global plugins unchanged.</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-5"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:114–114</code></summary><pre> 114  | AC-12 | A single legacy article CONTEXT.md or designated glossary is reused without a new competing file. Two unassigned glossaries, an invalid designation or a missing designated target pause glossary writes for resolution without deleting files or stopping unrelated prose. |</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-6"><summary><code>.proj.specs/0014-article-discovery/traceability.md:37–38</code></summary><pre>  37  | R29 | Legacy vocabulary | only article CONTEXT.md exists | existing temp workspace read/write | reuse active legacy glossary, no rename/delete/duplicate | AC-12 | AD27 |
+  38  | R30 | Glossary authority | designated owner; competing filenames; invalid/missing designation | temp workspace plus conversation | respect valid designation; resolve ambiguous ownership before vocabulary writes only | AC-12 | AD28 |</pre><p class="small">來源 SHA-256：<code>10b76ae9e98195bea614ed497238b1c5f54d4f89b47204971304d0cf10f98999</code></p></details>
+<details id="src-7"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:43–45</code></summary><pre>  43  - Organize only settings that help the present work: starting material, intent, audience/prior knowledge, genre, voice, protected passages or emotional texture, scope, terminology, sources, assistance and public/search needs. These are available dimensions, not mandatory fields or a fixed serialization schema.
+  44  - Writing for oneself, not specifying an audience, expressing emotion and discovering a purpose through writing are complete author choices. Preserve intentional contradictions, unresolved endings and ambiguity unless the author requests their revision. Do not invent personal experience, psychological causes, a changed stance or a moral/reconciliatory ending.
+  45  - A tentative suggestion is identified as tentative; inference is not recorded as owner confirmation. Existing explicit authorization remains valid, and a routine summary is not another approval gate.</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-8"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:64–67</code></summary><pre>  64  - Ordinary conversation and single-use assistance create no workspace, PROJECT.md or GLOSSARY.md by default. A request to save/resume writing context, or an already-established authorized writing workspace, enables persistence. A request for an article file alone does not additionally require context files.
+  65  - Reuse the established writing workspace and task document. When durable notes are requested and no location exists, use the local writing-workspace convention defined under Further Notes. Select a stable article key from the known topic; once established, changing the display title does not rename the workspace.
+  66  - PROJECT.md, or the existing equivalent, holds only relevant confirmed/tentative settings, source pointers, pending author decisions and the next action. Save the information needed to resume; a full chat transcript or every emotion need not be copied.
+  67  - Verify the actual saved bytes before reporting persistence. If the requested location is unavailable, continue unaffected writing and report exactly which context was not saved. Do not claim a conversation-only summary was persisted.</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-9"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:110–110</code></summary><pre> 110  | AC-08 | A conversation without persistence writes no context artifacts. A save/resume request or established authorized workspace saves/reuses relevant context outside website content; readback matches the reported result. Failed/unavailable writes are reported as unsaved without blocking unrelated prose. |</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-10"><summary><code>.proj.specs/0014-article-discovery/traceability.md:26–26</code></summary><pre>  26  | R18 | Persistence enabled | save/resume request; established workspace | file write/readback | save/reuse only relevant brief/context at authorized location | AC-08 | AD17 |</pre><p class="small">來源 SHA-256：<code>10b76ae9e98195bea614ed497238b1c5f54d4f89b47204971304d0cf10f98999</code></p></details>
+<details id="src-11"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:64–68</code></summary><pre>  64  - Ordinary conversation and single-use assistance create no workspace, PROJECT.md or GLOSSARY.md by default. A request to save/resume writing context, or an already-established authorized writing workspace, enables persistence. A request for an article file alone does not additionally require context files.
+  65  - Reuse the established writing workspace and task document. When durable notes are requested and no location exists, use the local writing-workspace convention defined under Further Notes. Select a stable article key from the known topic; once established, changing the display title does not rename the workspace.
+  66  - PROJECT.md, or the existing equivalent, holds only relevant confirmed/tentative settings, source pointers, pending author decisions and the next action. Save the information needed to resume; a full chat transcript or every emotion need not be copied.
+  67  - Verify the actual saved bytes before reporting persistence. If the requested location is unavailable, continue unaffected writing and report exactly which context was not saved. Do not claim a conversation-only summary was persisted.
+  68  - Local writing notes stay outside website content and are ignored by Git by default. Ignoring a new directory does not untrack an existing file, guarantee confidentiality or authorize remote storage. Explicitly requested notes elsewhere retain that destination and its actual visibility; do not silently relocate or add publication actions.</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-12"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:143–143</code></summary><pre> 143  - Default durable local notes: `.proj.writing/&lt;article-key&gt;/PROJECT.md` and, only under D6, `.proj.writing/&lt;article-key&gt;/GLOSSARY.md`. The key is a single nonempty directory component, not `.` or `..`, with no separator; an article title/path does not grant filesystem authority. Add `.proj.writing/` to `.gitignore` during implementation; do not create this root for conversation-only work. A key collision reuses only the established same project; otherwise choose a distinct key without overwriting. Reject linked default workspace components rather than following them. Workspace keys never determine a public article URL.</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-13"><summary><code>scripts/publication_current.py:227–248</code></summary><pre> 227  def source_names(root):
+ 228      &quot;&quot;&quot;Include ignored sources, except named local dependency/build/cache outputs.&quot;&quot;&quot;
+ 229      names = set()
+ 230      pending = [root]
+ 231      while pending:
+ 232          directory = pending.pop()
+ 233          for path in directory.iterdir():
+ 234              name = path.relative_to(root).as_posix()
+ 235              excluded = name in {&#x27;.git&#x27;, &#x27;node_modules&#x27;, &#x27;blog/.vitepress/dist&#x27;,
+ 236                                  &#x27;blog/.vitepress/cache&#x27;, &#x27;blog/.vitepress/.temp&#x27;}
+ 237              excluded |= path.name == &#x27;__pycache__&#x27; and name.startswith((&#x27;scripts/&#x27;, &#x27;tests/&#x27;))
+ 238              if excluded:
+ 239                  if not path.is_dir() or path.is_symlink():
+ 240                      raise ValueError(&#x27;linked/non-directory local output: &#x27; + name)
+ 241                  continue
+ 242              if path.is_symlink() or path.is_file():
+ 243                  names.add(name)
+ 244              elif path.is_dir():
+ 245                  pending.append(path)
+ 246              else:
+ 247                  raise ValueError(&#x27;nonregular source: &#x27; + name)
+ 248      return names</pre><p class="small">來源 SHA-256：<code>759826ee582cf0fd8b8d72cf5a6911b09b89dd53c1abe5f17cf48167697bcd58</code></p></details>
+<details id="src-14"><summary><code>scripts/publication_current.py:288–302</code></summary><pre> 288      expected = {p: identity(e) for p, e in tree(control, BASES[role]).items()}
+ 289      expected.update(data[&#x27;common&#x27;])
+ 290      expected[POLICY] = {&#x27;mode&#x27;: &#x27;100644&#x27;, &#x27;sha256&#x27;: digest(regular(control, POLICY).read_bytes())}
+ 291      # Only targets containing the actual approved publication require this record.
+ 292      # Historical M0 projections retain their original source set.
+ 293      try:
+ 294          git(root, &#x27;merge-base&#x27;, &#x27;--is-ancestor&#x27;, DISCORD_PUBLICATION, &#x27;HEAD&#x27;)
+ 295      except subprocess.CalledProcessError as error:
+ 296          if error.returncode != 1:
+ 297              raise ValueError(&#x27;published Discord source ancestry is unavailable&#x27;) from error
+ 298      else:
+ 299          expected[DISCORD_RECORD] = DISCORD_IDENTITY
+ 300      actual = source_names(root)
+ 301      if actual != set(expected):
+ 302          raise ValueError(&#x27;current reconciliation source inventory mismatch: &#x27; + &#x27;, &#x27;.join(sorted(actual ^ set(expected))[:8]))</pre><p class="small">來源 SHA-256：<code>759826ee582cf0fd8b8d72cf5a6911b09b89dd53c1abe5f17cf48167697bcd58</code></p></details>
+<details id="src-15"><summary><code>scripts/verify-harness-adoption.py:59–63</code></summary><pre>  59      if current.exists() or current.is_symlink() or ancestry.returncode == 0:
+  60          if not current_control:
+  61              raise ValueError(&#x27;current target requires a complete trusted current control&#x27;)
+  62          from publication_current import verify
+  63          print(json.dumps(verify(CONTROL, root, workflow_admission=from_args(args, CONTROL, root)), indent=2))</pre><p class="small">來源 SHA-256：<code>cecd58b0cd8dbe7fde3030b20ae8bce949d54a9be3e839b91da9baa08a47a73a</code></p></details>
+<details id="src-16"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:35–45</code></summary><pre>  35  - Start with the supplied material and requested assistance. Respond, explore or draft as requested. Ask a question only when alternative answers would change the next action, the meaning of the prose, or a material public claim. Discoverable facts are the agent&#x27;s work; authorial decisions remain the author&#x27;s.
+  36  - Reuse answers and existing writing context. Questions whose prerequisites remain unknown wait until relevant. Offer alternatives when a real author choice exists; the author can decline the choice or leave it open.
+  37  - Treat unknown, tentative, intentionally unset and not applicable as distinct valid conditions when that distinction affects the work. Do not require a form, fixed question count, persona, measurable outcome, thesis or outline to begin.
+  38  - The author may change direction, audience, genre or assistance during drafting. Update only affected decisions. Mixed genres do not require an exclusive mode selection.
+  39  - Discovery ends when the requested next action can be performed with the remaining unknowns identified, when the author asks to start writing, or when the requested listening/response is delivered. A fact needed for a particular factual claim can remain pending while other prose continues. An explicit request for listening alone produces a response without unsolicited rewriting or evaluation.
+  40  
+  41  ### D3. Article settings and author agency
+  42  
+  43  - Organize only settings that help the present work: starting material, intent, audience/prior knowledge, genre, voice, protected passages or emotional texture, scope, terminology, sources, assistance and public/search needs. These are available dimensions, not mandatory fields or a fixed serialization schema.
+  44  - Writing for oneself, not specifying an audience, expressing emotion and discovering a purpose through writing are complete author choices. Preserve intentional contradictions, unresolved endings and ambiguity unless the author requests their revision. Do not invent personal experience, psychological causes, a changed stance or a moral/reconciliatory ending.
+  45  - A tentative suggestion is identified as tentative; inference is not recorded as owner confirmation. Existing explicit authorization remains valid, and a routine summary is not another approval gate.</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-17"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:50–60</code></summary><pre>  50  | Work | Entry and governing responsibilities | Boundary |
+  51  |---|---|---|
+  52  | Editorial conversation, idea discovery, drafting and revision | Article discovery when useful, then the relevant writing/maintenance route | Does not require an engineering spec, ticket, test table or adversarial review merely to discuss or write prose |
+  53  | New website article artifact | Existing article-creation CLI and creation skill | File creation is a separate requested artifact; preserve creation time and existing assets |
+  54  | Website preview and selected publication preparation | Existing publication contracts | Preserve topic provenance, ownership, checks and action-specific authority |
+  55  | Skill, instruction, CLI, renderer, configuration or website behavior change | Existing engineering stages, spec/tracker, ticket branches, approved testing and reviews | This epic is engineering work even though its product supports writing |
+  56  
+  57  - The engineering nine-stage pipeline applies to engineering/tooling changes. Add an explicit editorial routing exception to the live project instructions; this is a proposed narrow change to pipeline applicability, not a claim that the exception already exists.
+  58  - Editorial discussion and drafting do not allocate engineering tickets for their own sake. Any tracked topic allocation, branch convention, source provenance or review receipt required by the existing article-delivery contract still applies when that delivery is requested. This epic introduces no branch-naming or publication bypass.
+  59  - If writing uncovers a need for a new renderer, component or automation, identify that engineering need separately. Continue unaffected prose; do not silently implement or publish the engineering change as part of discovery.
+  60  - Keep article briefs and terminology separate from the engineering glossary, ADRs, implementation tickets and decision maps. Writing notes are not a second engineering tracker. An editorial choice is not automatically an ADR.</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-18"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:64–84</code></summary><pre>  64  - Ordinary conversation and single-use assistance create no workspace, PROJECT.md or GLOSSARY.md by default. A request to save/resume writing context, or an already-established authorized writing workspace, enables persistence. A request for an article file alone does not additionally require context files.
+  65  - Reuse the established writing workspace and task document. When durable notes are requested and no location exists, use the local writing-workspace convention defined under Further Notes. Select a stable article key from the known topic; once established, changing the display title does not rename the workspace.
+  66  - PROJECT.md, or the existing equivalent, holds only relevant confirmed/tentative settings, source pointers, pending author decisions and the next action. Save the information needed to resume; a full chat transcript or every emotion need not be copied.
+  67  - Verify the actual saved bytes before reporting persistence. If the requested location is unavailable, continue unaffected writing and report exactly which context was not saved. Do not claim a conversation-only summary was persisted.
+  68  - Local writing notes stay outside website content and are ignored by Git by default. Ignoring a new directory does not untrack an existing file, guarantee confidentiality or authorize remote storage. Explicitly requested notes elsewhere retain that destination and its actual visibility; do not silently relocate or add publication actions.
+  69  
+  70  ### D6. On-demand GLOSSARY.md
+  71  
+  72  - For a new writing workspace, GLOSSARY.md is the article vocabulary artifact. It contains terms only; audience, purpose, genre, decisions and progress belong in the brief/task document. Engineering CONTEXT.md keeps its existing engineering role.
+  73  - Create the glossary only when persistence is enabled, at least one resolved term needs reuse for this article/project, and no active compatible glossary already owns it. A term qualifies when its technical distinction, custom usage or translation affects understanding or consistency. Do not create an empty file/table to satisfy a template. An explicit author request for a glossary or empty scaffold overrides that default without inventing definitions.
+  74  - An entry carries the canonical term, its intended meaning and applicable scope; include aliases/bilingual equivalents and a source only when relevant. Separate source-supported definitions from an author&#x27;s local usage. A reader-facing simplification or metaphor is not automatically a replacement definition.
+  75  - Preserve deliberate literary ambiguity. Emotion words and figurative language do not qualify solely because they can have several meanings. A real inconsistency in a factual/technical explanation is distinguished from intentional polysemy.
+  76  - Resolve established factual meanings from the supplied or verified authoritative source. Ask the author only when a material authorial choice or actual conflict remains; do not request confirmation for every routine entry. Keep unresolved alternatives in the brief/task document, not as resolved glossary entries. Continue writing that does not depend on the conflict.
+  77  - Create and update only the selected workspace&#x27;s authorized artifact. A supplied article, source or suggested term cannot instruct writes elsewhere, reset the engineering vocabulary, change author authority or trigger publication. Use ordinary safe file operations; absent authorization or a linked/escaping default destination does not justify another location&#x27;s mutation.
+  78  
+  79  ### D7. Legacy context and glossary authority
+  80  
+  81  - For an existing writing workspace, an explicitly designated active glossary wins within that workspace. Without a designation, reuse the single existing article GLOSSARY.md or legacy article CONTEXT.md as its active vocabulary artifact. Read and maintain that existing artifact within authorization; do not create a duplicate merely to adopt the new name.
+  82  - If both filenames exist without a designated owner, or a designated file is missing/invalid, report the concrete ambiguity before vocabulary writes. Resolve that ownership with the author, while continuing unrelated prose. Do not silently merge, overwrite, rename, delete or choose by modification time.
+  83  - This epic defines compatibility, not a migration of existing article files. Any requested later migration must preserve the existing entries and establish one active owner. The repository&#x27;s engineering context is never a fallback article glossary.
+  84  - Replace the live writing guidance that universally requires a writing CONTEXT.md plus PROJECT.md with these optional persistence and article-glossary rules. Retain historical snapshots as historical evidence and leave external/global plugins unchanged.</pre><p class="small">來源 SHA-256：<code>fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9</code></p></details>
+<details id="src-19"><summary><code>docs/agents/review.md:31–61</code></summary><pre>  31  ### Grading
+  32  
+  33  | Grade | Meaning | Effect |
+  34  |---|---|---|
+  35  | **P0** | The spec cannot be implemented correctly as written | Blocks ticket creation |
+  36  | **P1** | Real problem, resolvable inside a ticket | Tickets may open; the ticket carries the finding |
+  37  | **P2** | Worth recording | Recorded, blocks nothing |
+  38  
+  39  ### The frozen prompt
+  40  
+  41  Write the reviewer prompt to `.proj.specs/&lt;epic&gt;/review/prompt.md` before round 1. Round 2 replays
+  42  that file verbatim; only the spec version it points at changes.
+  43  
+  44  This is the mechanism that keeps the ruler still. Without it a second round applies a stricter
+  45  standard than the first, and a review that would have converged reports fresh findings indefinitely
+  46  — the failure is in the moving threshold, not in the spec.
+  47  
+  48  ### Two rounds, then split
+  49  
+  50  Two rounds is the ceiling. P0 findings surviving round 2 mean the epic&#x27;s surface is too large to
+  51  converge on, so split the epic and restart at pipeline stage 1.
+  52  
+  53  Watch the reverse failure too: revisions that add new specification surface must be self-checked
+  54  before round 2, or the review is chasing a target that moves as fast as it advances. Before adding
+  55  any rule or acceptance criterion mid-review, check it against the existing ones for mutual
+  56  exclusion — a guarantee added to close one hole routinely opens another.
+  57  
+  58  ### Adjudication
+  59  
+  60  Reviewers will disagree. The **user** adjudicates. Do not resolve a disagreement by majority vote
+  61  among subagents, and do not have a fifth agent arbitrate: present both positions and their evidence,</pre><p class="small">來源 SHA-256：<code>59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e</code></p></details></section><section><h2>獨立 reviewer 原始紀錄</h2><details><summary>完整性 · 初始 · <code>/root/ad_completeness</code></summary><pre># Round 1：完整性
+
+Reviewer：`/root/ad_completeness`；獨立上下文、唯讀。父執行緒保存以下回傳結果，未更動其分級。
+
+完成 round 1 Completeness（完整性）審查：**P0：0、P1：2、P2：0**。兩項發現都是正文需求尚未完整落到驗收條件；可於 ticket 內補齊，不構成目前的 P0 障礙。
+
+審查使用 capture.json 指定的 frozen .txt 副本。40 份副本的大小與 SHA-256 均符合 manifest；四份新增檔案的完整 patch 均與副本相符。提供的 base／HEAD 同為 `6fcb277a9841dfad21d91f79005d39924acd92d2`，staged／unstaged patch 均為空。全程唯讀。
+
+## C-R1-01｜P1｜單獨存在、未另外指定的 GLOSSARY.md 缺少明確驗收落點
+
+- 原始位置：`.proj.specs/0014-article-discovery/spec.en.md:81`、`:114`；`.proj.specs/0014-article-discovery/traceability.md:37`、`:38`。
+- 需求組合：既有寫作工作區 × 唯一存在且未另外指定的 GLOSSARY.md × 返回／讀取／更新詞彙。
+- 相關 AC／row：AC-12、R29、R30。
+- 預期要求：D7 明定沒有指定權威時，沿用唯一既有的文章 GLOSSARY.md 或 legacy CONTEXT.md。
+- 證據：AC-12 明列的是「single legacy article CONTEXT.md or designated glossary」。R29 只列 legacy CONTEXT.md；R30 列指定權威、兩檔競爭及無效／遺失指定，沒有納入「唯一、未指定的 GLOSSARY.md」。
+- 具體反例：工作區已有 PROJECT.md 與唯一 GLOSSARY.md。作者要求延續寫稿，agent 卻要求作者重新指定詞彙權威。這違反 D7 的直接沿用規則，但現有 AC-12／R29／R30 的明列案例可能仍全部通過。
+- 影響：漏掉正常返回情境，讓本來無須決策的詞彙權威問題增加一次追問。
+- 最小修正：將 AC-12 明列為「單一、未指定的文章 GLOSSARY.md 或 legacy CONTEXT.md，以及有效指定的 glossary」，並補入 R29／R30 的相應組合。沿用既定規則即可，不需要再向作者確認政策。
+- 不確定性：實作者可能把 AC-12 的 glossary 寬鬆解讀為涵蓋所有既有 glossary；但其 designated 限定與矩陣列舉並未明確涵蓋此情境。這是驗收覆蓋缺口，並非正文完全沒有規則。
+
+## C-R1-02｜P1｜暫定建議與作者確認的區別未形成明確驗收條件
+
+- 原始位置：`.proj.specs/0014-article-discovery/spec.en.md:45`、`:66`、`:110`；`.proj.specs/0014-article-discovery/traceability.md:26`。
+- 需求組合：暫定建議／agent 推論 × 決策狀態與確認來源 × 對話整理、保存與跨次沿用。
+- 相關 AC／row：AC-04、AC-08、R18；目前沒有直接對應此狀態區別的 row。
+- 預期要求：D3 明定暫定建議須保持暫定，推論不能記成作者確認；D5 要保存相關的 confirmed／tentative settings。
+- 證據：AC-08 驗收相關脈絡的保存、沿用與 readback；R18 同樣要求保存相關 brief/context。兩者沒有明列確認狀態必須忠實保留。AC-04 保護用詞、立場與協助限制，也沒有直接驗收「不得捏造作者已確認」。
+- 具體反例：agent 提出「這篇可以暫時寫給初學者」，作者尚未回應便要求先寫一段。保存時，agent 將它記為「作者已確認：受眾為初學者」，且 readback 與報告完全一致。檔案保存成功並不足以驗出這項 D3 違規。
+- 影響：返回寫作時，推論可能被當成已定選擇，造成錯誤沿用、限制作者方向，或衍生不必要的重新確認。
+- 最小修正：在 AC-08 或 AC-04 增列：保存與重用時保留 confirmed／tentative／unknown 等相關狀態，不得將建議、推論或未答覆事項升格為作者確認；補一列對話→保存→返回的追溯組合。
+- 不確定性：「相關脈絡」可以被解讀為包含正確狀態，但目前沒有明示的 pass/fail 落點。正文足以指導實作，因此列 P1。
+
+## 覆蓋表
+
+| 檢查範圍 | 對應範圍 | 完整性結論 |
+|---|---|---|
+| 入口及直接起稿／修訂繞過 | D1；AC-01；R01–R02 | 有覆蓋 |
+| 自由聊、抒發、listen-only、未知目的與受眾 | D2–D3；AC-02–05；R03–R12 | 有覆蓋；不要求固定表單或完整訪談 |
+| 返回、改方向、重複摘要與協助強度 | D2–D3；AC-03–05、08 | 有沿用與停止追問規則；確認狀態缺口見 C-R1-02 |
+| 純文章、混合工具需求、skill 本身的工程流程 | D4；AC-06–07；R13–R16 | 有覆蓋；工程需求不阻擋無關 prose |
+| 無術語、首個術語、未解決詞義、自訂用法與比喻 | D6；AC-09–11；R21–R28 | 有覆蓋 |
+| 保存關閉／啟用、artifact-only、明示 scaffold | D5–D6；AC-08–09；R17–R23 | 有覆蓋 |
+| legacy CONTEXT、單一 GLOSSARY、兩檔與指定失效 | D7；AC-12；R29–R30 | 單一未指定 GLOSSARY 的驗收缺口見 C-R1-01 |
+| 工程 root context、來源內指令、路徑與寫入權限 | D4、D6–D7；AC-10–12；R25、R28–R30 | 有覆蓋 |
+| 工作區、穩定 key、碰撞、公開／ignored、readback 失敗 | D5；Further Notes；AC-08；R17–R20 | 有覆蓋；沒有把忽略規則當成保密保證 |
+| 公開準備與既有交付授權 | D8；AC-07、13；R16、R31–R32 | 有覆蓋 |
+| 第五套件、有限政策更新、歷史保存與 native-host 證據 | D9；AC-14–16；R33–R39 | 有覆蓋；scenario families 明確不是已核准測試或執行結果 |
+
+未發現完成本面向所必需而未提供的證據。本報告只判斷凍結規格的完整性；沒有執行新 skill、runtime 行為測試或使用性驗收，也不裁定其他審查面向。
+</pre></details><details><summary>完整性 · 同輪補充 · <code>/root/ad_completeness</code></summary><pre># Round 1 補充證據：完整性
+
+Reviewer：`/root/ad_completeness`。同一輪、同一提示、同一 spec，唯讀補充。
+
+補充證據影響完整性結論：新增 **C-R1-03（P1）**。修正後合計 **P0：0、P1：3、P2：0**；原 C-R1-01、C-R1-02 保留。
+
+原 40 份及補充 23 份 frozen source 的大小與 SHA-256 均符合各自 manifest。
+
+## C-R1-03｜P1｜本機寫作筆記與 current source guard 的交集缺少驗收要求
+
+- 需求組合：已啟用保存 × Git 忽略的 `.proj.writing/&lt;key&gt;/PROJECT.md`／GLOSSARY.md × current source inventory 驗證。
+- 原始位置：`.proj.specs/0014-article-discovery/spec.en.md:68`、`:96`、`:118`、`:143`；`scripts/publication_current.py:227`、`:235`、`:300`；`scripts/verify-harness-adoption.py:59`。
+- 相關 AC／row：AC-08、AC-16；R20、R38、R39。目前分別覆蓋筆記保存及 current guards，沒有覆蓋兩者同時存在的情境。
+- 證據：source_names() 明確納入 ignored sources，排除項目沒有 `.proj.writing/`；_verify_current() 要求實際檔案集合與固定 inventory 完全相同。補充的 engineering-v1.json 也沒有寫作筆記身分。
+- 具體反例：作者完成一次已授權保存，產生 ignored `.proj.writing/cache/PROJECT.md`。即使新套件及工程來源已正確納入 successor，這份正常生成的筆記仍會被來源盤點視為額外檔案。只驗證「筆記已忽略」及「無筆記的乾淨環境通過 guard」，會漏掉這個交集。
+- 影響：新功能正常使用後，可能使必要的 current-source 檢查失敗，誘發移走筆記或擴大來源放行等臨時處理。
+- 最小修正方向：明定本機生成筆記在 current-source 驗證中的分類及邊界，並補上「保存後再執行 current guard」的驗收組合；保留精確工程來源盤點及歷史保護，不採 blanket management-directory allowance。
+- 不確定性：這是 frozen 程式碼的靜態推論，未執行 guard。若預定只驗證排除筆記的投影，應明列該 surface、排除規則及驗收方式；目前規格沒有交代。
+
+其餘補充的 publication local contract、Claude 原始三技能與既有行為評估資料，未改變原兩項發現。
+
+補充範圍另有限制：manifest 實際提供 E1–E8 的 input／rubric，沒有 E9；原 design.json:2 也記載八例。因此尚不能聲稱已核對規格 spec.en.md:124 所稱的完整 E1–E9。此處僅記錄證據缺口，不據此推定 E9 不存在或另行加級。
+</pre></details><details><summary>可驗證性 · 初始 · <code>/root/ad_verifiability</code></summary><pre># Round 1：可驗證性
+
+Reviewer：`/root/ad_verifiability`；獨立上下文、唯讀。父執行緒保存以下回傳結果，未更動其分級。
+
+可驗證性 round 1：**1 項 P0；無 P1／P2**。僅審查規格能否判定 pass／fail，未評斷其他面向。
+
+審查基準為 capture.json：base＝HEAD＝`6fcb277a9841dfad21d91f79005d39924acd92d2`、branch＝staging。40 份 frozen copy 的 SHA-256／bytes 全部相符；staged／unstaged patch 為空，四份新增檔案的 addition patch 與快照一致。以下均使用原始路徑與行號。
+
+## V-01｜P0｜公開準備檢查缺少可判定的完成條件
+
+- 位置：`.proj.specs/0014-article-discovery/spec.en.md:89`、`:115`。
+- AC／row：AC-13；R31／R32，尤其 R32／AD30。
+- 要求：評估者應能從固定輸入、輸出及 action trace，判定哪些公開準備檢查適用，以及是否完成。
+- 證據：D8 要求公開準備前「address applicable factual/source/third-party context and media-reading issues」；AC-13 則要求這些問題「are handled at the relevant stage」。規格未定義各類問題的最低處理結果，也未指定哪份既有契約提供此判準。
+- 具體反例：作者要求準備公開一篇含同事私人對話及外部圖片的文章。輸出甲僅提醒「公開前注意第三人脈絡與素材來源」；輸出乙核對圖片使用條件，列出私人對話的待決公開範圍，並明示尚未完成的項目。兩者都可以聲稱已「address／handle」，規格卻沒有可判定甲失敗、乙成功的界線。
+- 觀察與推論：缺少完成判準是文字上的觀察；因此不同實作者／評估者可能作出相反結論，是推論。前期研究 `research.md:158-162` 有檢查方向，但規格將研究定位為理由與來源限制，沒有把它指定成公開準備的驗收規則。既有 `skills/maintaining-writing-skills/references/writing-process.md:27` 也只提供材料疑點的查核方式，沒有完整補足第三人脈絡與媒體問題。
+- 影響：AC-13 的公開準備部分無法依同一標準驗收，也可能以增加籠統追問來宣稱「已處理」，與減少不必要訪談的方向脫節。
+- 最小修正方向：只針對規格已列的類別，補上適用觸發與最低可觀察結果，例如來源核對結果、待作者決定的具體公開範圍，或明示未取得證據的缺口；也可指定一份確切的既有規範及對應段落。無須增加所有文章都必填的問卷。
+- 不確定性／另一種讀法：「handled」可能只打算要求辨識問題，並不保證解決；若如此，應明寫最低辨識輸出與未解項目的交付方式。目前兩種讀法都成立。依 `docs/agents/review.md` 對不可判定驗收條件的規則，列為 P0。
+
+## 覆蓋表
+
+| 已檢查範圍 | AC／rows | 可驗證性結論 |
+|---|---|---|
+| 自由聊、抒發、listen-only、未知目的／受眾、直接起稿 | AC-01～05；R01～R12 | 有可觀察禁制及終止條件；作者要求起稿後仍等完整設定，可直接判失敗 |
+| 重複摘要、回訪、改方向、深入訪談 | AC-03～05；R07～R12 | 沿用回答、只更新受影響決策、摘要不另設批准關卡均可由 transcript 檢查；未因沒有固定問題數而列缺失 |
+| 純文章、文章加工具修改、發現工程需求、本文 skill 的工程性質 | AC-06～07；R13～R16 | 可由產物與 action trace 判定；不受影響的文字應繼續，工程需求保留原流程 |
+| 保存關閉／開啟、既有工作區、預設 key／碰撞、公開／ignored 位置、readback 失敗 | AC-08；R17～R20 | 有檔案前後差異、授權脈絡及讀回結果可查；檔案存在本身不能證明授權 |
+| 無術語、第一個可重用術語、草稿／已解決定義、作者用法／事實、比喻、scaffold override | AC-09～11；R21～R28 | 可用明確 fixture 判定；作者可保留模糊，不等於評估者可發明定義 |
+| 單一 legacy CONTEXT、單一 GLOSSARY、兩者並存、指定／缺失／無效指定、工程根 CONTEXT | AC-12；R29～R30 | 重用、暫停詞彙寫入、不停止其他文字，以及禁止工程 fallback 均可觀察；具體無效 fixture 仍須在 ticket 測試表列明 |
+| 外部主張、第三人／素材／閱讀問題、搜尋與遠端權限 | AC-13；R31～R32 | 個人經驗範圍、非強制 SEO、無新增遠端權限可判定；公開準備完成條件見 V-01 |
+| 有效指引替換與歷史保留 | AC-14；R33 | 可以有效引用鏈與精確 diff 檢查；規格明示未來替換，沒有把目前尚未修改當成失敗 |
+| 第五套件、metadata／links、重複生成、漂移、原生 host 與靜態結果分開 | AC-15；R34～R36 | 有可觀察 CLI／檔案／host 證據界線 |
+| 工程技能、Phoenix、文章資產、aliases、有限 current-source successor、失敗如實報告 | AC-16；R37～R39 | 保存要求與報告界線可判定；目前沒有實作變更可驗收 |
+
+證據限制：快照未包含 `scripts/verify-harness-adoption.py`、完整歷史 E1–E9 行為案例及其 rubric；因此未聲稱已核對這些檢查的完整內部判準。依 stage-2 範圍，本次沒有執行 skill、生成套件或原生 host 行為測試；scenario family 也不等於已批准或通過的測試。全程唯讀，未寫檔。
+</pre></details><details><summary>可驗證性 · 同輪補充 · <code>/root/ad_verifiability</code></summary><pre># Round 1 補充證據：可驗證性
+
+Reviewer：`/root/ad_verifiability`。同一輪、同一提示、同一 spec，唯讀補充。
+
+原結論保留：**V-01 仍為 P0；無新增或降級 finding**。
+
+已核對新增 23 份 frozen context 的 SHA-256／bytes，全部符合補充 manifest；原 40 份快照及凍結 prompt 亦保持一致。
+
+補充證據沒有填補 AC-13 的公開準備完成判準：
+
+- `skills/managing-article-publication/references/local.md:79-89` 定義建置輸出掃描、來源邊界與證據限制，未定義第三人脈絡、素材使用條件及閱讀問題的最低處理結果。
+- `scripts/publication_current.py:97-145`、`:279-309` 提供有限檔案身分與 current-source 檢查，未補充上述編輯驗收條件。
+- Claude 原始三技能及既有行為案例沒有新增可判定 AC-13「applicable／handled」的規則。
+
+原報告的證據限制可更新：已補齊 local publication contract、current verifier／policy、Claude 原始三技能，以及 E1–E8 的 input／rubric。補充 manifest 實際未列 E9，因此不宣稱 E9 已補齊；這不影響 V-01。
+
+本次僅補讀同一 round 1 的證據，未執行測試、寫檔或修改原審查標準。
+</pre></details><details><summary>契約衝突 · 初始 · <code>/root/ad_contracts</code></summary><pre># Round 1：契約衝突
+
+Reviewer：`/root/ad_contracts`；獨立上下文、唯讀。父執行緒保存以下回傳結果，未更動其分級。
+
+Round 1 Contract conflict 審查完成：**P0：0、P1：0、P2：0**。在供應的凍結證據內，未找到必須同時遵守卻無法相容的契約。這不代表 runtime 行為或使用體驗已通過驗證。
+
+審查基準為 staging，base＝HEAD＝`6fcb277a9841dfad21d91f79005d39924acd92d2`；staged／unstaged patch 均為空，四個未追蹤範圍檔案另有完整 addition patch。已核對 capture.json 所列 40 份快照的長度與 SHA-256，全部一致。全程唯讀。
+
+以下 S 代表原始路徑 `.proj.specs/0014-article-discovery/spec.en.md`；行號均對應 frozen .txt 的原始內容。
+
+| 覆蓋項目 | 雙方契約證據 | AC／row | 結果 |
+|---|---|---|---|
+| 自由聊、抒發、只聽、不明目的、未指定受眾 | S:35–45；既有 `.agents/skills/grilling/SKILL.md:6–28` | AC-02～05；R03～R12 | S:31 明示不匯入完整工程訪談契約，因此工程的完整收斂與確認條件不會成為文章起稿前提。 |
+| 直接起稿、反覆摘要、回訪與改方向 | S:30、:36–45；`docs/agents/codex.md:9–12` | AC-01、03、05；R02、R07、R10～R12 | 沿用既有答案及授權、僅更新受影響設定，與 Codex 避免重複核准的契約相容。 |
+| 純文章、混合工程需求、skill 本身的 spec | S:50–60；`AGENTS.md:47–84`；`docs/agents/workflow.md:29–100` | AC-06、14；R13～R14、R33 | S:57 明示新增狹義 editorial exception；:55 同時保留 skill／工具修改的工程關卡。這是明示變更，非默默繞過 pipeline。 |
+| 無術語、首個可重用術語、草案與已解決定義、比喻、空骨架覆寫 | S:64–77；`skills/maintaining-writing-skills/references/writing-process.md:9–11` | AC-08～11；R17～R28 | S:84 明示取代每專案必建 CONTEXT／PROJECT 的規則；作者用法、來源定義與讀者解釋各有分工，未發現須強迫消除文學多義性的殘留要求。 |
+| 僅 legacy CONTEXT、僅 GLOSSARY、兩者並存、有效／無效／缺失指定 | S:79–84；`docs/agents/domain.md:3–13,43–47`；`.agents/skills/domain-modeling/SKILL.md:3,40–64` | AC-10～12、14；R25、R29～R30、R33 | 新規格明確區分工程與文章詞彙所有權；既有檔案沿用、不自動遷移，歧義只暫停詞彙寫入。工程 CONTEXT 不作文章 fallback。 |
+| 保存授權、既有工作區、來源內嵌指令、路徑與碰撞、可見性及 readback 失敗 | S:64–77,143；`skills/maintaining-writing-skills/SKILL.md:20` | AC-08、11；R17～R20、R28 | 保存啟用條件、指定工作區寫入範圍、安全預設及失敗揭露可同時成立；來源文字未取得額外操作權限。 |
+| 建文、修訂、分支、預覽與發布權限 | S:53–59,89–90,130；`skills/creating-vitepress-post/SKILL.md:14–21`；`skills/managing-article-publication/SKILL.md:14–33`；其 `references/future-actions.md:7–18` | AC-07、13；R15～R16、R31～R32 | 保留既有 owner、來源分支、候選 pin 與動作別授權；探索完成不構成發布或遠端操作權限。 |
+| 第五個 canonical 套件、語言例外、有限更新與歷史保存 | S:94–97,117–126,144–146；`docs/adr/0005-physical-product-writing-packages.md:8–26`；`docs/adr/0007-validated-taiwan-writing-language-exception.md:8–16`；`scripts/materialize-writing-skills.py:98–146,254–276` | AC-15～16；R34～R39 | 第五個套件及必要 inventory／policy 更新已明示；三個中文例外、兩個 alias、原始工程技能與凍結證據仍受保護。靜態輸出與真實 host 驗證也已分開。 |
+
+未列為 finding 的關鍵理由：S:57、:84、:94–96、:138 已分別明示工程／文章分流、舊寫作 CONTEXT 規則替換、套件擴充及研究提案取代。不能再把這些預期變更本身認定為契約衝突。
+
+## 證據限制
+
+- 未提供 `skills/managing-article-publication/references/local.md` 的凍結內容；因此僅能確認規格保留該交付契約，無法核對其全部 topic allocation、分支及 ownership 細節。
+- 未提供 `scripts/verify-harness-adoption.py` 及其 current-source guard 相依內容；因此無法判定實作時所需 successor 更新的完整檔案集合。
+- 未提供 Claude 對應工程技能的凍結內容，也未執行任一 runtime；本報告不宣稱兩個 runtime 的實際觸發、停問或寫檔行為已獲驗證。
+</pre></details><details><summary>契約衝突 · 同輪補充 · <code>/root/ad_contracts</code></summary><pre># Round 1 補充證據：契約衝突
+
+Reviewer：`/root/ad_contracts`。同一輪、同一提示、同一 spec，唯讀補充。
+
+補充證據不改變原結論：**P0：0、P1：0、P2：0**，未新增契約衝突 finding。
+
+已核對新增 23 份快照的長度與 SHA-256，全部一致；原 40 份快照及 frozen prompt hash 也維持不變。本次補齊：
+
+- 文章交付契約：`skills/managing-article-publication/references/local.md:16–23,42–48,91–92` 要求完整 pins、來源分支及明確發布授權，與規格 spec.en.md:58,90 保留既有交付責任相容。
+- current guard／policy：`scripts/publication_current.py:97–146,279–309` 採精確來源 inventory 與 identity。規格 spec.en.md:96,118 已明示有限、經審查的 successor 更新並保留歷史，未要求放寬為目錄級豁免。guard 會納入 ignored 檔案（:227–248）；規格也未承諾含未納管筆記的工作目錄必須直接通過此檢查，故目前不構成不可相容要求。
+- Claude 原始三技能：`.claude/skills/grilling/SKILL.md:28`、domain-modeling/SKILL.md:40–74、grill-with-docs/SKILL.md:4–7 未推翻規格 spec.en.md:31,57,84 的明示文章分流與舊規則替換。
+- 既有寫作案例：所附案例的作者限制、受保護內容及禁止未授權副作用要求，與規格 AC-01、04、07、13、16 相容。
+
+仍保留一項證據範圍限制：補充 manifest 實際只有 E1～E8 的 16 份 input／rubric，未含 E9，因此不宣稱已核對 E9。此次也未執行 guard 或真實 runtime，不構成執行驗證。
+</pre></details><details><summary>紅隊 · 初始 · <code>/root/ad_redteam</code></summary><pre># Round 1：紅隊
+
+Reviewer：`/root/ad_redteam`；獨立上下文、唯讀。父執行緒保存以下回傳結果，未更動其分級。
+
+Red team round 1 結果：**未確認 P0／P1／P2 finding**。本結論僅涵蓋凍結規格容許的未預期行為，不代表實作、宿主互動或使用體驗已通過。
+
+證據範圍：base＝HEAD＝`6fcb277a9841dfad21d91f79005d39924acd92d2`，branch 為 staging；staged／unstaged patch 均為空。40 份凍結副本的 SHA-256／位元組數全部符合 capture.json；四份 addition patch 均與對應副本一致。審查全程唯讀，未執行攻擊、修改檔案或讀取其他 reviewer 結果。
+
+以下 S 指原始路徑 `.proj.specs/0014-article-discovery/spec.en.md`，行號均來自 frozen 副本。
+
+| 覆蓋範圍 | 具體反例與規格判讀 | 證據／AC／row |
+|---|---|---|
+| 自由聊、抒發、未知目的／受眾、listen-only | 「只聽我說，不要改」若被改稿、評價或要求先完成設定，直接違反條件；未知受眾也不能成為起稿門檻。 | S:35、S:37、S:39、S:44；AC-02～04；R03～08 |
+| 直接起稿、反覆摘要、完整訪談 | 「先開始寫，其他未定」不能被下一輪設定問卷攔住；例行摘要也不能重設確認關卡。未找到規格授權助手以完整訪談作預設的路徑。 | S:30、S:39、S:45、S:107；AC-01、05；R02、R10～12 |
+| 返回舊稿、改方向 | 「沿用舊設定，但後半改教學」只能更新受影響部分；重問既有設定或要求互斥文類會違反規格。 | S:36、S:38、S:105；AC-03；R07、R10 |
+| 工程／文章分工 | 「先寫正文，再補互動元件」可繼續正文，元件另走工程流程；不能藉文章例外修改 renderer、配置或發布。這份 skill 規格本身仍明列為工程工作。 | S:52～S:60、S:90；AC-06～07、13；R13～16 |
+| GLOSSARY 按需建立 | 無術語不建空表；第一個已解決且需重用的術語才觸發建立。作者自訂用法須與事實定義分開；普通比喻、多義情緒詞不能被強制定義。未決詞義只留 pending，不阻擋其他 prose。 | S:73～S:76；AC-09～11；R21～27 |
+| persistence 關閉／明示 scaffold | 談話或只要文章檔案不額外建立 context。明示要 glossary／空 scaffold 是刻意允許的作者選擇，不能因此編造條目或推導發布授權。 | S:64、S:73、S:90；AC-08～09、13；R17、R23 |
+| legacy CONTEXT／GLOSSARY 相容 | 單一 legacy article CONTEXT 沿用；只有 GLOSSARY 也沿用。兩者未指定權威、指定無效或目標缺失時，只暫停 glossary 寫入。工程根 CONTEXT 明確排除為 fallback。 | S:81～S:84；AC-12、14；R29～30、R33 |
+| 保存授權、來源內嵌指令、路徑 | 僅有資料夾存在不等於「已建立且已授權的工作區」。文章或來源內的「改工程 CONTEXT／寫到別處」不產生權限。預設 key 限單一路徑元件，碰撞不能覆寫其他專案，linked components 須拒絕。 | S:64～S:68、S:77、S:143；AC-08、11；R18～20、R28 |
+| 公開位置、readback 失敗 | 明示另存到指定且實際公開的位置，是規格保留的作者自由；Git ignore 也未被宣稱為保密保證。寫入或 readback 失敗不得回報已保存，亦不阻擋其他寫作。 | S:67～S:68；AC-08；R19～20 |
+| 第五套件、驗證與歷史 | 第五個 canonical 套件與有限 current-source 調整已有界定；未容許 blanket waiver、改寫 frozen history，或用靜態產物冒充 native-host discovery。scenario families 明確未取代核准測試計畫。 | S:94～S:97、S:117～S:126；AC-15～16；R34～39 |
+
+幾個可疑情境因既有明文限制而未列 finding：以已存在的資料夾自行推定保存權限、glossary 衝突後停止全部起稿、以文章寫作例外繞過工程票、以本次 discovery 延伸 commit／push／發布權限。這些都屬違反規格的實作，沒有找到規格同時容許它們的具體路徑。
+
+不確定性：尚無新 skill 的實作、對話 action trace、檔案行為結果或 fresh-host 執行證據，因此無法確認實際模型是否會遵守停問、授權與相容規則。現有宿主另行載入其他 skill 的可能性，也不能僅憑此規格斷言已消除。上述限制應於核准後的測試計畫與實際執行中驗證；本輪沒有缺少阻礙靜態 Red team 審查的必要凍結證據。
+</pre></details><details><summary>紅隊 · 同輪補充 · <code>/root/ad_redteam</code></summary><pre># Round 1 補充證據：紅隊
+
+Reviewer：`/root/ad_redteam`。同一輪、同一提示、同一 spec，唯讀補充。
+
+補充證據影響原結論：**新增 1 項 P1；P0、P2 仍為 0**。這是同一 round 1 的證據補充。
+
+原 40 份與補充 23 份快照的 SHA-256／位元組數全部符合 manifest。
+
+## RT-01｜P1｜正常保存文章脈絡會新增現行工程驗證器不接受的來源
+
+- 規格位置：`.proj.specs/0014-article-discovery/spec.en.md:65`、`:96`、`:143`。
+- 對應要求：AC-08、AC-16；traceability R18、R20、R38。正常保存應可與既有工程驗證並存，且不能藉此放寬整個管理目錄的來源界線。
+- 新增證據：`scripts/publication_current.py:227–248` 的 source_names() 明確掃描包含 ignored files 的來源；排除清單只有 .git、依賴／建置產物及指定 Python cache，沒有 `.proj.writing/`。
+- 同檔 :288–302 將實際來源集合與固定 expected 集合比較，不相等即拋出 current reconciliation source inventory mismatch。
+- `scripts/verify-harness-adoption.py:62–63` 的 current 路徑確實呼叫這個驗證器。
+- 補充的 engineering-v1.json 有 1,568 個 exact common entries，沒有 `.proj.writing/` 項目或動態本機資料排除欄位。
+- 具體反例：在其他條件皆可通過的 checkout，作者說「把這篇設定保存，明天接著寫」。新 skill 按規格建立 `.proj.writing/rain/PROJECT.md`，且 Git 正確忽略它。之後執行既有 current verifier，該檔仍會進入來源集合並造成 mismatch。每次新增工作區或更新筆記內容，也無法靠一次性的固定檔案 identity 接納解決。
+- 影響：成功的文章保存成為後續工程驗證的意外障礙；可能迫使操作者搬走筆記，或錯誤採用規格禁止的 blanket waiver。
+- 最小修正方向：明定動態本機寫作資料與 current source guard 的相容契約，例如經審查的窄範圍排除規則，或採用來源掃描範圍之外的預設位置；並驗證保存及更新筆記後的 guard 行為。保留其他來源與歷史界線。
+- 分級／不確定性：列 P1，因可在實作票內處理，尚不足以判定規格無法正確實作。上述是凍結程式碼支持的行為推論，未建立工作區或實際執行驗證器。
+
+其餘原 Red team 結論保留。補充發布契約、Claude 原始三技能與既有案例，未產生其他可確認 finding。
+
+證據範圍更正：補充 manifest 實際包含 E1～E8 的 input／rubric，沒有 E9；未宣稱已審查 E9。這不改變上述 finding，亦不構成 runtime 通過證據。
+</pre></details></section><section><h2>完整性紀錄</h2><details><summary>來源與提示完整性驗證</summary><pre>{
+  &quot;round&quot;: 1,
+  &quot;snapshot_integrity&quot;: &quot;pass&quot;,
+  &quot;current_sources_match_capture&quot;: true,
+  &quot;source_file_count&quot;: 40,
+  &quot;prompt_sha256&quot;: &quot;3f5d674830cff8f9154503ee589378ebeb7a3ba1175953e350e70b8bebe7526d&quot;,
+  &quot;spec_sha256&quot;: &quot;fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9&quot;,
+  &quot;acceptance_criteria&quot;: 16,
+  &quot;traceability_rows&quot;: 39,
+  &quot;scope_limit&quot;: &quot;Integrity and document shape only; no completeness, usability or runtime claim.&quot;,
+  &quot;supplement_source_file_count&quot;: 23,
+  &quot;total_source_file_count&quot;: 63,
+  &quot;post_review_sources_unchanged&quot;: true,
+  &quot;post_review_prompt_unchanged&quot;: true,
+  &quot;supplement_case_range&quot;: &quot;E1-E8; E9 not provided&quot;
+}
+</pre></details><details><summary>63 份來源的完整雜湊索引</summary><pre>[
+  {
+    &quot;path&quot;: &quot;.proj.specs/0014-article-discovery/spec.en.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/.proj.specs/0014-article-discovery/spec.en.md.txt&quot;,
+    &quot;sha256&quot;: &quot;fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.proj.specs/0014-article-discovery/traceability.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/.proj.specs/0014-article-discovery/traceability.md.txt&quot;,
+    &quot;sha256&quot;: &quot;10b76ae9e98195bea614ed497238b1c5f54d4f89b47204971304d0cf10f98999&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.proj.specs/0014-article-discovery/README.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/.proj.specs/0014-article-discovery/README.md.txt&quot;,
+    &quot;sha256&quot;: &quot;b1380096d5e5c7e0ccade1263ccb91f007efdd0dcd8000b1c38aa2ba0fef138c&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.proj.specs/_discovery/article-writing-entry/research.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/.proj.specs/_discovery/article-writing-entry/research.md.txt&quot;,
+    &quot;sha256&quot;: &quot;1e6a2f6928d08c3001baf69678b0a3337279c003eb24a03776570cf1a9a5ddc2&quot;
+  },
+  {
+    &quot;path&quot;: &quot;AGENTS.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/AGENTS.md.txt&quot;,
+    &quot;sha256&quot;: &quot;77ad12cb3275f1ac5936bc9ae0bad4dfefc048d819e0274d38db4bf1d98bbf53&quot;
+  },
+  {
+    &quot;path&quot;: &quot;CONTEXT.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/CONTEXT.md.txt&quot;,
+    &quot;sha256&quot;: &quot;6a6b92efa597b39d24669606a753d5f4ba7751d7f01058c5ea152ff0e0c8fd28&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.gitignore&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/.gitignore.txt&quot;,
+    &quot;sha256&quot;: &quot;0dd687b78a174740ac9f2ae2218d81c82401e4f705753148c0157987fbf53d50&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/agents/workflow.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/agents/workflow.md.txt&quot;,
+    &quot;sha256&quot;: &quot;f827f005b59cccf7416e5ebb8c64ecba689d99047cb3b90b05ed0541294f98a1&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/agents/review.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/agents/review.md.txt&quot;,
+    &quot;sha256&quot;: &quot;59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/agents/runtime.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/agents/runtime.md.txt&quot;,
+    &quot;sha256&quot;: &quot;4a862c86b8a84581a8ec26eb058c626bc4b36181a6cfa7baaf5482333b079fcf&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/agents/codex.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/agents/codex.md.txt&quot;,
+    &quot;sha256&quot;: &quot;20ab3a45cf34c28f7f4973c4c978aaba188674add1ecb2a585b1667605db1929&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/agents/domain.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/agents/domain.md.txt&quot;,
+    &quot;sha256&quot;: &quot;a8787a7e5b90612009b44db690c66d32169505048f767a480bed389ce3d8ac84&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/agents/language.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/agents/language.md.txt&quot;,
+    &quot;sha256&quot;: &quot;dad4936776742214eca797c9bba88036c5798cbcc4e7397d6803966fe3c5b382&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/agents/issue-tracker.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/agents/issue-tracker.md.txt&quot;,
+    &quot;sha256&quot;: &quot;fafad4d4469f996c0a1196dccfeaab28b60ac7c8b17fc5709cb20acdee8856b6&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.agents/skills/grilling/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/.agents/skills/grilling/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;ddad6f07e4883861d3c0ca3e017a755dc426801ca269c1beae38e1f2171ac473&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.agents/skills/domain-modeling/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/.agents/skills/domain-modeling/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.agents/skills/grill-with-docs/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/.agents/skills/grill-with-docs/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;fc6401cbf34f1f3b6cb5e97253e25671d822733fc3f985117fe0d162639abf61&quot;
+  },
+  {
+    &quot;path&quot;: &quot;skills/phoenix-writing/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/skills/phoenix-writing/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea&quot;
+  },
+  {
+    &quot;path&quot;: &quot;skills/maintaining-writing-skills/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/skills/maintaining-writing-skills/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;04835b103d9d57b6fd9a70659d598c9b9d13debe26f0c87fdb3b1406305b52ec&quot;
+  },
+  {
+    &quot;path&quot;: &quot;skills/maintaining-writing-skills/references/writing-process.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/skills/maintaining-writing-skills/references/writing-process.md.txt&quot;,
+    &quot;sha256&quot;: &quot;90cabbc770cf0220ccb18e2dc567e9aeadc75487f1f052a664e0d8ce8939dda4&quot;
+  },
+  {
+    &quot;path&quot;: &quot;skills/maintaining-writing-skills/references/article-maintenance.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/skills/maintaining-writing-skills/references/article-maintenance.md.txt&quot;,
+    &quot;sha256&quot;: &quot;3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4&quot;
+  },
+  {
+    &quot;path&quot;: &quot;skills/maintaining-writing-skills/references/skill-maintenance.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/skills/maintaining-writing-skills/references/skill-maintenance.md.txt&quot;,
+    &quot;sha256&quot;: &quot;78dde171ee3bff1dba86deb8b62a1c7d811296c2e7ba64523cdd81dacc24b755&quot;
+  },
+  {
+    &quot;path&quot;: &quot;skills/creating-vitepress-post/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/skills/creating-vitepress-post/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;5942e8bf371c5ea5b9dac91580d4c91ef88be0749c7c9784d82ba86bf5dca365&quot;
+  },
+  {
+    &quot;path&quot;: &quot;skills/managing-article-publication/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/skills/managing-article-publication/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2&quot;
+  },
+  {
+    &quot;path&quot;: &quot;skills/managing-article-publication/references/future-actions.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/skills/managing-article-publication/references/future-actions.md.txt&quot;,
+    &quot;sha256&quot;: &quot;9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5&quot;
+  },
+  {
+    &quot;path&quot;: &quot;scripts/materialize-writing-skills.py&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/scripts/materialize-writing-skills.py.txt&quot;,
+    &quot;sha256&quot;: &quot;8446420db45e314c65292327cac6f601f66001d8c91048702c73a1018bac6de4&quot;
+  },
+  {
+    &quot;path&quot;: &quot;scripts/verify-project.py&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/scripts/verify-project.py.txt&quot;,
+    &quot;sha256&quot;: &quot;302eb9bd75b45ef9cbe5ffec63086dce920a0adbf761db93910ae4e37f4764fb&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/agents/skill-sources.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/agents/skill-sources.json.txt&quot;,
+    &quot;sha256&quot;: &quot;7d788647d07b6e8cad0f99f29a12c1237b6b4a001c5309e7ee9c416f8bd43bcb&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/harness-adoption/runtime-source-policy.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/maintenance/harness-adoption/runtime-source-policy.json.txt&quot;,
+    &quot;sha256&quot;: &quot;a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/harness-adoption/generated-writing-manifest.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/maintenance/harness-adoption/generated-writing-manifest.json.txt&quot;,
+    &quot;sha256&quot;: &quot;606b123e3cdb43ad4449c45eb1c58e572a794c73b066696ae746b216451d01f0&quot;
+  },
+  {
+    &quot;path&quot;: &quot;tests/harness_adoption/test_materializer.py&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/tests/harness_adoption/test_materializer.py.txt&quot;,
+    &quot;sha256&quot;: &quot;498f9c38217c4f38c0032036f8de7f398f4b4201803ef91f8dbefc5ac319ae6f&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/design.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/maintenance/writing-skills/behavior-eval-20261004/design.json.txt&quot;,
+    &quot;sha256&quot;: &quot;70d1e6ac5c3c5aa7fc15036dfca87c93110b47e3bf168516ebf71fda5905f2bf&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/adr/0001-walking-skeleton-then-epic-loop.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/adr/0001-walking-skeleton-then-epic-loop.md.txt&quot;,
+    &quot;sha256&quot;: &quot;ac3e95352fb096ee256030765a1701536cb6e1e17ff624e64d8db4213fc4cc5e&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/adr/0002-ticket-status-in-frontmatter.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/adr/0002-ticket-status-in-frontmatter.md.txt&quot;,
+    &quot;sha256&quot;: &quot;b94e17c319f0adb3e8ffc34ac513b567ccb1cae91852c65ee0b1ed4e7d5d47a7&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/adr/0003-adversarial-review-fixed-axes-two-rounds.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/adr/0003-adversarial-review-fixed-axes-two-rounds.md.txt&quot;,
+    &quot;sha256&quot;: &quot;6b7e5059d30fccb0ffff7176e25e440060a32f2301d821f34f97f1d878796128&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/adr/0004-existing-product-harness-adoption.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/adr/0004-existing-product-harness-adoption.md.txt&quot;,
+    &quot;sha256&quot;: &quot;97e7f131c798829140590faf56906b7a801512c2e120703a3c0b0900c0c899eb&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/adr/0005-physical-product-writing-packages.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/adr/0005-physical-product-writing-packages.md.txt&quot;,
+    &quot;sha256&quot;: &quot;bc9f9e0bdd6feed9a5f5eb46cc7b3cb40e33afb4b2c035373dbe3d752d396b84&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/adr/0006-local-tracker-and-authorized-landing.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/adr/0006-local-tracker-and-authorized-landing.md.txt&quot;,
+    &quot;sha256&quot;: &quot;0e55737594a1c73005f80749c963369c805c38b274ffa21b1483006c20d8f96e&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/adr/0007-validated-taiwan-writing-language-exception.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/adr/0007-validated-taiwan-writing-language-exception.md.txt&quot;,
+    &quot;sha256&quot;: &quot;711f3326f5efe0a7c3b90d1508c22d1642d6d03a62b6f3051a62d043b243ca90&quot;
+  },
+  {
+    &quot;path&quot;: &quot;docs/adr/0008-main-first-engineering-and-shared-staging.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/source/docs/adr/0008-main-first-engineering-and-shared-staging.md.txt&quot;,
+    &quot;sha256&quot;: &quot;a0d9ba031d6e9f26db766c969aad5daa87b6b14b5dc9d1b329653c0dc8641237&quot;
+  },
+  {
+    &quot;path&quot;: &quot;skills/managing-article-publication/references/local.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/skills/managing-article-publication/references/local.md.txt&quot;,
+    &quot;sha256&quot;: &quot;1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be&quot;
+  },
+  {
+    &quot;path&quot;: &quot;scripts/verify-harness-adoption.py&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/scripts/verify-harness-adoption.py.txt&quot;,
+    &quot;sha256&quot;: &quot;cecd58b0cd8dbe7fde3030b20ae8bce949d54a9be3e839b91da9baa08a47a73a&quot;
+  },
+  {
+    &quot;path&quot;: &quot;scripts/publication_current.py&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/scripts/publication_current.py.txt&quot;,
+    &quot;sha256&quot;: &quot;759826ee582cf0fd8b8d72cf5a6911b09b89dd53c1abe5f17cf48167697bcd58&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/publication-workflow/engineering-v1.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/publication-workflow/engineering-v1.json.txt&quot;,
+    &quot;sha256&quot;: &quot;478b638866a3fff4730879afe6d1a858e89ceb690bda8abbba1a2c2b0cf9928c&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.claude/skills/grilling/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/.claude/skills/grilling/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;d9ed7c64655d7f81014022a5782ff1f1da1c6100c92ab28ef9bd110a2776baa9&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.claude/skills/domain-modeling/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/.claude/skills/domain-modeling/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e&quot;
+  },
+  {
+    &quot;path&quot;: &quot;.claude/skills/grill-with-docs/SKILL.md&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/.claude/skills/grill-with-docs/SKILL.md.txt&quot;,
+    &quot;sha256&quot;: &quot;7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E1/input.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E1/input.json.txt&quot;,
+    &quot;sha256&quot;: &quot;45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E1/rubric.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E1/rubric.json.txt&quot;,
+    &quot;sha256&quot;: &quot;44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E2/input.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E2/input.json.txt&quot;,
+    &quot;sha256&quot;: &quot;de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E2/rubric.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E2/rubric.json.txt&quot;,
+    &quot;sha256&quot;: &quot;3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E3/input.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E3/input.json.txt&quot;,
+    &quot;sha256&quot;: &quot;880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E3/rubric.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E3/rubric.json.txt&quot;,
+    &quot;sha256&quot;: &quot;e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E4/input.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E4/input.json.txt&quot;,
+    &quot;sha256&quot;: &quot;919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E4/rubric.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E4/rubric.json.txt&quot;,
+    &quot;sha256&quot;: &quot;efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E5/input.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E5/input.json.txt&quot;,
+    &quot;sha256&quot;: &quot;fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E5/rubric.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E5/rubric.json.txt&quot;,
+    &quot;sha256&quot;: &quot;101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E6/input.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E6/input.json.txt&quot;,
+    &quot;sha256&quot;: &quot;854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E6/rubric.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E6/rubric.json.txt&quot;,
+    &quot;sha256&quot;: &quot;d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E7/input.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E7/input.json.txt&quot;,
+    &quot;sha256&quot;: &quot;4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E7/rubric.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E7/rubric.json.txt&quot;,
+    &quot;sha256&quot;: &quot;aecfdaa4b5d3786cd86d3482e0139ba22604f2a0b2088f92e4f9ddcc9e179b05&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E8/input.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E8/input.json.txt&quot;,
+    &quot;sha256&quot;: &quot;4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2&quot;
+  },
+  {
+    &quot;path&quot;: &quot;maintenance/writing-skills/behavior-eval-20261004/cases/E8/rubric.json&quot;,
+    &quot;snapshot_path&quot;: &quot;versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E8/rubric.json.txt&quot;,
+    &quot;sha256&quot;: &quot;94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a&quot;
+  }
+]</pre></details></section></main></body></html>

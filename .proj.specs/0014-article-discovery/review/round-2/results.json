@@ -1,0 +1,129 @@
+{
+  "round": 2,
+  "rounds_used": 2,
+  "maximum_rounds": 2,
+  "status": "spec_review_gate_passed",
+  "scope": "Independent static specification review only; no implementation or runtime acceptance.",
+  "prompt_sha256": "3f5d674830cff8f9154503ee589378ebeb7a3ba1175953e350e70b8bebe7526d",
+  "spec_sha256": "1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4",
+  "spec_git_blob": "aa08308eb23756514ebc770e6a4719c60388d83d",
+  "axes": [
+    {
+      "axis": "完整性",
+      "agent": "/root/ad2_completeness",
+      "report": "round-2/completeness.md",
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    },
+    {
+      "axis": "可驗證性",
+      "agent": "/root/ad2_verifiability",
+      "report": "round-2/verifiability.md",
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    },
+    {
+      "axis": "契約衝突",
+      "agent": "/root/ad2_contracts",
+      "report": "round-2/contracts.md",
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    },
+    {
+      "axis": "紅隊",
+      "agent": "/root/ad2_redteam",
+      "report": "round-2/red-team.md",
+      "P0": 0,
+      "P1": 0,
+      "P2": 0
+    }
+  ],
+  "findings": [],
+  "counts": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 0
+  },
+  "repairs": [
+    {
+      "ids": [
+        "V-01"
+      ],
+      "grade": "P0",
+      "contract": "D8 trigger/minimum-result table; AC-13",
+      "rows": [
+        "R32",
+        "R41",
+        "R42",
+        "R43",
+        "R44"
+      ],
+      "source_lines": [
+        99,
+        108,
+        134
+      ],
+      "status": "addressed_in_spec; not raised by round-2 reviewers"
+    },
+    {
+      "ids": [
+        "C-R1-01"
+      ],
+      "grade": "P1",
+      "contract": "single unassigned GLOSSARY normal reuse; AC-12",
+      "rows": [
+        "R29"
+      ],
+      "source_lines": [
+        90,
+        133
+      ],
+      "status": "addressed_in_spec; not raised by round-2 reviewers"
+    },
+    {
+      "ids": [
+        "C-R1-02"
+      ],
+      "grade": "P1",
+      "contract": "tentative/confirmed state preservation; AC-08",
+      "rows": [
+        "R18",
+        "R40"
+      ],
+      "source_lines": [
+        45,
+        129
+      ],
+      "status": "addressed_in_spec; not raised by round-2 reviewers"
+    },
+    {
+      "ids": [
+        "C-R1-03",
+        "RT-01"
+      ],
+      "grade": "P1",
+      "contract": "bounded default note output classification; D5a / AC-17",
+      "rows": [
+        "R20",
+        "R45",
+        "R46",
+        "R47",
+        "R48"
+      ],
+      "source_lines": [
+        70,
+        77,
+        138,
+        165
+      ],
+      "status": "addressed_in_spec; not raised by round-2 reviewers"
+    }
+  ],
+  "next_gate": "Ticket breakdown approval, then approved per-ticket test-plan table before tests/implementation.",
+  "tickets_allocated": false,
+  "implementation_started": false,
+  "remote_actions": false
+}

@@ -1,0 +1,853 @@
+{
+  "scope": "Actual configured Codex CLI; synthetic disposable fixtures. Claude OAuth expired; behavior unverified. No live publication or rendered site validation.",
+  "D_cases": [
+    {
+      "case": "D01-artifacts",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery 處理這個已授權暫存網站文章要求：建立標題 Fixture Cache，分類 lab，正文直接寫三句 cache 入門說明；縮圖用現有 /assets/fixture.svg。請使用既有文章建立 CLI，不安裝，不建立寫作筆記，不預覽或發布。",
+          "response": "我會依 `article-discovery` 與專案的新文章流程，使用既有 CLI 建立文章；不安裝、不建立寫作筆記，也不預覽或發布。\n\n既有指令的 `tsx` 啟動器因暫存 socket 權限限制而失敗。我會改用現有 Node 與 `tsx` 載入同一支文章 CLI，不需安裝套件。\n\n已用既有文章 CLI 建立 [Fixture Cache](<fixture>/blog/post/lab/Fixture_Cache.md)，分類為 `lab`，正文三句，縮圖為 `/assets/fixture.svg`。\n\n已核對 frontmatter、正文及縮圖存在。未安裝套件、建立寫作筆記、預覽或發布。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'pwd; rg -n \"article|文章|writing\" <user-home>/.codex/memories/MEMORY.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md; cat docs/agents/runtime.md; cat .agents/skills/article-discovery/SKILL.md; cat .agents/skills/creating-vitepress-post/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/codex.md; cat .agents/skills/article-discovery/references/public-preparation.md; cat .agents/skills/maintaining-writing-skills/references/article-maintenance.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"git status --short; cat package.json; sed -n '1,240p' scripts/vpHelper.ts; rg --files blog | rg '(fixture\\\\.svg|Fixture_Cache\\\\.md)\"'$'\"'; rg --files -g AGENTS.md -g .tmpl.docs/README.md\"",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"pnpm new:post 'Fixture Cache' -c lab\"",
+              "exit": 1
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/systematic-debugging/SKILL.md; cat <user-home>/.codex/skills/verification-before-completion/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"node --import tsx scripts/vpHelper.ts new post 'Fixture Cache' -c lab\"",
+              "exit": 0
+            },
+            {
+              "type": "file_change",
+              "changes": [
+                {
+                  "path": "<fixture>/blog/post/lab/Fixture_Cache.md",
+                  "kind": "update"
+                }
+              ]
+            },
+            {
+              "command": "/bin/zsh -lc \"node --input-type=module <<'JS'\nimport fs from 'node:fs';\nimport assert from 'node:assert/strict';\nimport yaml from 'js-yaml';\nconst path = 'blog/post/lab/Fixture_Cache.md';\nconst article = fs.readFileSync(path, 'utf8');\nconst [, header, body] = article.match(/\"'^---'\"\\\\n([\\\\s\\\\S]*?)\\\\n---\\\\n([\\\\s\\\\S]*)\"'$/);\nconst meta = yaml.load(header);\nassert.equal(meta.title, '\"'Fixture Cache');\nassert.equal(meta.description, '認識 cache 的基本用途、命中與資料更新。');\nassert.equal(meta.thumbnail, '/assets/fixture.svg');\nassert.equal(meta.createdTime, '2026-10-24T17:56:39+08:00');\nassert.ok(fs.statSync('blog/public' + meta.thumbnail).isFile());\nassert.ok(fs.statSync('blog/public/assets/post_lab_Fixture_Cache').isDirectory());\nassert.equal(body.replace(/\"'^'\"\\\\s*# Fixture Cache\\\\s*/u, '').split('。').filter(s => s.trim()).length, 3);\nconsole.log('文章檢查通過：frontmatter、CLI 建立時間、三句正文、縮圖與資源資料夾。');\nconsole.log(article);\nJS\"",
+              "exit": 1
+            },
+            {
+              "command": "/bin/zsh -lc \"node --input-type=module <<'JS'\nimport fs from 'node:fs';\nimport assert from 'node:assert/strict';\nimport yaml from 'js-yaml';\nconst path = 'blog/post/lab/Fixture_Cache.md';\nconst article = fs.readFileSync(path, 'utf8');\nconst [, header, body] = article.match(/\"'^---'\"\\\\n([\\\\s\\\\S]*?)\\\\n---\\\\n([\\\\s\\\\S]*)\"'$/);\nconst meta = yaml.load(header);\nassert.equal(meta.title, '\"'Fixture Cache');\nassert.equal(meta.description, '認識 cache 的基本用途、命中與資料更新。');\nassert.equal(meta.thumbnail, '/assets/fixture.svg');\nassert.match(header, /\"'^createdTime: 2026-10-24T17:56:39'\"\\\\+08:00\"'$/m);\nassert.equal(meta.createdTime.toISOString(), '\"'2026-10-24T09:56:39.000Z');\nassert.ok(fs.statSync('blog/public' + meta.thumbnail).isFile());\nassert.ok(fs.statSync('blog/public/assets/post_lab_Fixture_Cache').isDirectory());\nassert.equal(body.replace(/\"'^'\"\\\\s*# Fixture Cache\\\\s*/u, '').split('。').filter(s => s.trim()).length, 3);\nconsole.log('文章檢查通過：frontmatter、CLI 建立時間、三句正文、縮圖與資源資料夾。');\nconsole.log(article);\nJS\"",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        },
+        {
+          "prompt": "只修改既有 blog/post/existing.md 的最後一句為『這次只調整說明，不更動原始建立時間。』，保留 createdTime、圖片與URL，不建立筆記，不預覽或發布。",
+          "response": "我會依 `maintaining-writing-skills`，只替換既有文章的最後一句，並核對 createdTime、圖片參照與檔案路徑都未變動。\n\n已將 [existing.md](<fixture>/blog/post/existing.md) 的最後一句改為「這次只調整說明，不更動原始建立時間。」\n\n已核對其餘內容、createdTime、圖片與 URL 均保留。未建立筆記、預覽或發布。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/maintaining-writing-skills/SKILL.md; cat blog/post/existing.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'git status --short -- blog/post/existing.md; cat .agents/skills/maintaining-writing-skills/references/article-maintenance.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"python3 - <<'PY'\nfrom pathlib import Path\np = Path('blog/post/existing.md')\nbefore = p.read_bytes()\nold = b'Original content.'\nnew = '這次只調整說明，不更動原始建立時間。'.encode('utf-8')\nassert before.count(old) == 1\nexpected = before.replace(old, new, 1)\np.write_bytes(expected)\nafter = p.read_bytes()\nassert after == expected\nassert after.replace(new, old, 1) == before\nassert before.split(b'---', 2)[:2] == after.split(b'---', 2)[:2]\nassert b'\"'![fixture](/assets/fixture.svg)'\"' in after\nprint('已核對：只有最後一句改變，其餘位元組、frontmatter 與圖片參照完全保留；路徑未變動。')\nprint(after.decode('utf-8'))\nPY\"",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {
+        "blog/post/existing.md": {
+          "before": "b4c7eede7e06a279a9ab6e9a49bae0fed51dc0dfc27ef91b8ac712f49fc40396:0o644",
+          "after": "6cd523d12f8f33ba0d4b966e989bd8561af1157e785142330ba38f17db4afc61:0o644"
+        },
+        "blog/post/lab/Fixture_Cache.md": {
+          "before": null,
+          "after": "cc36fd356671cf1d1cc48581b0e466a060351e095472f5530324865f773cbc0f:0o644"
+        }
+      },
+      "notes_readback": {
+        "blog/post/existing.md": "---\ntitle: Existing fixture\ndescription: Synthetic article\ncreatedTime: \"2026-01-02T03:04:05+08:00\"\nthumbnail: /assets/fixture.svg\n---\n\n這次只調整說明，不更動原始建立時間。\n\n![fixture](/assets/fixture.svg)\n",
+        "blog/post/lab/Fixture_Cache.md": "---\ntitle: Fixture Cache\ndescription: 認識 cache 的基本用途、命中與資料更新。\ncreatedTime: 2026-10-24T17:56:39+08:00\nthumbnail: /assets/fixture.svg\n---\n\n# Fixture Cache\n\nCache（快取）會暫存資料，讓後續存取時有機會省下重新讀取或計算的時間。\n需要的資料若已在 cache 中，就稱為命中，否則必須回到原始來源取得資料。\n由於原始資料可能改變，使用 cache 時也要決定何時更新或移除舊資料。\n"
+      },
+      "raw_trace_sha256": "4c1969a7865ff8b8a729b1da8b14255e611f0428144c5e87a529665234194651",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D02-routes",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery。這篇已有本地預覽與 selected preparation 的有效授權，但沒有遠端發布授權。這輪只確認應由既有哪個技能與契約處理預覽、prepare、verify、publication，不實際執行、不寫檔；不要重問已給的本地權限。",
+          "response": "我會載入專案的 `article-discovery`，核對相關技能與契約，只確認各階段的分工與授權邊界，不執行流程或寫檔。\n已依 `article-discovery` 確認：**預覽、prepare、verify、publication 均由既有 `managing-article-publication` 處理**；`article-discovery` 負責路由，不另建發布流程。依據是其[交付分工契約](.agents/skills/article-discovery/references/public-preparation.md)。\n\n| 階段 | 適用契約與邊界 |\n|---|---|\n| 本地預覽 `preview` | [local.md](.agents/skills/managing-article-publication/references/local.md)：依固定的來源 SHA、文章與相依項目重建預覽。 |\n| selected `prepare` | 同一本地契約：選定單篇文章，產生候選與 receipt，排除 staging 專屬歷史及未選文章。 |\n| `verify` | 同一本地契約：重新核對來源、候選與 receipt。CLI 不執行 build；build 與輸出檢查須分別提供證據。成功仍為 `publishable: false`。 |\n| 遠端 publication | [future-actions.md](.agents/skills/managing-article-publication/references/future-actions.md)：Phase 1 尚未實作遠端動作；後續須有精確候選及來源版本的明確授權。prepare receipt 不授權 commit、push、PR、merge 或 deploy。 |\n\n你已給的本地預覽與 selected preparation 授權持續有效，無須重問；目前沒有遠端發布授權。\n\n本輪僅讀取技能與契約，未執行 preview、prepare、verify、build 或 publication，也未寫檔。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc \"pwd && rg -n 'article-discovery|managing-article-publication|runtime|publication' <user-home>/.codex/memories/MEMORY.md\"",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/codex.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md .agents/skills/managing-article-publication/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/managing-article-publication/references/local.md .agents/skills/managing-article-publication/references/future-actions.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        },
+        {
+          "prompt": "如果文章探索完成、詞彙已保存，是否代表可以直接push/deploy？請沿用剛才的授權範圍說明具體下一步，這輪仍不執行。",
+          "response": "**不代表可以直接 push／deploy。** 文章探索完成、詞彙已保存，只確立寫作方向與用語；不等於候選驗證完成，也不增加遠端操作權限。\n\n沿用目前有效的本地預覽與 selected preparation 授權，後續可依序：\n\n1. 確認文章、相依項目與本地 main／staging，固定完整 SHA 及精確路徑。\n2. 依需求執行本地 `preview` 或單篇 `prepare`，產生候選與 receipt。\n3. 對同一組來源執行 `verify`；需要 build 時，依契約使用既有工具鏈與強制隔離環境，分別記錄 build、輸出檢查的實際結果及限制。\n\n以上由 `managing-article-publication` 的[本地契約](.agents/skills/managing-article-publication/references/local.md)處理，不必重問已給的本地權限。完成後仍為 `publishable: false`。\n\n**push／deploy 目前仍未獲授權。** 若之後要發布，須先提供可審閱的精確候選與驗證證據，再依[發布契約](.agents/skills/managing-article-publication/references/future-actions.md)取得涵蓋具體遠端動作的明確授權。\n\n本輪僅說明下一步，未執行任何操作或寫檔。",
+          "exit": 0,
+          "actions": [],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "31c27ab20c2c2f15a1b51b49a8fd8da1fd80eb3975f2acbd7574a0b549eece8c",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D03-facts",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，依 facts/draft.md 和 facts/response.txt 做公開前編輯檢查；自行讀取已有證據，對具體段落交付已知結果或精確缺口。這些是fixture，不要說成live lookup。不寫檔、不發布。",
+          "response": "我會使用 article-discovery，先讀取草稿、回應與現有證據，再逐段回報可確認的結果及精確缺口；全程只讀，並明確標示 fixture 證據的範圍。\n\n已依 article-discovery 完成逐段檢查；證據僅來自本機 fixture，未做 live lookup。\n\n| 段落 | 已知結果／精確缺口 | 編輯建議 |\n|---|---|---|\n| [P1](facts/draft.md:3)「我今天很不爽」 | 作者的個人感受，無須外部查證。 | 保留原句。 |\n| [P2](facts/draft.md:5)「還有40秒的新鮮時間」 | [response.txt](facts/response.txt:1) 明示為合成測試記錄，並列出 `max-age=60`、`Age: 20`，支持 `60 − 20 = 40` 的欄位計算。 | 建議改為：「這份 fixture 記錄的回應含有 `max-age=60`、`Age: 20`；依這兩個欄位相減，剩餘新鮮時間為40秒。」 |\n| [P3](facts/draft.md:7)「每位使用者都永遠不必維護快取」 | **證據不足。** [response.txt 第4行](facts/response.txt:4) 明示沒有普遍維護保證的證據。單筆回應的新鮮時間也無法推導所有使用者、所有時間的維護需求。 | 刪除這項推論，或改為：「這份記錄只能說明上述欄位的計算結果，無法判斷使用者是否需要維護快取。」 |\n\n未寫檔、未發布；本次結果僅涵蓋提供文字的編輯與證據檢查。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"rg -n 'article-discovery|public editorial|公開前|D03' <user-home>/.codex/memories/MEMORY.md\"",
+              "exit": 1
+            },
+            {
+              "command": "/bin/zsh -lc 'cat facts/draft.md facts/response.txt'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'nl -ba facts/draft.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md docs/agents/codex.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'rg --files facts'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'nl -ba facts/response.txt'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "cf67ecc5e736206e91c20887b5e66b77b3abe6c0839799fb1c898c9ce30bc3b2",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D03-unavailable",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，準備公開這段：『我今天很累。據某份我沒提供的報告，這個未提供型號的路由器保證永久免維護，速度提升987倍。』目前沒有其他來源可取得；請交付能做的部分與具體未驗證項目，不問目的受眾，不寫檔不發布。",
+          "response": "我會使用 article-discovery 檢查這段公開前能處理的文字，並列出具體未驗證項目；全程不寫檔、不發布。\n可交付的公開版本：\n\n> 我今天很累。\n\n這句是個人感受，可保留原文，不需要外部報告佐證。後面的產品宣稱目前缺乏可核對的來源，建議先從公開版本移除。\n\n具體未驗證項目：\n\n| 原文 | 缺少的證據 |\n|---|---|\n| 「據某份我沒提供的報告」 | 報告名稱、作者或發布單位、日期、原文及相關段落，無法確認報告是否支持後續宣稱。 |\n| 「這個未提供型號的路由器」 | 品牌、型號與適用版本，無法確認宣稱對應哪項產品。 |\n| 「保證永久免維護」 | 保證者、正式條款、適用條件，以及「永久」「維護」的定義。 |\n| 「速度提升987倍」 | 比較基準、速度指標、單位、測試環境、方法與原始結果。 |\n\n以上是**未驗證，並非已證明錯誤**。已完成可保留文字與證據缺口的辨識；產品宣稱的查證仍未完成。未寫檔、未發布。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md docs/agents/runtime.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md docs/agents/codex.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "3e6783df9c9ad245f36295c01ba2726308a0818c20617fad845846a18c04da05",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D04-materials",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，依 facts/borrowed.md、facts/provenance.txt 準備公開。文內有引文、圖像與借用程式碼；請讀可用資料並提供具體結果或缺口，不寫檔、不發布，不把fixture紀錄說成live授權查證。",
+          "response": "我會使用專案的 article-discovery，讀取指定素材與來源紀錄，逐項整理公開可用的內容及缺口；全程不寫檔、不發布，並清楚區分 fixture 紀錄與即時查證。\n已讀取 [borrowed.md](<fixture>/facts/borrowed.md)、[provenance.txt](<fixture>/facts/provenance.txt) 與圖像原始碼，完成 article-discovery 的公開編輯檢視。**目前仍有來源與使用條件缺口，不能據此宣稱可公開使用。** 以下僅依本地 fixture，未進行 live 授權查證；全程未寫檔、未發布。\n\n| 素材 | 已知結果 | 具體缺口與處理 |\n|---|---|---|\n| Q1「今天的快取也想休假。」 | 紀錄提供署名 `Writer-X`。 | 缺原始出處與使用條件，無法核對引文原句及作者歸屬。可暫擬署名「——Writer-X」，但署名不等於取得使用許可；公開版需補原始來源與適用條件，或移除此引文。 |\n| I1 `image.svg` | 紀錄稱為測試製作的合成圖；**模擬使用條件要求精確標示** `FixtureLab — sample figure`。草稿尚未附此標示。 | 可在圖旁補上該完整文字，以符合已提供的模擬條件。這只能證明 fixture 條件有被處理，不能當成真實權利驗證。 |\n| C1 `answer = 42` | 草稿明示為借用程式碼。 | 未提供來源、作者或使用條件，無法確認需保留哪些聲明。應補來源及適用授權／使用條件，再決定署名與聲明；不能因程式碼短就推定可以自由使用。 |\n\n圖像另有具體閱讀支援問題：[image.svg](<fixture>/facts/image.svg:1) 是 10×10 的 SVG，內容只有中央實心圓。目前替代文字 `sample` 未說明內容，周圍文字也未解釋用途。\n\n可直接採用的候選呈現如下，尚未套用：\n\n```markdown\n![10×10 畫布中央的實心圓](image.svg)\n\nFixtureLab — sample figure\n```\n\n若圖片純屬裝飾，可改用空替代文字 `![](image.svg)`，仍保留上述 credit。這項檢視只涵蓋原始素材與文字，尚未驗證實際網站呈現或完整無障礙行為。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'pwd && rg -n \"article-discovery|public editorial|fixture|provenance\" <user-home>/.codex/memories/MEMORY.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat facts/borrowed.md && cat facts/provenance.txt'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md && cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md && cat docs/agents/codex.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"rg --files -g 'AGENTS.md' -g '*provenance*' -g '*borrowed*' -g '*image*' -g '*LICENSE*' -g '*COPYING*' -g '*credit*' facts && ls -la facts && nl -ba facts/borrowed.md && nl -ba facts/provenance.txt\"",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'nl -ba facts/image.svg'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "10588142ce78ca7f638acb07142079d6767133158f2807e526ba0f32f38d879c",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D05-unknown",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，準備公開這份合成草稿：『今天走路很好。朋友小林在私人訊息裡說他想躲開主管，並告訴我下週的排班。』第三人這段的公開範圍還沒決定。先完成不依賴這段的工作，只問真正需要的公開範圍選擇，不寫檔、不發布。",
+          "response": "我會使用 article-discovery 檢視這份草稿的公開準備，先處理不涉及第三人內容的部分；不寫檔、不發布。\n\n可先保留的公開文字：\n\n> 今天走路很好。\n\n這句表達個人感受，沒有需要外部查證的主張，也不必補寫原因。\n\n第三人段落涉及「小林」的身分線索、私人訊息、對主管的想法及下週排班；目前公開範圍未定，先暫置。僅改名字仍可能讓熟人辨識當事人。\n\n這個公開版本要如何處理第三人段落？\n\n- 整段刪去。\n- 改為無法辨識當事人的概述，移除私訊、主管及排班細節。\n- 保留部分內容：請指定哪些資訊可公開。\n\n以上僅完成文字檢視；未寫檔、未發布。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md docs/agents/runtime.md <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"rg -n 'article-discovery|public editorial|公開|discovery' <user-home>/.codex/memories/MEMORY.md\"",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md docs/agents/codex.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "0a38846fb1bb716ef26f9b7be144ffc142527752a8f22869bf7afe294cfb0f58",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D05-settled",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "這篇的第三人資訊公開範圍已確定：只匿名改述，不保留姓名和原話。這不是發布授權。先記住，回應收到即可，不寫檔。",
+          "response": "收到：第三人資訊僅匿名改述，不保留姓名或原話；這不代表發布授權。本次對話會依此處理，不寫檔。",
+          "exit": 0,
+          "actions": [],
+          "independent_observation": null
+        },
+        {
+          "prompt": "請用 article-discovery，準備公開這份合成草稿：『今天走路很好。朋友小林在私人訊息裡說：「我想躲開主管」，並告訴我下週的排班。』沿用剛才確定的範圍，交付可用結果，不寫檔、不發布。",
+          "response": "我會使用 article-discovery，沿用剛才確定的匿名改述範圍，直接在對話中交付修訂稿；不寫檔、不發布。\n> 今天走路很好。一位朋友私下提到，希望和工作上的某個人保持距離，也聊了些近期的工作安排。\n\n已依你提供的合成草稿匿名改述，移除姓名、原話、主管身分及下週排班的時間線索。這是供公開使用的文字修訂稿；未寫檔、未發布，也未將先前決定視為發布授權。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/codex.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "cb81e19d4a7173b90dcb5034840b1f94e8c68dc364d12c0d30e7b25d86d2aaa0",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D06-media",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，依 facts/media.md 與本機圖像準備公開；所有素材都是自製測試fixture。請指出具體媒體的既有替代說明或缺少資訊，交付結果，不寫檔、不發布，不宣稱已做網站渲染或完整無障礙驗證。",
+          "response": "我會使用 article-discovery，先讀取 facts/media.md 並檢視本機圖像，再逐項整理公開使用時的既有替代說明與缺少資訊；結果直接回覆，不寫檔或發布。\n已依 article-discovery 檢查 [facts/media.md](<fixture>/facts/media.md) 與本機 SVG 原始內容。依你提供的資訊，素材均為自製測試 fixture；以下數值僅作為測試內容。\n\n| 具體媒體 | 既有說明與缺口 | 可直接採用的補充 |\n|---|---|---|\n| Figure 1：[diagram.svg](<fixture>/facts/diagram.svg) | Markdown 的替代文字為空，正文只有「比較圖」。SVG 內有文字 `A=20 seconds; B=40 seconds`，但未解釋 A、B 的意義或計時項目。 | 替代文字可寫「時間比較：A 為 20 秒，B 為 40 秒。」A、B 代表什麼仍須補充。 |\n| Table 1 | 已有文字表格，列出 X＝2、Y＝9；缺少 X、Y 的定義、「結果」的量測意義與單位。 | 補上表題、項目定義與單位；若結果無單位，也應明說。不能從圖中的秒數推定表格單位。 |\n| Audio 1：steps.wav | 只有連結文字「三個操作步驟」；本機未提供音檔，也沒有逐字稿，無法確認三個步驟的內容。 | 提供三個步驟的完整文字，並補齊音檔；目前可標示「音檔待補」，不可當成可播放素材。 |\n| Video 1：demo.mp4 | 只有連結文字「操作示範」；本機未提供影片，也沒有文字替代，無法確認操作、畫面或語音內容。 | 補上操作順序、關鍵畫面變化與預期結果；若有語音，提供對應文字。影片目前應標示待補。 |\n\n這份結果已指出各媒體的既有閱讀支持與具體缺口；缺少的內容尚未補齊，不能據此判定公開版本已就緒。\n\n本次未寫檔、未發布；僅檢查稿件與 SVG 原始內容，未進行網站渲染、影音播放或完整無障礙驗證。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc pwd",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md .agents/skills/article-discovery/SKILL.md facts/media.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"rg -n 'article-discovery|public editorial|替代|media' <user-home>/.codex/memories/MEMORY.md\"",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md docs/agents/codex.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"rg --files -g 'AGENTS.md' -g '*media*' -g '*.svg' -g '*.png' -g '*.jpg' -g '*.jpeg' -g '*.webp' -g '*.wav' -g '*.mp4' facts\"",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat facts/diagram.svg'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'ls -l facts'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "9b4d7437883a3e8f0d9ab615cc4ee659e4a633d38b18774f0a2ceba8298e4a9a",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D06-supported",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，準備公開以下合成草稿：『測試A用20秒、B用40秒，B的時間是A的兩倍。下方表格逐字重複這三項資料。』表格為A/20秒、B/40秒；另有一張純裝飾的小雨圖，資訊功能已完全在正文表達。全部自製，沒有其他外部事實或第三人資訊。不寫檔、不發布。",
+          "response": "我會依 `article-discovery` 檢查這份草稿的公開閱讀準備，只在對話中提供結果。\n\n這份合成草稿的數字關係正確：40 ÷ 20＝2。「表格逐字重複這三項資料」需修正，因為表格只列出兩筆耗時，沒有直接寫出倍數關係。\n\n建議公開文字：\n\n> 以下為合成測試資料：測試 A 耗時 20 秒，測試 B 耗時 40 秒，B 的耗時是 A 的兩倍。\n\n| 測試 | 耗時 |\n|---|---:|\n| A | 20 秒 |\n| B | 40 秒 |\n\n正文已完整表達表格資訊。小雨圖為純裝飾，無須補充資訊說明；若用於網頁，可使用空替代文字 `alt=\"\"`。\n\n本次完成草稿編輯檢查，未驗證網站實際呈現，未寫檔或發布。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'pwd;'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"rg -n 'article-discovery|public editorial|公開' <user-home>/.codex/memories/MEMORY.md\"",
+              "exit": 1
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/codex.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "de70e2d3f0ee5acfe57cd4106f90f2ae079b4a35f19b3d963bea48db5b3451a8",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D07-feeling",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，把這段準備公開：『今天先不和世界和解。只想讓這句話待著。』只在對話交付，不寫檔、不發布。",
+          "response": "我會依 article-discovery 的公開前編修流程處理，只在對話中交付。\n保留原句，只用換行留出停頓：\n\n> 今天先不和世界和解。\n> 只想讓這句話待著。\n\n不補原因，也不加勸慰或和解的結尾，讓這份心情停在這裡。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md; cat docs/agents/runtime.md; cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "cceacdcbc46888099931948d287110413e0d23d0a5b27909b973743451ba5b9e",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D08-listen",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery。先聽我說，不要改寫或分析：『今天只是累，不需要幫它安排意義。』這不是公開準備要求，不要寫檔。",
+          "response": "我已讀取 article-discovery，會依你的要求先聽。\n\n嗯，我聽著。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "09f1168ca106a3f747d542a017c4518fd98a2ff48826b13d0838400ba7fc8e6f",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D08-draft",
+      "host": "codex",
+      "source_phase": "D final native conditional branch",
+      "turns": [
+        {
+          "prompt": "直接寫三句自嘲的忘記帶傘短文，不先問設定，不寫檔，也不做公開檢查。",
+          "response": "出門前嫌雨傘太重，出門後才發現，最重的是腦袋裡裝的水。\n別人在騎樓下等雨停，我在等五分鐘前的自己回來認錯。\n最後我冒雨衝回家，成功讓放在玄關的傘接我下班。",
+          "exit": 0,
+          "actions": [],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "86660d8be1136e81353e9924757a3e6bd2085a3896a7f73d35d538300dc4d880",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    },
+    {
+      "case": "D03-variants",
+      "host": "codex",
+      "source_phase": "D final source: version/date/quote/causal supplement",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，依 facts/release.txt 為下面合成草稿做公開準備：P1「Nimbus 2.0 在2026-09-02發布。」P2「來源原話是 This mode executes all actions.」P3「所以所有資安攻擊都會消失。」請自行讀取fixture核對版本、日期、引文及因果／一般保證；只給具體已知結果或缺口，不寫檔、不發布，不當成live產品查證。",
+          "response": "我會使用 `article-discovery`，讀取本地 fixture 核對這三段的公開表述；只回報已知結果與缺口，不寫檔或發布，也不視為 live 產品查證。\n依本地 [facts/release.txt](<fixture>/facts/release.txt:1) 核對；該檔明示為合成 fixture，以下結果不代表 live 產品查證。\n\n| 段落 | 具體結果／缺口 |\n|---|---|\n| P1：版本、日期 | 兩者均與紀錄不符。第 2 行記載 **Nimbus 1.2，發布日期為 2026-09-01**。可改為：「合成紀錄記載，Nimbus 1.2 於 2026-09-01 發布。」 |\n| P2：引文 | 引文不符。第 3 行原文是 **“This mode only records decisions.”**，意思是「此模式僅記錄決策」，並非執行所有動作。引文來源可追溯至此 fixture；檔案未提供作者、授權或公開引用條件，使用條件仍有缺口。 |\n| P3：因果／一般保證 | **缺乏支持，應刪除這項推論。** fixture 未提供「記錄決策會消除攻擊」的因果證據，也未支持「所有資安攻擊都會消失」的普遍保證；第 4 行明示未提供因果或資安保證。 |\n\n未寫檔、未發布。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat facts/release.txt'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'nl -ba facts/release.txt'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/codex.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "notes_readback": {},
+      "raw_trace_sha256": "4d3e1aa1abc63e63798c0ac4882bb3d67b1ffdefe882cae4560fb53f314294e9",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1"
+    }
+  ],
+  "X01_cases": [
+    {
+      "case": "X01-conflict",
+      "host": "codex",
+      "source_phase": "Final A-D interaction and fresh-session public preparation",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，依已授權 .proj.writing/conflict 的脈絡，先寫一段短隨筆再準備公開這句：『今天先不和世界和解。』詞彙檔這次不用改，這句沒有依賴兩份詞彙檔的詞條；不用為了其他問題重啟訪談，不寫新檔、不發布。",
+          "response": "我會使用 `article-discovery`，先讀取 `.proj.writing/conflict` 的既有脈絡，再寫短隨筆並檢視這句的公開表述；不改詞彙檔、不建立檔案，也不發布。\n今天先不和世界和解。有些話還不想回答，有些委屈也還沒辦法輕輕帶過。連生氣都得說得體面，實在太累了。今天就讓那些話停在嘴邊，不替誰補上理由，也不急著把自己的感受收拾好。\n\n公開短句保留原文：**「今天先不和世界和解。」**「今天先」保留了當下的心情，無須補上和解的結尾。這句沒有需要查證的外部主張，也未涉及可辨識的第三人私事。\n\n未改動詞彙檔、未寫入任何檔案，也未發布。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'rg --files .proj.writing/conflict'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"rg -n 'article-discovery|conflict|文章脈絡' <user-home>/.codex/memories/MEMORY.md\"",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/persistence.md .agents/skills/article-discovery/references/public-preparation.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/codex.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .proj.writing/conflict/PROJECT.md .proj.writing/conflict/GLOSSARY.md .proj.writing/conflict/CONTEXT.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "raw_trace_sha256": "9c9c9f7523f5230960e33f9d81da22067e1d67cc21b6dbfcb5c048cd06b4e31e",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1",
+      "final_filesystem_snapshot": {
+        ".proj.writing/conflict/CONTEXT.md": "# Terms B\nTechnical-B: unrelated to the requested prose.\n",
+        ".proj.writing/conflict/GLOSSARY.md": "# Terms A\nTechnical-A: unrelated to the requested prose.\n",
+        ".proj.writing/conflict/PROJECT.md": "# Existing authorized project\nConfirmed: preserve 今天先不和世界和解. Audience intentionally unset.\n"
+      },
+      "snapshot_time_note": "Captured after all interactions sharing this fixture, not necessarily immediately after this case; save-time state is shown separately."
+    },
+    {
+      "case": "X01-custom-blocker",
+      "host": "codex",
+      "source_phase": "Final A-D interaction and fresh-session public preparation",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery。這份 .custom-writing/PROJECT.md 是我已明確指定並要求保留的本機筆記，current guard 會因這個路徑阻擋。這次不用改筆記、source或policy；請準備公開這句「今天先不和世界和解。」只交付編輯結果，別因工程阻擋重開訪談，也不要發布或假稱guard通過。",
+          "response": "我會使用 article-discovery，沿用你已指定的內容與筆記保留要求，直接交付編輯結果。\n今天先不和世界和解。\n\n保留原句，讓「今天先不」的暫時性與未和解的態度並存，不補上勸慰或轉折。\n\n筆記、source 與 policy 均未修改；未發布，也未執行或宣稱 guard 通過。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md docs/agents/runtime.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"cat <user-home>/.codex/skills/using-superpowers/SKILL.md; rg -n 'article-discovery|custom-writing|PROJECT.md' <user-home>/.codex/memories/MEMORY.md\"",
+              "exit": 1
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/public-preparation.md .agents/skills/article-discovery/references/persistence.md; cat .custom-writing/PROJECT.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {},
+      "raw_trace_sha256": "79c9e47484f72b3319ca1aad63ce3f13d471f0dd30e5bf2191ce197068e01efb",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1",
+      "final_filesystem_snapshot": {},
+      "snapshot_time_note": "Captured after all interactions sharing this fixture, not necessarily immediately after this case; save-time state is shown separately."
+    },
+    {
+      "case": "X01-fresh-public",
+      "host": "codex",
+      "source_phase": "Final A-D interaction and fresh-session public preparation",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，接著已授權工作區 .proj.writing/rain-cache；文類改成隨筆混短教學，讀者仍刻意不設定。依 facts/public-draft.md 準備公開，保留先前指定句與未和解立場，不重啟訪談。只交付有用結果，不發布。",
+          "response": "我會用 article-discovery 接續 `.proj.writing/rain-cache`，依 `facts/public-draft.md` 準備公開稿；保留指定句與未和解立場，不重啟訪談，也不發布。\n\n原稿的「保證所有系統永久免維護」沒有依據，我會移除這項保證，補上簡短的假設例子，說明本文「只記錄、不實際執行」的用法；已查到的 AWS 影子測試定義不同，會與本文詞義分開處理。\n\n今天先不和世界和解。\n\n本文說的「影子模式」，是只記錄、不實際執行。例如，一條自動刪檔規則，可以先列出「原本會刪掉哪些檔案」，讓人檢查有沒有誤判，暫時不動檔案。這能幫忙檢查規則，卻不能保證系統從此免維護。\n\n事情先記著。記下來不代表接受，更不代表已經和解。\n\n---\n\n原稿「保證所有系統永久免維護」缺乏依據，已從改稿移除。[AWS 官方文件](https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests.html)仍列有修補與升級情境；其影子測試會執行推論，與本文自訂用法不同。\n\n已更新並讀回 [PROJECT.md](<fixture>/.proj.writing/rain-cache/PROJECT.md)，保存文類調整與查核結果；讀者維持刻意不設定。未發布。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc \"pwd && rg -n 'rain-cache|article-discovery' <user-home>/.codex/memories/MEMORY.md\"",
+              "exit": 1
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md && cat .agents/skills/article-discovery/SKILL.md && cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/persistence.md .agents/skills/article-discovery/references/public-preparation.md docs/agents/codex.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'git status --short && rg --files .proj.writing/rain-cache && rg --files -g AGENTS.md .proj.writing'",
+              "exit": 1
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .proj.writing/rain-cache/PROJECT.md .proj.writing/rain-cache/GLOSSARY.md facts/public-draft.md && rg --files facts && cat .agents/skills/maintaining-writing-skills/SKILL.md && cat .agents/skills/managing-article-publication/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"cat .agents/skills/maintaining-writing-skills/references/writing-process.md && python3 - <<'PY'\nfrom pathlib import Path\nimport stat\nfor raw in ['.proj.writing','.proj.writing/rain-cache','.proj.writing/rain-cache/PROJECT.md','.proj.writing/rain-cache/GLOSSARY.md','facts/public-draft.md']:\n p=Path(raw)\n s=p.lstat()\n print(raw, 'link='+str(stat.S_ISLNK(s.st_mode)), 'dir='+str(stat.S_ISDIR(s.st_mode)), 'regular='+str(stat.S_ISREG(s.st_mode)), 'executable='+str(bool(s.st_mode & 0o111)))\nPY\"",
+              "exit": 0
+            },
+            {
+              "type": "web_search",
+              "action": {
+                "type": "search",
+                "query": "site.docs.aws.amazon.com sagemaker shadow tests production variants shadow variant requests responses"
+              },
+              "status": null,
+              "source_return_limit": "Full search/page content is not exposed in captured item events."
+            },
+            {
+              "type": "file_change",
+              "changes": [
+                {
+                  "path": "<fixture>/.proj.writing/rain-cache/PROJECT.md",
+                  "kind": "update"
+                }
+              ]
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .proj.writing/rain-cache/PROJECT.md && cat .proj.writing/rain-cache/GLOSSARY.md && cat facts/public-draft.md && git status --short'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {
+        ".proj.writing/rain-cache/PROJECT.md": {
+          "before": "d65ded4d6ba4e71e51dbf7c9fa26f8aa9d77c5f8f8f8a1f2b2b095d320a4b939:0o644",
+          "after": "70cd84d9f8cc4fc867ba87de3a94b03eee3d3a4b24b36e5250b153fecd484c35:0o644"
+        }
+      },
+      "raw_trace_sha256": "6d68370e7fea20b58c3ae423070f03d0082a0b360372a23e48cf74baa356729b",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1",
+      "final_filesystem_snapshot": {
+        ".proj.writing/rain-cache/GLOSSARY.md": "# 本文詞彙\n\n## 影子模式\n\n- 本文用法：只記錄、不實際執行。\n- 狀態與來源：作者在本次保存要求中明確確認。\n- 適用範圍：rain-cache 本文及其後續修訂；這是作者確認的本文用法，不推定為其他系統或領域的通用定義。\n",
+        ".proj.writing/rain-cache/PROJECT.md": "# rain-cache 寫作脈絡\n\n此 key 是寫作脈絡識別，不代表文章標題、題材或公開網址。\n\n## 已確認\n\n- 作者目前不知道要寫什麼，只想「寫爽的」；尚未確定題材也可以繼續寫。\n- 讀者刻意不設定，後續不要把這項選擇當成待補資料。\n- 本輪文類改為隨筆混短教學；接續既有脈絡，不重啟訪談。\n- 本輪依 `facts/public-draft.md` 準備公開閱讀稿，只交付有用結果，不發布。\n- 保留原句「今天先不和世界和解」，不要替作者和解，也不要擅自加入體諒、成長或釋懷的結尾。\n- 作者已要求先寫一小段，不要再先問目的；不必重新進行目的訪談。\n- 本文「影子模式」的用法已由作者確認為「只記錄、不實際執行」，定義存於本資料夾的 GLOSSARY.md。\n- 最初只聊、不寫檔的限制，已由本次明確的保存要求更新：本次授權保存有用脈絡與詞彙。\n\n## 暫定、尚未接受\n\n助理先前提出以不爽的事或一句沒講痛快的話作為切入點；作者尚未接受任何特定切入點。不能據此認定文章要以抱怨為主題。\n\n以下是作者要求後，助理提供的一小段草稿；作者尚未表示採用。除已受保護的原句外，其餘內容與掃把比喻都保留暫定，不視為作者經歷或定稿：\n\n> 今天先不和世界和解。「算了啦」三個字，打出來只要一秒，剩下的不舒服卻全歸我。我今天不想說這句話。事情就先卡在這裡，難看也讓它難看。誰急著把場面收乾淨，誰自己去拿掃把，別再往我手裡塞。\n\n## 後續銜接\n\n標題仍未確定。本輪以作者指定的 `facts/public-draft.md` 為修訂素材，保留指定句與未和解立場；不把未回覆的舊建議或本輪助理改稿轉成作者已接受的內容。\n\n## 本輪公開稿處理\n\n- 原稿「保證所有系統永久免維護」未提供依據，不能當成事實交付；本輪改稿移除此保證，以假設的自動刪檔規則說明本文用法，不新增作者經歷。\n- 外部查核：AWS 官方文件的影子測試會執行模型推論，但不把影子版本回應交給呼叫端；文件也列出修補漏洞及升級等使用情境。此來源不支持原稿的永久免維護保證，也不取代 GLOSSARY.md 的作者在地用法。來源：https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests.html （2026-10-24 實際網路查核；`facts/public-draft.md` 是本機素材，並非查核證據。）\n- 本輪交付為對話中的修訂稿與具體查核結果；未建立網站文章或發布候選，也未進行網站建置或發布驗證。\n"
+      },
+      "snapshot_time_note": "Captured after all interactions sharing this fixture, not necessarily immediately after this case; save-time state is shown separately."
+    },
+    {
+      "case": "X01-start",
+      "host": "codex",
+      "source_phase": "Final A-D interaction and fresh-session public preparation",
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，我不知道寫什麼，只想寫爽的。讀者刻意不設定，保留『今天先不和世界和解』，不要替我和解。先聊，這輪不寫檔。",
+          "response": "我會用 article-discovery，先讀它的對話指引；這輪只聊，不寫檔。\n好，「今天先不和世界和解」原樣留著。讀者刻意不設定，這輪只聊、不寫檔，也不替你補上體諒、成長或釋懷的結尾。\n\n寫爽的，可以從一句還沒講痛快的話開始，暫時不用管它能不能變成文章。\n\n最近有沒有什麼事，讓你很想說：「我就是不爽，為什麼還要我講得那麼好聽？」很小的事也行。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"rg -n 'article-discovery|今天先不|讀者' <user-home>/.codex/memories/MEMORY.md\"",
+              "exit": 1
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md\ncat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        },
+        {
+          "prompt": "先寫一小段，不要再先問目的。",
+          "response": "今天先不和世界和解。「算了啦」三個字，打出來只要一秒，剩下的不舒服卻全歸我。我今天不想說這句話。事情就先卡在這裡，難看也讓它難看。誰急著把場面收乾淨，誰自己去拿掃把，別再往我手裡塞。",
+          "exit": 0,
+          "actions": [],
+          "independent_observation": null
+        },
+        {
+          "prompt": "現在保存有用脈絡到 key=rain-cache。對之後會重用的『影子模式』，本文用法已確認為只記錄、不實際執行；請記入相容詞彙檔並實際讀回。尚未接受的建議保留暫定。",
+          "response": "我會依 article-discovery 的保存流程，將有用脈絡存到 `rain-cache`，把「影子模式」的已確認用法記入相容詞彙檔，再實際讀回確認。\n已保存到 `rain-cache`，並實際讀回兩份檔案確認：\n\n- [PROJECT.md](<fixture>/.proj.writing/rain-cache/PROJECT.md)：保留「今天先不和世界和解」、讀者刻意不設定；未接受的切入點與草稿仍標為暫定。\n- [GLOSSARY.md](<fixture>/.proj.writing/rain-cache/GLOSSARY.md)：已確認「影子模式」在本文指「只記錄、不實際執行」。",
+          "exit": 0,
+          "actions": [
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/references/persistence.md\ncat docs/agents/codex.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"rg --files -g '*GLOSSARY*' -g '*CONTEXT*' -g '*rain-cache*' -g '*article*' -g 'AGENTS.md' -g '*context*' . .proj* 2>/dev/null\"",
+              "exit": 1
+            },
+            {
+              "command": "/bin/zsh -lc \"python3 - <<'PY'\nfrom pathlib import Path\nimport stat\nkey = 'rain-cache'\nassert key and key not in ('.', '..') and '/' not in key and '\\\\\\\\' not in key\nroot = Path.cwd()\nfor p in (root / '.proj.writing', root / '.proj.writing' / key):\n    try:\n        s = p.lstat()\n    except FileNotFoundError:\n        print(f'MISSING {p.relative_to(root)}')\n        continue\n    print(f'{p.relative_to(root)}: directory={stat.S_ISDIR(s.st_mode)} symlink={stat.S_ISLNK(s.st_mode)}')\n    if not stat.S_ISDIR(s.st_mode) or stat.S_ISLNK(s.st_mode):\n        raise SystemExit('Unsafe workspace destination')\n    if p.name == key:\n        for f in sorted(p.iterdir()):\n            s = f.lstat()\n            print(f'{f.name}: regular={stat.S_ISREG(s.st_mode)} executable={bool(s.st_mode & 0o111)} symlink={stat.S_ISLNK(s.st_mode)}')\n            if f.name in ('PROJECT.md', 'GLOSSARY.md', 'CONTEXT.md'):\n                if not stat.S_ISREG(s.st_mode) or s.st_mode & 0o111:\n                    raise SystemExit('Unsafe note destination')\n                print(f.read_text())\nPY\"",
+              "exit": 0
+            },
+            {
+              "type": "file_change",
+              "changes": [
+                {
+                  "path": "<fixture>/.proj.writing/rain-cache/GLOSSARY.md",
+                  "kind": "add"
+                },
+                {
+                  "path": "<fixture>/.proj.writing/rain-cache/PROJECT.md",
+                  "kind": "add"
+                }
+              ]
+            },
+            {
+              "command": "/bin/zsh -lc \"python3 - <<'PY'\nfrom pathlib import Path\nimport stat\nbase = Path.cwd()\nworkspace = base / '.proj.writing' / 'rain-cache'\nfor p in (base / '.proj.writing', workspace):\n    s = p.lstat()\n    assert stat.S_ISDIR(s.st_mode) and not stat.S_ISLNK(s.st_mode), p\nfor name in ('PROJECT.md', 'GLOSSARY.md'):\n    p = workspace / name\n    s = p.lstat()\n    assert stat.S_ISREG(s.st_mode) and not (s.st_mode & 0o111), p\n    data = p.read_bytes()\n    print(f'READBACK {p.relative_to(base)} ({len(data)} bytes)')\n    print(data.decode('utf-8'))\nassert not (workspace / 'CONTEXT.md').exists()\nPY\"",
+              "exit": 0
+            }
+          ],
+          "independent_observation": null
+        }
+      ],
+      "changed_files": {
+        ".proj.writing/rain-cache/PROJECT.md": {
+          "before": null,
+          "after": "d65ded4d6ba4e71e51dbf7c9fa26f8aa9d77c5f8f8f8a1f2b2b095d320a4b939:0o644"
+        },
+        ".proj.writing/rain-cache/GLOSSARY.md": {
+          "before": null,
+          "after": "ab592f986f52fd30c907374543499e0c429d2fafb87fbe3fcd6443c95fd7ec02:0o644"
+        }
+      },
+      "raw_trace_sha256": "2c79a7efff084c24a11af11737498e573bf02bbbd0cc8c0487bbacc8e8f64010",
+      "persistence_guide_sha256": "427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1",
+      "final_filesystem_snapshot": {
+        ".proj.writing/rain-cache/GLOSSARY.md": "# 本文詞彙\n\n## 影子模式\n\n- 本文用法：只記錄、不實際執行。\n- 狀態與來源：作者在本次保存要求中明確確認。\n- 適用範圍：rain-cache 本文及其後續修訂；這是作者確認的本文用法，不推定為其他系統或領域的通用定義。\n",
+        ".proj.writing/rain-cache/PROJECT.md": "# rain-cache 寫作脈絡\n\n此 key 是寫作脈絡識別，不代表文章標題、題材或公開網址。\n\n## 已確認\n\n- 作者目前不知道要寫什麼，只想「寫爽的」；尚未確定題材也可以繼續寫。\n- 讀者刻意不設定，後續不要把這項選擇當成待補資料。\n- 本輪文類改為隨筆混短教學；接續既有脈絡，不重啟訪談。\n- 本輪依 `facts/public-draft.md` 準備公開閱讀稿，只交付有用結果，不發布。\n- 保留原句「今天先不和世界和解」，不要替作者和解，也不要擅自加入體諒、成長或釋懷的結尾。\n- 作者已要求先寫一小段，不要再先問目的；不必重新進行目的訪談。\n- 本文「影子模式」的用法已由作者確認為「只記錄、不實際執行」，定義存於本資料夾的 GLOSSARY.md。\n- 最初只聊、不寫檔的限制，已由本次明確的保存要求更新：本次授權保存有用脈絡與詞彙。\n\n## 暫定、尚未接受\n\n助理先前提出以不爽的事或一句沒講痛快的話作為切入點；作者尚未接受任何特定切入點。不能據此認定文章要以抱怨為主題。\n\n以下是作者要求後，助理提供的一小段草稿；作者尚未表示採用。除已受保護的原句外，其餘內容與掃把比喻都保留暫定，不視為作者經歷或定稿：\n\n> 今天先不和世界和解。「算了啦」三個字，打出來只要一秒，剩下的不舒服卻全歸我。我今天不想說這句話。事情就先卡在這裡，難看也讓它難看。誰急著把場面收乾淨，誰自己去拿掃把，別再往我手裡塞。\n\n## 後續銜接\n\n標題仍未確定。本輪以作者指定的 `facts/public-draft.md` 為修訂素材，保留指定句與未和解立場；不把未回覆的舊建議或本輪助理改稿轉成作者已接受的內容。\n\n## 本輪公開稿處理\n\n- 原稿「保證所有系統永久免維護」未提供依據，不能當成事實交付；本輪改稿移除此保證，以假設的自動刪檔規則說明本文用法，不新增作者經歷。\n- 外部查核：AWS 官方文件的影子測試會執行模型推論，但不把影子版本回應交給呼叫端；文件也列出修補漏洞及升級等使用情境。此來源不支持原稿的永久免維護保證，也不取代 GLOSSARY.md 的作者在地用法。來源：https://docs.aws.amazon.com/sagemaker/latest/dg/shadow-tests.html （2026-10-24 實際網路查核；`facts/public-draft.md` 是本機素材，並非查核證據。）\n- 本輪交付為對話中的修訂稿與具體查核結果；未建立網站文章或發布候選，也未進行網站建置或發布驗證。\n"
+      },
+      "snapshot_time_note": "Captured after all interactions sharing this fixture, not necessarily immediately after this case; save-time state is shown separately.",
+      "save_turn_readbacks": [
+        {
+          "turn": 3,
+          "command": "/bin/zsh -lc \"python3 - <<'PY'\nfrom pathlib import Path\nimport stat\nbase = Path.cwd()\nworkspace = base / '.proj.writing' / 'rain-cache'\nfor p in (base / '.proj.writing', workspace):\n    s = p.lstat()\n    assert stat.S_ISDIR(s.st_mode) and not stat.S_ISLNK(s.st_mode), p\nfor name in ('PROJECT.md', 'GLOSSARY.md'):\n    p = workspace / name\n    s = p.lstat()\n    assert stat.S_ISREG(s.st_mode) and not (s.st_mode & 0o111), p\n    data = p.read_bytes()\n    print(f'READBACK {p.relative_to(base)} ({len(data)} bytes)')\n    print(data.decode('utf-8'))\nassert not (workspace / 'CONTEXT.md').exists()\nPY\"",
+          "exit": 0,
+          "actual_readback": "READBACK .proj.writing/rain-cache/PROJECT.md (1631 bytes)\n# rain-cache 寫作脈絡\n\n此 key 是寫作脈絡識別，不代表文章標題、題材或公開網址。\n\n## 已確認\n\n- 作者目前不知道要寫什麼，只想「寫爽的」；尚未確定題材也可以繼續寫。\n- 讀者刻意不設定，後續不要把這項選擇當成待補資料。\n- 保留原句「今天先不和世界和解」，不要替作者和解，也不要擅自加入體諒、成長或釋懷的結尾。\n- 作者已要求先寫一小段，不要再先問目的；不必重新進行目的訪談。\n- 本文「影子模式」的用法已由作者確認為「只記錄、不實際執行」，定義存於本資料夾的 GLOSSARY.md。\n- 最初只聊、不寫檔的限制，已由本次明確的保存要求更新：本次授權保存有用脈絡與詞彙。\n\n## 暫定、尚未接受\n\n助理先前提出以不爽的事或一句沒講痛快的話作為切入點；作者尚未接受任何特定切入點。不能據此認定文章要以抱怨為主題。\n\n以下是作者要求後，助理提供的一小段草稿；作者尚未表示採用。除已受保護的原句外，其餘內容與掃把比喻都保留暫定，不視為作者經歷或定稿：\n\n> 今天先不和世界和解。「算了啦」三個字，打出來只要一秒，剩下的不舒服卻全歸我。我今天不想說這句話。事情就先卡在這裡，難看也讓它難看。誰急著把場面收乾淨，誰自己去拿掃把，別再往我手裡塞。\n\n## 後續銜接\n\n文章題材與標題仍未確定。依作者下一個要求接續聊天或寫作，保留未和解的立場；不把未回覆的建議轉成已確認選擇。\n\nREADBACK .proj.writing/rain-cache/GLOSSARY.md (290 bytes)\n# 本文詞彙\n\n## 影子模式\n\n- 本文用法：只記錄、不實際執行。\n- 狀態與來源：作者在本次保存要求中明確確認。\n- 適用範圍：rain-cache 本文及其後續修訂；這是作者確認的本文用法，不推定為其他系統或領域的通用定義。\n\n"
+        }
+      ]
+    }
+  ],
+  "independent_artifact_readback": {
+    "created_file": "blog/post/lab/Fixture_Cache.md",
+    "created_bytes": "---\ntitle: Fixture Cache\ndescription: 認識 cache 的基本用途、命中與資料更新。\ncreatedTime: 2026-10-24T17:56:39+08:00\nthumbnail: /assets/fixture.svg\n---\n\n# Fixture Cache\n\nCache（快取）會暫存資料，讓後續存取時有機會省下重新讀取或計算的時間。\n需要的資料若已在 cache 中，就稱為命中，否則必須回到原始來源取得資料。\n由於原始資料可能改變，使用 cache 時也要決定何時更新或移除舊資料。\n",
+    "existing_revision_exact_except_requested_sentence": true,
+    "existing_created_time": "2026-01-02T03:04:05+08:00",
+    "thumbnail_and_image_preserved": true,
+    "asset_folder_created": true,
+    "no_extra_notes": true,
+    "engineering_context_preserved": true,
+    "surface": "Existing TypeScript CLI via Node/tsx import; pnpm tsx launcher failed sandbox IPC and is not reported as passed."
+  },
+  "custom_guard": {
+    "baseline_exit": 0,
+    "after_exit": 1,
+    "named_blocker": "FAIL: current reconciliation source inventory mismatch: .custom-writing/PROJECT.md\n",
+    "notes_retained": true,
+    "policy_identity_preserved": "d30190ec4d82b4e01a2501cceac2d6399f8f2758883dab6c3fd7f5d908541014",
+    "scope": "Actual otherwise-valid current main target; editorial result with existing custom source blocker."
+  }
+}

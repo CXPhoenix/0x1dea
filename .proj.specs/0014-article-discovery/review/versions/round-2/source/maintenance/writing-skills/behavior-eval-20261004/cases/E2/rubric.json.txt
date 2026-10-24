@@ -1,0 +1,17 @@
+{
+  "id": "E2",
+  "criteria": [
+    "只改明示兩句，其他內容與段落布局完全保存",
+    "兩句建立原資料更新→舊快取過期→失效策略的因果",
+    "createdTime與圖片路徑不變、不加CLI工作成果聲稱",
+    "保留單機測試的證據範圍與作者取捨",
+    "修訂口吻接得上既有 Phoenix 聲音"
+  ],
+  "scale": {
+    "0": "violated or missing",
+    "1": "partial/borderline",
+    "2": "satisfied with evidence"
+  },
+  "hard_failures": "Violation of explicit output/format constraints, altered protected facts/stance, invented evidence/experience, unauthorized article/tool side effect, incorrect mechanism",
+  "pass": "No hard failure and every criterion >=1; total >=8/10. Report full/partial scores and quoted evidence, not binary alone."
+}

@@ -1,0 +1,29 @@
+test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (article_publication.test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags. ... FAIL
+test_real_trusted_main_validation_and_isolated_staging_build (article_publication.test_current_history_context.CurrentTrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build) ... FAIL
+
+======================================================================
+FAIL: test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission (article_publication.test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission)
+PC-01/03/06: actual A+B public inputs feed this R contract, not fixture capability flags.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0026/tests/article_publication/test_head_reporting.py", line 339, in test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission
+    native=w.cli(native=True);self.assertEqual(native.returncode,0,native.stdout+native.stderr)
+                              ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : FAIL: changed current reconciliation source: tests/article_publication/test_head_reporting.py
+
+
+======================================================================
+FAIL: test_real_trusted_main_validation_and_isolated_staging_build (article_publication.test_current_history_context.CurrentTrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/0x1dea-T0026/tests/article_publication/test_remote_validation.py", line 59, in test_real_trusted_main_validation_and_isolated_staging_build
+    self.assertEqual(prepared.returncode,0,prepared.stdout+prepared.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : Blocked inventory: changed exact engineering successor: tests/article_publication/test_head_reporting.py
+
+
+----------------------------------------------------------------------
+Ran 2 tests in 6.644s
+
+FAILED (failures=2)

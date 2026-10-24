@@ -1,0 +1,264 @@
+{
+  "round": 1,
+  "captured_at": "2026-10-24T03:36:47.480297+00:00",
+  "repository": "/Users/phoenix/dev/online-notes/0x1DEA",
+  "branch": "staging",
+  "base": "6fcb277a9841dfad21d91f79005d39924acd92d2",
+  "head": "6fcb277a9841dfad21d91f79005d39924acd92d2",
+  "comparison": "uncommitted, untracked stage-2 spec package against current local HEAD; no branch diff",
+  "local_only": true,
+  "reviewed_package": [
+    ".proj.specs/0014-article-discovery/spec.en.md",
+    ".proj.specs/0014-article-discovery/traceability.md",
+    ".proj.specs/0014-article-discovery/README.md"
+  ],
+  "research_context": ".proj.specs/_discovery/article-writing-entry/research.md",
+  "tracked_diff_files": [
+    "tracked-unstaged.patch",
+    "tracked-staged.patch"
+  ],
+  "untracked_scope_patch": "scope-untracked.patch",
+  "status_capture": "status-before-capture.txt",
+  "files": [
+    {
+      "original_path": ".proj.specs/0014-article-discovery/spec.en.md",
+      "snapshot_path": "versions/round-1/source/.proj.specs/0014-article-discovery/spec.en.md.txt",
+      "sha256": "fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9",
+      "bytes": 25323
+    },
+    {
+      "original_path": ".proj.specs/0014-article-discovery/traceability.md",
+      "snapshot_path": "versions/round-1/source/.proj.specs/0014-article-discovery/traceability.md.txt",
+      "sha256": "10b76ae9e98195bea614ed497238b1c5f54d4f89b47204971304d0cf10f98999",
+      "bytes": 9569
+    },
+    {
+      "original_path": ".proj.specs/0014-article-discovery/README.md",
+      "snapshot_path": "versions/round-1/source/.proj.specs/0014-article-discovery/README.md.txt",
+      "sha256": "b1380096d5e5c7e0ccade1263ccb91f007efdd0dcd8000b1c38aa2ba0fef138c",
+      "bytes": 2227
+    },
+    {
+      "original_path": ".proj.specs/_discovery/article-writing-entry/research.md",
+      "snapshot_path": "versions/round-1/source/.proj.specs/_discovery/article-writing-entry/research.md.txt",
+      "sha256": "1e6a2f6928d08c3001baf69678b0a3337279c003eb24a03776570cf1a9a5ddc2",
+      "bytes": 18570
+    },
+    {
+      "original_path": "AGENTS.md",
+      "snapshot_path": "versions/round-1/source/AGENTS.md.txt",
+      "sha256": "77ad12cb3275f1ac5936bc9ae0bad4dfefc048d819e0274d38db4bf1d98bbf53",
+      "bytes": 11038
+    },
+    {
+      "original_path": "CONTEXT.md",
+      "snapshot_path": "versions/round-1/source/CONTEXT.md.txt",
+      "sha256": "6a6b92efa597b39d24669606a753d5f4ba7751d7f01058c5ea152ff0e0c8fd28",
+      "bytes": 1455
+    },
+    {
+      "original_path": ".gitignore",
+      "snapshot_path": "versions/round-1/source/.gitignore.txt",
+      "sha256": "0dd687b78a174740ac9f2ae2218d81c82401e4f705753148c0157987fbf53d50",
+      "bytes": 854
+    },
+    {
+      "original_path": "docs/agents/workflow.md",
+      "snapshot_path": "versions/round-1/source/docs/agents/workflow.md.txt",
+      "sha256": "f827f005b59cccf7416e5ebb8c64ecba689d99047cb3b90b05ed0541294f98a1",
+      "bytes": 9917
+    },
+    {
+      "original_path": "docs/agents/review.md",
+      "snapshot_path": "versions/round-1/source/docs/agents/review.md.txt",
+      "sha256": "59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e",
+      "bytes": 4568
+    },
+    {
+      "original_path": "docs/agents/runtime.md",
+      "snapshot_path": "versions/round-1/source/docs/agents/runtime.md.txt",
+      "sha256": "4a862c86b8a84581a8ec26eb058c626bc4b36181a6cfa7baaf5482333b079fcf",
+      "bytes": 9354
+    },
+    {
+      "original_path": "docs/agents/codex.md",
+      "snapshot_path": "versions/round-1/source/docs/agents/codex.md.txt",
+      "sha256": "20ab3a45cf34c28f7f4973c4c978aaba188674add1ecb2a585b1667605db1929",
+      "bytes": 1655
+    },
+    {
+      "original_path": "docs/agents/domain.md",
+      "snapshot_path": "versions/round-1/source/docs/agents/domain.md.txt",
+      "sha256": "a8787a7e5b90612009b44db690c66d32169505048f767a480bed389ce3d8ac84",
+      "bytes": 2128
+    },
+    {
+      "original_path": "docs/agents/language.md",
+      "snapshot_path": "versions/round-1/source/docs/agents/language.md.txt",
+      "sha256": "dad4936776742214eca797c9bba88036c5798cbcc4e7397d6803966fe3c5b382",
+      "bytes": 3980
+    },
+    {
+      "original_path": "docs/agents/issue-tracker.md",
+      "snapshot_path": "versions/round-1/source/docs/agents/issue-tracker.md.txt",
+      "sha256": "fafad4d4469f996c0a1196dccfeaab28b60ac7c8b17fc5709cb20acdee8856b6",
+      "bytes": 6562
+    },
+    {
+      "original_path": ".agents/skills/grilling/SKILL.md",
+      "snapshot_path": "versions/round-1/source/.agents/skills/grilling/SKILL.md.txt",
+      "sha256": "ddad6f07e4883861d3c0ca3e017a755dc426801ca269c1beae38e1f2171ac473",
+      "bytes": 2109
+    },
+    {
+      "original_path": ".agents/skills/domain-modeling/SKILL.md",
+      "snapshot_path": "versions/round-1/source/.agents/skills/domain-modeling/SKILL.md.txt",
+      "sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+      "bytes": 3331
+    },
+    {
+      "original_path": ".agents/skills/grill-with-docs/SKILL.md",
+      "snapshot_path": "versions/round-1/source/.agents/skills/grill-with-docs/SKILL.md.txt",
+      "sha256": "fc6401cbf34f1f3b6cb5e97253e25671d822733fc3f985117fe0d162639abf61",
+      "bytes": 216
+    },
+    {
+      "original_path": "skills/phoenix-writing/SKILL.md",
+      "snapshot_path": "versions/round-1/source/skills/phoenix-writing/SKILL.md.txt",
+      "sha256": "056a6c0afa6996049378b8aa2cefae908aa208efb43a7ebe0805d75ae5db80ea",
+      "bytes": 3345
+    },
+    {
+      "original_path": "skills/maintaining-writing-skills/SKILL.md",
+      "snapshot_path": "versions/round-1/source/skills/maintaining-writing-skills/SKILL.md.txt",
+      "sha256": "04835b103d9d57b6fd9a70659d598c9b9d13debe26f0c87fdb3b1406305b52ec",
+      "bytes": 1538
+    },
+    {
+      "original_path": "skills/maintaining-writing-skills/references/writing-process.md",
+      "snapshot_path": "versions/round-1/source/skills/maintaining-writing-skills/references/writing-process.md.txt",
+      "sha256": "90cabbc770cf0220ccb18e2dc567e9aeadc75487f1f052a664e0d8ce8939dda4",
+      "bytes": 3939
+    },
+    {
+      "original_path": "skills/maintaining-writing-skills/references/article-maintenance.md",
+      "snapshot_path": "versions/round-1/source/skills/maintaining-writing-skills/references/article-maintenance.md.txt",
+      "sha256": "3f5e48fcecf109f5c9cda21cae0dbc4dce636801144fc3a629e45d1a88523ae4",
+      "bytes": 1058
+    },
+    {
+      "original_path": "skills/maintaining-writing-skills/references/skill-maintenance.md",
+      "snapshot_path": "versions/round-1/source/skills/maintaining-writing-skills/references/skill-maintenance.md.txt",
+      "sha256": "78dde171ee3bff1dba86deb8b62a1c7d811296c2e7ba64523cdd81dacc24b755",
+      "bytes": 1421
+    },
+    {
+      "original_path": "skills/creating-vitepress-post/SKILL.md",
+      "snapshot_path": "versions/round-1/source/skills/creating-vitepress-post/SKILL.md.txt",
+      "sha256": "5942e8bf371c5ea5b9dac91580d4c91ef88be0749c7c9784d82ba86bf5dca365",
+      "bytes": 2935
+    },
+    {
+      "original_path": "skills/managing-article-publication/SKILL.md",
+      "snapshot_path": "versions/round-1/source/skills/managing-article-publication/SKILL.md.txt",
+      "sha256": "9070405d0ea916004dab603d80e2bbddcc27042d7491883dcbb86b30851a40c2",
+      "bytes": 1893
+    },
+    {
+      "original_path": "skills/managing-article-publication/references/future-actions.md",
+      "snapshot_path": "versions/round-1/source/skills/managing-article-publication/references/future-actions.md.txt",
+      "sha256": "9c2c684ec6042d701dd0f1ec55251bd660ac2125ab94929eecdad78ab6c1f0f5",
+      "bytes": 2112
+    },
+    {
+      "original_path": "scripts/materialize-writing-skills.py",
+      "snapshot_path": "versions/round-1/source/scripts/materialize-writing-skills.py.txt",
+      "sha256": "8446420db45e314c65292327cac6f601f66001d8c91048702c73a1018bac6de4",
+      "bytes": 18322
+    },
+    {
+      "original_path": "scripts/verify-project.py",
+      "snapshot_path": "versions/round-1/source/scripts/verify-project.py.txt",
+      "sha256": "302eb9bd75b45ef9cbe5ffec63086dce920a0adbf761db93910ae4e37f4764fb",
+      "bytes": 6894
+    },
+    {
+      "original_path": "docs/agents/skill-sources.json",
+      "snapshot_path": "versions/round-1/source/docs/agents/skill-sources.json.txt",
+      "sha256": "7d788647d07b6e8cad0f99f29a12c1237b6b4a001c5309e7ee9c416f8bd43bcb",
+      "bytes": 14345
+    },
+    {
+      "original_path": "maintenance/harness-adoption/runtime-source-policy.json",
+      "snapshot_path": "versions/round-1/source/maintenance/harness-adoption/runtime-source-policy.json.txt",
+      "sha256": "a4b2b842bd1e1079e67bf20e2b21a01fb400305f60f70f82b207099a90e508cb",
+      "bytes": 11375
+    },
+    {
+      "original_path": "maintenance/harness-adoption/generated-writing-manifest.json",
+      "snapshot_path": "versions/round-1/source/maintenance/harness-adoption/generated-writing-manifest.json.txt",
+      "sha256": "606b123e3cdb43ad4449c45eb1c58e572a794c73b066696ae746b216451d01f0",
+      "bytes": 89175
+    },
+    {
+      "original_path": "tests/harness_adoption/test_materializer.py",
+      "snapshot_path": "versions/round-1/source/tests/harness_adoption/test_materializer.py.txt",
+      "sha256": "498f9c38217c4f38c0032036f8de7f398f4b4201803ef91f8dbefc5ac319ae6f",
+      "bytes": 16359
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/design.json",
+      "snapshot_path": "versions/round-1/source/maintenance/writing-skills/behavior-eval-20261004/design.json.txt",
+      "sha256": "70d1e6ac5c3c5aa7fc15036dfca87c93110b47e3bf168516ebf71fda5905f2bf",
+      "bytes": 684
+    },
+    {
+      "original_path": "docs/adr/0001-walking-skeleton-then-epic-loop.md",
+      "snapshot_path": "versions/round-1/source/docs/adr/0001-walking-skeleton-then-epic-loop.md.txt",
+      "sha256": "ac3e95352fb096ee256030765a1701536cb6e1e17ff624e64d8db4213fc4cc5e",
+      "bytes": 2060
+    },
+    {
+      "original_path": "docs/adr/0002-ticket-status-in-frontmatter.md",
+      "snapshot_path": "versions/round-1/source/docs/adr/0002-ticket-status-in-frontmatter.md.txt",
+      "sha256": "b94e17c319f0adb3e8ffc34ac513b567ccb1cae91852c65ee0b1ed4e7d5d47a7",
+      "bytes": 1421
+    },
+    {
+      "original_path": "docs/adr/0003-adversarial-review-fixed-axes-two-rounds.md",
+      "snapshot_path": "versions/round-1/source/docs/adr/0003-adversarial-review-fixed-axes-two-rounds.md.txt",
+      "sha256": "6b7e5059d30fccb0ffff7176e25e440060a32f2301d821f34f97f1d878796128",
+      "bytes": 1437
+    },
+    {
+      "original_path": "docs/adr/0004-existing-product-harness-adoption.md",
+      "snapshot_path": "versions/round-1/source/docs/adr/0004-existing-product-harness-adoption.md.txt",
+      "sha256": "97e7f131c798829140590faf56906b7a801512c2e120703a3c0b0900c0c899eb",
+      "bytes": 834
+    },
+    {
+      "original_path": "docs/adr/0005-physical-product-writing-packages.md",
+      "snapshot_path": "versions/round-1/source/docs/adr/0005-physical-product-writing-packages.md.txt",
+      "sha256": "bc9f9e0bdd6feed9a5f5eb46cc7b3cb40e33afb4b2c035373dbe3d752d396b84",
+      "bytes": 1391
+    },
+    {
+      "original_path": "docs/adr/0006-local-tracker-and-authorized-landing.md",
+      "snapshot_path": "versions/round-1/source/docs/adr/0006-local-tracker-and-authorized-landing.md.txt",
+      "sha256": "0e55737594a1c73005f80749c963369c805c38b274ffa21b1483006c20d8f96e",
+      "bytes": 1020
+    },
+    {
+      "original_path": "docs/adr/0007-validated-taiwan-writing-language-exception.md",
+      "snapshot_path": "versions/round-1/source/docs/adr/0007-validated-taiwan-writing-language-exception.md.txt",
+      "sha256": "711f3326f5efe0a7c3b90d1508c22d1642d6d03a62b6f3051a62d043b243ca90",
+      "bytes": 769
+    },
+    {
+      "original_path": "docs/adr/0008-main-first-engineering-and-shared-staging.md",
+      "snapshot_path": "versions/round-1/source/docs/adr/0008-main-first-engineering-and-shared-staging.md.txt",
+      "sha256": "a0d9ba031d6e9f26db766c969aad5daa87b6b14b5dc9d1b329653c0dc8641237",
+      "bytes": 2218
+    }
+  ]
+}

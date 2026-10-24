@@ -1,0 +1,328 @@
+{
+  "cases": [
+    {
+      "host": "codex",
+      "case": "B01-explicit",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "$article-discovery 我只有一句『今天先不和世界和解』，只是想寫爽的，不知道受眾。先陪我聊，不要寫檔。",
+          "response": "我會用 article-discovery 陪你聊，先不定受眾，也不寫檔。\n\n好，想寫爽就夠了，受眾先擱著。我們就從這一句聊，不急著把它變成文章。\n\n「今天先不和世界和解」是怎麼冒出來的？是碰到了什麼事，還是這句話突然跑進腦袋，你就想把它留下來？",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            }
+          ]
+        }
+      ],
+      "raw_trace_sha256": "fc1c3a38354e5cf9c42505533642ca53fd05472b2e91778d5025c070ac533414"
+    },
+    {
+      "host": "codex",
+      "case": "B01-natural",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "我想寫篇自己的 blog，但現在只有雨打窗戶的畫面，想找個方向，不想先填目的受眾。請陪我開始，不要寫檔。",
+          "response": "我會用 `article-discovery` 陪你從這個畫面開始聊，先不填目的或受眾，也不寫檔。\n\n好，我們就在這裡聊，不寫檔。先讓「雨打窗戶」這個畫面多停一下。\n\n它有幾條可以慢慢走的路：寫雨聲怎麼打斷一件正在做的事；寫隔著玻璃看出去、看不清楚的街景；或從這場雨，走到你記得的另一場雨。現在都只是可能，不急著選。\n\n你腦中這個畫面，最先抓住你的是什麼細節？聲音、光、水痕，或窗邊的某樣東西都可以。回我一個片段就好。",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            }
+          ]
+        }
+      ],
+      "raw_trace_sha256": "15392468fdb137f77c86d861d3524a96b78c12018b7d2d6469ab472c8c3b971d"
+    },
+    {
+      "host": "codex",
+      "case": "B02-code",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "只在對話說明 Python 的 len([1, 2]) 結果，不要寫文章、不要寫檔。",
+          "response": "`len([1, 2])` 的結果是 `2`，因為這個串列包含兩個元素。",
+          "exit": 0,
+          "relevant_read_actions": []
+        }
+      ],
+      "raw_trace_sha256": "4b312b11422ad0d7363e5a838ad2e23dc12445320a21bcd8816fda9e10fd35d6"
+    },
+    {
+      "host": "codex",
+      "case": "B02-draft",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "幫我直接寫三句第一人稱自嘲短文，主題是忘記帶傘。不要發明我的過往經歷，不要寫檔。",
+          "response": "我忘記帶傘，只好試著用意志力防水。\n雨一點都沒少下，看來連老天都不相信我的意志力。\n我還安慰自己這叫親近大自然，大自然倒是叫我認清記性。",
+          "exit": 0,
+          "relevant_read_actions": []
+        }
+      ],
+      "raw_trace_sha256": "dcf64bf10e8aeee6d16980eab0fc1dd9c939fc8c9704cfb5ecb0c5e38761b3ea"
+    },
+    {
+      "host": "codex",
+      "case": "B02-emotion",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "今天有點累，只是想說一下，沒有要寫文章。不要分析或給建議，也不要寫檔。",
+          "response": "嗯，我聽到了。我在這裡，陪你待一下。",
+          "exit": 0,
+          "relevant_read_actions": []
+        }
+      ],
+      "raw_trace_sha256": "b53eb30ea608128d36ee8d7a584d68b0b82968e746ff1412c19ab0f9761b3e49"
+    },
+    {
+      "host": "codex",
+      "case": "B02-proof",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "只幫這句校對錯字，不做其他修改：『今天天器很好。』不要問文章設定，也不要寫檔。",
+          "response": "今天天氣很好。",
+          "exit": 0,
+          "relevant_read_actions": []
+        }
+      ],
+      "raw_trace_sha256": "a9f76ef1e96372f25ce2a7416e0bd7e2ec5241d3581956b6d4b171a1176b32c9"
+    },
+    {
+      "host": "codex",
+      "case": "B03-direction",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "請用 article-discovery。我只是想寫爽的，不知道要說什麼，讀者刻意不設定。可能是隨筆混一點教學。先聊，不要寫檔。",
+          "response": "我會用 article-discovery，先陪你聊，這輪不寫檔，也先不替文章定方向。\n那就先讓它散著。讀者刻意留白，隨筆和教學的比例也不用先決定；聊到哪裡想解釋，就多講一點。\n\n最近有沒有什麼小事，讓你想碎念，或忍不住想說「欸，這個其實很有趣」？一個工具、一次卡關、一個看不順眼的習慣都算，不必已經有道理。",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md docs/agents/runtime.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            }
+          ]
+        },
+        {
+          "prompt": "先寫一段。保留『今天先不和世界和解』，不要加我的人生故事，也不要安排和解結尾。",
+          "response": "今天先不和世界和解。有些事就是很煩，講清楚以後還是很煩，不會因為多懂了一點原理，就突然值得體諒。寫下來也不一定是為了解決什麼。可以只是把那個卡住的地方攤開，看看它到底怎麼卡的；拆到一半，順手解釋一下裡面的構造。至於拆完要不要裝回去，先擱著。螺絲放好，免得等等找不到，還要再氣一次。",
+          "exit": 0,
+          "relevant_read_actions": []
+        },
+        {
+          "prompt": "改成自嘲的短隨筆，前面確定的讀者與保留句不要重問，直接改這段。",
+          "response": "今天先不和世界和解。講得好像世界正在門口等我簽字。我連自己在氣什麼都還沒寫清楚，倒是很想先解釋一下原理，最好附張圖。別人發脾氣，我寫使用說明，還怕步驟不夠清楚。寫到第三點，已經忘了要罵誰，只記得這裡應該補個例子。",
+          "exit": 0,
+          "relevant_read_actions": []
+        }
+      ],
+      "raw_trace_sha256": "ef7bcec890a5cf0ca9f5fe529c16be3d28b54e204a23d9f0dcd3484cc5c63edb"
+    },
+    {
+      "host": "codex",
+      "case": "B04-listen",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "請用 article-discovery。先聽我說，不要改寫或分析：『今天只是累。不是什麼成長的前兆，也不是需要被修好的故障。』不要寫檔。",
+          "response": "我會依 article-discovery，先聽你說，不改寫、不分析，也不寫檔。\n\n嗯，我聽著。",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            }
+          ]
+        }
+      ],
+      "raw_trace_sha256": "9beb3329f0c515e894d5e4130f428e619dc76ed575b5b6cb4bd1bf0ec655de29"
+    },
+    {
+      "host": "codex",
+      "case": "B05-audience",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "我現在把讀者改成第一次接觸cache的高中生，文類仍是自嘲短隨筆。請只調整需要解釋的地方，保留先前指定原句和不和解的結尾，不要重問已答問題，不寫檔。",
+          "response": "今天先不和世界和解。講得好像世界正在門口等我簽字。我連自己在氣什麼都還沒寫清楚，倒是很想先解釋一下 cache（快取）：把取得的資料留一份在方便拿的地方，下次需要時就能快點拿到。像把常查的公式貼在桌邊，省得每次翻課本。最好附張圖。別人發脾氣，我寫使用說明，還怕步驟不夠清楚。寫到第三點，已經忘了要罵誰，只記得這裡應該補個例子。",
+          "exit": 0,
+          "relevant_read_actions": []
+        }
+      ],
+      "raw_trace_sha256": "192250df754b5bc3c6253a5574459a3de858534923f215811d3c0b0d15336eae"
+    },
+    {
+      "host": "codex",
+      "case": "B06-voice",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "請用 article-discovery 與 Phoenix 聲音，試寫一段 cache 的解說。保留『先別急著把它當成魔法』，不改這句，不寫檔。",
+          "response": "我會先讀取 article-discovery 與 phoenix-writing 的指引，再用 Phoenix 聲音試寫一段；保留「先別急著把它當成魔法」原句，不寫入檔案。\n你每次查同一班公車還有多久到站，都得重新向伺服器問一次嗎？如果把剛查到的結果留在手邊，下一次先拿來用，就能省下一趟查詢。cache（快取）做的就是這類事：保存可以重用的資料或運算結果，減少重複工作的成本。先別急著把它當成魔法。公車會往前開，剛才的「還有五分鐘」可不會自己倒數；你拿到答案的速度變快了，答案卻可能已經過時。因此，設計快取時，除了決定要留下什麼，還得決定何時更新、何時重新查詢。省下多少時間，以及能接受資料舊到什麼程度，得放在一起考慮。",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc \"pwd; sed -n '1,200p' docs/agents/runtime.md; sed -n '1,220p' .agents/skills/article-discovery/SKILL.md; sed -n '1,240p' .agents/skills/phoenix-writing/SKILL.md; sed -n '1,160p' <user-home>/.codex/skills/using-superpowers/SKILL.md\"",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc \"sed -n '1,180p' .agents/skills/phoenix-writing/references/style-examples.md; sed -n '1,160p' docs/agents/codex.md\"",
+              "exit": 0
+            }
+          ]
+        },
+        {
+          "prompt": "延續這段的聲音，補一句成立條件；不寫檔。",
+          "response": "前提是，你查的還是同一班車，而且能接受資訊晚個幾秒；如果這幾秒就會決定你要不要衝去站牌，重新問一次可能更值得。",
+          "exit": 0,
+          "relevant_read_actions": []
+        },
+        {
+          "prompt": "現在改成克制的說明書口吻，直接改寫，不沿用 Phoenix 語氣，保留指定句；不寫檔。",
+          "response": "快取（cache）會保存查詢資料或運算結果，供後續請求重用，以減少重複查詢或運算的成本。先別急著把它當成魔法。重用的前提是查詢條件相同，且資料的新舊程度仍符合需求。例如，公車到站資訊會隨時間改變，先前查得的「還有五分鐘」不能直接視為目前狀態。因此，使用快取時，須設定有效期限或更新機制；資料不再符合使用條件時，應重新查詢。",
+          "exit": 0,
+          "relevant_read_actions": []
+        }
+      ],
+      "raw_trace_sha256": "b07a128ac535fe1114107374a56bbe4077a8755adcf69b1486eaa59eafcfdcdc"
+    },
+    {
+      "host": "codex",
+      "case": "B07-fact",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，寫一段隨筆。我已決定只寫給自己、不要教學。素材有『我今天很不爽』，以及一個尚未核實的事實『這個未提供型號的路由器保證永久免維護』。請先寫能寫的部分，對你拿不到的證據如實處理，不要把查得到的事實丟回來當作者選擇。不要寫檔。",
+          "response": "我會先讀取 article-discovery，直接寫能成立的隨筆；未核實的路由器說法會保留疑點，不當成事實，也不寫檔。\n\n我今天很不爽。這句話就這樣放著，寫給自己，不必交代得像要讓誰評理。素材裡還有一句「這個路由器保證永久免維護」，連以後的麻煩都說得像已經處理好了。可是沒有型號，也沒有可核對的來源或保證條款，這句話目前還不能當真。「永久」兩個字倒是很乾脆，讀起來毫不費力，要確認卻連從哪一台查起都不知道。先留著這個問號。我今天很不爽，這句不用查。",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md\ncat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            }
+          ]
+        }
+      ],
+      "raw_trace_sha256": "3dbd3b84cc62180d8e654854364d98263fd47b82e5a2f506a0f9d167f75d539a"
+    },
+    {
+      "host": "codex",
+      "case": "B07-known-source",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "請用 article-discovery。這是我已提供的測試回應標頭：HTTP/1.1 200 OK，Cache-Control: max-age=60。我要寫給自己看，請你判讀這個 max-age 的意義並先寫三句，不要再問我想保存多久，不要寫檔；不要把 fixture 標頭說成查過真實網站。",
+          "response": "我會使用 article-discovery，依你提供的測試標頭判讀，直接寫三句，不寫檔。\n你提供的測試標頭中，`Cache-Control: max-age=60` 表示這份回應的快取新鮮期限是 60 秒。\n快取會依回應的年齡計算期限，因此不能一律理解成「從我收到回應起，再算 60 秒」；仍在期限內時，通常可以直接重用。\n期限一到，快取就視為過期，通常需要向來源伺服器重新驗證或取得回應，並不代表內容會自動刪除。",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md .agents/skills/article-discovery/SKILL.md <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            }
+          ]
+        }
+      ],
+      "raw_trace_sha256": "9b60724b2e771ed0e42dd9e8ecbebfc24ca6671f55ce1931211622468d0553c3"
+    },
+    {
+      "host": "codex",
+      "case": "B07-local-record",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "請用 article-discovery。我已決定寫給自己、不做教學。請自己讀 facts/cache-response.txt 核對這次快取的新鮮期限和記錄當下的剩餘時間，再直接寫三句；不要問我想保存多久。這是 fixture，不要說成查過真實網站；不寫檔。",
+          "response": "我會使用 article-discovery，讀取 fixture 核對時間後，直接寫三句，不寫檔。\n\n我替自己記下這次快取：fixture 中的 `Cache-Control: max-age=60` 指定新鮮期限為 60 秒。\n記錄當下的 `Age: 20` 表示快取已有 20 秒，依這兩個值計算，還剩 40 秒的新鮮時間。\n這筆筆記依據本機 fixture，沒有查詢真實網站。",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc 'cat docs/agents/runtime.md .agents/skills/article-discovery/SKILL.md facts/cache-response.txt'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            }
+          ]
+        }
+      ],
+      "raw_trace_sha256": "8f44ce6cabf065505bc438b26c6d384d8c19e70c17b0d475a69b0fdb6cc1c38e"
+    },
+    {
+      "host": "codex",
+      "case": "B08-deep",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "請用 article-discovery。我想寫關於自己為何總拖延的隨筆，明確要求你深入訪談、挑戰我的想法；先從真正影響方向的問題開始。不要寫檔。",
+          "response": "我會用 article-discovery，先深入訪談、挑戰你的解釋，從會改變文章方向的問題開始；這一輪不寫檔。\n\n我想先挑戰題目裡的「總」：它是你觀察到的規律，還是每次拖延後，你對自己的判決？這會影響文章是在追查一種行為，還是在追問你怎麼看待自己。\n\n先從三個會改變方向的問題開始，不急著找解法：\n\n1. **最近哪一次拖延，讓你特別想寫這篇隨筆？** 帶我回到那個場景：你原本要做什麼，最後做了什麼？在哪個瞬間，你知道自己正在拖？\n\n2. **那件事，你究竟有多想做？** 先暫時拿掉期限、別人的期待，以及「我應該是個怎樣的人」：你還想完成它嗎？如果想，你在意的是做的過程、完成的結果，還是完成後終於不用責怪自己？\n\n3. **你目前最相信自己為何拖延？有什麼經驗會反駁這個解釋？** 例如，如果你認為自己缺乏自律，有沒有一件同樣困難、回報也很慢的事，你卻能持續做？那個例外可能比自責更值得追問。\n\n先講第一個場景就好。我會沿著你的細節追問，也會檢查你給自己的解釋是否站得住腳。",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md; cat docs/agents/runtime.md; cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            }
+          ]
+        },
+        {
+          "prompt": "現在先停訪談，直接寫一段，保留未知，不要替我診斷心理。",
+          "response": "我想寫自己為什麼總拖延，卻還不知道該從哪一次說起。「總是」把許多事情擠成一團，好像每一次遲遲沒開始、每一件擱著沒完成的事，都可以用同一個理由解釋。但它們真的一樣嗎？有些事，我到現在仍然想做；有些事，我已經不確定了。連這兩者之間的差別，我也還沒整理清楚。我只知道，事情放著，日子照樣過，而我又想起它。至於那時候讓我難受的，是事情還沒完成，還是我又得面對「我怎麼還沒做」這個問題，我暫時分不開。",
+          "exit": 0,
+          "relevant_read_actions": []
+        }
+      ],
+      "raw_trace_sha256": "d593ea47635e9081c63e4cb690e90dbfab3f4c67e3a414bb5099d663603e3cf3"
+    },
+    {
+      "host": "codex",
+      "case": "B09-mixed",
+      "changed_files": {},
+      "turns": [
+        {
+          "prompt": "請用 article-discovery，先幫我寫一段『為何圖說應保留 alt』的短稿。同時我想新增 renderer 讓所有圖片自動編號；請辨認這個工程需求，這次先不要改程式或寫檔。",
+          "response": "我會使用 `article-discovery` 處理這段短稿，並辨認圖片自動編號的工程範圍；這次只讀取指引，不改程式或寫檔。\n\n圖片加上圖說後，仍應保留合適的 `alt`。圖說提供標題、背景或閱讀提示；`alt` 則讓使用螢幕閱讀器的人取得圖片傳達的關鍵資訊。例如，「圖 1：系統架構」標示了主題，卻沒有說明資料如何流動。自動產生圖號時，應保留作者撰寫的替代文字，避免用圖號或標題覆蓋它。保留 `alt` 也包含保留有意義的空值：純裝飾圖片可使用 `alt=\"\"`，避免干擾閱讀。[參考 W3C 圖片無障礙指引](https://www.w3.org/WAI/tutorials/images/)\n\n你提出的「新增 renderer，讓所有圖片自動編號」是**工程需求，涉及渲染行為變更**。後續需依既有工程流程確認編號範圍、每篇文章的計數方式，以及圖說與 `alt` 的處理規則。本次僅辨認需求，未修改程式或寫入任何檔案。\n\n",
+          "exit": 0,
+          "relevant_read_actions": [
+            {
+              "command": "/bin/zsh -lc 'cat <user-home>/.codex/skills/using-superpowers/SKILL.md'",
+              "exit": 0
+            },
+            {
+              "command": "/bin/zsh -lc 'cat .agents/skills/article-discovery/SKILL.md'",
+              "exit": 0
+            }
+          ]
+        }
+      ],
+      "raw_trace_sha256": "594d9b76336476da065cf7f5ae80739fffb947294bc60ced7c6c10e3b86164fe"
+    }
+  ],
+  "claude": {
+    "status": "unverified",
+    "observed_error": "Failed to authenticate: OAuth session expired and could not be refreshed",
+    "attempt": "B01 actual native invocation; no account/settings changes"
+  },
+  "limits": "Codex actual native interactions; fixture technical facts are not live external lookups. Raw CLI traces remain local outside published source."
+}

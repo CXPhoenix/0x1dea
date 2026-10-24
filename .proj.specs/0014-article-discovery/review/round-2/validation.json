@@ -1,0 +1,22 @@
+{
+  "prompt_unchanged": true,
+  "round_1_frozen_sources_intact": 63,
+  "round_2_frozen_and_live_sources_match": 63,
+  "surrounding_context_unchanged": 60,
+  "acceptance_criteria": 17,
+  "traceability_rows": 48,
+  "all_criteria_reached": true,
+  "four_independent_reports_saved": true,
+  "counts": {
+    "P0": 0,
+    "P1": 0,
+    "P2": 0
+  },
+  "translation_source_blob": "aa08308eb23756514ebc770e6a4719c60388d83d",
+  "translation_hash_and_ac_ids_match": true,
+  "translation_review": "author self-check; not independent language evaluation",
+  "product_code_and_runtime_packages": "unchanged",
+  "implementation_tests": "not_run",
+  "native_guard_and_runtime_behavior": "not_run",
+  "remote_actions": false
+}

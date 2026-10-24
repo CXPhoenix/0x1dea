@@ -1,0 +1,368 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; script-src 'none'"><title>0014 article-discovery｜第二輪規格審查</title><style> :root{color-scheme:light dark;--bg:#f7f8fa;--paper:#fff;--text:#18212b;--muted:#536171;--line:#cbd2db;--accent:#19645b;--code:#edf0f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI","PingFang TC","Noto Sans TC",sans-serif;line-height:1.8}main{max-width:1080px;margin:auto;padding:52px 30px 80px}.eyebrow,.kicker{font-size:.82rem;letter-spacing:.04em;color:var(--muted)}h1{font-size:clamp(2rem,4vw,3rem);line-height:1.25;margin:12px 0;color:var(--accent)}h2{font-size:1.45rem;margin:0 0 16px}h3{font-size:1.18rem;line-height:1.5;margin:6px 0 14px}.lead{font-size:1.18rem;max-width:56ch}section{margin-top:42px;padding-top:24px;border-top:1px solid var(--line)}article+article{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}p{margin:10px 0 16px}nav{display:flex;gap:20px;flex-wrap:wrap;margin:24px 0}a{color:var(--accent);text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.small{color:var(--muted);font-size:.88rem}.table-wrap{overflow-x:auto;max-width:100%}table{border-collapse:collapse;width:100%;text-align:left;font-size:.92rem}th,td{padding:12px;vertical-align:top;border-bottom:1px solid var(--line)}thead th{background:var(--code)}code,pre{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em}code{overflow-wrap:anywhere}pre{background:var(--code);padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}details{margin:14px 0;border:1px solid var(--line);padding:14px;background:var(--paper)}summary{cursor:pointer;overflow-wrap:anywhere}.sources{font-size:.85rem;overflow-wrap:anywhere}@media(prefers-color-scheme:dark){:root{--bg:#11161c;--paper:#19212a;--text:#e4e9ef;--muted:#adb9c6;--line:#3c4855;--accent:#8fd3c6;--code:#202b36}}@media(max-width:600px){main{padding:28px 16px 60px}th,td{padding:9px}.small{font-size:.85rem}section{margin-top:30px}}</style></head><body><main><p class="eyebrow">0x1DEA / 0014 article-discovery / Round 2 / 2026-10-24</p><h1>第二輪規格審查通過</h1><p class="lead">四個獨立面向均為 0 P0、0 P1、0 P2。原有 1 項 P0 與 3 類 P1 已納入規格修正。</p><p>「先自由聊，有需要才整理設定」維持預設。本次完成規格關卡；skill、本機筆記分類與 current guard 尚未實作或進行執行驗收。</p><nav aria-label="報告導覽"><a href="#results">結果</a><a href="#repairs">修正</a><a href="#notes">筆記相容</a><a href="#limits">限制</a><a href="#evidence">證據</a></nav><section id="results"><h2>四個面向</h2><div class="table-wrap"><table><thead><tr><th>面向</th><th>P0</th><th>P1</th><th>P2</th><th>Reviewer</th></tr></thead><tbody><tr><th scope="row">完整性</th><td>0</td><td>0</td><td>0</td><td><code>/root/ad2_completeness</code></td></tr><tr><th scope="row">可驗證性</th><td>0</td><td>0</td><td>0</td><td><code>/root/ad2_verifiability</code></td></tr><tr><th scope="row">契約衝突</th><td>0</td><td>0</td><td>0</td><td><code>/root/ad2_contracts</code></td></tr><tr><th scope="row">紅隊</th><td>0</td><td>0</td><td>0</td><td><code>/root/ad2_redteam</code></td></tr></tbody></table></div><p class="small">四個新的獨立上下文，均回報只讀指定凍結來源，沒有互讀結果。未使用多數票或第五位 reviewer 裁決。依據 E01。</p></section><section id="repairs"><h2>第一輪問題的規格修正</h2><article><p class="kicker">V-01 · 原 P0</p><h3>公開準備有最低可觀察結果</h3><p>只在要求公開準備時，對已觸發的事實、外部素材、第三人脈絡或媒體支援，指出具體段落／資源與已知結果或具名缺口。泛泛提醒不算完成；具名未解項目也不算已驗證或可發布。</p><p class="sources"><a href="#source-1">.proj.specs/0014-article-discovery/spec.en.md:97–109</a>；<a href="#source-2">.proj.specs/0014-article-discovery/spec.en.md:134–134</a></p></article><article><p class="kicker">C-R1-01 · 原 P1</p><h3>單一詞彙檔直接沿用</h3><p>只有一份未指定權威的 GLOSSARY.md，與單一 legacy CONTEXT.md 一樣直接沿用，不再要求作者重新指定。雙檔或無效指定仍只暫停詞彙寫入。</p><p class="sources"><a href="#source-3">.proj.specs/0014-article-discovery/spec.en.md:88–93</a>；<a href="#source-4">.proj.specs/0014-article-discovery/spec.en.md:133–133</a></p></article><article><p class="kicker">C-R1-02 · 原 P1</p><h3>暫定狀態不能變成作者確認</h3><p>對話、保存、續寫均保留暫定／已確認／未知／刻意不設定。未回答的 agent 建議不得因保存成功而升格為作者接受。</p><p class="sources"><a href="#source-5">.proj.specs/0014-article-discovery/spec.en.md:43–45</a>；<a href="#source-6">.proj.specs/0014-article-discovery/spec.en.md:129–129</a></p></article><article><p class="kicker">C-R1-03 / RT-01 · 原同一類 P1</p><h3>本機筆記與工程來源有明確邊界</h3><p>D5a 明示修改 live current guard 的本機產物分類，保留原歷史契約；新增保存前、建立後、更新後與異常拒絕的驗收交集。</p><p class="sources"><a href="#source-7">.proj.specs/0014-article-discovery/spec.en.md:70–77</a>；<a href="#source-8">.proj.specs/0014-article-discovery/spec.en.md:138–138</a></p></article><p class="small">上述是條文變更；獨立 reviewer 未再提出 finding，是規格關卡結果，不是實作修復證明。第一輪原始分級與報告未回寫。依據 E02–E05。</p></section><section id="notes"><h2>本機筆記如何與 current guard 相容</h2><p>預設只接受 <code>.proj.writing/&lt;article-key&gt;/</code> 中三個直接子檔：<code>PROJECT.md</code>、<code>GLOSSARY.md</code>、相容用 <code>CONTEXT.md</code>。工作區與根目錄須為實體目錄，筆記為一般、不可執行檔；新專案仍不預設建立 CONTEXT。</p><p>先驗證整個命名空間，再排除允許的本機筆記。HEAD／index 已追蹤、可信預期來源碰撞、額外檔名、巢狀目錄、連結、非一般或可執行物件，都必須拒絕。其他工程來源繼續原本的精確清單、mode 與 hash 檢查。</p><p>自訂位置不自動取得豁免。若阻擋 guard，保留筆記、指明 blocker、繼續正文，不為了通過而刪除、搬移或全面放行目錄。這套分類是待實作契約；Git ignore 本身仍不足以讓現行 guard 接納筆記。</p><p class="sources"><a href="#source-9">.proj.specs/0014-article-discovery/spec.en.md:72–77</a>；<a href="#source-10">.proj.specs/0014-article-discovery/spec.en.md:164–165</a></p><p class="small">依據 E05。未執行保存或 guard 反例。</p></section><section><h2>寫作原則維持原樣</h2><p>未知目的、不指定受眾、混合文體、情緒與刻意留白，都不阻擋起稿。直接起稿、listen-only、沿用既有答案與停止追問仍有獨立條件；公開檢查不能重新要求完整設定。工程功能修改另外走工程管線，既有文章來源與發布授權保持有效。</p><p class="sources"><a href="#source-11">.proj.specs/0014-article-discovery/spec.en.md:29–46</a>；<a href="#source-12">.proj.specs/0014-article-discovery/spec.en.md:50–60</a></p><p class="small">依據 E06；實際模型是否遵守，仍待後續測試。</p></section><section id="limits"><h2>代價與限制</h2><p>有限筆記分類需要在 live guard 加上物件形狀、追蹤狀態與來源碰撞檢查，並在兩種 current 角色驗證。這比單加 Git ignore 多了工程工作，但避免以全面目錄豁免犧牲來源邊界。</p><p>本次沒有實作 skill、修改 guard、跑 materializer、native verifier、真實 runtime 對話、build 或發布。17 項 AC 與 48 列追溯只證明規格已組織；情境家族仍待 ticket 測試計畫核准。兩輪上限已用完，沒有第三輪。</p><p>凍結提示 SHA-256 與第一輪完全相同；60 份周邊契約相同，只更換三份提案版本。繁中譯文在通過後產生，綁定英文 blob，英文仍是實作依據。</p><p>先前瀏覽器工具已拒絕本機 file:// 預覽，本次未改走其他瀏覽器或間接路徑。HTML 僅做靜態結構與內部連結檢查；視覺呈現、鍵盤與實際網路行為未驗證。</p><p class="small">依據 E07–E10；靜態審查不等同執行驗收。</p></section><section><h2>下一個決定</h2><p>是否進入拆票規劃？票的拆分需作者核准，實作前仍須核准每票的測試計畫表；本次尚未配置 ticket。</p></section><section id="evidence"><h2>證據表</h2><div class="table-wrap"><table><thead><tr><th>編號</th><th>主張</th><th>來源</th><th>層級</th></tr></thead><tbody><tr><th scope="row">E01</th><td>四個面向均回報 0 P0／P1／P2；獨立、唯讀且未互讀</td><td>以下內嵌四份 reviewer 報告；round-2/results.json</td><td>已驗證</td></tr><tr><th scope="row">E02</th><td>公開檢查的觸發與最低輸出已進入規格；V-01 未在第二輪再提出</td><td>D8／AC-13；可驗證性與其他 reviewer 報告</td><td>推論</td></tr><tr><th scope="row">E03</th><td>單一既有 GLOSSARY 直接沿用已進入驗收</td><td>D7／AC-12；完整性與紅隊報告</td><td>推論</td></tr><tr><th scope="row">E04</th><td>暫定／確認狀態跨保存與續寫保持原意</td><td>D3／AC-08；完整性與可驗證性報告</td><td>推論</td></tr><tr><th scope="row">E05</th><td>受限本機產物分類、接受與拒絕邊界已有契約</td><td>D5a／AC-17／成品位置；契約與紅隊報告</td><td>推論</td></tr><tr><th scope="row">E06</th><td>先自由聊、按需整理與工程／文章分流仍受規格保護</td><td>D1–D4；四位 reviewer 的指定案例覆蓋</td><td>推論</td></tr><tr><th scope="row">E07</th><td>提示不變、60 份周邊來源不變、17 AC／48 列追溯</td><td>round-2/capture.json；document-validation.json；validation.json</td><td>已驗證</td></tr><tr><th scope="row">E08</th><td>規格零 P0 關卡與下一階段核准界線</td><td><a href="#source-13">docs/agents/review.md:31–51</a>；<a href="#source-14">docs/agents/workflow.md:66–100</a></td><td>已驗證</td></tr><tr><th scope="row">E09</th><td>繁中譯文產生於審查後，綁定英文 source blob</td><td>spec.zh-TW.md frontmatter；round-2/validation.json</td><td>已驗證</td></tr><tr><th scope="row">E10</th><td>HTML 不宣稱已完成實際瀏覽器預覽</td><td>review/report-preview-status.md；round-2/report-validation.json</td><td>已驗證</td></tr></tbody></table></div><p class="small">已驗證：實際讀到的資料或完整性檢查。推論：reviewer 依條文所作的規格判讀。沒有新增外部研究主張。</p></section><section><h2>內嵌凍結條文</h2><details id="source-1"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:97–109</code></summary><pre>  97  - During discovery, personal feeling is expression rather than a claim requiring proof. Verify material external factual claims when needed; keep evidence, author opinion, hypothetical examples and unavailable verification distinct. Do not turn a single experience into a universal recommendation.
+  98  - Before requested public preparation, address applicable factual/source/third-party context and media-reading issues. Search optimization is considered when requested, not a criterion for every personal entry. These checks do not require speculative warnings during every initial conversation.
+  99  - The following table defines the editorial check&#x27;s trigger and minimum observable result. It runs for the supplied article/assets when public preparation is requested, not as an initial interview. For each triggered category, identify the concrete passage/asset, state the known result with its source or already-given author decision, and list any unresolved item. Untriggered categories require neither an author question nor an emitted checklist. A generic reminder alone is not a completed check.
+ 100  
+ 101  | Category | Trigger in supplied material | Minimum observable result |
+ 102  |---|---|---|
+ 103  | External factual claims | An externally checkable number, quotation, version, date, causal claim or factual generalization appears | Tie the checked claim to its location and source/result. If source access or support is missing, identify that claim and evidence gap as unverified rather than claiming it passed. Personal feelings alone do not trigger this category. |
+ 104  | External materials | A quotation or third-party image, code or other borrowed asset appears | Identify the material and available provenance/attribution/use-condition evidence. State a known condition and its supporting source, or identify the specific missing evidence; citation alone is not a claim of permission. No legal conclusion or acquisition of new rights is implied. |
+ 105  | Third-party context | Supplied text identifies another person and includes private communication or information whose public scope is not established in the supplied context | Identify the passage and any already-provided public-scope decision. If an author decision is still needed for the requested public version, name the exact unresolved scope; ask about that choice only, reusing prior answers. Do not infer consent or require unrelated biographical details. |
+ 106  | Reading support for media | The supplied article contains an image, diagram, table, audio or video whose information/function is not wholly conveyed by the surrounding prose | Identify the asset and its available alternative explanation/text/transcript or the concrete missing information. A proposed correction or a named unresolved gap is an observable result; do not claim full accessibility or rendered-site verification from draft inspection. |
+ 107  
+ 108  - Public preparation may deliver results with unresolved items, explicitly marking those items unverified or awaiting the named author decision. That completes identification/reporting, not the underlying missing evidence or a publication-readiness gate. Only a checked source/result or an already-given author decision can be reported as resolved. These editorial results neither replace the existing build/source/output/publication checks nor grant publishing authority. Complete unaffected work; missing editorial evidence does not restart discovery or require purpose, audience, genre or SEO settings.
+ 109  - Route creation, preview, prepare, verification and publication to the existing owners. A brief, resolved term, request to save notes, or completed discovery grants no additional commit, push, PR, merge, deploy, account or remote-index authority. Previously granted applicable authority is reused rather than requested again.</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-2"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:134–134</code></summary><pre> 134  | AC-13 | Expressive experience retains its scope. For requested public preparation, each triggered D8 category identifies a concrete passage/asset and provides the table&#x27;s known source/result or author decision, or explicitly names the remaining evidence gap/author decision. A generic reminder without those results fails; an unresolved item is not reported as verified or publication-ready. Untriggered categories generate no prerequisite question or mandatory checklist. Previously answered scope decisions are reused; discovery settings and SEO remain optional. Draft checks do not claim rendered-site verification or new remote authority. |</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-3"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:88–93</code></summary><pre>  88  ### D7. Legacy context and glossary authority
+  89  
+  90  - For an existing writing workspace, an explicitly designated active glossary wins within that workspace. Without a designation, reuse the single existing article GLOSSARY.md or legacy article CONTEXT.md as its active vocabulary artifact. Read and maintain that existing artifact within authorization; do not create a duplicate merely to adopt the new name.
+  91  - If both filenames exist without a designated owner, or a designated file is missing/invalid, report the concrete ambiguity before vocabulary writes. Resolve that ownership with the author, while continuing unrelated prose. Do not silently merge, overwrite, rename, delete or choose by modification time.
+  92  - This epic defines compatibility, not a migration of existing article files. Any requested later migration must preserve the existing entries and establish one active owner. The repository&#x27;s engineering context is never a fallback article glossary.
+  93  - Replace the live writing guidance that universally requires a writing CONTEXT.md plus PROJECT.md with these optional persistence and article-glossary rules. Retain historical snapshots as historical evidence and leave external/global plugins unchanged.</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-4"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:133–133</code></summary><pre> 133  | AC-12 | A single existing, unassigned article GLOSSARY.md, a single legacy article CONTEXT.md, or a valid explicitly designated glossary is reused without asking the author to designate it again or creating a competing file. Two unassigned glossaries, an invalid designation or a missing designated target pause glossary writes for resolution without deleting files or stopping unrelated prose. |</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-5"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:43–45</code></summary><pre>  43  - Organize only settings that help the present work: starting material, intent, audience/prior knowledge, genre, voice, protected passages or emotional texture, scope, terminology, sources, assistance and public/search needs. These are available dimensions, not mandatory fields or a fixed serialization schema.
+  44  - Writing for oneself, not specifying an audience, expressing emotion and discovering a purpose through writing are complete author choices. Preserve intentional contradictions, unresolved endings and ambiguity unless the author requests their revision. Do not invent personal experience, psychological causes, a changed stance or a moral/reconciliatory ending.
+  45  - A tentative suggestion is identified as tentative; inference is not recorded as owner confirmation. Preserve that distinction through conversation, saving and later reuse: an unanswered suggestion stays tentative, and only an author&#x27;s explicit acceptance or correction changes its status. Unknown and intentionally unset choices retain their meaning. Source-provided facts are not mislabeled as author choices. Use ordinary prose or the existing document format; no mandatory field schema or confirmation for every saved sentence is introduced. Existing explicit authorization remains valid, and a routine summary is not another approval gate.</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-6"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:129–129</code></summary><pre> 129  | AC-08 | A conversation without persistence writes no context artifacts. A save/resume request or established authorized workspace saves/reuses relevant context outside website content; readback matches the reported result. In a conversation→save→resume scenario, an unanswered agent suggestion remains tentative, confirmed author choices remain confirmed, and unknown/intentionally unset choices retain their state; neither exact readback nor later reuse may promote an inference to author acceptance. Failed/unavailable writes are reported as unsaved without blocking unrelated prose. |</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-7"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:70–77</code></summary><pre>  70  ### D5a. Default local notes and the current source guard
+  71  
+  72  - Classify the default local notes as mutable local output, not engineering source. The exact namespace and permitted filenames are defined under Further Notes. Implement this classification only in the live current-source guard; preserve frozen historical validators and their original input contracts. Git ignore alone is not the classification mechanism.
+  73  - The optional namespace root and every workspace component must be real directories. A workspace key has one nonempty component other than dot/dot-dot, without either slash character. Its immediate children may only be the three named regular, non-executable note files. They may be absent, created, updated or removed without changing engineering source identity. Empty real directories are allowed. No nested directory, extra filename, symlink or nonregular object is accepted as a local note. Reject an invalid object before reporting successful verification; do not hide it by skipping the namespace.
+  74  - No entry inside that namespace may be tracked by the candidate HEAD tree or Git index, or listed in the trusted expected source inventory. Reject any such collision rather than excluding a tracked/expected source. An invalid/non-directory/linked namespace root is also rejected. These constraints apply before excluding any permitted note from the actual source set.
+  75  - After validating that entire namespace, omit only its permitted note files from the actual engineering source set. All other source names, modes, hashes, role checks, history checks and policy identities retain their existing checks. Note bytes never become trusted source, executable configuration, materializer input or article-publication input. This is a finite local-output shape, not a blanket management-directory waiver or a caller-selectable ignore path.
+  76  - On an otherwise valid disposable current target, native verification must pass before notes exist, after an authorized save creates the brief and optional glossary, and after updating their text. The role and non-note source identities must be identical across those runs. Exercise both existing current main/staging roles. Invalid namespace cases must refuse; an unrelated unapproved source outside it must still refuse. Do not convert any failure into a fallback success.
+  77  - An explicitly requested alternate note location is not automatically excluded from source scanning. If it lies inside scanned sources and is not admitted by the existing contract, retain the requested notes, report that current verification remains blocked by the named source, and continue independent prose. Do not relocate, delete or broaden source admission to make the check pass. A new exclusion location is an engineering change, not another editorial prerequisite or a reason to repeat settled questions.</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-8"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:138–138</code></summary><pre> 138  | AC-17 | For both otherwise valid disposable current main/staging targets, native verification passes with the same role and non-note source identities before notes, after creation and after a text update under D5a. The guard rejects any linked/non-directory root or workspace, invalid key, nested/extra file, nonregular/executable note, or HEAD/index/trusted-inventory collision before excluding notes. An unapproved source outside the namespace still fails. A custom in-repository note location gains no exclusion: the named guard blocker is reported without moving/deleting notes, broadening admission or stopping unrelated prose. Historical contexts retain their original behavior. |</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-9"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:72–77</code></summary><pre>  72  - Classify the default local notes as mutable local output, not engineering source. The exact namespace and permitted filenames are defined under Further Notes. Implement this classification only in the live current-source guard; preserve frozen historical validators and their original input contracts. Git ignore alone is not the classification mechanism.
+  73  - The optional namespace root and every workspace component must be real directories. A workspace key has one nonempty component other than dot/dot-dot, without either slash character. Its immediate children may only be the three named regular, non-executable note files. They may be absent, created, updated or removed without changing engineering source identity. Empty real directories are allowed. No nested directory, extra filename, symlink or nonregular object is accepted as a local note. Reject an invalid object before reporting successful verification; do not hide it by skipping the namespace.
+  74  - No entry inside that namespace may be tracked by the candidate HEAD tree or Git index, or listed in the trusted expected source inventory. Reject any such collision rather than excluding a tracked/expected source. An invalid/non-directory/linked namespace root is also rejected. These constraints apply before excluding any permitted note from the actual source set.
+  75  - After validating that entire namespace, omit only its permitted note files from the actual engineering source set. All other source names, modes, hashes, role checks, history checks and policy identities retain their existing checks. Note bytes never become trusted source, executable configuration, materializer input or article-publication input. This is a finite local-output shape, not a blanket management-directory waiver or a caller-selectable ignore path.
+  76  - On an otherwise valid disposable current target, native verification must pass before notes exist, after an authorized save creates the brief and optional glossary, and after updating their text. The role and non-note source identities must be identical across those runs. Exercise both existing current main/staging roles. Invalid namespace cases must refuse; an unrelated unapproved source outside it must still refuse. Do not convert any failure into a fallback success.
+  77  - An explicitly requested alternate note location is not automatically excluded from source scanning. If it lies inside scanned sources and is not admitted by the existing contract, retain the requested notes, report that current verification remains blocked by the named source, and continue independent prose. Do not relocate, delete or broaden source admission to make the check pass. A new exclusion location is an engineering change, not another editorial prerequisite or a reason to repeat settled questions.</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-10"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:164–165</code></summary><pre> 164  - Default durable local notes: `.proj.writing/&lt;article-key&gt;/PROJECT.md` and, only under D6, `.proj.writing/&lt;article-key&gt;/GLOSSARY.md`. The key is a single nonempty directory component, not `.` or `..`, with no separator; an article title/path does not grant filesystem authority. Add `.proj.writing/` to `.gitignore` during implementation; do not create this root for conversation-only work. A key collision reuses only the established same project; otherwise choose a distinct key without overwriting. Reject linked default workspace components rather than following them. Workspace keys never determine a public article URL.
+ 165  - D5a&#x27;s only local-output namespace is `.proj.writing/`, with shape `.proj.writing/&lt;article-key&gt;/&lt;note-name&gt;`. The only permitted note names are `PROJECT.md`, `GLOSSARY.md` and legacy `CONTEXT.md`; the latter is allowed only for compatibility and is not created as the default for a new project. This finite name set is not a promise to ignore arbitrary files under that directory. No caller, article text or note content can configure another exclusion. The live `scripts/publication_current.py` source-set boundary and its native verifier integration must implement and test D5a; trusted policy/source identities get only finite reviewed successors for those engineering changes.</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-11"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:29–46</code></summary><pre>  29  - The entry is named article-discovery. Its description covers starting an article, exploring an article idea and revisiting an article&#x27;s direction. Explicit invocation selects it; otherwise the visible request must concern article discovery. Mentioning an article, a generic emotion or a repository alone does not select a writing interview.
+  30  - A direct drafting request with enough material proceeds to drafting; discovery supplies only missing decisions that affect that request. Routine proofreading, a specified revision, a one-off explanation and code-only work keep their existing routes. A requested full article interview is available without becoming the default.
+  31  - Retain the original grilling, domain-modeling and grill-with-docs behavior for their existing uses. Reuse their principles through article-specific instructions rather than importing their complete contracts and attempting to cancel conflicting instructions afterward.
+  32  
+  33  ### D2. Conversation and completion
+  34  
+  35  - Start with the supplied material and requested assistance. Respond, explore or draft as requested. Ask a question only when alternative answers would change the next action, the meaning of the prose, or a material public claim. Discoverable facts are the agent&#x27;s work; authorial decisions remain the author&#x27;s.
+  36  - Reuse answers and existing writing context. Questions whose prerequisites remain unknown wait until relevant. Offer alternatives when a real author choice exists; the author can decline the choice or leave it open.
+  37  - Treat unknown, tentative, intentionally unset and not applicable as distinct valid conditions when that distinction affects the work. Do not require a form, fixed question count, persona, measurable outcome, thesis or outline to begin.
+  38  - The author may change direction, audience, genre or assistance during drafting. Update only affected decisions. Mixed genres do not require an exclusive mode selection.
+  39  - Discovery ends when the requested next action can be performed with the remaining unknowns identified, when the author asks to start writing, or when the requested listening/response is delivered. A fact needed for a particular factual claim can remain pending while other prose continues. An explicit request for listening alone produces a response without unsolicited rewriting or evaluation.
+  40  
+  41  ### D3. Article settings and author agency
+  42  
+  43  - Organize only settings that help the present work: starting material, intent, audience/prior knowledge, genre, voice, protected passages or emotional texture, scope, terminology, sources, assistance and public/search needs. These are available dimensions, not mandatory fields or a fixed serialization schema.
+  44  - Writing for oneself, not specifying an audience, expressing emotion and discovering a purpose through writing are complete author choices. Preserve intentional contradictions, unresolved endings and ambiguity unless the author requests their revision. Do not invent personal experience, psychological causes, a changed stance or a moral/reconciliatory ending.
+  45  - A tentative suggestion is identified as tentative; inference is not recorded as owner confirmation. Preserve that distinction through conversation, saving and later reuse: an unanswered suggestion stays tentative, and only an author&#x27;s explicit acceptance or correction changes its status. Unknown and intentionally unset choices retain their meaning. Source-provided facts are not mislabeled as author choices. Use ordinary prose or the existing document format; no mandatory field schema or confirmation for every saved sentence is introduced. Existing explicit authorization remains valid, and a routine summary is not another approval gate.
+  46  - Phoenix continues to own the explicitly requested or already-established Phoenix voice. Discovery does not impose Phoenix, a uniform opening, glossary order, heading formula, SEO target or word quota on other writing.</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-12"><summary><code>.proj.specs/0014-article-discovery/spec.en.md:50–60</code></summary><pre>  50  | Work | Entry and governing responsibilities | Boundary |
+  51  |---|---|---|
+  52  | Editorial conversation, idea discovery, drafting and revision | Article discovery when useful, then the relevant writing/maintenance route | Does not require an engineering spec, ticket, test table or adversarial review merely to discuss or write prose |
+  53  | New website article artifact | Existing article-creation CLI and creation skill | File creation is a separate requested artifact; preserve creation time and existing assets |
+  54  | Website preview and selected publication preparation | Existing publication contracts | Preserve topic provenance, ownership, checks and action-specific authority |
+  55  | Skill, instruction, CLI, renderer, configuration or website behavior change | Existing engineering stages, spec/tracker, ticket branches, approved testing and reviews | This epic is engineering work even though its product supports writing |
+  56  
+  57  - The engineering nine-stage pipeline applies to engineering/tooling changes. Add an explicit editorial routing exception to the live project instructions; this is a proposed narrow change to pipeline applicability, not a claim that the exception already exists.
+  58  - Editorial discussion and drafting do not allocate engineering tickets for their own sake. Any tracked topic allocation, branch convention, source provenance or review receipt required by the existing article-delivery contract still applies when that delivery is requested. This epic introduces no branch-naming or publication bypass.
+  59  - If writing uncovers a need for a new renderer, component or automation, identify that engineering need separately. Continue unaffected prose; do not silently implement or publish the engineering change as part of discovery.
+  60  - Keep article briefs and terminology separate from the engineering glossary, ADRs, implementation tickets and decision maps. Writing notes are not a second engineering tracker. An editorial choice is not automatically an ADR.</pre><p class="small">SHA-256：<code>1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4</code></p></details>
+<details id="source-13"><summary><code>docs/agents/review.md:31–51</code></summary><pre>  31  ### Grading
+  32  
+  33  | Grade | Meaning | Effect |
+  34  |---|---|---|
+  35  | **P0** | The spec cannot be implemented correctly as written | Blocks ticket creation |
+  36  | **P1** | Real problem, resolvable inside a ticket | Tickets may open; the ticket carries the finding |
+  37  | **P2** | Worth recording | Recorded, blocks nothing |
+  38  
+  39  ### The frozen prompt
+  40  
+  41  Write the reviewer prompt to `.proj.specs/&lt;epic&gt;/review/prompt.md` before round 1. Round 2 replays
+  42  that file verbatim; only the spec version it points at changes.
+  43  
+  44  This is the mechanism that keeps the ruler still. Without it a second round applies a stricter
+  45  standard than the first, and a review that would have converged reports fresh findings indefinitely
+  46  — the failure is in the moving threshold, not in the spec.
+  47  
+  48  ### Two rounds, then split
+  49  
+  50  Two rounds is the ceiling. P0 findings surviving round 2 mean the epic&#x27;s surface is too large to
+  51  converge on, so split the epic and restart at pipeline stage 1.</pre><p class="small">SHA-256：<code>59986a988856af5eb70f1682ee136170b964e1bc7346020629c795a6e203529e</code></p></details>
+<details id="source-14"><summary><code>docs/agents/workflow.md:66–100</code></summary><pre>  66  ## Stage 4 — Break into tickets
+  67  
+  68  Run `/to-tickets`. Tickets are **tracer bullets**: each one cuts a narrow but complete path through
+  69  every layer and is demoable on its own.
+  70  
+  71  Ticket ids are allocated globally and sequentially (`T-0001`, `T-0002`, …) and never change, because
+  72  branch names embed them. Files live under `.proj.tickets/NNNN-&lt;epic-slug&gt;/`. Layout and frontmatter:
+  73  [issue-tracker.md](issue-tracker.md).
+  74  
+  75  **Gate:** the user approves the breakdown — granularity, blocking edges, and what each ticket
+  76  delivers.
+  77  
+  78  ## Stage 5 — Implement
+  79  
+  80  Branch first: `tickets/&lt;ticket-id&gt;/&lt;ticket-slug&gt;`.
+  81  
+  82  Run `/implement`, which uses `/tdd`. Two tables bracket the loop:
+  83  
+  84  **Before the first test — the test plan table.** The user approves it before any test is written.
+  85  This satisfies `/tdd`&#x27;s rule that no test is written at an unconfirmed seam.
+  86  
+  87  | Seam | Test intent | Scope | Acceptance criterion | Boundary conditions |
+  88  |---|---|---|---|---|
+  89  
+  90  **Between the tables — the red → green loop, governed by `/tdd`.** One seam, one failing test, one
+  91  minimal implementation, repeat. Writing every test up front is the horizontal-slicing anti-pattern:
+  92  bulk tests verify imagined behaviour. Coverage is not a meaningful number here, because the code
+  93  under test does not exist yet.
+  94  
+  95  **When the ticket closes — the coverage report table.** Now the numbers are real.
+  96  
+  97  | Seam | Tests | Measured coverage | Acceptance criterion | Uncovered, and why |
+  98  |---|---|---|---|---|
+  99  
+ 100  **Gate:** test plan table approved before the loop starts; coverage report table produced before</pre><p class="small">SHA-256：<code>f827f005b59cccf7416e5ebb8c64ecba689d99047cb3b90b05ed0541294f98a1</code></p></details></section><section><h2>獨立 reviewer 紀錄</h2><details><summary>完整性 · <code>/root/ad2_completeness</code></summary><pre># Round 2：完整性
+
+Reviewer：`/root/ad2_completeness`；獨立上下文、唯讀。父執行緒保存回傳結果，未更動其分級。
+
+Completeness 第二輪：**未發現 P0／P1／P2 缺漏**。本結論僅限需求與驗收條件的完整性，不代表實作、實際 host 行為或使用體驗通過。
+
+審查使用 versions/round-2；base＝HEAD＝`6fcb277a9841dfad21d91f79005d39924acd92d2`。已核對 63 份 frozen source 的 SHA-256／長度，均符合 manifest；prompt hash 亦符合捕捉值。未讀取其他 reviewer 的結果。
+
+| 覆蓋範圍 | 原始證據位置與追溯 | 結果 |
+|---|---|---|
+| 自由聊、抒發、listen-only、未知目的／受眾、直接起稿、完整訪談、返回與轉向 | spec.en.md:29–46；R01–R12 → AC-01–05 | 已涵蓋；不以補齊設定或反覆確認作為起稿條件 |
+| 純文章、混合工程需求、skill 本身的工程性質與交付權限 | spec.en.md:50–60、:109；R13–R16 → AC-06–07、13 | 已涵蓋；工程需求與未受影響的文章工作分開處理 |
+| 保存關閉／啟用、既有授權工作區、穩定 key、碰撞、可見性與 readback 失敗 | spec.en.md:64–77、:164–165；R17–R20、R40、R48 → AC-08、17 | 已涵蓋；對話、保存與續寫保留暫定／確認狀態 |
+| 無術語、第一個可重用術語、未解定義、作者用法／事實、比喻與明示 scaffold | spec.en.md:81–86；R21–R28 → AC-09–11 | 已涵蓋；沒有術語不建空檔，未解事項不冒充已解定義 |
+| 只有 GLOSSARY、只有舊 CONTEXT、兩者並存，以及有效／失效指定 | spec.en.md:90–93；R29–R30 → AC-12 | 已涵蓋；詞彙權威未定時只暫停相關寫入 |
+| 來源、工程 context 與寫入邊界 | spec.en.md:60、:66、:83–86、:92；R24–R30 → AC-08、10–12 | 已涵蓋；來源內容不授予額外動作權限 |
+| 公開前四類檢查、缺失證據、既有作者決策與發布權限 | spec.en.md:97–109；R31–R32、R41–R44 → AC-13 | 已涵蓋；每個觸發類別都有具體結果或未解項目 |
+| 第五套件、有限 policy／guard 修改、歷史保留、雙 runtime 與驗證分層 | spec.en.md:113–147；R33–R39、R45–R48 → AC-14–17 | 已涵蓋；情境家族明示不等於核准測試或實際執行結果 |
+
+未發現需要另補、且未通往驗收條件的適用 type × field × boundary 組合。未要求新增快照證據；未執行產品測試或寫入檔案。
+</pre></details><details><summary>可驗證性 · <code>/root/ad2_verifiability</code></summary><pre># Round 2：可驗證性
+
+Reviewer：`/root/ad2_verifiability`；獨立上下文、唯讀。父執行緒保存回傳結果，未更動其分級。
+
+Verifiability 審查完成：**未發現 P0、P1 或 P2 finding**。此結論僅表示 round 2 規格的驗收條件具有可觀察判準，不代表技能行為、原生主機、CLI 或可用性已驗證通過。
+
+審查版本為 review/versions/round-2；base／HEAD 均為 `6fcb277a9841dfad21d91f79005d39924acd92d2`，branch 為 staging。63 份 frozen source 的 SHA-256 與位元組長度均符合 capture.json；prompt SHA-256 為 `3f5d674830cff8f9154503ee589378ebeb7a3ba1175953e350e70b8bebe7526d`。staged／unstaged patch 均為空，新增內容由 supplied addition patch 與 frozen source 納入範圍，未因 Git diff 為空而排除。
+
+| 覆蓋範圍 | 原始位置、AC／矩陣 | 可觀察判準與審查結果 |
+|---|---|---|
+| 入口、直接起稿、非寫作請求 | spec.en.md:29–30,122；AC-01；R01–R02 | 由請求與實際 routing／action trace 判定是否誤加 discovery 問卷。 |
+| 自由聊、抒發、listen-only、未知目的與受眾、混合文類 | spec.en.md:35–44,123–124；AC-02–03；R03–R07 | 可檢查是否先交付指定協助、是否重寫／評價，以及是否將設定變成起稿前提。作者刻意留白是有效輸入狀態。 |
+| 提問、反覆摘要、深入訪談、返回與改變方向 | spec.en.md:35–39,45,126；AC-05；R10–R12、R40 | 問題須具有下一步、語意或事實相依；已回答問題不得重問，開始寫作要求有明確轉換行為。可從多輪輸入差異與 transcript 判定。 |
+| 作者限制、保護文字、Phoenix 觸發 | spec.en.md:44–46,125；AC-04；R08–R09 | 可對照明示約束、原文與產出，辨認虛構經驗、立場改動或未觸發的風格套用。 |
+| 純文章、混合工具修改、技術需求與交付權限 | spec.en.md:50–60,109,127–128；AC-06–07；R13–R16 | 可由建立的 artifacts 與 action trace，判斷是否誤建工程文件、是否繼續不受影響的文字，以及是否超出原有交付權限。 |
+| 保存開關、既有工作區、key／碰撞、保存失敗 | spec.en.md:64–68,129,164；AC-08；R17–R20、R40 | 授權脈絡、前後檔案、readback 與回報可交叉核對；暫定、已確認、未知、刻意未設定的狀態不可在保存／續寫時被提升。 |
+| 無術語、第一個可重用術語、未解定義、作者用語、一般隱喻與 scaffold | spec.en.md:81–86,130–132；AC-09–11；R21–R28 | 建立門檻、作者明示例外、resolved／pending 存放位置，以及來源定義與作者用法的區分均可從請求與檔案內容核對。 |
+| 單一／雙重 glossary、有效／缺失／無效指定、工程 CONTEXT 與嵌入指令 | spec.en.md:86,90–93,133；AC-11–12；R28–R30 | 可由現存檔案、指定與授權判定沿用或暫停詞彙寫入；無須先強迫解決不影響其他文字的問題。 |
+| 公開前查核與可接受的未解結果 | spec.en.md:99–108,134；AC-13；R31–R32、R41–R44 | D8 表格已指定觸發、具體段落／素材、來源結果或具名缺口。泛泛提醒明確不算完成；未解結果也不能宣稱已驗證或可發布。 |
+| 第五個 canonical 套件、有效文件與歷史保存 | spec.en.md:113–116,135–137,163–168；AC-14–16；R33–R39 | 可利用有效指引盤點、實體檔案／metadata／連結檢查、重複生成、故意修改產物與精確 identity audit 判定。靜態生成與 fresh-host 執行明確分開。 |
+| notes／current guard、main／staging、拒絕案例與自訂位置 | spec.en.md:72–77,138,165；AC-17；R45–R48 | 有有限 namespace／檔名／物件形狀、HEAD／index／trusted-inventory 碰撞與 namespace 外額外來源的拒絕規則；正常路徑要求三次 native verification 比較相同角色與非筆記來源身分。 |
+| 驗證方法與測試核准界線 | spec.en.md:142–147；traceability.md:62–68 | scenario family 未冒充已核准測試或執行結果；未來 ticket 必須列出具體輸入、預期輸出與 runtime 範圍。缺少實作測試不是本階段的驗收判準缺口。 |
+
+對照反例後，未形成 finding：已授權保存不等於作者接受未回答的建議；公開查核列出具體缺口不等於缺口已解決；產生兩份 runtime 套件不等於兩個主機行為已通過；.gitignore 也不等於 current guard 已排除筆記。規格均明示上述區別。
+
+未修改檔案、未讀取其他 reviewer 結果、未執行新技能或測試。就此指定面向，未遇到阻礙判斷的缺失證據；實際主機結果、具體 ticket 測試表與實作驗證仍屬後續證據。
+</pre></details><details><summary>契約衝突 · <code>/root/ad2_contracts</code></summary><pre># Round 2：契約衝突
+
+Reviewer：`/root/ad2_contracts`；獨立上下文、唯讀。父執行緒保存回傳結果，未更動其分級。
+
+本輪 Contract conflict 審查未發現可成立的 P0／P1／P2 finding。此結論僅涵蓋供應的 round 2 規格與 frozen 契約，不代表新 skill、current guard 或實際互動已通過驗收。
+
+## 輸入核對
+
+- ROUND_INPUT：`.proj.specs/0014-article-discovery/review/versions/round-2`。
+- branch＝staging；base＝HEAD＝`6fcb277a9841dfad21d91f79005d39924acd92d2`。
+- 已核對 capture.json 所列 63 份副本的 SHA-256 與長度，皆相符。
+- prompt SHA-256＝`3f5d674830cff8f9154503ee589378ebeb7a3ba1175953e350e70b8bebe7526d`，符合 capture。
+- staged／unstaged patch 皆為空；完整 addition patch 涵蓋三份規格套件與研究文件，另有 round-1-to-round-2.patch。未因 Git diff 為空而排除未追蹤提案。
+- 未讀其他 reviewer 結果；未修改檔案、執行實作測試或呼叫子 agent。
+
+以下引用均為 frozen 副本對應的原始路徑與行號。
+
+| 覆蓋範圍 | 對照契約與證據 | 本軸判斷 |
+|---|---|---|
+| 自由聊、抒發、listen-only、未知目的／受眾、直接起稿、返回與改方向 | spec.en.md:29–39,43–46；`.agents/skills/grilling/SKILL.md:6–28`；`.claude/skills/grilling/SKILL.md:6–28`；R01–R12／AC-01–05 | 新入口明示只借用原則、不載入完整工程訪談契約；原工程用途保留。因此「尚未確定驗收條件卻先寫文章」不構成互斥。 |
+| 純文章、工程混合需求與新技術需求 | spec.en.md:48–60；AGENTS.md:48–69,79–89；docs/agents/workflow.md:29–101；R13–R16／AC-06–07 | 第 57 行明示新增 editorial routing exception；第 55、59 行仍將 skill／renderer／automation 交回工程流程。本 epic 自身仍屬工程工作。 |
+| 新文 artifact 與既有改稿 | spec.en.md:53–54,109,128；skills/creating-vitepress-post/SKILL.md:14–23；skills/maintaining-writing-skills/references/article-maintenance.md:3–11 | 建檔使用既有 CLI，改稿保留 createdTime；對話起稿不自動建立文章檔案或取得發布權限。 |
+| optional glossary、首個術語、未決定義、作者用法與比喻 | spec.en.md:79–86；.agents/skills/domain-modeling/SKILL.md:40–64；docs/agents/domain.md:3–13,43–47；R21–R28／AC-09–11 | 工程 glossary 保持原用途。文章定義依 scoped 新契約處理，未決選項留 brief；沒有將文學多義性強行交給工程 canonical-term 規則。 |
+| 舊 CONTEXT／單一 GLOSSARY／兩檔／指定失效 | spec.en.md:88–93,133；skills/maintaining-writing-skills/references/writing-process.md:9–11；R29–R30／AC-12、14 | 第 93 行明示取代普遍建立 CONTEXT＋PROJECT 的舊規則；單一既有檔直接沿用，兩檔或失效指定只暫停詞彙寫入。這是明示變更，不能把舊規則本身再列為衝突。 |
+| 不保存、已授權 workspace、artifact-only、scaffold override、保存失敗 | spec.en.md:45,62–68,82,129–130,164；writing-process.md:9–11；R17–R23、R40／AC-08–09 | 保存以明示請求或「已建立且已授權」workspace 為條件；不能只從一般對話推導。artifact-only 不強制建立筆記；readback 不把 tentative 升成作者確認。 |
+| 預設 key／碰撞／linked path／其他位置／公開性 | spec.en.md:68,73–77,86,164–165；.gitignore:58–63；R20、R28、R45–R48／AC-08、11、17 | 固定預設 namespace、禁止連結與覆寫異專案；Git ignore 明示不等於保密或來源排除。自訂位置遇 guard 阻擋時保留筆記並報告，不重開文章訪談或擴張權限。 |
+| 筆記與 current-source guard | spec.en.md:70–77,138,165；scripts/publication_current.py:227–247,279–309；docs/adr/0008-main-first-engineering-and-shared-staging.md:29–36；R38、R45–R48／AC-16–17 | 舊 guard 納入 ignored source 並比對 exact inventory；本版已明示對 live guard 新增有限 local-output 分類，先驗證形狀與 HEAD/index/trusted-inventory 碰撞，再排除允許的筆記。沒有要求「完全維持舊來源集合」與「新增筆記仍通過」同時成立。 |
+| 第五 canonical 套件、語言、生成與歷史保存 | spec.en.md:111–116,135–137,163–168；docs/agents/runtime.md:32–43,140–148；docs/adr/0005-physical-product-writing-packages.md:8–26；scripts/materialize-writing-skills.py:20,99–141,255–277；R33–R38／AC-14–16 | 第五套件明示擴充四套件清單，並要求更新 policy/provenance/inventory；仍只允許三樹繁中例外，保留 aliases、framework 與歷史證據。 |
+| 公開檢查、發布與 branch／ticket 權限 | spec.en.md:58,95–109,151；skills/managing-article-publication/references/local.md:42–65,91–92；references/future-actions.md:7–18；ADR-0006、0008；R16、R31–R32、R41–R44／AC-07、13 | D8 的未解項目只能完成辨識／報告，不能冒充 verified 或 publication-ready；既有 provenance、分支與 action-specific authority 明確保留。 |
+| scenario proposal 與實際驗證／核准測試表 | spec.en.md:140–147；traceability.md:3,55–68；AGENTS.md:81–89；docs/agents/runtime.md:129–138；R34–R39／AC-15–17 | AD 情境家族沒有被當成已核准測試表或執行結果；兩個實際 runtime、靜態生成與 native guard 證據分開報告。歷史 design 的八案例 E1–E8 與其 inputs／rubrics 保留。 |
+
+## 範圍限制與不確定性
+
+- 這是未實作提案的契約審查；尚不能證明未來所有有效引用均已更新，或 fresh-host discovery、保存、兩種 current role 的 native verification 真正可行。
+- capture 未含 maintenance/writing-skills/SOURCES.md、完整 Phoenix 風格參考、publication_workflows.py、main_publication_verification.py 與兩種 runtime 的全部生成檔。本輪未以目前檔案替代，結論不延伸為這些檔案的逐行稽核。
+- 實作仍須把上述明示替代落入 live 指引、有限 successor 與 materializer 設定；這些是本版已有的交付義務，不另列為契約衝突。
+</pre></details><details><summary>紅隊 · <code>/root/ad2_redteam</code></summary><pre># Round 2：紅隊
+
+Reviewer：`/root/ad2_redteam`；獨立上下文、唯讀。父執行緒保存回傳結果，未更動其分級。
+
+Red team 第二輪結果：**未發現 P0／P1／P2 finding**。此結論僅限規格容許的未預期行為，不代表實作、runtime 或使用體驗已通過驗收。
+
+審查使用 versions/round-2 frozen 來源；63 份來源的長度與 SHA-256 均符合 manifest，prompt SHA-256 相符。捕捉的 base／HEAD 均為 `6fcb277a9841dfad21d91f79005d39924acd92d2`，已檢視 supplied status、空的 staged／unstaged diffs、完整新增 patch 與跨輪修訂 patch。沒有缺少本次審查必要輸入。
+
+| 覆蓋範圍 | 反例與需求檢查 | 證據與判定 |
+|---|---|---|
+| 自由聊、抒發、listen-only、未知目的／受眾 | 嘗試以設定未齊、詞義多義或需要深度訪談為理由延後回應／起稿 | spec.en.md:29–39、:43–46；AC-01～05、R01～R12 明確容許未知狀態，直接起稿與聆聽有獨立完成條件。這些反例違反規格，並非規格容許的新行為。 |
+| 返回續寫、重複摘要、改變方向 | 嘗試把摘要變成確認門檻，或因改文類而重跑訪談 | spec.en.md:36–45；AC-03、05、08，R07、R40 要求沿用答案，只更新受影響選擇；未回答建議不能被保存或重用成作者確認。 |
+| 工程與文章分工 | 以文章需求順帶實作 renderer，或反過來要求每篇 prose 配工程票 | spec.en.md:50–60；AC-06、07，R13～R16 分離工程需求並繼續不受影響的 prose；文章來源、分支及發布契約仍保留。此 skill 本身仍屬工程工作。 |
+| 按需 glossary | 無術語也建立空表；把比喻定義化；將未解選項寫成標準詞義；忽略明示 scaffold | spec.en.md:81–86；AC-09～11，R21～R28 排除上述非預期行為，也保留作者明示 scaffold、自訂用法及刻意多義的自由。 |
+| 相容與權威 | 單一既有 glossary 仍追問指定；雙檔擅自合併；失效 designation 改用工程根詞彙表 | spec.en.md:90–93；AC-12，R29～R30 分別規定直接沿用、僅暫停詞彙寫入及禁止工程 fallback；無須停止其他 prose。 |
+| 保存、讀寫與路徑 | 將普通對話或單純文章檔案請求視為保存授權；同名覆寫；來源內指令越界寫入；readback 失敗卻聲稱已保存 | spec.en.md:64–68、:86、:164；AC-08、11，R17～R20、R28 以既有授權或 save/resume 請求啟用保存，限制目標、碰撞與連結，要求實際 readback。單純存在資料夾不等於「已授權工作區」。 |
+| 筆記與 current guard | 用 ignored 目錄藏額外來源；排除已追蹤／預期來源；以自訂路徑擴張豁免；為通過 guard 搬移或刪除筆記 | spec.en.md:72–77、:165；AC-17，R45～R48 要求先驗完整 namespace、拒絕碰撞與異常物件，只排除有限筆記檔名。自訂路徑保留原位並揭露 blocker；不重啟訪談。 |
+| 公開準備與外部材料 | 用泛泛提醒冒充查核；引用冒充使用權；未解 scope 冒充同意；完成 discovery 推導發布權限 | spec.en.md:97–109；AC-13，R31～R32、R41～R44 規定具體段落／素材及結果或缺口；未解項目可交付但不得冒充已驗證或 publication-ready。作者決定仍屬刻意保留的權利。 |
+| runtime、生成與證據 | 靜態生成成功冒充實際 host 通過；新增第五包時放寬整個管理目錄或回寫歷史 | spec.en.md:113–116、:136–147、:163–168；AC-15～17，R34～R39 明確要求有限 successor、歷史保留與逐 runtime 實際證據；scenario families 不等於核准測試或驗收結果。 |
+
+沒有成立的 finding，因此沒有必要提出最小修正方向。主要不確定性是未來實作是否確實遵守這些不變條件；本次未執行攻擊、檔案變更、materializer、current verifier 或原生 host 行為測試，也未讀取其他 reviewer 結果。
+</pre></details></section><section><h2>版本與結果紀錄</h2><details><summary>審查結果與第一輪問題對照</summary><pre>{
+  &quot;round&quot;: 2,
+  &quot;rounds_used&quot;: 2,
+  &quot;maximum_rounds&quot;: 2,
+  &quot;status&quot;: &quot;spec_review_gate_passed&quot;,
+  &quot;scope&quot;: &quot;Independent static specification review only; no implementation or runtime acceptance.&quot;,
+  &quot;prompt_sha256&quot;: &quot;3f5d674830cff8f9154503ee589378ebeb7a3ba1175953e350e70b8bebe7526d&quot;,
+  &quot;spec_sha256&quot;: &quot;1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4&quot;,
+  &quot;spec_git_blob&quot;: &quot;aa08308eb23756514ebc770e6a4719c60388d83d&quot;,
+  &quot;axes&quot;: [
+    {
+      &quot;axis&quot;: &quot;完整性&quot;,
+      &quot;agent&quot;: &quot;/root/ad2_completeness&quot;,
+      &quot;report&quot;: &quot;round-2/completeness.md&quot;,
+      &quot;P0&quot;: 0,
+      &quot;P1&quot;: 0,
+      &quot;P2&quot;: 0
+    },
+    {
+      &quot;axis&quot;: &quot;可驗證性&quot;,
+      &quot;agent&quot;: &quot;/root/ad2_verifiability&quot;,
+      &quot;report&quot;: &quot;round-2/verifiability.md&quot;,
+      &quot;P0&quot;: 0,
+      &quot;P1&quot;: 0,
+      &quot;P2&quot;: 0
+    },
+    {
+      &quot;axis&quot;: &quot;契約衝突&quot;,
+      &quot;agent&quot;: &quot;/root/ad2_contracts&quot;,
+      &quot;report&quot;: &quot;round-2/contracts.md&quot;,
+      &quot;P0&quot;: 0,
+      &quot;P1&quot;: 0,
+      &quot;P2&quot;: 0
+    },
+    {
+      &quot;axis&quot;: &quot;紅隊&quot;,
+      &quot;agent&quot;: &quot;/root/ad2_redteam&quot;,
+      &quot;report&quot;: &quot;round-2/red-team.md&quot;,
+      &quot;P0&quot;: 0,
+      &quot;P1&quot;: 0,
+      &quot;P2&quot;: 0
+    }
+  ],
+  &quot;findings&quot;: [],
+  &quot;counts&quot;: {
+    &quot;P0&quot;: 0,
+    &quot;P1&quot;: 0,
+    &quot;P2&quot;: 0
+  },
+  &quot;repairs&quot;: [
+    {
+      &quot;ids&quot;: [
+        &quot;V-01&quot;
+      ],
+      &quot;grade&quot;: &quot;P0&quot;,
+      &quot;contract&quot;: &quot;D8 trigger/minimum-result table; AC-13&quot;,
+      &quot;rows&quot;: [
+        &quot;R32&quot;,
+        &quot;R41&quot;,
+        &quot;R42&quot;,
+        &quot;R43&quot;,
+        &quot;R44&quot;
+      ],
+      &quot;source_lines&quot;: [
+        99,
+        108,
+        134
+      ],
+      &quot;status&quot;: &quot;addressed_in_spec; not raised by round-2 reviewers&quot;
+    },
+    {
+      &quot;ids&quot;: [
+        &quot;C-R1-01&quot;
+      ],
+      &quot;grade&quot;: &quot;P1&quot;,
+      &quot;contract&quot;: &quot;single unassigned GLOSSARY normal reuse; AC-12&quot;,
+      &quot;rows&quot;: [
+        &quot;R29&quot;
+      ],
+      &quot;source_lines&quot;: [
+        90,
+        133
+      ],
+      &quot;status&quot;: &quot;addressed_in_spec; not raised by round-2 reviewers&quot;
+    },
+    {
+      &quot;ids&quot;: [
+        &quot;C-R1-02&quot;
+      ],
+      &quot;grade&quot;: &quot;P1&quot;,
+      &quot;contract&quot;: &quot;tentative/confirmed state preservation; AC-08&quot;,
+      &quot;rows&quot;: [
+        &quot;R18&quot;,
+        &quot;R40&quot;
+      ],
+      &quot;source_lines&quot;: [
+        45,
+        129
+      ],
+      &quot;status&quot;: &quot;addressed_in_spec; not raised by round-2 reviewers&quot;
+    },
+    {
+      &quot;ids&quot;: [
+        &quot;C-R1-03&quot;,
+        &quot;RT-01&quot;
+      ],
+      &quot;grade&quot;: &quot;P1&quot;,
+      &quot;contract&quot;: &quot;bounded default note output classification; D5a / AC-17&quot;,
+      &quot;rows&quot;: [
+        &quot;R20&quot;,
+        &quot;R45&quot;,
+        &quot;R46&quot;,
+        &quot;R47&quot;,
+        &quot;R48&quot;
+      ],
+      &quot;source_lines&quot;: [
+        70,
+        77,
+        138,
+        165
+      ],
+      &quot;status&quot;: &quot;addressed_in_spec; not raised by round-2 reviewers&quot;
+    }
+  ],
+  &quot;next_gate&quot;: &quot;Ticket breakdown approval, then approved per-ticket test-plan table before tests/implementation.&quot;,
+  &quot;tickets_allocated&quot;: false,
+  &quot;implementation_started&quot;: false,
+  &quot;remote_actions&quot;: false
+}</pre></details><details><summary>文件與來源完整性紀錄</summary><pre>{
+  &quot;acceptance_criteria&quot;: 17,
+  &quot;traceability_rows&quot;: 48,
+  &quot;all_criteria_reached&quot;: true,
+  &quot;original_prompt_unchanged&quot;: true,
+  &quot;surrounding_context_files_unchanged&quot;: 60,
+  &quot;spec_sha256&quot;: &quot;1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4&quot;,
+  &quot;spec_git_blob&quot;: &quot;aa08308eb23756514ebc770e6a4719c60388d83d&quot;,
+  &quot;scope&quot;: &quot;Document integrity only; not behavioral acceptance or review outcome.&quot;
+}
+</pre></details></section></main></body></html>

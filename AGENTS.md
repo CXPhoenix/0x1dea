@@ -56,6 +56,13 @@ See [ADR-0001](docs/adr/0001-walking-skeleton-then-epic-loop.md).
 
 ## Pipeline
 
+This pipeline governs engineering changes to skills, instructions, CLI, renderers,
+configuration and website behavior. Editorial conversation, discovery, drafting and
+revision do not require an engineering spec, ticket, ADR or test table merely to write.
+When a mixed request reveals tooling work, identify that engineering need and continue
+unaffected prose. Existing article topic/delivery allocation, source provenance and
+publication authority still apply when those artifacts or actions are requested.
+
 | # | Stage | Skill | Gate before moving on |
 |---|---|---|---|
 | 1 | Converge the requirement | `/grill-with-docs` | user confirms shared understanding |
@@ -157,7 +164,18 @@ All other new management and framework instructions remain English. Do not tune 
 three skills or run a tuning workflow as an adoption step. Provenance is in
 [runtime.md](docs/agents/runtime.md) and [language.md](docs/agents/language.md).
 
+- Starting an article, exploring an idea or revisiting direction: load the active
+  runtime's `article-discovery`; talk freely first and organize only useful settings.
+  Direct drafting, specified revision and proofreading proceed without an interview.
+  Conversation alone creates no workspace/context files; author-requested assistance
+  takes precedence over a general writing-planning checklist.
+- Saving/resuming article context uses article-discovery's optional persistence
+  branch. A sole article GLOSSARY.md or legacy CONTEXT.md is reused; engineering
+  CONTEXT.md is not an article fallback. Conversation alone creates no notes.
 - Explicit Phoenix voice or continuing that work: load the active runtime's `phoenix-writing`.
+- Requested public editorial preparation uses article-discovery's conditional
+  branch; missing evidence is reported per passage/asset, not as a generic checklist.
+  Website preview/selected publication preparation retains managing-article-publication.
 - Creating a new site article file: load `creating-vitepress-post`; chat drafts and revisions do not scaffold.
 - Writing-skill, article or instruction maintenance: load `maintaining-writing-skills`.
 - New requirements, tickets and progress use only `.proj.specs/` and `.proj.tickets/`.

@@ -26,6 +26,15 @@ takes a branch — `tickets/T-0000/walking-skeleton` — rather than committing 
 **Its output is the seams, not the code.** Expect most of the skeleton's implementation to be
 replaced by the epics that follow. That is the plan working, not the plan failing.
 
+## Editorial applicability
+
+The nine engineering stages govern behavior/instruction/tooling changes, including
+article-discovery maintenance. Plain editorial conversation, drafting and revision
+need no engineering artifacts. Use article-discovery only when idea/direction discovery
+helps; sufficient drafting requests proceed. Continue independent prose when a renderer
+or automation need must enter the engineering pipeline. Requested article delivery
+retains its existing allocation, provenance and action-specific authority.
+
 ## Stage 1 — Converge the requirement
 
 Run `/grill-with-docs`. It is user-invoked; ask the user to run it rather than trying to invoke it

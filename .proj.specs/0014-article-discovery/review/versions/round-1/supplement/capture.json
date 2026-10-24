@@ -1,0 +1,146 @@
+{
+  "round": 1,
+  "kind": "same-round evidence supplement",
+  "reason": "Reviewers explicitly identified locally available surrounding contracts absent from initial capture. No spec, prompt or initial snapshot changed. Supplied identically to all four existing reviewers without sharing findings.",
+  "fixed_for_any_round_2": true,
+  "files": [
+    {
+      "original_path": "skills/managing-article-publication/references/local.md",
+      "snapshot_path": "versions/round-1/supplement/source/skills/managing-article-publication/references/local.md.txt",
+      "sha256": "1ae3e28df4190b2692ad9a4e3f5cd8a304b90b72c77f63bb82df116083e731be",
+      "bytes": 5703
+    },
+    {
+      "original_path": "scripts/verify-harness-adoption.py",
+      "snapshot_path": "versions/round-1/supplement/source/scripts/verify-harness-adoption.py.txt",
+      "sha256": "cecd58b0cd8dbe7fde3030b20ae8bce949d54a9be3e839b91da9baa08a47a73a",
+      "bytes": 3618
+    },
+    {
+      "original_path": "scripts/publication_current.py",
+      "snapshot_path": "versions/round-1/supplement/source/scripts/publication_current.py.txt",
+      "sha256": "759826ee582cf0fd8b8d72cf5a6911b09b89dd53c1abe5f17cf48167697bcd58",
+      "bytes": 25591
+    },
+    {
+      "original_path": "maintenance/publication-workflow/engineering-v1.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/publication-workflow/engineering-v1.json.txt",
+      "sha256": "478b638866a3fff4730879afe6d1a858e89ceb690bda8abbba1a2c2b0cf9928c",
+      "bytes": 324177
+    },
+    {
+      "original_path": ".claude/skills/grilling/SKILL.md",
+      "snapshot_path": "versions/round-1/supplement/source/.claude/skills/grilling/SKILL.md.txt",
+      "sha256": "d9ed7c64655d7f81014022a5782ff1f1da1c6100c92ab28ef9bd110a2776baa9",
+      "bytes": 2149
+    },
+    {
+      "original_path": ".claude/skills/domain-modeling/SKILL.md",
+      "snapshot_path": "versions/round-1/supplement/source/.claude/skills/domain-modeling/SKILL.md.txt",
+      "sha256": "327a2b50620e2fd70abc6893cd6965e76b20f8d0adb0dc2c8d5eb3845efb643e",
+      "bytes": 3331
+    },
+    {
+      "original_path": ".claude/skills/grill-with-docs/SKILL.md",
+      "snapshot_path": "versions/round-1/supplement/source/.claude/skills/grill-with-docs/SKILL.md.txt",
+      "sha256": "7de372c13488f1ee96cc11cd8907b56b6809cc93eef776eeddd37de6b6cbe3fe",
+      "bytes": 247
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E1/input.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E1/input.json.txt",
+      "sha256": "45f2c771edd6b025fe1790f301a8163dbeafb88bdb5d8fa90261d77f8a2e3918",
+      "bytes": 745
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E1/rubric.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E1/rubric.json.txt",
+      "sha256": "44a858b2ed6effe7f6a39b2c18a8d03e3339b9f87b44879c20a4abd9277bffb3",
+      "bytes": 830
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E2/input.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E2/input.json.txt",
+      "sha256": "de343eb0e4db237078bde952c9a702b1e31d3dbb75db2f969aab1cd7251a49d6",
+      "bytes": 931
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E2/rubric.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E2/rubric.json.txt",
+      "sha256": "3442d8b937f3c88b68522765e16881ee858424d7d933ba98c8f700087da1415c",
+      "bytes": 800
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E3/input.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E3/input.json.txt",
+      "sha256": "880420a4250db9c900c72fd1a37605da76d04252ae722ad4f0b44059ec1d655e",
+      "bytes": 599
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E3/rubric.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E3/rubric.json.txt",
+      "sha256": "e490933716d1738cfa7b176def37d3aaa5b8c4f2127a099e50e5cbe7da76e607",
+      "bytes": 805
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E4/input.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E4/input.json.txt",
+      "sha256": "919a699d37b7ad41a5b0d1a6c7afaa141097b6f92a96c3c6cd6020b1680e4425",
+      "bytes": 599
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E4/rubric.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E4/rubric.json.txt",
+      "sha256": "efe4f1f1f61c693b6f7f3d08eebdf46f69bb1d5a9d90180e5094c06acbc7c791",
+      "bytes": 723
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E5/input.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E5/input.json.txt",
+      "sha256": "fe7562cfc8a7e96fa5cb79b732731ffe2f32af7a2911aa21663acc1b36d586ca",
+      "bytes": 215
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E5/rubric.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E5/rubric.json.txt",
+      "sha256": "101950e82aefd32aec61798c969fb21ac126ca92347d6e22884f5db7cb5660cc",
+      "bytes": 755
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E6/input.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E6/input.json.txt",
+      "sha256": "854ef7dcf1b64b5f358a246e29532ef70a046ead4cc22da7fc32b1394cccaa01",
+      "bytes": 711
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E6/rubric.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E6/rubric.json.txt",
+      "sha256": "d1dca4e74d6906fbce503f29fdbe2c04a0e98c990fa282456c971c2c80a8a947",
+      "bytes": 782
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E7/input.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E7/input.json.txt",
+      "sha256": "4aa1ce4701e33591c72eddd19623045b7b12ab6f8d392bcc6b6da6abab7d90e9",
+      "bytes": 429
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E7/rubric.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E7/rubric.json.txt",
+      "sha256": "aecfdaa4b5d3786cd86d3482e0139ba22604f2a0b2088f92e4f9ddcc9e179b05",
+      "bytes": 805
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E8/input.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E8/input.json.txt",
+      "sha256": "4a94b06e7e789cf712a1f784301306247a67c98583df19886c96eec0edbba3a2",
+      "bytes": 730
+    },
+    {
+      "original_path": "maintenance/writing-skills/behavior-eval-20261004/cases/E8/rubric.json",
+      "snapshot_path": "versions/round-1/supplement/source/maintenance/writing-skills/behavior-eval-20261004/cases/E8/rubric.json.txt",
+      "sha256": "94b726b51ead5a72b223659398c9468f5a137ef7c04daaf15f16f974d47f504a",
+      "bytes": 813
+    }
+  ]
+}

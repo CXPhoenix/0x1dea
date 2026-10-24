@@ -17,6 +17,10 @@ DISCORD_PUBLICATION = '0e690064985d9d734849e1ec44a8c0f8d84fb2a3'
 DISCORD_RECORD = 'blog/public/.well-known/discord'
 DISCORD_IDENTITY = {'mode': '100644',
                     'sha256': 'd28142c7a5a13b28d22abaa933cedc2027ce9abbabb2f09c55b989084caa5019'}
+LOCAL_NOTES_IGNORE = {'mode': '100644',
+                      'sha256': '9f7ac2c358f5b1af070bf44703e40dfe4786e8dfd02772f66c944e09ea58bb98'}
+PRE_NOTES_CURRENT = {'ae535a8040f01620a77d3fab4d3f433cb578f883b1e24c162769ff05f0cb27cd',
+                     '759826ee582cf0fd8b8d72cf5a6911b09b89dd53c1abe5f17cf48167697bcd58'}
 
 # Exact owner-approved Phoenix v2.3 source from staging bf6f872; no prefix waiver.
 PHOENIX_V23_SUCCESSORS = {'skills/phoenix-writing/SKILL.md': {'mode': '100644',
@@ -39,6 +43,52 @@ PHOENIX_V23_SUCCESSORS = {'skills/phoenix-writing/SKILL.md': {'mode': '100644',
                                            'sha256': 'fc29bbefb00580a0bf07978bf94533e766b370c7a188f8852fa18097727d7c15'},
  'maintenance/writing-skills/VALIDATION.md': {'mode': '100644',
                                               'sha256': '2292d41418aaad231f1efbcda34dad4b0fa1f2f8ffb05f21e86144c10b0152b5'}}
+
+ARTICLE_DISCOVERY_SUCCESSORS = {'.agents/skills/article-discovery/SKILL.md': {'mode': '100644',
+                                               'sha256': '74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5'},
+ '.agents/skills/article-discovery/agents/openai.yaml': {'mode': '100644',
+                                                         'sha256': '641ef492c9b319271ee9289d3aee8409a036e24141c1aefaf3eb695f783292ad'},
+ '.agents/skills/article-discovery/references/persistence.md': {'mode': '100644',
+                                                                'sha256': '427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1'},
+ '.agents/skills/article-discovery/references/public-preparation.md': {'mode': '100644',
+                                                                       'sha256': 'c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c'},
+ '.agents/skills/maintaining-writing-skills/references/writing-process.md': {'mode': '100644',
+                                                                             'sha256': '3b191bef447d141cd2fd923f8ff37569b93fb8f82d5d155498d4e7913bfeea02'},
+ '.claude/skills/article-discovery/SKILL.md': {'mode': '100644',
+                                               'sha256': '74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5'},
+ '.claude/skills/article-discovery/references/persistence.md': {'mode': '100644',
+                                                                'sha256': '427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1'},
+ '.claude/skills/article-discovery/references/public-preparation.md': {'mode': '100644',
+                                                                       'sha256': 'c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c'},
+ '.claude/skills/maintaining-writing-skills/references/writing-process.md': {'mode': '100644',
+                                                                             'sha256': '3b191bef447d141cd2fd923f8ff37569b93fb8f82d5d155498d4e7913bfeea02'},
+ 'AGENTS.md': {'mode': '100644',
+               'sha256': 'c68401f65bb1ba9d264abaeff3921bf0df71cbba60e0fa093ed5cac360733aea'},
+ 'docs/agents/domain.md': {'mode': '100644',
+                           'sha256': 'd14b5f02d004f3a82da35aa8b8fa5f0837d5ce24f1388faa63b9d1059261dfd6'},
+ 'docs/agents/language.md': {'mode': '100644',
+                             'sha256': 'd44b4af6c0c2fed01ad883567e7a31b0699a06919b1c07b2572409a26a2f9c00'},
+ 'docs/agents/runtime.md': {'mode': '100644',
+                            'sha256': '5ef5e21fe7a96745fd3de64080df318131a82bd34f365d6d5a0a6015c1372438'},
+ 'docs/agents/skill-sources.json': {'mode': '100644',
+                                    'sha256': '15138ad2917774c7e2378853610470a7c202662de5982a5d69976bac4e2ae521'},
+ 'docs/agents/workflow.md': {'mode': '100644',
+                             'sha256': 'eb6ede2cc9249bd88224ba484ab05459f0aef048a9d4e7ade7d600add5865b3b'},
+ 'maintenance/harness-adoption/generated-writing-manifest.json': {'mode': '100644',
+                                                                  'sha256': '07d2bd25cb1263542c341a42b4b4f1c30705f26502b24f161dc38aba624052d2'},
+ 'maintenance/harness-adoption/runtime-source-policy.json': {'mode': '100644',
+                                                             'sha256': '1438ca382e0b6e68d412cc97b563936c22cebfa708c621d60749a6e7554782cc'},
+ 'scripts/materialize-writing-skills.py': {'mode': '100644',
+                                           'sha256': '493c657224ef88f5340afc1c73f6be1209b566e35eba9bf4a0d9042a935287c1'},
+ 'skills/article-discovery/SKILL.md': {'mode': '100644',
+                                       'sha256': '74cbe852edb17cf1194e9e5ac760c377fa50ffba995fe8b3b06989a3e7e3eea5'},
+ 'skills/article-discovery/references/persistence.md': {'mode': '100644',
+                                                        'sha256': '427426fb7376b33c982e844bdd13a33e6e61301f7dd12eec1acfb08f710024d1'},
+ 'skills/article-discovery/references/public-preparation.md': {'mode': '100644',
+                                                               'sha256': 'c69d3b041c9219a02eaaf239271a8bf55a02e7ac3ac327359cdf53deb20b821c'},
+ 'skills/maintaining-writing-skills/references/writing-process.md': {'mode': '100644',
+                                                                     'sha256': 'be8d12b3bedcc5852068a3a76182b3a2f9dfc9762d70417cf929b6b935c334a4'}}
+REVIEWED_SUCCESSORS = PHOENIX_V23_SUCCESSORS | ARTICLE_DISCOVERY_SUCCESSORS
 
 # Finite, reviewed metadata successors; historical M0 blobs remain immutable.
 CLOSEOUT_SUCCESSORS = {'.proj.specs/0011-main-to-staging-sync/coverage-report.md': 'd610282c67b42bad42d78e4e3d6857c0311fc364c69f41239309c03e06997121',
@@ -112,12 +162,17 @@ def policy(control, workflow_admission=None):
         path = regular(control, name)
         if path.stat().st_mode & 0o111 or digest(path.read_bytes()) != sha256:
             raise ValueError('changed exact closeout identity: ' + name)
-    for name, expected in PHOENIX_V23_SUCCESSORS.items():
+    for name, expected in REVIEWED_SUCCESSORS.items():
         if data['common'].get(name) != expected:
             raise ValueError('unapproved exact Phoenix v2.3 identity: ' + name)
         path = regular(control, name)
         if path.stat().st_mode & 0o111 or digest(path.read_bytes()) != expected['sha256']:
             raise ValueError('changed exact Phoenix v2.3 identity: ' + name)
+    ignore = regular(control, '.gitignore')
+    if data['common'].get('.gitignore') != LOCAL_NOTES_IGNORE:
+        raise ValueError('unapproved exact local notes ignore identity: .gitignore')
+    if ignore.stat().st_mode & 0o111 or digest(ignore.read_bytes()) != LOCAL_NOTES_IGNORE['sha256']:
+        raise ValueError('changed exact local notes ignore identity: .gitignore')
     admitted = workflow_admission.allowed(control) if workflow_admission else {}
     if not workflow_admission:
         from publication_workflows import github_git_paths
@@ -128,14 +183,22 @@ def policy(control, workflow_admission=None):
     if github_sources != set(admitted):
         raise ValueError('protected deployment sources outside finite workflow admission: '
                          + ', '.join(sorted(github_sources ^ set(admitted))))
-    writing = ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post')
+    writing = ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post', 'article-discovery')
     for name, expected in data['common'].items():
+        # Retain each target's pre-notes pin so an additive shared successor
+        # does not conflict with staging's existing identity during Git merge.
+        if name == 'scripts/publication_current.py' and 'successor_sha256' in expected:
+            if (set(expected) != {'mode', 'sha256', 'successor_sha256'}
+                    or expected['mode'] != '100644' or expected['sha256'] not in PRE_NOTES_CURRENT):
+                raise ValueError('invalid finite current guard successor: ' + name)
+            expected = {'mode': expected['mode'], 'sha256': expected['successor_sha256']}
+            data['common'][name] = expected
         regular(control, name)
-        if name in owned or name in protected_history or name.startswith('blog/') or (name.startswith('.github/') and name not in admitted) or (name not in PHOENIX_V23_SUCCESSORS and any(name.startswith(prefix + package + '/') for prefix in ('skills/', '.agents/skills/', '.claude/skills/') for package in writing)):
+        if name in owned or name in protected_history or name.startswith('blog/') or (name.startswith('.github/') and name not in admitted) or (name not in REVIEWED_SUCCESSORS and any(name.startswith(prefix + package + '/') for prefix in ('skills/', '.agents/skills/', '.claude/skills/') for package in writing)):
             raise ValueError('protected content/history in common successor: ' + name)
         if set(expected) != {'mode', 'sha256'} or expected['mode'] not in {'100644', '100755'} or not isinstance(expected['sha256'], str) or len(expected['sha256']) != 64 or any(c not in '0123456789abcdef' for c in expected['sha256']):
             raise ValueError('invalid exact common identity: ' + name)
-        if name != 'scripts/verify-harness-adoption.py' and name not in CLOSEOUT_SUCCESSORS and name not in PHOENIX_V23_SUCCESSORS:
+        if name not in {'scripts/verify-harness-adoption.py', '.gitignore'} and name not in CLOSEOUT_SUCCESSORS and name not in REVIEWED_SUCCESSORS:
             for entries in inventory['trees'].values():
                 previous = entries.get(name)
                 if previous and expected != {'mode': previous['mode'], 'sha256': digest(git(control, 'cat-file', 'blob', previous['blob']))}:
@@ -220,6 +283,38 @@ def check_history(root):
         raise ValueError('complete, unmodified history is required')
 
 
+def local_note_names(root, expected):
+    """Validate the finite local writing-output shape before excluding names."""
+    owned = set(expected)
+    for args in (('ls-tree', '-rz', '--name-only', 'HEAD', '--', '.proj.writing'),
+                 ('ls-files', '-z', '--cached', '--', '.proj.writing')):
+        owned.update(name.decode() for name in git(root, *args).split(b'\0') if name)
+    collisions = {name for name in owned
+                  if name == '.proj.writing' or name.startswith('.proj.writing/')}
+    if collisions:
+        raise ValueError('local writing source ownership collision: ' + ', '.join(sorted(collisions)))
+    namespace = root / '.proj.writing'
+    if namespace.is_symlink():
+        raise ValueError('linked local writing namespace: .proj.writing')
+    if not namespace.exists():
+        return set()
+    if not namespace.is_dir():
+        raise ValueError('non-directory local writing namespace: .proj.writing')
+    notes = set()
+    for workspace in namespace.iterdir():
+        if (workspace.name in {'.', '..'} or '\\' in workspace.name
+                or workspace.is_symlink() or not workspace.is_dir()):
+            raise ValueError('invalid local writing workspace: ' + str(workspace.relative_to(root)))
+        for note in workspace.iterdir():
+            name = note.relative_to(root).as_posix()
+            if (note.name not in {'PROJECT.md', 'GLOSSARY.md', 'CONTEXT.md'}
+                    or note.is_symlink() or not note.is_file()
+                    or note.stat().st_mode & 0o111):
+                raise ValueError('invalid local writing note: ' + name)
+            notes.add(name)
+    return notes
+
+
 def source_names(root):
     """Include ignored sources, except named local dependency/build/cache outputs."""
     names = set()
@@ -293,13 +388,16 @@ def _verify_current(control, root, role, workflow_admission=None):
             raise ValueError('published Discord source ancestry is unavailable') from error
     else:
         expected[DISCORD_RECORD] = DISCORD_IDENTITY
-    actual = source_names(root)
+    notes = local_note_names(root, expected)
+    actual = source_names(root) - notes
     if actual != set(expected):
         raise ValueError('current reconciliation source inventory mismatch: ' + ', '.join(sorted(actual ^ set(expected))[:8]))
     for name, entry in expected.items():
+        if name == '.gitignore' and regular(root, name).stat().st_mode & 0o111:
+            raise ValueError('executable local notes ignore source: .gitignore')
         if name == DISCORD_RECORD and regular(root, name).stat().st_mode & 0o111:
             raise ValueError('executable published Discord source: ' + name)
-        if name in PHOENIX_V23_SUCCESSORS and regular(root, name).stat().st_mode & 0o111:
+        if name in REVIEWED_SUCCESSORS and regular(root, name).stat().st_mode & 0o111:
             raise ValueError('executable approved Phoenix v2.3 source: ' + name)
         if current_identity(root, name, entry) != entry:
             raise ValueError(('changed test repair provenance: ' if name == 'maintenance/harness-reconciliation/test-contract-repair.json' else 'changed current reconciliation source: ') + name)

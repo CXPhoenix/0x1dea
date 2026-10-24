@@ -1,0 +1,107 @@
+{
+  "scope": "Local configured Codex, native CLI, existing Python/Vitest/tooling and synthetic isolated Git/API/build fixtures. Not live publication/browser/Claude acceptance.",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/run-writing-python-tests.py"
+      ],
+      "cwd": "/private/tmp/0x1dea-0014-regression",
+      "exit": 1,
+      "elapsed_seconds": 1054.635,
+      "log": "/private/tmp/0x1dea-T0026-evidence/batch-full-writing-python.log",
+      "log_sha256": "f18cdf7fbc823a78a8b0fa7d2028bc1806ca36fbe363ed36ea60ae0c87b3b3fc",
+      "PUBLICATION_TEST_DEPENDENCIES": "/private/tmp/0x1dea-T0026/node_modules"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "article_publication.test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission",
+        "article_publication.test_current_history_context.CurrentTrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 1,
+      "elapsed_seconds": 6.785,
+      "log": "/private/tmp/0x1dea-T0026-evidence/batch-failed-cases.log",
+      "log_sha256": "94d4fef826a6ba54215ae08654f11017f879855e793e0d65073948047b750509",
+      "PUBLICATION_TEST_DEPENDENCIES": "/private/tmp/0x1dea-T0026/node_modules"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "article_publication.test_head_reporting.HeadReportingTests.test_report_from_real_sealed_validator_inputs_and_finite_workflow_admission",
+        "article_publication.test_current_history_context.CurrentTrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 0,
+      "elapsed_seconds": 80.381,
+      "log": "/private/tmp/0x1dea-T0026-evidence/batch-failed-cases-fixed.log",
+      "log_sha256": "8a8a597e61b143d2f6f3e43df06c3fe70c39a80d2e17659a3fce25639d0425b1",
+      "PUBLICATION_TEST_DEPENDENCIES": "/private/tmp/0x1dea-T0026/node_modules"
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/run-writing-python-tests.py"
+      ],
+      "cwd": "/private/tmp/0x1dea-0014-regression-fixed",
+      "exit": 0,
+      "elapsed_seconds": 1090.469,
+      "log": "/private/tmp/0x1dea-T0026-evidence/batch-full-writing-python-fixed.log",
+      "log_sha256": "ecdf9f3bf60c8d698d549955c609a84ba274d9053d075406c2bbf66295ff3388",
+      "PUBLICATION_TEST_DEPENDENCIES": "/private/tmp/0x1dea-T0026/node_modules"
+    }
+  ],
+  "python_test_counts": {
+    "current_harness": 66,
+    "current_article_publication": 193,
+    "original_22": 10,
+    "original_32": 14,
+    "original_Phoenix": 4
+  },
+  "python_total": 287,
+  "vitest": {
+    "command": "pnpm test:unit",
+    "exit": 0,
+    "tests": 54,
+    "log": "unit.txt",
+    "raw_local_log_sha256": "c139d5af7a7073c20a018d039dde9e711289d6279c15f19850a797a4b26c4952",
+    "display_copy_sha256": "72c15f9556c06471bbff243df71c2ad0af93bae4496d1ab0406f22d91b43c60e",
+    "display_transform": "Only trailing empty lines removed; all nonempty output bytes retained."
+  },
+  "lint": {
+    "command": "pnpm lint",
+    "exit": 0,
+    "log": "lint.txt",
+    "raw_local_log_sha256": "aea7a6f75a933812a58e4fddf84444e85e737ef6cc845b100bb3ae7ba2c90768",
+    "display_copy_sha256": "8a445bf71c9258c986f1449f1a62ec8465d4ab825af82ac792bd22d881a6d178",
+    "display_transform": "Only trailing empty lines removed; all nonempty output bytes retained."
+  },
+  "native_observations": {
+    "B": {
+      "cases": 15,
+      "turns": 20
+    },
+    "C": {
+      "phase_observations": 33,
+      "turns": 46,
+      "qualification": "Includes initial and fresh corrected source phases, not 33 unique final-source scenarios."
+    },
+    "D_and_X01": {
+      "cases": 17,
+      "turns": 22
+    }
+  },
+  "Claude": "OAuth expired; native behavior unverified. Static materializer verification separate.",
+  "fixed_current_fixture": "Only current head-reporting input owner for exactly two package inventories is main, all other protected identities/assertions retained. All predefined historical test files/runners unchanged."
+}

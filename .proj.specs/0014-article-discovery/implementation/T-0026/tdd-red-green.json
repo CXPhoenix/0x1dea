@@ -1,0 +1,122 @@
+[
+  {
+    "log": "A01-red-behavior.log",
+    "sha256": "6ca83562f9fa7d360dea524f9d59d238fb40909bf72b1104176f8c6c56bdd2e7",
+    "last_summary_lines": [
+      "test_A01_notes_lifecycle_preserves_both_native_roles_and_non_note_sources (test_local_writing_notes.LocalWritingNotesTests.test_A01_notes_lifecycle_preserves_both_native_roles_and_non_note_sources) ... ",
+      "FAIL: test_A01_notes_lifecycle_preserves_both_native_roles_and_non_note_sources (test_local_writing_notes.LocalWritingNotesTests.test_A01_notes_lifecycle_preserves_both_native_roles_and_non_note_sources) (role='main')",
+      "AssertionError: 1 != 0 : FAIL: current reconciliation source inventory mismatch: .proj.writing/測試 筆記/PROJECT.md",
+      "FAIL: test_A01_notes_lifecycle_preserves_both_native_roles_and_non_note_sources (test_local_writing_notes.LocalWritingNotesTests.test_A01_notes_lifecycle_preserves_both_native_roles_and_non_note_sources) (role='staging')",
+      "AssertionError: 1 != 0 : FAIL: current reconciliation source inventory mismatch: .proj.writing/測試 筆記/PROJECT.md",
+      "Ran 1 test in 37.937s",
+      "FAILED (failures=2)"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  },
+  {
+    "log": "A01-green.log",
+    "sha256": "404b719127fb71da8b56607154fa532553063fb89b9fc732498200c732811e1e",
+    "last_summary_lines": [
+      "test_A01_notes_lifecycle_preserves_both_native_roles_and_non_note_sources (test_local_writing_notes.LocalWritingNotesTests.test_A01_notes_lifecycle_preserves_both_native_roles_and_non_note_sources) ... ok",
+      "Ran 1 test in 130.505s",
+      "OK"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  },
+  {
+    "log": "A02-red.log",
+    "sha256": "f0aa3de50a5528c85031c3b5838931fbf239a8e76d463e39509eba526c3616e8",
+    "last_summary_lines": [
+      "test_A02_invalid_namespace_shapes_are_not_local_notes (test_local_writing_notes.LocalWritingNotesTests.test_A02_invalid_namespace_shapes_are_not_local_notes) ... ",
+      "FAIL: test_A02_invalid_namespace_shapes_are_not_local_notes (test_local_writing_notes.LocalWritingNotesTests.test_A02_invalid_namespace_shapes_are_not_local_notes) (role='main', case='backslash-key')",
+      "AssertionError: 0 == 0 : {",
+      "FAIL: test_A02_invalid_namespace_shapes_are_not_local_notes (test_local_writing_notes.LocalWritingNotesTests.test_A02_invalid_namespace_shapes_are_not_local_notes) (role='staging', case='backslash-key')",
+      "AssertionError: 0 == 0 : {",
+      "Ran 1 test in 55.963s",
+      "FAILED (failures=2)"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  },
+  {
+    "log": "A02-green.log",
+    "sha256": "fe28a1894f1b79cd05638c375bc82144d0f57e8c10791806ffa0b9fa2984316e",
+    "last_summary_lines": [
+      "test_A02_invalid_namespace_shapes_are_not_local_notes (test_local_writing_notes.LocalWritingNotesTests.test_A02_invalid_namespace_shapes_are_not_local_notes) ... ok",
+      "Ran 1 test in 47.541s",
+      "OK"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  },
+  {
+    "log": "A03-red.log",
+    "sha256": "29634b0b83e6febd2dc4ca904fc13a28e39c5690bd0cf59fc315858e88e470bf",
+    "last_summary_lines": [
+      "test_A03_group_executable_note_is_not_mutable_local_output (test_local_writing_notes.LocalWritingNotesTests.test_A03_group_executable_note_is_not_mutable_local_output) ... ",
+      "FAIL: test_A03_group_executable_note_is_not_mutable_local_output (test_local_writing_notes.LocalWritingNotesTests.test_A03_group_executable_note_is_not_mutable_local_output) (role='main')",
+      "AssertionError: 0 == 0 : {",
+      "FAIL: test_A03_group_executable_note_is_not_mutable_local_output (test_local_writing_notes.LocalWritingNotesTests.test_A03_group_executable_note_is_not_mutable_local_output) (role='staging')",
+      "AssertionError: 0 == 0 : {",
+      "Ran 1 test in 13.735s",
+      "FAILED (failures=2)"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  },
+  {
+    "log": "A03-green.log",
+    "sha256": "456f88a9efbbde8a6cc690e337bdc1e2a82ca050a6d0149bf8930c50f60bce03",
+    "last_summary_lines": [
+      "test_A03_group_executable_note_is_not_mutable_local_output (test_local_writing_notes.LocalWritingNotesTests.test_A03_group_executable_note_is_not_mutable_local_output) ... ok",
+      "Ran 1 test in 9.589s",
+      "OK"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  },
+  {
+    "log": "A04-index-red.log",
+    "sha256": "5dc68c6d0ac534071810828b9d3942b0dce6ff11147a2c62a56cfa0ed43e905a",
+    "last_summary_lines": [
+      "test_A04_index_owned_note_cannot_be_hidden_as_local_output (test_local_writing_notes.LocalWritingNotesTests.test_A04_index_owned_note_cannot_be_hidden_as_local_output) ... ",
+      "FAIL: test_A04_index_owned_note_cannot_be_hidden_as_local_output (test_local_writing_notes.LocalWritingNotesTests.test_A04_index_owned_note_cannot_be_hidden_as_local_output) (role='main')",
+      "AssertionError: 0 == 0 : {",
+      "FAIL: test_A04_index_owned_note_cannot_be_hidden_as_local_output (test_local_writing_notes.LocalWritingNotesTests.test_A04_index_owned_note_cannot_be_hidden_as_local_output) (role='staging')",
+      "AssertionError: 0 == 0 : {",
+      "Ran 1 test in 22.759s",
+      "FAILED (failures=2)"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  },
+  {
+    "log": "A04-index-green.log",
+    "sha256": "1aee39ff88057980b0e74698590c558c5db7362a96531f179e683c03bca1e7c3",
+    "last_summary_lines": [
+      "test_A04_index_owned_note_cannot_be_hidden_as_local_output (test_local_writing_notes.LocalWritingNotesTests.test_A04_index_owned_note_cannot_be_hidden_as_local_output) ... ok",
+      "Ran 1 test in 18.017s",
+      "OK"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  },
+  {
+    "log": "A06-ignore-red-final.log",
+    "sha256": "b83777fd91f9140d855a971be3d729f25f19d63df49a95efae6f3b8ae7648c75",
+    "last_summary_lines": [
+      "test_A06_git_ignore_does_not_untrack_or_hide_source_ownership (test_local_writing_notes.LocalWritingNotesTests.test_A06_git_ignore_does_not_untrack_or_hide_source_ownership) ... ",
+      "FAIL: test_A06_git_ignore_does_not_untrack_or_hide_source_ownership (test_local_writing_notes.LocalWritingNotesTests.test_A06_git_ignore_does_not_untrack_or_hide_source_ownership) (role='main')",
+      "AssertionError: 1 != 0 : ",
+      "FAIL: test_A06_git_ignore_does_not_untrack_or_hide_source_ownership (test_local_writing_notes.LocalWritingNotesTests.test_A06_git_ignore_does_not_untrack_or_hide_source_ownership) (role='staging')",
+      "AssertionError: 1 != 0 : ",
+      "Ran 1 test in 4.801s",
+      "FAILED (failures=2)"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  },
+  {
+    "log": "A06-ignore-green.log",
+    "sha256": "0ebd423e837ea30cf2f271939c61e559b71eb2702d6f1e93ece27e7e884630c5",
+    "last_summary_lines": [
+      "test_A06_git_ignore_does_not_untrack_or_hide_source_ownership (test_local_writing_notes.LocalWritingNotesTests.test_A06_git_ignore_does_not_untrack_or_hide_source_ownership) ... ok",
+      "Ran 1 test in 18.701s",
+      "OK"
+    ],
+    "scope": "targeted observed red/green; current final full run is separate"
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "allocations": [
+    {
+      "proposal": "A",
+      "ticket": "T-0026",
+      "plan_rows": 6,
+      "approved_rows_unchanged": true,
+      "blocked_by": [],
+      "path": ".proj.tickets/0014-article-discovery/T-0026-local-notes-current-guard.md"
+    },
+    {
+      "proposal": "B",
+      "ticket": "T-0027",
+      "plan_rows": 11,
+      "approved_rows_unchanged": true,
+      "blocked_by": [],
+      "path": ".proj.tickets/0014-article-discovery/T-0027-free-conversation-entry.md"
+    },
+    {
+      "proposal": "C",
+      "ticket": "T-0028",
+      "plan_rows": 11,
+      "approved_rows_unchanged": true,
+      "blocked_by": [
+        "T-0026",
+        "T-0027"
+      ],
+      "path": ".proj.tickets/0014-article-discovery/T-0028-optional-context-glossary.md"
+    },
+    {
+      "proposal": "D",
+      "ticket": "T-0029",
+      "plan_rows": 8,
+      "approved_rows_unchanged": true,
+      "blocked_by": [
+        "T-0027"
+      ],
+      "path": ".proj.tickets/0014-article-discovery/T-0029-public-preparation-routing.md"
+    }
+  ],
+  "global_ids_unique": true,
+  "next_id": "T-0030",
+  "approved_table_rows": 36,
+  "proposal_state": "frozen pre-approval wording retained; approval receipt supersedes waiting language",
+  "approved_proposal_hashes_verified": [
+    {
+      "path": ".proj.specs/0014-article-discovery/planning/ticket-proposal/README.md",
+      "sha256": "bcbf1a4aa7ea99ef56dafab870c79cf9e9848e9b14fa53b7b100ef1ec9c6e451"
+    },
+    {
+      "path": ".proj.specs/0014-article-discovery/planning/ticket-proposal/A-local-notes-current-guard.md",
+      "sha256": "49a27355a11526a6cb7a288875aaf8b37e052dbedf5cab2b70cd3ba8f29aea02"
+    },
+    {
+      "path": ".proj.specs/0014-article-discovery/planning/ticket-proposal/B-free-conversation-entry.md",
+      "sha256": "636a88074f26e4914c4f4d9495c46a09f147cde3688146c9254e24f1ad1d3985"
+    },
+    {
+      "path": ".proj.specs/0014-article-discovery/planning/ticket-proposal/C-optional-context-glossary.md",
+      "sha256": "44476db73632e8a428d03da6092139da35289c3c57a35ec3a4abad19369041e4"
+    },
+    {
+      "path": ".proj.specs/0014-article-discovery/planning/ticket-proposal/D-public-preparation-routing.md",
+      "sha256": "d8f74ae4850b463c6e448fa05a4e97c2b6bd20e39ef1e1877fdda6da03e5095b"
+    }
+  ]
+}

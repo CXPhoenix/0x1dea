@@ -1,0 +1,9 @@
+{
+  "html_structure": "pass",
+  "internal_anchors": "pass",
+  "external_resources": 0,
+  "inline_scripts": 0,
+  "browser_preview": "not_retried; earlier file protocol policy rejection retained",
+  "visual_qa": "unverified",
+  "report_bytes": 61774
+}
