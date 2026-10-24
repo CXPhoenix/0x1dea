@@ -1,0 +1,278 @@
+{
+  "round": 1,
+  "status": "round_1_complete_p0_open",
+  "reviewed_spec_sha256": "fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9",
+  "prompt_sha256": "3f5d674830cff8f9154503ee589378ebeb7a3ba1175953e350e70b8bebe7526d",
+  "severity_policy": "Reviewer grades retained. No majority vote or fifth-reviewer adjudication.",
+  "axes": [
+    {
+      "axis": "完整性",
+      "agent": "/root/ad_completeness",
+      "report": "round-1/completeness.md",
+      "p0": 0,
+      "p1": 3,
+      "p2": 0,
+      "supplement_report": "round-1/supplement-completeness.md"
+    },
+    {
+      "axis": "可驗證性",
+      "agent": "/root/ad_verifiability",
+      "report": "round-1/verifiability.md",
+      "p0": 1,
+      "p1": 0,
+      "p2": 0,
+      "supplement_report": "round-1/supplement-verifiability.md"
+    },
+    {
+      "axis": "契約衝突",
+      "agent": "/root/ad_contracts",
+      "report": "round-1/contracts.md",
+      "p0": 0,
+      "p1": 0,
+      "p2": 0,
+      "supplement_report": "round-1/supplement-contracts.md"
+    },
+    {
+      "axis": "紅隊",
+      "agent": "/root/ad_redteam",
+      "report": "round-1/red-team.md",
+      "p0": 0,
+      "p1": 1,
+      "p2": 0,
+      "supplement_report": "round-1/supplement-red-team.md"
+    }
+  ],
+  "findings": [
+    {
+      "id": "V-01",
+      "severity": "P0",
+      "axis": "可驗證性",
+      "state": "open",
+      "title": "公開準備檢查缺少可判定的完成條件",
+      "ac": [
+        "AC-13"
+      ],
+      "rows": [
+        "R31",
+        "R32"
+      ],
+      "observation": "D8 與 AC-13 使用 applicable、address、handled、relevant stage，未定義各類檢查的最低結果或指定提供判準的既有契約。",
+      "counterexample": "含同事私人對話與外部圖片的公開準備：籠統提醒與逐項列出核對結果、待決公開範圍及缺口，都可以聲稱已處理，卻無法依相同規則驗收。",
+      "impact": "公開準備無法一致判定，也可能以持續籠統追問取代具體處理。",
+      "repair": "只為已列類別補上觸發與最低輸出：已知核對結果、具體作者待決事項、未驗證缺口；不新增每篇必填的問卷。",
+      "uncertainty": "若 handled 只表示辨識問題，須明寫最低辨識結果與未解項目的交付方式；目前兩種讀法都成立。",
+      "sources": [
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 86,
+          "end": 90
+        },
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 115,
+          "end": 115
+        },
+        {
+          "path": "docs/agents/review.md",
+          "start": 20,
+          "end": 24
+        }
+      ],
+      "issue_group": "G1"
+    },
+    {
+      "id": "C-R1-01",
+      "severity": "P1",
+      "axis": "完整性",
+      "state": "open",
+      "title": "單一未指定 GLOSSARY.md 的沿用規則未完整落到驗收",
+      "ac": [
+        "AC-12"
+      ],
+      "rows": [
+        "R29",
+        "R30"
+      ],
+      "observation": "D7 已說明沿用單一既有 GLOSSARY 或 legacy CONTEXT，但 AC-12 只明列 single legacy CONTEXT 或 designated glossary；矩陣也未明列唯一、未指定的 GLOSSARY。",
+      "counterexample": "工作區只有一份 GLOSSARY，返回寫作時 agent 仍要求重新指定權威；正文已排除此行為，但明列驗收案例可能抓不到。",
+      "impact": "在正常續寫情境增加一次本可省略的追問。",
+      "repair": "AC-12 與對應矩陣明列單一未指定 GLOSSARY、單一 legacy CONTEXT，以及有效指定的 glossary。",
+      "uncertainty": "可寬鬆解讀 AC-12 已涵蓋，但 designated 限定和矩陣列舉未明確涵蓋；是驗收覆蓋缺口。",
+      "sources": [
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 79,
+          "end": 84
+        },
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 114,
+          "end": 114
+        },
+        {
+          "path": ".proj.specs/0014-article-discovery/traceability.md",
+          "start": 37,
+          "end": 38
+        }
+      ],
+      "issue_group": "G2"
+    },
+    {
+      "id": "C-R1-02",
+      "severity": "P1",
+      "axis": "完整性",
+      "state": "open",
+      "title": "暫定建議不得升格為作者確認，缺少直接驗收",
+      "ac": [
+        "AC-04",
+        "AC-08"
+      ],
+      "rows": [
+        "R18"
+      ],
+      "observation": "D3 要求推論不可記成作者確認，D5 保存 confirmed／tentative settings；AC-08 與 R18 只明列保存和 readback，未直接驗收狀態忠實性。",
+      "counterexample": "agent 建議暫以初學者為受眾，作者未答就要求試寫。agent 將受眾存成作者已確認，讀回完全一致，仍可能通過現有保存驗收。",
+      "impact": "下一次把推論當成已定選擇，限制作者方向或衍生重新確認。",
+      "repair": "在驗收與矩陣補上對話→保存→返回的狀態保留，禁止未答建議或推論升格為作者確認。",
+      "uncertainty": "相關脈絡可被解讀為包含正確狀態，但沒有明示 pass/fail 落點；正文仍足以指導實作，因此列 P1。",
+      "sources": [
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 43,
+          "end": 45
+        },
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 64,
+          "end": 67
+        },
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 110,
+          "end": 110
+        },
+        {
+          "path": ".proj.specs/0014-article-discovery/traceability.md",
+          "start": 26,
+          "end": 26
+        }
+      ],
+      "issue_group": "G3"
+    },
+    {
+      "id": "C-R1-03",
+      "severity": "P1",
+      "axis": "完整性",
+      "state": "open",
+      "title": "本機筆記與 current source guard 的交集缺少驗收",
+      "ac": [
+        "AC-08",
+        "AC-16"
+      ],
+      "rows": [
+        "R20",
+        "R38",
+        "R39"
+      ],
+      "observation": "保存與 current guard 分別有驗收，但缺少保存動態筆記後再執行來源盤點的交集。",
+      "counterexample": "作者合法保存 .proj.writing/rain/PROJECT.md 並由 Git 忽略；其後 current guard 仍可能將它視為未列出的來源而拒絕。",
+      "impact": "正常文章保存成為工程驗證的意外障礙；可能誘發搬走筆記或過度放寬來源界線。",
+      "repair": "明定筆記的來源分類及驗證 surface，補保存／更新後的 guard 驗收，維持精確工程來源與歷史保護。",
+      "uncertainty": "由凍結原始碼推論，未實際建立工作區或執行 guard。契約 reviewer 認為規格未承諾含筆記的原始工作目錄直接通過，因此未列為不可相容契約。",
+      "sources": [
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 64,
+          "end": 68
+        },
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 143,
+          "end": 143
+        },
+        {
+          "path": "scripts/publication_current.py",
+          "start": 227,
+          "end": 248
+        },
+        {
+          "path": "scripts/publication_current.py",
+          "start": 288,
+          "end": 302
+        },
+        {
+          "path": "scripts/verify-harness-adoption.py",
+          "start": 59,
+          "end": 63
+        }
+      ],
+      "issue_group": "G4"
+    },
+    {
+      "id": "RT-01",
+      "severity": "P1",
+      "axis": "紅隊",
+      "state": "open",
+      "title": "正常保存可能造成現行工程驗證器來源不符",
+      "ac": [
+        "AC-08",
+        "AC-16"
+      ],
+      "rows": [
+        "R18",
+        "R20",
+        "R38"
+      ],
+      "observation": "source_names 連 ignored files 也會掃描，排除清單沒有 .proj.writing，實際來源必須等於固定 expected 集合。",
+      "counterexample": "作者合法保存 .proj.writing/rain/PROJECT.md 並由 Git 忽略；其後 current guard 仍可能將它視為未列出的來源而拒絕。",
+      "impact": "正常文章保存成為工程驗證的意外障礙；可能誘發搬走筆記或過度放寬來源界線。",
+      "repair": "明定動態本機寫作資料與來源盤點的相容契約：受限的本機產物分類、掃描之外的位置或明確投影；驗證保存和更新後行為。",
+      "uncertainty": "由凍結原始碼推論，未實際建立工作區或執行 guard。契約 reviewer 認為規格未承諾含筆記的原始工作目錄直接通過，因此未列為不可相容契約。",
+      "sources": [
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 64,
+          "end": 68
+        },
+        {
+          "path": ".proj.specs/0014-article-discovery/spec.en.md",
+          "start": 143,
+          "end": 143
+        },
+        {
+          "path": "scripts/publication_current.py",
+          "start": 227,
+          "end": 248
+        },
+        {
+          "path": "scripts/publication_current.py",
+          "start": 288,
+          "end": 302
+        },
+        {
+          "path": "scripts/verify-harness-adoption.py",
+          "start": 59,
+          "end": 63
+        }
+      ],
+      "issue_group": "G4"
+    }
+  ],
+  "counts": {
+    "reviewer_findings": {
+      "P0": 1,
+      "P1": 4,
+      "P2": 0
+    },
+    "issue_groups": {
+      "P0": 1,
+      "P1": 3,
+      "P2": 0
+    },
+    "source_files": 63,
+    "rounds_used": 1,
+    "maximum_rounds": 2
+  },
+  "supplement_scope": "23 additional frozen sources, including E1-E8 input/rubric; no E9 supplied. Same round and same spec/prompt.",
+  "gate": "Ticket creation blocked by open V-01 P0. This is not a runtime or usability result."
+}

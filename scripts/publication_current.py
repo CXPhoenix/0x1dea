@@ -17,6 +17,10 @@ DISCORD_PUBLICATION = '0e690064985d9d734849e1ec44a8c0f8d84fb2a3'
 DISCORD_RECORD = 'blog/public/.well-known/discord'
 DISCORD_IDENTITY = {'mode': '100644',
                     'sha256': 'd28142c7a5a13b28d22abaa933cedc2027ce9abbabb2f09c55b989084caa5019'}
+LOCAL_NOTES_IGNORE = {'mode': '100644',
+                      'sha256': '9f7ac2c358f5b1af070bf44703e40dfe4786e8dfd02772f66c944e09ea58bb98'}
+PRE_NOTES_CURRENT = {'ae535a8040f01620a77d3fab4d3f433cb578f883b1e24c162769ff05f0cb27cd',
+                     '759826ee582cf0fd8b8d72cf5a6911b09b89dd53c1abe5f17cf48167697bcd58'}
 
 # Exact owner-approved Phoenix v2.3 source from staging bf6f872; no prefix waiver.
 PHOENIX_V23_SUCCESSORS = {'skills/phoenix-writing/SKILL.md': {'mode': '100644',
@@ -118,6 +122,11 @@ def policy(control, workflow_admission=None):
         path = regular(control, name)
         if path.stat().st_mode & 0o111 or digest(path.read_bytes()) != expected['sha256']:
             raise ValueError('changed exact Phoenix v2.3 identity: ' + name)
+    ignore = regular(control, '.gitignore')
+    if data['common'].get('.gitignore') != LOCAL_NOTES_IGNORE:
+        raise ValueError('unapproved exact local notes ignore identity: .gitignore')
+    if ignore.stat().st_mode & 0o111 or digest(ignore.read_bytes()) != LOCAL_NOTES_IGNORE['sha256']:
+        raise ValueError('changed exact local notes ignore identity: .gitignore')
     admitted = workflow_admission.allowed(control) if workflow_admission else {}
     if not workflow_admission:
         from publication_workflows import github_git_paths
@@ -130,12 +139,20 @@ def policy(control, workflow_admission=None):
                          + ', '.join(sorted(github_sources ^ set(admitted))))
     writing = ('phoenix-writing', 'maintaining-writing-skills', 'creating-vitepress-post')
     for name, expected in data['common'].items():
+        # Retain each target's pre-notes pin so an additive shared successor
+        # does not conflict with staging's existing identity during Git merge.
+        if name == 'scripts/publication_current.py' and 'successor_sha256' in expected:
+            if (set(expected) != {'mode', 'sha256', 'successor_sha256'}
+                    or expected['mode'] != '100644' or expected['sha256'] not in PRE_NOTES_CURRENT):
+                raise ValueError('invalid finite current guard successor: ' + name)
+            expected = {'mode': expected['mode'], 'sha256': expected['successor_sha256']}
+            data['common'][name] = expected
         regular(control, name)
         if name in owned or name in protected_history or name.startswith('blog/') or (name.startswith('.github/') and name not in admitted) or (name not in PHOENIX_V23_SUCCESSORS and any(name.startswith(prefix + package + '/') for prefix in ('skills/', '.agents/skills/', '.claude/skills/') for package in writing)):
             raise ValueError('protected content/history in common successor: ' + name)
         if set(expected) != {'mode', 'sha256'} or expected['mode'] not in {'100644', '100755'} or not isinstance(expected['sha256'], str) or len(expected['sha256']) != 64 or any(c not in '0123456789abcdef' for c in expected['sha256']):
             raise ValueError('invalid exact common identity: ' + name)
-        if name != 'scripts/verify-harness-adoption.py' and name not in CLOSEOUT_SUCCESSORS and name not in PHOENIX_V23_SUCCESSORS:
+        if name not in {'scripts/verify-harness-adoption.py', '.gitignore'} and name not in CLOSEOUT_SUCCESSORS and name not in PHOENIX_V23_SUCCESSORS:
             for entries in inventory['trees'].values():
                 previous = entries.get(name)
                 if previous and expected != {'mode': previous['mode'], 'sha256': digest(git(control, 'cat-file', 'blob', previous['blob']))}:
@@ -220,6 +237,38 @@ def check_history(root):
         raise ValueError('complete, unmodified history is required')
 
 
+def local_note_names(root, expected):
+    """Validate the finite local writing-output shape before excluding names."""
+    owned = set(expected)
+    for args in (('ls-tree', '-rz', '--name-only', 'HEAD', '--', '.proj.writing'),
+                 ('ls-files', '-z', '--cached', '--', '.proj.writing')):
+        owned.update(name.decode() for name in git(root, *args).split(b'\0') if name)
+    collisions = {name for name in owned
+                  if name == '.proj.writing' or name.startswith('.proj.writing/')}
+    if collisions:
+        raise ValueError('local writing source ownership collision: ' + ', '.join(sorted(collisions)))
+    namespace = root / '.proj.writing'
+    if namespace.is_symlink():
+        raise ValueError('linked local writing namespace: .proj.writing')
+    if not namespace.exists():
+        return set()
+    if not namespace.is_dir():
+        raise ValueError('non-directory local writing namespace: .proj.writing')
+    notes = set()
+    for workspace in namespace.iterdir():
+        if (workspace.name in {'.', '..'} or '\\' in workspace.name
+                or workspace.is_symlink() or not workspace.is_dir()):
+            raise ValueError('invalid local writing workspace: ' + str(workspace.relative_to(root)))
+        for note in workspace.iterdir():
+            name = note.relative_to(root).as_posix()
+            if (note.name not in {'PROJECT.md', 'GLOSSARY.md', 'CONTEXT.md'}
+                    or note.is_symlink() or not note.is_file()
+                    or note.stat().st_mode & 0o111):
+                raise ValueError('invalid local writing note: ' + name)
+            notes.add(name)
+    return notes
+
+
 def source_names(root):
     """Include ignored sources, except named local dependency/build/cache outputs."""
     names = set()
@@ -293,10 +342,13 @@ def _verify_current(control, root, role, workflow_admission=None):
             raise ValueError('published Discord source ancestry is unavailable') from error
     else:
         expected[DISCORD_RECORD] = DISCORD_IDENTITY
-    actual = source_names(root)
+    notes = local_note_names(root, expected)
+    actual = source_names(root) - notes
     if actual != set(expected):
         raise ValueError('current reconciliation source inventory mismatch: ' + ', '.join(sorted(actual ^ set(expected))[:8]))
     for name, entry in expected.items():
+        if name == '.gitignore' and regular(root, name).stat().st_mode & 0o111:
+            raise ValueError('executable local notes ignore source: .gitignore')
         if name == DISCORD_RECORD and regular(root, name).stat().st_mode & 0o111:
             raise ValueError('executable published Discord source: ' + name)
         if name in PHOENIX_V23_SUCCESSORS and regular(root, name).stat().st_mode & 0o111:

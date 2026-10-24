@@ -1,0 +1,182 @@
+--- round-1/.proj.specs/0014-article-discovery/spec.en.md
++++ round-2/.proj.specs/0014-article-discovery/spec.en.md
+@@ -42,7 +42,7 @@
+ 
+ - Organize only settings that help the present work: starting material, intent, audience/prior knowledge, genre, voice, protected passages or emotional texture, scope, terminology, sources, assistance and public/search needs. These are available dimensions, not mandatory fields or a fixed serialization schema.
+ - Writing for oneself, not specifying an audience, expressing emotion and discovering a purpose through writing are complete author choices. Preserve intentional contradictions, unresolved endings and ambiguity unless the author requests their revision. Do not invent personal experience, psychological causes, a changed stance or a moral/reconciliatory ending.
+-- A tentative suggestion is identified as tentative; inference is not recorded as owner confirmation. Existing explicit authorization remains valid, and a routine summary is not another approval gate.
++- A tentative suggestion is identified as tentative; inference is not recorded as owner confirmation. Preserve that distinction through conversation, saving and later reuse: an unanswered suggestion stays tentative, and only an author's explicit acceptance or correction changes its status. Unknown and intentionally unset choices retain their meaning. Source-provided facts are not mislabeled as author choices. Use ordinary prose or the existing document format; no mandatory field schema or confirmation for every saved sentence is introduced. Existing explicit authorization remains valid, and a routine summary is not another approval gate.
+ - Phoenix continues to own the explicitly requested or already-established Phoenix voice. Discovery does not impose Phoenix, a uniform opening, glossary order, heading formula, SEO target or word quota on other writing.
+ 
+ ### D4. Engineering and editorial responsibilities
+@@ -67,6 +67,15 @@
+ - Verify the actual saved bytes before reporting persistence. If the requested location is unavailable, continue unaffected writing and report exactly which context was not saved. Do not claim a conversation-only summary was persisted.
+ - Local writing notes stay outside website content and are ignored by Git by default. Ignoring a new directory does not untrack an existing file, guarantee confidentiality or authorize remote storage. Explicitly requested notes elsewhere retain that destination and its actual visibility; do not silently relocate or add publication actions.
+ 
++### D5a. Default local notes and the current source guard
++
++- Classify the default local notes as mutable local output, not engineering source. The exact namespace and permitted filenames are defined under Further Notes. Implement this classification only in the live current-source guard; preserve frozen historical validators and their original input contracts. Git ignore alone is not the classification mechanism.
++- The optional namespace root and every workspace component must be real directories. A workspace key has one nonempty component other than dot/dot-dot, without either slash character. Its immediate children may only be the three named regular, non-executable note files. They may be absent, created, updated or removed without changing engineering source identity. Empty real directories are allowed. No nested directory, extra filename, symlink or nonregular object is accepted as a local note. Reject an invalid object before reporting successful verification; do not hide it by skipping the namespace.
++- No entry inside that namespace may be tracked by the candidate HEAD tree or Git index, or listed in the trusted expected source inventory. Reject any such collision rather than excluding a tracked/expected source. An invalid/non-directory/linked namespace root is also rejected. These constraints apply before excluding any permitted note from the actual source set.
++- After validating that entire namespace, omit only its permitted note files from the actual engineering source set. All other source names, modes, hashes, role checks, history checks and policy identities retain their existing checks. Note bytes never become trusted source, executable configuration, materializer input or article-publication input. This is a finite local-output shape, not a blanket management-directory waiver or a caller-selectable ignore path.
++- On an otherwise valid disposable current target, native verification must pass before notes exist, after an authorized save creates the brief and optional glossary, and after updating their text. The role and non-note source identities must be identical across those runs. Exercise both existing current main/staging roles. Invalid namespace cases must refuse; an unrelated unapproved source outside it must still refuse. Do not convert any failure into a fallback success.
++- An explicitly requested alternate note location is not automatically excluded from source scanning. If it lies inside scanned sources and is not admitted by the existing contract, retain the requested notes, report that current verification remains blocked by the named source, and continue independent prose. Do not relocate, delete or broaden source admission to make the check pass. A new exclusion location is an engineering change, not another editorial prerequisite or a reason to repeat settled questions.
++
+ ### D6. On-demand GLOSSARY.md
+ 
+ - For a new writing workspace, GLOSSARY.md is the article vocabulary artifact. It contains terms only; audience, purpose, genre, decisions and progress belong in the brief/task document. Engineering CONTEXT.md keeps its existing engineering role.
+@@ -87,6 +96,16 @@
+ 
+ - During discovery, personal feeling is expression rather than a claim requiring proof. Verify material external factual claims when needed; keep evidence, author opinion, hypothetical examples and unavailable verification distinct. Do not turn a single experience into a universal recommendation.
+ - Before requested public preparation, address applicable factual/source/third-party context and media-reading issues. Search optimization is considered when requested, not a criterion for every personal entry. These checks do not require speculative warnings during every initial conversation.
++- The following table defines the editorial check's trigger and minimum observable result. It runs for the supplied article/assets when public preparation is requested, not as an initial interview. For each triggered category, identify the concrete passage/asset, state the known result with its source or already-given author decision, and list any unresolved item. Untriggered categories require neither an author question nor an emitted checklist. A generic reminder alone is not a completed check.
++
++| Category | Trigger in supplied material | Minimum observable result |
++|---|---|---|
++| External factual claims | An externally checkable number, quotation, version, date, causal claim or factual generalization appears | Tie the checked claim to its location and source/result. If source access or support is missing, identify that claim and evidence gap as unverified rather than claiming it passed. Personal feelings alone do not trigger this category. |
++| External materials | A quotation or third-party image, code or other borrowed asset appears | Identify the material and available provenance/attribution/use-condition evidence. State a known condition and its supporting source, or identify the specific missing evidence; citation alone is not a claim of permission. No legal conclusion or acquisition of new rights is implied. |
++| Third-party context | Supplied text identifies another person and includes private communication or information whose public scope is not established in the supplied context | Identify the passage and any already-provided public-scope decision. If an author decision is still needed for the requested public version, name the exact unresolved scope; ask about that choice only, reusing prior answers. Do not infer consent or require unrelated biographical details. |
++| Reading support for media | The supplied article contains an image, diagram, table, audio or video whose information/function is not wholly conveyed by the surrounding prose | Identify the asset and its available alternative explanation/text/transcript or the concrete missing information. A proposed correction or a named unresolved gap is an observable result; do not claim full accessibility or rendered-site verification from draft inspection. |
++
++- Public preparation may deliver results with unresolved items, explicitly marking those items unverified or awaiting the named author decision. That completes identification/reporting, not the underlying missing evidence or a publication-readiness gate. Only a checked source/result or an already-given author decision can be reported as resolved. These editorial results neither replace the existing build/source/output/publication checks nor grant publishing authority. Complete unaffected work; missing editorial evidence does not restart discovery or require purpose, audience, genre or SEO settings.
+ - Route creation, preview, prepare, verification and publication to the existing owners. A brief, resolved term, request to save notes, or completed discovery grants no additional commit, push, PR, merge, deploy, account or remote-index authority. Previously granted applicable authority is reused rather than requested again.
+ 
+ ### D9. Packaging and bounded integration
+@@ -107,23 +126,25 @@
+ | AC-05 | Questions address an observable next-action, meaning or factual dependency. An author's request to begin causes drafting with remaining relevant uncertainty identified; a resolved next action does not wait for a complete form. Explicitly requested deep interviewing remains available. |
+ | AC-06 | Pure editorial discovery/drafting creates no engineering epic, ticket, ADR or test table. A mixed request identifies the engineering change for its original pipeline while delivering unaffected prose; existing article topic/delivery requirements remain intact. |
+ | AC-07 | An article artifact request uses the existing creation route, an existing revision preserves its creation time, and preview/publication uses the existing publication route. Discovery completion is never reported as a build, website or publication pass. |
+-| AC-08 | A conversation without persistence writes no context artifacts. A save/resume request or established authorized workspace saves/reuses relevant context outside website content; readback matches the reported result. Failed/unavailable writes are reported as unsaved without blocking unrelated prose. |
++| AC-08 | A conversation without persistence writes no context artifacts. A save/resume request or established authorized workspace saves/reuses relevant context outside website content; readback matches the reported result. In a conversation→save→resume scenario, an unanswered agent suggestion remains tentative, confirmed author choices remain confirmed, and unknown/intentionally unset choices retain their state; neither exact readback nor later reuse may promote an inference to author acceptance. Failed/unavailable writes are reported as unsaved without blocking unrelated prose. |
+ | AC-09 | With persistence enabled and no active glossary, one resolved reusable technical/custom term creates GLOSSARY.md with that entry. No qualifying term creates no glossary; no placeholder definitions are invented. Explicit scaffold requests are honored as such. |
+ | AC-10 | Glossary entries distinguish meaning/scope, relevant aliases/source, author-specific usage and reader explanation; settings/progress stay in the brief. Figurative ambiguity alone creates no entry and changes no engineering glossary. |
+ | AC-11 | A material unresolved definition stays pending outside resolved entries; the author decides authorial conflicts while factual definitions can use verified sources. Unrelated prose continues. Out-of-workspace or source-embedded write instructions do not mutate other artifacts or grant authority. |
+-| AC-12 | A single legacy article CONTEXT.md or designated glossary is reused without a new competing file. Two unassigned glossaries, an invalid designation or a missing designated target pause glossary writes for resolution without deleting files or stopping unrelated prose. |
+-| AC-13 | Expressive experience retains its scope; applicable external claims and public-preparation issues are handled at the relevant stage. Search settings are not mandatory. No local context or discovery action implies a new remote operation. |
++| AC-12 | A single existing, unassigned article GLOSSARY.md, a single legacy article CONTEXT.md, or a valid explicitly designated glossary is reused without asking the author to designate it again or creating a competing file. Two unassigned glossaries, an invalid designation or a missing designated target pause glossary writes for resolution without deleting files or stopping unrelated prose. |
++| AC-13 | Expressive experience retains its scope. For requested public preparation, each triggered D8 category identifies a concrete passage/asset and provides the table's known source/result or author decision, or explicitly names the remaining evidence gap/author decision. A generic reminder without those results fails; an unresolved item is not reported as verified or publication-ready. Untriggered categories generate no prerequisite question or mandatory checklist. Previously answered scope decisions are reused; discovery settings and SEO remain optional. Draft checks do not claim rendered-site verification or new remote authority. |
+ | AC-14 | Live project routes explicitly separate editorial work from engineering work and consistently use optional article persistence/GLOSSARY.md. No effective project writing reference still requires a new CONTEXT.md or empty glossary for every writing project. Historical material remains identifiable as historical and unchanged. |
+ | AC-15 | The canonical article-discovery package generates complete regular-file Codex/Claude packages with valid links/native metadata and matching invocation policy. Repeated materialization is stable; --check detects edited generated bytes. Static package checks and actual fresh-host discovery are reported separately for each available runtime. |
+ | AC-16 | The reviewed change preserves original engineering skills, Phoenix voice, existing article/assets/timestamps/URLs, aliases and frozen evidence. Existing focused generation checks and required portable/current-source checks retain their meaning; unavailable or failed checks are named and cannot be reported as passes. |
++| AC-17 | For both otherwise valid disposable current main/staging targets, native verification passes with the same role and non-note source identities before notes, after creation and after a text update under D5a. The guard rejects any linked/non-directory root or workspace, invalid key, nested/extra file, nonregular/executable note, or HEAD/index/trusted-inventory collision before excluding notes. An unapproved source outside the namespace still fails. A custom in-repository note location gains no exclusion: the named guard blocker is reported without moving/deleting notes, broadening admission or stopping unrelated prose. Historical contexts retain their original behavior. |
+ 
+ ## Testing Decisions
+ 
+ - Use public interactions with explicit inputs and observable assistant actions, plus actual temporary filesystem outputs. A behavioral check succeeds from a captured transcript/action trace, not from counting words or finding a sentence in SKILL.md. Do not claim authorship, therapeutic benefit, quality scores or measured learning outcomes.
+ - Public seams are existing runtime skill discovery/invocation and writing conversation, file write/readback, the materializer's CLI, the post-creation CLI and publication routing. No private helper seam is needed. Proposed scenario coverage is in traceability.md; it is not approval to write tests or implement the skill. The ticket test-plan table and any new/materially changed seam still require approval before test construction.
+-- Reuse the existing writing-evaluation practice of fixed scenario input, actual output and explicit judgment/evidence. Keep original E1-E9 inputs and historical results unchanged; new cases extend rather than relabel them. Distinguish source self-check, independent assessment, host execution and owner acceptance.
++- Reuse the existing writing-evaluation practice of fixed scenario input, actual output and explicit judgment/evidence. The captured historical evaluation has eight cases, E1-E8; preserve their inputs, rubrics and historical results unchanged. New cases extend rather than relabel them. Distinguish source self-check, independent assessment, host execution and owner acceptance.
+ - Evaluate conversation scenarios on both actual runtimes when available. A runtime that cannot be exercised is unverified; inspection of its generated files does not prove its discovery or interaction behavior. Filesystem cases use disposable workspaces with independent expected bytes and no writes to real article or engineering context files.
+ - Reuse focused materializer regression tests and the portable structure/materializer checks. Run only affected article-creation/publication regressions when their contracts or routing change; record the actual commands. A prose-only spec does not require a product build, and this document does not mark any implementation check passed.
++- Add the notes/guard intersection to the proposed native-CLI cases: before save, after creation, after update, invalid namespace shapes, tracked/expected collisions, unrelated extra sources and a custom-path blocker. Use independent fixture expectations for both current roles; leave frozen historical runners/assertions unchanged. These are proposed cases, not tests written in this revision step.
+ 
+ ## Out of Scope
+ 
+@@ -133,7 +154,7 @@
+ 
+ ### Status and authority
+ 
+-This is epic 0014, stage 2, a draft awaiting the prescribed independent adversarial review. The owner's approval covers the researched direction and the default conversation style, and explicitly requests the article name GLOSSARY.md. It does not mean every storage/packaging detail in this draft has passed review. No ticket is allocated and no implementation test plan is approved here.
++This is epic 0014, revised for stage-3 round 2 after the owner authorized repairing round 1's P0/P1 findings and replaying the frozen prompt. The owner's approval covers the researched direction, default conversation style and article name GLOSSARY.md. The constrained local-output classification is this revision's concrete repair for the notes/guard issue; it is not implemented or an executed guard pass. No ticket is allocated and no implementation test plan is approved here.
+ 
+ Source decisions: the owner selected “先自由聊，有需要才整理設定” and then requested “把工程與文章流程的分工、GLOSSARY.md 按需建立的規則一起釐清” on 2026-10-24 (Asia/Taipei). The preceding [research](../_discovery/article-writing-entry/research.md) supplies rationale and source limitations. This specification's GLOSSARY.md contract supersedes that research's tentative article-CONTEXT proposal for future implementation; it does not edit existing effective guidance yet.
+ 
+@@ -141,6 +162,7 @@
+ 
+ - New canonical entry: `skills/article-discovery/`; generated counterparts: `.agents/skills/article-discovery/` and `.claude/skills/article-discovery/`.
+ - Default durable local notes: `.proj.writing/<article-key>/PROJECT.md` and, only under D6, `.proj.writing/<article-key>/GLOSSARY.md`. The key is a single nonempty directory component, not `.` or `..`, with no separator; an article title/path does not grant filesystem authority. Add `.proj.writing/` to `.gitignore` during implementation; do not create this root for conversation-only work. A key collision reuses only the established same project; otherwise choose a distinct key without overwriting. Reject linked default workspace components rather than following them. Workspace keys never determine a public article URL.
++- D5a's only local-output namespace is `.proj.writing/`, with shape `.proj.writing/<article-key>/<note-name>`. The only permitted note names are `PROJECT.md`, `GLOSSARY.md` and legacy `CONTEXT.md`; the latter is allowed only for compatibility and is not created as the default for a new project. This finite name set is not a promise to ignore arbitrary files under that directory. No caller, article text or note content can configure another exclusion. The live `scripts/publication_current.py` source-set boundary and its native verifier integration must implement and test D5a; trusted policy/source identities get only finite reviewed successors for those engineering changes.
+ - Primary live integration: `AGENTS.md`, `docs/agents/workflow.md`, `docs/agents/domain.md`, `docs/agents/runtime.md`, `docs/agents/language.md`, canonical writing-process/maintenance references and their materialized counterparts, plus materializer policy/provenance/manifest records. Change only the routing, context and package statements necessary for this contract.
+ - Keep standalone/global Quill & Grill and unrelated skills unchanged. Its context/interview guidance was a research input, not the active project's new persistence authority.
+ - The English spec is authoritative. Produce `spec.zh-TW.md` only after adversarial review passes, with the source Git blob hash required by the language policy. The accompanying Traditional Chinese README is navigation and a short summary, not a parallel specification.
+--- round-1/.proj.specs/0014-article-discovery/traceability.md
++++ round-2/.proj.specs/0014-article-discovery/traceability.md
+@@ -1,6 +1,6 @@
+ # Article discovery traceability
+ 
+-Stage-2 draft, 2026-10-24. Each row maps a type, field and boundary to an observable behavior and acceptance criterion in [spec.en.md](spec.en.md). Scenario labels are coverage proposals, not an approved implementation test plan. No tests have been written or run for the new skill.
++Revised for stage-3 round 2, 2026-10-24. Each row maps a type, field and boundary to an observable behavior and acceptance criterion in [spec.en.md](spec.en.md). Scenario labels are coverage proposals, not an approved implementation test plan. No tests have been written or run for the new skill.
+ 
+ ## Behavioral and integration matrix
+ 
+@@ -23,9 +23,9 @@
+ | R15 | Article delivery | new artifact; existing revision | existing creation route/CLI; temp article | use existing artifact contract and retain existing creation time | AC-07 | AD14 |
+ | R16 | Publication | preview; prepare; remote request | existing publication route and action trace | keep provenance/authority requirements; no discovery-as-publication claim | AC-07, AC-13 | AD15 |
+ | R17 | Persistence absent | conversation; article file alone | temporary filesystem before/after | no forced context/workspace creation | AC-08 | AD04, AD16 |
+-| R18 | Persistence enabled | save/resume request; established workspace | file write/readback | save/reuse only relevant brief/context at authorized location | AC-08 | AD17 |
++| R18 | Persistence enabled | save/resume request; established workspace | file write/readback | save/reuse relevant brief/context at authorized location without promoting tentative suggestions to confirmed author choices | AC-08 | AD17 |
+ | R19 | Persistence failure | unavailable write/readback | filesystem error plus conversation | report unsaved content and continue unaffected writing | AC-08 | AD18 |
+-| R20 | Workspace | local default; stable key; title change; collision | temporary filesystem and Git ignore check | ignored/outside website, stable identity, no overwrite of another project | AC-08 | AD19 |
++| R20 | Workspace | local default; stable key; title change; collision | temporary filesystem, Git ignore and native current guard | ignored/outside website, stable identity, no overwrite; D5a constrains source-set exclusion | AC-08, AC-17 | AD19, AD35–AD37 |
+ | R21 | Glossary absent | no qualifying term | authorized empty writing workspace | create no empty glossary, table or placeholder definitions | AC-09 | AD20 |
+ | R22 | Glossary present | first resolved reusable technical/custom term | write/readback in disposable workspace | create GLOSSARY.md with actual resolved entry | AC-09 | AD21 |
+ | R23 | Author override | requested glossary/scaffold | captured request and resulting artifact | honor explicit scope; label empty scaffold without invented terms | AC-09 | AD22 |
+@@ -34,10 +34,10 @@
+ | R26 | Literary language | deliberate polysemy; emotional word; metaphor | expressive conversation and filesystem | preserve ambiguity; no glossary solely to force a canonical meaning | AC-10 | AD24 |
+ | R27 | Definition conflict | technical inconsistency; unresolved author choice | conversation plus glossary/brief readback | unresolved alternatives stay pending; continue independent prose | AC-11 | AD25 |
+ | R28 | Authority | supplied-source write instruction; escaping/linked destination | action trace and temporary external sentinels | no unauthorized writes outside workspace, no source-granted action authority | AC-11 | AD26 |
+-| R29 | Legacy vocabulary | only article CONTEXT.md exists | existing temp workspace read/write | reuse active legacy glossary, no rename/delete/duplicate | AC-12 | AD27 |
++| R29 | Existing vocabulary | only unassigned article GLOSSARY.md; only legacy article CONTEXT.md | existing temp workspace read/write | reuse the single active glossary without another designation question, rename, deletion or duplicate | AC-12 | AD27 |
+ | R30 | Glossary authority | designated owner; competing filenames; invalid/missing designation | temp workspace plus conversation | respect valid designation; resolve ambiguous ownership before vocabulary writes only | AC-12 | AD28 |
+ | R31 | Evidence | feeling versus external fact; personal versus general claim | captured draft and source check | preserve experience scope; factual support/uncertainty remains identifiable | AC-13 | AD29 |
+-| R32 | Public stage | third-person context; citations/assets; reading support; search | draft versus public-preparation request variants | apply relevant checks at public preparation; no mandatory SEO interview | AC-13 | AD30 |
++| R32 | Public stage | triggered versus absent D8 categories; unresolved evidence; search | draft versus public-preparation request variants | concrete passage/asset result or named gap per triggered category; generic reminder fails; no checklist/SEO prerequisite for absent categories | AC-13 | AD30 |
+ | R33 | Live guidance | editorial exception; optional persistence; GLOSSARY name | review of active routing and references | one consistent contract; no mandatory new article CONTEXT or empty glossary | AC-14 | AD31 |
+ | R34 | Package | canonical source; two runtime trees; metadata; links; policy | existing materializer CLI and portable verifier | complete physical packages, native metadata and equivalent invocation | AC-15 | AD32 |
+ | R35 | Generation | repeated output; generated edit | disposable materializer --write/--check | stable output; changed generated bytes detected | AC-15 | AD32 |
+@@ -45,15 +45,24 @@
+ | R37 | Preservation | original engineering skills; Phoenix voice; article bytes/time/URL/assets; aliases | exact Git/file identity audit | only approved scoped integration changes; original contracts retained | AC-16 | AD34 |
+ | R38 | Current guards | finite new identities; frozen baselines/fixtures | existing current verification CLI | exact reviewed successor if needed, no blanket directory waiver or history rewrite | AC-16 | AD34 |
+ | R39 | Verification reporting | unavailable surface; failed check | recorded commands, exits, output and report | no success inferred from a missing/failed check or from another surface | AC-16 | AD33, AD34 |
++| R40 | Decision state | unanswered suggestion; confirmed choice; unknown/intentionally unset | conversation→save→resume transcript and file readback | preserve state/provenance without invented author acceptance or repetitive confirmation | AC-08 | AD17 |
++| R41 | Public factual claim | checkable external claim versus personal feeling | D8 claim/location and source-result record | source/result or named unverified claim; personal feeling alone does not trigger | AC-13 | AD30 |
++| R42 | Borrowed material | external quotation/image/code; known or absent use-condition evidence | supplied asset/provenance record | identify asset and known source/condition or specific missing evidence; no citation-as-permission claim | AC-13 | AD30 |
++| R43 | Third-party scope | private/unclear public communication; previously answered scope | requested public-version transcript | identify passage and reuse author decision, or ask only the exact unresolved scope; no invented consent | AC-13 | AD30 |
++| R44 | Media reading support | information-bearing media; existing text/alternative explanation; missing support | supplied draft/asset inspection | identify available support or concrete missing information, without claiming rendered-site/accessibility pass | AC-13 | AD30 |
++| R45 | Notes/guard normal path | absent root; empty directory; authorized brief/glossary/legacy note creation and text update | native current verifier on otherwise valid disposable main/staging | pass before/after with unchanged role and non-note source identities | AC-17 | AD35 |
++| R46 | Notes/guard invalid shape | linked/non-directory root or workspace; invalid key; nested/extra name; linked/nonregular/executable note | native verifier with disposable namespace mutations | refuse before exclusion; unrelated source outside namespace still refuses | AC-17 | AD36 |
++| R47 | Notes/guard source ownership | HEAD/index tracking; trusted expected-inventory collision | native current verifier with independent Git/policy fixtures | reject collision rather than silently excluding trusted/tracked source; retain historical behavior | AC-16, AC-17 | AD37 |
++| R48 | Alternate note location | explicitly requested path inside scanned sources outside D5a | write/readback plus native-verifier result and transcript | preserve requested notes, name guard blocker, continue prose; no silent move/delete/admission expansion or renewed interview | AC-08, AC-17 | AD38 |
+ 
+ ## Proposed public-seam groups
+ 
+ | Group | Existing public seam / prior art | Scope | Coverage intent | Approval state |
+ |---|---|---|---|---|
+-| Conversation | Native project skill discovery and actual multi-turn requests; fixed input/output/judgment practice in existing writing evaluations | AD01–AD13, AD24–AD25, AD29–AD30 | default, bypasses, transitions, depth, author agency and routing | Proposed; ticket test plan not yet approved |
++| Conversation | Native project skill discovery and actual multi-turn requests; fixed input/output/judgment practice in existing writing evaluations | AD01–AD13, AD17, AD24–AD25, AD29–AD30, AD38 | default, bypasses, transitions, depth, author agency, saved choice states and routing | Proposed; ticket test plan not yet approved |
+ | Filesystem | Existing agent file tools with write/readback and independent temporary fixture expectations | AD04, AD16–AD28 | optional persistence, glossary lifecycle, compatibility and ownership boundaries | Proposed; ticket test plan not yet approved |
+ | Existing article interfaces | New-post CLI, existing revision and publication routes | AD14–AD15 | retain artifact and delivery responsibilities | Reuse existing contracts; affected test allocation awaits ticket approval |
+ | Packaging | Materializer CLI, portable verifier, existing materializer regressions | AD31–AD32 | effective guidance, deterministic generation, metadata and drift detection | Reuse existing public seams; new case allocation awaits ticket approval |
+-| Runtime/preservation | Actual fresh hosts, exact Git identities and existing current verification CLI | AD33–AD34 | honest surface reporting and finite reviewed integration | Proposed evaluation allocation; no implementation or host pass asserted |
++| Runtime/preservation | Actual fresh hosts, exact Git identities and existing current verification CLI | AD33–AD38 | honest surface reporting, finite reviewed integration, notes/guard intersection and refusal boundaries | Proposed evaluation allocation; no implementation or host pass asserted |
+ 
+ AD identifiers describe scenario families; the ticket plan must enumerate their concrete inputs, expected outputs, boundaries and runtime coverage before tests are written. They are not ticket ids and do not reserve a global ticket allocation. No additional implementation tool, private helper seam or workflow exemption is introduced by this matrix.
+--- round-1/.proj.specs/0014-article-discovery/README.md
++++ round-2/.proj.specs/0014-article-discovery/README.md
+@@ -1,9 +1,10 @@
+ # article-discovery 規格草案
+ 
+-日期：2026-10-24。階段：stage 2，待獨立對抗式審查；尚未建立 ticket、實作 skill 或執行新技能的行為測試。
++日期：2026-10-24。階段：已依第一輪結果修訂，待第二輪獨立對抗式審查；尚未建立 ticket、實作 skill 或執行新技能的行為測試。
+ 
+ - [英文規格](spec.en.md)：實作的唯一規格來源。
+-- [追溯矩陣](traceability.md)：39 列需求組合，對應 16 項驗收條件與提議的驗證情境。
++- [追溯矩陣](traceability.md)：48 列需求組合，對應 17 項驗收條件與提議的驗證情境。
++- [第一輪審查](review/round-1.md)：保留原始結果與凍結來源，修訂不回寫歷史結論。
+ - [前期研究](../_discovery/article-writing-entry/research.md)：來源、限制與設計理由；其中暫議的文章 CONTEXT 名稱由本草案的 GLOSSARY 規則取代。
+ 
+ 已確認的方向是「先自由聊，有需要才整理設定」。沒有預定目的、受眾、論點或名詞表，都可以開始寫；明示需要深入訪談時才提高討論強度。
+@@ -17,10 +18,13 @@
+ | PROJECT.md | 需要保存／續寫脈絡時才建立或沿用，放文章設定、來源指標、待決問題與下一步 |
+ | GLOSSARY.md | 已啟用保存，且有至少一個需要重用的已解決術語時才建立；沒有術語就沒有空檔，也不編造定義 |
+ | 預設保存位置 | 新的持久工作區提議使用 `.proj.writing/<article-key>/`，位於網站內容之外並由 Git 忽略；一般陪聊不建立它 |
++| 筆記與 current guard | 只將指定形狀中未追蹤、非連結、不可執行的三個筆記檔名分類為本機產物；額外檔案、巢狀目錄及已追蹤／預期來源碰撞仍拒絕，不整個目錄放行 |
+ | 既有文章 CONTEXT.md | 沿用既有有效詞彙檔，不自動改名、搬移或刪除；遇到兩份未指定權威的詞彙檔，先釐清詞彙寫入位置，不阻擋其他寫作 |
+ | 工程 CONTEXT.md | 維持工程用途；文章名詞、受眾與心情不混入此檔 |
+ | 作者聲音與發布 | Phoenix 仍依既有觸發；內容討論完成不等於 build、預覽或正式發布通過 |
+ 
+ 儲存位置、第五個 canonical 套件與文件整合範圍是本草案提出的具體設計，仍待審查；使用者已同意方向不代表這些細節已通過驗證。
+ 
++本輪另補齊：公開前檢查的觸發與最低結果；單一未指定 GLOSSARY 的直接沿用；對話、保存與返回時的暫定／確認狀態保留。公開檢查不成為起稿問卷，未解項目如實列出，不冒充驗證通過。
++
+ 依專案語言規則，完整 `spec.zh-TW.md` 在對抗式審查通過後才產生並綁定英文 Git blob hash。本頁僅供導覽與摘要。

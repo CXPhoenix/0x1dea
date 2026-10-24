@@ -1,0 +1,62 @@
+{
+  "base": "8b2cffab8ed1a8a2c50ece18b6fe5b578f186668",
+  "head": "8b2cffab8ed1a8a2c50ece18b6fe5b578f186668",
+  "merge_base": "8b2cffab8ed1a8a2c50ece18b6fe5b578f186668",
+  "branch": "tickets/T-0026/local-notes-current-guard",
+  "worktree": "/private/tmp/0x1dea-T0026",
+  "committed_changes": [],
+  "staged_changes": [],
+  "tracked_pending": [
+    ".gitignore",
+    "scripts/publication_current.py",
+    "maintenance/publication-workflow/engineering-v1.json"
+  ],
+  "new_pending": [
+    "tests/article_publication/test_local_writing_notes.py",
+    ".proj.specs/0014-article-discovery/planning/approval.md",
+    ".proj.tickets/0014-article-discovery/T-0028-optional-context-glossary.md",
+    ".proj.tickets/0014-article-discovery/T-0026-local-notes-current-guard.md",
+    ".proj.tickets/0014-article-discovery/T-0029-public-preparation-routing.md",
+    ".proj.tickets/0014-article-discovery/T-0027-free-conversation-entry.md"
+  ],
+  "scope": "A implementation plus formal allocation; reviewed epic/research/proposals are pre-existing untracked requirements, not new functional changes; includes additive finite current-guard successor repair for observed policy merge conflict",
+  "excluded": "Node dependencies; temporary external run logs; unchanged frozen reviewed source snapshots. Their exact new inventory admissions are visible in the policy patch. No B-D implementation.",
+  "files": {
+    ".gitignore": {
+      "sha256": "9f7ac2c358f5b1af070bf44703e40dfe4786e8dfd02772f66c944e09ea58bb98",
+      "bytes": 848
+    },
+    "scripts/publication_current.py": {
+      "sha256": "19075dde82fd02cdf2a2bc7012212952a413db1ae9ee4f6abfa7515af4a4c428",
+      "bytes": 26593
+    },
+    "maintenance/publication-workflow/engineering-v1.json": {
+      "sha256": "9d1dfb5996292d72a99c968b2b7e55a60f44948e2eefbf4b04aa92099cc35fc3",
+      "bytes": 326466
+    },
+    "tests/article_publication/test_local_writing_notes.py": {
+      "sha256": "7a9148a97c363cee400f320d58b6f1ab0385ff4ce55b8e9390448789d073ea82",
+      "bytes": 19870
+    },
+    ".proj.specs/0014-article-discovery/planning/approval.md": {
+      "sha256": "17d5d87d7f6ec5cc698614c81432ef36f035dbe6bf5ed2350c16b4efb218297d",
+      "bytes": 2087
+    },
+    ".proj.tickets/0014-article-discovery/T-0028-optional-context-glossary.md": {
+      "sha256": "c33d34c570e716e27958813e177010e0884b38bacb00ee067741e27794d3a487",
+      "bytes": 9979
+    },
+    ".proj.tickets/0014-article-discovery/T-0026-local-notes-current-guard.md": {
+      "sha256": "41a8a1723933fc374ac5b60b7fd8288abf393066290015212f87464bf395cee4",
+      "bytes": 6661
+    },
+    ".proj.tickets/0014-article-discovery/T-0029-public-preparation-routing.md": {
+      "sha256": "cdf08626ce4962bd4696e98dd5ba4e755c24ae370b51feb55a73918743dd52f6",
+      "bytes": 8012
+    },
+    ".proj.tickets/0014-article-discovery/T-0027-free-conversation-entry.md": {
+      "sha256": "919ad0aadadd0886af9db816632eb33c69e72adabca0f67527bb2862b94a1438",
+      "bytes": 9260
+    }
+  }
+}

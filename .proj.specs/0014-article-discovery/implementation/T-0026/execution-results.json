@@ -1,0 +1,189 @@
+{
+  "commands": {
+    "final-full-current-python.json": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/run-current-python-tests.py"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 0,
+      "elapsed_seconds": 1192.154,
+      "log": "/private/tmp/0x1dea-T0026-evidence/final-full-current-python.log",
+      "log_sha256": "a84babada95033870c818c7913d9f4d3f62599690a42210a7c4b435f33819805",
+      "PUBLICATION_TEST_DEPENDENCIES": "/private/tmp/0x1dea-T0026/node_modules"
+    },
+    "full-unit.json": {
+      "command": [
+        "pnpm",
+        "test:unit"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 0,
+      "elapsed_seconds": 4.606
+    },
+    "portable.json": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/verify-project.py"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 0,
+      "elapsed_seconds": 0.152
+    },
+    "materializer.json": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/materialize-writing-skills.py",
+        "--check"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 0,
+      "elapsed_seconds": 0.268
+    },
+    "lint.json": {
+      "command": [
+        "pnpm",
+        "lint"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 0,
+      "elapsed_seconds": 8.69
+    },
+    "native-working.json": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/verify-harness-adoption.py"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 0,
+      "elapsed_seconds": 4.664
+    },
+    "full-suite.json": {
+      "command": [
+        "pnpm",
+        "test"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 1,
+      "elapsed_seconds": 0.208
+    },
+    "full-suite-sandboxed.json": {
+      "command": [
+        "pnpm",
+        "test"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 1,
+      "elapsed_seconds": 0.429
+    },
+    "full-current-python.json": {
+      "command": [
+        "python3",
+        "-B",
+        "scripts/run-current-python-tests.py"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026",
+      "exit": 1,
+      "elapsed_seconds": 995.591
+    },
+    "frozen-environment-recheck.json": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "-v",
+        "article_publication.test_remote_validation.TrustedRemoteValidationTests.test_real_trusted_main_validation_and_isolated_staging_build"
+      ],
+      "cwd": "/private/tmp/0x1dea-T0026-evidence/pr32-recheck",
+      "exit": 0,
+      "elapsed_seconds": 53.244
+    }
+  },
+  "final_python_suites": {
+    "live_harness": 66,
+    "live_article_publication": 170,
+    "historical_22": 10,
+    "historical_32": 14,
+    "total": 260,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "vitest": {
+    "passed": 54
+  },
+  "new_test_methods": 12,
+  "new_native_cli_calls": 143,
+  "native_call_expected_outcomes": {
+    "test_A01_notes_lifecycle_preserves_both_native_roles_and_non_note_sources": {
+      "calls": 24,
+      "accepted": 24,
+      "refused": 0
+    },
+    "test_A02_invalid_namespace_shapes_are_not_local_notes": {
+      "calls": 16,
+      "accepted": 2,
+      "refused": 14
+    },
+    "test_A03_each_note_refuses_links_nonregular_objects_and_each_execute_bit": {
+      "calls": 42,
+      "accepted": 0,
+      "refused": 42
+    },
+    "test_A03_group_executable_note_is_not_mutable_local_output": {
+      "calls": 2,
+      "accepted": 0,
+      "refused": 2
+    },
+    "test_A04_head_owned_but_index_removed_note_is_rejected": {
+      "calls": 4,
+      "accepted": 2,
+      "refused": 2
+    },
+    "test_A04_index_owned_note_cannot_be_hidden_as_local_output": {
+      "calls": 4,
+      "accepted": 2,
+      "refused": 2
+    },
+    "test_A04_trusted_expected_inventory_cannot_reclassify_source_as_note": {
+      "calls": 4,
+      "accepted": 2,
+      "refused": 2
+    },
+    "test_A05_one_invalid_object_or_outside_source_still_refuses": {
+      "calls": 8,
+      "accepted": 4,
+      "refused": 4
+    },
+    "test_A06_additive_guard_pin_stays_finite_and_validates_active_identity": {
+      "calls": 16,
+      "accepted": 4,
+      "refused": 12
+    },
+    "test_A06_git_ignore_does_not_untrack_or_hide_source_ownership": {
+      "calls": 4,
+      "accepted": 2,
+      "refused": 2
+    },
+    "test_A06_ignore_successor_cannot_be_changed_missing_linked_or_re_pinned": {
+      "calls": 14,
+      "accepted": 0,
+      "refused": 14
+    },
+    "test_A06_trusted_control_rejects_candidate_ignore_hash_and_all_execute_bits": {
+      "calls": 5,
+      "accepted": 1,
+      "refused": 4
+    }
+  },
+  "native_trace_sha256": "9c168c3597f9ce6b1745756399c0945f7254b6e12a4011fcad373149b9b30a26",
+  "raw_development_evidence_root": "/private/tmp/0x1dea-T0026-evidence",
+  "coverage_kind": "Native CLI, independent filesystem/Git fixtures and unchanged existing local runner. Test case counts are not source coverage percentages.",
+  "command_adapter": "Main has no pnpm test alias. The failed alias ran no tests; pnpm test:unit and the unchanged current Python runner are the actual existing entrypoints.",
+  "environment_correction": "First full run omitted the existing PUBLICATION_TEST_DEPENDENCIES requirement. Corrected environment checks passed. A separate real helper-policy merge conflict was reproduced against a passing pristine baseline and fixed; see head-policy-regression.json."
+}

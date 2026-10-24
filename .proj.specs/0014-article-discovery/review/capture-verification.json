@@ -1,0 +1,16 @@
+{
+  "round": 1,
+  "snapshot_integrity": "pass",
+  "current_sources_match_capture": true,
+  "source_file_count": 40,
+  "prompt_sha256": "3f5d674830cff8f9154503ee589378ebeb7a3ba1175953e350e70b8bebe7526d",
+  "spec_sha256": "fbd2e51bd5bc94823232d46af41e61c248403a8a100649a3961e72eee0f034e9",
+  "acceptance_criteria": 16,
+  "traceability_rows": 39,
+  "scope_limit": "Integrity and document shape only; no completeness, usability or runtime claim.",
+  "supplement_source_file_count": 23,
+  "total_source_file_count": 63,
+  "post_review_sources_unchanged": true,
+  "post_review_prompt_unchanged": true,
+  "supplement_case_range": "E1-E8; E9 not provided"
+}

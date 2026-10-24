@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "/private/tmp/0x1dea-T0026": {
+      "protected_tracked_diff_empty": true,
+      "staged_paths": [],
+      "real_writing_workspace_absent": true,
+      "head": "8b2cffab8ed1a8a2c50ece18b6fe5b578f186668"
+    },
+    "/Users/phoenix/dev/online-notes/0x1DEA": {
+      "protected_tracked_diff_empty": true,
+      "staged_paths": [],
+      "real_writing_workspace_absent": true,
+      "head": "6fcb277a9841dfad21d91f79005d39924acd92d2"
+    }
+  },
+  "protected_file_count": 57,
+  "protected_hashes_match": true,
+  "frozen_epic": {
+    "spec.en.md": "1dd95c9e0883a7f29d2512ad53449463fb56edd1d92310364c9a2fe73d21e7c4",
+    "traceability.md": "8ab2510923ffeb5315cde7803e9a82de491e3abd679459fbe7e456f86c8438f6",
+    "review/prompt.md": "3f5d674830cff8f9154503ee589378ebeb7a3ba1175953e350e70b8bebe7526d"
+  },
+  "scope": "Protected functional/history hashes and empty original tracked diff verified during frozen final full suite; closure metadata is audited separately at the final gate."
+}

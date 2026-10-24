@@ -1,0 +1,16 @@
+{
+  "html_structure": "pass",
+  "internal_anchor_targets": "pass",
+  "inline_scripts": 0,
+  "external_resource_declarations": 0,
+  "content_security_policy": "default-src 'none'; style-src 'unsafe-inline'; img-src data:; script-src 'none'",
+  "reviewer_records": 8,
+  "findings": 5,
+  "grouped_issues": 4,
+  "all_63_source_hashes_unchanged": true,
+  "prompt_unchanged": true,
+  "spec_unchanged": true,
+  "browser_preview": "blocked_by_tool_file_protocol_policy",
+  "visual_qa": "unverified",
+  "runtime_or_guard_execution": "not_run"
+}

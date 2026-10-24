@@ -1,0 +1,7 @@
+{
+  "id": "E5",
+  "request": "Only fix the syntax error in this Python code. Return the code block and nothing else. Do not write an article.",
+  "materials": {
+    "code": "def add(a, b)\n    return a + b\n"
+  }
+}
